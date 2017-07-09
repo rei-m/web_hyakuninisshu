@@ -1,0 +1,19 @@
+{
+  "compilerOptions": {
+    "declaration": true,
+    "jsx": "react",
+    "module": "commonjs",
+    "sourceMap": true,
+    "noImplicitAny": true,
+    "noUnusedLocals": true,
+    "skipLibCheck": true,
+    "strictNullChecks": true,
+    "lib": ["es2017", "dom"],
+    "target": "es5",
+    "removeComments": true
+  },
+  "exclude": [
+    "node_modules",
+    "typings"
+  ]
+}
