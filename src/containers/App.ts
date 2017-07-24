@@ -1,5 +1,5 @@
 import { connect, Dispatch } from 'react-redux';
-import { startApplication } from '../actions';
+import { fetchKarutas } from '../actions/karuta';
 import App from '../App';
 import { GlobalState } from '../reducers/index';
 
@@ -12,14 +12,12 @@ const mapStateToProps = (state: GlobalState) => {
 const mapDispatchToProps = (dispatch: Dispatch<GlobalState>) => {
   return {
     onStartApp: () => {
-      dispatch(startApplication());
+      dispatch(fetchKarutas());
     },
   };
 };
 
-const Container = connect(
+export default connect(
   mapStateToProps,
   mapDispatchToProps,
 )(App);
-
-export default Container;
