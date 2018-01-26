@@ -23,7 +23,22 @@ export default class Entrance extends React.Component<EntranceProps> {
     return (
       <div>
         <Header />
-        <div>test</div>
+        <div style={{
+          paddingTop: 64
+        }}>
+          <section>
+            <h2>メニュー</h2>
+            <div>
+
+              <div>
+                <i className="skill-icon fa fa-lightbulb-o"></i>
+                <div>練習</div>
+                <p>説明</p>
+              </div>              
+
+            </div>
+          </section>
+        </div>
       </div>
     );
   }
