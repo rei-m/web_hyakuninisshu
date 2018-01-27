@@ -1,5 +1,6 @@
 import * as React from 'react';
 import Header from '../Header';
+import MenuSection from '../MenuSection';
 
 export type EntranceOwnProps = React.ClassAttributes<Entrance>;
 
@@ -24,20 +25,10 @@ export default class Entrance extends React.Component<EntranceProps> {
       <div>
         <Header />
         <div style={{
-          paddingTop: 64
+          paddingTop: 64,
+          textAlign:'center'
         }}>
-          <section>
-            <h2>メニュー</h2>
-            <div>
-
-              <div>
-                <i className="skill-icon fa fa-lightbulb-o"></i>
-                <div>練習</div>
-                <p>説明</p>
-              </div>              
-
-            </div>
-          </section>
+          <MenuSection />
         </div>
       </div>
     );
