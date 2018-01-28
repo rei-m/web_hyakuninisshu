@@ -1,6 +1,5 @@
 import * as React from 'react';
 import Header from '../Header';
-import MenuSection from '../MenuSection';
 
 export type EntranceOwnProps = React.ClassAttributes<Entrance>;
 
@@ -28,7 +27,7 @@ export default class Entrance extends React.Component<EntranceProps> {
           paddingTop: 64,
           textAlign:'center'
         }}>
-          <MenuSection />
+          {this.props.children}
         </div>
       </div>
     );

@@ -1,12 +1,15 @@
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
+import { BrowserRouter } from 'react-router-dom';
 import { Provider } from 'react-redux';
 import { getStore } from './appStore';
-import App from './containers';
+import Application from './Application';
 
 ReactDOM.render(
   <Provider store={getStore()}>
-    <App />
+    <BrowserRouter>
+      <Application />
+    </BrowserRouter>
   </Provider>,
   document.querySelector('main'),
 );
