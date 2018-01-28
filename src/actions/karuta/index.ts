@@ -23,7 +23,7 @@ export type KarutaActions = FetchKarutasAction;
 /*
  * action creators
  */
-export function fetchKarutas() {
+export const fetchKarutas = () => {
   return async (dispatch: Dispatch<FetchKarutasAction>) => {
     const response = await fetch(MY_GITHUB_ROOT + KARUTA_JSON_URL);
     let error = true;
@@ -40,4 +40,4 @@ export function fetchKarutas() {
       type: FETCH_KARUTAS_NAME,
     });
   };
-}
+};

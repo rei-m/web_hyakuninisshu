@@ -9,7 +9,7 @@ export interface KarutaState {
   readonly karutas: Karuta[];
 }
 
-const initialState = {
+const initialState: KarutaState = {
   karutas: [],
 };
 
