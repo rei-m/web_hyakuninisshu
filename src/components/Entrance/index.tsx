@@ -11,11 +11,12 @@ export interface EntranceDispatchProps {
   onStartApp: () => void;
 }
 
-export type EntranceProps = EntranceOwnProps & EntranceConnectedProps & EntranceDispatchProps;
+export type EntranceProps = EntranceOwnProps &
+  EntranceConnectedProps &
+  EntranceDispatchProps;
 
 export default class Entrance extends React.Component<EntranceProps> {
-
-  public componentDidMount() {
+  public componentDidMount()          {
     this.props.onStartApp();
   }
 
