@@ -23,10 +23,12 @@ export default class Entrance extends React.Component<EntranceProps> {
     return (
       <div>
         <Header />
-        <div style={{
-          paddingTop: 64,
-          textAlign:'center'
-        }}>
+        <div
+          style={{
+            paddingTop: 64,
+            textAlign: 'center',
+          }}
+        >
           {this.props.children}
         </div>
       </div>

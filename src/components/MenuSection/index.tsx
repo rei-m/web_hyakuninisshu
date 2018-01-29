@@ -1,11 +1,11 @@
 import * as React from 'react';
-import MenuIcon, { IconType } from '../MenuIcon';
 import styled from 'styled-components';
+import MenuIcon, { IconType } from '../MenuIcon';
 
 const MenuWrapper = styled.div`
   display: flex;
   justify-content: center;
-`
+`;
 
 const MenuSection = () => (
   <section>

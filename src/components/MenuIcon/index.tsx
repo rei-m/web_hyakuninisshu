@@ -20,7 +20,7 @@ const Icon = styled.i`
 export enum IconType {
   Training,
   Exam,
-  Material
+  Material,
 }
 
 export interface MenuIconProps {
@@ -34,25 +34,25 @@ interface Value {
 }
 
 const TRAINING_VALUE: Value = {
+  explain: '説明',
   icon: 'create',
   title: '練習',
-  explain: '説明',
 };
 
 const EXAM_VALUE: Value = {
+  explain: '説明',
   icon: 'note',
   title: '力試し',
-  explain: '説明',
 };
 
 const MATERIAL_VALUE: Value = {
+  explain: '説明',
   icon: 'library_books',
   title: '資料',
-  explain: '説明',
 };
 
 const iconTypeToValue = (iconType: IconType) => {
-  switch(iconType) {
+  switch (iconType) {
     case IconType.Training:
       return TRAINING_VALUE;
     case IconType.Exam:
@@ -68,11 +68,11 @@ const MenuIcon = (props: MenuIconProps) => {
   const value = iconTypeToValue(props.iconType);
   return (
     <Root>
-      <Icon className="material-icons">{value.icon}</Icon>
+      <Icon className='material-icons'>{value.icon}</Icon>
       <div>{value.title}</div>
       <p>{value.explain}</p>
     </Root>
   );
-}
+};
 
 export default MenuIcon;

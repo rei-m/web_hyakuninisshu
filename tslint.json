@@ -48,6 +48,16 @@
     "no-trailing-whitespace": [true, "ignore-template-strings"],
     "no-inferrable-types": true,
     "no-null-keyword": true,
+    "no-console": {
+      "options": [
+          "debug",
+          "info",
+          "log",
+          "time",
+          "timeEnd",
+          "trace"
+      ]
+    },
     "prefer-const": true,
     "no-switch-case-fall-through": true,
     "triple-equals": true,
@@ -55,6 +65,9 @@
     "interface-name": [true, "never-prefix"],
     "object-literal-shorthand": false,
     "no-empty-interface": false,
-    "jsx-wrap-multiline": false
+    "variable-name": [true, "allow-leading-underscore", "allow-pascal-case"],
+    "jsx-wrap-multiline": false,
+    "jsx-boolean-value": false,
+    "jsx-no-multiline-js": false
   }
 }
