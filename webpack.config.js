@@ -1,12 +1,14 @@
 const path = require('path');
 const webpack = require('webpack');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
   entry: './src/index.tsx',
   output: {
     filename: 'bundle.js',
-    path: path.resolve(__dirname, 'dist')
+    path: path.resolve(__dirname, 'dist'),
+    publicPath: '/dist/'
   },
 
   // Enable sourcemaps for debugging webpack's output.
@@ -24,12 +26,6 @@ module.exports = {
         exclude: /node_modules/,
         loader: 'awesome-typescript-loader'
       },
-      // {
-      //   test: /\.tsx?$/,
-      //   exclude: /node_modules/,
-      //   enforce: 'pre',
-      //   loader: 'tslint-loader'
-      // },
       {
         test: /\.js$/,
         enforce: 'pre',
@@ -47,15 +43,11 @@ module.exports = {
 
   plugins: [
     new webpack.HotModuleReplacementPlugin(),
-    new ExtractTextPlugin({
-      filename: 'bundle.css',
-      disable: false,
-      allChunks: true,
-    })
+    new HtmlWebpackPlugin({template: './index.html'})
   ],
 
   devServer: {
-    contentBase: path.join(__dirname, "dist"),
+    contentBase: path.resolve(__dirname),
     compress: true,
     port: 3000,
     hot: true
