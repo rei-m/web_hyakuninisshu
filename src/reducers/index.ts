@@ -6,7 +6,7 @@ export interface GlobalState {
 }
 
 const rootReducer: Reducer<GlobalState> = combineReducers<GlobalState>({
-  karuta,
+  karuta
 });
 
 export default rootReducer;

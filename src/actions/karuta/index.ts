@@ -4,7 +4,8 @@ import { Karuta } from '../../types';
 import { convertCamelKey } from '../../util';
 
 const MY_GITHUB_ROOT = 'https://raw.githubusercontent.com/rei-m/';
-const KARUTA_JSON_URL = 'android_hyakuninisshu/master/app/src/main/assets/karuta_list.json';
+const KARUTA_JSON_URL =
+  'android_hyakuninisshu/master/app/src/main/assets/karuta_list.json';
 
 export const FETCH_KARUTAS_NAME = 'FETCH_KARUTAS_NAME';
 export type FETCH_KARUTAS_TYPE = typeof FETCH_KARUTAS_NAME;
@@ -12,7 +13,7 @@ export type FETCH_KARUTAS_TYPE = typeof FETCH_KARUTAS_NAME;
 export interface FetchKarutasAction extends Action {
   type: FETCH_KARUTAS_TYPE;
   payload: {
-    karutas: Karuta[],
+    karutas: Karuta[];
   };
   error: boolean;
 }
@@ -37,7 +38,7 @@ export const fetchKarutas = () => {
     dispatch({
       error,
       payload: { karutas },
-      type: FETCH_KARUTAS_NAME,
+      type: FETCH_KARUTAS_NAME
     });
   };
 };

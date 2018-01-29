@@ -16,7 +16,7 @@ export type EntranceProps = EntranceOwnProps &
   EntranceDispatchProps;
 
 export default class Entrance extends React.Component<EntranceProps> {
-  public componentDidMount()          {
+  public componentDidMount() {
     this.props.onStartApp();
   }
 
@@ -27,7 +27,7 @@ export default class Entrance extends React.Component<EntranceProps> {
         <div
           style={{
             paddingTop: 64,
-            textAlign: 'center',
+            textAlign: 'center'
           }}
         >
           {this.props.children}

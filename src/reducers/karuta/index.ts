@@ -1,7 +1,4 @@
-import {
-  FETCH_KARUTAS_NAME,
-  KarutaActions,
-} from '../../actions/karuta';
+import { FETCH_KARUTAS_NAME, KarutaActions } from '../../actions/karuta';
 import { Karuta } from '../../types';
 import fetchKarutasReducer from './fetchKarutaReducer';
 
@@ -10,10 +7,13 @@ export interface KarutaState {
 }
 
 const initialState: KarutaState = {
-  karutas: [],
+  karutas: []
 };
 
-export default function karuta(state = initialState, action: KarutaActions): KarutaState {
+export default function karuta(
+  state = initialState,
+  action: KarutaActions
+): KarutaState {
   switch (action.type) {
     case FETCH_KARUTAS_NAME:
       return fetchKarutasReducer(state, action);

@@ -11,5 +11,5 @@ ReactDOM.render(
       <Application />
     </BrowserRouter>
   </Provider>,
-  document.querySelector('main'),
+  document.querySelector('main')
 );

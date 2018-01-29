@@ -3,22 +3,26 @@ import { fetchKarutas } from '../../actions/karuta';
 import Entrance, {
   EntranceConnectedProps,
   EntranceDispatchProps,
-  EntranceOwnProps,
+  EntranceOwnProps
 } from '../../components/Entrance';
 import { GlobalState } from '../../reducers/index';
 
-const mapStateToProps = (state: GlobalState): EntranceOwnProps & EntranceConnectedProps => {
+const mapStateToProps = (
+  state: GlobalState
+): EntranceOwnProps & EntranceConnectedProps => {
   console.dir(state);
   return {
-    initialized: false,
+    initialized: false
   };
 };
 
-const mapDispatchToProps = (dispatch: Dispatch<GlobalState>): EntranceDispatchProps => {
+const mapDispatchToProps = (
+  dispatch: Dispatch<GlobalState>
+): EntranceDispatchProps => {
   return {
     onStartApp: () => {
       dispatch(fetchKarutas());
-    },
+    }
   };
 };
 

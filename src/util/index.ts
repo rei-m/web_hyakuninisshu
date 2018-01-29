@@ -1,4 +1,3 @@
-
 export function convertCamelKey(json: { [key: string]: any }) {
   const result = {};
   convert(json, result);
@@ -24,9 +23,14 @@ function convert(value: any, result: { [key: string]: any }) {
 }
 
 function isPrimitive(v: any) {
-  return typeof v === 'string' || typeof v === 'number' || typeof v === 'boolean' || typeof v === 'undefined';
+  return (
+    typeof v === 'string' ||
+    typeof v === 'number' ||
+    typeof v === 'boolean' ||
+    typeof v === 'undefined'
+  );
 }
 
 function snakeToCamel(v: string) {
-  return v.replace(/_./g, (s) => s.charAt(1).toUpperCase());
+  return v.replace(/_./g, s => s.charAt(1).toUpperCase());
 }
