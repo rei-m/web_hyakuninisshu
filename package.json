@@ -8,7 +8,8 @@
     "start": "webpack-dev-server --progress --colors",
     "test": "jest",
     "tcm": "tcm src/components",
-    "lint": "tslint -c tslint.json 'src/**/*.{ts,tsx}'"
+    "lint": "tslint -c tslint.json 'src/**/*.{ts,tsx}'",
+    "tslint-check": "tslint-config-prettier-check ./tslint.json"
   },
   "author": "rei-m",
   "license": "MIT",
@@ -55,6 +56,7 @@
     "html-webpack-plugin": "^2.30.1",
     "jest": "^22.1.4",
     "jest-enzyme": "^4.0.2",
+    "prettier": "1.10.2",
     "react-test-renderer": "^16.2.0",
     "redux-mock-store": "^1.2.3",
     "source-map-loader": "^0.2.1",
@@ -62,6 +64,7 @@
     "ts-jest": "^22.0.1",
     "tslib": "^1.9.0",
     "tslint": "^5.9.1",
+    "tslint-config-prettier": "^1.6.0",
     "tslint-loader": "^3.5.3",
     "tslint-react": "^3.0.0",
     "typed-css-modules": "^0.3.1",
