@@ -26,6 +26,7 @@
     },
     "prefer-const": true,
     "no-switch-case-fall-through": true,
+    "no-submodule-imports": false,
     "triple-equals": true,
     "jsdoc-format": true,
     "interface-name": [true, "never-prefix"],

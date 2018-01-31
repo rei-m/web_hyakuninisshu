@@ -44,15 +44,26 @@ module.exports = {
           ),
         ],
         use: ExtractTextPlugin.extract({
+          fallback: 'style-loader',
           use: 'css-loader'
         })
+      },
+      {
+        test: /\.(woff|woff2|eot|ttf|svg)?(\?v=[0-9]\.[0-9]\.[0-9])?$/,
+        loader: 'url-loader',
+        query: {
+          name: 'fonts/[name].[ext]',
+          limit: 1
+        }
       },
     ]
   },
 
   plugins: [
     new webpack.HotModuleReplacementPlugin(),
-    new HtmlWebpackPlugin({template: './index.html'}),
+    new HtmlWebpackPlugin({
+      template: './index.html'
+    }),
     new ExtractTextPlugin({
       filename: 'bundle.css'
     }),
