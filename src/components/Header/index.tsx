@@ -18,6 +18,7 @@ const Title = styled.h1`
   line-height: 64px;
   margin: 0;
   font-weight: normal;
+  text-align: left;
 `;
 
 const Header = () => (

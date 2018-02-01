@@ -2,6 +2,7 @@ import * as React from 'react';
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 import MenuIcon, { IconType } from '../MenuIcon';
+import SectionTitle from '../SectionTitle';
 
 const MenuWrapper = styled.div`
   display: flex;
@@ -10,7 +11,7 @@ const MenuWrapper = styled.div`
 
 const MenuSection = () => (
   <section>
-    <h2>メニュー</h2>
+    <SectionTitle title="メニュー" />
     <MenuWrapper>
       <Link to="/training">
         <MenuIcon iconType={IconType.Training} />
