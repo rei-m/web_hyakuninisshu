@@ -1,5 +1,6 @@
 import * as React from 'react';
 import styled from 'styled-components';
+import { COLOR_PRIMARY } from '../../constants/Colors';
 
 const Root = styled.header`
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.26);
@@ -7,7 +8,7 @@ const Root = styled.header`
   right: 0;
   z-index: 1;
   position: fixed;
-  background-color: #8bc34a;
+  background-color: ${COLOR_PRIMARY};
   padding-left: 16px;
 `;
 
@@ -18,6 +19,7 @@ const Title = styled.h1`
   line-height: 64px;
   margin: 0;
   font-weight: normal;
+  text-align: left;
 `;
 
 const Header = () => (

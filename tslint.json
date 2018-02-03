@@ -26,10 +26,17 @@
     },
     "prefer-const": true,
     "no-switch-case-fall-through": true,
+    "no-submodule-imports": false,
     "triple-equals": true,
     "jsdoc-format": true,
     "interface-name": [true, "never-prefix"],
     "object-literal-shorthand": false,
+    "ordered-imports": [
+      true, {
+        "import-sources-order": "any",
+        "named-imports-order": "lowercase-first"
+      }
+    ],
     "no-empty-interface": false,
     "variable-name": [true, "allow-leading-underscore", "allow-pascal-case"],
     "jsx-wrap-multiline": false,

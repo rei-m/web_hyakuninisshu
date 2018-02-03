@@ -1,6 +1,8 @@
 import * as React from 'react';
+import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 import MenuIcon, { IconType } from '../MenuIcon';
+import SectionTitle from '../SectionTitle';
 
 const MenuWrapper = styled.div`
   display: flex;
@@ -9,10 +11,14 @@ const MenuWrapper = styled.div`
 
 const MenuSection = () => (
   <section>
-    <h2>メニュー</h2>
+    <SectionTitle title="メニュー" />
     <MenuWrapper>
-      <MenuIcon iconType={IconType.Training} />
-      <MenuIcon iconType={IconType.Exam} />
+      <Link to="/training">
+        <MenuIcon iconType={IconType.Training} />
+      </Link>
+      <Link to="/exam">
+        <MenuIcon iconType={IconType.Exam} />
+      </Link>
       <MenuIcon iconType={IconType.Material} />
     </MenuWrapper>
   </section>

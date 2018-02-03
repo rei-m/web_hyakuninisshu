@@ -1,15 +1,15 @@
 import { connect, Dispatch } from 'react-redux';
 import { fetchKarutas } from '../../actions/karuta';
-import Entrance, {
-  EntranceConnectedProps,
-  EntranceDispatchProps,
-  EntranceOwnProps
-} from '../../components/Entrance';
+import Frame, {
+  FrameConnectedProps,
+  FrameDispatchProps,
+  FrameOwnProps
+} from '../../components/Frame';
 import { GlobalState } from '../../reducers/index';
 
 const mapStateToProps = (
   state: GlobalState
-): EntranceOwnProps & EntranceConnectedProps => {
+): FrameOwnProps & FrameConnectedProps => {
   console.dir(state);
   return {
     initialized: false
@@ -18,7 +18,7 @@ const mapStateToProps = (
 
 const mapDispatchToProps = (
   dispatch: Dispatch<GlobalState>
-): EntranceDispatchProps => {
+): FrameDispatchProps => {
   return {
     onStartApp: () => {
       dispatch(fetchKarutas());
@@ -26,4 +26,4 @@ const mapDispatchToProps = (
   };
 };
 
-export default connect(mapStateToProps, mapDispatchToProps)(Entrance);
+export default connect(mapStateToProps, mapDispatchToProps)(Frame);

@@ -16,7 +16,7 @@ module.exports = {
 
   resolve: {
       // Add '.ts' and '.tsx' as resolvable extensions.
-      extensions: ['.ts', '.tsx', '.js', '.json']
+      extensions: ['.ts', '.tsx', '.js', '.json', '.css']
   },
 
   module: {
@@ -33,23 +33,58 @@ module.exports = {
       },
       {
         test: /\.css$/,
+        include: [
+          path.join(
+            __dirname,
+            'css',
+            'style.css'
+          ),
+          path.join(
+            __dirname,
+            'node_modules',
+            'normalize.css',
+            'normalize.css'
+          ),
+          path.join(
+            __dirname,
+            'node_modules',
+            '@blueprintjs',
+            'core',
+            'dist',
+            'blueprint.css'
+          ),
+        ],
         use: ExtractTextPlugin.extract({
           fallback: 'style-loader',
-          use: 'css-loader?importLoaders=1&modules&localIdentName=[name]__[local]___[hash:base64:5]'
+          use: 'css-loader'
         })
+      },
+      {
+        test: /\.(woff|woff2|eot|ttf|svg)?(\?v=[0-9]\.[0-9]\.[0-9])?$/,
+        loader: 'url-loader',
+        query: {
+          name: 'fonts/[name].[ext]',
+          limit: 1
+        }
       },
     ]
   },
 
   plugins: [
     new webpack.HotModuleReplacementPlugin(),
-    new HtmlWebpackPlugin({template: './index.html'})
+    new HtmlWebpackPlugin({
+      template: './index.html'
+    }),
+    new ExtractTextPlugin({
+      filename: 'bundle.css'
+    }),
   ],
 
   devServer: {
     contentBase: path.resolve(__dirname),
     compress: true,
     port: 3000,
-    hot: true
+    hot: true,
+    historyApiFallback: true
   }
 };
