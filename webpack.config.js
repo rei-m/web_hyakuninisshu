@@ -36,6 +36,17 @@ module.exports = {
         include: [
           path.join(
             __dirname,
+            'css',
+            'style.css'
+          ),
+          path.join(
+            __dirname,
+            'node_modules',
+            'normalize.css',
+            'normalize.css'
+          ),
+          path.join(
+            __dirname,
             'node_modules',
             '@blueprintjs',
             'core',

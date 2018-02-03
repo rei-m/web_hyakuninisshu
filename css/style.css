@@ -13,3 +13,25 @@ body {
   text-align: center;
   /* font-family: Raleway, "Hiragino Kaku Gothic ProN", Meiryo, sans-serif; */
 }
+
+/* override blueprint style */
+
+.pt-button.pt-intent-primary {
+  background-color: #ff9100;
+}
+.pt-button.pt-intent-primary:hover,
+.pt-button.pt-intent-primary:active,
+.pt-button.pt-intent-primary.pt-active {
+  color: #ffffff;
+}
+.pt-button.pt-intent-primary:hover {
+  background-color: #b16400;
+}
+.pt-button.pt-intent-primary:active,
+.pt-button.pt-intent-primary.pt-active {
+  background-color: #8b550f;
+}
+.pt-button.pt-intent-primary:disabled,
+.pt-button.pt-intent-primary.pt-disabled {
+  background-color: rgba(255, 145, 0, 0.5);
+}

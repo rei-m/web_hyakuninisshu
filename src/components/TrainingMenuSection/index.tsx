@@ -16,6 +16,10 @@ const RootSection = styled.section`
   margin: auto;
 `;
 
+const StartButton = styled.button`
+  margin-top: 32px;
+`;
+
 const mockOnChange = (value: any) => {
   console.dir(value);
 };
@@ -51,9 +55,12 @@ const TrainingMenuSection = () => (
       value={STYLE_LIST[1].value}
       onChange={mockOnChange}
     />
-    <button type="button" className="pt-button pt-icon-add">
+    <StartButton
+      type="button"
+      className="pt-button pt-intent-primary pt-large pt-icon-edit"
+    >
       練習をはじめる
-    </button>
+    </StartButton>
   </RootSection>
 );
 
