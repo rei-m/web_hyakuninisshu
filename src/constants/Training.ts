@@ -85,3 +85,72 @@ export const RANGE_TO: Array<OptionItem<number>> = [
     value: 100
   }
 ];
+
+export const KIMARIJI_LIST: Array<OptionItem<number>> = [
+  {
+    name: '指定しない',
+    value: 0
+  },
+  {
+    name: '一字決まり',
+    value: 1
+  },
+  {
+    name: '二字決まり',
+    value: 2
+  },
+  {
+    name: '三字決まり',
+    value: 3
+  },
+  {
+    name: '四字決まり',
+    value: 4
+  },
+  {
+    name: '五字決まり',
+    value: 5
+  },
+  {
+    name: '六字決まり',
+    value: 6
+  }
+];
+
+export const COLOR_LIST: Array<OptionItem<string>> = [
+  {
+    name: '指定しない',
+    value: ''
+  },
+  {
+    name: '青色',
+    value: 'blue'
+  },
+  {
+    name: '桃色',
+    value: 'pink'
+  },
+  {
+    name: '黄色',
+    value: 'yellow'
+  },
+  {
+    name: '緑色',
+    value: 'green'
+  },
+  {
+    name: '橙色',
+    value: 'orange'
+  }
+];
+
+export const STYLE_LIST: Array<OptionItem<number>> = [
+  {
+    name: '漢字と仮名で表示',
+    value: 0
+  },
+  {
+    name: 'すべて仮名で表示',
+    value: 1
+  }
+];
