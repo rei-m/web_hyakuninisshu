@@ -21,24 +21,21 @@ const Separate = styled.span`
 `;
 
 export interface SelectRangeFromToProps {
-  fromValue: number;
-  toValue: number;
+  readonly from: string;
+  readonly to: string;
+  readonly handleChange: (e: React.SyntheticEvent<HTMLSelectElement>) => void;
 }
 
-const onChangeFrom = (e: React.SyntheticEvent<HTMLSelectElement>) => {
-  console.dir(e);
-};
-
-const onChangeTo = (e: React.SyntheticEvent<HTMLSelectElement>) => {
-  console.dir(e);
-};
-
-const SelectRangeFromTo = (props: SelectRangeFromToProps) => (
+const SelectRangeFromTo = ({
+  from,
+  to,
+  handleChange
+}: SelectRangeFromToProps) => (
   <Label className="pt-label">
     出題範囲
     <SelectRow>
       <SelectRange className="pt-select pt-large">
-        <select value={props.fromValue} onChange={onChangeFrom}>
+        <select name="rangeFrom" value={from} onChange={handleChange}>
           {RANGE_FROM.map((item, i) => (
             <option value={item.value} key={`range_from_${i}`}>
               {item.name}
@@ -48,7 +45,7 @@ const SelectRangeFromTo = (props: SelectRangeFromToProps) => (
       </SelectRange>
       <Separate>〜</Separate>
       <SelectRange className="pt-select pt-large">
-        <select value={props.toValue} onChange={onChangeTo}>
+        <select name="rangeTo" value={to} onChange={handleChange}>
           {RANGE_TO.map((item, i) => (
             <option value={item.value} key={`range_to_${i}`}>
               {item.name}

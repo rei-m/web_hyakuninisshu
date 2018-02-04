@@ -78,6 +78,7 @@
   },
   "dependencies": {
     "@blueprintjs/core": "^1.35.2",
+    "formik": "^0.11.4",
     "isomorphic-fetch": "^2.2.1",
     "normalize.css": "^7.0.0",
     "react": "^16.2.0",
