@@ -10,21 +10,26 @@ export interface TrainingMenuFormProps {
   readonly initialColor: string;
   readonly initialKamiNoKuStyle: number;
   readonly initialShimoNoKuStyle: number;
+  readonly handleSubmit: (
+    rangeFrom: number,
+    rangeTo: number,
+    kimariji: number,
+    color: string,
+    kamiNoKuStyle: number,
+    shimoNoKuStyle: number
+  ) => void;
 }
 
 const TrainingMenuForm = withFormik({
-  handleSubmit: (
-    values,
-    {
-      props,
-      setSubmitting,
-      setErrors /* setValues, setStatus, and other goodies */
-    }
-  ) => {
-    console.dir(values);
-    console.dir(props);
-    console.dir(setSubmitting);
-    console.dir(setErrors);
+  handleSubmit: (values, { props }) => {
+    props.handleSubmit(
+      Number(values.rangeFrom),
+      Number(values.rangeTo),
+      Number(values.kimariji),
+      values.color,
+      Number(values.kamiNoKuStyle),
+      Number(values.shimoNoKuStyle)
+    );
   },
   mapPropsToValues: (props: TrainingMenuFormProps) => ({
     color: props.initialColor,
@@ -34,18 +39,16 @@ const TrainingMenuForm = withFormik({
     rangeTo: props.initialRangeTo.toString(),
     shimoNoKuStyle: props.initialShimoNoKuStyle.toString()
   }),
-  validate: (values, props) => {
+  validate: (values, _) => {
     const errors: { [P in keyof TrainingMenuInnerFormValues]?: string } = {};
-    console.dir(values);
-    console.dir(props);
-    // if (!values.email) {
-    //   errors.email = 'Required';[P in keyof TrainingMenuInnerFormValues]?: TrainingMenuInnerFormValues[P]
-    // } else if (
-    //   !/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(values.email)
-    // ) {
-    //   errors.email = 'Invalid email address';
-    // }
-    errors.rangeFrom = 'Invalid';
+    const rangeFrom = Number(values.rangeFrom);
+    const rangeTo = Number(values.rangeTo);
+    if (rangeTo < rangeFrom) {
+      errors.rangeFrom =
+        '出題範囲の始まりは終わりより小さい数を指定してください';
+      // rangeFromがエラーならToもエラーなのでメッセージは片方だけで良い
+      // errors.rangeTo = '出題範囲の終わりは始まりより大きい数を指定してください';
+    }
     return errors;
   }
 })(TrainingMenuInnerForm);

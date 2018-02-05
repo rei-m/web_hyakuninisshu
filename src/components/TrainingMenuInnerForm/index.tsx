@@ -30,52 +30,53 @@ export type TrainingMenuInnerFormProps = FormikState<
 const TrainingMenuInnerForm = ({
   values,
   handleChange,
+  errors,
   touched
-}: TrainingMenuInnerFormProps) => {
-  console.dir(touched);
-  return (
-    <Form>
-      <SelectRangeFromTo
-        from={values.rangeFrom}
-        to={values.rangeTo}
-        handleChange={handleChange}
-      />
-      <SelectItem
-        title="決まり字"
-        name="kimariji"
-        list={KIMARIJI_LIST}
-        value={KIMARIJI_LIST[0].value}
-        handleChange={handleChange}
-      />
-      <SelectItem
-        title="五色"
-        name="color"
-        list={COLOR_LIST}
-        value={values.color}
-        handleChange={handleChange}
-      />
-      <SelectItem
-        title="上の句"
-        name="kamiNoKuStyle"
-        list={STYLE_LIST}
-        value={STYLE_LIST[0].value}
-        handleChange={handleChange}
-      />
-      <SelectItem
-        title="下の句"
-        name="shimoNoKuStyle"
-        list={STYLE_LIST}
-        value={STYLE_LIST[1].value}
-        handleChange={handleChange}
-      />
-      <StartButton
-        type="submit"
-        className="pt-button pt-intent-primary pt-large pt-icon-edit"
-      >
-        練習をはじめる
-      </StartButton>
-    </Form>
-  );
-};
+}: TrainingMenuInnerFormProps) => (
+  <Form>
+    <SelectRangeFromTo
+      from={values.rangeFrom}
+      to={values.rangeTo}
+      fromTouched={touched.rangeFrom}
+      toTouched={touched.rangeTo}
+      error={errors.rangeFrom}
+      handleChange={handleChange}
+    />
+    <SelectItem
+      title="決まり字"
+      name="kimariji"
+      list={KIMARIJI_LIST}
+      value={KIMARIJI_LIST[0].value}
+      handleChange={handleChange}
+    />
+    <SelectItem
+      title="五色"
+      name="color"
+      list={COLOR_LIST}
+      value={values.color}
+      handleChange={handleChange}
+    />
+    <SelectItem
+      title="上の句"
+      name="kamiNoKuStyle"
+      list={STYLE_LIST}
+      value={STYLE_LIST[0].value}
+      handleChange={handleChange}
+    />
+    <SelectItem
+      title="下の句"
+      name="shimoNoKuStyle"
+      list={STYLE_LIST}
+      value={STYLE_LIST[1].value}
+      handleChange={handleChange}
+    />
+    <StartButton
+      type="submit"
+      className="pt-button pt-intent-primary pt-large pt-icon-edit"
+    >
+      練習をはじめる
+    </StartButton>
+  </Form>
+);
 
 export default TrainingMenuInnerForm;

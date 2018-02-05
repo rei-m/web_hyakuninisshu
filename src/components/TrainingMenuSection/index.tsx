@@ -1,4 +1,5 @@
 import * as React from 'react';
+import { withRouter, RouteComponentProps } from 'react-router-dom';
 import styled from 'styled-components';
 import {
   COLOR_LIST,
@@ -15,7 +16,27 @@ const RootSection = styled.section`
   margin: auto;
 `;
 
-const TrainingMenuSection = () => (
+const handleSubmit = (props: RouteComponentProps<{}>) => {
+  return (
+    rangeFrom: number,
+    rangeTo: number,
+    kimariji: number,
+    color: string,
+    kamiNoKuStyle: number,
+    shimoNoKuStyle: number
+  ) => {
+    props.history.push('/training/question', {
+      color,
+      kamiNoKuStyle,
+      kimariji,
+      rangeFrom,
+      rangeTo,
+      shimoNoKuStyle
+    });
+  };
+};
+
+const TrainingMenuSection = (props: RouteComponentProps<{}>) => (
   <RootSection>
     <SectionTitle title="練習" />
     <TrainingMenuForm
@@ -25,8 +46,9 @@ const TrainingMenuSection = () => (
       initialColor={COLOR_LIST[0].value}
       initialKamiNoKuStyle={STYLE_LIST[0].value}
       initialShimoNoKuStyle={STYLE_LIST[1].value}
+      handleSubmit={handleSubmit(props)}
     />
   </RootSection>
 );
 
-export default TrainingMenuSection;
+export default withRouter(TrainingMenuSection);

@@ -1,5 +1,6 @@
 import * as React from 'react';
 import styled from 'styled-components';
+import { Field } from 'formik';
 import { OptionItem } from '../../types';
 
 const Label = styled.label`
@@ -30,7 +31,8 @@ const SelectItem = (props: SelectItemProps) => (
     {props.title}
     <SelectRow>
       <SelectRange className="pt-select pt-large">
-        <select
+        <Field
+          component="select"
           name={props.name}
           value={props.value}
           onChange={props.handleChange}
@@ -40,7 +42,7 @@ const SelectItem = (props: SelectItemProps) => (
               {item.name}
             </option>
           ))}
-        </select>
+        </Field>
       </SelectRange>
     </SelectRow>
   </Label>
