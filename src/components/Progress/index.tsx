@@ -1,5 +1,9 @@
 import * as React from 'react';
 
-const Progress = () => <div>ろーでぃんぐ</div>;
+export interface ProgressDispatchProps {
+  onStart: () => void;
+}
+
+const Progress = (_props: ProgressDispatchProps) => <div>ろーでぃんぐ</div>;
 
 export default Progress;
