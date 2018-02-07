@@ -1,7 +1,4 @@
-import {
-  START_TRAINING_NAME,
-  TrainingActions
-} from '../../actions/TrainingActionCreators';
+import { START_TRAINING_NAME, TrainingActions } from '../../actions/trainings';
 import { Question } from '../../types';
 
 export interface TrainingState {

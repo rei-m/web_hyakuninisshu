@@ -1,7 +1,7 @@
 import * as React from 'react';
 import styled from 'styled-components';
 import { Field } from 'formik';
-import { RANGE_FROM, RANGE_TO } from '../../constants/Training';
+import { RANGE_FROM, RANGE_TO } from '../../constants/trainings';
 
 const Label = styled.label`
   text-align: left;

@@ -1,4 +1,4 @@
-import { FETCH_KARUTAS_NAME, KarutaActions } from '../../actions/karuta';
+import { FETCH_KARUTAS_NAME, KarutaActions } from '../../actions/karutas';
 import { Karuta } from '../../types';
 import fetchKarutasReducer from './fetchKarutaReducer';
 

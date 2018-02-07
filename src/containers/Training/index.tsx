@@ -1,7 +1,7 @@
 import { connect, Dispatch } from 'react-redux';
 import { withRouter, RouteComponentProps } from 'react-router-dom';
 import { GlobalState } from '../../reducers/index';
-import { startTraining } from '../../actions/TrainingActionCreators';
+import { startTraining } from '../../actions/trainings';
 import TrainingSection, {
   TrainingSectionDispatchProps,
   TrainingSectionOwnProps

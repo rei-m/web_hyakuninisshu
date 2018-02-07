@@ -7,7 +7,7 @@ import {
   RANGE_FROM,
   RANGE_TO,
   STYLE_LIST
-} from '../../constants/Training';
+} from '../../constants/trainings';
 import SectionTitle from '../SectionTitle';
 import TrainingMenuForm from '../../containers/TrainingMenuForm';
 

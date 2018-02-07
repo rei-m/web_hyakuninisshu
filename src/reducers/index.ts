@@ -1,6 +1,6 @@
 import { combineReducers, Reducer } from 'redux';
-import karuta, { KarutaState } from './karuta';
-import Training, { TrainingState } from './Training';
+import karuta, { KarutaState } from './karutas';
+import Training, { TrainingState } from './trainings';
 
 export interface GlobalState {
   karuta: KarutaState;

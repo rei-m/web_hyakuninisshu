@@ -1,7 +1,7 @@
 import * as fetch from 'isomorphic-fetch';
 import { Action, Dispatch } from 'redux';
-import { Karuta } from '../../types';
-import { convertCamelKey } from '../../util';
+import { Karuta } from '../types';
+import { convertCamelKey } from '../util';
 
 const MY_GITHUB_ROOT = 'https://raw.githubusercontent.com/rei-m/';
 const KARUTA_JSON_URL =

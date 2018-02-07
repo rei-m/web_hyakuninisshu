@@ -5,7 +5,7 @@ import {
   COLOR_LIST,
   KIMARIJI_LIST,
   STYLE_LIST
-} from '../../constants/Training';
+} from '../../constants/trainings';
 import SelectItem from './SelectItem';
 import SelectRangeFromTo from './SelectRangeFromTo';
 
