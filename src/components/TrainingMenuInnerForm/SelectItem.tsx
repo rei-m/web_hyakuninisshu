@@ -1,5 +1,6 @@
 import * as React from 'react';
 import styled from 'styled-components';
+import { Field } from 'formik';
 import { OptionItem } from '../../types';
 
 const Label = styled.label`
@@ -19,29 +20,29 @@ const SelectRange = styled.div`
 
 export interface SelectItemProps {
   readonly title: string;
+  readonly name: string;
   readonly value: string | number;
   readonly list: Array<OptionItem<string | number>>;
-  readonly onChange: (value: string) => void;
+  readonly handleChange: (e: React.SyntheticEvent<HTMLSelectElement>) => void;
 }
-
-const onChange = (props: SelectItemProps) => {
-  return (e: React.SyntheticEvent<HTMLSelectElement>) => {
-    props.onChange(e.currentTarget.value);
-  };
-};
 
 const SelectItem = (props: SelectItemProps) => (
   <Label className="pt-label">
     {props.title}
     <SelectRow>
       <SelectRange className="pt-select pt-large">
-        <select value={props.value as any} onChange={onChange(props)}>
+        <Field
+          component="select"
+          name={props.name}
+          value={props.value}
+          onChange={props.handleChange}
+        >
           {props.list.map((item, i) => (
-            <option value={item.value as any} key={`select_item_${i}`}>
+            <option value={item.value} key={`select_item_${i}`}>
               {item.name}
             </option>
           ))}
-        </select>
+        </Field>
       </SelectRange>
     </SelectRow>
   </Label>

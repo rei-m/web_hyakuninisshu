@@ -1,4 +1,4 @@
-import { FetchKarutasAction } from '../../actions/karuta';
+import { FetchKarutasAction } from '../../actions/karutas';
 import { KarutaState } from './';
 
 export default function fetchKarutasReducer(

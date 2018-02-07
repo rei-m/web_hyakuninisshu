@@ -1,6 +1,6 @@
 import * as React from 'react';
 import styled from 'styled-components';
-import { COLOR_PRIMARY } from '../../constants/Colors';
+import { COLOR_PRIMARY } from '../../constants/colors';
 
 const Root = styled.header`
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.26);

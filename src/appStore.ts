@@ -4,6 +4,6 @@ import rootReducer, { GlobalState } from './reducers';
 
 const store = createStore<GlobalState>(rootReducer, applyMiddleware(thunk));
 
-export function getStore(): Store<GlobalState> {
+export const getStore = (): Store<GlobalState> => {
   return store;
-}
+};

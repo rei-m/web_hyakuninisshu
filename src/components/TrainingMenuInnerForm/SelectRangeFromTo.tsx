@@ -1,6 +1,7 @@
 import * as React from 'react';
 import styled from 'styled-components';
-import { RANGE_FROM, RANGE_TO } from '../../constants/Training';
+import { Field } from 'formik';
+import { RANGE_FROM, RANGE_TO } from '../../constants/trainings';
 
 const Label = styled.label`
   text-align: left;
@@ -20,43 +21,63 @@ const Separate = styled.span`
   padding: 16px;
 `;
 
+const Error = styled.div`
+  font-size: 1.2rem;
+  color: #f00;
+  margin: 8px 16px;
+`;
+
 export interface SelectRangeFromToProps {
-  fromValue: number;
-  toValue: number;
+  readonly from: string;
+  readonly to: string;
+  readonly fromTouched?: boolean;
+  readonly toTouched?: boolean;
+  readonly error?: string;
+  readonly handleChange: (e: React.SyntheticEvent<HTMLSelectElement>) => void;
 }
 
-const onChangeFrom = (e: React.SyntheticEvent<HTMLSelectElement>) => {
-  console.dir(e);
-};
-
-const onChangeTo = (e: React.SyntheticEvent<HTMLSelectElement>) => {
-  console.dir(e);
-};
-
-const SelectRangeFromTo = (props: SelectRangeFromToProps) => (
+const SelectRangeFromTo = ({
+  from,
+  to,
+  fromTouched,
+  toTouched,
+  error,
+  handleChange
+}: SelectRangeFromToProps) => (
   <Label className="pt-label">
     出題範囲
     <SelectRow>
       <SelectRange className="pt-select pt-large">
-        <select value={props.fromValue} onChange={onChangeFrom}>
+        <Field
+          component="select"
+          name="rangeFrom"
+          value={from}
+          onChange={handleChange}
+        >
           {RANGE_FROM.map((item, i) => (
             <option value={item.value} key={`range_from_${i}`}>
               {item.name}
             </option>
           ))}
-        </select>
+        </Field>
       </SelectRange>
       <Separate>〜</Separate>
       <SelectRange className="pt-select pt-large">
-        <select value={props.toValue} onChange={onChangeTo}>
+        <Field
+          component="select"
+          name="rangeTo"
+          value={to}
+          onChange={handleChange}
+        >
           {RANGE_TO.map((item, i) => (
             <option value={item.value} key={`range_to_${i}`}>
               {item.name}
             </option>
           ))}
-        </select>
+        </Field>
       </SelectRange>
     </SelectRow>
+    {(fromTouched || toTouched) && error && <Error>{error}</Error>}
   </Label>
 );
 
