@@ -6,6 +6,7 @@ export const startTrainingReducer = (
   action: StartTrainingAction
 ): TrainingState => {
   return {
+    lastStartedTime: action.payload.startedTime,
     questions: action.payload.questions
   };
 };

@@ -1,25 +1,12 @@
 import * as React from 'react';
-import { lifecycle } from 'recompose';
+import { Question } from '../../types';
 
-export interface TrainingSectionOwnProps {
-  test?: string;
+export interface TrainingSectionProps {
+  question: Question;
 }
-
-export interface TrainingSectionDispatchProps {
-  onStart: () => void;
-}
-
-export type TrainingSectionProps = TrainingSectionOwnProps &
-  TrainingSectionDispatchProps;
 
 const TrainingSection = (props: TrainingSectionProps) => {
-  console.dir(props);
-  // props.location.stateにパラメータが渡ってくる
-  return <div>hoge</div>;
+  return <div>{props.question.yomifuda.firstText}</div>;
 };
 
-export default lifecycle<TrainingSectionProps, {}>({
-  componentDidMount() {
-    this.props.onStart();
-  }
-})(TrainingSection);
+export default TrainingSection;

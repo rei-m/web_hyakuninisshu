@@ -16,7 +16,8 @@ export interface TrainingMenuFormProps {
     kimariji: number,
     color: string,
     kamiNoKuStyle: number,
-    shimoNoKuStyle: number
+    shimoNoKuStyle: number,
+    submitTime: number
   ) => void;
 }
 
@@ -28,7 +29,8 @@ const TrainingMenuForm = withFormik({
       Number(values.kimariji),
       values.color,
       Number(values.kamiNoKuStyle),
-      Number(values.shimoNoKuStyle)
+      Number(values.shimoNoKuStyle),
+      new Date().getTime()
     );
   },
   mapPropsToValues: (props: TrainingMenuFormProps) => ({

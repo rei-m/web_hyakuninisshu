@@ -11,6 +11,7 @@ export interface StartTrainingAction extends Action {
   type: START_TRAINING_TYPE;
   payload: {
     questions: Question[];
+    startedTime: number;
   };
 }
 
@@ -66,7 +67,10 @@ export const startTraining = (
   });
 
   return {
-    payload: { questions: randomizeArray(questions) },
+    payload: {
+      questions: randomizeArray(questions),
+      startedTime: new Date().getTime()
+    },
     type: START_TRAINING_NAME
   };
 };

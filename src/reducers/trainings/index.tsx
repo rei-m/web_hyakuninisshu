@@ -4,6 +4,7 @@ import { startTrainingReducer } from './startTrainingReducer';
 
 export interface TrainingState {
   readonly questions: Question[];
+  readonly lastStartedTime?: number;
 }
 
 const initialState: TrainingState = {
