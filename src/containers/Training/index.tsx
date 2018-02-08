@@ -24,10 +24,24 @@ const mapDispatchToProps = (
 ): TrainingSectionDispatchProps => {
   return {
     onStart: () => {
-      console.dir('start: mapDispatchToProps');
-      console.dir(props);
-      dispatch(startTraining());
-      console.dir('end: mapDispatchToProps');
+      const {
+        rangeFrom,
+        rangeTo,
+        kimariji,
+        color,
+        kamiNoKuStyle,
+        shimoNoKuStyle
+      } = props.location.state;
+      dispatch(
+        startTraining(
+          rangeFrom,
+          rangeTo,
+          kimariji,
+          color,
+          kamiNoKuStyle,
+          shimoNoKuStyle
+        )
+      );
     }
   };
 };

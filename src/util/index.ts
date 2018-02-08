@@ -34,3 +34,17 @@ function isPrimitive(v: any) {
 function snakeToCamel(v: string) {
   return v.replace(/_./g, s => s.charAt(1).toUpperCase());
 }
+
+export const getRandomInt = (min, max) =>
+  Math.floor(Math.random() * (max - min + 1)) + min;
+
+export const randomizeArray = <T>(array: T[]) => {
+  const dup = [...array];
+  for (let i = dup.length - 1; i > 0; i--) {
+    const r = Math.floor(Math.random() * (i + 1));
+    const tmp = dup[i];
+    dup[i] = dup[r];
+    dup[r] = tmp;
+  }
+  return dup;
+};

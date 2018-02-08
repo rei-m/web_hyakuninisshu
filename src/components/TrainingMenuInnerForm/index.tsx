@@ -46,7 +46,7 @@ const TrainingMenuInnerForm = ({
       title="決まり字"
       name="kimariji"
       list={KIMARIJI_LIST}
-      value={KIMARIJI_LIST[0].value}
+      value={values.kimariji}
       handleChange={handleChange}
     />
     <SelectItem
@@ -60,14 +60,14 @@ const TrainingMenuInnerForm = ({
       title="上の句"
       name="kamiNoKuStyle"
       list={STYLE_LIST}
-      value={STYLE_LIST[0].value}
+      value={values.kamiNoKuStyle}
       handleChange={handleChange}
     />
     <SelectItem
       title="下の句"
       name="shimoNoKuStyle"
       list={STYLE_LIST}
-      value={STYLE_LIST[1].value}
+      value={values.shimoNoKuStyle}
       handleChange={handleChange}
     />
     <StartButton

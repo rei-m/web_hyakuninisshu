@@ -1,5 +1,6 @@
 import { START_TRAINING_NAME, TrainingActions } from '../../actions/trainings';
 import { Question } from '../../types';
+import { startTrainingReducer } from './startTrainingReducer';
 
 export interface TrainingState {
   readonly questions: Question[];
@@ -15,8 +16,7 @@ export default function karuta(
 ): TrainingState {
   switch (action.type) {
     case START_TRAINING_NAME:
-      // return fetchKarutasReducer(state, action);
-      return state;
+      return startTrainingReducer(state, action);
     default:
       return state;
   }
