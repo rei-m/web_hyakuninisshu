@@ -1,5 +1,8 @@
 import { create } from '../factories';
-import { startTraining } from '../../src/actions/trainings';
+import {
+  startTraining,
+  START_TRAINING_NAME
+} from '../../src/actions/trainings';
 import { getStore } from '../../src/appStore';
 import { Karuta } from '../../src/types';
 
@@ -18,15 +21,10 @@ describe('TrainingActionCreator', () => {
       getStore().getState().karuta = { karutas };
     });
 
-    it('should create startTraining Action', () => {
-      const { questions, startedTime } = startTraining(
-        1,
-        100,
-        0,
-        '',
-        0,
-        1
-      ).payload;
+    it('should create Action', () => {
+      const actual = startTraining(1, 100, 0, '', 0, 1);
+      const { type, payload } = actual;
+      const { questions, startedTime } = payload;
 
       const { correctKaruta, yomifuda, torifudas } = questions[0];
       expect(questions).toHaveLength(100);
@@ -39,19 +37,14 @@ describe('TrainingActionCreator', () => {
       expect(torifudas.map(f => f.fifthText)).toContain(
         correctKaruta.fifthKana
       );
+      expect(type).toEqual(START_TRAINING_NAME);
       expect(startedTime).not.toBeUndefined();
     });
 
     describe('when filter by range', () => {
       it('should payload has filtered Karuta', () => {
-        const { questions, startedTime } = startTraining(
-          21,
-          40,
-          0,
-          '',
-          0,
-          1
-        ).payload;
+        const actual = startTraining(21, 40, 0, '', 0, 1);
+        const { questions, startedTime } = actual.payload;
         const karutaIds = questions.map(q => q.correctKaruta.id);
         expect(questions).toHaveLength(20);
         expect(karutaIds).toContain(21);
@@ -62,14 +55,8 @@ describe('TrainingActionCreator', () => {
 
     describe('when filter by kimariji', () => {
       it('should payload has filtered Karuta', () => {
-        const { questions, startedTime } = startTraining(
-          1,
-          100,
-          1,
-          '',
-          0,
-          1
-        ).payload;
+        const actual = startTraining(1, 100, 1, '', 0, 1);
+        const { questions, startedTime } = actual.payload;
         expect(questions).toHaveLength(20);
         expect(
           questions.every(q => q.correctKaruta.kimariji === 1)
@@ -80,14 +67,8 @@ describe('TrainingActionCreator', () => {
 
     describe('when filter by color', () => {
       it('should payload has filtered Karuta', () => {
-        const { questions, startedTime } = startTraining(
-          1,
-          100,
-          0,
-          'blue',
-          0,
-          1
-        ).payload;
+        const actual = startTraining(1, 100, 0, 'blue', 0, 1);
+        const { questions, startedTime } = actual.payload;
         expect(questions).toHaveLength(20);
         expect(
           questions.every(q => q.correctKaruta.color === 'blue')
@@ -98,15 +79,8 @@ describe('TrainingActionCreator', () => {
 
     describe('when switch karuta style', () => {
       it('should yomiFuda style is kana and toriFuda style is kanji', () => {
-        const { questions, startedTime } = startTraining(
-          1,
-          100,
-          0,
-          '',
-          1,
-          0
-        ).payload;
-
+        const actual = startTraining(1, 100, 0, '', 1, 0);
+        const { questions } = actual.payload;
         const { correctKaruta, yomifuda, torifudas } = questions[0];
         expect(yomifuda.firstText).toEqual(correctKaruta.firstKana);
         expect(yomifuda.secondText).toEqual(correctKaruta.secondKana);
