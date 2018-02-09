@@ -26,6 +26,10 @@
     "testMatch": [
       "**/__tests__/**/*.ts?(x)"
     ],
+    "testPathIgnorePatterns": [
+      "/node_modules/",
+      "/__tests__\/factories/"
+    ],
     "collectCoverage": false,
     "collectCoverageFrom": [
       "src/**/*.ts?(x)"
