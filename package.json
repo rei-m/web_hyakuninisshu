@@ -8,7 +8,7 @@
     "start": "webpack-dev-server --progress --colors",
     "test": "jest",
     "lint": "tslint -c tslint.json 'src/**/*.{ts,tsx}'",
-    "lint-fix": "tslint --fix -c tslint.json 'src/**/*.{ts,tsx}'",
+    "lint-fix": "tslint --fix -c tslint.json '{src,__tests__}/**/*.{ts,tsx}'",
     "tslint-check": "tslint-config-prettier-check ./tslint.json"
   },
   "author": "rei-m",
