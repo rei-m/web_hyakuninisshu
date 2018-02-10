@@ -1,25 +1,29 @@
 import * as React from 'react';
-import { lifecycle } from 'recompose';
+import styled from 'styled-components';
+import { Question } from '../../types';
+import YomiFudaView from '../YomiFudaView';
+import ToriFudaView from '../ToriFudaView';
 
-export interface TrainingSectionOwnProps {
-  test?: string;
+export interface TrainingSectionProps {
+  question: Question;
 }
 
-export interface TrainingSectionDispatchProps {
-  onStart: () => void;
-}
+const ToriFudaBox = styled.div`
+  display: flex;
+  flex-direction: row-reverse;
+`;
 
-export type TrainingSectionProps = TrainingSectionOwnProps &
-  TrainingSectionDispatchProps;
-
-const TrainingSection = (props: TrainingSectionProps) => {
-  console.dir(props);
-  // props.location.stateにパラメータが渡ってくる
-  return <div>hoge</div>;
+const TrainingSection = ({ question }: TrainingSectionProps) => {
+  return (
+    <section>
+      <YomiFudaView yomiFuda={question.yomiFuda} />
+      <ToriFudaBox>
+        {question.toriFudas.map((toriFuda, i) => (
+          <ToriFudaView toriFuda={toriFuda} key={i} />
+        ))}
+      </ToriFudaBox>
+    </section>
+  );
 };
 
-export default lifecycle<TrainingSectionProps, {}>({
-  componentDidMount() {
-    this.props.onStart();
-  }
-})(TrainingSection);
+export default TrainingSection;

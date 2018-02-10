@@ -3,9 +3,10 @@ import { Action, Dispatch } from 'redux';
 import { Karuta } from '../types';
 import { convertCamelKey } from '../util';
 
-const MY_GITHUB_ROOT = 'https://raw.githubusercontent.com/rei-m/';
-const KARUTA_JSON_URL =
-  'android_hyakuninisshu/master/app/src/main/assets/karuta_list.json';
+// TODO: あとで差し替え
+export const MY_GITHUB_ROOT = 'https://raw.githubusercontent.com/rei-m';
+export const KARUTA_JSON_URL =
+  '/android_hyakuninisshu/master/app/src/main/assets/karuta_list.json';
 
 export const FETCH_KARUTAS_NAME = 'FETCH_KARUTAS_NAME';
 export type FETCH_KARUTAS_TYPE = typeof FETCH_KARUTAS_NAME;
@@ -17,7 +18,6 @@ export interface FetchKarutasAction extends Action {
   };
   error: boolean;
 }
-// meta: {object},      // optional
 
 export type KarutaActions = FetchKarutasAction;
 

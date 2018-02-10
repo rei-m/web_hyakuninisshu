@@ -4,21 +4,19 @@ import { GlobalState } from '../../reducers/index';
 import Initializer from '../Initializer';
 import Frame from '../../components/Frame';
 
-export interface FrameConnectedProps {
+export interface RootProps {
   initialized: boolean;
 }
 
-export type FrameProps = FrameConnectedProps;
-
-const mapStateToProps = ({ karuta }: GlobalState): FrameConnectedProps => {
+const mapStateToProps = ({ karutas }: GlobalState): RootProps => {
   return {
-    initialized: karuta.karutas.length > 0
+    initialized: karutas.karutas.length > 0
   };
 };
 
-const isInitialized = ({ initialized }: FrameConnectedProps) => initialized;
+const isInitialized = ({ initialized }: RootProps) => initialized;
 
-const withInitializeCheck = branch<FrameProps>(
+const withInitializeCheck = branch<RootProps>(
   isInitialized,
   component => component,
   _ => Initializer

@@ -23,7 +23,8 @@ const handleSubmit = (props: RouteComponentProps<{}>) => {
     kimariji: number,
     color: string,
     kamiNoKuStyle: number,
-    shimoNoKuStyle: number
+    shimoNoKuStyle: number,
+    submitTime: number
   ) => {
     props.history.push('/training/question', {
       color,
@@ -31,7 +32,8 @@ const handleSubmit = (props: RouteComponentProps<{}>) => {
       kimariji,
       rangeFrom,
       rangeTo,
-      shimoNoKuStyle
+      shimoNoKuStyle,
+      submitTime
     });
   };
 };
