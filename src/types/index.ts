@@ -32,8 +32,8 @@ export interface ToriFuda {
 
 export interface Question {
   readonly correctKaruta: Karuta;
-  readonly yomifuda: YomiFuda;
-  readonly torifudas: ToriFuda[];
+  readonly yomiFuda: YomiFuda;
+  readonly toriFudas: ToriFuda[];
 }
 
 export interface OptionItem<T> {

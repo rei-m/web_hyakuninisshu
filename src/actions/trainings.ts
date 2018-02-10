@@ -36,7 +36,7 @@ export const startTraining = (
 
   const questions = targetKarutas.map(k => {
     const correctKaruta = k;
-    const yomifuda =
+    const yomiFuda =
       kamiNoKuStyle === 0
         ? {
             firstText: k.firstKanji,
@@ -50,20 +50,20 @@ export const startTraining = (
             secondText: k.secondKana,
             thirdText: k.thirdKana
           };
-    const torifudas = fetchTorifudas(karutas, correctKaruta).map(torifuda => {
+    const toriFudas = fetchTorifudas(karutas, correctKaruta).map(toriFuda => {
       return shimoNoKuStyle === 0
         ? {
-            fifthText: torifuda.fifthKanji,
-            fourthText: torifuda.fourthKanji,
-            karutaId: torifuda.id
+            fifthText: toriFuda.fifthKanji,
+            fourthText: toriFuda.fourthKanji,
+            karutaId: toriFuda.id
           }
         : {
-            fifthText: torifuda.fifthKana,
-            fourthText: torifuda.fourthKana,
-            karutaId: torifuda.id
+            fifthText: toriFuda.fifthKana,
+            fourthText: toriFuda.fourthKana,
+            karutaId: toriFuda.id
           };
     });
-    return { correctKaruta, yomifuda, torifudas };
+    return { correctKaruta, yomiFuda, toriFudas };
   });
 
   return {

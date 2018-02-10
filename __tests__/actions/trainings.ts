@@ -26,15 +26,15 @@ describe('TrainingActionCreator', () => {
       const { type, payload } = actual;
       const { questions, startedTime } = payload;
 
-      const { correctKaruta, yomifuda, torifudas } = questions[0];
+      const { correctKaruta, yomiFuda, toriFudas } = questions[0];
       expect(questions).toHaveLength(100);
-      expect(yomifuda.firstText).toEqual(correctKaruta.firstKanji);
-      expect(yomifuda.secondText).toEqual(correctKaruta.secondKanji);
-      expect(yomifuda.thirdText).toEqual(correctKaruta.thirdKanji);
-      expect(torifudas.map(f => f.fourthText)).toContain(
+      expect(yomiFuda.firstText).toEqual(correctKaruta.firstKanji);
+      expect(yomiFuda.secondText).toEqual(correctKaruta.secondKanji);
+      expect(yomiFuda.thirdText).toEqual(correctKaruta.thirdKanji);
+      expect(toriFudas.map(f => f.fourthText)).toContain(
         correctKaruta.fourthKana
       );
-      expect(torifudas.map(f => f.fifthText)).toContain(
+      expect(toriFudas.map(f => f.fifthText)).toContain(
         correctKaruta.fifthKana
       );
       expect(type).toEqual(START_TRAINING_NAME);
@@ -81,14 +81,14 @@ describe('TrainingActionCreator', () => {
       it('should yomiFuda style is kana and toriFuda style is kanji', () => {
         const actual = startTraining(1, 100, 0, '', 1, 0);
         const { questions } = actual.payload;
-        const { correctKaruta, yomifuda, torifudas } = questions[0];
-        expect(yomifuda.firstText).toEqual(correctKaruta.firstKana);
-        expect(yomifuda.secondText).toEqual(correctKaruta.secondKana);
-        expect(yomifuda.thirdText).toEqual(correctKaruta.thirdKana);
-        expect(torifudas.map(f => f.fourthText)).toContain(
+        const { correctKaruta, yomiFuda, toriFudas } = questions[0];
+        expect(yomiFuda.firstText).toEqual(correctKaruta.firstKana);
+        expect(yomiFuda.secondText).toEqual(correctKaruta.secondKana);
+        expect(yomiFuda.thirdText).toEqual(correctKaruta.thirdKana);
+        expect(toriFudas.map(f => f.fourthText)).toContain(
           correctKaruta.fourthKanji
         );
-        expect(torifudas.map(f => f.fifthText)).toContain(
+        expect(toriFudas.map(f => f.fifthText)).toContain(
           correctKaruta.fifthKanji
         );
       });
