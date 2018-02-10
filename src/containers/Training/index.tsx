@@ -17,7 +17,7 @@ const mapStateToProps = (
   props: RouteComponentProps<{}>
 ): TrainingProps => {
   const { submitTime } = props.location.state;
-  const { lastStartedTime, questions } = state.training;
+  const { lastStartedTime, questions } = state.trainings;
   return {
     question: questions[0],
     started: !!lastStartedTime && lastStartedTime > submitTime

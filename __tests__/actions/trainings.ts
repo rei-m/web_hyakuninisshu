@@ -18,7 +18,7 @@ describe('TrainingActionCreator', () => {
           kimariji: i % 5 + 1
         })
       );
-      getStore().getState().karuta = { karutas };
+      getStore().getState().karutas = { karutas };
     });
 
     it('should create Action', () => {

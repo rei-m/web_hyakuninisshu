@@ -8,9 +8,9 @@ export interface RootProps {
   initialized: boolean;
 }
 
-const mapStateToProps = ({ karuta }: GlobalState): RootProps => {
+const mapStateToProps = ({ karutas }: GlobalState): RootProps => {
   return {
-    initialized: karuta.karutas.length > 0
+    initialized: karutas.karutas.length > 0
   };
 };
 

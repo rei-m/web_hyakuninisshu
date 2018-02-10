@@ -28,7 +28,7 @@ export const startTraining = (
   kamiNoKuStyle: number,
   shimoNoKuStyle: number
 ): StartTrainingAction => {
-  const { karutas } = getStore().getState().karuta;
+  const { karutas } = getStore().getState().karutas;
 
   const targetKarutas = trainingFilter(karutas)(rangeFrom, rangeTo)(kimariji)(
     color
