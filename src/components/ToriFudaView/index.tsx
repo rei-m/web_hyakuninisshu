@@ -1,25 +1,47 @@
 import * as React from 'react';
 import styled from 'styled-components';
 import { ToriFuda } from '../../types';
+import { COLOR_PRIMARY_DARK } from '../../constants/colors';
 
 export interface ToriFudaViewProps {
   readonly toriFuda: ToriFuda;
+  readonly style?: React.CSSProperties;
 }
 
 const Frame = styled.div`
+  height: 220px;
+  padding: 0 8px;
+  border: 3px solid ${COLOR_PRIMARY_DARK};
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+`;
+
+const Inner = styled.div`
   display: flex;
   flex-direction: row-reverse;
+  justify-content: center;
 `;
 
 const Phrase = styled.div`
-  writing-mode: vertical-rl;
+  width: 1.6rem;
+  font-size: 1.6rem;
+  line-height: 1.8rem;
 `;
 
-const ToriFudaView = (props: ToriFudaViewProps) => {
+const FifthPhrase = Phrase.extend`
+  padding-top: 24px;
+  margin-right: 8px;
+`;
+
+const ToriFudaView = ({ toriFuda, style }: ToriFudaViewProps) => {
   return (
-    <Frame>
-      <Phrase>{props.toriFuda.fourthText}</Phrase>
-      <Phrase>{props.toriFuda.fifthText}</Phrase>
+    <Frame style={style}>
+      <Inner>
+        <Phrase>{toriFuda.fourthText}</Phrase>
+        <FifthPhrase>{toriFuda.fifthText}</FifthPhrase>
+      </Inner>
     </Frame>
   );
 };
