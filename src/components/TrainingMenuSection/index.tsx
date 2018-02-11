@@ -16,7 +16,7 @@ const RootSection = styled.section`
   margin: auto;
 `;
 
-const handleSubmit = (props: RouteComponentProps<{}>) => {
+const handleSubmit = ({ history }: RouteComponentProps<{}>) => {
   return (
     rangeFrom: number,
     rangeTo: number,
@@ -26,7 +26,7 @@ const handleSubmit = (props: RouteComponentProps<{}>) => {
     shimoNoKuStyle: number,
     submitTime: number
   ) => {
-    props.history.push('/training/question', {
+    history.push('/training/question', {
       color,
       kamiNoKuStyle,
       kimariji,

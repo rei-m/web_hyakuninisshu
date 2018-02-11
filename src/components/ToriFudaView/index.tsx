@@ -6,6 +6,7 @@ import { COLOR_PRIMARY_DARK } from '../../constants/colors';
 export interface ToriFudaViewProps {
   readonly toriFuda: ToriFuda;
   readonly style?: React.CSSProperties;
+  readonly onClick: (karutaId: number) => void;
 }
 
 const Frame = styled.div`
@@ -35,9 +36,12 @@ const FifthPhrase = Phrase.extend`
   margin-right: 8px;
 `;
 
-const ToriFudaView = ({ toriFuda, style }: ToriFudaViewProps) => {
+const ToriFudaView = ({ toriFuda, style, onClick }: ToriFudaViewProps) => {
+  const onClickFrame = (_: React.SyntheticEvent<HTMLDivElement>) => {
+    onClick(toriFuda.karutaId);
+  };
   return (
-    <Frame style={style}>
+    <Frame style={style} onClick={onClickFrame}>
       <Inner>
         <Phrase>{toriFuda.fourthText}</Phrase>
         <FifthPhrase>{toriFuda.fifthText}</FifthPhrase>

@@ -4,9 +4,16 @@ import { Question } from '../../types';
 import YomiFudaView from '../YomiFudaView';
 import ToriFudaView from '../ToriFudaView';
 
-export interface TrainingSectionProps {
+export interface TrainingSectionOwnProps {
   question: Question;
 }
+
+export interface TrainingSectionDispatchProps {
+  onClickToriFuda: (karutaId: number) => void;
+}
+
+export type TrainingSectionProps = TrainingSectionOwnProps &
+  TrainingSectionDispatchProps;
 
 const ToriFudaBox = styled.div`
   display: flex;
@@ -14,7 +21,10 @@ const ToriFudaBox = styled.div`
   flex-direction: row-reverse;
 `;
 
-const TrainingSection = ({ question }: TrainingSectionProps) => {
+const TrainingSection = ({
+  question,
+  onClickToriFuda
+}: TrainingSectionProps) => {
   return (
     <section>
       <YomiFudaView
@@ -23,7 +33,12 @@ const TrainingSection = ({ question }: TrainingSectionProps) => {
       />
       <ToriFudaBox>
         {question.toriFudas.map((toriFuda, i) => (
-          <ToriFudaView toriFuda={toriFuda} style={{ margin: '8px' }} key={i} />
+          <ToriFudaView
+            toriFuda={toriFuda}
+            style={{ margin: '8px' }}
+            key={i}
+            onClick={onClickToriFuda}
+          />
         ))}
       </ToriFudaBox>
     </section>
