@@ -18,6 +18,7 @@ export interface Karuta {
 }
 
 export interface YomiFuda {
+  readonly questionId: number;
   readonly karutaId: number;
   readonly firstText: string;
   readonly secondText: string;
@@ -25,15 +26,23 @@ export interface YomiFuda {
 }
 
 export interface ToriFuda {
+  readonly questionId: number;
   readonly karutaId: number;
   readonly fourthText: string;
   readonly fifthText: string;
 }
 
 export interface Question {
+  readonly id: number;
   readonly correctKaruta: Karuta;
   readonly yomiFuda: YomiFuda;
   readonly toriFudas: ToriFuda[];
+}
+
+export interface Answer {
+  readonly questionId: number;
+  readonly karutaId: number;
+  readonly correct: boolean;
 }
 
 export interface OptionItem<T> {

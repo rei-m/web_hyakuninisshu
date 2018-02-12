@@ -1,15 +1,18 @@
 import * as React from 'react';
 import styled from 'styled-components';
-import { Question } from '../../types';
+import { Answer, Question, ToriFuda } from '../../types';
 import YomiFudaView from '../YomiFudaView';
 import ToriFudaView from '../ToriFudaView';
+import QuestionResult from '../QuestionResult';
 
 export interface TrainingSectionOwnProps {
   question: Question;
+  answer?: Answer;
 }
 
 export interface TrainingSectionDispatchProps {
-  onClickToriFuda: (karutaId: number) => void;
+  onClickToriFuda: (toriFuda: ToriFuda) => void;
+  onClickResult: () => void;
 }
 
 export type TrainingSectionProps = TrainingSectionOwnProps &
@@ -22,8 +25,10 @@ const ToriFudaBox = styled.div`
 `;
 
 const TrainingSection = ({
+  answer,
   question,
-  onClickToriFuda
+  onClickToriFuda,
+  onClickResult
 }: TrainingSectionProps) => {
   return (
     <section>
@@ -41,6 +46,7 @@ const TrainingSection = ({
           />
         ))}
       </ToriFudaBox>
+      {answer && <QuestionResult answer={answer} onClick={onClickResult} />}
     </section>
   );
 };

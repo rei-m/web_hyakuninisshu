@@ -6,7 +6,7 @@ import { COLOR_PRIMARY_DARK } from '../../constants/colors';
 export interface ToriFudaViewProps {
   readonly toriFuda: ToriFuda;
   readonly style?: React.CSSProperties;
-  readonly onClick: (karutaId: number) => void;
+  readonly onClick: (toriFuda: ToriFuda) => void;
 }
 
 const Frame = styled.div`
@@ -38,7 +38,7 @@ const FifthPhrase = Phrase.extend`
 
 const ToriFudaView = ({ toriFuda, style, onClick }: ToriFudaViewProps) => {
   const onClickFrame = (_: React.SyntheticEvent<HTMLDivElement>) => {
-    onClick(toriFuda.karutaId);
+    onClick(toriFuda);
   };
   return (
     <Frame style={style} onClick={onClickFrame}>
