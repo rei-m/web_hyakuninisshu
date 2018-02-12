@@ -10,6 +10,6 @@ const H2 = styled.h2`
   font-size: 2rem;
 `;
 
-const SectionTitle = (props: SectionTitleProps) => <H2>{props.title}</H2>;
+const SectionTitle = ({ title }: SectionTitleProps) => <H2>{title}</H2>;
 
 export default SectionTitle;

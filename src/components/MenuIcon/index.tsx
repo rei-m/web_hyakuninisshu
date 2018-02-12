@@ -64,8 +64,8 @@ const iconTypeToValue = (iconType: IconType) => {
   }
 };
 
-const MenuIcon = (props: MenuIconProps) => {
-  const value = iconTypeToValue(props.iconType);
+const MenuIcon = ({ iconType }: MenuIconProps) => {
+  const value = iconTypeToValue(iconType);
   return (
     <Root>
       <Icon className="material-icons">{value.icon}</Icon>
