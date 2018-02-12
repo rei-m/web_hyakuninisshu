@@ -1,14 +1,17 @@
 import { Action } from 'redux';
 import { getStore } from '../appStore';
 import { Answer, Question } from '../types';
-import { randomizeArray } from '../util';
-import { fetchTorifudas, trainingFilter } from '../util/trainings';
+import { randomizeArray } from '../utils';
+import { fetchTorifudas, trainingFilter } from '../utils/trainings';
 
 export const START_TRAINING_NAME = 'START_TRAINING_NAME';
 export type START_TRAINING_TYPE = typeof START_TRAINING_NAME;
 
 export const ANSWER_QUESTION_NAME = 'ANSWER_QUESTION_NAME';
 export type ANSWER_QUESTION_TYPE = typeof ANSWER_QUESTION_NAME;
+
+export const GO_TO_CORRECT_NAME = 'GO_TO_CORRECT_NAME';
+export type GO_TO_CORRECT_TYPE = typeof GO_TO_CORRECT_NAME;
 
 export const GO_TO_NEXT_QUESTION_NAME = 'GO_TO_NEXT_QUESTION_NAME';
 export type GO_TO_NEXT_QUESTION_TYPE = typeof GO_TO_NEXT_QUESTION_NAME;
@@ -28,16 +31,25 @@ export interface AnswerQuestionAction extends Action {
   };
 }
 
+export interface GoToCorrectAction extends Action {
+  type: GO_TO_CORRECT_TYPE;
+  payload: {
+    nextPage: number;
+  };
+}
+
 export interface GoToNextQuestionAction extends Action {
   type: GO_TO_NEXT_QUESTION_TYPE;
   payload: {
     nextIndex: number;
+    nextPage: number;
   };
 }
 
 export type TrainingActions =
   | StartTrainingAction
   | AnswerQuestionAction
+  | GoToCorrectAction
   | GoToNextQuestionAction;
 
 /*
@@ -124,12 +136,22 @@ export const answerQuestion = (
   };
 };
 
+export const goToCorrect = (): GoToCorrectAction => {
+  return {
+    payload: {
+      nextPage: 1
+    },
+    type: GO_TO_CORRECT_NAME
+  };
+};
+
 export const goToNextQuestion = (): GoToNextQuestionAction => {
   const { currentIndex } = getStore().getState().trainings;
   const nextIndex = currentIndex + 1;
   return {
     payload: {
-      nextIndex
+      nextIndex,
+      nextPage: 0
     },
     type: GO_TO_NEXT_QUESTION_NAME
   };

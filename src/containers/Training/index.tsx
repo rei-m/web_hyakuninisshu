@@ -5,6 +5,7 @@ import { withRouter, RouteComponentProps } from 'react-router-dom';
 import { Answer, Question, ToriFuda } from '../../types';
 import {
   answerQuestion,
+  goToCorrect,
   goToNextQuestion,
   restartTraining
 } from '../../actions/trainings';
@@ -14,6 +15,9 @@ import TrainingSection, {
   TrainingSectionOwnProps,
   TrainingSectionProps
 } from '../../components/TrainingSection';
+import QuestionCorrect, {
+  QuestionCorrectDispatchProps
+} from '../../components/QuestionCorrect';
 import TrainingResult, {
   TrainingResultDispatchProps
 } from '../../components/TrainingResult';
@@ -23,10 +27,12 @@ export interface TrainingOwnProps {
   started: boolean;
   questions: Question[];
   answers: Answer[];
+  currentPage: number;
 }
 
 export type TrainingProps = TrainingOwnProps &
   TrainingSectionProps &
+  QuestionCorrectDispatchProps &
   TrainingResultDispatchProps;
 
 const mapStateToProps = (
@@ -34,10 +40,18 @@ const mapStateToProps = (
   { location }: RouteComponentProps<{}>
 ): TrainingSectionOwnProps & TrainingOwnProps => {
   const { submitTime } = location.state;
-  const { answers, currentIndex, lastStartedTime, questions } = trainings;
+  const {
+    answers,
+    currentIndex,
+    currentPage,
+    lastStartedTime,
+    questions
+  } = trainings;
+
   return {
     answer: answers[currentIndex],
     answers,
+    currentPage,
     question: questions[currentIndex],
     questions,
     started: !!lastStartedTime && lastStartedTime > submitTime
@@ -46,13 +60,18 @@ const mapStateToProps = (
 
 const mapDispatchToProps = (
   dispatch: Dispatch<GlobalState>
-): TrainingSectionDispatchProps & TrainingResultDispatchProps => {
+): TrainingSectionDispatchProps &
+  QuestionCorrectDispatchProps &
+  TrainingResultDispatchProps => {
   return {
+    onClickGoToNext: () => {
+      dispatch(goToNextQuestion());
+    },
     onClickRestart: () => {
       dispatch(restartTraining());
     },
     onClickResult: () => {
-      dispatch(goToNextQuestion());
+      dispatch(goToCorrect());
     },
     onClickToriFuda: ({ questionId, karutaId }: ToriFuda) => {
       dispatch(answerQuestion(questionId, karutaId));
@@ -65,7 +84,7 @@ const isStarted = ({ started }: TrainingOwnProps) => started;
 const withStartedCheck = branch<TrainingProps>(
   isStarted,
   component => component,
-  _ => TrainingInitializer
+  renderComponent(TrainingInitializer)
 );
 
 const hasQuestion = ({ questions }: TrainingOwnProps) => questions.length > 0;
@@ -78,10 +97,28 @@ const withHasQuestionCheck = branch<TrainingProps>(
   renderComponent(EmptyMessage)
 );
 
+const isAnswered = ({ currentPage }: TrainingOwnProps) => currentPage === 1;
+
+const renderQuestionCorrect = ({
+  question,
+  onClickGoToNext
+}: TrainingProps) => {
+  const { correctKaruta } = question;
+  return (
+    <QuestionCorrect karuta={correctKaruta} onClickGoToNext={onClickGoToNext} />
+  );
+};
+
+const withIsAnsweredCheck = branch<TrainingProps>(
+  isAnswered,
+  renderComponent(renderQuestionCorrect),
+  component => component
+);
+
 const isFinished = ({ answers, questions }: TrainingOwnProps) =>
   questions.length > 0 && questions.length === answers.length;
 
-const FinishedMessage = ({
+const renderTrainingResult = ({
   answers,
   onClickRestart,
   questions
@@ -99,13 +136,14 @@ const FinishedMessage = ({
 
 const withIsFinishedCheck = branch<TrainingProps>(
   isFinished,
-  renderComponent(FinishedMessage),
+  renderComponent(renderTrainingResult),
   component => component
 );
 
 const TrainingIndex = compose<TrainingProps, TrainingProps>(
   withStartedCheck,
   withHasQuestionCheck,
+  withIsAnsweredCheck,
   withIsFinishedCheck
 )(TrainingSection);
 

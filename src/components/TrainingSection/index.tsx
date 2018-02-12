@@ -18,6 +18,14 @@ export interface TrainingSectionDispatchProps {
 export type TrainingSectionProps = TrainingSectionOwnProps &
   TrainingSectionDispatchProps;
 
+const Frame = styled.section`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+`;
+
 const ToriFudaBox = styled.div`
   display: flex;
   justify-content: center;
@@ -31,10 +39,10 @@ const TrainingSection = ({
   onClickResult
 }: TrainingSectionProps) => {
   return (
-    <section>
+    <Frame>
       <YomiFudaView
         yomiFuda={question.yomiFuda}
-        style={{ margin: '24px auto' }}
+        style={{ margin: '0 auto 24px auto' }}
       />
       <ToriFudaBox>
         {question.toriFudas.map((toriFuda, i) => (
@@ -47,7 +55,7 @@ const TrainingSection = ({
         ))}
       </ToriFudaBox>
       {answer && <QuestionResult answer={answer} onClick={onClickResult} />}
-    </section>
+    </Frame>
   );
 };
 
