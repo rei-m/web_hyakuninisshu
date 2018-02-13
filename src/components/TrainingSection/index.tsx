@@ -8,6 +8,8 @@ import QuestionResult from '../QuestionResult';
 export interface TrainingSectionOwnProps {
   question: Question;
   answer?: Answer;
+  totalCount: number;
+  currentPosition: number;
 }
 
 export interface TrainingSectionDispatchProps {
@@ -26,24 +28,40 @@ const Frame = styled.section`
   height: 100vh;
 `;
 
+const YomiFudaBox = styled.div`
+  position: relative;
+  margin-bottom: 24px;
+  width: 312px;
+`;
+
 const ToriFudaBox = styled.div`
   display: flex;
   justify-content: center;
   flex-direction: row-reverse;
 `;
 
+const Position = styled.div`
+  position: absolute;
+  right: 0;
+  top: -32px;
+`;
+
 const TrainingSection = ({
   answer,
+  currentPosition,
   question,
+  totalCount,
   onClickToriFuda,
   onClickResult
 }: TrainingSectionProps) => {
   return (
     <Frame>
-      <YomiFudaView
-        yomiFuda={question.yomiFuda}
-        style={{ margin: '0 auto 24px auto' }}
-      />
+      <YomiFudaBox>
+        <Position>
+          {currentPosition} / {totalCount}
+        </Position>
+        <YomiFudaView yomiFuda={question.yomiFuda} style={{ margin: 'auto' }} />
+      </YomiFudaBox>
       <ToriFudaBox>
         {question.toriFudas.map((toriFuda, i) => (
           <ToriFudaView

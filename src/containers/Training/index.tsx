@@ -52,9 +52,11 @@ const mapStateToProps = (
     answer: answers[currentIndex],
     answers,
     currentPage,
+    currentPosition: currentIndex + 1,
     question: questions[currentIndex],
     questions,
-    started: !!lastStartedTime && lastStartedTime > submitTime
+    started: !!lastStartedTime && lastStartedTime > submitTime,
+    totalCount: questions.length
   };
 };
 
@@ -81,7 +83,7 @@ const mapDispatchToProps = (
 
 const isStarted = ({ started }: TrainingOwnProps) => started;
 
-const withStartedCheck = branch<TrainingProps>(
+const withStartedCheck = branch<TrainingOwnProps>(
   isStarted,
   component => component,
   renderComponent(TrainingInitializer)
@@ -91,7 +93,7 @@ const hasQuestion = ({ questions }: TrainingOwnProps) => questions.length > 0;
 
 const EmptyMessage = () => <h3>指定した条件の歌はありませんでした</h3>;
 
-const withHasQuestionCheck = branch<TrainingProps>(
+const withHasQuestionCheck = branch<TrainingOwnProps>(
   hasQuestion,
   component => component,
   renderComponent(EmptyMessage)
@@ -109,7 +111,7 @@ const renderQuestionCorrect = ({
   );
 };
 
-const withIsAnsweredCheck = branch<TrainingProps>(
+const withAnsweredCheck = branch<TrainingOwnProps>(
   isAnswered,
   renderComponent(renderQuestionCorrect),
   component => component
@@ -134,7 +136,7 @@ const renderTrainingResult = ({
   );
 };
 
-const withIsFinishedCheck = branch<TrainingProps>(
+const withFinishedCheck = branch<TrainingOwnProps>(
   isFinished,
   renderComponent(renderTrainingResult),
   component => component
@@ -143,8 +145,8 @@ const withIsFinishedCheck = branch<TrainingProps>(
 const TrainingIndex = compose<TrainingProps, TrainingProps>(
   withStartedCheck,
   withHasQuestionCheck,
-  withIsAnsweredCheck,
-  withIsFinishedCheck
+  withAnsweredCheck,
+  withFinishedCheck
 )(TrainingSection);
 
 export default withRouter(
