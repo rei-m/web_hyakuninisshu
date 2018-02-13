@@ -123,12 +123,16 @@ const isFinished = ({ answers, questions }: TrainingOwnProps) =>
 const renderTrainingResult = ({
   answers,
   onClickRestart,
-  questions
+  totalCount
 }: TrainingProps) => {
-  const totalCount = questions.length;
   const correctCount = answers.filter(a => a.correct).length;
+  const averageAnswerSecond =
+    answers.reduce((prev, current) => prev + current.time, 0) /
+    1000 /
+    totalCount;
   return (
     <TrainingResult
+      averageAnswerSecond={Math.round(averageAnswerSecond * 100) / 100}
       totalCount={totalCount}
       correctCount={correctCount}
       onClickRestart={onClickRestart}

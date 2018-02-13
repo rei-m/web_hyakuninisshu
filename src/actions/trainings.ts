@@ -43,6 +43,7 @@ export interface GoToNextQuestionAction extends Action {
   payload: {
     nextIndex: number;
     nextPage: number;
+    startedTime: number;
   };
 }
 
@@ -119,14 +120,16 @@ export const answerQuestion = (
   questionId: number,
   karutaId: number
 ): AnswerQuestionAction => {
-  const { questions } = getStore().getState().trainings;
+  const { questions, lastStartedTime } = getStore().getState().trainings;
   const question = questions.find(q => q.id === questionId)!;
-  // TODO: Questionがundefinedの場合
+  // TODO: QuestionとlastStartedTimeがundefinedの場合
   const correct = question.correctKaruta.id === karutaId;
+  const time = new Date().getTime() - lastStartedTime!;
   const answer = {
     correct,
     karutaId,
-    questionId
+    questionId,
+    time
   };
   return {
     payload: {
@@ -151,7 +154,8 @@ export const goToNextQuestion = (): GoToNextQuestionAction => {
   return {
     payload: {
       nextIndex,
-      nextPage: 0
+      nextPage: 0,
+      startedTime: new Date().getTime()
     },
     type: GO_TO_NEXT_QUESTION_NAME
   };

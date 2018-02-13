@@ -49,7 +49,8 @@ const trainingsReducer = (
       return {
         ...state,
         currentIndex: action.payload.nextIndex,
-        currentPage: action.payload.nextPage
+        currentPage: action.payload.nextPage,
+        lastStartedTime: action.payload.startedTime
       };
     default:
       return state;
