@@ -13,7 +13,7 @@ export const filterByKimariji = (karutas: Karuta[], kimariji: number) =>
 export const filterByColor = (karutas: Karuta[], color: string) =>
   color === '' ? karutas : karutas.filter(k => k.color === color);
 
-export const trainingFilter = (karutas: Karuta[]) => {
+export const questionsFilter = (karutas: Karuta[]) => {
   return (rangeFrom: number, rangeTo: number) => {
     const rangeResult = filterByRange(karutas, rangeFrom, rangeTo);
     return (kimariji: number) => {

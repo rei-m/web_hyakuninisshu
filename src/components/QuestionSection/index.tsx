@@ -5,18 +5,34 @@ import YomiFudaView from '../YomiFudaView';
 import ToriFudaView from '../ToriFudaView';
 import QuestionResult from '../QuestionResult';
 
-export interface TrainingSectionOwnProps {
+export interface QuestionSectionOwnProps {
   question: Question;
   answer?: Answer;
+  totalCount: number;
+  currentPosition: number;
 }
 
-export interface TrainingSectionDispatchProps {
+export interface QuestionSectionDispatchProps {
   onClickToriFuda: (toriFuda: ToriFuda) => void;
   onClickResult: () => void;
 }
 
-export type TrainingSectionProps = TrainingSectionOwnProps &
-  TrainingSectionDispatchProps;
+export type QuestionSectionProps = QuestionSectionOwnProps &
+  QuestionSectionDispatchProps;
+
+const Frame = styled.section`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+`;
+
+const YomiFudaBox = styled.div`
+  position: relative;
+  margin-bottom: 24px;
+  width: 312px;
+`;
 
 const ToriFudaBox = styled.div`
   display: flex;
@@ -24,18 +40,28 @@ const ToriFudaBox = styled.div`
   flex-direction: row-reverse;
 `;
 
-const TrainingSection = ({
+const Position = styled.div`
+  position: absolute;
+  right: 0;
+  top: -32px;
+`;
+
+const QuestionSection = ({
   answer,
+  currentPosition,
   question,
+  totalCount,
   onClickToriFuda,
   onClickResult
-}: TrainingSectionProps) => {
+}: QuestionSectionProps) => {
   return (
-    <section>
-      <YomiFudaView
-        yomiFuda={question.yomiFuda}
-        style={{ margin: '24px auto' }}
-      />
+    <Frame>
+      <YomiFudaBox>
+        <Position>
+          {currentPosition} / {totalCount}
+        </Position>
+        <YomiFudaView yomiFuda={question.yomiFuda} style={{ margin: 'auto' }} />
+      </YomiFudaBox>
       <ToriFudaBox>
         {question.toriFudas.map((toriFuda, i) => (
           <ToriFudaView
@@ -47,8 +73,8 @@ const TrainingSection = ({
         ))}
       </ToriFudaBox>
       {answer && <QuestionResult answer={answer} onClick={onClickResult} />}
-    </section>
+    </Frame>
   );
 };
 
-export default TrainingSection;
+export default QuestionSection;

@@ -43,6 +43,7 @@ export interface Answer {
   readonly questionId: number;
   readonly karutaId: number;
   readonly correct: boolean;
+  readonly time: number;
 }
 
 export interface OptionItem<T> {

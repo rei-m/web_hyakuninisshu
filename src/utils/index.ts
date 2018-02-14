@@ -1,10 +1,10 @@
-export function convertCamelKey(json: { [key: string]: any }) {
+export const convertCamelKey = (json: { [key: string]: any }) => {
   const result = {};
   convert(json, result);
   return result;
-}
+};
 
-function convert(value: any, result: { [key: string]: any }) {
+const convert = (value: any, result: { [key: string]: any }) => {
   for (const key in value) {
     if (value.hasOwnProperty(key)) {
       if (isPrimitive(value[key])) {
@@ -20,20 +20,20 @@ function convert(value: any, result: { [key: string]: any }) {
       }
     }
   }
-}
+};
 
-function isPrimitive(v: any) {
+const isPrimitive = (v: any) => {
   return (
     typeof v === 'string' ||
     typeof v === 'number' ||
     typeof v === 'boolean' ||
     typeof v === 'undefined'
   );
-}
+};
 
-function snakeToCamel(v: string) {
+const snakeToCamel = (v: string) => {
   return v.replace(/_./g, s => s.charAt(1).toUpperCase());
-}
+};
 
 export const getRandomInt = (min, max) =>
   Math.floor(Math.random() * (max - min + 1)) + min;
