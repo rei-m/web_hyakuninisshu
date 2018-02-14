@@ -5,20 +5,20 @@ import YomiFudaView from '../YomiFudaView';
 import ToriFudaView from '../ToriFudaView';
 import QuestionResult from '../QuestionResult';
 
-export interface TrainingSectionOwnProps {
+export interface QuestionSectionOwnProps {
   question: Question;
   answer?: Answer;
   totalCount: number;
   currentPosition: number;
 }
 
-export interface TrainingSectionDispatchProps {
+export interface QuestionSectionDispatchProps {
   onClickToriFuda: (toriFuda: ToriFuda) => void;
   onClickResult: () => void;
 }
 
-export type TrainingSectionProps = TrainingSectionOwnProps &
-  TrainingSectionDispatchProps;
+export type QuestionSectionProps = QuestionSectionOwnProps &
+  QuestionSectionDispatchProps;
 
 const Frame = styled.section`
   display: flex;
@@ -46,14 +46,14 @@ const Position = styled.div`
   top: -32px;
 `;
 
-const TrainingSection = ({
+const QuestionSection = ({
   answer,
   currentPosition,
   question,
   totalCount,
   onClickToriFuda,
   onClickResult
-}: TrainingSectionProps) => {
+}: QuestionSectionProps) => {
   return (
     <Frame>
       <YomiFudaBox>
@@ -77,4 +77,4 @@ const TrainingSection = ({
   );
 };
 
-export default TrainingSection;
+export default QuestionSection;

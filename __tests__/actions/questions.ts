@@ -2,11 +2,11 @@ import { create } from '../factories';
 import {
   startTraining,
   START_TRAINING_NAME
-} from '../../src/actions/trainings';
-import { getStore } from '../../src/appStore';
+} from '../../src/actions/questions';
+import { getStore } from '../../src/store';
 import { Karuta } from '../../src/types';
 
-describe('TrainingActionCreator', () => {
+describe('QuestionsActionCreator', () => {
   describe('startTraining', () => {
     let karutas: Karuta[];
 
@@ -18,7 +18,7 @@ describe('TrainingActionCreator', () => {
           kimariji: i % 5 + 1
         })
       );
-      getStore().getState().karutas = { karutas };
+      getStore().getState().karutasState = { karutas };
     });
 
     it('should create Action', () => {

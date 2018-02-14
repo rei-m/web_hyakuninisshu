@@ -21,16 +21,16 @@ import QuestionCorrect, {
 import TrainingResult, {
   TrainingResultDispatchProps
 } from '../../components/TrainingResult';
-import TrainingInitializer from '../TrainingInitializer';
+import ExamInitializer from '../ExamInitializer';
 
-export interface TrainingOwnProps {
+export interface ExamOwnProps {
   started: boolean;
   questions: Question[];
   answers: Answer[];
   currentPage: number;
 }
 
-export type TrainingProps = TrainingOwnProps &
+export type ExamProps = ExamOwnProps &
   QuestionSectionProps &
   QuestionCorrectDispatchProps &
   TrainingResultDispatchProps;
@@ -38,7 +38,7 @@ export type TrainingProps = TrainingOwnProps &
 const mapStateToProps = (
   { questionsState }: GlobalState,
   { location }: RouteComponentProps<{}>
-): QuestionSectionOwnProps & TrainingOwnProps => {
+): QuestionSectionOwnProps & ExamOwnProps => {
   const { submitTime } = location.state;
   const {
     answers,
@@ -81,50 +81,37 @@ const mapDispatchToProps = (
   };
 };
 
-const isStarted = ({ started }: TrainingOwnProps) => started;
+const isStarted = ({ started }: ExamOwnProps) => started;
 
-const withStartedCheck = branch<TrainingOwnProps>(
+const withStartedCheck = branch<ExamOwnProps>(
   isStarted,
   component => component,
-  renderComponent(TrainingInitializer)
+  renderComponent(ExamInitializer)
 );
 
-const hasQuestion = ({ questions }: TrainingOwnProps) => questions.length > 0;
+const isAnswered = ({ currentPage }: ExamOwnProps) => currentPage === 1;
 
-const EmptyMessage = () => <h3>指定した条件の歌はありませんでした</h3>;
-
-const withHasQuestionCheck = branch<TrainingOwnProps>(
-  hasQuestion,
-  component => component,
-  renderComponent(EmptyMessage)
-);
-
-const isAnswered = ({ currentPage }: TrainingOwnProps) => currentPage === 1;
-
-const renderQuestionCorrect = ({
-  question,
-  onClickGoToNext
-}: TrainingProps) => {
+const renderQuestionCorrect = ({ question, onClickGoToNext }: ExamProps) => {
   const { correctKaruta } = question;
   return (
     <QuestionCorrect karuta={correctKaruta} onClickGoToNext={onClickGoToNext} />
   );
 };
 
-const withAnsweredCheck = branch<TrainingOwnProps>(
+const withAnsweredCheck = branch<ExamOwnProps>(
   isAnswered,
   renderComponent(renderQuestionCorrect),
   component => component
 );
 
-const isFinished = ({ answers, questions }: TrainingOwnProps) =>
+const isFinished = ({ answers, questions }: ExamOwnProps) =>
   questions.length > 0 && questions.length === answers.length;
 
 const renderTrainingResult = ({
   answers,
   onClickRestart,
   totalCount
-}: TrainingProps) => {
+}: ExamProps) => {
   const correctCount = answers.filter(a => a.correct).length;
   const averageAnswerSecond =
     answers.reduce((prev, current) => prev + current.time, 0) /
@@ -140,19 +127,18 @@ const renderTrainingResult = ({
   );
 };
 
-const withFinishedCheck = branch<TrainingOwnProps>(
+const withFinishedCheck = branch<ExamOwnProps>(
   isFinished,
   renderComponent(renderTrainingResult),
   component => component
 );
 
-const TrainingIndex = compose<TrainingProps, TrainingProps>(
+const ExamIndex = compose<ExamProps, ExamProps>(
   withStartedCheck,
-  withHasQuestionCheck,
   withAnsweredCheck,
   withFinishedCheck
 )(QuestionSection);
 
 export default withRouter(
-  connect(mapStateToProps, mapDispatchToProps)(TrainingIndex)
+  connect(mapStateToProps, mapDispatchToProps)(ExamIndex)
 );

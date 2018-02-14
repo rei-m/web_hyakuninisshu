@@ -1,7 +1,7 @@
 import { connect, Dispatch } from 'react-redux';
 import { RouteComponentProps } from 'react-router-dom';
 import { GlobalState } from '../../reducers/index';
-import { startTraining } from '../../actions/trainings';
+import { startTraining } from '../../actions/questions';
 import Progress, { ProgressDispatchProps } from '../../components/Progress';
 
 const mapDispatchToProps = (
