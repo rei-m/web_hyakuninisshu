@@ -2,19 +2,23 @@ import * as React from 'react';
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 import QuestionResultsSummary from '../QuestionResultsSummary';
+import QuestionResultsMap from '../QuestionResultsMap';
+import { Answer, Question } from '../../types';
 
-export interface TrainingResultOwnProps {
+export interface ExamResultOwnProps {
   readonly totalCount: number;
   readonly correctCount: number;
   readonly averageAnswerSecond: number;
+  readonly questions: Question[];
+  readonly answers: Answer[];
 }
 
-export interface TrainingResultDispatchProps {
+export interface ExamResultDispatchProps {
   readonly onClickRestart: () => void;
+  readonly onClickResultsMap: (karutaId: number) => void;
 }
 
-export type TrainingResultProps = TrainingResultOwnProps &
-  TrainingResultDispatchProps;
+export type ExamResultProps = ExamResultOwnProps & ExamResultDispatchProps;
 
 const RootSection = styled.section`
   max-width: 380px;
@@ -25,12 +29,15 @@ const Button = styled.button`
   margin: 16px;
 `;
 
-const TrainingResult = ({
+const ExamResult = ({
   averageAnswerSecond,
   correctCount,
   totalCount,
-  onClickRestart
-}: TrainingResultProps) => (
+  questions,
+  answers,
+  onClickRestart,
+  onClickResultsMap
+}: ExamResultProps) => (
   <RootSection>
     <QuestionResultsSummary
       title={'正解数'}
@@ -48,6 +55,16 @@ const TrainingResult = ({
         marginRight: 16
       }}
     />
+    <QuestionResultsMap
+      questions={questions}
+      answers={answers}
+      onClickResult={onClickResultsMap}
+      style={{
+        marginBottom: 16,
+        marginLeft: 16,
+        marginRight: 16
+      }}
+    />
     {correctCount !== totalCount && (
       <Button
         onClick={onClickRestart}
@@ -56,7 +73,7 @@ const TrainingResult = ({
         間違えた歌の練習をする
       </Button>
     )}
-    <Link to="/training" replace={true}>
+    <Link to="/exam" replace={true}>
       <Button
         className="pt-button pt-large pt-icon-undo"
         style={{ marginTop: 0 }}
@@ -67,4 +84,4 @@ const TrainingResult = ({
   </RootSection>
 );
 
-export default TrainingResult;
+export default ExamResult;

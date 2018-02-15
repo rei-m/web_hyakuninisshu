@@ -18,9 +18,9 @@ import QuestionSection, {
 import QuestionCorrect, {
   QuestionCorrectDispatchProps
 } from '../../components/QuestionCorrect';
-import TrainingResult, {
-  TrainingResultDispatchProps
-} from '../../components/TrainingResult';
+import ExamResult, {
+  ExamResultDispatchProps
+} from '../../components/ExamResult';
 import ExamInitializer from '../ExamInitializer';
 
 export interface ExamOwnProps {
@@ -33,7 +33,7 @@ export interface ExamOwnProps {
 export type ExamProps = ExamOwnProps &
   QuestionSectionProps &
   QuestionCorrectDispatchProps &
-  TrainingResultDispatchProps;
+  ExamResultDispatchProps;
 
 const mapStateToProps = (
   { questionsState }: GlobalState,
@@ -64,7 +64,7 @@ const mapDispatchToProps = (
   dispatch: Dispatch<GlobalState>
 ): QuestionSectionDispatchProps &
   QuestionCorrectDispatchProps &
-  TrainingResultDispatchProps => {
+  ExamResultDispatchProps => {
   return {
     onClickGoToNext: () => {
       dispatch(goToNextQuestion());
@@ -74,6 +74,9 @@ const mapDispatchToProps = (
     },
     onClickResult: () => {
       dispatch(goToCorrect());
+    },
+    onClickResultsMap: (karutaId: number) => {
+      console.dir(karutaId);
     },
     onClickToriFuda: ({ questionId, karutaId }: ToriFuda) => {
       dispatch(answerQuestion(questionId, karutaId));
@@ -108,8 +111,10 @@ const isFinished = ({ answers, questions }: ExamOwnProps) =>
   questions.length > 0 && questions.length === answers.length;
 
 const renderTrainingResult = ({
+  questions,
   answers,
   onClickRestart,
+  onClickResultsMap,
   totalCount
 }: ExamProps) => {
   const correctCount = answers.filter(a => a.correct).length;
@@ -118,11 +123,14 @@ const renderTrainingResult = ({
     1000 /
     totalCount;
   return (
-    <TrainingResult
+    <ExamResult
       averageAnswerSecond={Math.round(averageAnswerSecond * 100) / 100}
       totalCount={totalCount}
       correctCount={correctCount}
+      answers={answers}
+      questions={questions}
       onClickRestart={onClickRestart}
+      onClickResultsMap={onClickResultsMap}
     />
   );
 };
