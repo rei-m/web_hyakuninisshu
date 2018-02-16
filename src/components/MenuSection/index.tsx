@@ -19,7 +19,9 @@ const MenuSection = () => (
       <Link to="/exam">
         <MenuIcon iconType={IconType.Exam} />
       </Link>
-      <MenuIcon iconType={IconType.Material} />
+      <Link to="/karutas">
+        <MenuIcon iconType={IconType.Material} />
+      </Link>
     </MenuWrapper>
   </section>
 );
