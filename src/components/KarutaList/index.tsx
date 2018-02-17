@@ -2,16 +2,10 @@ import * as React from 'react';
 import { Karuta } from '../../types';
 import KarutaListRow from './KarutaListRow';
 
-export interface KarutaListConnectedProps {
+export interface KarutaListProps {
   karutas: Karuta[];
-}
-
-export interface KarutaListDispatchProps {
   onClickRow: (karutaId: number) => void;
 }
-
-export type KarutaListProps = KarutaListConnectedProps &
-  KarutaListDispatchProps;
 
 const KarutaList = ({ karutas, onClickRow }: KarutaListProps) => {
   return (

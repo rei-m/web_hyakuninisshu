@@ -1,5 +1,6 @@
 import * as React from 'react';
 import { convetKarutaId } from '../helper';
+// TODO: Spriteする??
 import * as karuta001 from './karuta_001.jpg';
 import * as karuta002 from './karuta_002.jpg';
 import * as karuta003 from './karuta_003.jpg';
