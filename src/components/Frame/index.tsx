@@ -1,6 +1,7 @@
 import * as React from 'react';
 import styled from 'styled-components';
 import Header from '../Header';
+import Navigation from '../Navigation';
 
 export const Body = styled.div`
   padding-top: 64px;
@@ -13,6 +14,7 @@ const Frame: React.StatelessComponent<
   <div>
     <Header />
     <Body>{children}</Body>
+    <Navigation />
   </div>
 );
 
