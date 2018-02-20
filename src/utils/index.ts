@@ -1,3 +1,5 @@
+import { MenuType } from '../enums';
+
 export const convertCamelKey = (json: { [key: string]: any }) => {
   const result = {};
   convert(json, result);
@@ -47,4 +49,19 @@ export const randomizeArray = <T>(array: T[]) => {
     dup[r] = tmp;
   }
   return dup;
+};
+
+export const menuTypeToIcon = (iconType: MenuType) => {
+  switch (iconType) {
+    case MenuType.Training:
+      return 'create';
+    case MenuType.Exam:
+      return 'note';
+    case MenuType.Material:
+      return 'library_books';
+    case MenuType.Other:
+      return 'settings';
+    default:
+      throw new Error('unknown TypeName');
+  }
 };
