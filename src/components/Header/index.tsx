@@ -16,10 +16,14 @@ const Title = styled.h1`
   font-size: 1.8rem;
   width: 100%;
   color: white;
-  line-height: 64px;
+  line-height: 56px;
   margin: 0;
   font-weight: normal;
   text-align: left;
+
+  @media screen and (min-width: 768px) {
+    line-height: 64px;
+  }
 `;
 
 const Header = () => (

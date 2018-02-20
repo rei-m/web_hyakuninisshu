@@ -1,14 +1,11 @@
 import * as React from 'react';
 import styled from 'styled-components';
-
-const Root = styled.div`
-  padding: 16px;
-`;
+import { MenuIconType } from '../../enums';
+import { menuTypeToIcon } from '../../utils';
 
 const Icon = styled.i`
   width: 150px;
   height: 150px;
-  margin-bottom: 30px;
   border: 4px solid;
   border-radius: 50%;
   color: #f1b400;
@@ -17,62 +14,12 @@ const Icon = styled.i`
   text-align: center;
 `;
 
-export enum IconType {
-  Training,
-  Exam,
-  Material
-}
-
 export interface MenuIconProps {
-  readonly iconType: IconType;
+  readonly iconType: MenuIconType;
 }
 
-interface Value {
-  readonly icon: string;
-  readonly title: string;
-  readonly explain: string;
-}
-
-const TRAINING_VALUE: Value = {
-  explain: '説明',
-  icon: 'create',
-  title: '練習'
-};
-
-const EXAM_VALUE: Value = {
-  explain: '説明',
-  icon: 'note',
-  title: '力試し'
-};
-
-const MATERIAL_VALUE: Value = {
-  explain: '説明',
-  icon: 'library_books',
-  title: '資料'
-};
-
-const iconTypeToValue = (iconType: IconType) => {
-  switch (iconType) {
-    case IconType.Training:
-      return TRAINING_VALUE;
-    case IconType.Exam:
-      return EXAM_VALUE;
-    case IconType.Material:
-      return MATERIAL_VALUE;
-    default:
-      throw new Error('unknown TypeName');
-  }
-};
-
-const MenuIcon = ({ iconType }: MenuIconProps) => {
-  const value = iconTypeToValue(iconType);
-  return (
-    <Root>
-      <Icon className="material-icons">{value.icon}</Icon>
-      <div>{value.title}</div>
-      <p>{value.explain}</p>
-    </Root>
-  );
-};
+const MenuIcon = ({ iconType }: MenuIconProps) => (
+  <Icon className="material-icons">{menuTypeToIcon(iconType)}</Icon>
+);
 
 export default MenuIcon;
