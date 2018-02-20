@@ -1,6 +1,6 @@
 import * as React from 'react';
 import styled from 'styled-components';
-import { MenuIconType } from '../../enums';
+import { MenuType } from '../../enums';
 import { menuTypeToIcon } from '../../utils';
 
 const Icon = styled.i`
@@ -15,7 +15,7 @@ const Icon = styled.i`
 `;
 
 export interface MenuIconProps {
-  readonly iconType: MenuIconType;
+  readonly iconType: MenuType;
 }
 
 const MenuIcon = ({ iconType }: MenuIconProps) => (

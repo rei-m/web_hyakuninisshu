@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 import MenuIcon from '../MenuIcon';
 import SectionTitle from '../SectionTitle';
-import { MenuIconType } from '../../enums';
+import { MenuType } from '../../enums';
 
 const MenuWrapper = styled.div`
   display: flex;
@@ -20,21 +20,21 @@ const MenuSection = () => (
     <MenuWrapper>
       <Link to="/training">
         <MenuRoot>
-          <MenuIcon iconType={MenuIconType.Training} />
+          <MenuIcon iconType={MenuType.Training} />
           <div>練習</div>
           <p>説明</p>
         </MenuRoot>
       </Link>
       <Link to="/exam">
         <MenuRoot>
-          <MenuIcon iconType={MenuIconType.Exam} />
+          <MenuIcon iconType={MenuType.Exam} />
           <div>腕試し</div>
           <p>説明</p>
         </MenuRoot>
       </Link>
       <Link to="/karutas">
         <MenuRoot>
-          <MenuIcon iconType={MenuIconType.Material} />
+          <MenuIcon iconType={MenuType.Material} />
           <div>資料</div>
           <p>説明</p>
         </MenuRoot>

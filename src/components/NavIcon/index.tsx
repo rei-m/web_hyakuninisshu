@@ -1,6 +1,6 @@
 import * as React from 'react';
 import styled, { StyledFunction } from 'styled-components';
-import { MenuIconType } from '../../enums';
+import { MenuType } from '../../enums';
 import { menuTypeToIcon } from '../../utils';
 
 interface IconProps {
@@ -16,8 +16,11 @@ const Icon = i`
   padding-top: 6px;
   box-sizing: border-box;
   position: relative;
+  width: inherit;
   &:after {
     content: '${props => props.text}';
+    width: inherit;
+    text-arign: center;
     position: absolute;
     bottom: 10px;
     left: 0;
@@ -26,7 +29,7 @@ const Icon = i`
 `;
 
 export interface NavIconProps {
-  readonly iconType: MenuIconType;
+  readonly iconType: MenuType;
   readonly text: string;
 }
 

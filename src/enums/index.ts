@@ -1,5 +1,6 @@
-export enum MenuIconType {
+export enum MenuType {
   Training,
   Exam,
-  Material
+  Material,
+  Other
 }

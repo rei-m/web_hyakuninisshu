@@ -1,20 +1,68 @@
-import { connect } from 'react-redux';
+import { connect, Dispatch } from 'react-redux';
+import { withRouter, RouteComponentProps } from 'react-router-dom';
 import { branch } from 'recompose';
 import { GlobalState } from '../../reducers/index';
 import Initializer from '../Initializer';
-import Frame from '../../components/Frame';
+import Frame, {
+  FrameConnectedProps,
+  FrameDispatchProps,
+  FrameProps
+} from '../../components/Frame';
+import { ROUTE_PATHS } from '../../constants';
 
-export interface RootProps {
+export interface RootOwnProps {
   initialized: boolean;
 }
 
-const mapStateToProps = ({ karutasState }: GlobalState): RootProps => {
+export type RootProps = RootOwnProps & FrameProps;
+
+const mapStateToProps = (
+  { karutasState }: GlobalState,
+  { location }: RouteComponentProps<{}>
+): FrameConnectedProps & RootOwnProps => {
+  let canBack = false;
+  let isDisplayNav = true;
+  let subTitle = '簡単に暗記';
+
+  const { pathname } = location;
+
+  if (pathname.indexOf(ROUTE_PATHS.TRAINING) >= 0) {
+    canBack = true;
+    subTitle = '練習';
+    if (pathname.indexOf(ROUTE_PATHS.TRAINING_QUESTION) >= 0) {
+      isDisplayNav = false;
+    }
+  } else if (pathname.indexOf(ROUTE_PATHS.EXAM) >= 0) {
+    canBack = true;
+    subTitle = '腕試し';
+    if (pathname.indexOf(ROUTE_PATHS.EXAM_QUESTION) >= 0) {
+      isDisplayNav = false;
+    }
+  } else if (pathname.indexOf(ROUTE_PATHS.KARUTAS) >= 0) {
+    canBack = true;
+    subTitle = '資料';
+  }
+
   return {
-    initialized: karutasState.karutas.length > 0
+    canBack,
+    initialized: karutasState.karutas.length > 0,
+    isDisplayNav,
+    subTitle
   };
 };
 
-const isInitialized = ({ initialized }: RootProps) => initialized;
+const mapDispatchToProps = (
+  _: Dispatch<GlobalState>,
+  { history }: RouteComponentProps<{}>
+): FrameDispatchProps => {
+  return {
+    onClickBack: () => {
+      history.goBack();
+    }
+  };
+};
+
+const isInitialized = ({ initialized }: RootOwnProps) => initialized;
 
 const withInitializeCheck = branch<RootProps>(
   isInitialized,
@@ -22,4 +70,6 @@ const withInitializeCheck = branch<RootProps>(
   _ => Initializer
 );
 
-export default connect(mapStateToProps)(withInitializeCheck(Frame));
+export default withRouter(
+  connect(mapStateToProps, mapDispatchToProps)(withInitializeCheck(Frame))
+);

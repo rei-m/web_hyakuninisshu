@@ -2,7 +2,7 @@ import * as React from 'react';
 import styled from 'styled-components';
 import NavIcon from '../NavIcon';
 import { COLOR_PRIMARY } from '../../constants/colors';
-import { MenuIconType } from '../../enums';
+import { MenuType } from '../../enums';
 
 const Root = styled.nav`
   display: flex;
@@ -25,6 +25,7 @@ const Root = styled.nav`
 
 const IconBox = styled.div`
   flex-grow: 1;
+  width: 100%;
   @media screen and (min-width: 768px) {
     flex-grow: 0;
     height: 64px;
@@ -35,13 +36,16 @@ const Navigation = () => {
   return (
     <Root>
       <IconBox>
-        <NavIcon iconType={MenuIconType.Training} text="練習" />
+        <NavIcon iconType={MenuType.Training} text="練習" />
       </IconBox>
       <IconBox>
-        <NavIcon iconType={MenuIconType.Exam} text="力試し" />
+        <NavIcon iconType={MenuType.Exam} text="力試し" />
       </IconBox>
       <IconBox>
-        <NavIcon iconType={MenuIconType.Material} text="資料" />
+        <NavIcon iconType={MenuType.Material} text="資料" />
+      </IconBox>
+      <IconBox>
+        <NavIcon iconType={MenuType.Other} text="その他" />
       </IconBox>
     </Root>
   );
