@@ -28,12 +28,13 @@ const Frame: React.StatelessComponent<FrameProps> = ({
   children,
   subTitle,
   onClickBack,
-  isDisplayNav
+  isDisplayNav,
+  currentMenuType
 }) => (
   <div>
     <Header subTitle={subTitle} canBack={canBack} onClickBack={onClickBack} />
     <Body>{children}</Body>
-    {isDisplayNav && <Navigation />}
+    {isDisplayNav && <Navigation currentMenuType={currentMenuType} />}
   </div>
 );
 

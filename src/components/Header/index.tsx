@@ -38,7 +38,6 @@ const Icon = styled.i`
   width: 56px;
   color: #fff;
   text-align: center;
-  width: inherit;
   @media screen and (min-width: 768px) {
     line-height: 64px;
     width: 64px;
