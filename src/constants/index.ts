@@ -5,5 +5,6 @@ export const ROUTE_PATHS = {
   KARUTAS_ID: '/karutas/:id',
   ROOT: '/',
   TRAINING: '/training',
-  TRAINING_QUESTION: '/training/question'
+  TRAINING_QUESTION: '/training/question',
+  ABOUT: '/about'
 };

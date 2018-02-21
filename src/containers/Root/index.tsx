@@ -41,6 +41,11 @@ const mapStateToProps = (
   } else if (pathname.indexOf(ROUTE_PATHS.KARUTAS) >= 0) {
     canBack = true;
     subTitle = '資料';
+  } else if (pathname.indexOf(ROUTE_PATHS.ABOUT) >= 0) {
+    canBack = true;
+    subTitle = 'サイトについて';
+  } else {
+    canBack = false
   }
 
   return {
