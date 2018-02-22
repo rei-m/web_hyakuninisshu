@@ -8,8 +8,8 @@ import KarutasShow from './containers/Karutas/Show';
 import ExamMenuSection from './components/ExamMenuSection';
 import MenuSection from './components/MenuSection';
 import TrainingMenuSection from './components/TrainingMenuSection';
-import About from './components/About';
-import NotFound from './components/NotFound'
+import AboutSection from './components/AboutSection';
+import NotFound from './components/NotFound';
 import { ROUTE_PATHS } from './constants';
 
 const Application = () => (
@@ -30,7 +30,7 @@ const Application = () => (
       <Route exact path={ROUTE_PATHS.EXAM_QUESTION} component={ExamIndex} />
       <Route exact path={ROUTE_PATHS.KARUTAS} component={KarutasIndex} />
       <Route exact path={ROUTE_PATHS.KARUTAS_ID} component={KarutasShow} />
-      <Route exact path={ROUTE_PATHS.ABOUT} component={About} />
+      <Route exact path={ROUTE_PATHS.ABOUT} component={AboutSection} />
       <Route component={NotFound} />
     </Switch>
   </Root>
