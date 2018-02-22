@@ -6,6 +6,7 @@ import { convetKarutaId } from '../helper';
 
 const Row = styled.div`
   display: flex;
+  width: 380px;
   height: 88px;
   align-items: center;
 `;
