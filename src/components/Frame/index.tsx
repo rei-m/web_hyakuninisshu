@@ -5,8 +5,13 @@ import Navigation from '../Navigation';
 import { MenuType } from '../../enums';
 
 export const Body = styled.div`
-  padding-top: 64px;
+  padding-top: 56px;
   text-align: center;
+
+  @media screen and (min-width: 768px) {
+    padding-top: 64px;
+    padding-left: 64px;
+  }
 `;
 
 export interface FrameConnectedProps
