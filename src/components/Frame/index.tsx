@@ -6,10 +6,12 @@ import { MenuType } from '../../enums';
 
 export const Body = styled.div`
   padding-top: 56px;
+  padding-bottom: 56px;
   text-align: center;
 
   @media screen and (min-width: 768px) {
     padding-top: 64px;
+    padding-bottom: 0;
     padding-left: 64px;
   }
 `;
