@@ -56,7 +56,7 @@ const Navigation: React.StatelessComponent<NavigationProps> = ({
         <Link to={ROUTE_PATHS.EXAM} style={{ width: '100%' }}>
           <NavIcon
             iconType={MenuType.Exam}
-            text="力試し"
+            text="腕試し"
             isCurrent={currentMenuType === MenuType.Exam}
           />
         </Link>

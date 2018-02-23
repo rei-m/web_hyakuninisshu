@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { withRouter, RouteComponentProps } from 'react-router-dom';
 import styled from 'styled-components';
-import SectionTitle from '../SectionTitle';
+import PageTitle from '../PageTitle';
 
 const RootSection = styled.section`
   max-width: 380px;
@@ -28,7 +28,7 @@ const handleSubmit = ({ history }: RouteComponentProps<{}>) => {
 
 const ExamMenuSection = (props: RouteComponentProps<{}>) => (
   <RootSection>
-    <SectionTitle title="腕試し" />
+    <PageTitle title="腕試し" />
     <div>
       <Explain>
         全百首からランダムに出題されます。<br />練習の成果を確認しましょう。

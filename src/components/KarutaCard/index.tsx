@@ -18,8 +18,9 @@ const Root = styled.article`
   padding: 16px;
 `;
 
-const Number = styled.h3`
-  font-size: 1.2rem;
+const Title = styled.h3`
+  font-size: 1.6rem;
+  padding: 8px;
 `;
 
 const ItemBox = styled.div`
@@ -67,17 +68,15 @@ const KimarijiRow = ({
 
 const KarutaCard = ({ karuta }: KarutaCardProps) => (
   <Root>
-    <Number>{convetKarutaId(karuta.id)}</Number>
+    <Title>
+      {convetKarutaId(karuta.id)} / {karuta.creator}
+    </Title>
     <KarutaImage
       karutaId={karuta.id}
       style={{
         width: 200
       }}
     />
-    <ItemBox>
-      <ItemTitle>歌人</ItemTitle>
-      <ItemValue>{karuta.creator}</ItemValue>
-    </ItemBox>
     <ItemBox>
       <ItemTitle>原文</ItemTitle>
       <ItemValue>{`${karuta.firstKanji} ${karuta.secondKanji} ${

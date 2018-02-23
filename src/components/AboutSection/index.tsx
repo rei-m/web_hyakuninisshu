@@ -1,19 +1,19 @@
 import * as React from 'react';
 import styled from 'styled-components';
 
-const RootSection = styled.section`
-  padding: 32px 16px;
+const Root = styled.div`
+  padding: 16px;
   box-sizing: border-box;
   max-width: 960px;
   margin: auto;
   text-align: left;
 `;
 
-const Article = styled.article`
+const Section = styled.section`
   margin: 32px 0;
 `;
 
-const ArticleTitle = styled.h2`
+const SectionTitle = styled.h1`
   font-size: 2.4rem;
   position: relative;
   &:after {
@@ -26,7 +26,7 @@ const ArticleTitle = styled.h2`
   }
 `;
 
-const ArticleText = styled.div`
+const SectionText = styled.div`
   padding: 8px;
   line-height: 2rem;
 `;
@@ -36,26 +36,26 @@ const AppBannerBox = styled.div`
 `;
 
 const AboutSection = () => (
-  <RootSection>
-    <Article>
-      <ArticleTitle>サイトについて</ArticleTitle>
-      <ArticleText>
+  <Root>
+    <Section>
+      <SectionTitle>サイトについて</SectionTitle>
+      <SectionText>
         このサイトは百人一首を覚えるためのサイトです。4択のクイズ形式で繰り返し練習することで効率よく百人一首を覚えることが出来ます。
-      </ArticleText>
-    </Article>
-    <Article>
-      <ArticleTitle>使い方について</ArticleTitle>
-      <ArticleText>
+      </SectionText>
+    </Section>
+    <Section>
+      <SectionTitle>使い方について</SectionTitle>
+      <SectionText>
         練習では様々な条件を組み合わせて出題範囲を指定できます。ご自身の習熟度に合わせて効率よく練習できます。
         もう全部覚えたという方は腕試しに挑戦しましょう。百首通しでランダムに出題されます。
         資料では百人一首の詳細な情報を閲覧できます。決まり字や歌の現代語訳などを確認することができます。
-      </ArticleText>
-    </Article>
-    <Article>
-      <ArticleTitle>アプリ版について</ArticleTitle>
-      <ArticleText>
+      </SectionText>
+    </Section>
+    <Section>
+      <SectionTitle>アプリ版について</SectionTitle>
+      <SectionText>
         Androidのみリリースしています。こちらは一旦インストールしていただけばオフラインでも使えます。iOS版は未定ですが、要望があればがんばります。
-      </ArticleText>
+      </SectionText>
       <AppBannerBox>
         <a href="https://play.google.com/store/apps/details?id=me.rei_m.hyakuninisshu&hl=ja&pcampaignid=MKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1">
           <img
@@ -68,19 +68,19 @@ const AboutSection = () => (
           />
         </a>
       </AppBannerBox>
-    </Article>
-    <Article>
-      <ArticleTitle>運営者について</ArticleTitle>
-      <ArticleText>
+    </Section>
+    <Section>
+      <SectionTitle>運営者について</SectionTitle>
+      <SectionText>
         当サイトは
         <a href="https://twitter.com/rei_m" target="_blank">
           @rei_m
         </a>
         が個人で運営しています。不具合や要望等あればTwitterまでご連絡ください。
-        アプリのレビューで読み上げ機能が欲しいというお声をいただくのですが、使えるいい音源があれば搭載します。
-      </ArticleText>
-    </Article>
-  </RootSection>
+        アプリのレビューで読み上げ機能が欲しいというお声をいただくのですが、使用可能ないい音源があれば搭載します。
+      </SectionText>
+    </Section>
+  </Root>
 );
 
 export default AboutSection;

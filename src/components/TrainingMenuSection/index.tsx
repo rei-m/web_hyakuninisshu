@@ -8,12 +8,14 @@ import {
   RANGE_TO,
   STYLE_LIST
 } from '../../constants/trainings';
-import SectionTitle from '../SectionTitle';
+import PageTitle from '../PageTitle';
 import TrainingMenuForm from '../../containers/TrainingMenuForm';
 
 const RootSection = styled.section`
   max-width: 380px;
   margin: auto;
+  padding: 16px;
+  box-sizing: border-box;
 `;
 
 const handleSubmit = ({ history }: RouteComponentProps<{}>) => {
@@ -40,7 +42,7 @@ const handleSubmit = ({ history }: RouteComponentProps<{}>) => {
 
 const TrainingMenuSection = (props: RouteComponentProps<{}>) => (
   <RootSection>
-    <SectionTitle title="練習" />
+    <PageTitle title="出題設定" />
     <TrainingMenuForm
       initialRangeFrom={RANGE_FROM[0].value}
       initialRangeTo={RANGE_TO[9].value}

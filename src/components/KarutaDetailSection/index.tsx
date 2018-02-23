@@ -1,8 +1,9 @@
 import * as React from 'react';
 import styled from 'styled-components';
-import SectionTitle from '../SectionTitle';
+import PageTitle from '../PageTitle';
 import KarutaCard from '../KarutaCard';
 import { Karuta } from '../../types';
+import { convetKarutaId } from '../helper';
 
 export interface KarutaDetailSectionProps {
   karuta: Karuta;
@@ -10,7 +11,6 @@ export interface KarutaDetailSectionProps {
 
 const RootSection = styled.section`
   box-sizing: border-box;
-  max-width: 960px;
   padding: 16px;
   display: flex;
   align-items: center;
@@ -20,7 +20,7 @@ const RootSection = styled.section`
 
 const KarutaDetailSection = ({ karuta }: KarutaDetailSectionProps) => (
   <RootSection>
-    <SectionTitle title="歌詳細" />
+    <PageTitle title={convetKarutaId(karuta.id)} />
     <KarutaCard karuta={karuta} />
   </RootSection>
 );
