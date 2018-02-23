@@ -14,8 +14,8 @@ const Root = styled.div`
   margin: auto;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   @media screen and (min-width: 768px) {
-    width: 760px;
     flex-direction: row;
   }
 `;

@@ -18,7 +18,7 @@ export type KarutaListSectionProps = KarutaListSectionConnectedProps &
 const RootSection = styled.section`
   box-sizing: border-box;
   max-width: 960px;
-  margin: auto;
+  padding: 16px;
 `;
 
 const KarutaListSection = ({

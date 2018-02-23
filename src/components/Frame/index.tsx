@@ -8,6 +8,8 @@ export const Body = styled.div`
   padding-top: 56px;
   padding-bottom: 56px;
   text-align: center;
+  background-color: #fffff0;
+  min-height: 100vh;
 
   @media screen and (min-width: 768px) {
     padding-top: 64px;

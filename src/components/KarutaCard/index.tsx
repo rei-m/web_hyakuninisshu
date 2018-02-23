@@ -8,11 +8,32 @@ export interface KarutaCardProps {
   karuta: Karuta;
 }
 
+const Root = styled.article`
+  max-width: 380px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.26);
+  background-color: #fff;
+  box-sizing: border-box;
+  border: 8px solid #689f38;
+  border-radius: 4px;
+  padding: 16px;
+`;
+
+const Number = styled.h3`
+  font-size: 1.2rem;
+`;
+
+const ItemBox = styled.div`
+  padding-top: 8px;
+  padding-bottom: 8px;
+`;
+
 const ItemTitle = styled.div`
+  text-align: left;
   font-size: 1.2rem;
 `;
 
 const ItemValue = styled.div`
+  text-align: left;
   font-size: 1.4rem;
 `;
 
@@ -45,19 +66,19 @@ const KimarijiRow = ({
 };
 
 const KarutaCard = ({ karuta }: KarutaCardProps) => (
-  <div>
-    <div>{convetKarutaId(karuta.id)}</div>
+  <Root>
+    <Number>{convetKarutaId(karuta.id)}</Number>
     <KarutaImage
       karutaId={karuta.id}
       style={{
         width: 200
       }}
     />
-    <div>
+    <ItemBox>
       <ItemTitle>歌人</ItemTitle>
       <ItemValue>{karuta.creator}</ItemValue>
-    </div>
-    <div>
+    </ItemBox>
+    <ItemBox>
       <ItemTitle>原文</ItemTitle>
       <ItemValue>{`${karuta.firstKanji} ${karuta.secondKanji} ${
         karuta.thirdKanji
@@ -65,12 +86,12 @@ const KarutaCard = ({ karuta }: KarutaCardProps) => (
       <ItemValue>{`${karuta.fourthKanji} ${karuta.fifthKanji}`}</ItemValue>
       {KimarijiRow(karuta)}
       <ItemValue>{`${karuta.fourthKana} ${karuta.fifthKana}`}</ItemValue>
-    </div>
-    <div>
+    </ItemBox>
+    <ItemBox>
       <ItemTitle>訳</ItemTitle>
       <ItemValue>{karuta.translation}</ItemValue>
-    </div>
-  </div>
+    </ItemBox>
+  </Root>
 );
 
 export default KarutaCard;
