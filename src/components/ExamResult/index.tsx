@@ -5,7 +5,7 @@ import QuestionResultsSummary from '../QuestionResultsSummary';
 import QuestionResultsMap from '../QuestionResultsMap';
 import { Answer, Question } from '../../types';
 
-export interface ExamResultOwnProps {
+export interface ExamResultStateProps {
   readonly totalCount: number;
   readonly correctCount: number;
   readonly averageAnswerSecond: number;
@@ -18,7 +18,7 @@ export interface ExamResultDispatchProps {
   readonly onClickResultsMap: (karutaId: number) => void;
 }
 
-export type ExamResultProps = ExamResultOwnProps & ExamResultDispatchProps;
+export type ExamResultProps = ExamResultStateProps & ExamResultDispatchProps;
 
 const RootSection = styled.section`
   max-width: 380px;

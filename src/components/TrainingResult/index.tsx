@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 import QuestionResultsSummary from '../QuestionResultsSummary';
 
-export interface TrainingResultOwnProps {
+export interface TrainingResultStateProps {
   readonly totalCount: number;
   readonly correctCount: number;
   readonly averageAnswerSecond: number;
@@ -13,7 +13,7 @@ export interface TrainingResultDispatchProps {
   readonly onClickRestart: () => void;
 }
 
-export type TrainingResultProps = TrainingResultOwnProps &
+export type TrainingResultProps = TrainingResultStateProps &
   TrainingResultDispatchProps;
 
 const RootSection = styled.section`

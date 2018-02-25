@@ -2,13 +2,13 @@ import { connect, Dispatch } from 'react-redux';
 import { GlobalState } from '../../reducers/index';
 import { withRouter, RouteComponentProps } from 'react-router-dom';
 import KarutaListSection, {
-  KarutaListSectionConnectedProps,
-  KarutaListSectionDispatchProps
+  KarutaListSectionDispatchProps,
+  KarutaListSectionStateProps
 } from '../../components/KarutaListSection';
 
 const mapStateToProps = ({
   karutasState
-}: GlobalState): KarutaListSectionConnectedProps => {
+}: GlobalState): KarutaListSectionStateProps => {
   return {
     karutas: karutasState.karutas
   };

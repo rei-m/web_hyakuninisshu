@@ -1,10 +1,11 @@
 import * as React from 'react';
 import styled from 'styled-components';
+import Tatami from '../Tatami';
 import { Karuta } from '../../types';
 import { COLOR_PRIMARY_DARK } from '../../constants/colors';
 import { convetKarutaId, convetKimariji } from '../helper';
 
-export interface QuestionCorrectOwnProps {
+export interface QuestionCorrectStateProps {
   readonly karuta: Karuta;
 }
 
@@ -12,15 +13,19 @@ export interface QuestionCorrectDispatchProps {
   readonly onClickGoToNext: () => void;
 }
 
-export type QuestionCorrectProps = QuestionCorrectOwnProps &
+export type QuestionCorrectProps = QuestionCorrectStateProps &
   QuestionCorrectDispatchProps;
 
-const Frame = styled.div`
+const Frame = Tatami.extend`
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 100vh;
+  min-height: calc(100vh - 56px);
+
+  @media screen and (min-width: 768px) {
+    min-height: calc(100vh - 64px);
+  }
 `;
 
 const NumberAndKimariji = styled.div`
@@ -29,6 +34,7 @@ const NumberAndKimariji = styled.div`
   width: 160px;
   margin: 0 auto;
   font-size: 1.2rem;
+  background-color: #ffffff;
 `;
 
 const KarutaFrame = styled.div`
@@ -40,6 +46,8 @@ const KarutaFrame = styled.div`
   align-items: center;
   justify-content: center;
   margin: 16px auto 0 auto;
+  background-color: #fffff0;
+  box-shadow: 0 -1px 5px rgba(0, 0, 0, 0.26);
 `;
 
 const Inner = styled.div`

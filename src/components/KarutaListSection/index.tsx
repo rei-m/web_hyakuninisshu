@@ -4,7 +4,7 @@ import PageTitle from '../PageTitle';
 import KarutaList from '../KarutaList';
 import { Karuta } from '../../types';
 
-export interface KarutaListSectionConnectedProps {
+export interface KarutaListSectionStateProps {
   karutas: Karuta[];
 }
 
@@ -12,7 +12,7 @@ export interface KarutaListSectionDispatchProps {
   onClickKarutaListRow: (karutaId: number) => void;
 }
 
-export type KarutaListSectionProps = KarutaListSectionConnectedProps &
+export type KarutaListSectionProps = KarutaListSectionStateProps &
   KarutaListSectionDispatchProps;
 
 const RootSection = styled.section`

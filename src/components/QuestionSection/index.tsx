@@ -1,11 +1,12 @@
 import * as React from 'react';
 import styled from 'styled-components';
 import { Answer, Question, ToriFuda } from '../../types';
+import Tatami from '../Tatami';
 import YomiFudaView from '../YomiFudaView';
 import ToriFudaView from '../ToriFudaView';
 import QuestionResult from '../QuestionResult';
 
-export interface QuestionSectionOwnProps {
+export interface QuestionSectionStateProps {
   question: Question;
   answer?: Answer;
   totalCount: number;
@@ -17,15 +18,19 @@ export interface QuestionSectionDispatchProps {
   onClickResult: () => void;
 }
 
-export type QuestionSectionProps = QuestionSectionOwnProps &
+export type QuestionSectionProps = QuestionSectionStateProps &
   QuestionSectionDispatchProps;
 
-const Frame = styled.section`
+const Frame = Tatami.extend`
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 100vh;
+  min-height: calc(100vh - 56px);
+
+  @media screen and (min-width: 768px) {
+    min-height: calc(100vh - 64px);
+  }
 `;
 
 const YomiFudaBox = styled.div`
@@ -44,6 +49,8 @@ const Position = styled.div`
   position: absolute;
   right: 0;
   top: -32px;
+  color: #fff;
+  border-bottom: 1px dotted #fff;
 `;
 
 const QuestionSection = ({

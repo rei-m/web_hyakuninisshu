@@ -1,19 +1,19 @@
-import * as React from 'react';
-import { connect, Dispatch } from 'react-redux';
-import { branch, compose, renderComponent } from 'recompose';
-import { withRouter, RouteComponentProps } from 'react-router-dom';
-import { Answer, Question, ToriFuda } from '../../types';
 import {
   answerQuestion,
   goToCorrect,
   goToNextQuestion,
-  restartTraining
+  restart
 } from '../../actions/questions';
+import * as React from 'react';
+import { branch, compose, renderComponent } from 'recompose';
+import { withRouter, RouteComponentProps } from 'react-router-dom';
+import { Answer, Question, ToriFuda } from '../../types';
+import { connect, Dispatch } from 'react-redux';
 import { GlobalState } from '../../reducers/index';
 import QuestionSection, {
   QuestionSectionDispatchProps,
-  QuestionSectionOwnProps,
-  QuestionSectionProps
+  QuestionSectionProps,
+  QuestionSectionStateProps
 } from '../../components/QuestionSection';
 import QuestionCorrect, {
   QuestionCorrectDispatchProps
@@ -38,7 +38,7 @@ export type ExamProps = ExamOwnProps &
 const mapStateToProps = (
   { questionsState }: GlobalState,
   { location }: RouteComponentProps<{}>
-): QuestionSectionOwnProps & ExamOwnProps => {
+): QuestionSectionStateProps & ExamOwnProps => {
   const { submitTime } = location.state;
   const {
     answers,
@@ -70,7 +70,7 @@ const mapDispatchToProps = (
       dispatch(goToNextQuestion());
     },
     onClickRestart: () => {
-      dispatch(restartTraining());
+      dispatch(restart());
     },
     onClickResult: () => {
       dispatch(goToCorrect());

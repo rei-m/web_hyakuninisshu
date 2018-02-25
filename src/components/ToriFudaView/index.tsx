@@ -17,6 +17,8 @@ const Frame = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
+  background-color: #fffff0;
+  box-shadow: 0 -1px 5px rgba(0, 0, 0, 0.26);
 `;
 
 const Inner = styled.div`

@@ -4,9 +4,9 @@ import { branch } from 'recompose';
 import { GlobalState } from '../../reducers/index';
 import Initializer from '../Initializer';
 import Frame, {
-  FrameConnectedProps,
   FrameDispatchProps,
-  FrameProps
+  FrameProps,
+  FrameStateProps
 } from '../../components/Frame';
 import { ROUTE_PATHS } from '../../constants';
 import { MenuType } from '../../enums';
@@ -20,7 +20,7 @@ export type RootProps = RootOwnProps & FrameProps;
 const mapStateToProps = (
   { karutasState }: GlobalState,
   { location }: RouteComponentProps<{}>
-): FrameConnectedProps & RootOwnProps => {
+): FrameStateProps & RootOwnProps => {
   let canBack = false;
   let isDisplayNav = true;
   let subTitle = '簡単に暗記';

@@ -10,6 +10,9 @@ export type START_TRAINING_TYPE = typeof START_TRAINING_NAME;
 export const START_EXAM_NAME = 'START_EXAM_NAME';
 export type START_EXAM_TYPE = typeof START_EXAM_NAME;
 
+export const RESTART_NAME = 'RESTART_NAME';
+export type RESTART_TYPE = typeof RESTART_NAME;
+
 export const ANSWER_QUESTION_NAME = 'ANSWER_QUESTION_NAME';
 export type ANSWER_QUESTION_TYPE = typeof ANSWER_QUESTION_NAME;
 
@@ -20,47 +23,72 @@ export const GO_TO_NEXT_QUESTION_NAME = 'GO_TO_NEXT_QUESTION_NAME';
 export type GO_TO_NEXT_QUESTION_TYPE = typeof GO_TO_NEXT_QUESTION_NAME;
 
 export interface StartTrainingAction extends Action {
-  type: START_TRAINING_TYPE;
-  payload: {
-    questions: Question[];
-    startedTime: number;
+  readonly type: START_TRAINING_TYPE;
+  readonly payload: {
+    readonly questions: Question[];
+    readonly startedTime: number;
+  };
+  meta: {
+    readonly rangeFrom: number;
+    readonly rangeTo: number;
+    readonly kimariji: number;
+    readonly color: string;
+    readonly kamiNoKuStyle: number;
+    readonly shimoNoKuStyle: number;
   };
 }
 
 export interface StartExamAction extends Action {
-  type: START_EXAM_TYPE;
-  payload: {
-    questions: Question[];
-    startedTime: number;
+  readonly type: START_EXAM_TYPE;
+  readonly payload: {
+    readonly questions: Question[];
+    readonly startedTime: number;
+  };
+}
+
+export interface StartExamAction extends Action {
+  readonly type: START_EXAM_TYPE;
+  readonly payload: {
+    readonly questions: Question[];
+    readonly startedTime: number;
+  };
+}
+
+export interface RestartAction extends Action {
+  readonly type: RESTART_TYPE;
+  readonly payload: {
+    readonly questions: Question[];
+    readonly startedTime: number;
   };
 }
 
 export interface AnswerQuestionAction extends Action {
-  type: ANSWER_QUESTION_TYPE;
-  payload: {
-    answer: Answer;
+  readonly type: ANSWER_QUESTION_TYPE;
+  readonly payload: {
+    readonly answer: Answer;
   };
 }
 
 export interface GoToCorrectAction extends Action {
-  type: GO_TO_CORRECT_TYPE;
-  payload: {
-    nextPage: number;
+  readonly type: GO_TO_CORRECT_TYPE;
+  readonly payload: {
+    readonly nextPage: number;
   };
 }
 
 export interface GoToNextQuestionAction extends Action {
-  type: GO_TO_NEXT_QUESTION_TYPE;
-  payload: {
-    nextIndex: number;
-    nextPage: number;
-    startedTime: number;
+  readonly type: GO_TO_NEXT_QUESTION_TYPE;
+  readonly payload: {
+    readonly nextIndex: number;
+    readonly nextPage: number;
+    readonly startedTime: number;
   };
 }
 
 export type QuestionsActions =
   | StartTrainingAction
   | StartExamAction
+  | RestartAction
   | AnswerQuestionAction
   | GoToCorrectAction
   | GoToNextQuestionAction;
@@ -87,6 +115,14 @@ export const startTraining = (
     .create();
 
   return {
+    meta: {
+      color,
+      kamiNoKuStyle,
+      kimariji,
+      rangeFrom,
+      rangeTo,
+      shimoNoKuStyle
+    },
     payload: {
       questions: randomizeArray(questions),
       startedTime: new Date().getTime()
@@ -159,7 +195,7 @@ export const goToNextQuestion = (): GoToNextQuestionAction => {
   };
 };
 
-export const restartTraining = (): StartTrainingAction => {
+export const restart = (): RestartAction => {
   const { questions, answers } = getStore().getState().questionsState;
   // TODO: 全て回答済みでなかったらエラー
   const finder: { [questionId: number]: Question } = questions.reduce(
@@ -176,7 +212,7 @@ export const restartTraining = (): StartTrainingAction => {
       questions: randomizeArray(targets),
       startedTime: new Date().getTime()
     },
-    type: START_TRAINING_NAME
+    type: RESTART_NAME
   };
 };
 
