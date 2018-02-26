@@ -19,6 +19,7 @@ const Frame = styled.div`
   justify-content: center;
   background-color: #fffff0;
   box-shadow: 0 -1px 5px rgba(0, 0, 0, 0.26);
+  font-family: 'Sawarabi Mincho';
 `;
 
 const Inner = styled.div`
