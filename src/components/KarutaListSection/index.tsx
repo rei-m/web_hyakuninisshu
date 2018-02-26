@@ -4,16 +4,10 @@ import PageTitle from '../PageTitle';
 import KarutaList from '../KarutaList';
 import { Karuta } from '../../types';
 
-export interface KarutaListSectionStateProps {
+export interface KarutaListSectionProps {
   karutas: Karuta[];
-}
-
-export interface KarutaListSectionDispatchProps {
   onClickKarutaListRow: (karutaId: number) => void;
 }
-
-export type KarutaListSectionProps = KarutaListSectionStateProps &
-  KarutaListSectionDispatchProps;
 
 const RootSection = styled.section`
   box-sizing: border-box;

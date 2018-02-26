@@ -2,13 +2,24 @@ import { connect, Dispatch } from 'react-redux';
 import { withRouter, RouteComponentProps } from 'react-router-dom';
 import { GlobalState } from '../../reducers/index';
 import TrainingMenuSection, {
-  TrainingMenuSectionDispatchProps,
-  TrainingMenuSectionStateProps
+  TrainingMenuSectionProps
 } from '../../components/TrainingMenuSection';
+
+export type TrainingsConnectedProps = Pick<
+  TrainingMenuSectionProps,
+  | 'initialRangeFrom'
+  | 'initialRangeTo'
+  | 'initialKimariji'
+  | 'initialColor'
+  | 'initialKamiNoKuStyle'
+  | 'initialShimoNoKuStyle'
+>;
+
+export type TrainingsDispatchProps = Pick<TrainingMenuSectionProps, 'onSubmit'>;
 
 const mapStateToProps = ({
   questionsState
-}: GlobalState): TrainingMenuSectionStateProps => {
+}: GlobalState): TrainingsConnectedProps => {
   const { trainingCondition } = questionsState;
   return {
     initialColor: trainingCondition.color,
@@ -23,7 +34,7 @@ const mapStateToProps = ({
 const mapDispatchToProps = (
   _: Dispatch<GlobalState>,
   { history }: RouteComponentProps<{}>
-): TrainingMenuSectionDispatchProps => {
+): TrainingsDispatchProps => {
   return {
     onSubmit: (
       rangeFrom: number,

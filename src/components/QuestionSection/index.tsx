@@ -6,20 +6,14 @@ import YomiFudaView from '../YomiFudaView';
 import ToriFudaView from '../ToriFudaView';
 import QuestionResult from '../QuestionResult';
 
-export interface QuestionSectionStateProps {
-  question: Question;
-  answer?: Answer;
-  totalCount: number;
-  currentPosition: number;
+export interface QuestionSectionProps {
+  readonly question: Question;
+  readonly answer?: Answer;
+  readonly totalCount: number;
+  readonly currentPosition: number;
+  readonly onClickToriFuda: (toriFuda: ToriFuda) => void;
+  readonly onClickResult: () => void;
 }
-
-export interface QuestionSectionDispatchProps {
-  onClickToriFuda: (toriFuda: ToriFuda) => void;
-  onClickResult: () => void;
-}
-
-export type QuestionSectionProps = QuestionSectionStateProps &
-  QuestionSectionDispatchProps;
 
 const Frame = Tatami.extend`
   display: flex;

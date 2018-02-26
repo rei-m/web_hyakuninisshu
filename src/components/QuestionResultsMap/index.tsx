@@ -5,18 +5,12 @@ import { convetKarutaId } from '../helper';
 import * as correctImage from './check_correct.png';
 import * as incorrectImage from './check_incorrect.png';
 
-export interface QuestionResultsMapStateProps {
+export interface QuestionResultsMapProps {
   readonly questions: Question[];
   readonly answers: Answer[];
   readonly style?: React.CSSProperties;
-}
-
-export interface QuestionResultsMapDispatchProps {
   readonly onClickResult: (karutaId: number) => void;
 }
-
-export type QuestionResultsMapProps = QuestionResultsMapStateProps &
-  QuestionResultsMapDispatchProps;
 
 export interface QuestionResultsCellProps {
   question: Question;

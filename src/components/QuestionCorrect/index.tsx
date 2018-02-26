@@ -5,16 +5,10 @@ import { Karuta } from '../../types';
 import { COLOR_PRIMARY_DARK } from '../../constants/colors';
 import { convetKarutaId, convetKimariji } from '../helper';
 
-export interface QuestionCorrectStateProps {
+export interface QuestionCorrectProps {
   readonly karuta: Karuta;
-}
-
-export interface QuestionCorrectDispatchProps {
   readonly onClickGoToNext: () => void;
 }
-
-export type QuestionCorrectProps = QuestionCorrectStateProps &
-  QuestionCorrectDispatchProps;
 
 const Frame = Tatami.extend`
   display: flex;

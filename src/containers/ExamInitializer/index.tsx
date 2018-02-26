@@ -1,11 +1,13 @@
 import { connect, Dispatch } from 'react-redux';
 import { GlobalState } from '../../reducers/index';
 import { startExam } from '../../actions/questions';
-import Progress, { ProgressDispatchProps } from '../../components/Progress';
+import Progress, { ProgressProps } from '../../components/Progress';
+
+export type ExamInitializerDispatchProps = Pick<ProgressProps, 'onStart'>;
 
 const mapDispatchToProps = (
   dispatch: Dispatch<GlobalState>
-): ProgressDispatchProps => {
+): ExamInitializerDispatchProps => {
   return {
     onStart: () => {
       dispatch(startExam());

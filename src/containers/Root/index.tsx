@@ -3,24 +3,27 @@ import { withRouter, RouteComponentProps } from 'react-router-dom';
 import { branch } from 'recompose';
 import { GlobalState } from '../../reducers/index';
 import Initializer from '../Initializer';
-import Frame, {
-  FrameDispatchProps,
-  FrameProps,
-  FrameStateProps
-} from '../../components/Frame';
+import Frame, { FrameProps } from '../../components/Frame';
 import { ROUTE_PATHS } from '../../constants';
 import { MenuType } from '../../enums';
 
 export interface RootOwnProps {
-  initialized: boolean;
+  readonly initialized: boolean;
 }
+
+export type RootConnectedProps = Pick<
+  FrameProps,
+  'subTitle' | 'canBack' | 'currentMenuType' | 'isDisplayNav'
+>;
+
+export type RootDispatchProps = Pick<FrameProps, 'onClickBack'>;
 
 export type RootProps = RootOwnProps & FrameProps;
 
 const mapStateToProps = (
   { karutasState }: GlobalState,
   { location }: RouteComponentProps<{}>
-): FrameStateProps & RootOwnProps => {
+): RootConnectedProps & RootOwnProps => {
   let canBack = false;
   let isDisplayNav = true;
   let subTitle = '簡単に暗記';
@@ -67,7 +70,7 @@ const mapStateToProps = (
 const mapDispatchToProps = (
   _: Dispatch<GlobalState>,
   { history }: RouteComponentProps<{}>
-): FrameDispatchProps => {
+): RootDispatchProps => {
   return {
     onClickBack: () => {
       history.goBack();

@@ -25,18 +25,13 @@ export const Body = div`
   }
 `;
 
-export interface FrameStateProps extends React.ClassAttributes<HTMLDivElement> {
+export interface FrameProps {
   readonly subTitle: string;
   readonly canBack: boolean;
   readonly currentMenuType?: MenuType;
   readonly isDisplayNav: boolean;
-}
-
-export interface FrameDispatchProps {
   readonly onClickBack: () => void;
 }
-
-export type FrameProps = FrameStateProps & FrameDispatchProps;
 
 const Frame: React.StatelessComponent<FrameProps> = ({
   canBack,

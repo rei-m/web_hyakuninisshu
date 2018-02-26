@@ -3,16 +3,13 @@ import styled from 'styled-components';
 import PageTitle from '../PageTitle';
 import TrainingMenuForm from '../../containers/TrainingMenuForm';
 
-export interface TrainingMenuSectionStateProps {
+export interface TrainingMenuSectionProps {
   initialRangeFrom: number;
   initialRangeTo: number;
   initialKimariji: number;
   initialColor: string;
   initialKamiNoKuStyle: number;
   initialShimoNoKuStyle: number;
-}
-
-export interface TrainingMenuSectionDispatchProps {
   onSubmit: (
     rangeFrom: number,
     rangeTo: number,
@@ -23,9 +20,6 @@ export interface TrainingMenuSectionDispatchProps {
     submitTime: number
   ) => void;
 }
-
-export type TrainingMenuSectionProps = TrainingMenuSectionStateProps &
-  TrainingMenuSectionDispatchProps;
 
 const RootSection = styled.section`
   max-width: 380px;

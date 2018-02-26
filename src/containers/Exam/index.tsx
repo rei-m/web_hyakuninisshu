@@ -11,34 +11,39 @@ import { Answer, Question, ToriFuda } from '../../types';
 import { connect, Dispatch } from 'react-redux';
 import { GlobalState } from '../../reducers/index';
 import QuestionSection, {
-  QuestionSectionDispatchProps,
-  QuestionSectionProps,
-  QuestionSectionStateProps
+  QuestionSectionProps
 } from '../../components/QuestionSection';
 import QuestionCorrect, {
-  QuestionCorrectDispatchProps
+  QuestionCorrectProps
 } from '../../components/QuestionCorrect';
-import ExamResult, {
-  ExamResultDispatchProps
-} from '../../components/ExamResult';
+import ExamResult, { ExamResultProps } from '../../components/ExamResult';
 import ExamInitializer from '../ExamInitializer';
 
 export interface ExamOwnProps {
-  started: boolean;
-  questions: Question[];
-  answers: Answer[];
-  currentPage: number;
+  readonly started: boolean;
+  readonly questions: Question[];
+  readonly answers: Answer[];
+  readonly currentPage: number;
 }
 
-export type ExamProps = ExamOwnProps &
-  QuestionSectionProps &
-  QuestionCorrectDispatchProps &
-  ExamResultDispatchProps;
+export type ExamConnectedProps = Pick<
+  QuestionSectionProps,
+  'question' | 'answer' | 'totalCount' | 'currentPosition'
+>;
+
+export type ExamDispatchProps = Pick<
+  ExamResultProps,
+  'onClickRestart' | 'onClickResultsMap'
+> &
+  Pick<QuestionCorrectProps, 'onClickGoToNext'> &
+  Pick<QuestionSectionProps, 'onClickToriFuda' | 'onClickResult'>;
+
+export type ExamProps = ExamOwnProps & QuestionSectionProps & ExamDispatchProps;
 
 const mapStateToProps = (
   { questionsState }: GlobalState,
   { location }: RouteComponentProps<{}>
-): QuestionSectionStateProps & ExamOwnProps => {
+): ExamOwnProps & ExamConnectedProps => {
   const { submitTime } = location.state;
   const {
     answers,
@@ -62,9 +67,7 @@ const mapStateToProps = (
 
 const mapDispatchToProps = (
   dispatch: Dispatch<GlobalState>
-): QuestionSectionDispatchProps &
-  QuestionCorrectDispatchProps &
-  ExamResultDispatchProps => {
+): ExamDispatchProps => {
   return {
     onClickGoToNext: () => {
       dispatch(goToNextQuestion());

@@ -11,34 +11,43 @@ import { Answer, Question, ToriFuda } from '../../types';
 import { connect, Dispatch } from 'react-redux';
 import { GlobalState } from '../../reducers/index';
 import QuestionSection, {
-  QuestionSectionDispatchProps,
-  QuestionSectionProps,
-  QuestionSectionStateProps
+  QuestionSectionProps
 } from '../../components/QuestionSection';
 import QuestionCorrect, {
-  QuestionCorrectDispatchProps
+  QuestionCorrectProps
 } from '../../components/QuestionCorrect';
-import TrainingResult, {
-  TrainingResultDispatchProps
-} from '../../components/TrainingResult';
+import QuestionsResult, {
+  QuestionsResultProps
+} from '../../components/QuestionsResult';
 import TrainingInitializer from '../TrainingInitializer';
 
-export interface TrainingOwnProps {
-  started: boolean;
-  questions: Question[];
-  answers: Answer[];
-  currentPage: number;
+export interface QuestionsOwnProps {
+  readonly started: boolean;
+  readonly questions: Question[];
+  readonly answers: Answer[];
+  readonly currentPage: number;
 }
 
-export type TrainingProps = TrainingOwnProps &
+export type QuestionsConnectedProps = Pick<
+  QuestionSectionProps,
+  'question' | 'answer' | 'totalCount' | 'currentPosition'
+>;
+
+export type QuestionsDispatchProps = Pick<
+  QuestionCorrectProps,
+  'onClickGoToNext'
+> &
+  Pick<QuestionSectionProps, 'onClickToriFuda' | 'onClickResult'> &
+  Pick<QuestionsResultProps, 'onClickRestart'>;
+
+export type TrainingProps = QuestionsOwnProps &
   QuestionSectionProps &
-  QuestionCorrectDispatchProps &
-  TrainingResultDispatchProps;
+  QuestionsDispatchProps;
 
 const mapStateToProps = (
   { questionsState }: GlobalState,
   { location }: RouteComponentProps<{}>
-): QuestionSectionStateProps & TrainingOwnProps => {
+): QuestionsOwnProps & QuestionsConnectedProps => {
   const { submitTime } = location.state;
   const {
     answers,
@@ -62,9 +71,7 @@ const mapStateToProps = (
 
 const mapDispatchToProps = (
   dispatch: Dispatch<GlobalState>
-): QuestionSectionDispatchProps &
-  QuestionCorrectDispatchProps &
-  TrainingResultDispatchProps => {
+): QuestionsDispatchProps => {
   return {
     onClickGoToNext: () => {
       dispatch(goToNextQuestion());
@@ -81,25 +88,25 @@ const mapDispatchToProps = (
   };
 };
 
-const isStarted = ({ started }: TrainingOwnProps) => started;
+const isStarted = ({ started }: QuestionsOwnProps) => started;
 
-const withStartedCheck = branch<TrainingOwnProps>(
+const withStartedCheck = branch<QuestionsOwnProps>(
   isStarted,
   component => component,
   renderComponent(TrainingInitializer)
 );
 
-const hasQuestion = ({ questions }: TrainingOwnProps) => questions.length > 0;
+const hasQuestion = ({ questions }: QuestionsOwnProps) => questions.length > 0;
 
 const EmptyMessage = () => <h3>指定した条件の歌はありませんでした</h3>;
 
-const withHasQuestionCheck = branch<TrainingOwnProps>(
+const withHasQuestionCheck = branch<QuestionsOwnProps>(
   hasQuestion,
   component => component,
   renderComponent(EmptyMessage)
 );
 
-const isAnswered = ({ currentPage }: TrainingOwnProps) => currentPage === 1;
+const isAnswered = ({ currentPage }: QuestionsOwnProps) => currentPage === 1;
 
 const renderQuestionCorrect = ({
   question,
@@ -111,13 +118,13 @@ const renderQuestionCorrect = ({
   );
 };
 
-const withAnsweredCheck = branch<TrainingOwnProps>(
+const withAnsweredCheck = branch<QuestionsOwnProps>(
   isAnswered,
   renderComponent(renderQuestionCorrect),
   component => component
 );
 
-const isFinished = ({ answers, questions }: TrainingOwnProps) =>
+const isFinished = ({ answers, questions }: QuestionsOwnProps) =>
   questions.length > 0 && questions.length === answers.length;
 
 const renderTrainingResult = ({
@@ -131,7 +138,7 @@ const renderTrainingResult = ({
     1000 /
     totalCount;
   return (
-    <TrainingResult
+    <QuestionsResult
       averageAnswerSecond={Math.round(averageAnswerSecond * 100) / 100}
       totalCount={totalCount}
       correctCount={correctCount}
@@ -140,7 +147,7 @@ const renderTrainingResult = ({
   );
 };
 
-const withFinishedCheck = branch<TrainingOwnProps>(
+const withFinishedCheck = branch<QuestionsOwnProps>(
   isFinished,
   renderComponent(renderTrainingResult),
   component => component
