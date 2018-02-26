@@ -3,6 +3,7 @@ import { getStore } from '../store';
 import { Answer, Karuta, Question } from '../types';
 import { randomizeArray } from '../utils';
 import { fetchTorifudas, questionsFilter } from '../utils/questions';
+import { QuestionState } from '../enums';
 
 export const START_TRAINING_NAME = 'START_TRAINING_NAME';
 export type START_TRAINING_TYPE = typeof START_TRAINING_NAME;
@@ -10,60 +11,95 @@ export type START_TRAINING_TYPE = typeof START_TRAINING_NAME;
 export const START_EXAM_NAME = 'START_EXAM_NAME';
 export type START_EXAM_TYPE = typeof START_EXAM_NAME;
 
+export const RESTART_QUESTIONS_NAME = 'RESTART_QUESTIONS_NAME';
+export type RESTART_QUESTIONS_TYPE = typeof RESTART_QUESTIONS_NAME;
+
 export const ANSWER_QUESTION_NAME = 'ANSWER_QUESTION_NAME';
 export type ANSWER_QUESTION_TYPE = typeof ANSWER_QUESTION_NAME;
 
-export const GO_TO_CORRECT_NAME = 'GO_TO_CORRECT_NAME';
-export type GO_TO_CORRECT_TYPE = typeof GO_TO_CORRECT_NAME;
+export const CONFIRM_CORRECT_NAME = 'CONFIRM_CORRECT_NAME';
+export type CONFIRM_CORRECT_TYPE = typeof CONFIRM_CORRECT_NAME;
 
-export const GO_TO_NEXT_QUESTION_NAME = 'GO_TO_NEXT_QUESTION_NAME';
-export type GO_TO_NEXT_QUESTION_TYPE = typeof GO_TO_NEXT_QUESTION_NAME;
+export const OPEN_NEXT_QUESTION_NAME = 'OPEN_NEXT_QUESTION_NAME';
+export type OPEN_NEXT_QUESTION_TYPE = typeof OPEN_NEXT_QUESTION_NAME;
+
+export const FINISH_QUESTIONS_NAME = 'FINISH_QUESTIONS_NAME';
+export type FINISH_QUESTIONS_TYPE = typeof FINISH_QUESTIONS_NAME;
 
 export interface StartTrainingAction extends Action {
-  type: START_TRAINING_TYPE;
-  payload: {
-    questions: Question[];
-    startedTime: number;
+  readonly type: START_TRAINING_TYPE;
+  readonly payload: {
+    readonly questions: Question[];
+    readonly startedTime: number;
+    readonly nextState: QuestionState;
+  };
+  readonly meta: {
+    readonly rangeFrom: number;
+    readonly rangeTo: number;
+    readonly kimariji: number;
+    readonly color: string;
+    readonly kamiNoKuStyle: number;
+    readonly shimoNoKuStyle: number;
   };
 }
 
 export interface StartExamAction extends Action {
-  type: START_EXAM_TYPE;
-  payload: {
-    questions: Question[];
-    startedTime: number;
+  readonly type: START_EXAM_TYPE;
+  readonly payload: {
+    readonly questions: Question[];
+    readonly startedTime: number;
+    readonly nextState: QuestionState;
+  };
+}
+
+export interface RestartQuestionsAction extends Action {
+  readonly type: RESTART_QUESTIONS_TYPE;
+  readonly payload: {
+    readonly questions: Question[];
+    readonly startedTime: number;
+    readonly nextState: QuestionState;
   };
 }
 
 export interface AnswerQuestionAction extends Action {
-  type: ANSWER_QUESTION_TYPE;
-  payload: {
-    answer: Answer;
+  readonly type: ANSWER_QUESTION_TYPE;
+  readonly payload: {
+    readonly answer: Answer;
+    readonly nextState: QuestionState;
   };
 }
 
-export interface GoToCorrectAction extends Action {
-  type: GO_TO_CORRECT_TYPE;
-  payload: {
-    nextPage: number;
+export interface ConfirmCorrectAction extends Action {
+  readonly type: CONFIRM_CORRECT_TYPE;
+  readonly payload: {
+    readonly nextState: QuestionState;
   };
 }
 
-export interface GoToNextQuestionAction extends Action {
-  type: GO_TO_NEXT_QUESTION_TYPE;
-  payload: {
-    nextIndex: number;
-    nextPage: number;
-    startedTime: number;
+export interface OpenNextQuestionAction extends Action {
+  readonly type: OPEN_NEXT_QUESTION_TYPE;
+  readonly payload: {
+    readonly nextIndex: number;
+    readonly nextState: QuestionState;
+    readonly startedTime: number;
+  };
+}
+
+export interface FinishQuestionsAction extends Action {
+  readonly type: FINISH_QUESTIONS_TYPE;
+  readonly payload: {
+    readonly nextState: QuestionState;
   };
 }
 
 export type QuestionsActions =
   | StartTrainingAction
   | StartExamAction
+  | RestartQuestionsAction
   | AnswerQuestionAction
-  | GoToCorrectAction
-  | GoToNextQuestionAction;
+  | ConfirmCorrectAction
+  | OpenNextQuestionAction
+  | FinishQuestionsAction;
 
 /*
  * action creators
@@ -87,7 +123,16 @@ export const startTraining = (
     .create();
 
   return {
+    meta: {
+      color,
+      kamiNoKuStyle,
+      kimariji,
+      rangeFrom,
+      rangeTo,
+      shimoNoKuStyle
+    },
     payload: {
+      nextState: QuestionState.InAnswer,
       questions: randomizeArray(questions),
       startedTime: new Date().getTime()
     },
@@ -107,10 +152,35 @@ export const startExam = (): StartExamAction => {
 
   return {
     payload: {
+      nextState: QuestionState.InAnswer,
       questions: randomizeArray(questions),
       startedTime: new Date().getTime()
     },
     type: START_EXAM_NAME
+  };
+};
+
+export const restartQuestions = (): RestartQuestionsAction => {
+  const { questions, answers } = getStore().getState().questionsState;
+  // TODO: 全て回答済みでなかったらエラー
+  const finder: { [questionId: number]: Question } = questions.reduce(
+    (previous, current) => {
+      return { ...previous, [current.id]: current };
+    },
+    {}
+  );
+  const targets = answers
+    .filter(a => !a.correct)
+    .map(a => finder[a.questionId])
+    .map(q => ({ ...q, toriFudas: randomizeArray(q.toriFudas) }));
+
+  return {
+    payload: {
+      nextState: QuestionState.InAnswer,
+      questions: randomizeArray(targets),
+      startedTime: new Date().getTime()
+    },
+    type: RESTART_QUESTIONS_NAME
   };
 };
 
@@ -131,52 +201,41 @@ export const answerQuestion = (
   };
   return {
     payload: {
-      answer
+      answer,
+      nextState: QuestionState.Answered
     },
     type: ANSWER_QUESTION_NAME
   };
 };
 
-export const goToCorrect = (): GoToCorrectAction => {
+export const confirmCorrect = (): ConfirmCorrectAction => {
   return {
     payload: {
-      nextPage: 1
+      nextState: QuestionState.ConfirmCorrect
     },
-    type: GO_TO_CORRECT_NAME
+    type: CONFIRM_CORRECT_NAME
   };
 };
 
-export const goToNextQuestion = (): GoToNextQuestionAction => {
+export const openNextQuestion = (): OpenNextQuestionAction => {
   const { currentIndex } = getStore().getState().questionsState;
   const nextIndex = currentIndex + 1;
   return {
     payload: {
       nextIndex,
-      nextPage: 0,
+      nextState: QuestionState.InAnswer,
       startedTime: new Date().getTime()
     },
-    type: GO_TO_NEXT_QUESTION_NAME
+    type: OPEN_NEXT_QUESTION_NAME
   };
 };
 
-export const restartTraining = (): StartTrainingAction => {
-  const { questions, answers } = getStore().getState().questionsState;
-  // TODO: 全て回答済みでなかったらエラー
-  const finder: { [questionId: number]: Question } = questions.reduce(
-    (previous, current) => {
-      return { ...previous, [current.id]: current };
-    },
-    {}
-  );
-  const targets = answers
-    .filter(a => !a.correct)
-    .map(a => finder[a.questionId]);
+export const finishQuestions = (): FinishQuestionsAction => {
   return {
     payload: {
-      questions: randomizeArray(targets),
-      startedTime: new Date().getTime()
+      nextState: QuestionState.Finished
     },
-    type: START_TRAINING_NAME
+    type: FINISH_QUESTIONS_NAME
   };
 };
 

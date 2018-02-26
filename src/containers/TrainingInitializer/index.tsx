@@ -2,12 +2,14 @@ import { connect, Dispatch } from 'react-redux';
 import { RouteComponentProps } from 'react-router-dom';
 import { GlobalState } from '../../reducers/index';
 import { startTraining } from '../../actions/questions';
-import Progress, { ProgressDispatchProps } from '../../components/Progress';
+import Progress, { ProgressProps } from '../../components/Progress';
+
+export type TrainingInitializerDispatchProps = Pick<ProgressProps, 'onStart'>;
 
 const mapDispatchToProps = (
   dispatch: Dispatch<GlobalState>,
   props: RouteComponentProps<{}>
-): ProgressDispatchProps => {
+): TrainingInitializerDispatchProps => {
   return {
     onStart: () => {
       const {

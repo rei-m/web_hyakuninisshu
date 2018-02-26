@@ -1,15 +1,17 @@
 import * as React from 'react';
 import { withRouter, RouteComponentProps } from 'react-router-dom';
 import styled from 'styled-components';
-import SectionTitle from '../SectionTitle';
+import PageTitle from '../PageTitle';
 
 const RootSection = styled.section`
   max-width: 380px;
   margin: auto;
+  box-sizing: border-box;
+  padding: 16px;
 `;
 
 const Explain = styled.div`
-  margin: 16px;
+  margin: 32px 16px;
 `;
 
 const StartButton = styled.button`
@@ -26,17 +28,19 @@ const handleSubmit = ({ history }: RouteComponentProps<{}>) => {
 
 const ExamMenuSection = (props: RouteComponentProps<{}>) => (
   <RootSection>
-    <SectionTitle title="腕試し" />
-    <Explain>
-      全百首から出題されます。出題順は毎回変わります。<br />練習の成果を確認しましょう。
-    </Explain>
-    <StartButton
-      type="submit"
-      className="pt-button pt-intent-primary pt-large pt-icon-edit"
-      onClick={handleSubmit(props)}
-    >
-      腕試しをはじめる
-    </StartButton>
+    <PageTitle title="腕試し" />
+    <div>
+      <Explain>
+        全百首からランダムに出題されます。<br />練習の成果を確認しましょう。
+      </Explain>
+      <StartButton
+        type="submit"
+        className="pt-button pt-intent-primary pt-large pt-icon-edit"
+        onClick={handleSubmit(props)}
+      >
+        腕試しをはじめる
+      </StartButton>
+    </div>
   </RootSection>
 );
 

@@ -1,4 +1,5 @@
 export const ROUTE_PATHS = {
+  ABOUT: '/about',
   EXAM: '/exam',
   EXAM_QUESTION: '/exam/question',
   KARUTAS: '/karutas',

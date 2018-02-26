@@ -3,18 +3,12 @@ import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 import QuestionResultsSummary from '../QuestionResultsSummary';
 
-export interface TrainingResultOwnProps {
+export interface QuestionsResultProps {
   readonly totalCount: number;
   readonly correctCount: number;
   readonly averageAnswerSecond: number;
-}
-
-export interface TrainingResultDispatchProps {
   readonly onClickRestart: () => void;
 }
-
-export type TrainingResultProps = TrainingResultOwnProps &
-  TrainingResultDispatchProps;
 
 const RootSection = styled.section`
   max-width: 380px;
@@ -25,12 +19,12 @@ const Button = styled.button`
   margin: 16px;
 `;
 
-const TrainingResult = ({
+const QuestionsResult = ({
   averageAnswerSecond,
   correctCount,
   totalCount,
   onClickRestart
-}: TrainingResultProps) => (
+}: QuestionsResultProps) => (
   <RootSection>
     <QuestionResultsSummary
       title={'正解数'}
@@ -67,4 +61,4 @@ const TrainingResult = ({
   </RootSection>
 );
 
-export default TrainingResult;
+export default QuestionsResult;

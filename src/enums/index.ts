@@ -4,3 +4,10 @@ export enum MenuType {
   Material,
   Other
 }
+
+export enum QuestionState {
+  InAnswer,
+  Answered,
+  ConfirmCorrect,
+  Finished
+}

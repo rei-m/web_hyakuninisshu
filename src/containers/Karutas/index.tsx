@@ -2,13 +2,19 @@ import { connect, Dispatch } from 'react-redux';
 import { GlobalState } from '../../reducers/index';
 import { withRouter, RouteComponentProps } from 'react-router-dom';
 import KarutaListSection, {
-  KarutaListSectionConnectedProps,
-  KarutaListSectionDispatchProps
+  KarutaListSectionProps
 } from '../../components/KarutaListSection';
+
+export type KarutasConnectedProps = Pick<KarutaListSectionProps, 'karutas'>;
+
+export type KarutasDispatchProps = Pick<
+  KarutaListSectionProps,
+  'onClickKarutaListRow'
+>;
 
 const mapStateToProps = ({
   karutasState
-}: GlobalState): KarutaListSectionConnectedProps => {
+}: GlobalState): KarutasConnectedProps => {
   return {
     karutas: karutasState.karutas
   };
@@ -17,7 +23,7 @@ const mapStateToProps = ({
 const mapDispatchToProps = (
   _dispatch: Dispatch<GlobalState>,
   { history }: RouteComponentProps<{}>
-): KarutaListSectionDispatchProps => {
+): KarutasDispatchProps => {
   return {
     onClickKarutaListRow: (karuatId: number) => {
       history.push(`/karutas/${karuatId}`);

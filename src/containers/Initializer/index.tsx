@@ -1,11 +1,13 @@
 import { connect, Dispatch } from 'react-redux';
 import { GlobalState } from '../../reducers/index';
 import { fetchKarutas } from '../../actions/karutas';
-import Progress, { ProgressDispatchProps } from '../../components/Progress';
+import Progress, { ProgressProps } from '../../components/Progress';
+
+export type InitializerDispatchProps = Pick<ProgressProps, 'onStart'>;
 
 const mapDispatchToProps = (
   dispatch: Dispatch<GlobalState>
-): ProgressDispatchProps => {
+): InitializerDispatchProps => {
   return {
     onStart: () => {
       dispatch(fetchKarutas());

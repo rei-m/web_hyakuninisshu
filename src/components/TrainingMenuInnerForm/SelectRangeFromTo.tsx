@@ -11,10 +11,12 @@ const SelectRow = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+  padding: 0 16px;
 `;
 
 const SelectRange = styled.div`
-  width: 150px;
+  width: 128px;
+  flex-grow: 1;
 `;
 
 const Separate = styled.span`

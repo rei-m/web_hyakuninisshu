@@ -1,26 +1,27 @@
 import * as React from 'react';
 import styled from 'styled-components';
+import Tatami from '../Tatami';
 import { Karuta } from '../../types';
 import { COLOR_PRIMARY_DARK } from '../../constants/colors';
 import { convetKarutaId, convetKimariji } from '../helper';
 
-export interface QuestionCorrectOwnProps {
+export interface QuestionCorrectProps {
   readonly karuta: Karuta;
-}
-
-export interface QuestionCorrectDispatchProps {
+  readonly isAllAnswered: boolean;
   readonly onClickGoToNext: () => void;
+  readonly onClickGoToResult: () => void;
 }
 
-export type QuestionCorrectProps = QuestionCorrectOwnProps &
-  QuestionCorrectDispatchProps;
-
-const Frame = styled.div`
+const Frame = Tatami.extend`
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 100vh;
+  min-height: calc(100vh - 56px);
+
+  @media screen and (min-width: 768px) {
+    min-height: calc(100vh - 64px);
+  }
 `;
 
 const NumberAndKimariji = styled.div`
@@ -29,6 +30,7 @@ const NumberAndKimariji = styled.div`
   width: 160px;
   margin: 0 auto;
   font-size: 1.2rem;
+  background-color: #ffffff;
 `;
 
 const KarutaFrame = styled.div`
@@ -40,6 +42,8 @@ const KarutaFrame = styled.div`
   align-items: center;
   justify-content: center;
   margin: 16px auto 0 auto;
+  background-color: #fffff0;
+  box-shadow: 0 -1px 5px rgba(0, 0, 0, 0.26);
 `;
 
 const Inner = styled.div`
@@ -82,11 +86,16 @@ const Creator = styled.div`
   align-self: flex-end;
 `;
 
-const GoToNextButton = styled.button`
+const NextButton = styled.button`
   margin-top: 32px;
 `;
 
-const QuestionCorrect = ({ karuta, onClickGoToNext }: QuestionCorrectProps) => {
+const QuestionCorrect = ({
+  karuta,
+  isAllAnswered,
+  onClickGoToNext,
+  onClickGoToResult
+}: QuestionCorrectProps) => {
   return (
     <Frame>
       <NumberAndKimariji>
@@ -102,12 +111,21 @@ const QuestionCorrect = ({ karuta, onClickGoToNext }: QuestionCorrectProps) => {
           <Creator>{karuta.creator}</Creator>
         </Inner>
       </KarutaFrame>
-      <GoToNextButton
-        onClick={onClickGoToNext}
-        className="pt-button pt-large pt-icon-double-chevron-right"
-      >
-        次へ進む
-      </GoToNextButton>
+      {isAllAnswered ? (
+        <NextButton
+          onClick={onClickGoToResult}
+          className="pt-button pt-large pt-icon-double-chevron-right"
+        >
+          結果を見る
+        </NextButton>
+      ) : (
+        <NextButton
+          onClick={onClickGoToNext}
+          className="pt-button pt-large pt-icon-double-chevron-right"
+        >
+          次へ進む
+        </NextButton>
+      )}
     </Frame>
   );
 };

@@ -17,35 +17,39 @@ import QuestionSection, {
 import QuestionCorrect, {
   QuestionCorrectProps
 } from '../../components/QuestionCorrect';
-import ExamResult, { ExamResultProps } from '../../components/ExamResult';
-import ExamInitializer from '../ExamInitializer';
+import QuestionsResult, {
+  QuestionsResultProps
+} from '../../components/QuestionsResult';
+import TrainingInitializer from '../TrainingInitializer';
 import { QuestionState } from '../../enums';
 
-export interface ExamOwnProps {
+export interface QuestionsOwnProps {
   readonly started: boolean;
   readonly questions: Question[];
   readonly answers: Answer[];
   readonly questionState?: QuestionState;
 }
 
-export type ExamConnectedProps = Omit<
+export type QuestionsConnectedProps = Omit<
   QuestionSectionProps,
   'onClickToriFuda' | 'onClickResult'
 >;
 
-export type ExamDispatchProps = Pick<
-  ExamResultProps,
-  'onClickRestart' | 'onClickResultsMap'
+export type QuestionsDispatchProps = Pick<
+  QuestionCorrectProps,
+  'onClickGoToNext' | 'onClickGoToResult'
 > &
-  Pick<QuestionCorrectProps, 'onClickGoToNext' | 'onClickGoToResult'> &
-  Pick<QuestionSectionProps, 'onClickToriFuda' | 'onClickResult'>;
+  Pick<QuestionSectionProps, 'onClickToriFuda' | 'onClickResult'> &
+  Pick<QuestionsResultProps, 'onClickRestart'>;
 
-export type ExamProps = ExamOwnProps & ExamConnectedProps & ExamDispatchProps;
+export type QuestionsProps = QuestionsOwnProps &
+  QuestionSectionProps &
+  QuestionsDispatchProps;
 
 const mapStateToProps = (
   { questionsState }: GlobalState,
   { location }: RouteComponentProps<{}>
-): ExamOwnProps & ExamConnectedProps => {
+): QuestionsOwnProps & QuestionsConnectedProps => {
   const { submitTime } = location.state;
   const {
     answers,
@@ -69,7 +73,7 @@ const mapStateToProps = (
 
 const mapDispatchToProps = (
   dispatch: Dispatch<GlobalState>
-): ExamDispatchProps => {
+): QuestionsDispatchProps => {
   return {
     onClickGoToNext: () => {
       dispatch(openNextQuestion());
@@ -83,24 +87,31 @@ const mapDispatchToProps = (
     onClickResult: () => {
       dispatch(confirmCorrect());
     },
-    onClickResultsMap: (karutaId: number) => {
-      console.dir(karutaId);
-    },
     onClickToriFuda: ({ questionId, karutaId }: ToriFuda) => {
       dispatch(answerQuestion(questionId, karutaId));
     }
   };
 };
 
-const isStarted = ({ started }: ExamOwnProps) => started;
+const isStarted = ({ started }: QuestionsOwnProps) => started;
 
-const withStartedCheck = branch<ExamOwnProps>(
+const withStartedCheck = branch<QuestionsOwnProps>(
   isStarted,
   component => component,
-  renderComponent(ExamInitializer)
+  renderComponent(TrainingInitializer)
 );
 
-const isConfirmedQuestionResult = ({ questionState }: ExamOwnProps) =>
+const hasQuestion = ({ questions }: QuestionsOwnProps) => questions.length > 0;
+
+const EmptyMessage = () => <h3>指定した条件の歌はありませんでした</h3>;
+
+const withHasQuestionCheck = branch<QuestionsOwnProps>(
+  hasQuestion,
+  component => component,
+  renderComponent(EmptyMessage)
+);
+
+const isConfirmedQuestionResult = ({ questionState }: QuestionsOwnProps) =>
   questionState === QuestionState.ConfirmCorrect;
 
 const renderQuestionCorrect = ({
@@ -109,7 +120,7 @@ const renderQuestionCorrect = ({
   answers,
   onClickGoToNext,
   onClickGoToResult
-}: ExamProps) => {
+}: QuestionsProps) => {
   const { correctKaruta } = question;
   return (
     <QuestionCorrect
@@ -121,52 +132,48 @@ const renderQuestionCorrect = ({
   );
 };
 
-const withConfirmedQuestionResultCheck = branch<ExamOwnProps>(
+const withConfirmedQuestionResultCheck = branch<QuestionsOwnProps>(
   isConfirmedQuestionResult,
   renderComponent(renderQuestionCorrect),
   component => component
 );
 
-const isFinished = ({ questionState }: ExamOwnProps) =>
+const isFinished = ({ questionState }: QuestionsOwnProps) =>
   questionState === QuestionState.Finished;
 
 const renderResult = ({
-  questions,
   answers,
   onClickRestart,
-  onClickResultsMap,
   totalCount
-}: ExamProps) => {
+}: QuestionsProps) => {
   const correctCount = answers.filter(a => a.correct).length;
   const averageAnswerSecond =
     answers.reduce((prev, current) => prev + current.time, 0) /
     1000 /
     totalCount;
   return (
-    <ExamResult
+    <QuestionsResult
       averageAnswerSecond={Math.round(averageAnswerSecond * 100) / 100}
       totalCount={totalCount}
       correctCount={correctCount}
-      answers={answers}
-      questions={questions}
       onClickRestart={onClickRestart}
-      onClickResultsMap={onClickResultsMap}
     />
   );
 };
 
-const withFinishedCheck = branch<ExamOwnProps>(
+const withFinishedCheck = branch<QuestionsOwnProps>(
   isFinished,
   renderComponent(renderResult),
   component => component
 );
 
-const ExamIndex = compose<ExamProps, ExamProps>(
+const QuestionsIndex = compose<QuestionsProps, QuestionsProps>(
   withStartedCheck,
+  withHasQuestionCheck,
   withConfirmedQuestionResultCheck,
   withFinishedCheck
 )(QuestionSection);
 
 export default withRouter(
-  connect(mapStateToProps, mapDispatchToProps)(ExamIndex)
+  connect(mapStateToProps, mapDispatchToProps)(QuestionsIndex)
 );
