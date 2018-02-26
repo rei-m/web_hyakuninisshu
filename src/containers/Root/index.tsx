@@ -11,14 +11,11 @@ export interface RootOwnProps {
   readonly initialized: boolean;
 }
 
-export type RootConnectedProps = Pick<
-  FrameProps,
-  'subTitle' | 'canBack' | 'currentMenuType' | 'isDisplayNav'
->;
+export type RootConnectedProps = Omit<FrameProps, 'onClickBack'>;
 
 export type RootDispatchProps = Pick<FrameProps, 'onClickBack'>;
 
-export type RootProps = RootOwnProps & FrameProps;
+export type RootProps = RootOwnProps & RootConnectedProps & RootDispatchProps;
 
 const mapStateToProps = (
   { karutasState }: GlobalState,

@@ -2,6 +2,7 @@ import {
   ANSWER_QUESTION_NAME,
   GO_TO_CORRECT_NAME,
   GO_TO_NEXT_QUESTION_NAME,
+  GO_TO_RESULT_NAME,
   QuestionsActions,
   RESTART_NAME,
   START_EXAM_NAME,
@@ -22,6 +23,7 @@ export interface QuestionsState {
   readonly answers: Answer[];
   readonly currentPage: number;
   readonly lastStartedTime?: number;
+  readonly finished: boolean;
   readonly trainingCondition: {
     readonly rangeFrom: number;
     readonly rangeTo: number;
@@ -36,6 +38,7 @@ const initialState: QuestionsState = {
   answers: [],
   currentIndex: 0,
   currentPage: 0,
+  finished: false,
   questions: [],
   trainingCondition: {
     color: COLOR_LIST[0].value,
@@ -57,6 +60,7 @@ const trainingsReducer = (
         answers: [],
         currentIndex: 0,
         currentPage: 0,
+        finished: false,
         lastStartedTime: action.payload.startedTime,
         questions: action.payload.questions,
         trainingCondition: {
@@ -69,6 +73,7 @@ const trainingsReducer = (
         answers: [],
         currentIndex: 0,
         currentPage: 0,
+        finished: false,
         lastStartedTime: action.payload.startedTime,
         questions: action.payload.questions
       };
@@ -78,6 +83,7 @@ const trainingsReducer = (
         answers: [],
         currentIndex: 0,
         currentPage: 0,
+        finished: false,
         lastStartedTime: action.payload.startedTime,
         questions: action.payload.questions
       };
@@ -97,6 +103,11 @@ const trainingsReducer = (
         currentIndex: action.payload.nextIndex,
         currentPage: action.payload.nextPage,
         lastStartedTime: action.payload.startedTime
+      };
+    case GO_TO_RESULT_NAME:
+      return {
+        ...state,
+        finished: true
       };
     default:
       return state;

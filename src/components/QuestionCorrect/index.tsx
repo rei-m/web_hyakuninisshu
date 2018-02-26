@@ -7,7 +7,9 @@ import { convetKarutaId, convetKimariji } from '../helper';
 
 export interface QuestionCorrectProps {
   readonly karuta: Karuta;
+  readonly isAllAnswered: boolean;
   readonly onClickGoToNext: () => void;
+  readonly onClickGoToResult: () => void;
 }
 
 const Frame = Tatami.extend`
@@ -84,11 +86,16 @@ const Creator = styled.div`
   align-self: flex-end;
 `;
 
-const GoToNextButton = styled.button`
+const NextButton = styled.button`
   margin-top: 32px;
 `;
 
-const QuestionCorrect = ({ karuta, onClickGoToNext }: QuestionCorrectProps) => {
+const QuestionCorrect = ({
+  karuta,
+  isAllAnswered,
+  onClickGoToNext,
+  onClickGoToResult
+}: QuestionCorrectProps) => {
   return (
     <Frame>
       <NumberAndKimariji>
@@ -104,12 +111,21 @@ const QuestionCorrect = ({ karuta, onClickGoToNext }: QuestionCorrectProps) => {
           <Creator>{karuta.creator}</Creator>
         </Inner>
       </KarutaFrame>
-      <GoToNextButton
-        onClick={onClickGoToNext}
-        className="pt-button pt-large pt-icon-double-chevron-right"
-      >
-        次へ進む
-      </GoToNextButton>
+      {isAllAnswered ? (
+        <NextButton
+          onClick={onClickGoToResult}
+          className="pt-button pt-large pt-icon-double-chevron-right"
+        >
+          結果を見る
+        </NextButton>
+      ) : (
+        <NextButton
+          onClick={onClickGoToNext}
+          className="pt-button pt-large pt-icon-double-chevron-right"
+        >
+          次へ進む
+        </NextButton>
+      )}
     </Frame>
   );
 };

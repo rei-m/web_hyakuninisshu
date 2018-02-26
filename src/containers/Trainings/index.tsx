@@ -5,14 +5,9 @@ import TrainingMenuSection, {
   TrainingMenuSectionProps
 } from '../../components/TrainingMenuSection';
 
-export type TrainingsConnectedProps = Pick<
+export type TrainingsConnectedProps = Omit<
   TrainingMenuSectionProps,
-  | 'initialRangeFrom'
-  | 'initialRangeTo'
-  | 'initialKimariji'
-  | 'initialColor'
-  | 'initialKamiNoKuStyle'
-  | 'initialShimoNoKuStyle'
+  'onSubmit'
 >;
 
 export type TrainingsDispatchProps = Pick<TrainingMenuSectionProps, 'onSubmit'>;

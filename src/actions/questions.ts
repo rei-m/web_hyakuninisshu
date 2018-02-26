@@ -22,6 +22,9 @@ export type GO_TO_CORRECT_TYPE = typeof GO_TO_CORRECT_NAME;
 export const GO_TO_NEXT_QUESTION_NAME = 'GO_TO_NEXT_QUESTION_NAME';
 export type GO_TO_NEXT_QUESTION_TYPE = typeof GO_TO_NEXT_QUESTION_NAME;
 
+export const GO_TO_RESULT_NAME = 'GO_TO_RESULT_NAME';
+export type GO_TO_RESULT_TYPE = typeof GO_TO_RESULT_NAME;
+
 export interface StartTrainingAction extends Action {
   readonly type: START_TRAINING_TYPE;
   readonly payload: {
@@ -85,13 +88,18 @@ export interface GoToNextQuestionAction extends Action {
   };
 }
 
+export interface GoToResultAction extends Action {
+  readonly type: GO_TO_RESULT_TYPE;
+}
+
 export type QuestionsActions =
   | StartTrainingAction
   | StartExamAction
   | RestartAction
   | AnswerQuestionAction
   | GoToCorrectAction
-  | GoToNextQuestionAction;
+  | GoToNextQuestionAction
+  | GoToResultAction;
 
 /*
  * action creators
@@ -195,6 +203,12 @@ export const goToNextQuestion = (): GoToNextQuestionAction => {
   };
 };
 
+export const goToResult = (): GoToResultAction => {
+  return {
+    type: GO_TO_RESULT_NAME
+  };
+};
+
 export const restart = (): RestartAction => {
   const { questions, answers } = getStore().getState().questionsState;
   // TODO: 全て回答済みでなかったらエラー
@@ -206,7 +220,9 @@ export const restart = (): RestartAction => {
   );
   const targets = answers
     .filter(a => !a.correct)
-    .map(a => finder[a.questionId]);
+    .map(a => finder[a.questionId])
+    .map(q => ({ ...q, toriFudas: randomizeArray(q.toriFudas) }));
+
   return {
     payload: {
       questions: randomizeArray(targets),

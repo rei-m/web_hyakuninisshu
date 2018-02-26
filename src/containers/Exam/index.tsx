@@ -2,6 +2,7 @@ import {
   answerQuestion,
   goToCorrect,
   goToNextQuestion,
+  goToResult,
   restart
 } from '../../actions/questions';
 import * as React from 'react';
@@ -24,21 +25,22 @@ export interface ExamOwnProps {
   readonly questions: Question[];
   readonly answers: Answer[];
   readonly currentPage: number;
+  readonly finished: boolean;
 }
 
-export type ExamConnectedProps = Pick<
+export type ExamConnectedProps = Omit<
   QuestionSectionProps,
-  'question' | 'answer' | 'totalCount' | 'currentPosition'
+  'onClickToriFuda' | 'onClickResult'
 >;
 
 export type ExamDispatchProps = Pick<
   ExamResultProps,
   'onClickRestart' | 'onClickResultsMap'
 > &
-  Pick<QuestionCorrectProps, 'onClickGoToNext'> &
+  Pick<QuestionCorrectProps, 'onClickGoToNext' | 'onClickGoToResult'> &
   Pick<QuestionSectionProps, 'onClickToriFuda' | 'onClickResult'>;
 
-export type ExamProps = ExamOwnProps & QuestionSectionProps & ExamDispatchProps;
+export type ExamProps = ExamOwnProps & ExamConnectedProps & ExamDispatchProps;
 
 const mapStateToProps = (
   { questionsState }: GlobalState,
@@ -50,7 +52,8 @@ const mapStateToProps = (
     currentIndex,
     currentPage,
     lastStartedTime,
-    questions
+    questions,
+    finished
   } = questionsState;
 
   return {
@@ -58,6 +61,7 @@ const mapStateToProps = (
     answers,
     currentPage,
     currentPosition: currentIndex + 1,
+    finished,
     question: questions[currentIndex],
     questions,
     started: !!lastStartedTime && lastStartedTime > submitTime,
@@ -71,6 +75,9 @@ const mapDispatchToProps = (
   return {
     onClickGoToNext: () => {
       dispatch(goToNextQuestion());
+    },
+    onClickGoToResult: () => {
+      dispatch(goToResult());
     },
     onClickRestart: () => {
       dispatch(restart());
@@ -95,12 +102,24 @@ const withStartedCheck = branch<ExamOwnProps>(
   renderComponent(ExamInitializer)
 );
 
-const isAnswered = ({ currentPage }: ExamOwnProps) => currentPage === 1;
+const isAnswered = ({ currentPage, finished }: ExamOwnProps) =>
+  currentPage === 1 && !finished;
 
-const renderQuestionCorrect = ({ question, onClickGoToNext }: ExamProps) => {
+const renderQuestionCorrect = ({
+  question,
+  questions,
+  answers,
+  onClickGoToNext,
+  onClickGoToResult
+}: ExamProps) => {
   const { correctKaruta } = question;
   return (
-    <QuestionCorrect karuta={correctKaruta} onClickGoToNext={onClickGoToNext} />
+    <QuestionCorrect
+      karuta={correctKaruta}
+      isAllAnswered={questions.length === answers.length}
+      onClickGoToNext={onClickGoToNext}
+      onClickGoToResult={onClickGoToResult}
+    />
   );
 };
 
@@ -110,10 +129,9 @@ const withAnsweredCheck = branch<ExamOwnProps>(
   component => component
 );
 
-const isFinished = ({ answers, questions }: ExamOwnProps) =>
-  questions.length > 0 && questions.length === answers.length;
+const isFinished = ({ finished }: ExamOwnProps) => finished;
 
-const renderTrainingResult = ({
+const renderResult = ({
   questions,
   answers,
   onClickRestart,
@@ -140,7 +158,7 @@ const renderTrainingResult = ({
 
 const withFinishedCheck = branch<ExamOwnProps>(
   isFinished,
-  renderComponent(renderTrainingResult),
+  renderComponent(renderResult),
   component => component
 );
 

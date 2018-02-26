@@ -2,6 +2,7 @@ import {
   answerQuestion,
   goToCorrect,
   goToNextQuestion,
+  goToResult,
   restart
 } from '../../actions/questions';
 import * as React from 'react';
@@ -26,21 +27,22 @@ export interface QuestionsOwnProps {
   readonly questions: Question[];
   readonly answers: Answer[];
   readonly currentPage: number;
+  readonly finished: boolean;
 }
 
-export type QuestionsConnectedProps = Pick<
+export type QuestionsConnectedProps = Omit<
   QuestionSectionProps,
-  'question' | 'answer' | 'totalCount' | 'currentPosition'
+  'onClickToriFuda' | 'onClickResult'
 >;
 
 export type QuestionsDispatchProps = Pick<
   QuestionCorrectProps,
-  'onClickGoToNext'
+  'onClickGoToNext' | 'onClickGoToResult'
 > &
   Pick<QuestionSectionProps, 'onClickToriFuda' | 'onClickResult'> &
   Pick<QuestionsResultProps, 'onClickRestart'>;
 
-export type TrainingProps = QuestionsOwnProps &
+export type QuestionsProps = QuestionsOwnProps &
   QuestionSectionProps &
   QuestionsDispatchProps;
 
@@ -54,7 +56,8 @@ const mapStateToProps = (
     currentIndex,
     currentPage,
     lastStartedTime,
-    questions
+    questions,
+    finished
   } = questionsState;
 
   return {
@@ -62,6 +65,7 @@ const mapStateToProps = (
     answers,
     currentPage,
     currentPosition: currentIndex + 1,
+    finished,
     question: questions[currentIndex],
     questions,
     started: !!lastStartedTime && lastStartedTime > submitTime,
@@ -75,6 +79,9 @@ const mapDispatchToProps = (
   return {
     onClickGoToNext: () => {
       dispatch(goToNextQuestion());
+    },
+    onClickGoToResult: () => {
+      dispatch(goToResult());
     },
     onClickRestart: () => {
       dispatch(restart());
@@ -106,15 +113,24 @@ const withHasQuestionCheck = branch<QuestionsOwnProps>(
   renderComponent(EmptyMessage)
 );
 
-const isAnswered = ({ currentPage }: QuestionsOwnProps) => currentPage === 1;
+const isAnswered = ({ currentPage, finished }: QuestionsOwnProps) =>
+  currentPage === 1 && !finished;
 
 const renderQuestionCorrect = ({
   question,
-  onClickGoToNext
-}: TrainingProps) => {
+  questions,
+  answers,
+  onClickGoToNext,
+  onClickGoToResult
+}: QuestionsProps) => {
   const { correctKaruta } = question;
   return (
-    <QuestionCorrect karuta={correctKaruta} onClickGoToNext={onClickGoToNext} />
+    <QuestionCorrect
+      karuta={correctKaruta}
+      isAllAnswered={questions.length === answers.length}
+      onClickGoToNext={onClickGoToNext}
+      onClickGoToResult={onClickGoToResult}
+    />
   );
 };
 
@@ -124,14 +140,13 @@ const withAnsweredCheck = branch<QuestionsOwnProps>(
   component => component
 );
 
-const isFinished = ({ answers, questions }: QuestionsOwnProps) =>
-  questions.length > 0 && questions.length === answers.length;
+const isFinished = ({ finished }: QuestionsOwnProps) => finished;
 
-const renderTrainingResult = ({
+const renderResult = ({
   answers,
   onClickRestart,
   totalCount
-}: TrainingProps) => {
+}: QuestionsProps) => {
   const correctCount = answers.filter(a => a.correct).length;
   const averageAnswerSecond =
     answers.reduce((prev, current) => prev + current.time, 0) /
@@ -149,11 +164,11 @@ const renderTrainingResult = ({
 
 const withFinishedCheck = branch<QuestionsOwnProps>(
   isFinished,
-  renderComponent(renderTrainingResult),
+  renderComponent(renderResult),
   component => component
 );
 
-const TrainingIndex = compose<TrainingProps, TrainingProps>(
+const QuestionsIndex = compose<QuestionsProps, QuestionsProps>(
   withStartedCheck,
   withHasQuestionCheck,
   withAnsweredCheck,
@@ -161,5 +176,5 @@ const TrainingIndex = compose<TrainingProps, TrainingProps>(
 )(QuestionSection);
 
 export default withRouter(
-  connect(mapStateToProps, mapDispatchToProps)(TrainingIndex)
+  connect(mapStateToProps, mapDispatchToProps)(QuestionsIndex)
 );
