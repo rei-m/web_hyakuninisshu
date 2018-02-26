@@ -1,16 +1,16 @@
-import {
-  answerQuestion,
-  goToCorrect,
-  goToNextQuestion,
-  goToResult,
-  restart
-} from '../../actions/questions';
 import * as React from 'react';
+import { GlobalState } from '../../reducers/index';
 import { branch, compose, renderComponent } from 'recompose';
 import { withRouter, RouteComponentProps } from 'react-router-dom';
 import { Answer, Question, ToriFuda } from '../../types';
 import { connect, Dispatch } from 'react-redux';
-import { GlobalState } from '../../reducers/index';
+import {
+  answerQuestion,
+  confirmCorrect,
+  finishQuestions,
+  openNextQuestion,
+  restartQuestions
+} from '../../actions/questions';
 import QuestionSection, {
   QuestionSectionProps
 } from '../../components/QuestionSection';
@@ -19,13 +19,13 @@ import QuestionCorrect, {
 } from '../../components/QuestionCorrect';
 import ExamResult, { ExamResultProps } from '../../components/ExamResult';
 import ExamInitializer from '../ExamInitializer';
+import { QuestionState } from '../../enums';
 
 export interface ExamOwnProps {
   readonly started: boolean;
   readonly questions: Question[];
   readonly answers: Answer[];
-  readonly currentPage: number;
-  readonly finished: boolean;
+  readonly questionState?: QuestionState;
 }
 
 export type ExamConnectedProps = Omit<
@@ -50,19 +50,17 @@ const mapStateToProps = (
   const {
     answers,
     currentIndex,
-    currentPage,
     lastStartedTime,
     questions,
-    finished
+    questionState
   } = questionsState;
 
   return {
     answer: answers[currentIndex],
     answers,
-    currentPage,
     currentPosition: currentIndex + 1,
-    finished,
     question: questions[currentIndex],
+    questionState,
     questions,
     started: !!lastStartedTime && lastStartedTime > submitTime,
     totalCount: questions.length
@@ -74,16 +72,16 @@ const mapDispatchToProps = (
 ): ExamDispatchProps => {
   return {
     onClickGoToNext: () => {
-      dispatch(goToNextQuestion());
+      dispatch(openNextQuestion());
     },
     onClickGoToResult: () => {
-      dispatch(goToResult());
+      dispatch(finishQuestions());
     },
     onClickRestart: () => {
-      dispatch(restart());
+      dispatch(restartQuestions());
     },
     onClickResult: () => {
-      dispatch(goToCorrect());
+      dispatch(confirmCorrect());
     },
     onClickResultsMap: (karutaId: number) => {
       console.dir(karutaId);
@@ -102,8 +100,8 @@ const withStartedCheck = branch<ExamOwnProps>(
   renderComponent(ExamInitializer)
 );
 
-const isAnswered = ({ currentPage, finished }: ExamOwnProps) =>
-  currentPage === 1 && !finished;
+const isConfirmedQuestionResult = ({ questionState }: ExamOwnProps) =>
+  questionState === QuestionState.ConfirmCorrect;
 
 const renderQuestionCorrect = ({
   question,
@@ -123,13 +121,14 @@ const renderQuestionCorrect = ({
   );
 };
 
-const withAnsweredCheck = branch<ExamOwnProps>(
-  isAnswered,
+const withConfirmedQuestionResultCheck = branch<ExamOwnProps>(
+  isConfirmedQuestionResult,
   renderComponent(renderQuestionCorrect),
   component => component
 );
 
-const isFinished = ({ finished }: ExamOwnProps) => finished;
+const isFinished = ({ questionState }: ExamOwnProps) =>
+  questionState === QuestionState.Finished;
 
 const renderResult = ({
   questions,
@@ -164,7 +163,7 @@ const withFinishedCheck = branch<ExamOwnProps>(
 
 const ExamIndex = compose<ExamProps, ExamProps>(
   withStartedCheck,
-  withAnsweredCheck,
+  withConfirmedQuestionResultCheck,
   withFinishedCheck
 )(QuestionSection);
 

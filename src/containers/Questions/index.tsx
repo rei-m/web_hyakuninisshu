@@ -1,16 +1,16 @@
-import {
-  answerQuestion,
-  goToCorrect,
-  goToNextQuestion,
-  goToResult,
-  restart
-} from '../../actions/questions';
 import * as React from 'react';
+import { GlobalState } from '../../reducers/index';
 import { branch, compose, renderComponent } from 'recompose';
 import { withRouter, RouteComponentProps } from 'react-router-dom';
 import { Answer, Question, ToriFuda } from '../../types';
 import { connect, Dispatch } from 'react-redux';
-import { GlobalState } from '../../reducers/index';
+import {
+  answerQuestion,
+  confirmCorrect,
+  finishQuestions,
+  openNextQuestion,
+  restartQuestions
+} from '../../actions/questions';
 import QuestionSection, {
   QuestionSectionProps
 } from '../../components/QuestionSection';
@@ -21,13 +21,13 @@ import QuestionsResult, {
   QuestionsResultProps
 } from '../../components/QuestionsResult';
 import TrainingInitializer from '../TrainingInitializer';
+import { QuestionState } from '../../enums';
 
 export interface QuestionsOwnProps {
   readonly started: boolean;
   readonly questions: Question[];
   readonly answers: Answer[];
-  readonly currentPage: number;
-  readonly finished: boolean;
+  readonly questionState?: QuestionState;
 }
 
 export type QuestionsConnectedProps = Omit<
@@ -54,19 +54,17 @@ const mapStateToProps = (
   const {
     answers,
     currentIndex,
-    currentPage,
     lastStartedTime,
     questions,
-    finished
+    questionState
   } = questionsState;
 
   return {
     answer: answers[currentIndex],
     answers,
-    currentPage,
     currentPosition: currentIndex + 1,
-    finished,
     question: questions[currentIndex],
+    questionState,
     questions,
     started: !!lastStartedTime && lastStartedTime > submitTime,
     totalCount: questions.length
@@ -78,16 +76,16 @@ const mapDispatchToProps = (
 ): QuestionsDispatchProps => {
   return {
     onClickGoToNext: () => {
-      dispatch(goToNextQuestion());
+      dispatch(openNextQuestion());
     },
     onClickGoToResult: () => {
-      dispatch(goToResult());
+      dispatch(finishQuestions());
     },
     onClickRestart: () => {
-      dispatch(restart());
+      dispatch(restartQuestions());
     },
     onClickResult: () => {
-      dispatch(goToCorrect());
+      dispatch(confirmCorrect());
     },
     onClickToriFuda: ({ questionId, karutaId }: ToriFuda) => {
       dispatch(answerQuestion(questionId, karutaId));
@@ -113,8 +111,8 @@ const withHasQuestionCheck = branch<QuestionsOwnProps>(
   renderComponent(EmptyMessage)
 );
 
-const isAnswered = ({ currentPage, finished }: QuestionsOwnProps) =>
-  currentPage === 1 && !finished;
+const isConfirmedQuestionResult = ({ questionState }: QuestionsOwnProps) =>
+  questionState === QuestionState.ConfirmCorrect;
 
 const renderQuestionCorrect = ({
   question,
@@ -134,13 +132,14 @@ const renderQuestionCorrect = ({
   );
 };
 
-const withAnsweredCheck = branch<QuestionsOwnProps>(
-  isAnswered,
+const withConfirmedQuestionResultCheck = branch<QuestionsOwnProps>(
+  isConfirmedQuestionResult,
   renderComponent(renderQuestionCorrect),
   component => component
 );
 
-const isFinished = ({ finished }: QuestionsOwnProps) => finished;
+const isFinished = ({ questionState }: QuestionsOwnProps) =>
+  questionState === QuestionState.Finished;
 
 const renderResult = ({
   answers,
@@ -171,7 +170,7 @@ const withFinishedCheck = branch<QuestionsOwnProps>(
 const QuestionsIndex = compose<QuestionsProps, QuestionsProps>(
   withStartedCheck,
   withHasQuestionCheck,
-  withAnsweredCheck,
+  withConfirmedQuestionResultCheck,
   withFinishedCheck
 )(QuestionSection);
 
