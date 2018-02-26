@@ -9,12 +9,16 @@ export interface ProgressProps {
 
 const Root = styled.div`
   width: 100vw;
-  height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
   background-color: #fffff0;
   flex-direction: column;
+  min-height: calc(100vh - 56px);
+
+  @media screen and (min-width: 768px) {
+    min-height: calc(100vh - 64px);
+  }
 `;
 
 const Message = styled.div`
