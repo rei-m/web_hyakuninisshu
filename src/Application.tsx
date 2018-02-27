@@ -11,9 +11,15 @@ import MenuSection from './components/MenuSection';
 import AboutSection from './components/AboutSection';
 import NotFound from './components/NotFound';
 import { ROUTE_PATHS } from './constants';
+import { Helmet } from 'react-helmet';
 
 const Application = () => (
   <Root>
+    <Helmet>
+      <meta charSet="utf-8" />
+      <title>My Title</title>
+      <link rel="canonical" href="http://mysite.com/example" />
+    </Helmet>
     <Switch>
       <Route exact path={ROUTE_PATHS.ROOT} component={MenuSection} />
       <Route exact path={ROUTE_PATHS.TRAINING} component={TrainignsIndex} />

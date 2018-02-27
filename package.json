@@ -91,7 +91,6 @@
   "dependencies": {
     "@blueprintjs/core": "^2.0.0-rc.2",
     "@blueprintjs/icons": "^2.0.0-rc.2",
-    "@blueprintjs/select": "^2.0.0-rc.2",
     "formik": "^0.11.4",
     "isomorphic-fetch": "^2.2.1",
     "normalize.css": "^7.0.0",
