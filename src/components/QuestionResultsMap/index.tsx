@@ -1,6 +1,6 @@
 import * as React from 'react';
 import styled from 'styled-components';
-import { Answer, Question } from '../../types';
+import { Answer, Karuta, Question } from '../../types';
 import { convetKarutaId } from '../helper';
 import * as correctImage from './check_correct.png';
 import * as incorrectImage from './check_incorrect.png';
@@ -9,13 +9,13 @@ export interface QuestionResultsMapProps {
   readonly questions: Question[];
   readonly answers: Answer[];
   readonly style?: React.CSSProperties;
-  readonly onClickResult: (karutaId: number) => void;
+  readonly onClickResult: (karuta: Karuta) => void;
 }
 
 export interface QuestionResultsCellProps {
   question: Question;
   answer: Answer;
-  onClickResult: (karutaId: number) => void;
+  onClickResult: (karuta: Karuta) => void;
 }
 
 const Root = styled.div`
@@ -53,7 +53,7 @@ export const QuestionResultsCell = ({
   onClickResult
 }: QuestionResultsCellProps) => {
   const onClickCell = () => {
-    onClickResult(question.correctKaruta.id);
+    onClickResult(question.correctKaruta);
   };
   return (
     <Cell onClick={onClickCell}>

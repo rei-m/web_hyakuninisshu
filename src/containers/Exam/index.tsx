@@ -33,10 +33,7 @@ export type ExamConnectedProps = Omit<
   'onClickToriFuda' | 'onClickResult'
 >;
 
-export type ExamDispatchProps = Pick<
-  ExamResultProps,
-  'onClickRestart' | 'onClickResultsMap'
-> &
+export type ExamDispatchProps = Pick<ExamResultProps, 'onClickRestart'> &
   Pick<QuestionCorrectProps, 'onClickGoToNext' | 'onClickGoToResult'> &
   Pick<QuestionSectionProps, 'onClickToriFuda' | 'onClickResult'>;
 
@@ -82,9 +79,6 @@ const mapDispatchToProps = (
     },
     onClickResult: () => {
       dispatch(confirmCorrect());
-    },
-    onClickResultsMap: (karutaId: number) => {
-      console.dir(karutaId);
     },
     onClickToriFuda: ({ questionId, karutaId }: ToriFuda) => {
       dispatch(answerQuestion(questionId, karutaId));
@@ -134,7 +128,6 @@ const renderResult = ({
   questions,
   answers,
   onClickRestart,
-  onClickResultsMap,
   totalCount
 }: ExamProps) => {
   const correctCount = answers.filter(a => a.correct).length;
@@ -150,7 +143,6 @@ const renderResult = ({
       answers={answers}
       questions={questions}
       onClickRestart={onClickRestart}
-      onClickResultsMap={onClickResultsMap}
     />
   );
 };
