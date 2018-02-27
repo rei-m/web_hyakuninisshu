@@ -176,7 +176,8 @@ const QuestionCorrect = enhance<
           title="正解"
           style={{
             maxWidth: 380,
-            padding: 0
+            padding: 0,
+            width: '80vw'
           }}
         >
           <KarutaCard karuta={karuta} />

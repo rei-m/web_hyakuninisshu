@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { withState } from 'recompose';
 import styled from 'styled-components';
 import { Dialog } from '@blueprintjs/core';
+import Tatami from '../Tatami';
 import QuestionResultsSummary from '../QuestionResultsSummary';
 import QuestionResultsMap from '../QuestionResultsMap';
 import KarutaCard from '../KarutaCard';
@@ -17,8 +18,18 @@ export interface ExamResultProps {
   readonly onClickRestart: () => void;
 }
 
-const RootSection = styled.section`
+const RootSection = Tatami.extend`
+  width: 100vw;
+  min-height: calc(100vh - 56px);
+
+  @media screen and (min-width: 768px) {
+    min-height: calc(100vh - 64px);
+  }
+`;
+
+const Inner = styled.div`
   max-width: 380px;
+  padding: 16px;
   margin: auto;
 `;
 
@@ -59,55 +70,48 @@ const ExamResult = enhance<
 
     return (
       <RootSection>
-        <QuestionResultsSummary
-          title={'正解数'}
-          value={`${correctCount} / ${totalCount}`}
-          style={{
-            margin: 16
-          }}
-        />
-        <QuestionResultsSummary
-          title={'平均回答時間'}
-          value={`${averageAnswerSecond}秒`}
-          style={{
-            marginBottom: 16,
-            marginLeft: 16,
-            marginRight: 16
-          }}
-        />
-        <QuestionResultsMap
-          questions={questions}
-          answers={answers}
-          onClickResult={onClickResultsMap}
-          style={{
-            marginBottom: 16,
-            marginLeft: 16,
-            marginRight: 16
-          }}
-        />
-        {correctCount !== totalCount && (
-          <Button
-            onClick={onClickRestart}
-            className="pt-button pt-large pt-icon-repeat"
-          >
-            間違えた歌の練習をする
-          </Button>
-        )}
-        <Link to="/exam" replace={true}>
-          <Button
-            className="pt-button pt-large pt-icon-undo"
-            style={{ marginTop: 0 }}
-          >
-            メニューに戻る
-          </Button>
-        </Link>
+        <Inner>
+          <QuestionResultsSummary
+            title={'正解数'}
+            value={`${correctCount} / ${totalCount}`}
+            style={{ marginBottom: 16 }}
+          />
+          <QuestionResultsSummary
+            title={'平均回答時間'}
+            value={`${averageAnswerSecond}秒`}
+            style={{ marginBottom: 16 }}
+          />
+          <QuestionResultsMap
+            questions={questions}
+            answers={answers}
+            onClickResult={onClickResultsMap}
+            style={{ marginBottom: 16 }}
+          />
+          {correctCount !== totalCount && (
+            <Button
+              onClick={onClickRestart}
+              className="pt-button pt-large pt-icon-repeat"
+            >
+              間違えた歌の練習をする
+            </Button>
+          )}
+          <Link to="/exam" replace={true}>
+            <Button
+              className="pt-button pt-large pt-icon-undo"
+              style={{ marginTop: 0 }}
+            >
+              メニューに戻る
+            </Button>
+          </Link>
+        </Inner>
         <Dialog
           isOpen={!!displayedKaruta}
           onClose={onCloseDialog}
           title="正解"
           style={{
             maxWidth: 380,
-            padding: 0
+            padding: 0,
+            width: '80vw'
           }}
         >
           {displayedKaruta && <KarutaCard karuta={displayedKaruta} />}

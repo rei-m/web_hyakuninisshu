@@ -7,6 +7,14 @@ export interface QuestionResultsSummaryProps {
   readonly style?: React.CSSProperties;
 }
 
+const Root = styled.div`
+  background-color: #fffff0;
+  box-sizing: border-box;
+  padding: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.26);
+  border-radius: 4px;
+`;
+
 const Title = styled.div`
   text-align: left;
   font-size: 1.2rem;
@@ -21,10 +29,10 @@ const QuestionResultsSummary = ({
   value,
   style
 }: QuestionResultsSummaryProps) => (
-  <div style={style}>
+  <Root style={style}>
     <Title>{title}</Title>
     <Value>{value}</Value>
-  </div>
+  </Root>
 );
 
 export default QuestionResultsSummary;
