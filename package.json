@@ -31,7 +31,7 @@
       "/__tests__/factories/"
     ],
     "setupFiles": [
-      "./jest.setup.js" 
+      "./jest.setup.js"
     ],
     "collectCoverage": false,
     "collectCoverageFrom": [
@@ -53,8 +53,10 @@
     "@types/nock": "^9.1.2",
     "@types/react": "^16.0.34",
     "@types/react-dom": "^16.0.3",
+    "@types/react-helmet": "^5.0.4",
     "@types/react-redux": "^5.0.14",
     "@types/react-router-dom": "^4.2.3",
+    "@types/react-transition-group": "^2.0.7",
     "@types/recompose": "^0.24.4",
     "@types/redux-mock-store": "^0.0.13",
     "awesome-typescript-loader": "^3.1.3",
@@ -87,15 +89,18 @@
     "webpack-dev-server": "^2.4.5"
   },
   "dependencies": {
-    "@blueprintjs/core": "^1.35.2",
+    "@blueprintjs/core": "^2.0.0-rc.2",
+    "@blueprintjs/icons": "^2.0.0-rc.2",
+    "@blueprintjs/select": "^2.0.0-rc.2",
     "formik": "^0.11.4",
     "isomorphic-fetch": "^2.2.1",
     "normalize.css": "^7.0.0",
     "react": "^16.2.0",
-    "react-addons-css-transition-group": "^15.6.2",
     "react-dom": "^16.2.0",
+    "react-helmet": "^5.2.0",
     "react-redux": "^5.0.4",
     "react-router-dom": "^4.2.2",
+    "react-transition-group": "^2.2.1",
     "recompose": "^0.26.0",
     "redux": "^3.6.0",
     "redux-thunk": "^2.2.0",
