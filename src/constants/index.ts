@@ -1,3 +1,5 @@
+export const APP_NAME = '百人一首';
+
 export const ROUTE_PATHS = {
   ABOUT: '/about',
   EXAM: '/exam',

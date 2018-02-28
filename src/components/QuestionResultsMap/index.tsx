@@ -21,6 +21,10 @@ export interface QuestionResultsCellProps {
 const Root = styled.div`
   display: flex;
   flex-wrap: wrap;
+  background-color: #fffff0;
+  box-sizing: border-box;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.26);
+  border-radius: 4px;
 `;
 
 const Cell = styled.div`

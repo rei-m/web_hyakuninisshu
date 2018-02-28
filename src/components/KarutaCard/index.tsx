@@ -10,6 +10,7 @@ export interface KarutaCardProps {
 
 const Root = styled.article`
   max-width: 380px;
+  width: 80vw;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.26);
   background-color: #fff;
   box-sizing: border-box;

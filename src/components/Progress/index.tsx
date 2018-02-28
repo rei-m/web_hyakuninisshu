@@ -12,13 +12,10 @@ const Root = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #fffff0;
+  background-color: #fffff050;
   flex-direction: column;
-  min-height: calc(100vh - 56px);
-
-  @media screen and (min-width: 768px) {
-    min-height: calc(100vh - 64px);
-  }
+  height: 100vh;
+  position: fiexd;
 `;
 
 const Message = styled.div`

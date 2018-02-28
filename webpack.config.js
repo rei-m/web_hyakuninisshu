@@ -50,8 +50,18 @@ module.exports = {
             'node_modules',
             '@blueprintjs',
             'core',
-            'dist',
+            'lib',
+            'css',
             'blueprint.css'
+          ),
+          path.join(
+            __dirname,
+            'node_modules',
+            '@blueprintjs',
+            'icons',
+            'lib',
+            'css',
+            'blueprint-icons.css'
           ),
         ],
         use: ExtractTextPlugin.extract({
