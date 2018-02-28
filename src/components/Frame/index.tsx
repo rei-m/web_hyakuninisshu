@@ -1,8 +1,10 @@
 import * as React from 'react';
+import { Helmet } from 'react-helmet';
 import styled, { StyledFunction } from 'styled-components';
 import Header from '../Header';
 import Navigation from '../Navigation';
 import { MenuType } from '../../enums';
+import { APP_NAME } from '../../constants';
 
 interface BodyProps {
   isDisplayNav: boolean;
@@ -30,6 +32,7 @@ export interface FrameProps {
   readonly canBack: boolean;
   readonly currentMenuType?: MenuType;
   readonly isDisplayNav: boolean;
+  readonly description: string;
   readonly onClickBack: () => void;
 }
 
@@ -37,11 +40,18 @@ const Frame: React.StatelessComponent<FrameProps> = ({
   canBack,
   children,
   subTitle,
+  description,
   onClickBack,
   isDisplayNav,
   currentMenuType
 }) => (
   <div>
+    <Helmet>
+      <meta name="keywords" content="百人一首,暗記,練習,ゲーム" />
+      <meta name="description" content={description} />
+      {!isDisplayNav && <meta name="robots" content="noindex,nofollow" />}
+      <title>{`${APP_NAME} - ${subTitle} -`}</title>
+    </Helmet>
     <Header subTitle={subTitle} canBack={canBack} onClickBack={onClickBack} />
     <Body isDisplayNav={isDisplayNav}>{children}</Body>
     {isDisplayNav && <Navigation currentMenuType={currentMenuType} />}

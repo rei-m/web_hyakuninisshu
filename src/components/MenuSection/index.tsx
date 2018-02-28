@@ -4,7 +4,6 @@ import styled from 'styled-components';
 import MenuIcon from '../MenuIcon';
 import { MenuType } from '../../enums';
 import { ROUTE_PATHS } from '../../constants';
-import { Helmet } from 'react-helmet';
 
 const RootSection = styled.div`
   padding: 16px;
@@ -59,9 +58,6 @@ const MenuRoot = styled.div`
 
 const MenuSection = () => (
   <RootSection>
-    <Helmet>
-      <title>unko</title>
-    </Helmet>
     <Section>
       <SectionTitle>百人一首とは</SectionTitle>
       <SectionText>
