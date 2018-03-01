@@ -1,12 +1,15 @@
 import * as React from 'react';
-import styled, { StyledFunction } from 'styled-components';
-import { COLOR_PRIMARY } from '../../constants/colors';
+import styled, { ThemedStyledFunction } from 'styled-components';
+import { Theme } from '../../styles';
 
 interface RootProps {
   readonly canBack: boolean;
 }
 
-const header: StyledFunction<RootProps & React.HTMLProps<HTMLElement>> =
+const header: ThemedStyledFunction<
+  RootProps & React.HTMLProps<HTMLElement>,
+  Theme
+> =
   styled.header;
 
 const Root = header`
@@ -15,8 +18,8 @@ const Root = header`
   right: 0;
   z-index: 1;
   position: fixed;
-  background-color: ${COLOR_PRIMARY};
-  padding-left: ${props => (props.canBack ? '0' : '16px')};
+  background-color: ${({ theme }) => theme.color_primary};
+  padding-left: ${({ canBack }) => (canBack ? '0' : '16px')};
   display: flex;
 `;
 

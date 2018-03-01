@@ -1,17 +1,20 @@
 import * as React from 'react';
-import styled from 'styled-components';
+import styled, { ThemedStyledFunction } from 'styled-components';
 import { YomiFuda } from '../../types';
-import { COLOR_PRIMARY_DARK } from '../../constants/colors';
+import { Theme } from '../../styles';
 
 export interface YomiFudaViewProps {
   readonly yomiFuda: YomiFuda;
   readonly style?: React.CSSProperties;
 }
 
-const Frame = styled.div`
+const div: ThemedStyledFunction<React.HTMLProps<HTMLDivElement>, Theme> =
+  styled.div;
+
+const Frame = div`
   width: 140px;
   height: 240px;
-  border: 6px solid ${COLOR_PRIMARY_DARK};
+  border: 6px solid ${({ theme }) => theme.color_primary_dark};
   border-radius: 10px;
   display: flex;
   align-items: center;

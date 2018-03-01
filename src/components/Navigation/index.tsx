@@ -1,18 +1,21 @@
 import * as React from 'react';
-import styled from 'styled-components';
+import styled, { ThemedStyledFunction } from 'styled-components';
 import { Link } from 'react-router-dom';
 import NavIcon from '../NavIcon';
-import { COLOR_PRIMARY } from '../../constants/colors';
 import { MenuType } from '../../enums';
 import { ROUTE_PATHS } from '../../constants';
+import { Theme } from '../../styles';
 
-const Root = styled.nav`
+const nav: ThemedStyledFunction<React.HTMLProps<HTMLElement>, Theme> =
+  styled.nav;
+
+const Root = nav`
   display: flex;
   position: fixed;
   height: 56px;
   width: 100vw;
   bottom: 0;
-  background-color: ${COLOR_PRIMARY};
+  background-color: ${({ theme }) => theme.color_primary};
   box-shadow: 0 -1px 5px rgba(0, 0, 0, 0.26);
   box-sizing: border-box;
 

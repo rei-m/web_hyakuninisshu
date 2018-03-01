@@ -1,12 +1,12 @@
 import * as React from 'react';
-import styled from 'styled-components';
+import styled, { ThemedStyledFunction } from 'styled-components';
 import { Dialog } from '@blueprintjs/core';
 import { withState } from 'recompose';
 import Tatami from '../Tatami';
 import KarutaCard from '../KarutaCard';
 import { Karuta } from '../../types';
-import { COLOR_PRIMARY_DARK } from '../../constants/colors';
 import { convetKarutaId, convetKimariji } from '../helper';
+import { Theme } from '../../styles';
 
 export interface QuestionCorrectProps {
   readonly karuta: Karuta;
@@ -14,6 +14,9 @@ export interface QuestionCorrectProps {
   readonly onClickGoToNext: () => void;
   readonly onClickGoToResult: () => void;
 }
+
+const div: ThemedStyledFunction<React.HTMLProps<HTMLDivElement>, Theme> =
+  styled.div;
 
 const Frame = Tatami.extend`
   display: flex;
@@ -49,10 +52,10 @@ const OpenDetail = styled.button`
   width: 33px;
 `;
 
-const KarutaFrame = styled.div`
+const KarutaFrame = div`
   width: 200px;
   height: 260px;
-  border: 6px solid ${COLOR_PRIMARY_DARK};
+  border: 6px solid ${({ theme }) => theme.color_primary_dark};
   border-radius: 10px;
   display: flex;
   align-items: center;
