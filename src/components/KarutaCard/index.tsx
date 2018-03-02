@@ -1,5 +1,6 @@
 import * as React from 'react';
 import styled from 'styled-components';
+import { withTheme } from '../../styles';
 import KarutaImage from '../KarutaImage';
 import { Karuta } from '../../types';
 import { convetKarutaId } from '../helper';
@@ -8,25 +9,25 @@ export interface KarutaCardProps {
   karuta: Karuta;
 }
 
-const Root = styled.article`
+const Root = withTheme(styled.article)`
   max-width: 380px;
   width: 80vw;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.26);
+  box-shadow: ${({ theme }) => theme.elevationShadow1x};
   background-color: #fff;
   box-sizing: border-box;
-  border: 8px solid #689f38;
+  border: 8px solid ${({ theme }) => theme.colorPrimary};
   border-radius: 4px;
-  padding: 16px;
+  padding: ${({ theme }) => theme.spacing2x};
 `;
 
-const Title = styled.h3`
+const Title = withTheme(styled.h3)`
   font-size: 1.6rem;
-  padding: 8px;
+  padding: ${({ theme }) => theme.spacing1x};
 `;
 
-const ItemBox = styled.div`
-  padding-top: 8px;
-  padding-bottom: 8px;
+const ItemBox = withTheme(styled.div)`
+  padding-top: ${({ theme }) => theme.spacing1x};
+  padding-bottom: ${({ theme }) => theme.spacing1x};
 `;
 
 const ItemTitle = styled.div`

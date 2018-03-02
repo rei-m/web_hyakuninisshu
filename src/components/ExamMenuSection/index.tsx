@@ -1,25 +1,21 @@
 import * as React from 'react';
 import { withRouter, RouteComponentProps } from 'react-router-dom';
 import styled from 'styled-components';
-import { ThemedButton, ThemedDiv, ThemedSection } from '../../styles';
+import { withTheme } from '../../styles';
 import PageTitle from '../PageTitle';
 
-const section: ThemedSection<{}> = styled.section;
-const div: ThemedDiv<{}> = styled.div;
-const button: ThemedButton<{}> = styled.button;
-
-const RootSection = section`
+const RootSection = withTheme(styled.section)`
   max-width: 380px;
   margin: auto;
   box-sizing: border-box;
   padding: ${({ theme }) => theme.spacing2x};
 `;
 
-const Explain = div`
+const Explain = withTheme(styled.div)`
   margin: ${({ theme }) => `${theme.spacing4x} ${theme.spacing2x}`};
 `;
 
-const StartButton = button`
+const StartButton = withTheme(styled.button)`
   margin-top: ${({ theme }) => theme.spacing4x};
 `;
 

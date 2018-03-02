@@ -2,7 +2,7 @@ import * as React from 'react';
 import { Link } from 'react-router-dom';
 import { withState } from 'recompose';
 import styled from 'styled-components';
-import { ThemedButton, ThemedDiv } from '../../styles';
+import { withTheme } from '../../styles';
 import { Dialog } from '@blueprintjs/core';
 import Tatami from '../Tatami';
 import QuestionResultsSummary from '../QuestionResultsSummary';
@@ -19,9 +19,6 @@ export interface ExamResultProps {
   readonly onClickRestart: () => void;
 }
 
-const div: ThemedDiv<{}> = styled.div;
-const button: ThemedButton<{}> = styled.button;
-
 const RootSection = Tatami.extend`
   width: 100vw;
   min-height: calc(100vh - ${({ theme }) => theme.headerHeight});
@@ -31,13 +28,13 @@ const RootSection = Tatami.extend`
   }
 `;
 
-const Inner = div`
+const Inner = withTheme(styled.div)`
   max-width: 380px;
   padding: ${({ theme }) => theme.spacing2x};
   margin: auto;
 `;
 
-const Button = button`
+const Button = withTheme(styled.button)`
   margin: ${({ theme }) => theme.spacing2x};
 `;
 

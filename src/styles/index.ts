@@ -1,6 +1,9 @@
 import { ThemedStyledFunction } from 'styled-components';
 
 export const theme = {
+  bottomNavHeight: '56px',
+  bottomNavHeightWide: '64px',
+  bottomNavWidthWide: '64px',
   colorAccent: '#ff9100',
   colorPrimary: '#8bc34a',
   colorPrimaryDark: '#689F38',
@@ -17,10 +20,4 @@ export const theme = {
 
 export type Theme = typeof theme;
 
-interface Base<T, E extends Element>
-  extends ThemedStyledFunction<T & React.HTMLProps<E>, Theme> {}
-
-export interface ThemedHeader<T> extends Base<T, HTMLElement> {}
-export interface ThemedDiv<T> extends Base<T, HTMLDivElement> {}
-export interface ThemedSection<T> extends Base<T, HTMLElement> {}
-export interface ThemedButton<T> extends Base<T, HTMLButtonElement> {}
+export const withTheme = <P>(f: ThemedStyledFunction<P, Theme>) => f;

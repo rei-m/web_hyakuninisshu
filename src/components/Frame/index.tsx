@@ -1,6 +1,7 @@
 import * as React from 'react';
 import { Helmet } from 'react-helmet';
-import styled, { StyledFunction } from 'styled-components';
+import styled from 'styled-components';
+import { withTheme } from '../../styles';
 import Header from '../Header';
 import Navigation from '../Navigation';
 import { MenuType } from '../../enums';
@@ -10,20 +11,19 @@ interface BodyProps {
   isDisplayNav: boolean;
 }
 
-const div: StyledFunction<BodyProps & React.HTMLProps<HTMLElement>> =
-  styled.div;
-
-export const Body = div`
-  padding-top: 56px;
-  padding-bottom: ${({ isDisplayNav }) => (isDisplayNav ? '56px' : '0')};
+export const Body = withTheme<BodyProps>(styled.div)`
+  padding-top: ${({ theme }) => theme.headerHeight};
+  padding-bottom: ${({ isDisplayNav, theme }) =>
+    isDisplayNav ? theme.bottomNavHeight : '0'};
   text-align: center;
-  background-color: #fffff0;
+  background-color: ${({ theme }) => theme.colorThin};
   min-height: 100vh;
 
-  @media screen and (min-width: 768px) {
-    padding-top: 64px;
+  @media screen and (min-width: ${({ theme }) => theme.minWidthWide}) {
+    padding-top: ${({ theme }) => theme.headerHeightWide};
     padding-bottom: 0;
-    padding-left: ${({ isDisplayNav }) => (isDisplayNav ? '64px' : '0')};
+    padding-left: ${({ isDisplayNav, theme }) =>
+      isDisplayNav ? theme.bottomNavHeight : '0'};
   }
 `;
 
