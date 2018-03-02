@@ -14,7 +14,7 @@ const div: ThemedStyledFunction<React.HTMLProps<HTMLDivElement>, Theme> =
 const Frame = div`
   width: 140px;
   height: 240px;
-  border: 6px solid ${({ theme }) => theme.color_primary_dark};
+  border: 6px solid ${({ theme }) => theme.colorPrimaryDark};
   border-radius: 10px;
   display: flex;
   align-items: center;

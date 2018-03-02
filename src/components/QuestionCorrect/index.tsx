@@ -55,7 +55,7 @@ const OpenDetail = styled.button`
 const KarutaFrame = div`
   width: 200px;
   height: 260px;
-  border: 6px solid ${({ theme }) => theme.color_primary_dark};
+  border: 6px solid ${({ theme }) => theme.colorPrimaryDark};
   border-radius: 10px;
   display: flex;
   align-items: center;

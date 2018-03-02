@@ -1,16 +1,20 @@
 import * as React from 'react';
 import styled from 'styled-components';
+import { ThemedDiv, ThemedSection } from '../../styles';
 
-const Root = styled.div`
-  padding: 16px;
+const section: ThemedSection<{}> = styled.section;
+const div: ThemedDiv<{}> = styled.div;
+
+const Root = div`
+  padding: ${({ theme }) => theme.spacing2x};
   box-sizing: border-box;
   max-width: 960px;
   margin: auto;
   text-align: left;
 `;
 
-const Section = styled.section`
-  margin: 32px 0;
+const Section = section`
+  margin: ${({ theme }) => theme.spacing4x} 0;
 `;
 
 const SectionTitle = styled.h1`
@@ -26,8 +30,8 @@ const SectionTitle = styled.h1`
   }
 `;
 
-const SectionText = styled.div`
-  padding: 8px;
+const SectionText = div`
+  padding: ${({ theme }) => theme.spacing1x};
   line-height: 2rem;
 `;
 

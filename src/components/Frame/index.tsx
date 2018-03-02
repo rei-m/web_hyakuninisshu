@@ -15,7 +15,7 @@ const div: StyledFunction<BodyProps & React.HTMLProps<HTMLElement>> =
 
 export const Body = div`
   padding-top: 56px;
-  padding-bottom: ${props => (props.isDisplayNav ? '56px' : '0')};
+  padding-bottom: ${({ isDisplayNav }) => (isDisplayNav ? '56px' : '0')};
   text-align: center;
   background-color: #fffff0;
   min-height: 100vh;
@@ -23,7 +23,7 @@ export const Body = div`
   @media screen and (min-width: 768px) {
     padding-top: 64px;
     padding-bottom: 0;
-    padding-left: ${props => (props.isDisplayNav ? '64px' : '0')};
+    padding-left: ${({ isDisplayNav }) => (isDisplayNav ? '64px' : '0')};
   }
 `;
 

@@ -2,6 +2,7 @@ import * as React from 'react';
 import { Link } from 'react-router-dom';
 import { withState } from 'recompose';
 import styled from 'styled-components';
+import { ThemedButton, ThemedDiv } from '../../styles';
 import { Dialog } from '@blueprintjs/core';
 import Tatami from '../Tatami';
 import QuestionResultsSummary from '../QuestionResultsSummary';
@@ -18,23 +19,26 @@ export interface ExamResultProps {
   readonly onClickRestart: () => void;
 }
 
+const div: ThemedDiv<{}> = styled.div;
+const button: ThemedButton<{}> = styled.button;
+
 const RootSection = Tatami.extend`
   width: 100vw;
-  min-height: calc(100vh - 56px);
+  min-height: calc(100vh - ${({ theme }) => theme.headerHeight});
 
-  @media screen and (min-width: 768px) {
-    min-height: calc(100vh - 64px);
+  @media screen and (min-width: ${({ theme }) => theme.minWidthWide}) {
+    min-height: calc(100vh - ${({ theme }) => theme.headerHeightWide});
   }
 `;
 
-const Inner = styled.div`
+const Inner = div`
   max-width: 380px;
-  padding: 16px;
+  padding: ${({ theme }) => theme.spacing2x};
   margin: auto;
 `;
 
-const Button = styled.button`
-  margin: 16px;
+const Button = button`
+  margin: ${({ theme }) => theme.spacing2x};
 `;
 
 const enhance = withState<

@@ -15,7 +15,7 @@ const Root = nav`
   height: 56px;
   width: 100vw;
   bottom: 0;
-  background-color: ${({ theme }) => theme.color_primary};
+  background-color: ${({ theme }) => theme.colorPrimary};
   box-shadow: 0 -1px 5px rgba(0, 0, 0, 0.26);
   box-sizing: border-box;
 
