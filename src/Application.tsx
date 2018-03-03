@@ -3,10 +3,10 @@ import { Route, Switch } from 'react-router-dom';
 import Root from './containers/Root';
 import TrainignsIndex from './containers/Trainings';
 import ExamIndex from './containers/Exam';
+import ExamQuestionsIndex from './containers/ExamQuestions';
 import KarutasIndex from './containers/Karutas';
 import KarutasShow from './containers/Karutas/Show';
-import QuestionsIndex from './containers/Questions';
-import ExamMenuSection from './components/ExamMenuSection';
+import TrainingQuestionsIndex from './containers/TrainingQuestions';
 import MenuSection from './components/MenuSection';
 import AboutSection from './components/AboutSection';
 import NotFound from './components/NotFound';
@@ -20,10 +20,14 @@ const Application = () => (
       <Route
         exact
         path={ROUTE_PATHS.TRAINING_QUESTION}
-        component={QuestionsIndex}
+        component={TrainingQuestionsIndex}
       />
-      <Route exact path={ROUTE_PATHS.EXAM} component={ExamMenuSection} />
-      <Route exact path={ROUTE_PATHS.EXAM_QUESTION} component={ExamIndex} />
+      <Route exact path={ROUTE_PATHS.EXAM} component={ExamIndex} />
+      <Route
+        exact
+        path={ROUTE_PATHS.EXAM_QUESTION}
+        component={ExamQuestionsIndex}
+      />
       <Route exact path={ROUTE_PATHS.KARUTAS} component={KarutasIndex} />
       <Route exact path={ROUTE_PATHS.KARUTAS_ID} component={KarutasShow} />
       <Route exact path={ROUTE_PATHS.ABOUT} component={AboutSection} />
