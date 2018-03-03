@@ -1,5 +1,6 @@
 import * as React from 'react';
 import styled from 'styled-components';
+import { withAppTheme } from '../../styles';
 import { Form, FormikHandlers, FormikState } from 'formik';
 import {
   COLOR_LIST,
@@ -9,8 +10,8 @@ import {
 import SelectItem from './SelectItem';
 import SelectRangeFromTo from './SelectRangeFromTo';
 
-const StartButton = styled.button`
-  margin-top: 32px;
+const StartButton = withAppTheme(styled.button)`
+  margin-top: ${({ theme }) => theme.spacing4x};
 `;
 
 export interface TrainingMenuInnerFormValues {

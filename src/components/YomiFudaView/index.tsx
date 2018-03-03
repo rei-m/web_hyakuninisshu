@@ -1,22 +1,22 @@
 import * as React from 'react';
 import styled from 'styled-components';
+import { withAppTheme } from '../../styles';
 import { YomiFuda } from '../../types';
-import { COLOR_PRIMARY_DARK } from '../../constants/colors';
 
 export interface YomiFudaViewProps {
   readonly yomiFuda: YomiFuda;
   readonly style?: React.CSSProperties;
 }
 
-const Frame = styled.div`
+const Frame = withAppTheme(styled.div)`
   width: 140px;
   height: 240px;
-  border: 6px solid ${COLOR_PRIMARY_DARK};
+  border: 6px solid ${({ theme }) => theme.colorPrimaryDark};
   border-radius: 10px;
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: #fffff0;
+  background-color: ${({ theme }) => theme.colorThin};
   box-shadow: 0 -1px 5px rgba(0, 0, 0, 0.26);
   font-family: 'Sawarabi Mincho';
 `;
@@ -46,16 +46,14 @@ const ThirdPhrase = Phrase.extend`
 // 各フレーズの文字数を最大に合わせる
 // 縦書きのエレメントを絶対位置で指定する
 
-const YomiFudaView = ({ yomiFuda, style }: YomiFudaViewProps) => {
-  return (
-    <Frame style={style}>
-      <Inner>
-        <Phrase>{yomiFuda.firstText}</Phrase>
-        <SecondPhrase>{yomiFuda.secondText}</SecondPhrase>
-        <ThirdPhrase>{yomiFuda.thirdText}</ThirdPhrase>
-      </Inner>
-    </Frame>
-  );
-};
+const YomiFudaView = ({ yomiFuda, style }: YomiFudaViewProps) => (
+  <Frame style={style}>
+    <Inner>
+      <Phrase>{yomiFuda.firstText}</Phrase>
+      <SecondPhrase>{yomiFuda.secondText}</SecondPhrase>
+      <ThirdPhrase>{yomiFuda.thirdText}</ThirdPhrase>
+    </Inner>
+  </Frame>
+);
 
 export default YomiFudaView;

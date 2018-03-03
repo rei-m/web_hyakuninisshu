@@ -1,18 +1,20 @@
 import * as React from 'react';
 import styled from 'styled-components';
+import { withAppTheme } from '../../styles';
+
 import * as dogeza from './dogeza_businessman.png';
 
-const Root = styled.div`
+const Root = withAppTheme(styled.div)`
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #fffff0;
+  background-color: ${({ theme }) => theme.colorThin};
   flex-direction: column;
   box-sizing: border-box;
-  min-height: calc(100vh - 56px);
+  min-height: calc(100vh - ${({ theme }) => theme.headerHeight});
 
-  @media screen and (min-width: 768px) {
-    min-height: calc(100vh - 64px);
+  @media screen and (min-width: ${({ theme }) => theme.minWidthWide}) {
+    min-height: calc(100vh - ${({ theme }) => theme.headerHeightWide});
   }
 `;
 
@@ -25,15 +27,13 @@ const DogezaImg = styled.img`
   width: 200px;
 `;
 
-const NotFound = () => {
-  return (
-    <Root>
-      <Message>
-        ページが見つかりませんでした。<br />トップページにお戻りください。
-      </Message>
-      <DogezaImg src={dogeza} alt="ページが見つかりませでした" />
-    </Root>
-  );
-};
+const NotFound = () => (
+  <Root>
+    <Message>
+      ページが見つかりませんでした。<br />トップページにお戻りください。
+    </Message>
+    <DogezaImg src={dogeza} alt="ページが見つかりませでした" />
+  </Root>
+);
 
 export default NotFound;

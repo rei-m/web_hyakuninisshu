@@ -3,10 +3,13 @@ import styled, { StyledFunction } from 'styled-components';
 import { MenuType } from '../../enums';
 import { menuTypeToIcon } from '../../utils';
 
-interface IconProps {
+export interface NavIconProps {
+  readonly iconType: MenuType;
   readonly text: string;
   readonly isCurrent: boolean;
 }
+
+type IconProps = Pick<NavIconProps, 'text' | 'isCurrent'>;
 
 const i: StyledFunction<IconProps & React.HTMLProps<HTMLElement>> = styled.i;
 
@@ -30,12 +33,6 @@ const Icon = i`
     opacity: 1;
   }
 `;
-
-export interface NavIconProps {
-  readonly iconType: MenuType;
-  readonly text: string;
-  readonly isCurrent: boolean;
-}
 
 const NavIcon = ({ iconType, text, isCurrent }: NavIconProps) => (
   <Icon className="material-icons" text={text} isCurrent={isCurrent}>

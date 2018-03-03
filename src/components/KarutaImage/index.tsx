@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { convetKarutaId } from '../helper';
+import { toKarutaIdString } from '../helper';
 // TODO: Spriteする??
 import * as karuta001 from './karuta_001.jpg';
 import * as karuta002 from './karuta_002.jpg';
@@ -206,14 +206,14 @@ const KARUTA_IMAGE_LIST = [
 ];
 
 export interface KarutaImageProps {
-  karutaId: number;
-  style?: React.CSSProperties;
+  readonly karutaId: number;
+  readonly style?: React.CSSProperties;
 }
 
 const KarutaImage = ({ karutaId, style }: KarutaImageProps) => (
   <img
     src={KARUTA_IMAGE_LIST[karutaId - 1]}
-    alt={convetKarutaId(karutaId)}
+    alt={toKarutaIdString(karutaId)}
     style={style}
   />
 );

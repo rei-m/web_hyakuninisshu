@@ -1,12 +1,12 @@
 import * as React from 'react';
 import styled from 'styled-components';
+import { withAppTheme } from '../../styles';
 import { Dialog } from '@blueprintjs/core';
 import { withState } from 'recompose';
 import Tatami from '../Tatami';
 import KarutaCard from '../KarutaCard';
 import { Karuta } from '../../types';
-import { COLOR_PRIMARY_DARK } from '../../constants/colors';
-import { convetKarutaId, convetKimariji } from '../helper';
+import { toKarutaIdString, toKimarijiString } from '../helper';
 
 export interface QuestionCorrectProps {
   readonly karuta: Karuta;
@@ -20,10 +20,10 @@ const Frame = Tatami.extend`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  min-height: calc(100vh - 56px);
+  min-height: calc(100vh - ${({ theme }) => theme.headerHeight});
 
-  @media screen and (min-width: 768px) {
-    min-height: calc(100vh - 64px);
+  @media screen and (min-width: ${({ theme }) => theme.minWidthWide}) {
+    min-height: calc(100vh - ${({ theme }) => theme.headerHeightWide});
   }
 `;
 
@@ -32,8 +32,8 @@ const Header = styled.div`
   width: 160px;
 `;
 
-const NumberAndKimariji = styled.div`
-  padding: 8px 16px;
+const NumberAndKimariji = withAppTheme(styled.div)`
+  padding: ${({ theme }) => `${theme.spacing1x} ${theme.spacing2x}`};
   border: 1px solid #d3d3d3;
   width: 160px;
   margin: 0 auto;
@@ -49,16 +49,16 @@ const OpenDetail = styled.button`
   width: 33px;
 `;
 
-const KarutaFrame = styled.div`
+const KarutaFrame = withAppTheme(styled.div)`
   width: 200px;
   height: 260px;
-  border: 6px solid ${COLOR_PRIMARY_DARK};
+  border: 6px solid ${({ theme }) => theme.colorPrimaryDark};
   border-radius: 10px;
   display: flex;
   align-items: center;
   justify-content: center;
-  margin: 16px auto 0 auto;
-  background-color: #fffff0;
+  margin: ${({ theme }) => theme.spacing2x} auto 0 auto;
+  background-color: ${({ theme }) => theme.colorThin};
   box-shadow: 0 -1px 5px rgba(0, 0, 0, 0.26);
   font-family: 'Sawarabi Mincho';
 `;
@@ -139,7 +139,7 @@ const QuestionCorrect = enhance<
       <Frame>
         <Header>
           <NumberAndKimariji>
-            {convetKarutaId(karuta.id)} / {convetKimariji(karuta.kimariji)}
+            {toKarutaIdString(karuta.id)} / {toKimarijiString(karuta.kimariji)}
           </NumberAndKimariji>
           <OpenDetail onClick={onClickOpenDetail} className="pt-button">
             詳

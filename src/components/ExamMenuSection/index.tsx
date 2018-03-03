@@ -1,21 +1,22 @@
 import * as React from 'react';
 import { withRouter, RouteComponentProps } from 'react-router-dom';
 import styled from 'styled-components';
+import { withAppTheme } from '../../styles';
 import PageTitle from '../PageTitle';
 
-const RootSection = styled.section`
+const RootSection = withAppTheme(styled.section)`
   max-width: 380px;
   margin: auto;
   box-sizing: border-box;
-  padding: 16px;
+  padding: ${({ theme }) => theme.spacing2x};
 `;
 
-const Explain = styled.div`
-  margin: 32px 16px;
+const Explain = withAppTheme(styled.div)`
+  margin: ${({ theme }) => `${theme.spacing4x} ${theme.spacing2x}`};
 `;
 
-const StartButton = styled.button`
-  margin-top: 32px;
+const StartButton = withAppTheme(styled.button)`
+  margin-top: ${({ theme }) => theme.spacing4x};
 `;
 
 const handleSubmit = ({ history }: RouteComponentProps<{}>) => {

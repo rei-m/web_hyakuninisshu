@@ -3,6 +3,10 @@ import styled from 'styled-components';
 import { MenuType } from '../../enums';
 import { menuTypeToIcon } from '../../utils';
 
+export interface MenuIconProps {
+  readonly iconType: MenuType;
+}
+
 const Icon = styled.i`
   width: 150px;
   height: 150px;
@@ -13,10 +17,6 @@ const Icon = styled.i`
   line-height: 142px;
   text-align: center;
 `;
-
-export interface MenuIconProps {
-  readonly iconType: MenuType;
-}
 
 const MenuIcon = ({ iconType }: MenuIconProps) => (
   <Icon className="material-icons">{menuTypeToIcon(iconType)}</Icon>

@@ -1,31 +1,11 @@
 import * as React from 'react';
 import { Helmet } from 'react-helmet';
-import styled, { StyledFunction } from 'styled-components';
+import styled from 'styled-components';
+import { withAppTheme } from '../../styles';
 import Header from '../Header';
 import Navigation from '../Navigation';
 import { MenuType } from '../../enums';
 import { APP_NAME } from '../../constants';
-
-interface BodyProps {
-  isDisplayNav: boolean;
-}
-
-const div: StyledFunction<BodyProps & React.HTMLProps<HTMLElement>> =
-  styled.div;
-
-export const Body = div`
-  padding-top: 56px;
-  padding-bottom: ${props => (props.isDisplayNav ? '56px' : '0')};
-  text-align: center;
-  background-color: #fffff0;
-  min-height: 100vh;
-
-  @media screen and (min-width: 768px) {
-    padding-top: 64px;
-    padding-bottom: 0;
-    padding-left: ${props => (props.isDisplayNav ? '64px' : '0')};
-  }
-`;
 
 export interface FrameProps {
   readonly subTitle: string;
@@ -35,6 +15,24 @@ export interface FrameProps {
   readonly description: string;
   readonly onClickBack: () => void;
 }
+
+type BodyProps = Pick<FrameProps, 'isDisplayNav'>;
+
+export const Body = withAppTheme<BodyProps>(styled.div)`
+  padding-top: ${({ theme }) => theme.headerHeight};
+  padding-bottom: ${({ isDisplayNav, theme }) =>
+    isDisplayNav ? theme.bottomNavHeight : '0'};
+  text-align: center;
+  background-color: ${({ theme }) => theme.colorThin};
+  min-height: 100vh;
+
+  @media screen and (min-width: ${({ theme }) => theme.minWidthWide}) {
+    padding-top: ${({ theme }) => theme.headerHeightWide};
+    padding-bottom: 0;
+    padding-left: ${({ isDisplayNav, theme }) =>
+      isDisplayNav ? theme.bottomNavHeight : '0'};
+  }
+`;
 
 const Frame: React.StatelessComponent<FrameProps> = ({
   canBack,

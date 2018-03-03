@@ -4,7 +4,7 @@ import { Classes, Spinner } from '@blueprintjs/core';
 import { lifecycle } from 'recompose';
 
 export interface ProgressProps {
-  onStart: () => void;
+  readonly onStart: () => void;
 }
 
 const Root = styled.div`

@@ -1,20 +1,21 @@
 import * as React from 'react';
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
+import { withAppTheme } from '../../styles';
 import MenuIcon from '../MenuIcon';
 import { MenuType } from '../../enums';
 import { ROUTE_PATHS } from '../../constants';
 
-const RootSection = styled.div`
-  padding: 16px;
+const RootSection = withAppTheme(styled.div)`
+  padding: ${({ theme }) => theme.spacing2x};
   box-sizing: border-box;
   max-width: 960px;
   margin: auto;
   text-align: left;
 `;
 
-const Section = styled.section`
-  margin: 32px 0;
+const Section = withAppTheme(styled.section)`
+  margin: ${({ theme }) => theme.spacing4x} 0;
 `;
 
 const SectionTitle = styled.h1`
@@ -30,28 +31,28 @@ const SectionTitle = styled.h1`
   }
 `;
 
-const SectionText = styled.div`
-  padding: 8px;
+const SectionText = withAppTheme(styled.div)`
+  padding: ${({ theme }) => theme.spacing1x};
   line-height: 2rem;
 `;
 
-const MenuWrapper = styled.div`
-  padding: 32px 0;
+const MenuWrapper = withAppTheme(styled.div)`
+  padding: ${({ theme }) => theme.spacing4x} 0;
   display: flex;
   flex-direction: column;
 
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: ${({ theme }) => theme.minWidthWide}) {
     flex-direction: row;
   }
 `;
 
-const MenuRoot = styled.div`
-  padding: 16px;
+const MenuRoot = withAppTheme(styled.div)`
+  padding: ${({ theme }) => theme.spacing2x};
   box-sizing: border-box;
   flex-grow: 1;
   text-align: center;
 
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: ${({ theme }) => theme.minWidthWide}) {
     width: 200px;
   }
 `;

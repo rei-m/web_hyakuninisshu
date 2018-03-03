@@ -1,5 +1,6 @@
 import * as React from 'react';
 import styled from 'styled-components';
+import { withAppTheme } from '../../styles';
 import { Answer, Question, ToriFuda } from '../../types';
 import Tatami from '../Tatami';
 import YomiFudaView from '../YomiFudaView';
@@ -20,16 +21,16 @@ const Frame = Tatami.extend`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  min-height: calc(100vh - 56px);
+  min-height: calc(100vh - ${({ theme }) => theme.headerHeight});
 
-  @media screen and (min-width: 768px) {
-    min-height: calc(100vh - 64px);
+  @media screen and (min-width: ${({ theme }) => theme.minWidthWide}) {
+    min-height: calc(100vh - ${({ theme }) => theme.headerHeightWide});
   }
 `;
 
-const YomiFudaBox = styled.div`
+const YomiFudaBox = withAppTheme(styled.div)`
   position: relative;
-  margin-bottom: 24px;
+  margin-bottom: ${({ theme }) => theme.spacing3x};
   width: 312px;
 `;
 

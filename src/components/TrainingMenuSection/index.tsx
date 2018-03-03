@@ -1,16 +1,17 @@
 import * as React from 'react';
 import styled from 'styled-components';
+import { withAppTheme } from '../../styles';
 import PageTitle from '../PageTitle';
 import TrainingMenuForm from '../../containers/TrainingMenuForm';
 
 export interface TrainingMenuSectionProps {
-  initialRangeFrom: number;
-  initialRangeTo: number;
-  initialKimariji: number;
-  initialColor: string;
-  initialKamiNoKuStyle: number;
-  initialShimoNoKuStyle: number;
-  onSubmit: (
+  readonly initialRangeFrom: number;
+  readonly initialRangeTo: number;
+  readonly initialKimariji: number;
+  readonly initialColor: string;
+  readonly initialKamiNoKuStyle: number;
+  readonly initialShimoNoKuStyle: number;
+  readonly onSubmit: (
     rangeFrom: number,
     rangeTo: number,
     kimariji: number,
@@ -21,10 +22,10 @@ export interface TrainingMenuSectionProps {
   ) => void;
 }
 
-const RootSection = styled.section`
+const RootSection = withAppTheme(styled.section)`
   max-width: 380px;
   margin: auto;
-  padding: 16px;
+  padding: ${({ theme }) => theme.spacing2x};
   box-sizing: border-box;
 `;
 

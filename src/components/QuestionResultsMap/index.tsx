@@ -1,7 +1,8 @@
 import * as React from 'react';
 import styled from 'styled-components';
+import { withAppTheme } from '../../styles';
 import { Answer, Karuta, Question } from '../../types';
-import { convetKarutaId } from '../helper';
+import { toKarutaIdString } from '../helper';
 import * as correctImage from './check_correct.png';
 import * as incorrectImage from './check_incorrect.png';
 
@@ -13,17 +14,17 @@ export interface QuestionResultsMapProps {
 }
 
 export interface QuestionResultsCellProps {
-  question: Question;
-  answer: Answer;
-  onClickResult: (karuta: Karuta) => void;
+  readonly question: Question;
+  readonly answer: Answer;
+  readonly onClickResult: (karuta: Karuta) => void;
 }
 
-const Root = styled.div`
+const Root = withAppTheme(styled.div)`
   display: flex;
   flex-wrap: wrap;
-  background-color: #fffff0;
+  background-color: ${({ theme }) => theme.colorThin};
   box-sizing: border-box;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.26);
+  box-shadow: ${({ theme }) => theme.elevationShadow1x};
   border-radius: 4px;
 `;
 
@@ -61,7 +62,7 @@ export const QuestionResultsCell = ({
   };
   return (
     <Cell onClick={onClickCell}>
-      <KarutaNo>{convetKarutaId(question.correctKaruta.id)}</KarutaNo>
+      <KarutaNo>{toKarutaIdString(question.correctKaruta.id)}</KarutaNo>
       <CorrentImageBox>
         <img
           src={answer.correct ? correctImage : incorrectImage}

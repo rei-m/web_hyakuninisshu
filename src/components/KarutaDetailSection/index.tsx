@@ -1,17 +1,18 @@
 import * as React from 'react';
 import styled from 'styled-components';
+import { withAppTheme } from '../../styles';
 import PageTitle from '../PageTitle';
 import KarutaCard from '../KarutaCard';
 import { Karuta } from '../../types';
-import { convetKarutaId } from '../helper';
+import { toKarutaIdString } from '../helper';
 
 export interface KarutaDetailSectionProps {
-  karuta: Karuta;
+  readonly karuta: Karuta;
 }
 
-const RootSection = styled.section`
+const RootSection = withAppTheme(styled.section)`
   box-sizing: border-box;
-  padding: 16px;
+  padding: ${({ theme }) => theme.spacing2x};
   display: flex;
   align-items: center;
   justify-content: center;
@@ -20,7 +21,7 @@ const RootSection = styled.section`
 
 const KarutaDetailSection = ({ karuta }: KarutaDetailSectionProps) => (
   <RootSection>
-    <PageTitle title={convetKarutaId(karuta.id)} />
+    <PageTitle title={toKarutaIdString(karuta.id)} />
     <KarutaCard karuta={karuta} />
   </RootSection>
 );
