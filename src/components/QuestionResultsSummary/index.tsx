@@ -1,5 +1,6 @@
 import * as React from 'react';
 import styled from 'styled-components';
+import { withAppTheme } from '../../styles';
 
 export interface QuestionResultsSummaryProps {
   readonly title: string;
@@ -7,11 +8,11 @@ export interface QuestionResultsSummaryProps {
   readonly style?: React.CSSProperties;
 }
 
-const Root = styled.div`
-  background-color: #fffff0;
+const Root = withAppTheme(styled.div)`
+  background-color: ${({ theme }) => theme.colorThin};
   box-sizing: border-box;
-  padding: 8px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.26);
+  padding: ${({ theme }) => theme.spacing1x};
+  box-shadow: ${({ theme }) => theme.elevationShadow1x};
   border-radius: 4px;
 `;
 

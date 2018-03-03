@@ -1,22 +1,8 @@
 import * as React from 'react';
-import styled from 'styled-components';
 import { Field } from 'formik';
+import styled from 'styled-components';
+import { withAppTheme } from '../../styles';
 import { OptionItem } from '../../types';
-
-const Label = styled.label`
-  text-align: left;
-`;
-
-const SelectRow = styled.div`
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 0 16px;
-`;
-
-const SelectRange = styled.div`
-  width: 100%;
-`;
 
 export interface SelectItemProps {
   readonly title: string;
@@ -25,6 +11,21 @@ export interface SelectItemProps {
   readonly list: Array<OptionItem<string | number>>;
   readonly handleChange: (e: React.SyntheticEvent<HTMLSelectElement>) => void;
 }
+
+const Label = styled.label`
+  text-align: left;
+`;
+
+const SelectRow = withAppTheme(styled.div)`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 ${({ theme }) => theme.spacing2x};
+`;
+
+const SelectRange = styled.div`
+  width: 100%;
+`;
 
 const SelectItem = (props: SelectItemProps) => (
   <Label className="pt-label">

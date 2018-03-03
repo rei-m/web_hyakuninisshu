@@ -1,6 +1,7 @@
 import * as React from 'react';
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
+import { appTheme, withAppTheme } from '../../styles';
 import Tatami from '../Tatami';
 import QuestionResultsSummary from '../QuestionResultsSummary';
 
@@ -13,21 +14,21 @@ export interface QuestionsResultProps {
 
 const RootSection = Tatami.extend`
   width: 100vw;
-  min-height: calc(100vh - 56px);
+  min-height: calc(100vh - ${({ theme }) => theme.headerHeight});
 
-  @media screen and (min-width: 768px) {
-    min-height: calc(100vh - 64px);
+  @media screen and (min-width: ${({ theme }) => theme.minWidthWide}) {
+    min-height: calc(100vh - ${({ theme }) => theme.headerHeightWide});
   }
 `;
 
-const Inner = styled.div`
+const Inner = withAppTheme(styled.div)`
   max-width: 380px;
-  padding: 16px;
+  padding: ${({ theme }) => theme.spacing2x};
   margin: auto;
 `;
 
-const Button = styled.button`
-  margin: 16px;
+const Button = withAppTheme(styled.button)`
+  margin: ${({ theme }) => theme.spacing2x};
 `;
 
 const QuestionsResult = ({
@@ -41,12 +42,12 @@ const QuestionsResult = ({
       <QuestionResultsSummary
         title={'正解数'}
         value={`${correctCount} / ${totalCount}`}
-        style={{ marginBottom: 16 }}
+        style={{ marginBottom: appTheme.spacing2x }}
       />
       <QuestionResultsSummary
         title={'平均回答時間'}
         value={`${averageAnswerSecond}秒`}
-        style={{ marginBottom: 16 }}
+        style={{ marginBottom: appTheme.spacing2x }}
       />
       {correctCount !== totalCount && (
         <Button

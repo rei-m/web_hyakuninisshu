@@ -1,33 +1,8 @@
 import * as React from 'react';
-import styled from 'styled-components';
 import { Field } from 'formik';
+import styled from 'styled-components';
+import { withAppTheme } from '../../styles';
 import { RANGE_FROM, RANGE_TO } from '../../constants/trainings';
-
-const Label = styled.label`
-  text-align: left;
-`;
-
-const SelectRow = styled.div`
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 0 16px;
-`;
-
-const SelectRange = styled.div`
-  width: 128px;
-  flex-grow: 1;
-`;
-
-const Separate = styled.span`
-  padding: 16px;
-`;
-
-const Error = styled.div`
-  font-size: 1.2rem;
-  color: #f00;
-  margin: 8px 16px;
-`;
 
 export interface SelectRangeFromToProps {
   readonly from: string;
@@ -37,6 +12,32 @@ export interface SelectRangeFromToProps {
   readonly error?: string;
   readonly handleChange: (e: React.SyntheticEvent<HTMLSelectElement>) => void;
 }
+
+const Label = styled.label`
+  text-align: left;
+`;
+
+const SelectRow = withAppTheme(styled.div)`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 ${({ theme }) => theme.spacing2x};
+`;
+
+const SelectRange = styled.div`
+  width: 128px;
+  flex-grow: 1;
+`;
+
+const Separate = withAppTheme(styled.span)`
+  padding: ${({ theme }) => theme.spacing2x};
+`;
+
+const Error = withAppTheme(styled.div)`
+  font-size: 1.2rem;
+  color: #f00;
+  margin: ${({ theme }) => `${theme.spacing1x} ${theme.spacing2x}`};
+`;
 
 const SelectRangeFromTo = ({
   from,

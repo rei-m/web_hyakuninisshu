@@ -1,8 +1,8 @@
 import * as React from 'react';
 import styled from 'styled-components';
-import { withTheme } from '../../styles';
+import { withAppTheme } from '../../styles';
 
-const Root = withTheme(styled.div)`
+const Root = withAppTheme(styled.div)`
   padding: ${({ theme }) => theme.spacing2x};
   box-sizing: border-box;
   max-width: 960px;
@@ -10,7 +10,7 @@ const Root = withTheme(styled.div)`
   text-align: left;
 `;
 
-const Section = withTheme(styled.section)`
+const Section = withAppTheme(styled.section)`
   margin: ${({ theme }) => theme.spacing4x} 0;
 `;
 
@@ -27,7 +27,7 @@ const SectionTitle = styled.h1`
   }
 `;
 
-const SectionText = withTheme(styled.div)`
+const SectionText = withAppTheme(styled.div)`
   padding: ${({ theme }) => theme.spacing1x};
   line-height: 2rem;
 `;

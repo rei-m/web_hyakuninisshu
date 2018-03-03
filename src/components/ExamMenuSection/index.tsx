@@ -1,21 +1,21 @@
 import * as React from 'react';
 import { withRouter, RouteComponentProps } from 'react-router-dom';
 import styled from 'styled-components';
-import { withTheme } from '../../styles';
+import { withAppTheme } from '../../styles';
 import PageTitle from '../PageTitle';
 
-const RootSection = withTheme(styled.section)`
+const RootSection = withAppTheme(styled.section)`
   max-width: 380px;
   margin: auto;
   box-sizing: border-box;
   padding: ${({ theme }) => theme.spacing2x};
 `;
 
-const Explain = withTheme(styled.div)`
+const Explain = withAppTheme(styled.div)`
   margin: ${({ theme }) => `${theme.spacing4x} ${theme.spacing2x}`};
 `;
 
-const StartButton = withTheme(styled.button)`
+const StartButton = withAppTheme(styled.button)`
   margin-top: ${({ theme }) => theme.spacing4x};
 `;
 

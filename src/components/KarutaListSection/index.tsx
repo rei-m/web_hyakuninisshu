@@ -1,17 +1,18 @@
 import * as React from 'react';
 import styled from 'styled-components';
+import { withAppTheme } from '../../styles';
 import PageTitle from '../PageTitle';
 import KarutaList from '../KarutaList';
 import { Karuta } from '../../types';
 
 export interface KarutaListSectionProps {
-  karutas: Karuta[];
-  onClickKarutaListRow: (karutaId: number) => void;
+  readonly karutas: Karuta[];
+  readonly onClickKarutaListRow: (karutaId: number) => void;
 }
 
-const RootSection = styled.section`
+const RootSection = withAppTheme(styled.section)`
   box-sizing: border-box;
-  padding: 16px;
+  padding: ${({ theme }) => theme.spacing2x};
 `;
 
 const KarutaListSection = ({

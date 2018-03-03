@@ -1,17 +1,23 @@
 import * as React from 'react';
 import styled from 'styled-components';
+import { withAppTheme } from '../../styles';
 import KarutaImage from '../KarutaImage';
 import { Karuta } from '../../types';
-import { convetKarutaId } from '../helper';
+import { toKarutaIdString } from '../helper';
 
-const Row = styled.div`
+export interface KarutaListRowProps {
+  readonly karuta: Karuta;
+  readonly onClickRow: (karutaId: number) => void;
+}
+
+const Row = withAppTheme(styled.div)`
   display: flex;
-  width: calc(100vw - 32px);
+  width: calc(100vw - ${({ theme }) => theme.spacing4x});
   max-width: 380px;
   height: 88px;
   align-items: center;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.26);
-  margin: 8px;
+  box-shadow: ${({ theme }) => theme.elevationShadow1x};
+  margin: ${({ theme }) => theme.spacing1x};
   background-color: #fff;
 `;
 
@@ -19,30 +25,25 @@ const ImageColumn = styled.div`
   width: 64px;
 `;
 
-const TextColumn = styled.div`
+const TextColumn = withAppTheme(styled.div)`
   flex-grow: 1;
-  padding-right: 16px;
+  padding-right: ${({ theme }) => theme.spacing2x};
   box-sizing: border-box;
 `;
 
-const KarutaId = styled.div`
+const KarutaId = withAppTheme(styled.div)`
   font-size: 1rem;
-  margin-bottom: 4px;
+  margin-bottom: ${({ theme }) => theme.spacing0_5x};
 `;
 
 const TextRow = styled.div`
   text-align: left;
 `;
 
-const CreatorRow = styled.div`
+const CreatorRow = withAppTheme(styled.div)`
   text-align: right;
-  margin-top: 8px;
+  margin-top: ${({ theme }) => theme.spacing1x};
 `;
-
-export interface KarutaListRowProps {
-  karuta: Karuta;
-  onClickRow: (karutaId: number) => void;
-}
 
 const KarutaListRow = ({ karuta, onClickRow }: KarutaListRowProps) => {
   const onClick = () => {
@@ -52,7 +53,7 @@ const KarutaListRow = ({ karuta, onClickRow }: KarutaListRowProps) => {
   return (
     <Row onClick={onClick}>
       <ImageColumn>
-        <KarutaId>{convetKarutaId(karuta.id)}</KarutaId>
+        <KarutaId>{toKarutaIdString(karuta.id)}</KarutaId>
         <KarutaImage
           karutaId={karuta.id}
           style={{

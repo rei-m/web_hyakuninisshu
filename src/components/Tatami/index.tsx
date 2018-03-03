@@ -1,8 +1,8 @@
 import styled from 'styled-components';
-import { withTheme } from '../../styles';
+import { withAppTheme } from '../../styles';
 import * as tatami from './tatami_part.png';
 
-const Tatami = withTheme(styled.div)`
+const Tatami = withAppTheme(styled.div)`
   background-image: url("${tatami}");
 `;
 

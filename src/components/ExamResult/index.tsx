@@ -2,7 +2,7 @@ import * as React from 'react';
 import { Link } from 'react-router-dom';
 import { withState } from 'recompose';
 import styled from 'styled-components';
-import { withTheme } from '../../styles';
+import { withAppTheme } from '../../styles';
 import { Dialog } from '@blueprintjs/core';
 import Tatami from '../Tatami';
 import QuestionResultsSummary from '../QuestionResultsSummary';
@@ -28,13 +28,13 @@ const RootSection = Tatami.extend`
   }
 `;
 
-const Inner = withTheme(styled.div)`
+const Inner = withAppTheme(styled.div)`
   max-width: 380px;
   padding: ${({ theme }) => theme.spacing2x};
   margin: auto;
 `;
 
-const Button = withTheme(styled.button)`
+const Button = withAppTheme(styled.button)`
   margin: ${({ theme }) => theme.spacing2x};
 `;
 

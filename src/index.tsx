@@ -9,12 +9,12 @@ import { BrowserRouter } from 'react-router-dom';
 import { ThemeProvider } from 'styled-components';
 import Application from './Application';
 import { getStore } from './store';
-import { theme } from './styles';
+import { appTheme } from './styles';
 
 ReactDOM.render(
   <Provider store={getStore()}>
     <BrowserRouter>
-      <ThemeProvider theme={theme}>
+      <ThemeProvider theme={appTheme}>
         <Application />
       </ThemeProvider>
     </BrowserRouter>

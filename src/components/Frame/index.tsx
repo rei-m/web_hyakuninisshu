@@ -1,17 +1,24 @@
 import * as React from 'react';
 import { Helmet } from 'react-helmet';
 import styled from 'styled-components';
-import { withTheme } from '../../styles';
+import { withAppTheme } from '../../styles';
 import Header from '../Header';
 import Navigation from '../Navigation';
 import { MenuType } from '../../enums';
 import { APP_NAME } from '../../constants';
 
-interface BodyProps {
-  isDisplayNav: boolean;
+export interface FrameProps {
+  readonly subTitle: string;
+  readonly canBack: boolean;
+  readonly currentMenuType?: MenuType;
+  readonly isDisplayNav: boolean;
+  readonly description: string;
+  readonly onClickBack: () => void;
 }
 
-export const Body = withTheme<BodyProps>(styled.div)`
+type BodyProps = Pick<FrameProps, 'isDisplayNav'>;
+
+export const Body = withAppTheme<BodyProps>(styled.div)`
   padding-top: ${({ theme }) => theme.headerHeight};
   padding-bottom: ${({ isDisplayNav, theme }) =>
     isDisplayNav ? theme.bottomNavHeight : '0'};
@@ -26,15 +33,6 @@ export const Body = withTheme<BodyProps>(styled.div)`
       isDisplayNav ? theme.bottomNavHeight : '0'};
   }
 `;
-
-export interface FrameProps {
-  readonly subTitle: string;
-  readonly canBack: boolean;
-  readonly currentMenuType?: MenuType;
-  readonly isDisplayNav: boolean;
-  readonly description: string;
-  readonly onClickBack: () => void;
-}
 
 const Frame: React.StatelessComponent<FrameProps> = ({
   canBack,

@@ -1,15 +1,15 @@
 import * as React from 'react';
 import styled from 'styled-components';
-import { withTheme } from '../../styles';
+import { withAppTheme } from '../../styles';
 import KarutaImage from '../KarutaImage';
 import { Karuta } from '../../types';
-import { convetKarutaId } from '../helper';
+import { toKarutaIdString } from '../helper';
 
 export interface KarutaCardProps {
-  karuta: Karuta;
+  readonly karuta: Karuta;
 }
 
-const Root = withTheme(styled.article)`
+const Root = withAppTheme(styled.article)`
   max-width: 380px;
   width: 80vw;
   box-shadow: ${({ theme }) => theme.elevationShadow1x};
@@ -20,12 +20,12 @@ const Root = withTheme(styled.article)`
   padding: ${({ theme }) => theme.spacing2x};
 `;
 
-const Title = withTheme(styled.h3)`
+const Title = withAppTheme(styled.h3)`
   font-size: 1.6rem;
   padding: ${({ theme }) => theme.spacing1x};
 `;
 
-const ItemBox = withTheme(styled.div)`
+const ItemBox = withAppTheme(styled.div)`
   padding-top: ${({ theme }) => theme.spacing1x};
   padding-bottom: ${({ theme }) => theme.spacing1x};
 `;
@@ -71,7 +71,7 @@ const KimarijiRow = ({
 const KarutaCard = ({ karuta }: KarutaCardProps) => (
   <Root>
     <Title>
-      {convetKarutaId(karuta.id)} / {karuta.creator}
+      {toKarutaIdString(karuta.id)} / {karuta.creator}
     </Title>
     <KarutaImage
       karutaId={karuta.id}

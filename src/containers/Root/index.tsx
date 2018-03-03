@@ -4,7 +4,7 @@ import { branch } from 'recompose';
 import { GlobalState } from '../../reducers/index';
 import Initializer from '../Initializer';
 import Frame, { FrameProps } from '../../components/Frame';
-import { convertNumber } from '../../components/helper';
+import { toKarutaIdString } from '../../components/helper';
 import { ROUTE_PATHS } from '../../constants';
 import { MenuType } from '../../enums';
 
@@ -52,7 +52,7 @@ const mapStateToProps = (
   } else if (pathname.indexOf(ROUTE_PATHS.KARUTAS) >= 0) {
     const match = pathname.match(/\/(100|\d{2}|[1-9])$/);
     canBack = true;
-    subTitle = match ? `${convertNumber(Number(match[1]))}番` : '資料';
+    subTitle = match ? toKarutaIdString(Number(match[1])) : '資料';
     description =
       '百人一首を手軽に暗記できるサイトです。札の画像や歌の意味を確認できます。';
     currentMenuType = MenuType.Material;

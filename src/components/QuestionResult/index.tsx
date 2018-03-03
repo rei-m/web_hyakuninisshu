@@ -5,8 +5,8 @@ import * as correctImage from './check_correct.png';
 import * as incorrectImage from './check_incorrect.png';
 
 export interface QuestionResultProps {
-  answer: Answer;
-  onClick: () => void;
+  readonly answer: Answer;
+  readonly onClick: () => void;
 }
 
 const Frame = styled.div`
@@ -26,19 +26,14 @@ const Image = styled.img`
   height: 300px;
 `;
 
-const QuestionResult = ({ answer, onClick }: QuestionResultProps) => {
-  const onClickFrame = (_: React.SyntheticEvent<HTMLDivElement>) => {
-    onClick();
-  };
-  return (
-    <Frame onClick={onClickFrame}>
-      {answer.correct ? (
-        <Image src={correctImage} />
-      ) : (
-        <Image src={incorrectImage} />
-      )}
-    </Frame>
-  );
-};
+const QuestionResult = ({ answer, onClick }: QuestionResultProps) => (
+  <Frame onClick={onClick}>
+    {answer.correct ? (
+      <Image src={correctImage} />
+    ) : (
+      <Image src={incorrectImage} />
+    )}
+  </Frame>
+);
 
 export default QuestionResult;

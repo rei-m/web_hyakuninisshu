@@ -1,6 +1,6 @@
 const NUMS = ['一', '二', '三', '四', '五', '六', '七', '八', '九'];
 
-export const convertNumber = (num: number) => {
+export const toChineseChar = (num: number) => {
   if (num === 100) {
     return '百';
   }
@@ -24,8 +24,8 @@ export const convertNumber = (num: number) => {
   return ret.join('');
 };
 
-export const convetKarutaId = (karutaId: number) =>
-  `${convertNumber(karutaId)}番`;
+export const toKarutaIdString = (karutaId: number) =>
+  `${toChineseChar(karutaId)}番`;
 
-export const convetKimariji = (kimariji: number) =>
-  `${convertNumber(kimariji)}字決まり`;
+export const toKimarijiString = (kimariji: number) =>
+  `${toChineseChar(kimariji)}字決まり`;

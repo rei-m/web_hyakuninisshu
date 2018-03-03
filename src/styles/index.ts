@@ -1,6 +1,6 @@
 import { ThemedStyledFunction } from 'styled-components';
 
-export const theme = {
+export const appTheme = {
   bottomNavHeight: '56px',
   bottomNavHeightWide: '64px',
   bottomNavWidthWide: '64px',
@@ -12,12 +12,14 @@ export const theme = {
   headerHeight: '56px',
   headerHeightWide: '64px',
   minWidthWide: '768px',
+  sideNavWidth: '64px',
+  spacing0_5x: '4px',
   spacing1x: '8px',
   spacing2x: '16px',
   spacing3x: '24px',
   spacing4x: '32px'
 };
 
-export type Theme = typeof theme;
+export type AppTheme = typeof appTheme;
 
-export const withTheme = <P>(f: ThemedStyledFunction<P, Theme>) => f;
+export const withAppTheme = <P>(f: ThemedStyledFunction<P, AppTheme>) => f;

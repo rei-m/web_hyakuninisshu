@@ -1,12 +1,16 @@
 import * as React from 'react';
 import styled from 'styled-components';
-import { withTheme } from '../../styles';
+import { withAppTheme } from '../../styles';
 
-interface RootProps {
+export interface HeaderProps {
+  readonly subTitle: string;
   readonly canBack: boolean;
+  readonly onClickBack: () => void;
 }
 
-const Root = withTheme<RootProps>(styled.header)`
+type RootProps = Pick<HeaderProps, 'canBack'>;
+
+const Root = withAppTheme<RootProps>(styled.header)`
   box-shadow: ${({ theme }) => theme.elevationShadow1x};
   left: 0;
   right: 0;
@@ -17,7 +21,7 @@ const Root = withTheme<RootProps>(styled.header)`
   display: flex;
 `;
 
-const Title = withTheme(styled.h1)`
+const Title = withAppTheme(styled.h1)`
   font-size: 1.8rem;
   color: #fff;
   line-height: ${({ theme }) => theme.headerHeight};
@@ -30,7 +34,7 @@ const Title = withTheme(styled.h1)`
   }
 `;
 
-const Icon = withTheme(styled.i)`
+const Icon = withAppTheme(styled.i)`
   line-height: ${({ theme }) => theme.headerHeight};
   width: ${({ theme }) => theme.headerHeight};
   color: #fff;
@@ -40,12 +44,6 @@ const Icon = withTheme(styled.i)`
     width: ${({ theme }) => theme.headerHeightWide};
   }
 `;
-
-export interface HeaderProps {
-  readonly subTitle: string;
-  readonly canBack: boolean;
-  readonly onClickBack: () => void;
-}
 
 const Header = ({ subTitle, canBack, onClickBack }: HeaderProps) => (
   <Root canBack={canBack}>

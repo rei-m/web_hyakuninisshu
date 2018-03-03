@@ -1,7 +1,7 @@
 import * as React from 'react';
-import styled, { ThemedStyledFunction } from 'styled-components';
+import styled from 'styled-components';
+import { withAppTheme } from '../../styles';
 import { ToriFuda } from '../../types';
-import { Theme } from '../../styles';
 
 export interface ToriFudaViewProps {
   readonly toriFuda: ToriFuda;
@@ -9,18 +9,15 @@ export interface ToriFudaViewProps {
   readonly onClick: (toriFuda: ToriFuda) => void;
 }
 
-const div: ThemedStyledFunction<React.HTMLProps<HTMLDivElement>, Theme> =
-  styled.div;
-
-const Frame = div`
+const Frame = withAppTheme(styled.div)`
   height: 220px;
-  padding: 0 8px;
+  padding: 0 ${({ theme }) => theme.spacing1x};
   border: 3px solid ${({ theme }) => theme.colorPrimaryDark};
   border-radius: 10px;
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: #fffff0;
+  background-color: ${({ theme }) => theme.colorThin};
   box-shadow: 0 -1px 5px rgba(0, 0, 0, 0.26);
   font-family: 'Sawarabi Mincho';
 `;
