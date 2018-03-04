@@ -8,15 +8,15 @@ import {
   START_EXAM_NAME,
   START_TRAINING_NAME
 } from '../actions/questions';
-import {
-  COLOR_LIST,
-  KIMARIJI_LIST,
-  RANGE_FROM,
-  RANGE_TO,
-  STYLE_LIST
-} from '../constants/trainings';
 import { Answer, Question } from '../types';
-import { QuestionState } from '../enums';
+import {
+  ColorCondition,
+  KarutaStyleCondition,
+  KimarijiCondition,
+  QuestionState,
+  RangeFromCondition,
+  RangeToCondition
+} from '../enums';
 
 export interface QuestionsState {
   readonly currentIndex: number;
@@ -24,12 +24,12 @@ export interface QuestionsState {
   readonly answers: Answer[];
   readonly lastStartedTime?: number;
   readonly trainingCondition: {
-    readonly rangeFrom: number;
-    readonly rangeTo: number;
-    readonly kimariji: number;
-    readonly color: string;
-    readonly kamiNoKuStyle: number;
-    readonly shimoNoKuStyle: number;
+    readonly rangeFrom: RangeFromCondition;
+    readonly rangeTo: RangeToCondition;
+    readonly kimariji: KimarijiCondition;
+    readonly color: ColorCondition;
+    readonly kamiNoKuStyle: KarutaStyleCondition;
+    readonly shimoNoKuStyle: KarutaStyleCondition;
   };
   readonly questionState?: QuestionState;
 }
@@ -39,12 +39,12 @@ const initialState: QuestionsState = {
   currentIndex: 0,
   questions: [],
   trainingCondition: {
-    color: COLOR_LIST[0].value,
-    kamiNoKuStyle: STYLE_LIST[0].value,
-    kimariji: KIMARIJI_LIST[0].value,
-    rangeFrom: RANGE_FROM[0].value,
-    rangeTo: RANGE_TO[9].value,
-    shimoNoKuStyle: STYLE_LIST[1].value
+    color: ColorCondition.None,
+    kamiNoKuStyle: KarutaStyleCondition.KanjiAndKana,
+    kimariji: KimarijiCondition.None,
+    rangeFrom: RangeFromCondition.One,
+    rangeTo: RangeToCondition.OneHundred,
+    shimoNoKuStyle: KarutaStyleCondition.KanaOnly
   }
 };
 

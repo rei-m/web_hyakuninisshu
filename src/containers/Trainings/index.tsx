@@ -4,6 +4,13 @@ import { GlobalState } from '../../reducers/index';
 import TrainingMenuSection, {
   TrainingMenuSectionProps
 } from '../../components/TrainingMenuSection';
+import {
+  ColorCondition,
+  KarutaStyleCondition,
+  KimarijiCondition,
+  RangeFromCondition,
+  RangeToCondition
+} from '../../enums';
 
 export type TrainingsConnectedProps = Omit<
   TrainingMenuSectionProps,
@@ -32,12 +39,12 @@ const mapDispatchToProps = (
 ): TrainingsDispatchProps => {
   return {
     onSubmit: (
-      rangeFrom: number,
-      rangeTo: number,
-      kimariji: number,
-      color: string,
-      kamiNoKuStyle: number,
-      shimoNoKuStyle: number,
+      rangeFrom: RangeFromCondition,
+      rangeTo: RangeToCondition,
+      kimariji: KimarijiCondition,
+      color: ColorCondition,
+      kamiNoKuStyle: KarutaStyleCondition,
+      shimoNoKuStyle: KarutaStyleCondition,
       submitTime: number
     ) => {
       history.push('/training/question', {

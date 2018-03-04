@@ -3,16 +3,33 @@ import styled from 'styled-components';
 import { withAppTheme } from '../../styles';
 import { Form, FormikHandlers, FormikState } from 'formik';
 import {
-  COLOR_LIST,
-  KIMARIJI_LIST,
-  STYLE_LIST
-} from '../../constants/trainings';
+  ColorConditions,
+  KarutaStyleConditions,
+  KimarijiConditions
+} from '../../enums';
 import SelectItem from './SelectItem';
 import SelectRangeFromTo from './SelectRangeFromTo';
+import {
+  toColorConditionString,
+  toKarutaStyleConditionString,
+  toKimarijiConditionString
+} from '../helper';
 
 const StartButton = withAppTheme(styled.button)`
   margin-top: ${({ theme }) => theme.spacing4x};
 `;
+
+const KimarijiConditionNameList = KimarijiConditions.values.map(v =>
+  toKimarijiConditionString(v)
+);
+
+const ColorConditionNameList = ColorConditions.values.map(v =>
+  toColorConditionString(v)
+);
+
+const KarutaStyleConditionNameList = KarutaStyleConditions.values.map(v =>
+  toKarutaStyleConditionString(v)
+);
 
 export interface TrainingMenuInnerFormValues {
   rangeFrom: string;
@@ -46,29 +63,33 @@ const TrainingMenuInnerForm = ({
     <SelectItem
       title="決まり字"
       name="kimariji"
-      list={KIMARIJI_LIST}
       value={values.kimariji}
+      valueList={KimarijiConditions.values}
+      nameList={KimarijiConditionNameList}
       handleChange={handleChange}
     />
     <SelectItem
       title="五色"
       name="color"
-      list={COLOR_LIST}
       value={values.color}
+      valueList={ColorConditions.values}
+      nameList={ColorConditionNameList}
       handleChange={handleChange}
     />
     <SelectItem
       title="上の句"
       name="kamiNoKuStyle"
-      list={STYLE_LIST}
       value={values.kamiNoKuStyle}
+      valueList={KarutaStyleConditions.values}
+      nameList={KarutaStyleConditionNameList}
       handleChange={handleChange}
     />
     <SelectItem
       title="下の句"
       name="shimoNoKuStyle"
-      list={STYLE_LIST}
       value={values.shimoNoKuStyle}
+      valueList={KarutaStyleConditions.values}
+      nameList={KarutaStyleConditionNameList}
       handleChange={handleChange}
     />
     <StartButton

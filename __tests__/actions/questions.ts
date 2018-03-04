@@ -5,6 +5,13 @@ import {
 } from '../../src/actions/questions';
 import { getStore } from '../../src/store';
 import { Karuta } from '../../src/types';
+import {
+  ColorCondition,
+  KarutaStyleCondition,
+  KimarijiCondition,
+  RangeFromCondition,
+  RangeToCondition
+} from '../../src/enums';
 
 describe('QuestionsActionCreator', () => {
   describe('startTraining', () => {
@@ -22,7 +29,14 @@ describe('QuestionsActionCreator', () => {
     });
 
     it('should create Action', () => {
-      const actual = startTraining(1, 100, 0, '', 0, 1);
+      const actual = startTraining(
+        RangeFromCondition.One,
+        RangeToCondition.OneHundred,
+        KimarijiCondition.None,
+        ColorCondition.None,
+        KarutaStyleCondition.KanjiAndKana,
+        KarutaStyleCondition.KanaOnly
+      );
       const { type, payload } = actual;
       const { questions, startedTime } = payload;
 
@@ -43,7 +57,14 @@ describe('QuestionsActionCreator', () => {
 
     describe('when filter by range', () => {
       it('should payload has filtered Karuta', () => {
-        const actual = startTraining(21, 40, 0, '', 0, 1);
+        const actual = startTraining(
+          RangeFromCondition.TwentyOne,
+          RangeToCondition.Forty,
+          KimarijiCondition.None,
+          ColorCondition.None,
+          KarutaStyleCondition.KanjiAndKana,
+          KarutaStyleCondition.KanaOnly
+        );
         const { questions, startedTime } = actual.payload;
         const karutaIds = questions.map(q => q.correctKaruta.id);
         expect(questions).toHaveLength(20);
@@ -55,7 +76,14 @@ describe('QuestionsActionCreator', () => {
 
     describe('when filter by kimariji', () => {
       it('should payload has filtered Karuta', () => {
-        const actual = startTraining(1, 100, 1, '', 0, 1);
+        const actual = startTraining(
+          RangeFromCondition.One,
+          RangeToCondition.OneHundred,
+          KimarijiCondition.One,
+          ColorCondition.None,
+          KarutaStyleCondition.KanjiAndKana,
+          KarutaStyleCondition.KanaOnly
+        );
         const { questions, startedTime } = actual.payload;
         expect(questions).toHaveLength(20);
         expect(
@@ -67,7 +95,14 @@ describe('QuestionsActionCreator', () => {
 
     describe('when filter by color', () => {
       it('should payload has filtered Karuta', () => {
-        const actual = startTraining(1, 100, 0, 'blue', 0, 1);
+        const actual = startTraining(
+          RangeFromCondition.One,
+          RangeToCondition.OneHundred,
+          KimarijiCondition.None,
+          ColorCondition.Blue,
+          KarutaStyleCondition.KanjiAndKana,
+          KarutaStyleCondition.KanaOnly
+        );
         const { questions, startedTime } = actual.payload;
         expect(questions).toHaveLength(20);
         expect(
@@ -79,7 +114,14 @@ describe('QuestionsActionCreator', () => {
 
     describe('when switch karuta style', () => {
       it('should yomiFuda style is kana and toriFuda style is kanji', () => {
-        const actual = startTraining(1, 100, 0, '', 1, 0);
+        const actual = startTraining(
+          RangeFromCondition.One,
+          RangeToCondition.OneHundred,
+          KimarijiCondition.None,
+          ColorCondition.None,
+          KarutaStyleCondition.KanaOnly,
+          KarutaStyleCondition.KanjiAndKana
+        );
         const { questions } = actual.payload;
         const { correctKaruta, yomiFuda, toriFudas } = questions[0];
         expect(yomiFuda.firstText).toEqual(correctKaruta.firstKana);

@@ -2,7 +2,8 @@ import * as React from 'react';
 import { Field } from 'formik';
 import styled from 'styled-components';
 import { withAppTheme } from '../../styles';
-import { RANGE_FROM, RANGE_TO } from '../../constants/trainings';
+import { RangeFromConditions, RangeToConditions } from '../../enums';
+import { toKarutaIdString } from '../helper';
 
 export interface SelectRangeFromToProps {
   readonly from: string;
@@ -57,9 +58,9 @@ const SelectRangeFromTo = ({
           value={from}
           onChange={handleChange}
         >
-          {RANGE_FROM.map((item, i) => (
-            <option value={item.value} key={`range_from_${i}`}>
-              {item.name}
+          {RangeFromConditions.values.map((value, i) => (
+            <option value={value} key={`range_from_${i}`}>
+              {toKarutaIdString(value)}
             </option>
           ))}
         </Field>
@@ -72,9 +73,9 @@ const SelectRangeFromTo = ({
           value={to}
           onChange={handleChange}
         >
-          {RANGE_TO.map((item, i) => (
-            <option value={item.value} key={`range_to_${i}`}>
-              {item.name}
+          {RangeToConditions.values.map((value, i) => (
+            <option value={value} key={`range_to_${i}`}>
+              {toKarutaIdString(value)}
             </option>
           ))}
         </Field>

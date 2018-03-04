@@ -2,13 +2,13 @@ import * as React from 'react';
 import { Field } from 'formik';
 import styled from 'styled-components';
 import { withAppTheme } from '../../styles';
-import { OptionItem } from '../../types';
 
 export interface SelectItemProps {
   readonly title: string;
   readonly name: string;
-  readonly value: string | number;
-  readonly list: Array<OptionItem<string | number>>;
+  readonly value: string;
+  readonly valueList: Array<string | number>;
+  readonly nameList: string[];
   readonly handleChange: (e: React.SyntheticEvent<HTMLSelectElement>) => void;
 }
 
@@ -38,9 +38,9 @@ const SelectItem = (props: SelectItemProps) => (
           value={props.value}
           onChange={props.handleChange}
         >
-          {props.list.map((item, i) => (
-            <option value={item.value} key={`select_item_${i}`}>
-              {item.name}
+          {props.valueList.map((value, i) => (
+            <option value={value} key={`select_item_${i}`}>
+              {props.nameList[i]}
             </option>
           ))}
         </Field>

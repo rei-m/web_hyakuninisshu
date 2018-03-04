@@ -2,21 +2,33 @@ import { withFormik } from 'formik';
 import TrainingMenuInnerForm, {
   TrainingMenuInnerFormValues
 } from '../../components/TrainingMenuInnerForm';
+import {
+  ColorCondition,
+  ColorConditions,
+  KarutaStyleCondition,
+  KarutaStyleConditions,
+  KimarijiCondition,
+  KimarijiConditions,
+  RangeFromCondition,
+  RangeFromConditions,
+  RangeToCondition,
+  RangeToConditions
+} from '../../enums';
 
 export interface TrainingMenuFormProps {
-  readonly initialRangeFrom: number;
-  readonly initialRangeTo: number;
-  readonly initialKimariji: number;
-  readonly initialColor: string;
-  readonly initialKamiNoKuStyle: number;
-  readonly initialShimoNoKuStyle: number;
+  readonly initialRangeFrom: RangeFromCondition;
+  readonly initialRangeTo: RangeToCondition;
+  readonly initialKimariji: KimarijiCondition;
+  readonly initialColor: ColorCondition;
+  readonly initialKamiNoKuStyle: KarutaStyleCondition;
+  readonly initialShimoNoKuStyle: KarutaStyleCondition;
   readonly handleSubmit: (
-    rangeFrom: number,
-    rangeTo: number,
-    kimariji: number,
-    color: string,
-    kamiNoKuStyle: number,
-    shimoNoKuStyle: number,
+    rangeFrom: RangeFromCondition,
+    rangeTo: RangeToCondition,
+    kimariji: KimarijiCondition,
+    color: ColorCondition,
+    kamiNoKuStyle: KarutaStyleCondition,
+    shimoNoKuStyle: KarutaStyleCondition,
     submitTime: number
   ) => void;
 }
@@ -24,12 +36,12 @@ export interface TrainingMenuFormProps {
 const TrainingMenuForm = withFormik({
   handleSubmit: (values, { props }) => {
     props.handleSubmit(
-      Number(values.rangeFrom),
-      Number(values.rangeTo),
-      Number(values.kimariji),
-      values.color,
-      Number(values.kamiNoKuStyle),
-      Number(values.shimoNoKuStyle),
+      RangeFromConditions.valueOf(Number(values.rangeFrom)),
+      RangeToConditions.valueOf(Number(values.rangeTo)),
+      KimarijiConditions.valueOf(Number(values.kimariji)),
+      ColorConditions.valueOf(values.color),
+      KarutaStyleConditions.valueOf(Number(values.kamiNoKuStyle)),
+      KarutaStyleConditions.valueOf(Number(values.shimoNoKuStyle)),
       new Date().getTime()
     );
   },
