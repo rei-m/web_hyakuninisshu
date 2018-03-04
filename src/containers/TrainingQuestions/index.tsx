@@ -23,33 +23,33 @@ import QuestionsResult, {
 import TrainingInitializer from '../TrainingInitializer';
 import { QuestionState } from '../../enums';
 
-export interface QuestionsOwnProps {
+export interface TrainingQuestionsOwnProps {
   readonly started: boolean;
   readonly questions: Question[];
   readonly answers: Answer[];
   readonly questionState?: QuestionState;
 }
 
-export type QuestionsConnectedProps = Omit<
+export type TrainingQuestionsConnectedProps = Omit<
   QuestionSectionProps,
   'onClickToriFuda' | 'onClickResult'
 >;
 
-export type QuestionsDispatchProps = Pick<
+export type TrainingQuestionsDispatchProps = Pick<
   QuestionCorrectProps,
   'onClickGoToNext' | 'onClickGoToResult'
 > &
   Pick<QuestionSectionProps, 'onClickToriFuda' | 'onClickResult'> &
   Pick<QuestionsResultProps, 'onClickRestart'>;
 
-export type QuestionsProps = QuestionsOwnProps &
-  QuestionSectionProps &
-  QuestionsDispatchProps;
+export type TrainingQuestionsProps = TrainingQuestionsOwnProps &
+  TrainingQuestionsConnectedProps &
+  TrainingQuestionsDispatchProps;
 
 const mapStateToProps = (
   { questionsState }: GlobalState,
   { location }: RouteComponentProps<{}>
-): QuestionsOwnProps & QuestionsConnectedProps => {
+): TrainingQuestionsOwnProps & TrainingQuestionsConnectedProps => {
   const { submitTime } = location.state;
   const {
     answers,
@@ -73,7 +73,7 @@ const mapStateToProps = (
 
 const mapDispatchToProps = (
   dispatch: Dispatch<GlobalState>
-): QuestionsDispatchProps => {
+): TrainingQuestionsDispatchProps => {
   return {
     onClickGoToNext: () => {
       dispatch(openNextQuestion());
@@ -93,26 +93,28 @@ const mapDispatchToProps = (
   };
 };
 
-const isStarted = ({ started }: QuestionsOwnProps) => started;
+const isStarted = ({ started }: TrainingQuestionsOwnProps) => started;
 
-const withStartedCheck = branch<QuestionsOwnProps>(
+const withStartedCheck = branch<TrainingQuestionsOwnProps>(
   isStarted,
   component => component,
   renderComponent(TrainingInitializer)
 );
 
-const hasQuestion = ({ questions }: QuestionsOwnProps) => questions.length > 0;
+const hasQuestion = ({ questions }: TrainingQuestionsOwnProps) =>
+  questions.length > 0;
 
 const EmptyMessage = () => <h3>指定した条件の歌はありませんでした</h3>;
 
-const withHasQuestionCheck = branch<QuestionsOwnProps>(
+const withHasQuestionCheck = branch<TrainingQuestionsOwnProps>(
   hasQuestion,
   component => component,
   renderComponent(EmptyMessage)
 );
 
-const isConfirmedQuestionResult = ({ questionState }: QuestionsOwnProps) =>
-  questionState === QuestionState.ConfirmCorrect;
+const isConfirmedQuestionResult = ({
+  questionState
+}: TrainingQuestionsOwnProps) => questionState === QuestionState.ConfirmCorrect;
 
 const renderQuestionCorrect = ({
   question,
@@ -120,7 +122,7 @@ const renderQuestionCorrect = ({
   answers,
   onClickGoToNext,
   onClickGoToResult
-}: QuestionsProps) => {
+}: TrainingQuestionsProps) => {
   const { correctKaruta } = question;
   return (
     <QuestionCorrect
@@ -132,20 +134,20 @@ const renderQuestionCorrect = ({
   );
 };
 
-const withConfirmedQuestionResultCheck = branch<QuestionsOwnProps>(
+const withConfirmedQuestionResultCheck = branch<TrainingQuestionsOwnProps>(
   isConfirmedQuestionResult,
   renderComponent(renderQuestionCorrect),
   component => component
 );
 
-const isFinished = ({ questionState }: QuestionsOwnProps) =>
+const isFinished = ({ questionState }: TrainingQuestionsOwnProps) =>
   questionState === QuestionState.Finished;
 
 const renderResult = ({
   answers,
   onClickRestart,
   totalCount
-}: QuestionsProps) => {
+}: TrainingQuestionsProps) => {
   const correctCount = answers.filter(a => a.correct).length;
   const averageAnswerSecond =
     answers.reduce((prev, current) => prev + current.time, 0) /
@@ -161,13 +163,13 @@ const renderResult = ({
   );
 };
 
-const withFinishedCheck = branch<QuestionsOwnProps>(
+const withFinishedCheck = branch<TrainingQuestionsOwnProps>(
   isFinished,
   renderComponent(renderResult),
   component => component
 );
 
-const QuestionsIndex = compose<QuestionsProps, QuestionsProps>(
+const QuestionsIndex = compose<TrainingQuestionsProps, TrainingQuestionsProps>(
   withStartedCheck,
   withHasQuestionCheck,
   withConfirmedQuestionResultCheck,

@@ -3,14 +3,21 @@ import styled from 'styled-components';
 import { withAppTheme } from '../../styles';
 import PageTitle from '../PageTitle';
 import TrainingMenuForm from '../../containers/TrainingMenuForm';
+import {
+  ColorCondition,
+  KarutaStyleCondition,
+  KimarijiCondition,
+  RangeFromCondition,
+  RangeToCondition
+} from '../../enums';
 
 export interface TrainingMenuSectionProps {
-  readonly initialRangeFrom: number;
-  readonly initialRangeTo: number;
-  readonly initialKimariji: number;
-  readonly initialColor: string;
-  readonly initialKamiNoKuStyle: number;
-  readonly initialShimoNoKuStyle: number;
+  readonly initialRangeFrom: RangeFromCondition;
+  readonly initialRangeTo: RangeToCondition;
+  readonly initialKimariji: KimarijiCondition;
+  readonly initialColor: ColorCondition;
+  readonly initialKamiNoKuStyle: KarutaStyleCondition;
+  readonly initialShimoNoKuStyle: KarutaStyleCondition;
   readonly onSubmit: (
     rangeFrom: number,
     rangeTo: number,

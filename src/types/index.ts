@@ -45,8 +45,3 @@ export interface Answer {
   readonly correct: boolean;
   readonly time: number;
 }
-
-export interface OptionItem<T> {
-  readonly name: string;
-  readonly value: T;
-}

@@ -1,8 +1,11 @@
 import * as React from 'react';
-import { withRouter, RouteComponentProps } from 'react-router-dom';
 import styled from 'styled-components';
 import { withAppTheme } from '../../styles';
 import PageTitle from '../PageTitle';
+
+export interface ExamMenuSectionProps {
+  readonly onSubmit: () => void;
+}
 
 const RootSection = withAppTheme(styled.section)`
   max-width: 380px;
@@ -19,15 +22,7 @@ const StartButton = withAppTheme(styled.button)`
   margin-top: ${({ theme }) => theme.spacing4x};
 `;
 
-const handleSubmit = ({ history }: RouteComponentProps<{}>) => {
-  return (_e: React.SyntheticEvent<HTMLButtonElement>) => {
-    history.push('/exam/question', {
-      submitTime: new Date().getTime()
-    });
-  };
-};
-
-const ExamMenuSection = (props: RouteComponentProps<{}>) => (
+const ExamMenuSection = ({ onSubmit }: ExamMenuSectionProps) => (
   <RootSection>
     <PageTitle title="腕試し" />
     <div>
@@ -37,7 +32,7 @@ const ExamMenuSection = (props: RouteComponentProps<{}>) => (
       <StartButton
         type="submit"
         className="pt-button pt-intent-primary pt-large pt-icon-edit"
-        onClick={handleSubmit(props)}
+        onClick={onSubmit}
       >
         腕試しをはじめる
       </StartButton>
@@ -45,4 +40,4 @@ const ExamMenuSection = (props: RouteComponentProps<{}>) => (
   </RootSection>
 );
 
-export default withRouter(ExamMenuSection);
+export default ExamMenuSection;

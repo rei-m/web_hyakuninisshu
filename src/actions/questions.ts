@@ -3,7 +3,14 @@ import { getStore } from '../store';
 import { Answer, Karuta, Question } from '../types';
 import { randomizeArray } from '../utils';
 import { fetchTorifudas, questionsFilter } from '../utils/questions';
-import { QuestionState } from '../enums';
+import {
+  ColorCondition,
+  KarutaStyleCondition,
+  KimarijiCondition,
+  QuestionState,
+  RangeFromCondition,
+  RangeToCondition
+} from '../enums';
 
 export const START_TRAINING_NAME = 'START_TRAINING_NAME';
 export type START_TRAINING_TYPE = typeof START_TRAINING_NAME;
@@ -34,12 +41,12 @@ export interface StartTrainingAction extends Action {
     readonly nextState: QuestionState;
   };
   readonly meta: {
-    readonly rangeFrom: number;
-    readonly rangeTo: number;
-    readonly kimariji: number;
-    readonly color: string;
-    readonly kamiNoKuStyle: number;
-    readonly shimoNoKuStyle: number;
+    readonly rangeFrom: RangeFromCondition;
+    readonly rangeTo: RangeToCondition;
+    readonly kimariji: KimarijiCondition;
+    readonly color: ColorCondition;
+    readonly kamiNoKuStyle: KarutaStyleCondition;
+    readonly shimoNoKuStyle: KarutaStyleCondition;
   };
 }
 
@@ -105,12 +112,12 @@ export type QuestionsActions =
  * action creators
  */
 export const startTraining = (
-  rangeFrom: number,
-  rangeTo: number,
-  kimariji: number,
-  color: string,
-  kamiNoKuStyle: number,
-  shimoNoKuStyle: number
+  rangeFrom: RangeFromCondition,
+  rangeTo: RangeToCondition,
+  kimariji: KimarijiCondition,
+  color: ColorCondition,
+  kamiNoKuStyle: KarutaStyleCondition,
+  shimoNoKuStyle: KarutaStyleCondition
 ): StartTrainingAction => {
   const { karutas } = getStore().getState().karutasState;
 
