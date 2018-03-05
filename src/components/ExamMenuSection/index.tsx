@@ -20,6 +20,13 @@ const Explain = withAppTheme(styled.div)`
 
 const StartButton = withAppTheme(styled.button)`
   margin-top: ${({ theme }) => theme.spacing4x};
+  background-color: ${({ theme }) => theme.colorAccent} !important;
+  &:active {
+    background-color: ${({ theme }) => theme.colorAccentActive} !important;
+  }
+  &:hover {
+    background-color: ${({ theme }) => theme.colorAccentHover} !important;
+  }
 `;
 
 const ExamMenuSection = ({ onSubmit }: ExamMenuSectionProps) => (
