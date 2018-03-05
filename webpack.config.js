@@ -39,11 +39,6 @@ module.exports = {
         include: [
           path.join(
             __dirname,
-            'css',
-            'style.css'
-          ),
-          path.join(
-            __dirname,
             'node_modules',
             'normalize.css',
             'normalize.css'
@@ -65,6 +60,11 @@ module.exports = {
             'lib',
             'css',
             'blueprint-icons.css'
+          ),
+          path.join(
+            __dirname,
+            'css',
+            'style.css'
           ),
         ],
         use: ExtractTextPlugin.extract({
@@ -106,7 +106,6 @@ module.exports = {
     compress: true,
     port: 3000,
     hot: true,
-    historyApiFallback: true,
-    open: true
+    historyApiFallback: true
   }
 };

@@ -1,8 +1,7 @@
 import * as React from 'react';
 import styled from 'styled-components';
-import { withAppTheme } from '../../styles';
-
-import * as dogeza from './dogeza_businessman.png';
+import { appTheme, withAppTheme } from '../../styles';
+import Dogeza from '../Dogeza';
 
 const Root = withAppTheme(styled.div)`
   display: flex;
@@ -22,17 +21,17 @@ const Message = styled.div`
   font-size: 1.8rem;
 `;
 
-const DogezaImg = styled.img`
-  margin-top: 32px;
-  width: 200px;
-`;
-
 const NotFound = () => (
   <Root>
     <Message>
       ページが見つかりませんでした。<br />トップページにお戻りください。
     </Message>
-    <DogezaImg src={dogeza} alt="ページが見つかりませでした" />
+    <Dogeza
+      alt="ページが見つかりませでした"
+      style={{
+        marginTop: appTheme.spacing4x
+      }}
+    />
   </Root>
 );
 

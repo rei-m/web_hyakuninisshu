@@ -22,6 +22,10 @@ const mapStateToProps = (
   { karutasState }: GlobalState,
   { location }: RouteComponentProps<{}>
 ): RootConnectedProps & RootOwnProps => {
+  if (karutasState.error) {
+    throw karutasState.error;
+  }
+
   let canBack = false;
   let isDisplayNav = true;
   let subTitle = '簡単に暗記';
