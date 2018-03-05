@@ -23,13 +23,13 @@ export interface FetchKarutasAction extends Action {
   error: false;
 }
 
-export interface RaizeKarutasErrorAction extends Action {
+export interface RaiseKarutasErrorAction extends Action {
   type: RAISE_KARUTAS_ERROR_TYPE;
   payload: AppError;
   error: true;
 }
 
-export type KarutaActions = FetchKarutasAction | RaizeKarutasErrorAction;
+export type KarutaActions = FetchKarutasAction | RaiseKarutasErrorAction;
 
 /*
  * action creators
