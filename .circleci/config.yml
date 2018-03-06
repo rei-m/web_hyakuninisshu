@@ -7,7 +7,7 @@ jobs:
   build:
     docker:
       # specify the version you desire here
-      - image: circleci/node:7.10
+      - image: circleci/node:8.9.4
       
       # Specify service dependencies here if necessary
       # CircleCI maintains a library of pre-built images
@@ -16,13 +16,17 @@ jobs:
 
     working_directory: ~/repo
 
+    environment:
+      TZ: /usr/share/zoneinfo/Asia/Tokyo
+      NODE_ENV: test
+
     steps:
       - checkout
 
       # Download and cache dependencies
       - restore_cache:
           keys:
-          - v1-dependencies-{{ checksum "package.json" }}
+          - v1-dependencies-{{ checksum "yarn.lock" }}
           # fallback to using the latest cache if no exact match is found
           - v1-dependencies-
 
@@ -31,7 +35,7 @@ jobs:
       - save_cache:
           paths:
             - node_modules
-          key: v1-dependencies-{{ checksum "package.json" }}
+          key: v1-dependencies-{{ checksum "yarn.lock" }}
         
       # run tests!
       - run: yarn test
