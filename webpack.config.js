@@ -5,6 +5,9 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
   entry: './src/index.tsx',
+
+  mode: 'development',
+
   output: {
     filename: 'bundle.js',
     path: path.resolve(__dirname, 'dist'),
@@ -36,11 +39,6 @@ module.exports = {
         include: [
           path.join(
             __dirname,
-            'css',
-            'style.css'
-          ),
-          path.join(
-            __dirname,
             'node_modules',
             'normalize.css',
             'normalize.css'
@@ -62,6 +60,11 @@ module.exports = {
             'lib',
             'css',
             'blueprint-icons.css'
+          ),
+          path.join(
+            __dirname,
+            'css',
+            'style.css'
           ),
         ],
         use: ExtractTextPlugin.extract({

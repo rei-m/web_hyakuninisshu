@@ -5,6 +5,8 @@ export const appTheme = {
   bottomNavHeightWide: '64px',
   bottomNavWidthWide: '64px',
   colorAccent: '#ff9100',
+  colorAccentActive: '#8b550f',
+  colorAccentHover: '#b16400',
   colorPrimary: '#8bc34a',
   colorPrimaryDark: '#689F38',
   colorThin: '#fffff0',
