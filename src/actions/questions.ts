@@ -264,7 +264,7 @@ export const finishQuestions = (): FinishQuestionsAction => {
   };
 };
 
-export class QuestionsFactory {
+class QuestionsFactory {
   private karutas: Karuta[];
   private rangeFrom: number;
   private rangeTo: number;
