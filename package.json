@@ -11,6 +11,10 @@
     "lint-fix": "tslint --fix -c tslint.json '{src,__tests__}/**/*.{ts,tsx}'",
     "tslint-check": "tslint-config-prettier-check ./tslint.json"
   },
+  "repository" : {
+    "type" : "git",
+    "url" : "https://github.com/rei-m/web_hyakuninisshu.git"
+  },
   "author": "rei-m",
   "license": "MIT",
   "jest": {
