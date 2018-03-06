@@ -34,7 +34,7 @@ export interface QuestionsState {
   readonly questionState?: QuestionState;
 }
 
-const initialState: QuestionsState = {
+export const initialState: QuestionsState = {
   answers: [],
   currentIndex: 0,
   questions: [],
