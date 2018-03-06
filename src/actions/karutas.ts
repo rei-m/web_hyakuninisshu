@@ -1,5 +1,6 @@
 import * as fetch from 'isomorphic-fetch';
 import { Action, Dispatch } from 'redux';
+import { GlobalState } from '../reducers';
 import { Karuta } from '../types';
 import { AppError, AppErrorType } from '../errors';
 import { convertCamelKey } from '../utils';
@@ -35,7 +36,7 @@ export type KarutaActions = FetchKarutasAction | RaiseKarutasErrorAction;
  * action creators
  */
 export const fetchKarutas = () => {
-  return async (dispatch: Dispatch<FetchKarutasAction>) => {
+  return async (dispatch: Dispatch<GlobalState>) => {
     const response = await fetch(MY_GITHUB_ROOT + KARUTA_JSON_URL);
     if (response.status === 200) {
       const json = await response.json();
