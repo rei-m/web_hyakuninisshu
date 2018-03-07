@@ -11,9 +11,9 @@
     "lint-fix": "tslint --fix -c tslint.json '{src,__tests__}/**/*.{ts,tsx}'",
     "tslint-check": "tslint-config-prettier-check ./tslint.json"
   },
-  "repository" : {
-    "type" : "git",
-    "url" : "https://github.com/rei-m/web_hyakuninisshu.git"
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/rei-m/web_hyakuninisshu.git"
   },
   "author": "rei-m",
   "license": "MIT",
@@ -36,7 +36,7 @@
       "/__tests__/helpers/"
     ],
     "setupFiles": [
-      "./jest.setup.js"
+      "./jest.setup.ts"
     ],
     "collectCoverage": false,
     "collectCoverageFrom": [
@@ -53,6 +53,7 @@
   },
   "devDependencies": {
     "@types/enzyme": "^3.1.9",
+    "@types/enzyme-adapter-react-16": "^1.0.2",
     "@types/isomorphic-fetch": "^0.0.34",
     "@types/jest": "^22.1.4",
     "@types/nock": "^9.1.2",
@@ -67,6 +68,7 @@
     "awesome-typescript-loader": "^3.5.0",
     "css-loader": "^0.28.10",
     "enzyme": "^3.3.0",
+    "enzyme-adapter-react-16": "^1.1.1",
     "es6-promise": "^4.2.4",
     "extract-text-webpack-plugin": "^4.0.0-beta.0",
     "file-loader": "^1.1.11",
