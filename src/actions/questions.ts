@@ -1,5 +1,5 @@
-import { Action } from 'redux';
-import { getStore } from '../store';
+import { Action, Dispatch } from 'redux';
+import { GlobalState } from '../reducers';
 import { Answer, Karuta, Question } from '../types';
 import { randomizeArray } from '../utils';
 import { fetchTorifudas, questionsFilter } from '../utils/questions';
@@ -118,8 +118,8 @@ export const startTraining = (
   color: ColorCondition,
   kamiNoKuStyle: KarutaStyleCondition,
   shimoNoKuStyle: KarutaStyleCondition
-): StartTrainingAction => {
-  const { karutas } = getStore().getState().karutasState;
+) => (dispatch: Dispatch<GlobalState>, getState: () => GlobalState) => {
+  const { karutas } = getState().karutasState;
 
   const questions = new QuestionsFactory(karutas)
     .setRange(rangeFrom, rangeTo)
@@ -129,7 +129,7 @@ export const startTraining = (
     .setShimoNoKuStyle(shimoNoKuStyle)
     .create();
 
-  return {
+  const action = {
     meta: {
       color,
       kamiNoKuStyle,
@@ -145,10 +145,15 @@ export const startTraining = (
     },
     type: START_TRAINING_NAME
   };
+
+  dispatch(action);
 };
 
-export const startExam = (): StartExamAction => {
-  const { karutas } = getStore().getState().karutasState;
+export const startExam = () => (
+  dispatch: Dispatch<GlobalState>,
+  getState: () => GlobalState
+) => {
+  const { karutas } = getState().karutasState;
   const questions = new QuestionsFactory(karutas)
     .setRange(1, 100)
     .setKimariji(0)
@@ -157,7 +162,7 @@ export const startExam = (): StartExamAction => {
     .setShimoNoKuStyle(1)
     .create();
 
-  return {
+  const action = {
     payload: {
       nextState: QuestionState.InAnswer,
       questions: randomizeArray(questions),
@@ -165,10 +170,15 @@ export const startExam = (): StartExamAction => {
     },
     type: START_EXAM_NAME
   };
+
+  dispatch(action);
 };
 
-export const restartQuestions = (): RestartQuestionsAction => {
-  const { questions, answers } = getStore().getState().questionsState;
+export const restartQuestions = () => (
+  dispatch: Dispatch<GlobalState>,
+  getState: () => GlobalState
+) => {
+  const { questions, answers } = getState().questionsState;
   // TODO: 全て回答済みでなかったらエラー
   const finder: { [questionId: number]: Question } = questions.reduce(
     (previous, current) => {
@@ -181,7 +191,7 @@ export const restartQuestions = (): RestartQuestionsAction => {
     .map(a => finder[a.questionId])
     .map(q => ({ ...q, toriFudas: randomizeArray(q.toriFudas) }));
 
-  return {
+  const action = {
     payload: {
       nextState: QuestionState.InAnswer,
       questions: randomizeArray(targets),
@@ -189,13 +199,15 @@ export const restartQuestions = (): RestartQuestionsAction => {
     },
     type: RESTART_QUESTIONS_NAME
   };
+
+  dispatch(action);
 };
 
-export const answerQuestion = (
-  questionId: number,
-  karutaId: number
-): AnswerQuestionAction => {
-  const { questions, lastStartedTime } = getStore().getState().questionsState;
+export const answerQuestion = (questionId: number, karutaId: number) => (
+  dispatch: Dispatch<GlobalState>,
+  getState: () => GlobalState
+) => {
+  const { questions, lastStartedTime } = getState().questionsState;
   const question = questions.find(q => q.id === questionId)!;
   // TODO: QuestionとlastStartedTimeがundefinedの場合
   const correct = question.correctKaruta.id === karutaId;
@@ -206,13 +218,15 @@ export const answerQuestion = (
     questionId,
     time
   };
-  return {
+  const action = {
     payload: {
       answer,
       nextState: QuestionState.Answered
     },
     type: ANSWER_QUESTION_NAME
   };
+
+  dispatch(action);
 };
 
 export const confirmCorrect = (): ConfirmCorrectAction => {
@@ -224,10 +238,13 @@ export const confirmCorrect = (): ConfirmCorrectAction => {
   };
 };
 
-export const openNextQuestion = (): OpenNextQuestionAction => {
-  const { currentIndex } = getStore().getState().questionsState;
+export const openNextQuestion = () => (
+  dispatch: Dispatch<GlobalState>,
+  getState: () => GlobalState
+) => {
+  const { currentIndex } = getState().questionsState;
   const nextIndex = currentIndex + 1;
-  return {
+  const action = {
     payload: {
       nextIndex,
       nextState: QuestionState.InAnswer,
@@ -235,6 +252,7 @@ export const openNextQuestion = (): OpenNextQuestionAction => {
     },
     type: OPEN_NEXT_QUESTION_NAME
   };
+  dispatch(action);
 };
 
 export const finishQuestions = (): FinishQuestionsAction => {
@@ -246,7 +264,7 @@ export const finishQuestions = (): FinishQuestionsAction => {
   };
 };
 
-export class QuestionsFactory {
+class QuestionsFactory {
   private karutas: Karuta[];
   private rangeFrom: number;
   private rangeTo: number;
