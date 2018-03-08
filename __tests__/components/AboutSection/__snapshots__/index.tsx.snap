@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`should render AboutSection component 1`] = `
+exports[`<AboutSection /> should render component 1`] = `
 <div
   className="sc-bdVaJa jTrwTk"
 >
