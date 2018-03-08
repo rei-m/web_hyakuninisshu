@@ -48,7 +48,7 @@ const Icon = withAppTheme(styled.i)`
 const Header = ({ subTitle, canBack, onClickBack }: HeaderProps) => (
   <Root canBack={canBack}>
     {canBack && (
-      <Icon className="material-icons" onClick={onClickBack}>
+      <Icon className="material-icons" onClick={onClickBack} data-test="back">
         arrow_back
       </Icon>
     )}

@@ -1,0 +1,286 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<ExamResult /> should render component when correct all 1`] = `
+<div
+  className="sc-jTzLTM dfLKYC"
+>
+  <div
+    className="sc-fjdhpX gcrVJE"
+  >
+    <div
+      className="sc-bwzfXH lOjaS"
+      style={
+        Object {
+          "marginBottom": 16,
+        }
+      }
+    >
+      <div
+        className="sc-htpNat fCqHKh"
+      >
+        正解数
+      </div>
+      <div
+        className="sc-bxivhb dTntfs"
+      >
+        3 / 3
+      </div>
+    </div>
+    <div
+      className="sc-bwzfXH lOjaS"
+      style={
+        Object {
+          "marginBottom": 16,
+        }
+      }
+    >
+      <div
+        className="sc-htpNat fCqHKh"
+      >
+        平均回答時間
+      </div>
+      <div
+        className="sc-bxivhb dTntfs"
+      >
+        3.5秒
+      </div>
+    </div>
+    <div
+      className="sc-ifAKCX jmhkWb"
+      style={
+        Object {
+          "marginBottom": 16,
+        }
+      }
+    >
+      <div
+        className="sc-EHOje eapnbc"
+        onClick={[Function]}
+      >
+        <span
+          className="sc-bZQynM eIYJdI"
+        >
+          一番
+        </span>
+        <span
+          className="sc-gzVnrw MJqTB"
+        >
+          <img
+            src="check_correct.png"
+            style={
+              Object {
+                "width": "80%",
+              }
+            }
+          />
+        </span>
+      </div>
+      <div
+        className="sc-EHOje eapnbc"
+        onClick={[Function]}
+      >
+        <span
+          className="sc-bZQynM eIYJdI"
+        >
+          一番
+        </span>
+        <span
+          className="sc-gzVnrw MJqTB"
+        >
+          <img
+            src="check_correct.png"
+            style={
+              Object {
+                "width": "80%",
+              }
+            }
+          />
+        </span>
+      </div>
+      <div
+        className="sc-EHOje eapnbc"
+        onClick={[Function]}
+      >
+        <span
+          className="sc-bZQynM eIYJdI"
+        >
+          一番
+        </span>
+        <span
+          className="sc-gzVnrw MJqTB"
+        >
+          <img
+            src="check_correct.png"
+            style={
+              Object {
+                "width": "80%",
+              }
+            }
+          />
+        </span>
+      </div>
+    </div>
+    <a
+      href="/exam"
+      onClick={[Function]}
+    >
+      <button
+        className="pt-button pt-large pt-icon-undo sc-jzJRlG hkqcLA"
+        style={
+          Object {
+            "marginTop": 0,
+          }
+        }
+      >
+        メニューに戻る
+      </button>
+    </a>
+  </div>
+</div>
+`;
+
+exports[`<ExamResult /> should render component when wrong 1`] = `
+<div
+  className="sc-jTzLTM dfLKYC"
+>
+  <div
+    className="sc-fjdhpX gcrVJE"
+  >
+    <div
+      className="sc-bwzfXH lOjaS"
+      style={
+        Object {
+          "marginBottom": 16,
+        }
+      }
+    >
+      <div
+        className="sc-htpNat fCqHKh"
+      >
+        正解数
+      </div>
+      <div
+        className="sc-bxivhb dTntfs"
+      >
+        2 / 3
+      </div>
+    </div>
+    <div
+      className="sc-bwzfXH lOjaS"
+      style={
+        Object {
+          "marginBottom": 16,
+        }
+      }
+    >
+      <div
+        className="sc-htpNat fCqHKh"
+      >
+        平均回答時間
+      </div>
+      <div
+        className="sc-bxivhb dTntfs"
+      >
+        3.5秒
+      </div>
+    </div>
+    <div
+      className="sc-ifAKCX jmhkWb"
+      style={
+        Object {
+          "marginBottom": 16,
+        }
+      }
+    >
+      <div
+        className="sc-EHOje eapnbc"
+        onClick={[Function]}
+      >
+        <span
+          className="sc-bZQynM eIYJdI"
+        >
+          一番
+        </span>
+        <span
+          className="sc-gzVnrw MJqTB"
+        >
+          <img
+            src="check_correct.png"
+            style={
+              Object {
+                "width": "80%",
+              }
+            }
+          />
+        </span>
+      </div>
+      <div
+        className="sc-EHOje eapnbc"
+        onClick={[Function]}
+      >
+        <span
+          className="sc-bZQynM eIYJdI"
+        >
+          一番
+        </span>
+        <span
+          className="sc-gzVnrw MJqTB"
+        >
+          <img
+            src="check_correct.png"
+            style={
+              Object {
+                "width": "80%",
+              }
+            }
+          />
+        </span>
+      </div>
+      <div
+        className="sc-EHOje eapnbc"
+        onClick={[Function]}
+      >
+        <span
+          className="sc-bZQynM eIYJdI"
+        >
+          一番
+        </span>
+        <span
+          className="sc-gzVnrw MJqTB"
+        >
+          <img
+            src="check_correct.png"
+            style={
+              Object {
+                "width": "80%",
+              }
+            }
+          />
+        </span>
+      </div>
+    </div>
+    <button
+      className="pt-button pt-large pt-icon-repeat sc-jzJRlG hkqcLA"
+      data-test="restart-training"
+      onClick={[MockFunction]}
+    >
+      間違えた歌の練習をする
+    </button>
+    <a
+      href="/exam"
+      onClick={[Function]}
+    >
+      <button
+        className="pt-button pt-large pt-icon-undo sc-jzJRlG hkqcLA"
+        style={
+          Object {
+            "marginTop": 0,
+          }
+        }
+      >
+        メニューに戻る
+      </button>
+    </a>
+  </div>
+</div>
+`;

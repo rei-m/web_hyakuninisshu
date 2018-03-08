@@ -45,12 +45,12 @@
       "src/**/*.ts?(x)"
     ],
     "unmockedModulePathPatterns": [
-      "node_modules/react",
-      "node_modules/react-dom",
-      "node_modules/react-redux",
-      "node_modules/enzyme",
-      "node_modules/jest-enzyme",
-      "node_modules/fbjs"
+      "react",
+      "react-dom",
+      "react-redux",
+      "enzyme",
+      "jest-enzyme",
+      "fbjs"
     ]
   },
   "devDependencies": {
