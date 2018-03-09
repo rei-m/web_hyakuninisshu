@@ -1,0 +1,119 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Frame /> should render component when exist navigation 1`] = `
+<div>
+  <header
+    className="sc-bdVaJa hmkbhs"
+  >
+    <h1
+      className="sc-bwzfXH hyWXLo"
+    >
+      百人一首 - 
+      This is subtitle
+       -
+    </h1>
+  </header>
+  <div
+    className="sc-bZQynM iQyLJC"
+  />
+  <nav
+    className="sc-ifAKCX kFmFfK"
+  >
+    <span
+      className="sc-EHOje edQCDP"
+    >
+      <a
+        href="/training"
+        onClick={[Function]}
+        style={
+          Object {
+            "width": "100%",
+          }
+        }
+      >
+        <i
+          className="material-icons sc-bxivhb dCgFMJ"
+        >
+          create
+        </i>
+      </a>
+    </span>
+    <span
+      className="sc-EHOje edQCDP"
+    >
+      <a
+        href="/exam"
+        onClick={[Function]}
+        style={
+          Object {
+            "width": "100%",
+          }
+        }
+      >
+        <i
+          className="material-icons sc-bxivhb kQzEDT"
+        >
+          note
+        </i>
+      </a>
+    </span>
+    <a
+      href="/karutas"
+      onClick={[Function]}
+      style={
+        Object {
+          "width": "100%",
+        }
+      }
+    >
+      <span
+        className="sc-EHOje edQCDP"
+      >
+        <i
+          className="material-icons sc-bxivhb irqXgV"
+        >
+          library_books
+        </i>
+      </span>
+    </a>
+    <a
+      href="/about"
+      onClick={[Function]}
+      style={
+        Object {
+          "width": "100%",
+        }
+      }
+    >
+      <span
+        className="sc-EHOje edQCDP"
+      >
+        <i
+          className="material-icons sc-bxivhb fcdbmN"
+        >
+          settings
+        </i>
+      </span>
+    </a>
+  </nav>
+</div>
+`;
+
+exports[`<Frame /> should render component when not exist navigation 1`] = `
+<div>
+  <header
+    className="sc-bdVaJa hmkbhs"
+  >
+    <h1
+      className="sc-bwzfXH hyWXLo"
+    >
+      百人一首 - 
+      This is subtitle
+       -
+    </h1>
+  </header>
+  <div
+    className="sc-bZQynM dJUZJL"
+  />
+</div>
+`;

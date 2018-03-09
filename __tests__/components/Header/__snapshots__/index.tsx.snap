@@ -1,0 +1,36 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Header /> should render component when can back 1`] = `
+<header
+  className="sc-bdVaJa cLVnQc"
+>
+  <i
+    className="material-icons sc-htpNat fKqohg"
+    data-test="back"
+    onClick={[MockFunction]}
+  >
+    arrow_back
+  </i>
+  <h1
+    className="sc-bwzfXH hyWXLo"
+  >
+    百人一首 - 
+    This is subtitle
+     -
+  </h1>
+</header>
+`;
+
+exports[`<Header /> should render component when can not back 1`] = `
+<header
+  className="sc-bdVaJa hmkbhs"
+>
+  <h1
+    className="sc-bwzfXH hyWXLo"
+  >
+    百人一首 - 
+    This is subtitle
+     -
+  </h1>
+</header>
+`;

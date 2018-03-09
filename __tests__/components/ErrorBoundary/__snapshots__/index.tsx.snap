@@ -1,0 +1,25 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<ErrorBoundary /> should render children 1`] = `"test"`;
+
+exports[`<ErrorBoundary /> should render error 1`] = `
+<div
+  className="sc-bwzfXH bTlVnA"
+>
+  <div
+    className="sc-htpNat fSNmNw"
+  >
+    予期せぬエラーが発生しました。時間をおいて再度お試しください。
+  </div>
+  <img
+    alt="エラーが起きました"
+    className="sc-bdVaJa dxKQNh"
+    src="dogeza_businessman.png"
+    style={
+      Object {
+        "marginTop": "32px",
+      }
+    }
+  />
+</div>
+`;

@@ -1,0 +1,30 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<ExamMenuSection /> should render component 1`] = `
+<section
+  className="sc-bwzfXH gRkoHi"
+>
+  <h1
+    className="sc-bdVaJa fXsTJn"
+  >
+    腕試し
+  </h1>
+  <div>
+    <div
+      className="sc-htpNat kJuGSE"
+    >
+      全百首からランダムに出題されます。
+      <br />
+      練習の成果を確認しましょう。
+    </div>
+    <button
+      className="pt-button pt-intent-primary pt-large pt-icon-edit sc-bxivhb cJoDeg"
+      data-test="start-exam-button"
+      onClick={[MockFunction]}
+      type="submit"
+    >
+      腕試しをはじめる
+    </button>
+  </div>
+</section>
+`;

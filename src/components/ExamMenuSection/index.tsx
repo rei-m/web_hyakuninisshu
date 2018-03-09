@@ -40,6 +40,7 @@ const ExamMenuSection = ({ onSubmit }: ExamMenuSectionProps) => (
         type="submit"
         className="pt-button pt-intent-primary pt-large pt-icon-edit"
         onClick={onSubmit}
+        data-test="start-exam-button"
       >
         腕試しをはじめる
       </StartButton>

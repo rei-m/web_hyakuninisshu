@@ -2,10 +2,6 @@ import * as React from 'react';
 import styled from 'styled-components';
 import * as dogeza from './dogeza_businessman.png';
 
-export interface DogezaProps {
-  alt: string;
-}
-
 const DogezaImg = styled.img`
   width: 200px;
 `;
