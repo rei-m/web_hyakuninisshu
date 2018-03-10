@@ -1,0 +1,416 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Navigation /> should render component 1`] = `
+<nav
+  className="sc-bwzfXH kjLfnV"
+>
+  <span
+    className="sc-htpNat gfkJZX"
+  >
+    <a
+      href="/training"
+      onClick={[Function]}
+      style={
+        Object {
+          "width": "100%",
+        }
+      }
+    >
+      <i
+        className="material-icons sc-bdVaJa hBfgJv"
+      >
+        create
+      </i>
+    </a>
+  </span>
+  <span
+    className="sc-htpNat gfkJZX"
+  >
+    <a
+      href="/exam"
+      onClick={[Function]}
+      style={
+        Object {
+          "width": "100%",
+        }
+      }
+    >
+      <i
+        className="material-icons sc-bdVaJa hUDbCC"
+      >
+        note
+      </i>
+    </a>
+  </span>
+  <a
+    href="/karutas"
+    onClick={[Function]}
+    style={
+      Object {
+        "width": "100%",
+      }
+    }
+  >
+    <span
+      className="sc-htpNat gfkJZX"
+    >
+      <i
+        className="material-icons sc-bdVaJa kwyxYz"
+      >
+        library_books
+      </i>
+    </span>
+  </a>
+  <a
+    href="/about"
+    onClick={[Function]}
+    style={
+      Object {
+        "width": "100%",
+      }
+    }
+  >
+    <span
+      className="sc-htpNat gfkJZX"
+    >
+      <i
+        className="material-icons sc-bdVaJa fmFEyH"
+      >
+        settings
+      </i>
+    </span>
+  </a>
+</nav>
+`;
+
+exports[`<Navigation /> should render component when current is exam 1`] = `
+<nav
+  className="sc-bwzfXH kjLfnV"
+>
+  <span
+    className="sc-htpNat gfkJZX"
+  >
+    <a
+      href="/training"
+      onClick={[Function]}
+      style={
+        Object {
+          "width": "100%",
+        }
+      }
+    >
+      <i
+        className="material-icons sc-bdVaJa hBfgJv"
+      >
+        create
+      </i>
+    </a>
+  </span>
+  <span
+    className="sc-htpNat gfkJZX"
+  >
+    <a
+      href="/exam"
+      onClick={[Function]}
+      style={
+        Object {
+          "width": "100%",
+        }
+      }
+    >
+      <i
+        className="material-icons sc-bdVaJa cNnMzU"
+      >
+        note
+      </i>
+    </a>
+  </span>
+  <a
+    href="/karutas"
+    onClick={[Function]}
+    style={
+      Object {
+        "width": "100%",
+      }
+    }
+  >
+    <span
+      className="sc-htpNat gfkJZX"
+    >
+      <i
+        className="material-icons sc-bdVaJa kwyxYz"
+      >
+        library_books
+      </i>
+    </span>
+  </a>
+  <a
+    href="/about"
+    onClick={[Function]}
+    style={
+      Object {
+        "width": "100%",
+      }
+    }
+  >
+    <span
+      className="sc-htpNat gfkJZX"
+    >
+      <i
+        className="material-icons sc-bdVaJa fmFEyH"
+      >
+        settings
+      </i>
+    </span>
+  </a>
+</nav>
+`;
+
+exports[`<Navigation /> should render component when current is material 1`] = `
+<nav
+  className="sc-bwzfXH kjLfnV"
+>
+  <span
+    className="sc-htpNat gfkJZX"
+  >
+    <a
+      href="/training"
+      onClick={[Function]}
+      style={
+        Object {
+          "width": "100%",
+        }
+      }
+    >
+      <i
+        className="material-icons sc-bdVaJa hBfgJv"
+      >
+        create
+      </i>
+    </a>
+  </span>
+  <span
+    className="sc-htpNat gfkJZX"
+  >
+    <a
+      href="/exam"
+      onClick={[Function]}
+      style={
+        Object {
+          "width": "100%",
+        }
+      }
+    >
+      <i
+        className="material-icons sc-bdVaJa hUDbCC"
+      >
+        note
+      </i>
+    </a>
+  </span>
+  <a
+    href="/karutas"
+    onClick={[Function]}
+    style={
+      Object {
+        "width": "100%",
+      }
+    }
+  >
+    <span
+      className="sc-htpNat gfkJZX"
+    >
+      <i
+        className="material-icons sc-bdVaJa dxCDSs"
+      >
+        library_books
+      </i>
+    </span>
+  </a>
+  <a
+    href="/about"
+    onClick={[Function]}
+    style={
+      Object {
+        "width": "100%",
+      }
+    }
+  >
+    <span
+      className="sc-htpNat gfkJZX"
+    >
+      <i
+        className="material-icons sc-bdVaJa fmFEyH"
+      >
+        settings
+      </i>
+    </span>
+  </a>
+</nav>
+`;
+
+exports[`<Navigation /> should render component when current is other 1`] = `
+<nav
+  className="sc-bwzfXH kjLfnV"
+>
+  <span
+    className="sc-htpNat gfkJZX"
+  >
+    <a
+      href="/training"
+      onClick={[Function]}
+      style={
+        Object {
+          "width": "100%",
+        }
+      }
+    >
+      <i
+        className="material-icons sc-bdVaJa hBfgJv"
+      >
+        create
+      </i>
+    </a>
+  </span>
+  <span
+    className="sc-htpNat gfkJZX"
+  >
+    <a
+      href="/exam"
+      onClick={[Function]}
+      style={
+        Object {
+          "width": "100%",
+        }
+      }
+    >
+      <i
+        className="material-icons sc-bdVaJa hUDbCC"
+      >
+        note
+      </i>
+    </a>
+  </span>
+  <a
+    href="/karutas"
+    onClick={[Function]}
+    style={
+      Object {
+        "width": "100%",
+      }
+    }
+  >
+    <span
+      className="sc-htpNat gfkJZX"
+    >
+      <i
+        className="material-icons sc-bdVaJa kwyxYz"
+      >
+        library_books
+      </i>
+    </span>
+  </a>
+  <a
+    href="/about"
+    onClick={[Function]}
+    style={
+      Object {
+        "width": "100%",
+      }
+    }
+  >
+    <span
+      className="sc-htpNat gfkJZX"
+    >
+      <i
+        className="material-icons sc-bdVaJa forfEu"
+      >
+        settings
+      </i>
+    </span>
+  </a>
+</nav>
+`;
+
+exports[`<Navigation /> should render component when current is training 1`] = `
+<nav
+  className="sc-bwzfXH kjLfnV"
+>
+  <span
+    className="sc-htpNat gfkJZX"
+  >
+    <a
+      href="/training"
+      onClick={[Function]}
+      style={
+        Object {
+          "width": "100%",
+        }
+      }
+    >
+      <i
+        className="material-icons sc-bdVaJa eZMEOL"
+      >
+        create
+      </i>
+    </a>
+  </span>
+  <span
+    className="sc-htpNat gfkJZX"
+  >
+    <a
+      href="/exam"
+      onClick={[Function]}
+      style={
+        Object {
+          "width": "100%",
+        }
+      }
+    >
+      <i
+        className="material-icons sc-bdVaJa hUDbCC"
+      >
+        note
+      </i>
+    </a>
+  </span>
+  <a
+    href="/karutas"
+    onClick={[Function]}
+    style={
+      Object {
+        "width": "100%",
+      }
+    }
+  >
+    <span
+      className="sc-htpNat gfkJZX"
+    >
+      <i
+        className="material-icons sc-bdVaJa kwyxYz"
+      >
+        library_books
+      </i>
+    </span>
+  </a>
+  <a
+    href="/about"
+    onClick={[Function]}
+    style={
+      Object {
+        "width": "100%",
+      }
+    }
+  >
+    <span
+      className="sc-htpNat gfkJZX"
+    >
+      <i
+        className="material-icons sc-bdVaJa fmFEyH"
+      >
+        settings
+      </i>
+    </span>
+  </a>
+</nav>
+`;

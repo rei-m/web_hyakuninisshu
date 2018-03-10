@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<MenuIcon /> should render component 1`] = `
+<i
+  className="material-icons sc-bdVaJa eFJSjz"
+>
+  note
+</i>
+`;

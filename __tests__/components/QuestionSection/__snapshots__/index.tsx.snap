@@ -1,0 +1,302 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<QuestionSection /> should render component when answered 1`] = `
+<div
+  className="sc-gqjmRU hOnilo"
+>
+  <div
+    className="sc-VigVT cqVUej"
+  >
+    <div
+      className="sc-fjdhpX kbvaSH"
+    >
+      1
+       / 
+      10
+    </div>
+    <div
+      className="sc-bwzfXH bvmjNt"
+      style={
+        Object {
+          "margin": "auto",
+        }
+      }
+    >
+      <div
+        className="sc-htpNat eaelvy"
+      >
+        <div
+          className="sc-bxivhb cIIvqJ"
+        >
+          初句
+        </div>
+        <div
+          className="sc-ifAKCX ejiZuo"
+        >
+          二句
+        </div>
+        <div
+          className="sc-EHOje fUTEIU"
+        >
+          三句
+        </div>
+      </div>
+    </div>
+  </div>
+  <div
+    className="sc-jTzLTM hujYWL"
+  >
+    <div
+      className="sc-bZQynM cRUfAD"
+      onClick={[Function]}
+      style={
+        Object {
+          "margin": "8px",
+        }
+      }
+    >
+      <div
+        className="sc-gzVnrw dQuPak"
+      >
+        <div
+          className="sc-htoDjs iCdNOm"
+        >
+          よんく
+        </div>
+        <div
+          className="sc-dnqmqq fFBAQp"
+        >
+          ごく
+        </div>
+      </div>
+    </div>
+    <div
+      className="sc-bZQynM cRUfAD"
+      onClick={[Function]}
+      style={
+        Object {
+          "margin": "8px",
+        }
+      }
+    >
+      <div
+        className="sc-gzVnrw dQuPak"
+      >
+        <div
+          className="sc-htoDjs iCdNOm"
+        >
+          よんく
+        </div>
+        <div
+          className="sc-dnqmqq fFBAQp"
+        >
+          ごく
+        </div>
+      </div>
+    </div>
+    <div
+      className="sc-bZQynM cRUfAD"
+      onClick={[Function]}
+      style={
+        Object {
+          "margin": "8px",
+        }
+      }
+    >
+      <div
+        className="sc-gzVnrw dQuPak"
+      >
+        <div
+          className="sc-htoDjs iCdNOm"
+        >
+          よんく
+        </div>
+        <div
+          className="sc-dnqmqq fFBAQp"
+        >
+          ごく
+        </div>
+      </div>
+    </div>
+    <div
+      className="sc-bZQynM cRUfAD"
+      onClick={[Function]}
+      style={
+        Object {
+          "margin": "8px",
+        }
+      }
+    >
+      <div
+        className="sc-gzVnrw dQuPak"
+      >
+        <div
+          className="sc-htoDjs iCdNOm"
+        >
+          よんく
+        </div>
+        <div
+          className="sc-dnqmqq fFBAQp"
+        >
+          ごく
+        </div>
+      </div>
+    </div>
+  </div>
+  <div
+    className="sc-iwsKbI edubxM"
+    onClick={[MockFunction]}
+  >
+    <img
+      className="sc-gZMcBi fkLmkp"
+      src="check_correct.png"
+    />
+  </div>
+</div>
+`;
+
+exports[`<QuestionSection /> should render component when not answered 1`] = `
+<div
+  className="sc-gqjmRU hOnilo"
+>
+  <div
+    className="sc-VigVT cqVUej"
+  >
+    <div
+      className="sc-fjdhpX kbvaSH"
+    >
+      1
+       / 
+      10
+    </div>
+    <div
+      className="sc-bwzfXH bvmjNt"
+      style={
+        Object {
+          "margin": "auto",
+        }
+      }
+    >
+      <div
+        className="sc-htpNat eaelvy"
+      >
+        <div
+          className="sc-bxivhb cIIvqJ"
+        >
+          初句
+        </div>
+        <div
+          className="sc-ifAKCX ejiZuo"
+        >
+          二句
+        </div>
+        <div
+          className="sc-EHOje fUTEIU"
+        >
+          三句
+        </div>
+      </div>
+    </div>
+  </div>
+  <div
+    className="sc-jTzLTM hujYWL"
+  >
+    <div
+      className="sc-bZQynM cRUfAD"
+      onClick={[Function]}
+      style={
+        Object {
+          "margin": "8px",
+        }
+      }
+    >
+      <div
+        className="sc-gzVnrw dQuPak"
+      >
+        <div
+          className="sc-htoDjs iCdNOm"
+        >
+          よんく
+        </div>
+        <div
+          className="sc-dnqmqq fFBAQp"
+        >
+          ごく
+        </div>
+      </div>
+    </div>
+    <div
+      className="sc-bZQynM cRUfAD"
+      onClick={[Function]}
+      style={
+        Object {
+          "margin": "8px",
+        }
+      }
+    >
+      <div
+        className="sc-gzVnrw dQuPak"
+      >
+        <div
+          className="sc-htoDjs iCdNOm"
+        >
+          よんく
+        </div>
+        <div
+          className="sc-dnqmqq fFBAQp"
+        >
+          ごく
+        </div>
+      </div>
+    </div>
+    <div
+      className="sc-bZQynM cRUfAD"
+      onClick={[Function]}
+      style={
+        Object {
+          "margin": "8px",
+        }
+      }
+    >
+      <div
+        className="sc-gzVnrw dQuPak"
+      >
+        <div
+          className="sc-htoDjs iCdNOm"
+        >
+          よんく
+        </div>
+        <div
+          className="sc-dnqmqq fFBAQp"
+        >
+          ごく
+        </div>
+      </div>
+    </div>
+    <div
+      className="sc-bZQynM cRUfAD"
+      onClick={[Function]}
+      style={
+        Object {
+          "margin": "8px",
+        }
+      }
+    >
+      <div
+        className="sc-gzVnrw dQuPak"
+      >
+        <div
+          className="sc-htoDjs iCdNOm"
+        >
+          よんく
+        </div>
+        <div
+          className="sc-dnqmqq fFBAQp"
+        >
+          ごく
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;

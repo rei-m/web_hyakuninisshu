@@ -55,6 +55,7 @@ exports[`<ExamResult /> should render component when correct all 1`] = `
     >
       <div
         className="sc-EHOje eapnbc"
+        data-test="question-1"
         onClick={[Function]}
       >
         <span
@@ -77,6 +78,7 @@ exports[`<ExamResult /> should render component when correct all 1`] = `
       </div>
       <div
         className="sc-EHOje eapnbc"
+        data-test="question-2"
         onClick={[Function]}
       >
         <span
@@ -99,6 +101,7 @@ exports[`<ExamResult /> should render component when correct all 1`] = `
       </div>
       <div
         className="sc-EHOje eapnbc"
+        data-test="question-3"
         onClick={[Function]}
       >
         <span
@@ -194,6 +197,7 @@ exports[`<ExamResult /> should render component when wrong 1`] = `
     >
       <div
         className="sc-EHOje eapnbc"
+        data-test="question-1"
         onClick={[Function]}
       >
         <span
@@ -216,6 +220,7 @@ exports[`<ExamResult /> should render component when wrong 1`] = `
       </div>
       <div
         className="sc-EHOje eapnbc"
+        data-test="question-2"
         onClick={[Function]}
       >
         <span
@@ -238,6 +243,7 @@ exports[`<ExamResult /> should render component when wrong 1`] = `
       </div>
       <div
         className="sc-EHOje eapnbc"
+        data-test="question-3"
         onClick={[Function]}
       >
         <span

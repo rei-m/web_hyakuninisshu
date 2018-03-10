@@ -13,12 +13,6 @@ export interface QuestionResultsMapProps {
   readonly onClickResult: (karuta: Karuta) => void;
 }
 
-export interface QuestionResultsCellProps {
-  readonly question: Question;
-  readonly answer: Answer;
-  readonly onClickResult: (karuta: Karuta) => void;
-}
-
 const Root = withAppTheme(styled.div)`
   display: flex;
   flex-wrap: wrap;
@@ -52,27 +46,6 @@ const CorrentImageBox = styled.span`
   height: 100%;
 `;
 
-export const QuestionResultsCell = ({
-  question,
-  answer,
-  onClickResult
-}: QuestionResultsCellProps) => {
-  const onClickCell = () => {
-    onClickResult(question.correctKaruta);
-  };
-  return (
-    <Cell onClick={onClickCell}>
-      <KarutaNo>{toKarutaIdString(question.correctKaruta.id)}</KarutaNo>
-      <CorrentImageBox>
-        <img
-          src={answer.correct ? correctImage : incorrectImage}
-          style={{ width: '80%' }}
-        />
-      </CorrentImageBox>
-    </Cell>
-  );
-};
-
 const QuestionResultsMap = ({
   questions,
   answers,
@@ -80,14 +53,20 @@ const QuestionResultsMap = ({
   onClickResult
 }: QuestionResultsMapProps) => (
   <Root style={style}>
-    {questions.map((q, i) => (
-      <QuestionResultsCell
-        question={q}
-        answer={answers[i]}
-        onClickResult={onClickResult}
-        key={i}
-      />
-    ))}
+    {questions.map((q, i) => {
+      const onClickCell = () => onClickResult(q.correctKaruta);
+      return (
+        <Cell onClick={onClickCell} key={i} data-test={`question-${q.id}`}>
+          <KarutaNo>{toKarutaIdString(q.correctKaruta.id)}</KarutaNo>
+          <CorrentImageBox>
+            <img
+              src={answers[i].correct ? correctImage : incorrectImage}
+              style={{ width: '80%' }}
+            />
+          </CorrentImageBox>
+        </Cell>
+      );
+    })}
   </Root>
 );
 

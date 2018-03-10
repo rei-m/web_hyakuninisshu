@@ -1,0 +1,141 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<QuestionCorrect /> should render component when finished 1`] = `
+<div
+  className="sc-gzVnrw hwtXpF"
+>
+  <div
+    className="sc-htoDjs lepjQV"
+  >
+    <div
+      className="sc-dnqmqq jpBwGm"
+    >
+      一番
+       / 
+      一字決まり
+    </div>
+    <button
+      className="pt-button sc-iwsKbI fSyGkH"
+      data-test="open-detail"
+      onClick={[Function]}
+    >
+      詳
+    </button>
+  </div>
+  <div
+    className="sc-gZMcBi hGOwDf"
+  >
+    <div
+      className="sc-gqjmRU jKiVnA"
+    >
+      <div
+        className="sc-VigVT dNBSaP"
+      >
+        初句
+      </div>
+      <div
+        className="sc-jTzLTM jDOuIs"
+      >
+        二句
+      </div>
+      <div
+        className="sc-fjdhpX fwTIxm"
+      >
+        三句
+      </div>
+      <div
+        className="sc-jzJRlG YovCa"
+      >
+        四句
+      </div>
+      <div
+        className="sc-cSHVUG iYZJMh"
+      >
+        五句
+      </div>
+      <div
+        className="sc-kAzzGY ewOkip"
+      >
+        詠み手
+      </div>
+    </div>
+  </div>
+  <button
+    className="pt-button pt-large pt-icon-double-chevron-right sc-chPdSV hiOXiY"
+    data-test="go-to-result"
+    onClick={[MockFunction]}
+  >
+    結果を見る
+  </button>
+</div>
+`;
+
+exports[`<QuestionCorrect /> should render component when not finished 1`] = `
+<div
+  className="sc-gzVnrw hwtXpF"
+>
+  <div
+    className="sc-htoDjs lepjQV"
+  >
+    <div
+      className="sc-dnqmqq jpBwGm"
+    >
+      一番
+       / 
+      一字決まり
+    </div>
+    <button
+      className="pt-button sc-iwsKbI fSyGkH"
+      data-test="open-detail"
+      onClick={[Function]}
+    >
+      詳
+    </button>
+  </div>
+  <div
+    className="sc-gZMcBi hGOwDf"
+  >
+    <div
+      className="sc-gqjmRU jKiVnA"
+    >
+      <div
+        className="sc-VigVT dNBSaP"
+      >
+        初句
+      </div>
+      <div
+        className="sc-jTzLTM jDOuIs"
+      >
+        二句
+      </div>
+      <div
+        className="sc-fjdhpX fwTIxm"
+      >
+        三句
+      </div>
+      <div
+        className="sc-jzJRlG YovCa"
+      >
+        四句
+      </div>
+      <div
+        className="sc-cSHVUG iYZJMh"
+      >
+        五句
+      </div>
+      <div
+        className="sc-kAzzGY ewOkip"
+      >
+        詠み手
+      </div>
+    </div>
+  </div>
+  <button
+    className="pt-button pt-large pt-icon-double-chevron-right sc-chPdSV hiOXiY"
+    data-test="go-to-next"
+    onClick={[MockFunction]}
+  >
+    次へ進む
+  </button>
+</div>
+`;
