@@ -71,10 +71,17 @@ const QuestionSection = ({
             style={{ margin: '8px' }}
             key={i}
             onClick={onClickToriFuda}
+            data-test={`torifuda-${i}`}
           />
         ))}
       </ToriFudaBox>
-      {answer && <QuestionResult answer={answer} onClick={onClickResult} />}
+      {answer && (
+        <QuestionResult
+          answer={answer}
+          onClick={onClickResult}
+          data-test="result"
+        />
+      )}
     </Frame>
   );
 };

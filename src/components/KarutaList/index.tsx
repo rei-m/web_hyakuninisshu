@@ -24,7 +24,12 @@ const Root = withAppTheme(styled.div)`
 const KarutaList = ({ karutas, onClickRow }: KarutaListProps) => (
   <Root>
     {karutas.map((k, i) => (
-      <KarutaListRow karuta={k} key={i} onClickRow={onClickRow} />
+      <KarutaListRow
+        karuta={k}
+        key={i}
+        onClickRow={onClickRow}
+        data-test={`row-${k.id}`}
+      />
     ))}
   </Root>
 );

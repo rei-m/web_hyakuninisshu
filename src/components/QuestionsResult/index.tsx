@@ -53,6 +53,7 @@ const QuestionsResult = ({
         <Button
           onClick={onClickRestart}
           className="pt-button pt-large pt-icon-repeat"
+          data-test="restart"
         >
           間違えた歌の練習をする
         </Button>

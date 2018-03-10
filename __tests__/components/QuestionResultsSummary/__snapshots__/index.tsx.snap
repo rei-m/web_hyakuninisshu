@@ -1,0 +1,19 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<QuestionResultsSummary /> should render component 1`] = `
+<div
+  className="sc-bdVaJa jXieMO"
+  style={undefined}
+>
+  <div
+    className="sc-bwzfXH ijMQBI"
+  >
+    平均解答時間
+  </div>
+  <div
+    className="sc-htpNat hHyKqi"
+  >
+    5秒
+  </div>
+</div>
+`;

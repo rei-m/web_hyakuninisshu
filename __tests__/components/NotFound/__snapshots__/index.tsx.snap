@@ -1,0 +1,25 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<NotFound /> should render component 1`] = `
+<div
+  className="sc-bwzfXH eCHUJQ"
+>
+  <div
+    className="sc-htpNat fSNmNw"
+  >
+    ページが見つかりませんでした。
+    <br />
+    トップページにお戻りください。
+  </div>
+  <img
+    alt="ページが見つかりませでした"
+    className="sc-bdVaJa dxKQNh"
+    src="dogeza_businessman.png"
+    style={
+      Object {
+        "marginTop": "32px",
+      }
+    }
+  />
+</div>
+`;

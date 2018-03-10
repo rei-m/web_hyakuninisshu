@@ -7,7 +7,7 @@
     "build": "webpack --progress --colors",
     "start": "webpack-dev-server --progress --colors",
     "test": "jest",
-    "update-snapshot": "jest --updateSnapshot",
+    "test-update": "jest --updateSnapshot",
     "lint": "tslint -c tslint.json '{src,__tests__}/**/*.{ts,tsx}'",
     "lint-fix": "tslint --fix -c tslint.json '{src,__tests__}/**/*.{ts,tsx}'",
     "tslint-check": "tslint-config-prettier-check ./tslint.json"

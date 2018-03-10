@@ -40,9 +40,7 @@ const FifthPhrase = Phrase.extend`
 `;
 
 const ToriFudaView = ({ toriFuda, style, onClick }: ToriFudaViewProps) => {
-  const onClickFrame = (_: React.SyntheticEvent<HTMLDivElement>) => {
-    onClick(toriFuda);
-  };
+  const onClickFrame = () => onClick(toriFuda);
   return (
     <Frame style={style} onClick={onClickFrame}>
       <Inner>
