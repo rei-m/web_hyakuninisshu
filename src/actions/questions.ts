@@ -155,11 +155,11 @@ export const startExam = () => (
 ) => {
   const { karutas } = getState().karutasState;
   const questions = new QuestionsFactory(karutas)
-    .setRange(1, 100)
-    .setKimariji(0)
-    .setColor('')
-    .setKamiNoKuStyle(0)
-    .setShimoNoKuStyle(1)
+    .setRange(RangeFromCondition.One, RangeToCondition.OneHundred)
+    .setKimariji(KimarijiCondition.None)
+    .setColor(ColorCondition.None)
+    .setKamiNoKuStyle(KarutaStyleCondition.KanjiAndKana)
+    .setShimoNoKuStyle(KarutaStyleCondition.KanaOnly)
     .create();
 
   const action = {
@@ -275,10 +275,10 @@ class QuestionsFactory {
 
   constructor(karutas: Karuta[]) {
     this.karutas = karutas;
-    this.rangeFrom = 1;
-    this.rangeTo = 100;
-    this.kimariji = 0;
-    this.color = '';
+    this.rangeFrom = RangeFromCondition.One;
+    this.rangeTo = RangeToCondition.OneHundred;
+    this.kimariji = KimarijiCondition.None;
+    this.color = ColorCondition.None;
   }
 
   public setRange(rangeFrom: number, rangeTo: number) {

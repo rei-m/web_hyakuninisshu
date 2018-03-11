@@ -1,0 +1,24 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<ToriFudaView /> should render component 1`] = `
+<div
+  className="sc-bdVaJa fQZZpC"
+  onClick={[Function]}
+  style={undefined}
+>
+  <div
+    className="sc-bwzfXH eJMUYF"
+  >
+    <div
+      className="sc-htpNat jNWKMW"
+    >
+      よんく
+    </div>
+    <div
+      className="sc-bxivhb heslaB"
+    >
+      ごく
+    </div>
+  </div>
+</div>
+`;
