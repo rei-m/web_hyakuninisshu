@@ -18,7 +18,7 @@ const Icon = styled.i`
   text-align: center;
 `;
 
-const MenuIcon = ({ iconType }: MenuIconProps) => (
+const MenuIcon: React.SFC<MenuIconProps> = ({ iconType }) => (
   <Icon className="material-icons">{menuTypeToIcon(iconType)}</Icon>
 );
 

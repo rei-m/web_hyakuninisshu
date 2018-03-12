@@ -6,7 +6,7 @@ import NavIcon from '../NavIcon';
 import { MenuType } from '../../enums';
 import { ROUTE_PATHS } from '../../constants';
 
-export interface NavigationProps extends React.ClassAttributes<HTMLElement> {
+export interface NavigationProps {
   readonly currentMenuType?: MenuType;
 }
 
@@ -37,9 +37,7 @@ const IconBox = styled.span`
   }
 `;
 
-const Navigation: React.StatelessComponent<NavigationProps> = ({
-  currentMenuType
-}) => (
+const Navigation: React.SFC<NavigationProps> = ({ currentMenuType }) => (
   <Root>
     <IconBox>
       <Link to={ROUTE_PATHS.TRAINING} style={{ width: '100%' }}>

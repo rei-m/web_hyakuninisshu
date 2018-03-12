@@ -48,7 +48,7 @@ export const initialState: QuestionsState = {
   }
 };
 
-const trainingsReducer = (
+export const questionsReducer = (
   state = initialState,
   action: QuestionsActions
 ): QuestionsState => {
@@ -109,5 +109,3 @@ const trainingsReducer = (
       return state;
   }
 };
-
-export default trainingsReducer;

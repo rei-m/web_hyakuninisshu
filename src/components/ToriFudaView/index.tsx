@@ -39,7 +39,11 @@ const FifthPhrase = Phrase.extend`
   margin-right: 8px;
 `;
 
-const ToriFudaView = ({ toriFuda, style, onClick }: ToriFudaViewProps) => {
+const ToriFudaView: React.SFC<ToriFudaViewProps> = ({
+  toriFuda,
+  style,
+  onClick
+}) => {
   const onClickFrame = () => onClick(toriFuda);
   return (
     <Frame style={style} onClick={onClickFrame}>

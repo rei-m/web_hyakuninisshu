@@ -23,7 +23,7 @@ const Message = styled.div`
   font-size: 2rem;
 `;
 
-const Progress = (_props: ProgressProps) => (
+const Progress: React.SFC<ProgressProps> = _props => (
   <Root>
     <Spinner className={Classes.LARGE} />
     <Message>　　　百人一首 準備中。。。</Message>

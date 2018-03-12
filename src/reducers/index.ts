@@ -1,15 +1,13 @@
 import { combineReducers, Reducer } from 'redux';
-import karutas, { KarutasState } from './karutas';
-import questions, { QuestionsState } from './questions';
+import { karutasReducer, KarutasState } from './karutas';
+import { questionsReducer, QuestionsState } from './questions';
 
 export interface GlobalState {
   karutasState: KarutasState;
   questionsState: QuestionsState;
 }
 
-const rootReducer: Reducer<GlobalState> = combineReducers<GlobalState>({
-  karutasState: karutas,
-  questionsState: questions
+export const rootReducer: Reducer<GlobalState> = combineReducers<GlobalState>({
+  karutasState: karutasReducer,
+  questionsState: questionsReducer
 });
-
-export default rootReducer;

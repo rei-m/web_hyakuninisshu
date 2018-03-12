@@ -44,12 +44,12 @@ const Kimariji = styled.span`
   color: #ff0000;
 `;
 
-const KimarijiRow = ({
+const KimarijiRow: React.SFC<Karuta> = ({
   kimariji,
   firstKana,
   secondKana,
   thirdKana
-}: Karuta) => {
+}) => {
   const modKimariji = firstKana.length - kimariji;
   return modKimariji >= 0 ? (
     <ItemValue>
@@ -68,7 +68,7 @@ const KimarijiRow = ({
   );
 };
 
-const KarutaCard = ({ karuta }: KarutaCardProps) => (
+const KarutaCard: React.SFC<KarutaCardProps> = ({ karuta }) => (
   <Root>
     <Title>
       {toKarutaIdString(karuta.id)} / {karuta.creator}

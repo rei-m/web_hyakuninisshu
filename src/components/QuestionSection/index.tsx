@@ -48,14 +48,14 @@ const Position = styled.div`
   border-bottom: 1px dotted #fff;
 `;
 
-const QuestionSection = ({
+const QuestionSection: React.SFC<QuestionSectionProps> = ({
   answer,
   currentPosition,
   question,
   totalCount,
   onClickToriFuda,
   onClickResult
-}: QuestionSectionProps) => {
+}) => {
   return (
     <Frame>
       <YomiFudaBox>

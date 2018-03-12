@@ -36,7 +36,7 @@ const RootSection = withAppTheme(styled.section)`
   box-sizing: border-box;
 `;
 
-const TrainingMenuSection = ({
+const TrainingMenuSection: React.SFC<TrainingMenuSectionProps> = ({
   initialRangeFrom,
   initialRangeTo,
   initialKimariji,
@@ -44,7 +44,7 @@ const TrainingMenuSection = ({
   initialKamiNoKuStyle,
   initialShimoNoKuStyle,
   onSubmit
-}: TrainingMenuSectionProps) => (
+}) => (
   <RootSection>
     <PageTitle title="出題設定" />
     <TrainingMenuForm

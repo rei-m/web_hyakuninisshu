@@ -57,7 +57,7 @@ const MenuRoot = withAppTheme(styled.div)`
   }
 `;
 
-const MenuSection = () => (
+const MenuSection: React.SFC = () => (
   <RootSection>
     <Section>
       <SectionTitle>百人一首とは</SectionTitle>

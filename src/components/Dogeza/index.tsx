@@ -6,7 +6,7 @@ const DogezaImg = styled.img`
   width: 200px;
 `;
 
-const Dogeza = ({ alt, style }: React.ImgHTMLAttributes<{}>) => (
+const Dogeza: React.SFC<React.ImgHTMLAttributes<{}>> = ({ alt, style }) => (
   <DogezaImg src={dogeza} alt={alt} style={style} />
 );
 
