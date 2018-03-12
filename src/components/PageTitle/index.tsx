@@ -11,6 +11,6 @@ const H2 = withAppTheme(styled.h1)`
   font-size: 2rem;
 `;
 
-const PageTitle = ({ title }: PageTitleProps) => <H2>{title}</H2>;
+const PageTitle: React.SFC<PageTitleProps> = ({ title }) => <H2>{title}</H2>;
 
 export default PageTitle;

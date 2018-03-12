@@ -31,12 +31,12 @@ const Button = withAppTheme(styled.button)`
   margin: ${({ theme }) => theme.spacing2x};
 `;
 
-const QuestionsResult = ({
+const QuestionsResult: React.SFC<QuestionsResultProps> = ({
   averageAnswerSecond,
   correctCount,
   totalCount,
   onClickRestart
-}: QuestionsResultProps) => (
+}) => (
   <RootSection>
     <Inner>
       <QuestionResultsSummary

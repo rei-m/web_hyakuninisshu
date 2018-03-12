@@ -46,7 +46,7 @@ const ThirdPhrase = Phrase.extend`
 // 各フレーズの文字数を最大に合わせる
 // 縦書きのエレメントを絶対位置で指定する
 
-const YomiFudaView = ({ yomiFuda, style }: YomiFudaViewProps) => (
+const YomiFudaView: React.SFC<YomiFudaViewProps> = ({ yomiFuda, style }) => (
   <Frame style={style}>
     <Inner>
       <Phrase>{yomiFuda.firstText}</Phrase>

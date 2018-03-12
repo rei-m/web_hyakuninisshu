@@ -19,7 +19,9 @@ const RootSection = withAppTheme(styled.section)`
   flex-direction: column;
 `;
 
-const KarutaDetailSection = ({ karuta }: KarutaDetailSectionProps) => (
+const KarutaDetailSection: React.SFC<KarutaDetailSectionProps> = ({
+  karuta
+}) => (
   <RootSection>
     <PageTitle title={toKarutaIdString(karuta.id)} />
     <KarutaCard karuta={karuta} />

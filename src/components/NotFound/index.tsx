@@ -21,7 +21,7 @@ const Message = styled.div`
   font-size: 1.8rem;
 `;
 
-const NotFound = () => (
+const NotFound: React.SFC = () => (
   <Root>
     <Message>
       ページが見つかりませんでした。<br />トップページにお戻りください。

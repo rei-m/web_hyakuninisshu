@@ -45,7 +45,7 @@ const Icon = withAppTheme(styled.i)`
   }
 `;
 
-const Header = ({ subTitle, canBack, onClickBack }: HeaderProps) => (
+const Header: React.SFC<HeaderProps> = ({ subTitle, canBack, onClickBack }) => (
   <Root canBack={canBack}>
     {canBack && (
       <Icon className="material-icons" onClick={onClickBack} data-test="back">

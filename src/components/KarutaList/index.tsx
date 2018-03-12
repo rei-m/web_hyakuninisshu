@@ -21,7 +21,7 @@ const Root = withAppTheme(styled.div)`
   }
 `;
 
-const KarutaList = ({ karutas, onClickRow }: KarutaListProps) => (
+const KarutaList: React.SFC<KarutaListProps> = ({ karutas, onClickRow }) => (
   <Root>
     {karutas.map((k, i) => (
       <KarutaListRow

@@ -26,7 +26,10 @@ const Image = styled.img`
   height: 300px;
 `;
 
-const QuestionResult = ({ answer, onClick }: QuestionResultProps) => (
+const QuestionResult: React.SFC<QuestionResultProps> = ({
+  answer,
+  onClick
+}) => (
   <Frame onClick={onClick}>
     {answer.correct ? (
       <Image src={correctImage} />

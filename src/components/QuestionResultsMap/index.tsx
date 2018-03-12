@@ -46,12 +46,12 @@ const CorrentImageBox = styled.span`
   height: 100%;
 `;
 
-const QuestionResultsMap = ({
+const QuestionResultsMap: React.SFC<QuestionResultsMapProps> = ({
   questions,
   answers,
   style,
   onClickResult
-}: QuestionResultsMapProps) => (
+}) => (
   <Root style={style}>
     {questions.map((q, i) => {
       const onClickCell = () => onClickResult(q.correctKaruta);

@@ -45,7 +45,10 @@ const CreatorRow = withAppTheme(styled.div)`
   margin-top: ${({ theme }) => theme.spacing1x};
 `;
 
-const KarutaListRow = ({ karuta, onClickRow }: KarutaListRowProps) => {
+const KarutaListRow: React.SFC<KarutaListRowProps> = ({
+  karuta,
+  onClickRow
+}) => {
   const onClick = () => {
     onClickRow(karuta.id);
   };

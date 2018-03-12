@@ -15,7 +15,7 @@ export const initialState: KarutasState = {
   karutas: []
 };
 
-const karutasReducer = (
+export const karutasReducer = (
   state = initialState,
   action: KarutaActions
 ): KarutasState => {
@@ -33,5 +33,3 @@ const karutasReducer = (
       return state;
   }
 };
-
-export default karutasReducer;

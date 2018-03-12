@@ -29,7 +29,7 @@ const StartButton = withAppTheme(styled.button)`
   }
 `;
 
-const ExamMenuSection = ({ onSubmit }: ExamMenuSectionProps) => (
+const ExamMenuSection: React.SFC<ExamMenuSectionProps> = ({ onSubmit }) => (
   <RootSection>
     <PageTitle title="腕試し" />
     <div>
