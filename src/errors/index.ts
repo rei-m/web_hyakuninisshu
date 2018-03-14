@@ -1,5 +1,6 @@
 export enum AppErrorType {
   Network,
+  NotFound,
   Unknown
 }
 

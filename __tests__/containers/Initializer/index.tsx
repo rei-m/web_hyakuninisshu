@@ -1,3 +1,4 @@
+import * as nock from 'nock';
 import * as React from 'react';
 import { MockStore } from 'redux-mock-store';
 import { shallow, ShallowWrapper } from 'enzyme';
@@ -5,11 +6,15 @@ import { mockAppStoreCreateor } from '../../helpers';
 import { GlobalState } from '../../../src/reducers/index';
 import { initialState as karutasState } from '../../../src/reducers/karutas';
 import { initialState as questionsState } from '../../../src/reducers/questions';
-import { START_EXAM_NAME } from '../../../src/actions/questions';
-import ExamInitializer from '../../../src/containers/ExamInitializer';
+import {
+  FETCH_KARUTAS_NAME,
+  KARUTA_JSON_URL,
+  MY_GITHUB_ROOT
+} from '../../../src/actions/karutas';
+import Initializer from '../../../src/containers/Initializer';
 import Progress from '../../../src/components/Progress';
 
-describe('<ExamInitializer />', () => {
+describe('<Initializer />', () => {
   let wrapper: ShallowWrapper<{}>;
   let mockStore: MockStore<GlobalState>;
 
@@ -19,7 +24,7 @@ describe('<ExamInitializer />', () => {
       questionsState
     });
 
-    wrapper = shallow(<ExamInitializer />, {
+    wrapper = shallow(<Initializer />, {
       context: {
         store: mockStore
       }
@@ -30,12 +35,18 @@ describe('<ExamInitializer />', () => {
     expect(wrapper.find(Progress).length).toBe(1);
   });
 
-  it('should dispatch startExam action when components onStart fired', () => {
+  it('should dispatch fetchKarutas action when components onStart fired', done => {
+    nock(MY_GITHUB_ROOT)
+      .get(KARUTA_JSON_URL)
+      .reply(200, []);
     wrapper
       .find(Progress)
       .props()
       .onStart();
     const mockActions = mockStore.getActions();
-    expect(mockActions[0].type).toEqual(START_EXAM_NAME);
+    mockStore.subscribe(() => {
+      expect(mockActions[0].type).toEqual(FETCH_KARUTAS_NAME);
+      done();
+    });
   });
 });
