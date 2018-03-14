@@ -4,7 +4,7 @@ import ExamIndex from '../../../src/containers/Exam';
 import ExamMenuSection from '../../../src/components/ExamMenuSection';
 import { ROUTE_PATHS } from '../../../src/constants';
 
-describe('<ExamIndex />', () => {
+describe('<Exam />', () => {
   let wrapper: ShallowWrapper<{}>;
   let mockRouter: any;
 
