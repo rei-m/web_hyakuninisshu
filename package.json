@@ -8,6 +8,7 @@
     "start": "webpack-dev-server --progress --colors",
     "test": "jest",
     "test-update": "jest --updateSnapshot",
+    "test-cov": "jest --coverage",
     "lint": "tslint -c tslint.json '{src,__tests__}/**/*.{ts,tsx}'",
     "lint-fix": "tslint --fix -c tslint.json '{src,__tests__}/**/*.{ts,tsx}'",
     "tslint-check": "tslint-config-prettier-check ./tslint.json"
@@ -44,6 +45,7 @@
     "collectCoverageFrom": [
       "src/**/*.ts?(x)"
     ],
+    "coverageDirectory": "./coverage/",
     "unmockedModulePathPatterns": [
       "react",
       "react-dom",
@@ -69,6 +71,7 @@
     "@types/recompose": "^0.24.4",
     "@types/redux-mock-store": "^0.0.13",
     "awesome-typescript-loader": "^3.5.0",
+    "codecov": "^3.0.0",
     "css-loader": "^0.28.10",
     "enzyme": "^3.3.0",
     "enzyme-adapter-react-16": "^1.1.1",
