@@ -8,7 +8,7 @@
     "start": "webpack-dev-server --progress --colors",
     "test": "jest",
     "test-update": "jest --updateSnapshot",
-    "test-cov": "jest --coverage",
+    "test-cov": "node --max_old_space_size=2048 $(npm bin)/jest --maxWorkers=2 --coverage",
     "lint": "tslint -c tslint.json '{src,__tests__}/**/*.{ts,tsx}'",
     "lint-fix": "tslint --fix -c tslint.json '{src,__tests__}/**/*.{ts,tsx}'",
     "tslint-check": "tslint-config-prettier-check ./tslint.json"
