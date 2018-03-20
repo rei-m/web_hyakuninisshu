@@ -8,6 +8,7 @@
     "start": "webpack-dev-server --progress --colors",
     "test": "jest",
     "test-update": "jest --updateSnapshot",
+    "test-cov": "jest --coverage",
     "lint": "tslint -c tslint.json '{src,__tests__}/**/*.{ts,tsx}'",
     "lint-fix": "tslint --fix -c tslint.json '{src,__tests__}/**/*.{ts,tsx}'",
     "tslint-check": "tslint-config-prettier-check ./tslint.json"
@@ -44,6 +45,7 @@
     "collectCoverageFrom": [
       "src/**/*.ts?(x)"
     ],
+    "coverageDirectory": "./coverage/",
     "unmockedModulePathPatterns": [
       "react",
       "react-dom",
