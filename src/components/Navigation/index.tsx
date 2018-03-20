@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import { withAppTheme } from '../../styles';
 import { Link } from 'react-router-dom';
 import NavIcon from '../NavIcon';
-import Ripple from '../Ripple';
+import { withRipple } from '../../enhancers/withRipple';
 import { MenuType } from '../../enums';
 import { ROUTE_PATHS } from '../../constants';
 
@@ -29,61 +29,53 @@ const Root = withAppTheme(styled.nav)`
   }
 `;
 
-const IconBox = styled.span`
+const IconBox = withRipple(styled.span`
   flex-grow: 1;
   width: 100%;
   @media screen and (min-width: ${({ theme }) => theme.minWidthWide}) {
     flex-grow: 0;
     height: ${({ theme }) => theme.sideNavWidth};
   }
-`;
+`);
 
 const Navigation: React.SFC<NavigationProps> = ({ currentMenuType }) => (
   <Root>
-    <Ripple>
-      <IconBox>
-        <Link to={ROUTE_PATHS.TRAINING} style={{ width: '100%' }}>
-          <NavIcon
-            iconType={MenuType.Training}
-            text="練習"
-            isCurrent={currentMenuType === MenuType.Training}
-          />
-        </Link>
-      </IconBox>
-    </Ripple>
-    <Ripple>
-      <IconBox>
-        <Link to={ROUTE_PATHS.EXAM} style={{ width: '100%' }}>
-          <NavIcon
-            iconType={MenuType.Exam}
-            text="腕試し"
-            isCurrent={currentMenuType === MenuType.Exam}
-          />
-        </Link>
-      </IconBox>
-    </Ripple>
-    <Ripple>
-      <IconBox>
-        <Link to={ROUTE_PATHS.KARUTAS} style={{ width: '100%' }}>
-          <NavIcon
-            iconType={MenuType.Material}
-            text="資料"
-            isCurrent={currentMenuType === MenuType.Material}
-          />
-        </Link>
-      </IconBox>
-    </Ripple>
-    <Ripple>
-      <IconBox>
-        <Link to={ROUTE_PATHS.ABOUT} style={{ width: '100%' }}>
-          <NavIcon
-            iconType={MenuType.Other}
-            text="その他"
-            isCurrent={currentMenuType === MenuType.Other}
-          />
-        </Link>
-      </IconBox>
-    </Ripple>
+    <IconBox>
+      <Link to={ROUTE_PATHS.TRAINING} style={{ width: '100%' }}>
+        <NavIcon
+          iconType={MenuType.Training}
+          text="練習"
+          isCurrent={currentMenuType === MenuType.Training}
+        />
+      </Link>
+    </IconBox>
+    <IconBox>
+      <Link to={ROUTE_PATHS.EXAM} style={{ width: '100%' }}>
+        <NavIcon
+          iconType={MenuType.Exam}
+          text="腕試し"
+          isCurrent={currentMenuType === MenuType.Exam}
+        />
+      </Link>
+    </IconBox>
+    <IconBox>
+      <Link to={ROUTE_PATHS.KARUTAS} style={{ width: '100%' }}>
+        <NavIcon
+          iconType={MenuType.Material}
+          text="資料"
+          isCurrent={currentMenuType === MenuType.Material}
+        />
+      </Link>
+    </IconBox>
+    <IconBox>
+      <Link to={ROUTE_PATHS.ABOUT} style={{ width: '100%' }}>
+        <NavIcon
+          iconType={MenuType.Other}
+          text="その他"
+          isCurrent={currentMenuType === MenuType.Other}
+        />
+      </Link>
+    </IconBox>
   </Root>
 );
 

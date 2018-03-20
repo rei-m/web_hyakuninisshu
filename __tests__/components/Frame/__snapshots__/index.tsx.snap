@@ -25,6 +25,7 @@ exports[`<Frame /> should render component when exist navigation 1`] = `
     >
       <span
         className="sc-gzVnrw klvbjl"
+        color="#a9a9a980"
       >
         <a
           href="/training"
@@ -49,6 +50,7 @@ exports[`<Frame /> should render component when exist navigation 1`] = `
     >
       <span
         className="sc-gzVnrw klvbjl"
+        color="#a9a9a980"
       >
         <a
           href="/exam"
@@ -73,6 +75,7 @@ exports[`<Frame /> should render component when exist navigation 1`] = `
     >
       <span
         className="sc-gzVnrw klvbjl"
+        color="#a9a9a980"
       >
         <a
           href="/karutas"
@@ -97,6 +100,7 @@ exports[`<Frame /> should render component when exist navigation 1`] = `
     >
       <span
         className="sc-gzVnrw klvbjl"
+        color="#a9a9a980"
       >
         <a
           href="/about"

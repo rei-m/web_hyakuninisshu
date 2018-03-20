@@ -10,6 +10,7 @@ exports[`<Header /> should render component when can back 1`] = `
   >
     <i
       className="material-icons sc-ifAKCX gnWGZx"
+      color="#a9a9a980"
       data-test="back"
       onClick={[MockFunction]}
     >

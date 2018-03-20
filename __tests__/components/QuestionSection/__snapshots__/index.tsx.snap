@@ -2,13 +2,13 @@
 
 exports[`<QuestionSection /> should render component when answered 1`] = `
 <div
-  className="sc-gqjmRU hOnilo"
+  className="sc-jTzLTM cuYolR"
 >
   <div
-    className="sc-VigVT cqVUej"
+    className="sc-fjdhpX bCXXwx"
   >
     <div
-      className="sc-fjdhpX kbvaSH"
+      className="sc-cSHVUG kkLwnz"
     >
       1
        / 
@@ -44,111 +44,135 @@ exports[`<QuestionSection /> should render component when answered 1`] = `
     </div>
   </div>
   <div
-    className="sc-jTzLTM hujYWL"
+    className="sc-jzJRlG hRablJ"
   >
     <div
-      className="sc-bZQynM iAMDRg"
-      onClick={[Function]}
-      style={
-        Object {
-          "margin": "8px",
-        }
-      }
+      className="sc-bZQynM dHTFQz"
+      onMouseDown={[Function]}
     >
       <div
-        className="sc-gzVnrw dQuPak"
+        className="sc-htoDjs cJgBBz"
+        color="#a9a9a980"
+        onClick={[Function]}
+        style={
+          Object {
+            "margin": "8px",
+          }
+        }
       >
         <div
-          className="sc-htoDjs iCdNOm"
+          className="sc-dnqmqq kveNia"
         >
-          よんく
-        </div>
-        <div
-          className="sc-dnqmqq fFBAQp"
-        >
-          ごく
+          <div
+            className="sc-iwsKbI TuLDV"
+          >
+            よんく
+          </div>
+          <div
+            className="sc-gZMcBi gcZWDp"
+          >
+            ごく
+          </div>
         </div>
       </div>
     </div>
     <div
-      className="sc-bZQynM iAMDRg"
-      onClick={[Function]}
-      style={
-        Object {
-          "margin": "8px",
-        }
-      }
+      className="sc-bZQynM dHTFQz"
+      onMouseDown={[Function]}
     >
       <div
-        className="sc-gzVnrw dQuPak"
+        className="sc-htoDjs cJgBBz"
+        color="#a9a9a980"
+        onClick={[Function]}
+        style={
+          Object {
+            "margin": "8px",
+          }
+        }
       >
         <div
-          className="sc-htoDjs iCdNOm"
+          className="sc-dnqmqq kveNia"
         >
-          よんく
-        </div>
-        <div
-          className="sc-dnqmqq fFBAQp"
-        >
-          ごく
+          <div
+            className="sc-iwsKbI TuLDV"
+          >
+            よんく
+          </div>
+          <div
+            className="sc-gZMcBi gcZWDp"
+          >
+            ごく
+          </div>
         </div>
       </div>
     </div>
     <div
-      className="sc-bZQynM iAMDRg"
-      onClick={[Function]}
-      style={
-        Object {
-          "margin": "8px",
-        }
-      }
+      className="sc-bZQynM dHTFQz"
+      onMouseDown={[Function]}
     >
       <div
-        className="sc-gzVnrw dQuPak"
+        className="sc-htoDjs cJgBBz"
+        color="#a9a9a980"
+        onClick={[Function]}
+        style={
+          Object {
+            "margin": "8px",
+          }
+        }
       >
         <div
-          className="sc-htoDjs iCdNOm"
+          className="sc-dnqmqq kveNia"
         >
-          よんく
-        </div>
-        <div
-          className="sc-dnqmqq fFBAQp"
-        >
-          ごく
+          <div
+            className="sc-iwsKbI TuLDV"
+          >
+            よんく
+          </div>
+          <div
+            className="sc-gZMcBi gcZWDp"
+          >
+            ごく
+          </div>
         </div>
       </div>
     </div>
     <div
-      className="sc-bZQynM iAMDRg"
-      onClick={[Function]}
-      style={
-        Object {
-          "margin": "8px",
-        }
-      }
+      className="sc-bZQynM dHTFQz"
+      onMouseDown={[Function]}
     >
       <div
-        className="sc-gzVnrw dQuPak"
+        className="sc-htoDjs cJgBBz"
+        color="#a9a9a980"
+        onClick={[Function]}
+        style={
+          Object {
+            "margin": "8px",
+          }
+        }
       >
         <div
-          className="sc-htoDjs iCdNOm"
+          className="sc-dnqmqq kveNia"
         >
-          よんく
-        </div>
-        <div
-          className="sc-dnqmqq fFBAQp"
-        >
-          ごく
+          <div
+            className="sc-iwsKbI TuLDV"
+          >
+            よんく
+          </div>
+          <div
+            className="sc-gZMcBi gcZWDp"
+          >
+            ごく
+          </div>
         </div>
       </div>
     </div>
   </div>
   <div
-    className="sc-iwsKbI edubxM"
+    className="sc-gqjmRU kuYurp"
     onClick={[MockFunction]}
   >
     <img
-      className="sc-gZMcBi fkLmkp"
+      className="sc-VigVT hNxByC"
       src="check_correct.png"
     />
   </div>
@@ -157,13 +181,13 @@ exports[`<QuestionSection /> should render component when answered 1`] = `
 
 exports[`<QuestionSection /> should render component when not answered 1`] = `
 <div
-  className="sc-gqjmRU hOnilo"
+  className="sc-jTzLTM cuYolR"
 >
   <div
-    className="sc-VigVT cqVUej"
+    className="sc-fjdhpX bCXXwx"
   >
     <div
-      className="sc-fjdhpX kbvaSH"
+      className="sc-cSHVUG kkLwnz"
     >
       1
        / 
@@ -199,101 +223,125 @@ exports[`<QuestionSection /> should render component when not answered 1`] = `
     </div>
   </div>
   <div
-    className="sc-jTzLTM hujYWL"
+    className="sc-jzJRlG hRablJ"
   >
     <div
-      className="sc-bZQynM iAMDRg"
-      onClick={[Function]}
-      style={
-        Object {
-          "margin": "8px",
-        }
-      }
+      className="sc-bZQynM dHTFQz"
+      onMouseDown={[Function]}
     >
       <div
-        className="sc-gzVnrw dQuPak"
+        className="sc-htoDjs cJgBBz"
+        color="#a9a9a980"
+        onClick={[Function]}
+        style={
+          Object {
+            "margin": "8px",
+          }
+        }
       >
         <div
-          className="sc-htoDjs iCdNOm"
+          className="sc-dnqmqq kveNia"
         >
-          よんく
-        </div>
-        <div
-          className="sc-dnqmqq fFBAQp"
-        >
-          ごく
+          <div
+            className="sc-iwsKbI TuLDV"
+          >
+            よんく
+          </div>
+          <div
+            className="sc-gZMcBi gcZWDp"
+          >
+            ごく
+          </div>
         </div>
       </div>
     </div>
     <div
-      className="sc-bZQynM iAMDRg"
-      onClick={[Function]}
-      style={
-        Object {
-          "margin": "8px",
-        }
-      }
+      className="sc-bZQynM dHTFQz"
+      onMouseDown={[Function]}
     >
       <div
-        className="sc-gzVnrw dQuPak"
+        className="sc-htoDjs cJgBBz"
+        color="#a9a9a980"
+        onClick={[Function]}
+        style={
+          Object {
+            "margin": "8px",
+          }
+        }
       >
         <div
-          className="sc-htoDjs iCdNOm"
+          className="sc-dnqmqq kveNia"
         >
-          よんく
-        </div>
-        <div
-          className="sc-dnqmqq fFBAQp"
-        >
-          ごく
+          <div
+            className="sc-iwsKbI TuLDV"
+          >
+            よんく
+          </div>
+          <div
+            className="sc-gZMcBi gcZWDp"
+          >
+            ごく
+          </div>
         </div>
       </div>
     </div>
     <div
-      className="sc-bZQynM iAMDRg"
-      onClick={[Function]}
-      style={
-        Object {
-          "margin": "8px",
-        }
-      }
+      className="sc-bZQynM dHTFQz"
+      onMouseDown={[Function]}
     >
       <div
-        className="sc-gzVnrw dQuPak"
+        className="sc-htoDjs cJgBBz"
+        color="#a9a9a980"
+        onClick={[Function]}
+        style={
+          Object {
+            "margin": "8px",
+          }
+        }
       >
         <div
-          className="sc-htoDjs iCdNOm"
+          className="sc-dnqmqq kveNia"
         >
-          よんく
-        </div>
-        <div
-          className="sc-dnqmqq fFBAQp"
-        >
-          ごく
+          <div
+            className="sc-iwsKbI TuLDV"
+          >
+            よんく
+          </div>
+          <div
+            className="sc-gZMcBi gcZWDp"
+          >
+            ごく
+          </div>
         </div>
       </div>
     </div>
     <div
-      className="sc-bZQynM iAMDRg"
-      onClick={[Function]}
-      style={
-        Object {
-          "margin": "8px",
-        }
-      }
+      className="sc-bZQynM dHTFQz"
+      onMouseDown={[Function]}
     >
       <div
-        className="sc-gzVnrw dQuPak"
+        className="sc-htoDjs cJgBBz"
+        color="#a9a9a980"
+        onClick={[Function]}
+        style={
+          Object {
+            "margin": "8px",
+          }
+        }
       >
         <div
-          className="sc-htoDjs iCdNOm"
+          className="sc-dnqmqq kveNia"
         >
-          よんく
-        </div>
-        <div
-          className="sc-dnqmqq fFBAQp"
-        >
-          ごく
+          <div
+            className="sc-iwsKbI TuLDV"
+          >
+            よんく
+          </div>
+          <div
+            className="sc-gZMcBi gcZWDp"
+          >
+            ごく
+          </div>
         </div>
       </div>
     </div>

@@ -2,22 +2,28 @@
 
 exports[`<ToriFudaView /> should render component 1`] = `
 <div
-  className="sc-bdVaJa eczCTp"
-  onClick={[Function]}
-  style={undefined}
+  className="sc-bdVaJa gMhnDS"
+  onMouseDown={[Function]}
 >
   <div
-    className="sc-bwzfXH eJMUYF"
+    className="sc-htpNat cpToyO"
+    color="#a9a9a980"
+    onClick={[Function]}
+    style={undefined}
   >
     <div
-      className="sc-htpNat jNWKMW"
+      className="sc-bxivhb hPDDfp"
     >
-      よんく
-    </div>
-    <div
-      className="sc-bxivhb heslaB"
-    >
-      ごく
+      <div
+        className="sc-ifAKCX iCWodm"
+      >
+        よんく
+      </div>
+      <div
+        className="sc-EHOje jmfmDY"
+      >
+        ごく
+      </div>
     </div>
   </div>
 </div>

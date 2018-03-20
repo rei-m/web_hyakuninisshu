@@ -1,6 +1,6 @@
 import * as React from 'react';
 import styled from 'styled-components';
-import Ripple from '../Ripple';
+import { withRipple } from '../../enhancers/withRipple';
 import { withAppTheme } from '../../styles';
 
 export interface HeaderProps {
@@ -35,7 +35,7 @@ const Title = withAppTheme(styled.h1)`
   }
 `;
 
-const Icon = withAppTheme(styled.i)`
+const Icon = withRipple(withAppTheme(styled.i)`
   line-height: ${({ theme }) => theme.headerHeight};
   width: ${({ theme }) => theme.headerHeight};
   color: #fff;
@@ -45,16 +45,14 @@ const Icon = withAppTheme(styled.i)`
     line-height: ${({ theme }) => theme.headerHeightWide};
     width: ${({ theme }) => theme.headerHeightWide};
   }
-`;
+`);
 
 const Header: React.SFC<HeaderProps> = ({ subTitle, canBack, onClickBack }) => (
   <Root canBack={canBack}>
     {canBack && (
-      <Ripple>
-        <Icon className="material-icons" onClick={onClickBack} data-test="back">
-          arrow_back
-        </Icon>
-      </Ripple>
+      <Icon className="material-icons" onClick={onClickBack} data-test="back">
+        arrow_back
+      </Icon>
     )}
     <Title>百人一首 - {subTitle} -</Title>
   </Root>
