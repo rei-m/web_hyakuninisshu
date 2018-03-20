@@ -3,10 +3,10 @@
 exports[`<Frame /> should render component when exist navigation 1`] = `
 <div>
   <header
-    className="sc-bdVaJa hmkbhs"
+    className="sc-htpNat krusbc"
   >
     <h1
-      className="sc-bwzfXH hyWXLo"
+      className="sc-bxivhb eRKIhe"
     >
       百人一首 - 
       This is subtitle
@@ -14,87 +14,107 @@ exports[`<Frame /> should render component when exist navigation 1`] = `
     </h1>
   </header>
   <div
-    className="sc-bZQynM iQyLJC"
+    className="sc-htoDjs erXZTd"
   />
   <nav
-    className="sc-ifAKCX kFmFfK"
+    className="sc-bZQynM iLFGTM"
   >
-    <span
-      className="sc-EHOje edQCDP"
-    >
-      <a
-        href="/training"
-        onClick={[Function]}
-        style={
-          Object {
-            "width": "100%",
-          }
-        }
-      >
-        <i
-          className="material-icons sc-bxivhb dCgFMJ"
-        >
-          create
-        </i>
-      </a>
-    </span>
-    <span
-      className="sc-EHOje edQCDP"
-    >
-      <a
-        href="/exam"
-        onClick={[Function]}
-        style={
-          Object {
-            "width": "100%",
-          }
-        }
-      >
-        <i
-          className="material-icons sc-bxivhb kQzEDT"
-        >
-          note
-        </i>
-      </a>
-    </span>
-    <a
-      href="/karutas"
-      onClick={[Function]}
-      style={
-        Object {
-          "width": "100%",
-        }
-      }
+    <div
+      className="sc-bdVaJa gMhnDS"
+      onMouseDown={[Function]}
     >
       <span
-        className="sc-EHOje edQCDP"
+        className="sc-gzVnrw klvbjl"
       >
-        <i
-          className="material-icons sc-bxivhb irqXgV"
+        <a
+          href="/training"
+          onClick={[Function]}
+          style={
+            Object {
+              "width": "100%",
+            }
+          }
         >
-          library_books
-        </i>
+          <i
+            className="material-icons sc-EHOje evPMQv"
+          >
+            create
+          </i>
+        </a>
       </span>
-    </a>
-    <a
-      href="/about"
-      onClick={[Function]}
-      style={
-        Object {
-          "width": "100%",
-        }
-      }
+    </div>
+    <div
+      className="sc-bdVaJa gMhnDS"
+      onMouseDown={[Function]}
     >
       <span
-        className="sc-EHOje edQCDP"
+        className="sc-gzVnrw klvbjl"
       >
-        <i
-          className="material-icons sc-bxivhb fcdbmN"
+        <a
+          href="/exam"
+          onClick={[Function]}
+          style={
+            Object {
+              "width": "100%",
+            }
+          }
         >
-          settings
-        </i>
+          <i
+            className="material-icons sc-EHOje gwxweT"
+          >
+            note
+          </i>
+        </a>
       </span>
-    </a>
+    </div>
+    <div
+      className="sc-bdVaJa gMhnDS"
+      onMouseDown={[Function]}
+    >
+      <span
+        className="sc-gzVnrw klvbjl"
+      >
+        <a
+          href="/karutas"
+          onClick={[Function]}
+          style={
+            Object {
+              "width": "100%",
+            }
+          }
+        >
+          <i
+            className="material-icons sc-EHOje kZpNpk"
+          >
+            library_books
+          </i>
+        </a>
+      </span>
+    </div>
+    <div
+      className="sc-bdVaJa gMhnDS"
+      onMouseDown={[Function]}
+    >
+      <span
+        className="sc-gzVnrw klvbjl"
+      >
+        <a
+          href="/about"
+          onClick={[Function]}
+          style={
+            Object {
+              "width": "100%",
+            }
+          }
+        >
+          <i
+            className="material-icons sc-EHOje jsOnhV"
+          >
+            settings
+          </i>
+        </a>
+      </span>
+    </div>
   </nav>
 </div>
 `;
@@ -102,10 +122,10 @@ exports[`<Frame /> should render component when exist navigation 1`] = `
 exports[`<Frame /> should render component when not exist navigation 1`] = `
 <div>
   <header
-    className="sc-bdVaJa hmkbhs"
+    className="sc-htpNat krusbc"
   >
     <h1
-      className="sc-bwzfXH hyWXLo"
+      className="sc-bxivhb eRKIhe"
     >
       百人一首 - 
       This is subtitle
@@ -113,7 +133,7 @@ exports[`<Frame /> should render component when not exist navigation 1`] = `
     </h1>
   </header>
   <div
-    className="sc-bZQynM dJUZJL"
+    className="sc-htoDjs ejWmrN"
   />
 </div>
 `;

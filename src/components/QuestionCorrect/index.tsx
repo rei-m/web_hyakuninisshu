@@ -58,7 +58,7 @@ const KarutaFrame = withAppTheme(styled.div)`
   align-items: center;
   justify-content: center;
   margin: ${({ theme }) => theme.spacing2x} auto 0 auto;
-  background-color: ${({ theme }) => theme.colorThin};
+  background-color: #fff;
   box-shadow: 0 -1px 5px rgba(0, 0, 0, 0.26);
   font-family: 'Sawarabi Mincho';
 `;

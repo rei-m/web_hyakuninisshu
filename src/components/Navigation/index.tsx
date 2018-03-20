@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import { withAppTheme } from '../../styles';
 import { Link } from 'react-router-dom';
 import NavIcon from '../NavIcon';
+import Ripple from '../Ripple';
 import { MenuType } from '../../enums';
 import { ROUTE_PATHS } from '../../constants';
 
@@ -39,42 +40,50 @@ const IconBox = styled.span`
 
 const Navigation: React.SFC<NavigationProps> = ({ currentMenuType }) => (
   <Root>
-    <IconBox>
-      <Link to={ROUTE_PATHS.TRAINING} style={{ width: '100%' }}>
-        <NavIcon
-          iconType={MenuType.Training}
-          text="練習"
-          isCurrent={currentMenuType === MenuType.Training}
-        />
-      </Link>
-    </IconBox>
-    <IconBox>
-      <Link to={ROUTE_PATHS.EXAM} style={{ width: '100%' }}>
-        <NavIcon
-          iconType={MenuType.Exam}
-          text="腕試し"
-          isCurrent={currentMenuType === MenuType.Exam}
-        />
-      </Link>
-    </IconBox>
-    <Link to={ROUTE_PATHS.KARUTAS} style={{ width: '100%' }}>
+    <Ripple>
       <IconBox>
-        <NavIcon
-          iconType={MenuType.Material}
-          text="資料"
-          isCurrent={currentMenuType === MenuType.Material}
-        />
+        <Link to={ROUTE_PATHS.TRAINING} style={{ width: '100%' }}>
+          <NavIcon
+            iconType={MenuType.Training}
+            text="練習"
+            isCurrent={currentMenuType === MenuType.Training}
+          />
+        </Link>
       </IconBox>
-    </Link>
-    <Link to={ROUTE_PATHS.ABOUT} style={{ width: '100%' }}>
+    </Ripple>
+    <Ripple>
       <IconBox>
-        <NavIcon
-          iconType={MenuType.Other}
-          text="その他"
-          isCurrent={currentMenuType === MenuType.Other}
-        />
+        <Link to={ROUTE_PATHS.EXAM} style={{ width: '100%' }}>
+          <NavIcon
+            iconType={MenuType.Exam}
+            text="腕試し"
+            isCurrent={currentMenuType === MenuType.Exam}
+          />
+        </Link>
       </IconBox>
-    </Link>
+    </Ripple>
+    <Ripple>
+      <IconBox>
+        <Link to={ROUTE_PATHS.KARUTAS} style={{ width: '100%' }}>
+          <NavIcon
+            iconType={MenuType.Material}
+            text="資料"
+            isCurrent={currentMenuType === MenuType.Material}
+          />
+        </Link>
+      </IconBox>
+    </Ripple>
+    <Ripple>
+      <IconBox>
+        <Link to={ROUTE_PATHS.ABOUT} style={{ width: '100%' }}>
+          <NavIcon
+            iconType={MenuType.Other}
+            text="その他"
+            isCurrent={currentMenuType === MenuType.Other}
+          />
+        </Link>
+      </IconBox>
+    </Ripple>
   </Root>
 );
 

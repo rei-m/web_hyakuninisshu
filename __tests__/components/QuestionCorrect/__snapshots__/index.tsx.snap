@@ -23,7 +23,7 @@ exports[`<QuestionCorrect /> should render component when finished 1`] = `
     </button>
   </div>
   <div
-    className="sc-gZMcBi hGOwDf"
+    className="sc-gZMcBi kgdLFY"
   >
     <div
       className="sc-gqjmRU jKiVnA"
@@ -93,7 +93,7 @@ exports[`<QuestionCorrect /> should render component when not finished 1`] = `
     </button>
   </div>
   <div
-    className="sc-gZMcBi hGOwDf"
+    className="sc-gZMcBi kgdLFY"
   >
     <div
       className="sc-gqjmRU jKiVnA"

@@ -2,17 +2,22 @@
 
 exports[`<Header /> should render component when can back 1`] = `
 <header
-  className="sc-bdVaJa cLVnQc"
+  className="sc-htpNat iMjwSP"
 >
-  <i
-    className="material-icons sc-htpNat fKqohg"
-    data-test="back"
-    onClick={[MockFunction]}
+  <div
+    className="sc-bdVaJa gMhnDS"
+    onMouseDown={[Function]}
   >
-    arrow_back
-  </i>
+    <i
+      className="material-icons sc-ifAKCX gnWGZx"
+      data-test="back"
+      onClick={[MockFunction]}
+    >
+      arrow_back
+    </i>
+  </div>
   <h1
-    className="sc-bwzfXH hyWXLo"
+    className="sc-bxivhb eRKIhe"
   >
     百人一首 - 
     This is subtitle
@@ -23,10 +28,10 @@ exports[`<Header /> should render component when can back 1`] = `
 
 exports[`<Header /> should render component when can not back 1`] = `
 <header
-  className="sc-bdVaJa hmkbhs"
+  className="sc-htpNat krusbc"
 >
   <h1
-    className="sc-bwzfXH hyWXLo"
+    className="sc-bxivhb eRKIhe"
   >
     百人一首 - 
     This is subtitle
