@@ -68,7 +68,11 @@ const QuestionSection: React.SFC<QuestionSectionProps> = ({
         {question.toriFudas.map((toriFuda, i) => (
           <ToriFudaView
             toriFuda={toriFuda}
-            style={{ margin: '8px' }}
+            style={{
+              margin: '8px',
+              opacity:
+                !answer || answer.karutaId === toriFuda.karutaId ? 1 : 0.8
+            }}
             key={i}
             onClick={onClickToriFuda}
             data-test={`torifuda-${i}`}
