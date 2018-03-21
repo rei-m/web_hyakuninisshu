@@ -2,13 +2,13 @@
 
 exports[`<QuestionSection /> should render component when answered 1`] = `
 <div
-  className="sc-jTzLTM cuYolR"
+  className="sc-VigVT fdfmBm"
 >
   <div
-    className="sc-fjdhpX bCXXwx"
+    className="sc-jTzLTM jnXhag"
   >
     <div
-      className="sc-cSHVUG kkLwnz"
+      className="sc-jzJRlG hbbPSk"
     >
       1
        / 
@@ -44,15 +44,16 @@ exports[`<QuestionSection /> should render component when answered 1`] = `
     </div>
   </div>
   <div
-    className="sc-jzJRlG hRablJ"
+    className="sc-fjdhpX hZnkOe"
   >
     <div
-      className="sc-bZQynM dHTFQz"
+      className="sc-bZQynM llYTgU"
       onMouseDown={[Function]}
+      onMouseUp={[Function]}
     >
       <div
-        className="sc-htoDjs cJgBBz"
-        color="#a9a9a980"
+        className="sc-gzVnrw huyyAL"
+        color="#fff"
         onClick={[Function]}
         style={
           Object {
@@ -61,15 +62,15 @@ exports[`<QuestionSection /> should render component when answered 1`] = `
         }
       >
         <div
-          className="sc-dnqmqq kveNia"
+          className="sc-htoDjs bKhwRD"
         >
           <div
-            className="sc-iwsKbI TuLDV"
+            className="sc-dnqmqq gCITGr"
           >
             よんく
           </div>
           <div
-            className="sc-gZMcBi gcZWDp"
+            className="sc-iwsKbI cSrnkn"
           >
             ごく
           </div>
@@ -77,12 +78,13 @@ exports[`<QuestionSection /> should render component when answered 1`] = `
       </div>
     </div>
     <div
-      className="sc-bZQynM dHTFQz"
+      className="sc-bZQynM llYTgU"
       onMouseDown={[Function]}
+      onMouseUp={[Function]}
     >
       <div
-        className="sc-htoDjs cJgBBz"
-        color="#a9a9a980"
+        className="sc-gzVnrw huyyAL"
+        color="#fff"
         onClick={[Function]}
         style={
           Object {
@@ -91,15 +93,15 @@ exports[`<QuestionSection /> should render component when answered 1`] = `
         }
       >
         <div
-          className="sc-dnqmqq kveNia"
+          className="sc-htoDjs bKhwRD"
         >
           <div
-            className="sc-iwsKbI TuLDV"
+            className="sc-dnqmqq gCITGr"
           >
             よんく
           </div>
           <div
-            className="sc-gZMcBi gcZWDp"
+            className="sc-iwsKbI cSrnkn"
           >
             ごく
           </div>
@@ -107,12 +109,13 @@ exports[`<QuestionSection /> should render component when answered 1`] = `
       </div>
     </div>
     <div
-      className="sc-bZQynM dHTFQz"
+      className="sc-bZQynM llYTgU"
       onMouseDown={[Function]}
+      onMouseUp={[Function]}
     >
       <div
-        className="sc-htoDjs cJgBBz"
-        color="#a9a9a980"
+        className="sc-gzVnrw huyyAL"
+        color="#fff"
         onClick={[Function]}
         style={
           Object {
@@ -121,15 +124,15 @@ exports[`<QuestionSection /> should render component when answered 1`] = `
         }
       >
         <div
-          className="sc-dnqmqq kveNia"
+          className="sc-htoDjs bKhwRD"
         >
           <div
-            className="sc-iwsKbI TuLDV"
+            className="sc-dnqmqq gCITGr"
           >
             よんく
           </div>
           <div
-            className="sc-gZMcBi gcZWDp"
+            className="sc-iwsKbI cSrnkn"
           >
             ごく
           </div>
@@ -137,12 +140,13 @@ exports[`<QuestionSection /> should render component when answered 1`] = `
       </div>
     </div>
     <div
-      className="sc-bZQynM dHTFQz"
+      className="sc-bZQynM llYTgU"
       onMouseDown={[Function]}
+      onMouseUp={[Function]}
     >
       <div
-        className="sc-htoDjs cJgBBz"
-        color="#a9a9a980"
+        className="sc-gzVnrw huyyAL"
+        color="#fff"
         onClick={[Function]}
         style={
           Object {
@@ -151,15 +155,15 @@ exports[`<QuestionSection /> should render component when answered 1`] = `
         }
       >
         <div
-          className="sc-dnqmqq kveNia"
+          className="sc-htoDjs bKhwRD"
         >
           <div
-            className="sc-iwsKbI TuLDV"
+            className="sc-dnqmqq gCITGr"
           >
             よんく
           </div>
           <div
-            className="sc-gZMcBi gcZWDp"
+            className="sc-iwsKbI cSrnkn"
           >
             ごく
           </div>
@@ -168,11 +172,11 @@ exports[`<QuestionSection /> should render component when answered 1`] = `
     </div>
   </div>
   <div
-    className="sc-gqjmRU kuYurp"
+    className="sc-gZMcBi bKdPNs"
     onClick={[MockFunction]}
   >
     <img
-      className="sc-VigVT hNxByC"
+      className="sc-gqjmRU kzcJUc"
       src="check_correct.png"
     />
   </div>
@@ -181,13 +185,13 @@ exports[`<QuestionSection /> should render component when answered 1`] = `
 
 exports[`<QuestionSection /> should render component when not answered 1`] = `
 <div
-  className="sc-jTzLTM cuYolR"
+  className="sc-VigVT fdfmBm"
 >
   <div
-    className="sc-fjdhpX bCXXwx"
+    className="sc-jTzLTM jnXhag"
   >
     <div
-      className="sc-cSHVUG kkLwnz"
+      className="sc-jzJRlG hbbPSk"
     >
       1
        / 
@@ -223,15 +227,16 @@ exports[`<QuestionSection /> should render component when not answered 1`] = `
     </div>
   </div>
   <div
-    className="sc-jzJRlG hRablJ"
+    className="sc-fjdhpX hZnkOe"
   >
     <div
-      className="sc-bZQynM dHTFQz"
+      className="sc-bZQynM llYTgU"
       onMouseDown={[Function]}
+      onMouseUp={[Function]}
     >
       <div
-        className="sc-htoDjs cJgBBz"
-        color="#a9a9a980"
+        className="sc-gzVnrw huyyAL"
+        color="#fff"
         onClick={[Function]}
         style={
           Object {
@@ -240,15 +245,15 @@ exports[`<QuestionSection /> should render component when not answered 1`] = `
         }
       >
         <div
-          className="sc-dnqmqq kveNia"
+          className="sc-htoDjs bKhwRD"
         >
           <div
-            className="sc-iwsKbI TuLDV"
+            className="sc-dnqmqq gCITGr"
           >
             よんく
           </div>
           <div
-            className="sc-gZMcBi gcZWDp"
+            className="sc-iwsKbI cSrnkn"
           >
             ごく
           </div>
@@ -256,12 +261,13 @@ exports[`<QuestionSection /> should render component when not answered 1`] = `
       </div>
     </div>
     <div
-      className="sc-bZQynM dHTFQz"
+      className="sc-bZQynM llYTgU"
       onMouseDown={[Function]}
+      onMouseUp={[Function]}
     >
       <div
-        className="sc-htoDjs cJgBBz"
-        color="#a9a9a980"
+        className="sc-gzVnrw huyyAL"
+        color="#fff"
         onClick={[Function]}
         style={
           Object {
@@ -270,15 +276,15 @@ exports[`<QuestionSection /> should render component when not answered 1`] = `
         }
       >
         <div
-          className="sc-dnqmqq kveNia"
+          className="sc-htoDjs bKhwRD"
         >
           <div
-            className="sc-iwsKbI TuLDV"
+            className="sc-dnqmqq gCITGr"
           >
             よんく
           </div>
           <div
-            className="sc-gZMcBi gcZWDp"
+            className="sc-iwsKbI cSrnkn"
           >
             ごく
           </div>
@@ -286,12 +292,13 @@ exports[`<QuestionSection /> should render component when not answered 1`] = `
       </div>
     </div>
     <div
-      className="sc-bZQynM dHTFQz"
+      className="sc-bZQynM llYTgU"
       onMouseDown={[Function]}
+      onMouseUp={[Function]}
     >
       <div
-        className="sc-htoDjs cJgBBz"
-        color="#a9a9a980"
+        className="sc-gzVnrw huyyAL"
+        color="#fff"
         onClick={[Function]}
         style={
           Object {
@@ -300,15 +307,15 @@ exports[`<QuestionSection /> should render component when not answered 1`] = `
         }
       >
         <div
-          className="sc-dnqmqq kveNia"
+          className="sc-htoDjs bKhwRD"
         >
           <div
-            className="sc-iwsKbI TuLDV"
+            className="sc-dnqmqq gCITGr"
           >
             よんく
           </div>
           <div
-            className="sc-gZMcBi gcZWDp"
+            className="sc-iwsKbI cSrnkn"
           >
             ごく
           </div>
@@ -316,12 +323,13 @@ exports[`<QuestionSection /> should render component when not answered 1`] = `
       </div>
     </div>
     <div
-      className="sc-bZQynM dHTFQz"
+      className="sc-bZQynM llYTgU"
       onMouseDown={[Function]}
+      onMouseUp={[Function]}
     >
       <div
-        className="sc-htoDjs cJgBBz"
-        color="#a9a9a980"
+        className="sc-gzVnrw huyyAL"
+        color="#fff"
         onClick={[Function]}
         style={
           Object {
@@ -330,15 +338,15 @@ exports[`<QuestionSection /> should render component when not answered 1`] = `
         }
       >
         <div
-          className="sc-dnqmqq kveNia"
+          className="sc-htoDjs bKhwRD"
         >
           <div
-            className="sc-iwsKbI TuLDV"
+            className="sc-dnqmqq gCITGr"
           >
             よんく
           </div>
           <div
-            className="sc-gZMcBi gcZWDp"
+            className="sc-iwsKbI cSrnkn"
           >
             ごく
           </div>

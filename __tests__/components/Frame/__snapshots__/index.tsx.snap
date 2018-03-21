@@ -3,10 +3,10 @@
 exports[`<Frame /> should render component when exist navigation 1`] = `
 <div>
   <header
-    className="sc-htpNat krusbc"
+    className="sc-bwzfXH kabzOD"
   >
     <h1
-      className="sc-bxivhb eRKIhe"
+      className="sc-htpNat iTzsdR"
     >
       百人一首 - 
       This is subtitle
@@ -14,18 +14,19 @@ exports[`<Frame /> should render component when exist navigation 1`] = `
     </h1>
   </header>
   <div
-    className="sc-htoDjs erXZTd"
+    className="sc-gzVnrw jdRdke"
   />
   <nav
-    className="sc-bZQynM iLFGTM"
+    className="sc-EHOje iVKSta"
   >
     <div
-      className="sc-bdVaJa gMhnDS"
+      className="sc-bdVaJa gNYCTH"
       onMouseDown={[Function]}
+      onMouseUp={[Function]}
     >
       <span
-        className="sc-gzVnrw klvbjl"
-        color="#a9a9a980"
+        className="sc-bZQynM jmnWoK"
+        color="#fff"
       >
         <a
           href="/training"
@@ -37,7 +38,7 @@ exports[`<Frame /> should render component when exist navigation 1`] = `
           }
         >
           <i
-            className="material-icons sc-EHOje evPMQv"
+            className="material-icons sc-ifAKCX hrwKKP"
           >
             create
           </i>
@@ -45,12 +46,13 @@ exports[`<Frame /> should render component when exist navigation 1`] = `
       </span>
     </div>
     <div
-      className="sc-bdVaJa gMhnDS"
+      className="sc-bdVaJa gNYCTH"
       onMouseDown={[Function]}
+      onMouseUp={[Function]}
     >
       <span
-        className="sc-gzVnrw klvbjl"
-        color="#a9a9a980"
+        className="sc-bZQynM jmnWoK"
+        color="#fff"
       >
         <a
           href="/exam"
@@ -62,7 +64,7 @@ exports[`<Frame /> should render component when exist navigation 1`] = `
           }
         >
           <i
-            className="material-icons sc-EHOje gwxweT"
+            className="material-icons sc-ifAKCX iiZnFL"
           >
             note
           </i>
@@ -70,12 +72,13 @@ exports[`<Frame /> should render component when exist navigation 1`] = `
       </span>
     </div>
     <div
-      className="sc-bdVaJa gMhnDS"
+      className="sc-bdVaJa gNYCTH"
       onMouseDown={[Function]}
+      onMouseUp={[Function]}
     >
       <span
-        className="sc-gzVnrw klvbjl"
-        color="#a9a9a980"
+        className="sc-bZQynM jmnWoK"
+        color="#fff"
       >
         <a
           href="/karutas"
@@ -87,7 +90,7 @@ exports[`<Frame /> should render component when exist navigation 1`] = `
           }
         >
           <i
-            className="material-icons sc-EHOje kZpNpk"
+            className="material-icons sc-ifAKCX ihzbNI"
           >
             library_books
           </i>
@@ -95,12 +98,13 @@ exports[`<Frame /> should render component when exist navigation 1`] = `
       </span>
     </div>
     <div
-      className="sc-bdVaJa gMhnDS"
+      className="sc-bdVaJa gNYCTH"
       onMouseDown={[Function]}
+      onMouseUp={[Function]}
     >
       <span
-        className="sc-gzVnrw klvbjl"
-        color="#a9a9a980"
+        className="sc-bZQynM jmnWoK"
+        color="#fff"
       >
         <a
           href="/about"
@@ -112,7 +116,7 @@ exports[`<Frame /> should render component when exist navigation 1`] = `
           }
         >
           <i
-            className="material-icons sc-EHOje jsOnhV"
+            className="material-icons sc-ifAKCX jzZElc"
           >
             settings
           </i>
@@ -126,10 +130,10 @@ exports[`<Frame /> should render component when exist navigation 1`] = `
 exports[`<Frame /> should render component when not exist navigation 1`] = `
 <div>
   <header
-    className="sc-htpNat krusbc"
+    className="sc-bwzfXH kabzOD"
   >
     <h1
-      className="sc-bxivhb eRKIhe"
+      className="sc-htpNat iTzsdR"
     >
       百人一首 - 
       This is subtitle
@@ -137,7 +141,7 @@ exports[`<Frame /> should render component when not exist navigation 1`] = `
     </h1>
   </header>
   <div
-    className="sc-htoDjs ejWmrN"
+    className="sc-gzVnrw dWyeKG"
   />
 </div>
 `;
