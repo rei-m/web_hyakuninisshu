@@ -54,6 +54,12 @@ export const withRipple = (WrappedComponent: React.ComponentClass) => {
       );
     }
 
+    public componentWillUnmount() {
+      if (this.clearRippleTimer) {
+        window.clearTimeout(this.clearRippleTimer);
+      }
+    }
+
     private holdContainer(component: HTMLDivElement) {
       this.container = component;
     }

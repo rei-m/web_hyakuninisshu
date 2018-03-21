@@ -18,7 +18,7 @@ const Frame = withRipple(withAppTheme(styled.div)`
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: #fff;
+  background-color: ${({ theme }) => theme.colorThin};
   box-shadow: 0 -1px 5px rgba(0, 0, 0, 0.26);
   font-family: 'Sawarabi Mincho';
   cursor: pointer;

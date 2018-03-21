@@ -7,7 +7,7 @@ exports[`<ToriFudaView /> should render component 1`] = `
   onMouseUp={[Function]}
 >
   <div
-    className="sc-bwzfXH ioCmsP"
+    className="sc-bwzfXH kTKPRr"
     color="#fff"
     onClick={[Function]}
     style={undefined}

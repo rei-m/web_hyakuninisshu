@@ -15,7 +15,7 @@ exports[`<QuestionSection /> should render component when answered 1`] = `
       10
     </div>
     <div
-      className="sc-bwzfXH ieGOie"
+      className="sc-bwzfXH bvmjNt"
       style={
         Object {
           "margin": "auto",
@@ -52,12 +52,13 @@ exports[`<QuestionSection /> should render component when answered 1`] = `
       onMouseUp={[Function]}
     >
       <div
-        className="sc-gzVnrw huyyAL"
+        className="sc-gzVnrw bvFKOA"
         color="#fff"
         onClick={[Function]}
         style={
           Object {
             "margin": "8px",
+            "opacity": 0.8,
           }
         }
       >
@@ -83,12 +84,13 @@ exports[`<QuestionSection /> should render component when answered 1`] = `
       onMouseUp={[Function]}
     >
       <div
-        className="sc-gzVnrw huyyAL"
+        className="sc-gzVnrw bvFKOA"
         color="#fff"
         onClick={[Function]}
         style={
           Object {
             "margin": "8px",
+            "opacity": 0.8,
           }
         }
       >
@@ -114,12 +116,13 @@ exports[`<QuestionSection /> should render component when answered 1`] = `
       onMouseUp={[Function]}
     >
       <div
-        className="sc-gzVnrw huyyAL"
+        className="sc-gzVnrw bvFKOA"
         color="#fff"
         onClick={[Function]}
         style={
           Object {
             "margin": "8px",
+            "opacity": 1,
           }
         }
       >
@@ -145,12 +148,13 @@ exports[`<QuestionSection /> should render component when answered 1`] = `
       onMouseUp={[Function]}
     >
       <div
-        className="sc-gzVnrw huyyAL"
+        className="sc-gzVnrw bvFKOA"
         color="#fff"
         onClick={[Function]}
         style={
           Object {
             "margin": "8px",
+            "opacity": 0.8,
           }
         }
       >
@@ -198,7 +202,7 @@ exports[`<QuestionSection /> should render component when not answered 1`] = `
       10
     </div>
     <div
-      className="sc-bwzfXH ieGOie"
+      className="sc-bwzfXH bvmjNt"
       style={
         Object {
           "margin": "auto",
@@ -235,12 +239,13 @@ exports[`<QuestionSection /> should render component when not answered 1`] = `
       onMouseUp={[Function]}
     >
       <div
-        className="sc-gzVnrw huyyAL"
+        className="sc-gzVnrw bvFKOA"
         color="#fff"
         onClick={[Function]}
         style={
           Object {
             "margin": "8px",
+            "opacity": 1,
           }
         }
       >
@@ -266,12 +271,13 @@ exports[`<QuestionSection /> should render component when not answered 1`] = `
       onMouseUp={[Function]}
     >
       <div
-        className="sc-gzVnrw huyyAL"
+        className="sc-gzVnrw bvFKOA"
         color="#fff"
         onClick={[Function]}
         style={
           Object {
             "margin": "8px",
+            "opacity": 1,
           }
         }
       >
@@ -297,12 +303,13 @@ exports[`<QuestionSection /> should render component when not answered 1`] = `
       onMouseUp={[Function]}
     >
       <div
-        className="sc-gzVnrw huyyAL"
+        className="sc-gzVnrw bvFKOA"
         color="#fff"
         onClick={[Function]}
         style={
           Object {
             "margin": "8px",
+            "opacity": 1,
           }
         }
       >
@@ -328,12 +335,13 @@ exports[`<QuestionSection /> should render component when not answered 1`] = `
       onMouseUp={[Function]}
     >
       <div
-        className="sc-gzVnrw huyyAL"
+        className="sc-gzVnrw bvFKOA"
         color="#fff"
         onClick={[Function]}
         style={
           Object {
             "margin": "8px",
+            "opacity": 1,
           }
         }
       >
