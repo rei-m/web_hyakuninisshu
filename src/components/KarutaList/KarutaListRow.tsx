@@ -19,6 +19,10 @@ const Row = withAppTheme(styled.div)`
   box-shadow: ${({ theme }) => theme.elevationShadow1x};
   margin: ${({ theme }) => theme.spacing1x};
   background-color: #fff;
+  cursor: pointer;
+  &:hover {
+    background-color: #f5f5f5;
+  }
 `;
 
 const ImageColumn = styled.div`
