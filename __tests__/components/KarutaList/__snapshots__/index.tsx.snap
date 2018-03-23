@@ -5,7 +5,7 @@ exports[`<KarutaList /> should render component 1`] = `
   className="sc-bZQynM dczuRC"
 >
   <div
-    className="sc-bdVaJa cHDoIk"
+    className="sc-bdVaJa dzVtvu"
     onClick={[Function]}
   >
     <div
@@ -47,7 +47,7 @@ exports[`<KarutaList /> should render component 1`] = `
     </div>
   </div>
   <div
-    className="sc-bdVaJa cHDoIk"
+    className="sc-bdVaJa dzVtvu"
     onClick={[Function]}
   >
     <div
