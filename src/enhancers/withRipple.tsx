@@ -23,19 +23,23 @@ const RippleContainer = styled.div`
   }
 `;
 
-export interface RippledComponentProps
-  extends React.HTMLAttributes<HTMLDivElement> {
+export interface RippledComponentProps {
   color?: string;
 }
 
-export const withRipple = (WrappedComponent: React.ComponentClass) => {
-  return class RippledComponent extends React.Component<RippledComponentProps> {
+// このHOC中途半端で汎用的に使えないので注意
+export function withRipple<T extends React.HTMLAttributes<HTMLElement>>(
+  WrappedComponent: React.ComponentClass<T>
+) {
+  return class RippledComponent extends React.Component<
+    RippledComponentProps & T
+  > {
     public static defaultProps: RippledComponentProps = { color: '#fff' };
 
     private container: HTMLDivElement;
     private clearRippleTimer: number;
 
-    constructor(props: RippledComponentProps) {
+    constructor(props: RippledComponentProps & T) {
       super(props);
       this.holdContainer = this.holdContainer.bind(this);
       this.addRipple = this.addRipple.bind(this);
@@ -99,4 +103,4 @@ export const withRipple = (WrappedComponent: React.ComponentClass) => {
       }, 1000);
     }
   };
-};
+}

@@ -2,7 +2,7 @@
 
 exports[`<KarutaListRow /> should render component 1`] = `
 <div
-  className="sc-bdVaJa cHDoIk"
+  className="sc-bdVaJa dzVtvu"
   onClick={[Function]}
 >
   <div
