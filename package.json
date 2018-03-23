@@ -4,8 +4,8 @@
   "description": "training of HyakunInisshu",
   "main": "index.js",
   "scripts": {
-    "build": "webpack --progress --colors",
-    "start": "webpack-dev-server --progress --colors",
+    "build": "NODE_ENV=production webpack --progress --colors",
+    "start": "NODE_ENV=development webpack-dev-server --progress --colors",
     "test": "jest",
     "test-update": "jest --updateSnapshot",
     "test-cov": "node --max_old_space_size=2048 $(npm bin)/jest --maxWorkers=2 --coverage",
