@@ -19,16 +19,16 @@ exports[`<Frame /> should render component when exist navigation 1`] = `
   <nav
     className="sc-EHOje iVKSta"
   >
-    <div
-      className="sc-bdVaJa gNYCTH"
-      onMouseDown={[Function]}
-      onMouseUp={[Function]}
+    <span
+      className="sc-bZQynM jmnWoK"
     >
-      <span
-        className="sc-bZQynM jmnWoK"
-        color="#fff"
+      <div
+        className="sc-bdVaJa gNYCTH"
+        onMouseDown={[Function]}
+        onMouseUp={[Function]}
       >
         <a
+          color="#fff"
           href="/training"
           onClick={[Function]}
           style={
@@ -43,18 +43,18 @@ exports[`<Frame /> should render component when exist navigation 1`] = `
             create
           </i>
         </a>
-      </span>
-    </div>
-    <div
-      className="sc-bdVaJa gNYCTH"
-      onMouseDown={[Function]}
-      onMouseUp={[Function]}
+      </div>
+    </span>
+    <span
+      className="sc-bZQynM jmnWoK"
     >
-      <span
-        className="sc-bZQynM jmnWoK"
-        color="#fff"
+      <div
+        className="sc-bdVaJa gNYCTH"
+        onMouseDown={[Function]}
+        onMouseUp={[Function]}
       >
         <a
+          color="#fff"
           href="/exam"
           onClick={[Function]}
           style={
@@ -69,18 +69,18 @@ exports[`<Frame /> should render component when exist navigation 1`] = `
             note
           </i>
         </a>
-      </span>
-    </div>
-    <div
-      className="sc-bdVaJa gNYCTH"
-      onMouseDown={[Function]}
-      onMouseUp={[Function]}
+      </div>
+    </span>
+    <span
+      className="sc-bZQynM jmnWoK"
     >
-      <span
-        className="sc-bZQynM jmnWoK"
-        color="#fff"
+      <div
+        className="sc-bdVaJa gNYCTH"
+        onMouseDown={[Function]}
+        onMouseUp={[Function]}
       >
         <a
+          color="#fff"
           href="/karutas"
           onClick={[Function]}
           style={
@@ -95,18 +95,18 @@ exports[`<Frame /> should render component when exist navigation 1`] = `
             library_books
           </i>
         </a>
-      </span>
-    </div>
-    <div
-      className="sc-bdVaJa gNYCTH"
-      onMouseDown={[Function]}
-      onMouseUp={[Function]}
+      </div>
+    </span>
+    <span
+      className="sc-bZQynM jmnWoK"
     >
-      <span
-        className="sc-bZQynM jmnWoK"
-        color="#fff"
+      <div
+        className="sc-bdVaJa gNYCTH"
+        onMouseDown={[Function]}
+        onMouseUp={[Function]}
       >
         <a
+          color="#fff"
           href="/about"
           onClick={[Function]}
           style={
@@ -121,8 +121,8 @@ exports[`<Frame /> should render component when exist navigation 1`] = `
             settings
           </i>
         </a>
-      </span>
-    </div>
+      </div>
+    </span>
   </nav>
 </div>
 `;

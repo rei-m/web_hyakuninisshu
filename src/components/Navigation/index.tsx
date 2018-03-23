@@ -1,7 +1,7 @@
 import * as React from 'react';
 import styled from 'styled-components';
 import { withAppTheme } from '../../styles';
-import { Link } from 'react-router-dom';
+import { Link, LinkProps } from 'react-router-dom';
 import NavIcon from '../NavIcon';
 import { withRipple } from '../../enhancers/withRipple';
 import { MenuType } from '../../enums';
@@ -29,52 +29,54 @@ const Root = withAppTheme(styled.nav)`
   }
 `;
 
-const IconBox = withRipple(styled.span`
+const IconBox = styled.span`
   flex-grow: 1;
   width: 100%;
   @media screen and (min-width: ${({ theme }) => theme.minWidthWide}) {
     flex-grow: 0;
     height: ${({ theme }) => theme.sideNavWidth};
   }
-`);
+`;
+
+const LinkWithRipple = withRipple<LinkProps>(Link);
 
 const Navigation: React.SFC<NavigationProps> = ({ currentMenuType }) => (
   <Root>
     <IconBox>
-      <Link to={ROUTE_PATHS.TRAINING} style={{ width: '100%' }}>
+      <LinkWithRipple to={ROUTE_PATHS.TRAINING} style={{ width: '100%' }}>
         <NavIcon
           iconType={MenuType.Training}
           text="練習"
           isCurrent={currentMenuType === MenuType.Training}
         />
-      </Link>
+      </LinkWithRipple>
     </IconBox>
     <IconBox>
-      <Link to={ROUTE_PATHS.EXAM} style={{ width: '100%' }}>
+      <LinkWithRipple to={ROUTE_PATHS.EXAM} style={{ width: '100%' }}>
         <NavIcon
           iconType={MenuType.Exam}
           text="腕試し"
           isCurrent={currentMenuType === MenuType.Exam}
         />
-      </Link>
+      </LinkWithRipple>
     </IconBox>
     <IconBox>
-      <Link to={ROUTE_PATHS.KARUTAS} style={{ width: '100%' }}>
+      <LinkWithRipple to={ROUTE_PATHS.KARUTAS} style={{ width: '100%' }}>
         <NavIcon
           iconType={MenuType.Material}
           text="資料"
           isCurrent={currentMenuType === MenuType.Material}
         />
-      </Link>
+      </LinkWithRipple>
     </IconBox>
     <IconBox>
-      <Link to={ROUTE_PATHS.ABOUT} style={{ width: '100%' }}>
+      <LinkWithRipple to={ROUTE_PATHS.ABOUT} style={{ width: '100%' }}>
         <NavIcon
           iconType={MenuType.Other}
           text="その他"
           isCurrent={currentMenuType === MenuType.Other}
         />
-      </Link>
+      </LinkWithRipple>
     </IconBox>
   </Root>
 );
