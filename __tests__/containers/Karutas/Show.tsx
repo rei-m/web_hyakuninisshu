@@ -26,7 +26,7 @@ describe('<KarutasShow />', () => {
   let mockStore: MockStore<GlobalState>;
 
   beforeEach(() => {
-    mockStore = mockAppStoreCreateor({
+    mockStore = mockAppStoreCreateor()({
       karutasState: {
         karutas: [create<Karuta>('karuta')]
       },

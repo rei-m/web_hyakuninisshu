@@ -1,16 +1,12 @@
-import * as nock from 'nock';
+import { GlobalState } from '../../../src/reducers/index';
 import * as React from 'react';
 import { MockStore } from 'redux-mock-store';
+import { AxiosInstance } from 'axios';
 import { shallow, ShallowWrapper } from 'enzyme';
 import { mockAppStoreCreateor } from '../../helpers';
-import { GlobalState } from '../../../src/reducers/index';
 import { initialState as karutasState } from '../../../src/reducers/karutas';
 import { initialState as questionsState } from '../../../src/reducers/questions';
-import {
-  FETCH_KARUTAS_NAME,
-  KARUTA_JSON_URL,
-  MY_GITHUB_ROOT
-} from '../../../src/actions/karutas';
+import { FETCH_KARUTAS_NAME } from '../../../src/actions/karutas';
 import Initializer from '../../../src/containers/Initializer';
 import Progress from '../../../src/components/Progress';
 
@@ -19,7 +15,11 @@ describe('<Initializer />', () => {
   let mockStore: MockStore<GlobalState>;
 
   beforeEach(() => {
-    mockStore = mockAppStoreCreateor({
+    const axiosInstance = {
+      get: (_url, _params) => Promise.resolve({ data: [], status: 200 })
+    };
+
+    mockStore = mockAppStoreCreateor(axiosInstance as AxiosInstance)({
       karutasState,
       questionsState
     });
@@ -36,9 +36,6 @@ describe('<Initializer />', () => {
   });
 
   it('should dispatch fetchKarutas action when components onStart fired', done => {
-    nock(MY_GITHUB_ROOT)
-      .get(KARUTA_JSON_URL)
-      .reply(200, []);
     wrapper
       .find(Progress)
       .props()

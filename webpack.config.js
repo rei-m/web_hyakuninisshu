@@ -2,6 +2,7 @@ const path = require('path');
 const webpack = require('webpack');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const CopyWebpackPlugin = require('copy-webpack-plugin')
 
 module.exports = {
   entry: './src/index.tsx',
@@ -93,6 +94,14 @@ module.exports = {
           limit: 1
         }
       },
+      {
+        test: /\.json$/,
+        loader: 'file-loader',
+        query: {
+          name: '[name]-[hash].[ext]',
+          publicPath: '/dist/',
+        }
+      }
     ]
   },
 
@@ -104,6 +113,13 @@ module.exports = {
     new ExtractTextPlugin({
       filename: 'bundle.css'
     }),
+    new CopyWebpackPlugin([
+      {
+        from: './assets/karuta_list.json',
+        to: './dist/assets',
+        toType: 'file'
+      },
+    ])
   ],
 
   devServer: {

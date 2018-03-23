@@ -24,7 +24,7 @@ describe('<KarutasIndex />', () => {
       }
     };
 
-    mockStore = mockAppStoreCreateor({
+    mockStore = mockAppStoreCreateor()({
       karutasState,
       questionsState
     });
