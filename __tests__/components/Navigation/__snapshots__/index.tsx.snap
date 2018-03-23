@@ -4,16 +4,16 @@ exports[`<Navigation /> should render component 1`] = `
 <nav
   className="sc-htpNat bNntMe"
 >
-  <div
-    className="sc-bwzfXH eoFNnb"
-    onMouseDown={[Function]}
-    onMouseUp={[Function]}
+  <span
+    className="sc-bxivhb geoeNk"
   >
-    <span
-      className="sc-bxivhb geoeNk"
-      color="#fff"
+    <div
+      className="sc-bwzfXH eoFNnb"
+      onMouseDown={[Function]}
+      onMouseUp={[Function]}
     >
       <a
+        color="#fff"
         href="/training"
         onClick={[Function]}
         style={
@@ -28,18 +28,18 @@ exports[`<Navigation /> should render component 1`] = `
           create
         </i>
       </a>
-    </span>
-  </div>
-  <div
-    className="sc-bwzfXH eoFNnb"
-    onMouseDown={[Function]}
-    onMouseUp={[Function]}
+    </div>
+  </span>
+  <span
+    className="sc-bxivhb geoeNk"
   >
-    <span
-      className="sc-bxivhb geoeNk"
-      color="#fff"
+    <div
+      className="sc-bwzfXH eoFNnb"
+      onMouseDown={[Function]}
+      onMouseUp={[Function]}
     >
       <a
+        color="#fff"
         href="/exam"
         onClick={[Function]}
         style={
@@ -54,18 +54,18 @@ exports[`<Navigation /> should render component 1`] = `
           note
         </i>
       </a>
-    </span>
-  </div>
-  <div
-    className="sc-bwzfXH eoFNnb"
-    onMouseDown={[Function]}
-    onMouseUp={[Function]}
+    </div>
+  </span>
+  <span
+    className="sc-bxivhb geoeNk"
   >
-    <span
-      className="sc-bxivhb geoeNk"
-      color="#fff"
+    <div
+      className="sc-bwzfXH eoFNnb"
+      onMouseDown={[Function]}
+      onMouseUp={[Function]}
     >
       <a
+        color="#fff"
         href="/karutas"
         onClick={[Function]}
         style={
@@ -80,18 +80,18 @@ exports[`<Navigation /> should render component 1`] = `
           library_books
         </i>
       </a>
-    </span>
-  </div>
-  <div
-    className="sc-bwzfXH eoFNnb"
-    onMouseDown={[Function]}
-    onMouseUp={[Function]}
+    </div>
+  </span>
+  <span
+    className="sc-bxivhb geoeNk"
   >
-    <span
-      className="sc-bxivhb geoeNk"
-      color="#fff"
+    <div
+      className="sc-bwzfXH eoFNnb"
+      onMouseDown={[Function]}
+      onMouseUp={[Function]}
     >
       <a
+        color="#fff"
         href="/about"
         onClick={[Function]}
         style={
@@ -106,8 +106,8 @@ exports[`<Navigation /> should render component 1`] = `
           settings
         </i>
       </a>
-    </span>
-  </div>
+    </div>
+  </span>
 </nav>
 `;
 
@@ -115,16 +115,16 @@ exports[`<Navigation /> should render component when current is exam 1`] = `
 <nav
   className="sc-htpNat bNntMe"
 >
-  <div
-    className="sc-bwzfXH eoFNnb"
-    onMouseDown={[Function]}
-    onMouseUp={[Function]}
+  <span
+    className="sc-bxivhb geoeNk"
   >
-    <span
-      className="sc-bxivhb geoeNk"
-      color="#fff"
+    <div
+      className="sc-bwzfXH eoFNnb"
+      onMouseDown={[Function]}
+      onMouseUp={[Function]}
     >
       <a
+        color="#fff"
         href="/training"
         onClick={[Function]}
         style={
@@ -139,18 +139,18 @@ exports[`<Navigation /> should render component when current is exam 1`] = `
           create
         </i>
       </a>
-    </span>
-  </div>
-  <div
-    className="sc-bwzfXH eoFNnb"
-    onMouseDown={[Function]}
-    onMouseUp={[Function]}
+    </div>
+  </span>
+  <span
+    className="sc-bxivhb geoeNk"
   >
-    <span
-      className="sc-bxivhb geoeNk"
-      color="#fff"
+    <div
+      className="sc-bwzfXH eoFNnb"
+      onMouseDown={[Function]}
+      onMouseUp={[Function]}
     >
       <a
+        color="#fff"
         href="/exam"
         onClick={[Function]}
         style={
@@ -165,18 +165,18 @@ exports[`<Navigation /> should render component when current is exam 1`] = `
           note
         </i>
       </a>
-    </span>
-  </div>
-  <div
-    className="sc-bwzfXH eoFNnb"
-    onMouseDown={[Function]}
-    onMouseUp={[Function]}
+    </div>
+  </span>
+  <span
+    className="sc-bxivhb geoeNk"
   >
-    <span
-      className="sc-bxivhb geoeNk"
-      color="#fff"
+    <div
+      className="sc-bwzfXH eoFNnb"
+      onMouseDown={[Function]}
+      onMouseUp={[Function]}
     >
       <a
+        color="#fff"
         href="/karutas"
         onClick={[Function]}
         style={
@@ -191,18 +191,18 @@ exports[`<Navigation /> should render component when current is exam 1`] = `
           library_books
         </i>
       </a>
-    </span>
-  </div>
-  <div
-    className="sc-bwzfXH eoFNnb"
-    onMouseDown={[Function]}
-    onMouseUp={[Function]}
+    </div>
+  </span>
+  <span
+    className="sc-bxivhb geoeNk"
   >
-    <span
-      className="sc-bxivhb geoeNk"
-      color="#fff"
+    <div
+      className="sc-bwzfXH eoFNnb"
+      onMouseDown={[Function]}
+      onMouseUp={[Function]}
     >
       <a
+        color="#fff"
         href="/about"
         onClick={[Function]}
         style={
@@ -217,8 +217,8 @@ exports[`<Navigation /> should render component when current is exam 1`] = `
           settings
         </i>
       </a>
-    </span>
-  </div>
+    </div>
+  </span>
 </nav>
 `;
 
@@ -226,16 +226,16 @@ exports[`<Navigation /> should render component when current is material 1`] = `
 <nav
   className="sc-htpNat bNntMe"
 >
-  <div
-    className="sc-bwzfXH eoFNnb"
-    onMouseDown={[Function]}
-    onMouseUp={[Function]}
+  <span
+    className="sc-bxivhb geoeNk"
   >
-    <span
-      className="sc-bxivhb geoeNk"
-      color="#fff"
+    <div
+      className="sc-bwzfXH eoFNnb"
+      onMouseDown={[Function]}
+      onMouseUp={[Function]}
     >
       <a
+        color="#fff"
         href="/training"
         onClick={[Function]}
         style={
@@ -250,18 +250,18 @@ exports[`<Navigation /> should render component when current is material 1`] = `
           create
         </i>
       </a>
-    </span>
-  </div>
-  <div
-    className="sc-bwzfXH eoFNnb"
-    onMouseDown={[Function]}
-    onMouseUp={[Function]}
+    </div>
+  </span>
+  <span
+    className="sc-bxivhb geoeNk"
   >
-    <span
-      className="sc-bxivhb geoeNk"
-      color="#fff"
+    <div
+      className="sc-bwzfXH eoFNnb"
+      onMouseDown={[Function]}
+      onMouseUp={[Function]}
     >
       <a
+        color="#fff"
         href="/exam"
         onClick={[Function]}
         style={
@@ -276,18 +276,18 @@ exports[`<Navigation /> should render component when current is material 1`] = `
           note
         </i>
       </a>
-    </span>
-  </div>
-  <div
-    className="sc-bwzfXH eoFNnb"
-    onMouseDown={[Function]}
-    onMouseUp={[Function]}
+    </div>
+  </span>
+  <span
+    className="sc-bxivhb geoeNk"
   >
-    <span
-      className="sc-bxivhb geoeNk"
-      color="#fff"
+    <div
+      className="sc-bwzfXH eoFNnb"
+      onMouseDown={[Function]}
+      onMouseUp={[Function]}
     >
       <a
+        color="#fff"
         href="/karutas"
         onClick={[Function]}
         style={
@@ -302,18 +302,18 @@ exports[`<Navigation /> should render component when current is material 1`] = `
           library_books
         </i>
       </a>
-    </span>
-  </div>
-  <div
-    className="sc-bwzfXH eoFNnb"
-    onMouseDown={[Function]}
-    onMouseUp={[Function]}
+    </div>
+  </span>
+  <span
+    className="sc-bxivhb geoeNk"
   >
-    <span
-      className="sc-bxivhb geoeNk"
-      color="#fff"
+    <div
+      className="sc-bwzfXH eoFNnb"
+      onMouseDown={[Function]}
+      onMouseUp={[Function]}
     >
       <a
+        color="#fff"
         href="/about"
         onClick={[Function]}
         style={
@@ -328,8 +328,8 @@ exports[`<Navigation /> should render component when current is material 1`] = `
           settings
         </i>
       </a>
-    </span>
-  </div>
+    </div>
+  </span>
 </nav>
 `;
 
@@ -337,16 +337,16 @@ exports[`<Navigation /> should render component when current is other 1`] = `
 <nav
   className="sc-htpNat bNntMe"
 >
-  <div
-    className="sc-bwzfXH eoFNnb"
-    onMouseDown={[Function]}
-    onMouseUp={[Function]}
+  <span
+    className="sc-bxivhb geoeNk"
   >
-    <span
-      className="sc-bxivhb geoeNk"
-      color="#fff"
+    <div
+      className="sc-bwzfXH eoFNnb"
+      onMouseDown={[Function]}
+      onMouseUp={[Function]}
     >
       <a
+        color="#fff"
         href="/training"
         onClick={[Function]}
         style={
@@ -361,18 +361,18 @@ exports[`<Navigation /> should render component when current is other 1`] = `
           create
         </i>
       </a>
-    </span>
-  </div>
-  <div
-    className="sc-bwzfXH eoFNnb"
-    onMouseDown={[Function]}
-    onMouseUp={[Function]}
+    </div>
+  </span>
+  <span
+    className="sc-bxivhb geoeNk"
   >
-    <span
-      className="sc-bxivhb geoeNk"
-      color="#fff"
+    <div
+      className="sc-bwzfXH eoFNnb"
+      onMouseDown={[Function]}
+      onMouseUp={[Function]}
     >
       <a
+        color="#fff"
         href="/exam"
         onClick={[Function]}
         style={
@@ -387,18 +387,18 @@ exports[`<Navigation /> should render component when current is other 1`] = `
           note
         </i>
       </a>
-    </span>
-  </div>
-  <div
-    className="sc-bwzfXH eoFNnb"
-    onMouseDown={[Function]}
-    onMouseUp={[Function]}
+    </div>
+  </span>
+  <span
+    className="sc-bxivhb geoeNk"
   >
-    <span
-      className="sc-bxivhb geoeNk"
-      color="#fff"
+    <div
+      className="sc-bwzfXH eoFNnb"
+      onMouseDown={[Function]}
+      onMouseUp={[Function]}
     >
       <a
+        color="#fff"
         href="/karutas"
         onClick={[Function]}
         style={
@@ -413,18 +413,18 @@ exports[`<Navigation /> should render component when current is other 1`] = `
           library_books
         </i>
       </a>
-    </span>
-  </div>
-  <div
-    className="sc-bwzfXH eoFNnb"
-    onMouseDown={[Function]}
-    onMouseUp={[Function]}
+    </div>
+  </span>
+  <span
+    className="sc-bxivhb geoeNk"
   >
-    <span
-      className="sc-bxivhb geoeNk"
-      color="#fff"
+    <div
+      className="sc-bwzfXH eoFNnb"
+      onMouseDown={[Function]}
+      onMouseUp={[Function]}
     >
       <a
+        color="#fff"
         href="/about"
         onClick={[Function]}
         style={
@@ -439,8 +439,8 @@ exports[`<Navigation /> should render component when current is other 1`] = `
           settings
         </i>
       </a>
-    </span>
-  </div>
+    </div>
+  </span>
 </nav>
 `;
 
@@ -448,16 +448,16 @@ exports[`<Navigation /> should render component when current is training 1`] = `
 <nav
   className="sc-htpNat bNntMe"
 >
-  <div
-    className="sc-bwzfXH eoFNnb"
-    onMouseDown={[Function]}
-    onMouseUp={[Function]}
+  <span
+    className="sc-bxivhb geoeNk"
   >
-    <span
-      className="sc-bxivhb geoeNk"
-      color="#fff"
+    <div
+      className="sc-bwzfXH eoFNnb"
+      onMouseDown={[Function]}
+      onMouseUp={[Function]}
     >
       <a
+        color="#fff"
         href="/training"
         onClick={[Function]}
         style={
@@ -472,18 +472,18 @@ exports[`<Navigation /> should render component when current is training 1`] = `
           create
         </i>
       </a>
-    </span>
-  </div>
-  <div
-    className="sc-bwzfXH eoFNnb"
-    onMouseDown={[Function]}
-    onMouseUp={[Function]}
+    </div>
+  </span>
+  <span
+    className="sc-bxivhb geoeNk"
   >
-    <span
-      className="sc-bxivhb geoeNk"
-      color="#fff"
+    <div
+      className="sc-bwzfXH eoFNnb"
+      onMouseDown={[Function]}
+      onMouseUp={[Function]}
     >
       <a
+        color="#fff"
         href="/exam"
         onClick={[Function]}
         style={
@@ -498,18 +498,18 @@ exports[`<Navigation /> should render component when current is training 1`] = `
           note
         </i>
       </a>
-    </span>
-  </div>
-  <div
-    className="sc-bwzfXH eoFNnb"
-    onMouseDown={[Function]}
-    onMouseUp={[Function]}
+    </div>
+  </span>
+  <span
+    className="sc-bxivhb geoeNk"
   >
-    <span
-      className="sc-bxivhb geoeNk"
-      color="#fff"
+    <div
+      className="sc-bwzfXH eoFNnb"
+      onMouseDown={[Function]}
+      onMouseUp={[Function]}
     >
       <a
+        color="#fff"
         href="/karutas"
         onClick={[Function]}
         style={
@@ -524,18 +524,18 @@ exports[`<Navigation /> should render component when current is training 1`] = `
           library_books
         </i>
       </a>
-    </span>
-  </div>
-  <div
-    className="sc-bwzfXH eoFNnb"
-    onMouseDown={[Function]}
-    onMouseUp={[Function]}
+    </div>
+  </span>
+  <span
+    className="sc-bxivhb geoeNk"
   >
-    <span
-      className="sc-bxivhb geoeNk"
-      color="#fff"
+    <div
+      className="sc-bwzfXH eoFNnb"
+      onMouseDown={[Function]}
+      onMouseUp={[Function]}
     >
       <a
+        color="#fff"
         href="/about"
         onClick={[Function]}
         style={
@@ -550,7 +550,7 @@ exports[`<Navigation /> should render component when current is training 1`] = `
           settings
         </i>
       </a>
-    </span>
-  </div>
+    </div>
+  </span>
 </nav>
 `;

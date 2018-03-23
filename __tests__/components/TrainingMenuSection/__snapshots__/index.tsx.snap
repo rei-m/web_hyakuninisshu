@@ -12,142 +12,150 @@ exports[`<TrainingMenuSection /> should render component 1`] = `
   <form
     onSubmit={[Function]}
   >
-    <label
-      className="pt-label sc-ifAKCX TiiUY"
+    <div
+      className="sc-ifAKCX TiiUY"
     >
       出題範囲
       <div
         className="sc-EHOje cmtNwr"
       >
-        <div
-          className="pt-select pt-large sc-bZQynM falorR"
+        <label
+          className="pt-label"
         >
-          <select
-            name="rangeFrom"
-            onBlur={[Function]}
-            onChange={[Function]}
-            value="1"
+          <div
+            className="pt-select pt-large sc-bZQynM gJwXUW"
           >
-            <option
-              value={1}
+            <select
+              name="rangeFrom"
+              onBlur={[Function]}
+              onChange={[Function]}
+              value="1"
             >
-              一番
-            </option>
-            <option
-              value={11}
-            >
-              十一番
-            </option>
-            <option
-              value={21}
-            >
-              二十一番
-            </option>
-            <option
-              value={31}
-            >
-              三十一番
-            </option>
-            <option
-              value={41}
-            >
-              四十一番
-            </option>
-            <option
-              value={51}
-            >
-              五十一番
-            </option>
-            <option
-              value={61}
-            >
-              六十一番
-            </option>
-            <option
-              value={71}
-            >
-              七十一番
-            </option>
-            <option
-              value={81}
-            >
-              八十一番
-            </option>
-            <option
-              value={91}
-            >
-              九十一番
-            </option>
-          </select>
-        </div>
+              <option
+                value={1}
+              >
+                一番
+              </option>
+              <option
+                value={11}
+              >
+                十一番
+              </option>
+              <option
+                value={21}
+              >
+                二十一番
+              </option>
+              <option
+                value={31}
+              >
+                三十一番
+              </option>
+              <option
+                value={41}
+              >
+                四十一番
+              </option>
+              <option
+                value={51}
+              >
+                五十一番
+              </option>
+              <option
+                value={61}
+              >
+                六十一番
+              </option>
+              <option
+                value={71}
+              >
+                七十一番
+              </option>
+              <option
+                value={81}
+              >
+                八十一番
+              </option>
+              <option
+                value={91}
+              >
+                九十一番
+              </option>
+            </select>
+          </div>
+        </label>
         <span
           className="sc-gzVnrw kDSqyC"
         >
           〜
         </span>
-        <div
-          className="pt-select pt-large sc-bZQynM falorR"
+        <label
+          className="pt-label"
         >
-          <select
-            name="rangeTo"
-            onBlur={[Function]}
-            onChange={[Function]}
-            value="100"
+          <div
+            className="pt-select pt-large sc-bZQynM gJwXUW"
           >
-            <option
-              value={10}
+            <select
+              name="rangeTo"
+              onBlur={[Function]}
+              onChange={[Function]}
+              value="100"
             >
-              十番
-            </option>
-            <option
-              value={20}
-            >
-              二十番
-            </option>
-            <option
-              value={30}
-            >
-              三十番
-            </option>
-            <option
-              value={40}
-            >
-              四十番
-            </option>
-            <option
-              value={50}
-            >
-              五十番
-            </option>
-            <option
-              value={60}
-            >
-              六十番
-            </option>
-            <option
-              value={70}
-            >
-              七十番
-            </option>
-            <option
-              value={80}
-            >
-              八十番
-            </option>
-            <option
-              value={90}
-            >
-              九十番
-            </option>
-            <option
-              value={100}
-            >
-              百番
-            </option>
-          </select>
-        </div>
+              <option
+                value={10}
+              >
+                十番
+              </option>
+              <option
+                value={20}
+              >
+                二十番
+              </option>
+              <option
+                value={30}
+              >
+                三十番
+              </option>
+              <option
+                value={40}
+              >
+                四十番
+              </option>
+              <option
+                value={50}
+              >
+                五十番
+              </option>
+              <option
+                value={60}
+              >
+                六十番
+              </option>
+              <option
+                value={70}
+              >
+                七十番
+              </option>
+              <option
+                value={80}
+              >
+                八十番
+              </option>
+              <option
+                value={90}
+              >
+                九十番
+              </option>
+              <option
+                value={100}
+              >
+                百番
+              </option>
+            </select>
+          </div>
+        </label>
       </div>
-    </label>
+    </div>
     <label
       className="pt-label sc-bwzfXH gXQQfT"
     >

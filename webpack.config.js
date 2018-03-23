@@ -4,10 +4,12 @@ const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin')
 
+const { NODE_ENV } = process.env;
+
 module.exports = {
   entry: './src/index.tsx',
 
-  mode: 'development',
+  mode: NODE_ENV,
 
   output: {
     filename: 'bundle.js',
@@ -15,11 +17,9 @@ module.exports = {
     publicPath: '/dist/'
   },
 
-  // Enable sourcemaps for debugging webpack's output.
   devtool: 'source-map',
 
   resolve: {
-      // Add '.ts' and '.tsx' as resolvable extensions.
       extensions: ['.ts', '.tsx', '.js', '.json', '.css']
   },
 
@@ -116,7 +116,7 @@ module.exports = {
     new CopyWebpackPlugin([
       {
         from: './assets/karuta_list.json',
-        to: './dist/assets',
+        to: './assets/karuta_list.json',
         toType: 'file'
       },
     ])
