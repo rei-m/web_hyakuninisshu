@@ -28,7 +28,7 @@ const setUpQuestions = () =>
 
 const setUpStoreWithKarutas = () => {
   const karutas = setUpKarutas();
-  return mockAppStoreCreateor({
+  return mockAppStoreCreateor()({
     karutasState: { karutas },
     questionsState: questionsInitialState
   });
@@ -191,7 +191,7 @@ describe('QuestionsActionCreator', () => {
       });
     });
 
-    const store = mockAppStoreCreateor({
+    const store = mockAppStoreCreateor()({
       karutasState: { karutas },
       questionsState: {
         ...questionsInitialState,
@@ -229,7 +229,7 @@ describe('QuestionsActionCreator', () => {
         }),
         id: 1
       });
-      store = mockAppStoreCreateor({
+      store = mockAppStoreCreateor()({
         karutasState: { karutas },
         questionsState: {
           ...questionsInitialState,
@@ -284,7 +284,7 @@ describe('QuestionsActionCreator', () => {
       karutaId: 1,
       questionId: 1
     });
-    const store = mockAppStoreCreateor({
+    const store = mockAppStoreCreateor()({
       karutasState: { karutas },
       questionsState: {
         ...questionsInitialState,
@@ -317,7 +317,7 @@ describe('QuestionsActionCreator', () => {
       karutaId: 1,
       questionId: 1
     });
-    const store = mockAppStoreCreateor({
+    const store = mockAppStoreCreateor()({
       karutasState: { karutas },
       questionsState: {
         ...questionsInitialState,

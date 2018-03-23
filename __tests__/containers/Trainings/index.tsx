@@ -24,7 +24,7 @@ describe('<Trainings />', () => {
         match: { params: {} }
       }
     };
-    mockStore = mockAppStoreCreateor({
+    mockStore = mockAppStoreCreateor()({
       karutasState,
       questionsState
     });

@@ -38,7 +38,7 @@ describe('<TrainingInitializer />', () => {
   let mockRouter: any;
 
   beforeEach(() => {
-    mockStore = mockAppStoreCreateor({
+    mockStore = mockAppStoreCreateor()({
       karutasState,
       questionsState
     });

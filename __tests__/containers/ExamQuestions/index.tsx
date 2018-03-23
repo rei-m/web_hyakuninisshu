@@ -74,7 +74,7 @@ describe('<ExamQuestions />', () => {
   describe('when question is not started', () => {
     it('should render ExamInitializer', () => {
       const mockRouter = createMockRouter(10000);
-      const mockStore = mockAppStoreCreateor({
+      const mockStore = mockAppStoreCreateor()({
         karutasState,
         questionsState
       });
@@ -88,7 +88,7 @@ describe('<ExamQuestions />', () => {
     let mockStore: MockStore<GlobalState>;
     beforeEach(() => {
       const mockRouter = createMockRouter(10000);
-      mockStore = mockAppStoreCreateor({
+      mockStore = mockAppStoreCreateor()({
         karutasState,
         questionsState: {
           ...questionsState,
@@ -131,7 +131,7 @@ describe('<ExamQuestions />', () => {
 
     beforeEach(() => {
       const mockRouter = createMockRouter(10000);
-      mockStore = mockAppStoreCreateor({
+      mockStore = mockAppStoreCreateor()({
         karutasState,
         questionsState: {
           ...questionsState,
@@ -167,7 +167,7 @@ describe('<ExamQuestions />', () => {
 
     beforeEach(() => {
       const mockRouter = createMockRouter(10000);
-      mockStore = mockAppStoreCreateor({
+      mockStore = mockAppStoreCreateor()({
         karutasState,
         questionsState: {
           ...questionsState,

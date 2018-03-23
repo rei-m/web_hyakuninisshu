@@ -37,7 +37,7 @@ const createMockStore = (
     })
   ]
 ) => {
-  return mockAppStoreCreateor({
+  return mockAppStoreCreateor()({
     karutasState: {
       karutas
     },
