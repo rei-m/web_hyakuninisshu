@@ -1,19 +1,14 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<KarutaDetailSection /> should render component 1`] = `
-<section
-  className="sc-gzVnrw jUrsgr"
+<div
+  className="sc-bZQynM juXCbK"
 >
-  <h1
-    className="sc-bdVaJa fXsTJn"
-  >
-    一番
-  </h1>
   <article
-    className="sc-bwzfXH dxouVp"
+    className="sc-bdVaJa imgfUs"
   >
     <h3
-      className="sc-htpNat dZuADa"
+      className="sc-bwzfXH kksYFg"
     >
       一番
        / 
@@ -29,53 +24,53 @@ exports[`<KarutaDetailSection /> should render component 1`] = `
       }
     />
     <div
-      className="sc-bxivhb etxVRD"
+      className="sc-htpNat VNKXV"
     >
       <div
-        className="sc-ifAKCX gwlZIT"
+        className="sc-bxivhb lnrVgD"
       >
         原文
       </div>
       <div
-        className="sc-EHOje iPmBsV"
+        className="sc-ifAKCX laGmay"
       >
         初句 二句 三句
       </div>
       <div
-        className="sc-EHOje iPmBsV"
+        className="sc-ifAKCX laGmay"
       >
         四句 五句
       </div>
       <div
-        className="sc-EHOje iPmBsV"
+        className="sc-ifAKCX laGmay"
       >
         <span
-          className="sc-bZQynM inIGF"
+          className="sc-EHOje hDCzQl"
         >
           し
         </span>
         ょく にく さんく
       </div>
       <div
-        className="sc-EHOje iPmBsV"
+        className="sc-ifAKCX laGmay"
       >
         よんく ごく
       </div>
     </div>
     <div
-      className="sc-bxivhb etxVRD"
+      className="sc-htpNat VNKXV"
     >
       <div
-        className="sc-ifAKCX gwlZIT"
+        className="sc-bxivhb lnrVgD"
       >
         訳
       </div>
       <div
-        className="sc-EHOje iPmBsV"
+        className="sc-ifAKCX laGmay"
       >
         歌の訳
       </div>
     </div>
   </article>
-</section>
+</div>
 `;

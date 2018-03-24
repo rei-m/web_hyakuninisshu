@@ -2,7 +2,7 @@
 
 exports[`<PageTitle /> should render component 1`] = `
 <h1
-  className="sc-bdVaJa fXsTJn"
+  className="sc-bdVaJa hRnhkM"
 >
   hoge
 </h1>
