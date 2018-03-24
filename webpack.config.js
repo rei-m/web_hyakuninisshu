@@ -27,10 +27,11 @@ const plugins = [
 
 if (NODE_ENV === 'development') {
   plugins.push(
-  new HtmlWebpackPlugin({
-    template: './public/index.html',
-    inject: false
-  }));
+    new HtmlWebpackPlugin({
+      template: './public/index.html',
+      inject: false
+    })
+  );
 }
 
 module.exports = {
