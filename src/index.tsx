@@ -9,6 +9,10 @@ import Application from './Application';
 import { getStore } from './store';
 import { appTheme } from './styles';
 
+if (process.env.NODE_ENV !== 'production') {
+  console.dir('Looks like we are in development mode!');
+}
+
 ReactDOM.render(
   <Provider store={getStore()}>
     <BrowserRouter>

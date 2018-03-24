@@ -1,51 +1,16 @@
 const path = require('path');
 const webpack = require('webpack');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
-const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin')
-
-const { NODE_ENV } = process.env;
-
-const plugins = [
-  new webpack.HotModuleReplacementPlugin(),
-  new ExtractTextPlugin({
-    filename: 'bundle.css'
-  }),
-  new CopyWebpackPlugin([
-    {
-      from: path.join(
-        __dirname,
-        'node_modules',
-        'normalize.css',
-        'normalize.css'
-      ),
-      to: './normalize.css',
-      toType: 'file'
-    }
-  ])
-];
-
-if (NODE_ENV === 'development') {
-  plugins.push(
-    new HtmlWebpackPlugin({
-      template: './public/index.html',
-      inject: false
-    })
-  );
-}
 
 module.exports = {
   entry: './src/index.tsx',
-
-  mode: NODE_ENV,
 
   output: {
     filename: 'bundle.js',
     path: path.resolve(__dirname, 'public', 'assets'),
     publicPath: '/assets/'
   },
-
-  devtool: 'source-map',
 
   resolve: {
       extensions: ['.ts', '.tsx', '.js', '.json', '.css']
@@ -120,13 +85,18 @@ module.exports = {
     ]
   },
 
-  plugins: plugins,
-
-  devServer: {
-    contentBase: path.resolve(__dirname, 'public'),
-    compress: true,
-    port: 3000,
-    hot: true,
-    historyApiFallback: true
-  }
+  plugins: [
+    new CopyWebpackPlugin([
+      {
+        from: path.join(
+          __dirname,
+          'node_modules',
+          'normalize.css',
+          'normalize.css'
+        ),
+        to: './normalize.css',
+        toType: 'file'
+      }
+    ])
+  ]
 };
