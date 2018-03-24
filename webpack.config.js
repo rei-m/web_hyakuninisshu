@@ -6,6 +6,34 @@ const CopyWebpackPlugin = require('copy-webpack-plugin')
 
 const { NODE_ENV } = process.env;
 
+const plugins = [
+  new webpack.HotModuleReplacementPlugin(),
+  new ExtractTextPlugin({
+    filename: 'bundle.css'
+  }),
+  new CopyWebpackPlugin([
+    {
+      from: path.join(
+        __dirname,
+        'node_modules',
+        'normalize.css',
+        'normalize.css'
+      ),
+      to: './normalize.css',
+      toType: 'file'
+    }
+  ])
+];
+
+if (NODE_ENV === 'development') {
+  plugins.push(
+    new HtmlWebpackPlugin({
+      template: './public/index.html',
+      inject: false
+    })
+  );
+}
+
 module.exports = {
   entry: './src/index.tsx',
 
@@ -13,8 +41,8 @@ module.exports = {
 
   output: {
     filename: 'bundle.js',
-    path: path.resolve(__dirname, 'dist'),
-    publicPath: '/dist/'
+    path: path.resolve(__dirname, 'public', 'assets'),
+    publicPath: '/assets/'
   },
 
   devtool: 'source-map',
@@ -46,12 +74,6 @@ module.exports = {
           path.join(
             __dirname,
             'node_modules',
-            'normalize.css',
-            'normalize.css'
-          ),
-          path.join(
-            __dirname,
-            'node_modules',
             '@blueprintjs',
             'core',
             'lib',
@@ -67,11 +89,6 @@ module.exports = {
             'css',
             'blueprint-icons.css'
           ),
-          path.join(
-            __dirname,
-            'css',
-            'style.css'
-          ),
         ],
         use: ExtractTextPlugin.extract({
           fallback: 'style-loader',
@@ -82,8 +99,7 @@ module.exports = {
         test: /\.(png|jpg|gif)$/,
         loader: 'file-loader',
         query: {
-          name: 'images/[name]-[hash].[ext]',
-          publicPath: '/dist/',
+          name: 'images/[name]-[hash].[ext]'
         }
       },
       {
@@ -98,32 +114,16 @@ module.exports = {
         test: /\.json$/,
         loader: 'file-loader',
         query: {
-          name: '[name]-[hash].[ext]',
-          publicPath: '/dist/',
+          name: '[name]-[hash].[ext]'
         }
       }
     ]
   },
 
-  plugins: [
-    new webpack.HotModuleReplacementPlugin(),
-    new HtmlWebpackPlugin({
-      template: './index.html'
-    }),
-    new ExtractTextPlugin({
-      filename: 'bundle.css'
-    }),
-    new CopyWebpackPlugin([
-      {
-        from: './assets/karuta_list.json',
-        to: './assets/karuta_list.json',
-        toType: 'file'
-      },
-    ])
-  ],
+  plugins: plugins,
 
   devServer: {
-    contentBase: path.resolve(__dirname),
+    contentBase: path.resolve(__dirname, 'public'),
     compress: true,
     port: 3000,
     hot: true,
