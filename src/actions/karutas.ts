@@ -4,7 +4,7 @@ import { Karuta } from '../types';
 import { AppError, AppErrorType } from '../errors';
 import { convertCamelKey } from '../utils';
 
-export const KARUTA_JSON_URL = '/assets/karuta_list.json';
+export const KARUTA_JSON_URL = '/data/karuta_list.json';
 
 export const FETCH_KARUTAS_NAME = 'FETCH_KARUTAS_NAME';
 export type FETCH_KARUTAS_TYPE = typeof FETCH_KARUTAS_NAME;
@@ -33,6 +33,7 @@ export type KarutaActions = FetchKarutasAction | RaiseKarutasErrorAction;
  */
 export const fetchKarutas = () => {
   return async (dispatch: Dispatch<GlobalState>, _, { axios }) => {
+    // ここ大したjsonでもないのでbundleしてしまってもいいけど、非同期のactionを作りたかったからあえてこうしている
     const response = await axios.get(KARUTA_JSON_URL);
     if (response.status === 200) {
       const json = response.data;
