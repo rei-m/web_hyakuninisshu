@@ -9,6 +9,8 @@ export interface PageTitleProps {
 const H2 = withAppTheme(styled.h1)`
   padding: ${({ theme }) => theme.spacing2x};
   font-size: 2rem;
+  margin: 0;
+  line-height: 2rem;
 `;
 
 const PageTitle: React.SFC<PageTitleProps> = ({ title }) => <H2>{title}</H2>;
