@@ -18,6 +18,7 @@ exports[`<Navigation /> should render component 1`] = `
         onClick={[Function]}
         style={
           Object {
+            "height": "100%",
             "width": "100%",
           }
         }
@@ -44,6 +45,7 @@ exports[`<Navigation /> should render component 1`] = `
         onClick={[Function]}
         style={
           Object {
+            "height": "100%",
             "width": "100%",
           }
         }
@@ -70,6 +72,7 @@ exports[`<Navigation /> should render component 1`] = `
         onClick={[Function]}
         style={
           Object {
+            "height": "100%",
             "width": "100%",
           }
         }
@@ -96,6 +99,7 @@ exports[`<Navigation /> should render component 1`] = `
         onClick={[Function]}
         style={
           Object {
+            "height": "100%",
             "width": "100%",
           }
         }
@@ -129,6 +133,7 @@ exports[`<Navigation /> should render component when current is exam 1`] = `
         onClick={[Function]}
         style={
           Object {
+            "height": "100%",
             "width": "100%",
           }
         }
@@ -155,6 +160,7 @@ exports[`<Navigation /> should render component when current is exam 1`] = `
         onClick={[Function]}
         style={
           Object {
+            "height": "100%",
             "width": "100%",
           }
         }
@@ -181,6 +187,7 @@ exports[`<Navigation /> should render component when current is exam 1`] = `
         onClick={[Function]}
         style={
           Object {
+            "height": "100%",
             "width": "100%",
           }
         }
@@ -207,6 +214,7 @@ exports[`<Navigation /> should render component when current is exam 1`] = `
         onClick={[Function]}
         style={
           Object {
+            "height": "100%",
             "width": "100%",
           }
         }
@@ -240,6 +248,7 @@ exports[`<Navigation /> should render component when current is material 1`] = `
         onClick={[Function]}
         style={
           Object {
+            "height": "100%",
             "width": "100%",
           }
         }
@@ -266,6 +275,7 @@ exports[`<Navigation /> should render component when current is material 1`] = `
         onClick={[Function]}
         style={
           Object {
+            "height": "100%",
             "width": "100%",
           }
         }
@@ -292,6 +302,7 @@ exports[`<Navigation /> should render component when current is material 1`] = `
         onClick={[Function]}
         style={
           Object {
+            "height": "100%",
             "width": "100%",
           }
         }
@@ -318,6 +329,7 @@ exports[`<Navigation /> should render component when current is material 1`] = `
         onClick={[Function]}
         style={
           Object {
+            "height": "100%",
             "width": "100%",
           }
         }
@@ -351,6 +363,7 @@ exports[`<Navigation /> should render component when current is other 1`] = `
         onClick={[Function]}
         style={
           Object {
+            "height": "100%",
             "width": "100%",
           }
         }
@@ -377,6 +390,7 @@ exports[`<Navigation /> should render component when current is other 1`] = `
         onClick={[Function]}
         style={
           Object {
+            "height": "100%",
             "width": "100%",
           }
         }
@@ -403,6 +417,7 @@ exports[`<Navigation /> should render component when current is other 1`] = `
         onClick={[Function]}
         style={
           Object {
+            "height": "100%",
             "width": "100%",
           }
         }
@@ -429,6 +444,7 @@ exports[`<Navigation /> should render component when current is other 1`] = `
         onClick={[Function]}
         style={
           Object {
+            "height": "100%",
             "width": "100%",
           }
         }
@@ -462,6 +478,7 @@ exports[`<Navigation /> should render component when current is training 1`] = `
         onClick={[Function]}
         style={
           Object {
+            "height": "100%",
             "width": "100%",
           }
         }
@@ -488,6 +505,7 @@ exports[`<Navigation /> should render component when current is training 1`] = `
         onClick={[Function]}
         style={
           Object {
+            "height": "100%",
             "width": "100%",
           }
         }
@@ -514,6 +532,7 @@ exports[`<Navigation /> should render component when current is training 1`] = `
         onClick={[Function]}
         style={
           Object {
+            "height": "100%",
             "width": "100%",
           }
         }
@@ -540,6 +559,7 @@ exports[`<Navigation /> should render component when current is training 1`] = `
         onClick={[Function]}
         style={
           Object {
+            "height": "100%",
             "width": "100%",
           }
         }

@@ -43,7 +43,10 @@ const LinkWithRipple = withRipple<LinkProps>(Link);
 const Navigation: React.SFC<NavigationProps> = ({ currentMenuType }) => (
   <Root>
     <IconBox>
-      <LinkWithRipple to={ROUTE_PATHS.TRAINING} style={{ width: '100%' }}>
+      <LinkWithRipple
+        to={ROUTE_PATHS.TRAINING}
+        style={{ width: '100%', height: '100%' }}
+      >
         <NavIcon
           iconType={MenuType.Training}
           text="練習"
@@ -52,7 +55,10 @@ const Navigation: React.SFC<NavigationProps> = ({ currentMenuType }) => (
       </LinkWithRipple>
     </IconBox>
     <IconBox>
-      <LinkWithRipple to={ROUTE_PATHS.EXAM} style={{ width: '100%' }}>
+      <LinkWithRipple
+        to={ROUTE_PATHS.EXAM}
+        style={{ width: '100%', height: '100%' }}
+      >
         <NavIcon
           iconType={MenuType.Exam}
           text="腕試し"
@@ -61,7 +67,10 @@ const Navigation: React.SFC<NavigationProps> = ({ currentMenuType }) => (
       </LinkWithRipple>
     </IconBox>
     <IconBox>
-      <LinkWithRipple to={ROUTE_PATHS.KARUTAS} style={{ width: '100%' }}>
+      <LinkWithRipple
+        to={ROUTE_PATHS.KARUTAS}
+        style={{ width: '100%', height: '100%' }}
+      >
         <NavIcon
           iconType={MenuType.Material}
           text="資料"
@@ -70,7 +79,10 @@ const Navigation: React.SFC<NavigationProps> = ({ currentMenuType }) => (
       </LinkWithRipple>
     </IconBox>
     <IconBox>
-      <LinkWithRipple to={ROUTE_PATHS.ABOUT} style={{ width: '100%' }}>
+      <LinkWithRipple
+        to={ROUTE_PATHS.ABOUT}
+        style={{ width: '100%', height: '100%' }}
+      >
         <NavIcon
           iconType={MenuType.Other}
           text="その他"

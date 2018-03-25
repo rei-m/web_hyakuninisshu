@@ -15,7 +15,8 @@ const createMockRouter: any = (pathname: string) => {
   return {
     history: {
       goBack: jest.fn(),
-      push: jest.fn()
+      push: jest.fn(),
+      replace: jest.fn()
     },
     route: {
       location: { pathname },
@@ -26,15 +27,9 @@ const createMockRouter: any = (pathname: string) => {
 
 const createMockStore = (
   karutas = [
-    create<Karuta>('karuta', {
-      id: 1
-    }),
-    create<Karuta>('karuta', {
-      id: 2
-    }),
-    create<Karuta>('karuta', {
-      id: 3
-    })
+    create<Karuta>('karuta', { id: 1 }),
+    create<Karuta>('karuta', { id: 2 }),
+    create<Karuta>('karuta', { id: 3 })
   ]
 ) => {
   return mockAppStoreCreateor()({
@@ -190,14 +185,39 @@ describe('<Root />', () => {
     expect(props.subTitle).toBe('簡単に暗記');
   });
 
-  it('should fire goBack to history when components onClickBack fired', () => {
-    mockStore = createMockStore();
-    mockRouter = createMockRouter('/');
-    createWrapper(mockStore, mockRouter)
-      .dive()
-      .find(Frame)
-      .props()
-      .onClickBack();
-    expect(mockRouter.history.goBack).toHaveBeenCalled();
+  describe('when components onClickBack fired', () => {
+    const execute = (location: string) => {
+      mockStore = createMockStore();
+      mockRouter = createMockRouter(location);
+      createWrapper(mockStore, mockRouter)
+        .dive()
+        .find(Frame)
+        .props()
+        .onClickBack();
+    };
+    it('should fire goBack', () => {
+      execute('/');
+      expect(mockRouter.history.goBack).toHaveBeenCalled();
+    });
+
+    it('should fire replace when location is /training', () => {
+      execute('/exam');
+      expect(mockRouter.history.replace).toHaveBeenCalledWith('/');
+    });
+
+    it('should fire replace when location is /exam', () => {
+      execute('/exam');
+      expect(mockRouter.history.replace).toHaveBeenCalledWith('/');
+    });
+
+    it('should fire replace when location is /karutas', () => {
+      execute('/exam');
+      expect(mockRouter.history.replace).toHaveBeenCalledWith('/');
+    });
+
+    it('should fire replace when location is /about', () => {
+      execute('/exam');
+      expect(mockRouter.history.replace).toHaveBeenCalledWith('/');
+    });
   });
 });

@@ -30,7 +30,7 @@ exports[`<Header /> should render component when can back 1`] = `
 
 exports[`<Header /> should render component when can not back 1`] = `
 <header
-  className="sc-bwzfXH kabzOD"
+  className="sc-bwzfXH daTejG"
 >
   <h1
     className="sc-htpNat iTzsdR"

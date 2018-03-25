@@ -18,7 +18,7 @@ const Root = withAppTheme<RootProps>(styled.header)`
   z-index: 1;
   position: fixed;
   background-color: ${({ theme }) => theme.colorPrimary};
-  padding-left: ${({ canBack }) => (canBack ? '0' : '16px')};
+  padding-left: ${({ canBack, theme }) => (canBack ? '0' : theme.spacing2x)};
   display: flex;
 `;
 
