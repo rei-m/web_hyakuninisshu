@@ -81,11 +81,22 @@ const mapStateToProps = (
 
 const mapDispatchToProps = (
   _: Dispatch<GlobalState>,
-  { history }: RouteComponentProps<{}>
+  { history, location }: RouteComponentProps<{}>
 ): RootDispatchProps => {
   return {
     onClickBack: () => {
-      history.goBack();
+      const { pathname } = location;
+      switch (pathname) {
+        case ROUTE_PATHS.TRAINING:
+        case ROUTE_PATHS.EXAM:
+        case ROUTE_PATHS.KARUTAS:
+        case ROUTE_PATHS.ABOUT:
+          history.replace(ROUTE_PATHS.ROOT);
+          break;
+        default:
+          history.goBack();
+          break;
+      }
     }
   };
 };

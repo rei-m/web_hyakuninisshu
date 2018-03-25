@@ -3,7 +3,7 @@
 exports[`<Frame /> should render component when exist navigation 1`] = `
 <div>
   <header
-    className="sc-bwzfXH kabzOD"
+    className="sc-bwzfXH daTejG"
   >
     <h1
       className="sc-htpNat iTzsdR"
@@ -33,6 +33,7 @@ exports[`<Frame /> should render component when exist navigation 1`] = `
           onClick={[Function]}
           style={
             Object {
+              "height": "100%",
               "width": "100%",
             }
           }
@@ -59,6 +60,7 @@ exports[`<Frame /> should render component when exist navigation 1`] = `
           onClick={[Function]}
           style={
             Object {
+              "height": "100%",
               "width": "100%",
             }
           }
@@ -85,6 +87,7 @@ exports[`<Frame /> should render component when exist navigation 1`] = `
           onClick={[Function]}
           style={
             Object {
+              "height": "100%",
               "width": "100%",
             }
           }
@@ -111,6 +114,7 @@ exports[`<Frame /> should render component when exist navigation 1`] = `
           onClick={[Function]}
           style={
             Object {
+              "height": "100%",
               "width": "100%",
             }
           }
@@ -130,7 +134,7 @@ exports[`<Frame /> should render component when exist navigation 1`] = `
 exports[`<Frame /> should render component when not exist navigation 1`] = `
 <div>
   <header
-    className="sc-bwzfXH kabzOD"
+    className="sc-bwzfXH daTejG"
   >
     <h1
       className="sc-htpNat iTzsdR"
