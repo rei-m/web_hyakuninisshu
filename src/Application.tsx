@@ -1,5 +1,12 @@
 import * as React from 'react';
-import { Route, Switch } from 'react-router-dom';
+import {
+  withRouter,
+  Route,
+  RouteComponentProps,
+  Switch
+} from 'react-router-dom';
+import * as ReactGA from 'react-ga';
+import { lifecycle } from 'recompose';
 import Root from './containers/Root';
 import TrainignsIndex from './containers/Trainings';
 import ExamIndex from './containers/Exam';
@@ -13,7 +20,7 @@ import NotFound from './components/NotFound';
 import ErrorBoundary from './components/ErrorBoundary';
 import { ROUTE_PATHS } from './constants';
 
-const Application = () => (
+const Application = (_props: RouteComponentProps<{}>) => (
   <ErrorBoundary>
     <Root>
       <Switch>
@@ -38,5 +45,12 @@ const Application = () => (
     </Root>
   </ErrorBoundary>
 );
+const Enhanced = lifecycle<RouteComponentProps<{}>, {}>({
+  componentDidUpdate(prevProps: RouteComponentProps<{}>) {
+    if (this.props.location.pathname !== prevProps.location.pathname) {
+      ReactGA.pageview(location.pathname + location.search);
+    }
+  }
+})(Application);
 
-export default Application;
+export default withRouter(Enhanced);
