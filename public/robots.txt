@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+
+Disallow: /exam/question
+Disallow: /training/question
+
+Sitemap: http://hyakuninanki.net/sitemap.xml
