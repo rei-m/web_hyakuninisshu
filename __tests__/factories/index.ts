@@ -1,4 +1,4 @@
-import { Karuta } from '../../src/types';
+import { Answer, Karuta, Question, ToriFuda, YomiFuda } from '../../src/types';
 
 const initializerTree: { [key: string]: () => any } = {};
 const idKeyTree: { [key: string]: string } = {};
@@ -47,4 +47,50 @@ registerFactory<Karuta>('karuta', () => ({
   thirdKana: 'さんく',
   thirdKanji: '三句',
   translation: '歌の訳'
+}));
+
+registerFactory<YomiFuda>('yomiFuda', () => ({
+  firstText: '初句',
+  karutaId: 1,
+  questionId: 1,
+  secondText: '二句',
+  thirdText: '三句'
+}));
+
+registerFactory<ToriFuda>('toriFuda', () => ({
+  fifthText: 'ごく',
+  fourthText: 'よんく',
+  karutaId: 1,
+  questionId: 1
+}));
+
+registerFactory<Question>('question', () => ({
+  correctKaruta: create<Karuta>('karuta', {
+    id: 1
+  }),
+  id: 1,
+  toriFudas: [
+    create<ToriFuda>('toriFuda', {
+      karutaId: 2
+    }),
+    create<ToriFuda>('toriFuda', {
+      karutaId: 3
+    }),
+    create<ToriFuda>('toriFuda', {
+      karutaId: 1
+    }),
+    create<ToriFuda>('toriFuda', {
+      karutaId: 4
+    })
+  ],
+  yomiFuda: create<YomiFuda>('yomiFuda', {
+    karutaId: 1
+  })
+}));
+
+registerFactory<Answer>('answer', () => ({
+  correct: true,
+  karutaId: 1,
+  questionId: 1,
+  time: 1000000
 }));

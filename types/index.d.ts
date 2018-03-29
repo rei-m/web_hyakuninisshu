@@ -1,5 +1,6 @@
 declare module '*.png'
 declare module '*.jpg'
+declare module '*.json'
 
 // http://ideasintosoftware.com/typescript-advanced-tricks/s
 type Diff<T extends string, U extends string> = ({[P in T]: P } & {[P in U]: never } & { [x: string]: never })[T];  

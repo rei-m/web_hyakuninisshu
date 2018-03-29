@@ -1,0 +1,40 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Progress /> should render component 1`] = `
+<div
+  className="sc-bdVaJa fmvnED"
+>
+  <div
+    className="pt-spinner pt-large"
+  >
+    <div
+      className="pt-spinner-svg-container"
+    >
+      <svg
+        viewBox="0 0 100 100"
+      >
+        <path
+          className="pt-spinner-track"
+          d="M 50,50 m 0,-44.5 a 44.5,44.5 0 1 1 0,89 a 44.5,44.5 0 1 1 0,-89"
+        />
+        <path
+          className="pt-spinner-head"
+          d="M 50,50 m 0,-44.5 a 44.5,44.5 0 1 1 0,89 a 44.5,44.5 0 1 1 0,-89"
+          pathLength={280}
+          style={
+            Object {
+              "strokeDasharray": "280 280",
+              "strokeDashoffset": 210,
+            }
+          }
+        />
+      </svg>
+    </div>
+  </div>
+  <div
+    className="sc-bwzfXH jeCWiS"
+  >
+    　　　百人一首 準備中。。。
+  </div>
+</div>
+`;

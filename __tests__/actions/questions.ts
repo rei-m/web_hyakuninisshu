@@ -1,139 +1,341 @@
+import { MockStore } from 'redux-mock-store';
 import { create } from '../factories';
-import {
-  startTraining,
-  START_TRAINING_NAME
-} from '../../src/actions/questions';
-import { getStore } from '../../src/store';
-import { Karuta } from '../../src/types';
+import { mockAppStoreCreateor } from '../helpers';
+import * as questionsAction from '../../src/actions/questions';
+import { initialState as questionsInitialState } from '../../src/reducers/questions';
+import { Answer, Karuta, Question } from '../../src/types';
 import {
   ColorCondition,
   KarutaStyleCondition,
   KimarijiCondition,
+  QuestionState,
   RangeFromCondition,
   RangeToCondition
 } from '../../src/enums';
+import { GlobalState } from '../../src/reducers';
+
+const setUpKarutas = () =>
+  [...Array(100).keys()].map(i =>
+    create<Karuta>('karuta', {
+      color: i < 20 ? 'blue' : 'pink',
+      id: i + 1,
+      kimariji: i % 5 + 1
+    })
+  );
+
+const setUpQuestions = () =>
+  [...Array(10).keys()].map(_ => create<Question>('question'));
+
+const setUpStoreWithKarutas = () => {
+  const karutas = setUpKarutas();
+  return mockAppStoreCreateor()({
+    karutasState: { karutas },
+    questionsState: questionsInitialState
+  });
+};
 
 describe('QuestionsActionCreator', () => {
-  describe('startTraining', () => {
+  it('should create StartTrainingAction', () => {
+    const actionCreator = questionsAction.startTraining(
+      RangeFromCondition.One,
+      RangeToCondition.OneHundred,
+      KimarijiCondition.None,
+      ColorCondition.None,
+      KarutaStyleCondition.KanjiAndKana,
+      KarutaStyleCondition.KanaOnly
+    );
+
+    const store = setUpStoreWithKarutas();
+    store.dispatch(actionCreator);
+
+    const action = store.getActions()[0];
+    const { type, payload } = action;
+    const { nextState, questions, startedTime } = payload;
+    const { correctKaruta, yomiFuda, toriFudas } = questions[0];
+    expect(questions).toHaveLength(100);
+    expect(yomiFuda.firstText).toEqual(correctKaruta.firstKanji);
+    expect(yomiFuda.secondText).toEqual(correctKaruta.secondKanji);
+    expect(yomiFuda.thirdText).toEqual(correctKaruta.thirdKanji);
+    expect(toriFudas.map(f => f.fourthText)).toContain(
+      correctKaruta.fourthKana
+    );
+    expect(toriFudas.map(f => f.fifthText)).toContain(correctKaruta.fifthKana);
+    expect(type).toEqual(questionsAction.START_TRAINING_NAME);
+    expect(nextState).toEqual(QuestionState.InAnswer);
+    expect(startedTime).not.toBeUndefined();
+  });
+
+  it('should return StartTrainingAction payload filtered by range', () => {
+    const actionCreator = questionsAction.startTraining(
+      RangeFromCondition.TwentyOne,
+      RangeToCondition.Forty,
+      KimarijiCondition.None,
+      ColorCondition.None,
+      KarutaStyleCondition.KanjiAndKana,
+      KarutaStyleCondition.KanaOnly
+    );
+
+    const store = setUpStoreWithKarutas();
+    store.dispatch(actionCreator);
+
+    const action = store.getActions()[0];
+    const { payload } = action;
+    const { questions, startedTime } = payload;
+    const karutaIds = questions.map(q => q.correctKaruta.id);
+    expect(questions).toHaveLength(20);
+    expect(karutaIds).toContain(21);
+    expect(karutaIds).toContain(40);
+    expect(startedTime).not.toBeUndefined();
+  });
+
+  it('should return StartTrainingAction payload filtered by kimariji', () => {
+    const actionCreator = questionsAction.startTraining(
+      RangeFromCondition.One,
+      RangeToCondition.OneHundred,
+      KimarijiCondition.One,
+      ColorCondition.None,
+      KarutaStyleCondition.KanjiAndKana,
+      KarutaStyleCondition.KanaOnly
+    );
+
+    const store = setUpStoreWithKarutas();
+    store.dispatch(actionCreator);
+
+    const action = store.getActions()[0];
+    const { payload } = action;
+    const { questions, startedTime } = payload;
+    expect(questions).toHaveLength(20);
+    expect(questions.every(q => q.correctKaruta.kimariji === 1)).toBeTruthy();
+    expect(startedTime).not.toBeUndefined();
+  });
+
+  it('should return StartTrainingAction payload filtered by color', () => {
+    const actionCreator = questionsAction.startTraining(
+      RangeFromCondition.One,
+      RangeToCondition.OneHundred,
+      KimarijiCondition.None,
+      ColorCondition.Blue,
+      KarutaStyleCondition.KanjiAndKana,
+      KarutaStyleCondition.KanaOnly
+    );
+
+    const store = setUpStoreWithKarutas();
+    store.dispatch(actionCreator);
+
+    const action = store.getActions()[0];
+    const { payload } = action;
+    const { questions, startedTime } = payload;
+    expect(questions).toHaveLength(20);
+    expect(questions.every(q => q.correctKaruta.color === 'blue')).toBeTruthy();
+    expect(startedTime).not.toBeUndefined();
+  });
+
+  it('should return StartTrainingAction payload switched by karuta style', () => {
+    const actionCreator = questionsAction.startTraining(
+      RangeFromCondition.One,
+      RangeToCondition.OneHundred,
+      KimarijiCondition.None,
+      ColorCondition.None,
+      KarutaStyleCondition.KanaOnly,
+      KarutaStyleCondition.KanjiAndKana
+    );
+
+    const store = setUpStoreWithKarutas();
+    store.dispatch(actionCreator);
+
+    const action = store.getActions()[0];
+    const { payload } = action;
+    const { questions } = payload;
+    const { correctKaruta, yomiFuda, toriFudas } = questions[0];
+    expect(yomiFuda.firstText).toEqual(correctKaruta.firstKana);
+    expect(yomiFuda.secondText).toEqual(correctKaruta.secondKana);
+    expect(yomiFuda.thirdText).toEqual(correctKaruta.thirdKana);
+    expect(toriFudas.map(f => f.fourthText)).toContain(
+      correctKaruta.fourthKanji
+    );
+    expect(toriFudas.map(f => f.fifthText)).toContain(correctKaruta.fifthKanji);
+  });
+
+  it('should create StartExamAction', () => {
+    const actionCreator = questionsAction.startExam();
+
+    const store = setUpStoreWithKarutas();
+    store.dispatch(actionCreator);
+
+    const action = store.getActions()[0];
+    const { type, payload } = action;
+    const { nextState, questions, startedTime } = payload;
+    const { correctKaruta, yomiFuda, toriFudas } = questions[0];
+    expect(questions).toHaveLength(100);
+    expect(yomiFuda.firstText).toEqual(correctKaruta.firstKanji);
+    expect(yomiFuda.secondText).toEqual(correctKaruta.secondKanji);
+    expect(yomiFuda.thirdText).toEqual(correctKaruta.thirdKanji);
+    expect(toriFudas.map(f => f.fourthText)).toContain(
+      correctKaruta.fourthKana
+    );
+    expect(toriFudas.map(f => f.fifthText)).toContain(correctKaruta.fifthKana);
+    expect(type).toEqual(questionsAction.START_EXAM_NAME);
+    expect(nextState).toEqual(QuestionState.InAnswer);
+    expect(startedTime).not.toBeUndefined();
+  });
+
+  it('should create RestartQuestionsAction', () => {
+    const actionCreator = questionsAction.restartQuestions();
+
+    const karutas = setUpKarutas();
+    const answeredQuestions = setUpQuestions();
+    const answers = answeredQuestions.map(q => {
+      return create<Answer>('answer', {
+        correct: q.id % 2 === 0,
+        questionId: q.id
+      });
+    });
+
+    const store = mockAppStoreCreateor()({
+      karutasState: { karutas },
+      questionsState: {
+        ...questionsInitialState,
+        answers,
+        questions: answeredQuestions
+      }
+    });
+    store.dispatch(actionCreator);
+
+    const action = store.getActions()[0];
+    const { type, payload } = action;
+    const { nextState, questions, startedTime } = payload;
+    expect(type).toEqual(questionsAction.RESTART_QUESTIONS_NAME);
+    expect(nextState).toEqual(QuestionState.InAnswer);
+    const newQuestionIds = questions.map(q => q.id);
+    expect(questions).toHaveLength(5);
+    expect(newQuestionIds).toContain(1);
+    expect(newQuestionIds).toContain(3);
+    expect(newQuestionIds).toContain(5);
+    expect(newQuestionIds).toContain(7);
+    expect(newQuestionIds).toContain(9);
+    expect(startedTime).not.toBeUndefined();
+  });
+
+  describe('AnswerQuestionAction', () => {
     let karutas: Karuta[];
+    let question: Question;
+    let store: MockStore<GlobalState>;
 
     beforeEach(() => {
-      karutas = [...Array(100).keys()].map(i =>
-        create<Karuta>('karuta', {
-          color: i < 20 ? 'blue' : 'pink',
-          id: i + 1,
-          kimariji: i % 5 + 1
-        })
-      );
-      getStore().getState().karutasState = { karutas };
-    });
-
-    it('should create Action', () => {
-      const actual = startTraining(
-        RangeFromCondition.One,
-        RangeToCondition.OneHundred,
-        KimarijiCondition.None,
-        ColorCondition.None,
-        KarutaStyleCondition.KanjiAndKana,
-        KarutaStyleCondition.KanaOnly
-      );
-      const { type, payload } = actual;
-      const { questions, startedTime } = payload;
-
-      const { correctKaruta, yomiFuda, toriFudas } = questions[0];
-      expect(questions).toHaveLength(100);
-      expect(yomiFuda.firstText).toEqual(correctKaruta.firstKanji);
-      expect(yomiFuda.secondText).toEqual(correctKaruta.secondKanji);
-      expect(yomiFuda.thirdText).toEqual(correctKaruta.thirdKanji);
-      expect(toriFudas.map(f => f.fourthText)).toContain(
-        correctKaruta.fourthKana
-      );
-      expect(toriFudas.map(f => f.fifthText)).toContain(
-        correctKaruta.fifthKana
-      );
-      expect(type).toEqual(START_TRAINING_NAME);
-      expect(startedTime).not.toBeUndefined();
-    });
-
-    describe('when filter by range', () => {
-      it('should payload has filtered Karuta', () => {
-        const actual = startTraining(
-          RangeFromCondition.TwentyOne,
-          RangeToCondition.Forty,
-          KimarijiCondition.None,
-          ColorCondition.None,
-          KarutaStyleCondition.KanjiAndKana,
-          KarutaStyleCondition.KanaOnly
-        );
-        const { questions, startedTime } = actual.payload;
-        const karutaIds = questions.map(q => q.correctKaruta.id);
-        expect(questions).toHaveLength(20);
-        expect(karutaIds).toContain(21);
-        expect(karutaIds).toContain(40);
-        expect(startedTime).not.toBeUndefined();
+      karutas = setUpKarutas();
+      question = create<Question>('question', {
+        correctKaruta: create<Karuta>('karuta', {
+          id: 1
+        }),
+        id: 1
+      });
+      store = mockAppStoreCreateor()({
+        karutasState: { karutas },
+        questionsState: {
+          ...questionsInitialState,
+          questions: [question]
+        }
       });
     });
 
-    describe('when filter by kimariji', () => {
-      it('should payload has filtered Karuta', () => {
-        const actual = startTraining(
-          RangeFromCondition.One,
-          RangeToCondition.OneHundred,
-          KimarijiCondition.One,
-          ColorCondition.None,
-          KarutaStyleCondition.KanjiAndKana,
-          KarutaStyleCondition.KanaOnly
-        );
-        const { questions, startedTime } = actual.payload;
-        expect(questions).toHaveLength(20);
-        expect(
-          questions.every(q => q.correctKaruta.kimariji === 1)
-        ).toBeTruthy();
-        expect(startedTime).not.toBeUndefined();
-      });
+    it('should create correct', () => {
+      const actionCreator = questionsAction.answerQuestion(1, 1);
+      store.dispatch(actionCreator);
+
+      const action = store.getActions()[0];
+      const { type, payload } = action;
+      const { answer, nextState } = payload;
+
+      expect(answer.correct).toBeTruthy();
+      expect(answer.questionId).toEqual(1);
+      expect(answer.karutaId).toEqual(1);
+      expect(answer.time).not.toBeUndefined();
+      expect(type).toEqual(questionsAction.ANSWER_QUESTION_NAME);
+      expect(nextState).toEqual(QuestionState.Answered);
     });
 
-    describe('when filter by color', () => {
-      it('should payload has filtered Karuta', () => {
-        const actual = startTraining(
-          RangeFromCondition.One,
-          RangeToCondition.OneHundred,
-          KimarijiCondition.None,
-          ColorCondition.Blue,
-          KarutaStyleCondition.KanjiAndKana,
-          KarutaStyleCondition.KanaOnly
-        );
-        const { questions, startedTime } = actual.payload;
-        expect(questions).toHaveLength(20);
-        expect(
-          questions.every(q => q.correctKaruta.color === 'blue')
-        ).toBeTruthy();
-        expect(startedTime).not.toBeUndefined();
-      });
+    it('should create wrong', () => {
+      const actionCreator = questionsAction.answerQuestion(1, 2);
+      store.dispatch(actionCreator);
+
+      const action = store.getActions()[0];
+      const { type, payload } = action;
+      const { answer, nextState } = payload;
+
+      expect(answer.correct).toBeFalsy();
+      expect(answer.questionId).toEqual(1);
+      expect(answer.karutaId).toEqual(2);
+      expect(answer.time).not.toBeUndefined();
+      expect(type).toEqual(questionsAction.ANSWER_QUESTION_NAME);
+      expect(nextState).toEqual(QuestionState.Answered);
+    });
+  });
+
+  it('should create ConfirmCorrectAction', () => {
+    const karutas = setUpKarutas();
+    const question = create<Question>('question', {
+      correctKaruta: create<Karuta>('karuta', {
+        id: 1
+      }),
+      id: 1
+    });
+    const answer = create<Answer>('answer', {
+      correct: true,
+      karutaId: 1,
+      questionId: 1
+    });
+    const store = mockAppStoreCreateor()({
+      karutasState: { karutas },
+      questionsState: {
+        ...questionsInitialState,
+        answers: [answer],
+        questionState: QuestionState.Answered,
+        questions: [question]
+      }
     });
 
-    describe('when switch karuta style', () => {
-      it('should yomiFuda style is kana and toriFuda style is kanji', () => {
-        const actual = startTraining(
-          RangeFromCondition.One,
-          RangeToCondition.OneHundred,
-          KimarijiCondition.None,
-          ColorCondition.None,
-          KarutaStyleCondition.KanaOnly,
-          KarutaStyleCondition.KanjiAndKana
-        );
-        const { questions } = actual.payload;
-        const { correctKaruta, yomiFuda, toriFudas } = questions[0];
-        expect(yomiFuda.firstText).toEqual(correctKaruta.firstKana);
-        expect(yomiFuda.secondText).toEqual(correctKaruta.secondKana);
-        expect(yomiFuda.thirdText).toEqual(correctKaruta.thirdKana);
-        expect(toriFudas.map(f => f.fourthText)).toContain(
-          correctKaruta.fourthKanji
-        );
-        expect(toriFudas.map(f => f.fifthText)).toContain(
-          correctKaruta.fifthKanji
-        );
-      });
+    const actionCreator = questionsAction.confirmCorrect();
+    store.dispatch(actionCreator);
+
+    const action = store.getActions()[0];
+    const { type, payload } = action;
+    const { nextState } = payload;
+    expect(type).toEqual(questionsAction.CONFIRM_CORRECT_NAME);
+    expect(nextState).toEqual(QuestionState.ConfirmCorrect);
+  });
+
+  it('should create OpenNextQuestionAction', () => {
+    const karutas = setUpKarutas();
+    const question1 = create<Question>('question', {
+      id: 1
     });
+    const question2 = create<Question>('question', {
+      id: 2
+    });
+    const answer = create<Answer>('answer', {
+      correct: true,
+      karutaId: 1,
+      questionId: 1
+    });
+    const store = mockAppStoreCreateor()({
+      karutasState: { karutas },
+      questionsState: {
+        ...questionsInitialState,
+        answers: [answer],
+        questionState: QuestionState.Answered,
+        questions: [question1, question2]
+      }
+    });
+
+    const actionCreator = questionsAction.openNextQuestion();
+    store.dispatch(actionCreator);
+
+    const action = store.getActions()[0];
+    const { type, payload } = action;
+    const { nextIndex, nextState, startedTime } = payload;
+    expect(type).toEqual(questionsAction.OPEN_NEXT_QUESTION_NAME);
+    expect(nextIndex).toEqual(1);
+    expect(nextState).toEqual(QuestionState.InAnswer);
+    expect(startedTime).not.toBeUndefined();
   });
 });

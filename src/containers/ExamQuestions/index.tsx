@@ -158,12 +158,12 @@ const withFinishedCheck = branch<ExamQuestionsOwnProps>(
   component => component
 );
 
-const ExamIndex = compose<ExamQuestionsProps, ExamQuestionsProps>(
+const ExamQuestionIndex = compose<ExamQuestionsProps, ExamQuestionsProps>(
   withStartedCheck,
   withConfirmedQuestionResultCheck,
   withFinishedCheck
 )(QuestionSection);
 
 export default withRouter(
-  connect(mapStateToProps, mapDispatchToProps)(ExamIndex)
+  connect(mapStateToProps, mapDispatchToProps)(ExamQuestionIndex)
 );

@@ -1,7 +1,8 @@
 import * as React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, LinkProps } from 'react-router-dom';
 import styled from 'styled-components';
 import { withAppTheme } from '../../styles';
+import { withRipple } from '../../enhancers/withRipple';
 import MenuIcon from '../MenuIcon';
 import { MenuType } from '../../enums';
 import { ROUTE_PATHS } from '../../constants';
@@ -40,6 +41,7 @@ const MenuWrapper = withAppTheme(styled.div)`
   padding: ${({ theme }) => theme.spacing4x} 0;
   display: flex;
   flex-direction: column;
+  justify-content: center;
 
   @media screen and (min-width: ${({ theme }) => theme.minWidthWide}) {
     flex-direction: row;
@@ -47,17 +49,59 @@ const MenuWrapper = withAppTheme(styled.div)`
 `;
 
 const MenuRoot = withAppTheme(styled.div)`
-  padding: ${({ theme }) => theme.spacing2x};
+  border: 1px solid #00000030;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.26);
+  background-color: #fff;
+  border-radius: 16px;
   box-sizing: border-box;
   flex-grow: 1;
   text-align: center;
+  margin: 16px;
+
+  & .title {
+    font-size: 2.0rem;
+    margin: 8px;
+    position: relative;
+    &:after {
+      content: '';
+      width: 100%;
+      border-bottom: 4px double #a9a9a9;
+      position: absolute;
+      bottom: -8px;
+      left: 0;
+    }
+  }
+
+  & .text {
+    margin-top: 24px
+  }
+
+  & :hover {
+    text-decoration: none;
+  }
+
+  :hover {
+    background-color: #f5f5f5;
+  }
 
   @media screen and (min-width: ${({ theme }) => theme.minWidthWide}) {
-    width: 200px;
+    width: 224px;
+    flex-grow: 0;
   }
 `;
 
-const MenuSection = () => (
+const LinkWithRipple = withRipple<LinkProps>(Link);
+
+const linkStyles = {
+  ':hover': {
+    textDecoration: 'none'
+  },
+  display: 'inline-block',
+  height: '100%',
+  padding: '16px'
+};
+
+const MenuSection: React.SFC = () => (
   <RootSection>
     <Section>
       <SectionTitle>百人一首とは</SectionTitle>
@@ -73,31 +117,31 @@ const MenuSection = () => (
       </SectionText>
       <MenuWrapper>
         <MenuRoot>
-          <Link to={ROUTE_PATHS.TRAINING}>
+          <LinkWithRipple to={ROUTE_PATHS.TRAINING} style={linkStyles}>
             <MenuIcon iconType={MenuType.Training} />
-          </Link>
-          <div>練習</div>
-          <p>
-            様々な条件を組み合わせて出題範囲を指定できます。ご自身の習熟度に合わせて効率よく練習できます。
-          </p>
+            <div className="title">練習</div>
+            <p className="text">
+              様々な条件を組み合わせて出題範囲を指定できます。ご自身の習熟度に合わせて効率よく練習できます。
+            </p>
+          </LinkWithRipple>
         </MenuRoot>
         <MenuRoot>
-          <Link to={ROUTE_PATHS.EXAM}>
+          <LinkWithRipple to={ROUTE_PATHS.EXAM} style={linkStyles}>
             <MenuIcon iconType={MenuType.Exam} />
-          </Link>
-          <div>腕試し</div>
-          <p>
-            自身のある方は腕試しに挑戦しましょう。百首通しでランダムに出題されます。
-          </p>
+            <div className="title">腕試し</div>
+            <p className="text">
+              自身のある方は腕試しに挑戦しましょう。百首通しでランダムに出題されます。
+            </p>
+          </LinkWithRipple>
         </MenuRoot>
         <MenuRoot>
-          <Link to={ROUTE_PATHS.KARUTAS}>
+          <LinkWithRipple to={ROUTE_PATHS.KARUTAS} style={linkStyles}>
             <MenuIcon iconType={MenuType.Material} />
-          </Link>
-          <div>資料</div>
-          <p>
-            百人一首の詳細な情報を閲覧できます。決まり字や歌の現代語訳などを確認することができます。
-          </p>
+            <div className="title">資料</div>
+            <p className="text">
+              百人一首の詳細な情報を閲覧できます。決まり字や歌の現代語訳などを確認することができます。
+            </p>
+          </LinkWithRipple>
         </MenuRoot>
       </MenuWrapper>
     </Section>

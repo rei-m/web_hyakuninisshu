@@ -18,7 +18,9 @@ const convert = (value: any, result: { [key: string]: any }) => {
           return itemResult;
         });
       } else {
-        convert(value[key], result);
+        const child = {};
+        convert(value[key], child);
+        result[snakeToCamel(key)] = child;
       }
     }
   }
@@ -61,7 +63,5 @@ export const menuTypeToIcon = (iconType: MenuType) => {
       return 'library_books';
     case MenuType.Other:
       return 'settings';
-    default:
-      throw new Error('unknown TypeName');
   }
 };

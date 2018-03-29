@@ -210,7 +210,7 @@ export interface KarutaImageProps {
   readonly style?: React.CSSProperties;
 }
 
-const KarutaImage = ({ karutaId, style }: KarutaImageProps) => (
+const KarutaImage: React.SFC<KarutaImageProps> = ({ karutaId, style }) => (
   <img
     src={KARUTA_IMAGE_LIST[karutaId - 1]}
     alt={toKarutaIdString(karutaId)}

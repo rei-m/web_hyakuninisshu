@@ -1,0 +1,10 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Dogeza /> should render component 1`] = `
+<img
+  alt="test"
+  className="sc-bdVaJa dxKQNh"
+  src="dogeza_businessman.png"
+  style={undefined}
+/>
+`;

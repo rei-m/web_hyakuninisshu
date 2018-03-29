@@ -36,7 +36,7 @@ const AppBannerBox = styled.div`
   text-align: center;
 `;
 
-const AboutSection = () => (
+const AboutSection: React.SFC = () => (
   <Root>
     <Section>
       <SectionTitle>サイトについて</SectionTitle>

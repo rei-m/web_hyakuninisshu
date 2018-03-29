@@ -31,12 +31,12 @@ const Button = withAppTheme(styled.button)`
   margin: ${({ theme }) => theme.spacing2x};
 `;
 
-const QuestionsResult = ({
+const QuestionsResult: React.SFC<QuestionsResultProps> = ({
   averageAnswerSecond,
   correctCount,
   totalCount,
   onClickRestart
-}: QuestionsResultProps) => (
+}) => (
   <RootSection>
     <Inner>
       <QuestionResultsSummary
@@ -53,6 +53,7 @@ const QuestionsResult = ({
         <Button
           onClick={onClickRestart}
           className="pt-button pt-large pt-icon-repeat"
+          data-test="restart"
         >
           間違えた歌の練習をする
         </Button>

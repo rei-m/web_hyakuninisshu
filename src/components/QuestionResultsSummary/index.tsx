@@ -25,11 +25,11 @@ const Value = styled.div`
   font-size: 2.8rem;
 `;
 
-const QuestionResultsSummary = ({
+const QuestionResultsSummary: React.SFC<QuestionResultsSummaryProps> = ({
   title,
   value,
   style
-}: QuestionResultsSummaryProps) => (
+}) => (
   <Root style={style}>
     <Title>{title}</Title>
     <Value>{value}</Value>

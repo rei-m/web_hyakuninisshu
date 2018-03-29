@@ -1,5 +1,7 @@
 
 *.log
-/dist
+/public/assets
+/public/index.html
 /node_modules
 /.vscode
+/coverage

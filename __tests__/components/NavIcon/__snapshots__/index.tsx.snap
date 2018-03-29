@@ -1,0 +1,17 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<NavIcon /> should render component when current 1`] = `
+<i
+  className="material-icons sc-bdVaJa ebHodr"
+>
+  note
+</i>
+`;
+
+exports[`<NavIcon /> should render component when not current 1`] = `
+<i
+  className="material-icons sc-bdVaJa bRXqhc"
+>
+  note
+</i>
+`;

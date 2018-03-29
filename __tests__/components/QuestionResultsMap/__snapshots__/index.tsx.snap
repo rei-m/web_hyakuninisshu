@@ -1,0 +1,55 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<QuestionResultsMap /> should render component 1`] = `
+<div
+  className="sc-bdVaJa biXiia"
+  style={undefined}
+>
+  <div
+    className="sc-bwzfXH igTYpN"
+    data-test="question-1"
+    onClick={[Function]}
+  >
+    <span
+      className="sc-htpNat buCuQu"
+    >
+      一番
+    </span>
+    <span
+      className="sc-bxivhb hSyinz"
+    >
+      <img
+        src="check_correct.png"
+        style={
+          Object {
+            "width": "80%",
+          }
+        }
+      />
+    </span>
+  </div>
+  <div
+    className="sc-bwzfXH igTYpN"
+    data-test="question-2"
+    onClick={[Function]}
+  >
+    <span
+      className="sc-htpNat buCuQu"
+    >
+      一番
+    </span>
+    <span
+      className="sc-bxivhb hSyinz"
+    >
+      <img
+        src="check_correct.png"
+        style={
+          Object {
+            "width": "80%",
+          }
+        }
+      />
+    </span>
+  </div>
+</div>
+`;

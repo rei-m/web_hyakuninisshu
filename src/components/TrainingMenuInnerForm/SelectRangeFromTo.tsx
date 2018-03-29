@@ -14,7 +14,7 @@ export interface SelectRangeFromToProps {
   readonly handleChange: (e: React.SyntheticEvent<HTMLSelectElement>) => void;
 }
 
-const Label = styled.label`
+const Wrapper = styled.div`
   text-align: left;
 `;
 
@@ -26,7 +26,7 @@ const SelectRow = withAppTheme(styled.div)`
 `;
 
 const SelectRange = styled.div`
-  width: 128px;
+  width: 136px;
   flex-grow: 1;
 `;
 
@@ -48,41 +48,45 @@ const SelectRangeFromTo = ({
   error,
   handleChange
 }: SelectRangeFromToProps) => (
-  <Label className="pt-label">
+  <Wrapper>
     出題範囲
     <SelectRow>
-      <SelectRange className="pt-select pt-large">
-        <Field
-          component="select"
-          name="rangeFrom"
-          value={from}
-          onChange={handleChange}
-        >
-          {RangeFromConditions.values.map((value, i) => (
-            <option value={value} key={`range_from_${i}`}>
-              {toKarutaIdString(value)}
-            </option>
-          ))}
-        </Field>
-      </SelectRange>
+      <label className="pt-label">
+        <SelectRange className="pt-select pt-large">
+          <Field
+            component="select"
+            name="rangeFrom"
+            value={from}
+            onChange={handleChange}
+          >
+            {RangeFromConditions.values.map((value, i) => (
+              <option value={value} key={`range_from_${i}`}>
+                {toKarutaIdString(value)}
+              </option>
+            ))}
+          </Field>
+        </SelectRange>
+      </label>
       <Separate>〜</Separate>
-      <SelectRange className="pt-select pt-large">
-        <Field
-          component="select"
-          name="rangeTo"
-          value={to}
-          onChange={handleChange}
-        >
-          {RangeToConditions.values.map((value, i) => (
-            <option value={value} key={`range_to_${i}`}>
-              {toKarutaIdString(value)}
-            </option>
-          ))}
-        </Field>
-      </SelectRange>
+      <label className="pt-label">
+        <SelectRange className="pt-select pt-large">
+          <Field
+            component="select"
+            name="rangeTo"
+            value={to}
+            onChange={handleChange}
+          >
+            {RangeToConditions.values.map((value, i) => (
+              <option value={value} key={`range_to_${i}`}>
+                {toKarutaIdString(value)}
+              </option>
+            ))}
+          </Field>
+        </SelectRange>
+      </label>
     </SelectRow>
     {(fromTouched || toTouched) && error && <Error>{error}</Error>}
-  </Label>
+  </Wrapper>
 );
 
 export default SelectRangeFromTo;

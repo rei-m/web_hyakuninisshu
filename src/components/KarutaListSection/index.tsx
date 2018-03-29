@@ -15,10 +15,10 @@ const RootSection = withAppTheme(styled.section)`
   padding: ${({ theme }) => theme.spacing2x};
 `;
 
-const KarutaListSection = ({
+const KarutaListSection: React.SFC<KarutaListSectionProps> = ({
   karutas,
   onClickKarutaListRow
-}: KarutaListSectionProps) => (
+}) => (
   <RootSection>
     <PageTitle title="歌一覧" />
     <KarutaList karutas={karutas} onClickRow={onClickKarutaListRow} />

@@ -1,29 +1,29 @@
 import * as React from 'react';
 import styled from 'styled-components';
 import { withAppTheme } from '../../styles';
-import PageTitle from '../PageTitle';
 import KarutaCard from '../KarutaCard';
 import { Karuta } from '../../types';
-import { toKarutaIdString } from '../helper';
 
 export interface KarutaDetailSectionProps {
   readonly karuta: Karuta;
 }
 
-const RootSection = withAppTheme(styled.section)`
+const Root = withAppTheme(styled.div)`
   box-sizing: border-box;
   padding: ${({ theme }) => theme.spacing2x};
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  margin-top: 24px;
 `;
 
-const KarutaDetailSection = ({ karuta }: KarutaDetailSectionProps) => (
-  <RootSection>
-    <PageTitle title={toKarutaIdString(karuta.id)} />
+const KarutaDetailSection: React.SFC<KarutaDetailSectionProps> = ({
+  karuta
+}) => (
+  <Root>
     <KarutaCard karuta={karuta} />
-  </RootSection>
+  </Root>
 );
 
 export default KarutaDetailSection;

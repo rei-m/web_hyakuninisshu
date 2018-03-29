@@ -1,0 +1,76 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<KarutaDetailSection /> should render component 1`] = `
+<div
+  className="sc-bZQynM juXCbK"
+>
+  <article
+    className="sc-bdVaJa imgfUs"
+  >
+    <h3
+      className="sc-bwzfXH kksYFg"
+    >
+      一番
+       / 
+      詠み手
+    </h3>
+    <img
+      alt="一番"
+      src="karuta_001.jpg"
+      style={
+        Object {
+          "width": 200,
+        }
+      }
+    />
+    <div
+      className="sc-htpNat VNKXV"
+    >
+      <div
+        className="sc-bxivhb lnrVgD"
+      >
+        原文
+      </div>
+      <div
+        className="sc-ifAKCX laGmay"
+      >
+        初句 二句 三句
+      </div>
+      <div
+        className="sc-ifAKCX laGmay"
+      >
+        四句 五句
+      </div>
+      <div
+        className="sc-ifAKCX laGmay"
+      >
+        <span
+          className="sc-EHOje hDCzQl"
+        >
+          し
+        </span>
+        ょく にく さんく
+      </div>
+      <div
+        className="sc-ifAKCX laGmay"
+      >
+        よんく ごく
+      </div>
+    </div>
+    <div
+      className="sc-htpNat VNKXV"
+    >
+      <div
+        className="sc-bxivhb lnrVgD"
+      >
+        訳
+      </div>
+      <div
+        className="sc-ifAKCX laGmay"
+      >
+        歌の訳
+      </div>
+    </div>
+  </article>
+</div>
+`;

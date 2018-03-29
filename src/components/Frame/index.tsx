@@ -34,7 +34,7 @@ export const Body = withAppTheme<BodyProps>(styled.div)`
   }
 `;
 
-const Frame: React.StatelessComponent<FrameProps> = ({
+const Frame: React.SFC<FrameProps> = ({
   canBack,
   children,
   subTitle,

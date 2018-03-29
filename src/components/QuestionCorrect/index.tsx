@@ -141,7 +141,11 @@ const QuestionCorrect = enhance<
           <NumberAndKimariji>
             {toKarutaIdString(karuta.id)} / {toKimarijiString(karuta.kimariji)}
           </NumberAndKimariji>
-          <OpenDetail onClick={onClickOpenDetail} className="pt-button">
+          <OpenDetail
+            onClick={onClickOpenDetail}
+            className="pt-button"
+            data-test="open-detail"
+          >
             詳
           </OpenDetail>
         </Header>
@@ -159,6 +163,7 @@ const QuestionCorrect = enhance<
           <NextButton
             onClick={onClickGoToResult}
             className="pt-button pt-large pt-icon-double-chevron-right"
+            data-test="go-to-result"
           >
             結果を見る
           </NextButton>
@@ -166,6 +171,7 @@ const QuestionCorrect = enhance<
           <NextButton
             onClick={onClickGoToNext}
             className="pt-button pt-large pt-icon-double-chevron-right"
+            data-test="go-to-next"
           >
             次へ進む
           </NextButton>

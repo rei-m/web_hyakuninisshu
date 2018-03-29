@@ -33,7 +33,7 @@ export const toChineseChar = (num: number) => {
 export const toKarutaIdString = (karutaId: number) =>
   `${toChineseChar(karutaId)}番`;
 
-export const toKimarijiString = (kimariji: number) =>
+export const toKimarijiString = (kimariji: KimarijiCondition) =>
   `${toChineseChar(kimariji)}字決まり`;
 
 export const toKimarijiConditionString = (

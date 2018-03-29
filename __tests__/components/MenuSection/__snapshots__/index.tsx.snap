@@ -1,0 +1,163 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<MenuSection /> should render component 1`] = `
+<div
+  className="sc-htpNat bOBKxL"
+>
+  <section
+    className="sc-bxivhb hJcqIQ"
+  >
+    <h1
+      className="sc-ifAKCX dkjkSd"
+    >
+      百人一首とは
+    </h1>
+    <div
+      className="sc-EHOje choVX"
+    >
+      『百人一首』とは、100人の歌人の和歌を1人1首づつ選んだ歌集のことで、藤原定家が選んだ小倉百人一首が広く知られています。 現代では詠み札と取り札に別れたかるたとしての知名度が高く、散らし取り、坊主めくりなどといった遊戯や競技かるたのように札取りを競い合うスポーツもあり、幅広く親しまれています。
+    </div>
+  </section>
+  <section
+    className="sc-bxivhb hJcqIQ"
+  >
+    <h1
+      className="sc-ifAKCX dkjkSd"
+    >
+      メニュー
+    </h1>
+    <div
+      className="sc-EHOje choVX"
+    >
+      このサイトでは百人一首暗記の練習ができます。練習は読み札に対応する下の句を四択の中から選ぶクイズ形式となっています。繰り返し練習して百人一首のスタートに立ちましょう。
+    </div>
+    <div
+      className="sc-bZQynM brUMwT"
+    >
+      <div
+        className="sc-gzVnrw iphRiy"
+      >
+        <div
+          className="sc-bdVaJa gNYCTH"
+          onMouseDown={[Function]}
+          onMouseUp={[Function]}
+        >
+          <a
+            color="#fff"
+            href="/training"
+            onClick={[Function]}
+            style={
+              Object {
+                ":hover": Object {
+                  "textDecoration": "none",
+                },
+                "display": "inline-block",
+                "height": "100%",
+                "padding": "16px",
+              }
+            }
+          >
+            <i
+              className="material-icons sc-bwzfXH eYZhNu"
+            >
+              create
+            </i>
+            <div
+              className="title"
+            >
+              練習
+            </div>
+            <p
+              className="text"
+            >
+              様々な条件を組み合わせて出題範囲を指定できます。ご自身の習熟度に合わせて効率よく練習できます。
+            </p>
+          </a>
+        </div>
+      </div>
+      <div
+        className="sc-gzVnrw iphRiy"
+      >
+        <div
+          className="sc-bdVaJa gNYCTH"
+          onMouseDown={[Function]}
+          onMouseUp={[Function]}
+        >
+          <a
+            color="#fff"
+            href="/exam"
+            onClick={[Function]}
+            style={
+              Object {
+                ":hover": Object {
+                  "textDecoration": "none",
+                },
+                "display": "inline-block",
+                "height": "100%",
+                "padding": "16px",
+              }
+            }
+          >
+            <i
+              className="material-icons sc-bwzfXH eYZhNu"
+            >
+              note
+            </i>
+            <div
+              className="title"
+            >
+              腕試し
+            </div>
+            <p
+              className="text"
+            >
+              自身のある方は腕試しに挑戦しましょう。百首通しでランダムに出題されます。
+            </p>
+          </a>
+        </div>
+      </div>
+      <div
+        className="sc-gzVnrw iphRiy"
+      >
+        <div
+          className="sc-bdVaJa gNYCTH"
+          onMouseDown={[Function]}
+          onMouseUp={[Function]}
+        >
+          <a
+            color="#fff"
+            href="/karutas"
+            onClick={[Function]}
+            style={
+              Object {
+                ":hover": Object {
+                  "textDecoration": "none",
+                },
+                "display": "inline-block",
+                "height": "100%",
+                "padding": "16px",
+              }
+            }
+          >
+            <i
+              className="material-icons sc-bwzfXH eYZhNu"
+            >
+              library_books
+            </i>
+            <div
+              className="title"
+            >
+              資料
+            </div>
+            <p
+              className="text"
+            >
+              百人一首の詳細な情報を閲覧できます。決まり字や歌の現代語訳などを確認することができます。
+            </p>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+`;

@@ -34,7 +34,7 @@ const Icon = i`
   }
 `;
 
-const NavIcon = ({ iconType, text, isCurrent }: NavIconProps) => (
+const NavIcon: React.SFC<NavIconProps> = ({ iconType, text, isCurrent }) => (
   <Icon className="material-icons" text={text} isCurrent={isCurrent}>
     {menuTypeToIcon(iconType)}
   </Icon>

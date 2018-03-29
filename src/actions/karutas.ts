@@ -1,13 +1,10 @@
-import * as fetch from 'isomorphic-fetch';
 import { Action, Dispatch } from 'redux';
+import { GlobalState } from '../reducers';
 import { Karuta } from '../types';
 import { AppError, AppErrorType } from '../errors';
 import { convertCamelKey } from '../utils';
 
-// TODO: あとで差し替え
-export const MY_GITHUB_ROOT = 'https://raw.githubusercontent.com/rei-m';
-export const KARUTA_JSON_URL =
-  '/android_hyakuninisshu/master/app/src/main/assets/karuta_list.json';
+export const KARUTA_JSON_URL = '/data/karuta_list.json';
 
 export const FETCH_KARUTAS_NAME = 'FETCH_KARUTAS_NAME';
 export type FETCH_KARUTAS_TYPE = typeof FETCH_KARUTAS_NAME;
@@ -35,10 +32,11 @@ export type KarutaActions = FetchKarutasAction | RaiseKarutasErrorAction;
  * action creators
  */
 export const fetchKarutas = () => {
-  return async (dispatch: Dispatch<FetchKarutasAction>) => {
-    const response = await fetch(MY_GITHUB_ROOT + KARUTA_JSON_URL);
+  return async (dispatch: Dispatch<GlobalState>, _, { axios }) => {
+    // ここ大したjsonでもないのでbundleしてしまってもいいけど、非同期のactionを作りたかったからあえてこうしている
+    const response = await axios.get(KARUTA_JSON_URL);
     if (response.status === 200) {
-      const json = await response.json();
+      const json = response.data;
       const data = convertCamelKey(json) as { karutaList: Karuta[] };
       const karutas = data.karutaList;
       dispatch({

@@ -1,5 +1,6 @@
 import * as React from 'react';
 import styled from 'styled-components';
+import { withRipple } from '../../enhancers/withRipple';
 import { withAppTheme } from '../../styles';
 
 export interface HeaderProps {
@@ -17,7 +18,7 @@ const Root = withAppTheme<RootProps>(styled.header)`
   z-index: 1;
   position: fixed;
   background-color: ${({ theme }) => theme.colorPrimary};
-  padding-left: ${({ canBack }) => (canBack ? '0' : '16px')};
+  padding-left: ${({ canBack, theme }) => (canBack ? '0' : theme.spacing2x)};
   display: flex;
 `;
 
@@ -34,21 +35,22 @@ const Title = withAppTheme(styled.h1)`
   }
 `;
 
-const Icon = withAppTheme(styled.i)`
+const Icon = withRipple(withAppTheme(styled.i)`
   line-height: ${({ theme }) => theme.headerHeight};
   width: ${({ theme }) => theme.headerHeight};
   color: #fff;
   text-align: center;
+  cursor: pointer;
   @media screen and (min-width: ${({ theme }) => theme.minWidthWide}) {
     line-height: ${({ theme }) => theme.headerHeightWide};
     width: ${({ theme }) => theme.headerHeightWide};
   }
-`;
+`);
 
-const Header = ({ subTitle, canBack, onClickBack }: HeaderProps) => (
+const Header: React.SFC<HeaderProps> = ({ subTitle, canBack, onClickBack }) => (
   <Root canBack={canBack}>
     {canBack && (
-      <Icon className="material-icons" onClick={onClickBack}>
+      <Icon className="material-icons" onClick={onClickBack} data-test="back">
         arrow_back
       </Icon>
     )}
