@@ -4,4 +4,9 @@
 Hyakunin Isshu
 ========
 
-# in progress...
+### Site
+https://hyakuninanki.net/
+
+### Structure
+React / Redux / TypeScript
+
