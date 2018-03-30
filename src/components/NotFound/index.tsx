@@ -27,7 +27,7 @@ const NotFound: React.SFC = () => (
       ページが見つかりませんでした。<br />トップページにお戻りください。
     </Message>
     <Dogeza
-      alt="ページが見つかりませでした"
+      alt="ページが見つかりませんでした"
       style={{
         marginTop: appTheme.spacing4x
       }}

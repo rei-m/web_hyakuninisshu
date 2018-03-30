@@ -12,7 +12,7 @@ exports[`<NotFound /> should render component 1`] = `
     トップページにお戻りください。
   </div>
   <img
-    alt="ページが見つかりませでした"
+    alt="ページが見つかりませんでした"
     className="sc-bdVaJa dxKQNh"
     src="dogeza_businessman.png"
     style={
