@@ -22,7 +22,7 @@ module.exports = {
         test: /\.tsx?$/,
         exclude: /node_modules/,
         use: [
-          'awesome-typescript-loader',
+          'ts-loader',
           {
             loader: path.resolve('lib/remove-data-test-attr-loader.js')
           }
