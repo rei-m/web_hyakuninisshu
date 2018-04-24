@@ -43,12 +43,15 @@ describe('<TrainingInitializer />', () => {
       questionsState
     });
     mockRouter = createMockRouter();
-
-    wrapper = shallow(<TrainingInitializer {...mockRouter.route} />, {
+    wrapper = shallow(<TrainingInitializer />, {
       context: {
+        router: mockRouter,
         store: mockStore
       }
-    });
+    })
+      .dive()
+      .dive()
+      .dive();
   });
 
   it('should render component', () => {

@@ -7,12 +7,10 @@ export type ExamInitializerDispatchProps = Pick<ProgressProps, 'onStart'>;
 
 const mapDispatchToProps = (
   dispatch: Dispatch<GlobalState>
-): ExamInitializerDispatchProps => {
-  return {
-    onStart: () => {
-      dispatch(startExam());
-    }
-  };
-};
+): ExamInitializerDispatchProps => ({
+  onStart: () => {
+    dispatch(startExam());
+  }
+});
 
 export default connect(undefined, mapDispatchToProps)(Progress);

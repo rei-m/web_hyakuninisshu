@@ -21,17 +21,18 @@ import ExamResult, { ExamResultProps } from '../../components/ExamResult';
 import ExamInitializer from '../ExamInitializer';
 import { QuestionState } from '../../enums';
 
-export interface ExamQuestionsOwnProps {
-  readonly started: boolean;
-  readonly questions: Question[];
-  readonly answers: Answer[];
-  readonly questionState?: QuestionState;
-}
+export type ExamQuestionsOwnProps = RouteComponentProps<{}>;
 
 export type ExamQuestionsConnectedProps = Omit<
   QuestionSectionProps,
   'onClickToriFuda' | 'onClickResult'
->;
+> & {
+  readonly submitTime: number;
+  readonly lastStartedTime?: number;
+  readonly questions: Question[];
+  readonly answers: Answer[];
+  readonly questionState?: QuestionState;
+};
 
 export type ExamQuestionsDispatchProps = Pick<
   ExamResultProps,
@@ -46,8 +47,8 @@ export type ExamQuestionsProps = ExamQuestionsOwnProps &
 
 const mapStateToProps = (
   { questionsState }: GlobalState,
-  { location }: RouteComponentProps<{}>
-): ExamQuestionsOwnProps & ExamQuestionsConnectedProps => {
+  { location }: ExamQuestionsOwnProps
+): ExamQuestionsConnectedProps => {
   const { submitTime } = location.state;
   const {
     answers,
@@ -61,45 +62,50 @@ const mapStateToProps = (
     answer: answers[currentIndex],
     answers,
     currentPosition: currentIndex + 1,
+    lastStartedTime,
     question: questions[currentIndex],
     questionState,
     questions,
-    started: !!lastStartedTime && lastStartedTime > submitTime,
+    submitTime,
     totalCount: questions.length
   };
 };
 
 const mapDispatchToProps = (
   dispatch: Dispatch<GlobalState>
-): ExamQuestionsDispatchProps => {
-  return {
-    onClickGoToNext: () => {
-      dispatch(openNextQuestion());
-    },
-    onClickGoToResult: () => {
-      dispatch(finishQuestions());
-    },
-    onClickRestart: () => {
-      dispatch(restartQuestions());
-    },
-    onClickResult: () => {
-      dispatch(confirmCorrect());
-    },
-    onClickToriFuda: ({ questionId, karutaId }: ToriFuda) => {
-      dispatch(answerQuestion(questionId, karutaId));
-    }
-  };
-};
+): ExamQuestionsDispatchProps => ({
+  onClickGoToNext: () => {
+    dispatch(openNextQuestion());
+  },
+  onClickGoToResult: () => {
+    dispatch(finishQuestions());
+  },
+  onClickRestart: () => {
+    dispatch(restartQuestions());
+  },
+  onClickResult: () => {
+    dispatch(confirmCorrect());
+  },
+  onClickToriFuda: ({ questionId, karutaId }: ToriFuda) => {
+    dispatch(answerQuestion(questionId, karutaId));
+  }
+});
 
-const isStarted = ({ started }: ExamQuestionsOwnProps) => started;
+const isStarted = ({
+  lastStartedTime,
+  submitTime
+}: ExamQuestionsConnectedProps) =>
+  !!lastStartedTime && lastStartedTime > submitTime;
 
-const withStartedCheck = branch<ExamQuestionsOwnProps>(
+const withStartedCheck = branch<ExamQuestionsConnectedProps>(
   isStarted,
   component => component,
   renderComponent(ExamInitializer)
 );
 
-const isConfirmedQuestionResult = ({ questionState }: ExamQuestionsOwnProps) =>
+const isConfirmedQuestionResult = ({
+  questionState
+}: ExamQuestionsConnectedProps) =>
   questionState === QuestionState.ConfirmCorrect;
 
 const renderQuestionCorrect = ({
@@ -120,13 +126,13 @@ const renderQuestionCorrect = ({
   );
 };
 
-const withConfirmedQuestionResultCheck = branch<ExamQuestionsOwnProps>(
+const withConfirmedQuestionResultCheck = branch<ExamQuestionsConnectedProps>(
   isConfirmedQuestionResult,
   renderComponent(renderQuestionCorrect),
   component => component
 );
 
-const isFinished = ({ questionState }: ExamQuestionsOwnProps) =>
+const isFinished = ({ questionState }: ExamQuestionsConnectedProps) =>
   questionState === QuestionState.Finished;
 
 const renderResult = ({
@@ -152,7 +158,7 @@ const renderResult = ({
   );
 };
 
-const withFinishedCheck = branch<ExamQuestionsOwnProps>(
+const withFinishedCheck = branch<ExamQuestionsConnectedProps>(
   isFinished,
   renderComponent(renderResult),
   component => component

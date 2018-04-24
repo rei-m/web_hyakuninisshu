@@ -14,22 +14,18 @@ export type KarutasDispatchProps = Pick<
 
 const mapStateToProps = ({
   karutasState
-}: GlobalState): KarutasConnectedProps => {
-  return {
-    karutas: karutasState.karutas
-  };
-};
+}: GlobalState): KarutasConnectedProps => ({
+  karutas: karutasState.karutas
+});
 
 const mapDispatchToProps = (
   _dispatch: Dispatch<GlobalState>,
   { history }: RouteComponentProps<{}>
-): KarutasDispatchProps => {
-  return {
-    onClickKarutaListRow: (karuatId: number) => {
-      history.push(`/karutas/${karuatId}`);
-    }
-  };
-};
+): KarutasDispatchProps => ({
+  onClickKarutaListRow: (karuatId: number) => {
+    history.push(`/karutas/${karuatId}`);
+  }
+});
 
 export default withRouter(
   connect(mapStateToProps, mapDispatchToProps)(KarutaListSection)

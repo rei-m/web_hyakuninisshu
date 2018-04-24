@@ -7,12 +7,10 @@ export type InitializerDispatchProps = Pick<ProgressProps, 'onStart'>;
 
 const mapDispatchToProps = (
   dispatch: Dispatch<GlobalState>
-): InitializerDispatchProps => {
-  return {
-    onStart: () => {
-      dispatch(fetchKarutas());
-    }
-  };
-};
+): InitializerDispatchProps => ({
+  onStart: () => {
+    dispatch(fetchKarutas());
+  }
+});
 
 export default connect(undefined, mapDispatchToProps)(Progress);

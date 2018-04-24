@@ -8,11 +8,11 @@ import { toKarutaIdString } from '../../components/helper';
 import { ROUTE_PATHS } from '../../constants';
 import { MenuType } from '../../enums';
 
-export interface RootOwnProps {
-  readonly initialized: boolean;
-}
+export type RootOwnProps = RouteComponentProps<{}>;
 
-export type RootConnectedProps = Omit<FrameProps, 'onClickBack'>;
+export type RootConnectedProps = Omit<FrameProps, 'onClickBack'> & {
+  readonly initialized: boolean;
+};
 
 export type RootDispatchProps = Pick<FrameProps, 'onClickBack'>;
 
@@ -20,8 +20,8 @@ export type RootProps = RootOwnProps & RootConnectedProps & RootDispatchProps;
 
 const mapStateToProps = (
   { karutasState }: GlobalState,
-  { location }: RouteComponentProps<{}>
-): RootConnectedProps & RootOwnProps => {
+  { location }: RootOwnProps
+): RootConnectedProps => {
   if (karutasState.error) {
     throw karutasState.error;
   }
@@ -81,27 +81,25 @@ const mapStateToProps = (
 
 const mapDispatchToProps = (
   _: Dispatch<GlobalState>,
-  { history, location }: RouteComponentProps<{}>
-): RootDispatchProps => {
-  return {
-    onClickBack: () => {
-      const { pathname } = location;
-      switch (pathname) {
-        case ROUTE_PATHS.TRAINING:
-        case ROUTE_PATHS.EXAM:
-        case ROUTE_PATHS.KARUTAS:
-        case ROUTE_PATHS.ABOUT:
-          history.replace(ROUTE_PATHS.ROOT);
-          break;
-        default:
-          history.goBack();
-          break;
-      }
+  { history, location }: RootOwnProps
+): RootDispatchProps => ({
+  onClickBack: () => {
+    const { pathname } = location;
+    switch (pathname) {
+      case ROUTE_PATHS.TRAINING:
+      case ROUTE_PATHS.EXAM:
+      case ROUTE_PATHS.KARUTAS:
+      case ROUTE_PATHS.ABOUT:
+        history.replace(ROUTE_PATHS.ROOT);
+        break;
+      default:
+        history.goBack();
+        break;
     }
-  };
-};
+  }
+});
 
-const isInitialized = ({ initialized }: RootOwnProps) => initialized;
+const isInitialized = ({ initialized }: RootConnectedProps) => initialized;
 
 const withInitializeCheck = branch<RootProps>(
   isInitialized,

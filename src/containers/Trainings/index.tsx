@@ -36,29 +36,27 @@ const mapStateToProps = ({
 const mapDispatchToProps = (
   _: Dispatch<GlobalState>,
   { history }: RouteComponentProps<{}>
-): TrainingsDispatchProps => {
-  return {
-    onSubmit: (
-      rangeFrom: RangeFromCondition,
-      rangeTo: RangeToCondition,
-      kimariji: KimarijiCondition,
-      color: ColorCondition,
-      kamiNoKuStyle: KarutaStyleCondition,
-      shimoNoKuStyle: KarutaStyleCondition,
-      submitTime: number
-    ) => {
-      history.push('/training/question', {
-        color,
-        kamiNoKuStyle,
-        kimariji,
-        rangeFrom,
-        rangeTo,
-        shimoNoKuStyle,
-        submitTime
-      });
-    }
-  };
-};
+): TrainingsDispatchProps => ({
+  onSubmit: (
+    rangeFrom: RangeFromCondition,
+    rangeTo: RangeToCondition,
+    kimariji: KimarijiCondition,
+    color: ColorCondition,
+    kamiNoKuStyle: KarutaStyleCondition,
+    shimoNoKuStyle: KarutaStyleCondition,
+    submitTime: number
+  ) => {
+    history.push('/training/question', {
+      color,
+      kamiNoKuStyle,
+      kimariji,
+      rangeFrom,
+      rangeTo,
+      shimoNoKuStyle,
+      submitTime
+    });
+  }
+});
 
 export default withRouter(
   connect(mapStateToProps, mapDispatchToProps)(TrainingMenuSection)
