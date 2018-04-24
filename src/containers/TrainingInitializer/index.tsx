@@ -1,9 +1,9 @@
 import * as React from 'react';
 import { connect, Dispatch } from 'react-redux';
 import { withRouter, RouteComponentProps } from 'react-router-dom';
-import { GlobalState } from '../../reducers/index';
-import { startTraining } from '../../actions/questions';
-import Progress, { ProgressProps } from '../../components/Progress';
+import { GlobalState } from '@src/reducers';
+import { startTraining } from '@src/actions/questions';
+import Progress, { ProgressProps } from '@src/components/Progress';
 
 export type TrainingInitializerOwnProps = RouteComponentProps<{}>;
 

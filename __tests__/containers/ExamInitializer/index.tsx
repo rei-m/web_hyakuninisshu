@@ -2,12 +2,12 @@ import * as React from 'react';
 import { MockStore } from 'redux-mock-store';
 import { shallow, ShallowWrapper } from 'enzyme';
 import { mockAppStoreCreateor } from '../../helpers';
-import { GlobalState } from '../../../src/reducers/index';
-import { initialState as karutasState } from '../../../src/reducers/karutas';
-import { initialState as questionsState } from '../../../src/reducers/questions';
-import { START_EXAM_NAME } from '../../../src/actions/questions';
-import ExamInitializer from '../../../src/containers/ExamInitializer';
-import Progress from '../../../src/components/Progress';
+import { GlobalState } from '@src/reducers';
+import { initialState as karutasState } from '@src/reducers/karutas';
+import { initialState as questionsState } from '@src/reducers/questions';
+import { START_EXAM_NAME } from '@src/actions/questions';
+import ExamInitializer from '@src/containers/ExamInitializer';
+import Progress from '@src/components/Progress';
 
 describe('<ExamInitializer />', () => {
   let wrapper: ShallowWrapper<{}>;

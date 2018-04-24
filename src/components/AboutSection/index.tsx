@@ -1,6 +1,6 @@
 import * as React from 'react';
 import styled from 'styled-components';
-import { withAppTheme } from '../../styles';
+import { withAppTheme } from '@src/styles';
 
 const Root = withAppTheme(styled.div)`
   padding: ${({ theme }) => theme.spacing2x};

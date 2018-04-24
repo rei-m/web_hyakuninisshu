@@ -1,9 +1,9 @@
 import * as React from 'react';
 import { Field } from 'formik';
 import styled from 'styled-components';
-import { withAppTheme } from '../../styles';
-import { RangeFromConditions, RangeToConditions } from '../../enums';
-import { toKarutaIdString } from '../helper';
+import { withAppTheme } from '@src/styles';
+import { RangeFromConditions, RangeToConditions } from '@src/enums';
+import { toKarutaIdString } from '@src/components/helper';
 
 export interface SelectRangeFromToProps {
   readonly from: string;

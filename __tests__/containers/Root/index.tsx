@@ -2,14 +2,14 @@ import * as React from 'react';
 import { MockStore } from 'redux-mock-store';
 import { shallow, ShallowWrapper } from 'enzyme';
 import { mockAppStoreCreateor } from '../../helpers';
-import { GlobalState } from '../../../src/reducers/index';
-import { initialState as questionsState } from '../../../src/reducers/questions';
-import Root from '../../../src/containers/Root';
-import Initializer from '../../../src/containers/Initializer';
-import Frame from '../../../src/components/Frame';
-import { Karuta } from '../../../src/types';
 import { create } from '../../factories';
-import { MenuType } from '../../../src/enums';
+import { GlobalState } from '@src/reducers';
+import { initialState as questionsState } from '@src/reducers/questions';
+import Root from '@src/containers/Root';
+import Initializer from '@src/containers/Initializer';
+import Frame from '@src/components/Frame';
+import { Karuta } from '@src/types';
+import { MenuType } from '@src/enums';
 
 const createMockRouter: any = (pathname: string) => {
   return {

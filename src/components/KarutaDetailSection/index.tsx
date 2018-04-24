@@ -1,8 +1,8 @@
 import * as React from 'react';
 import styled from 'styled-components';
-import { withAppTheme } from '../../styles';
-import KarutaCard from '../KarutaCard';
-import { Karuta } from '../../types';
+import { withAppTheme } from '@src/styles';
+import { Karuta } from '@src/types';
+import KarutaCard from '@src/components/KarutaCard';
 
 export interface KarutaDetailSectionProps {
   readonly karuta: Karuta;

@@ -1,14 +1,14 @@
-import { GlobalState } from '../../../src/reducers/index';
+import { GlobalState } from '@src/reducers';
 import * as React from 'react';
 import { MockStore } from 'redux-mock-store';
 import { AxiosInstance } from 'axios';
 import { shallow, ShallowWrapper } from 'enzyme';
 import { mockAppStoreCreateor } from '../../helpers';
-import { initialState as karutasState } from '../../../src/reducers/karutas';
-import { initialState as questionsState } from '../../../src/reducers/questions';
-import { FETCH_KARUTAS_NAME } from '../../../src/actions/karutas';
-import Initializer from '../../../src/containers/Initializer';
-import Progress from '../../../src/components/Progress';
+import { initialState as karutasState } from '@src/reducers/karutas';
+import { initialState as questionsState } from '@src/reducers/questions';
+import { FETCH_KARUTAS_NAME } from '@src/actions/karutas';
+import Initializer from '@src/containers/Initializer';
+import Progress from '@src/components/Progress';
 
 describe('<Initializer />', () => {
   let wrapper: ShallowWrapper<{}>;

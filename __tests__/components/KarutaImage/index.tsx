@@ -1,6 +1,6 @@
 import * as ReactTestRenderer from 'react-test-renderer';
 import * as React from 'react';
-import KarutaImage from '../../../src/components/KarutaImage';
+import KarutaImage from '@src/components/KarutaImage';
 
 describe('<KarutaImage />', () => {
   it('should render component', () => {

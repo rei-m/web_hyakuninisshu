@@ -1,10 +1,10 @@
 import { connect } from 'react-redux';
-import { GlobalState } from '../../reducers/index';
 import { withRouter, RouteComponentProps } from 'react-router-dom';
+import { GlobalState } from '@src/reducers';
+import { AppError, AppErrorType } from '@src/errors';
 import KarutaDetailSection, {
   KarutaDetailSectionProps
-} from '../../components/KarutaDetailSection';
-import { AppError, AppErrorType } from '../../errors';
+} from '@src/components/KarutaDetailSection';
 
 const mapStateToProps = (
   { karutasState }: GlobalState,

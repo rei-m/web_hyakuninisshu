@@ -1,7 +1,7 @@
 import * as React from 'react';
 import styled from 'styled-components';
-import { appTheme, withAppTheme } from '../../styles';
-import Dogeza from '../Dogeza';
+import { appTheme, withAppTheme } from '@src/styles';
+import Dogeza from '@src/components/Dogeza';
 
 const Root = withAppTheme(styled.div)`
   display: flex;

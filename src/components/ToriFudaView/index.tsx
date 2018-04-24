@@ -1,8 +1,8 @@
 import * as React from 'react';
 import styled from 'styled-components';
-import { withRipple } from '../../enhancers/withRipple';
-import { withAppTheme } from '../../styles';
-import { ToriFuda } from '../../types';
+import { withAppTheme } from '@src/styles';
+import { ToriFuda } from '@src/types';
+import { withRipple } from '@src/enhancers/withRipple';
 
 export interface ToriFudaViewProps {
   readonly toriFuda: ToriFuda;

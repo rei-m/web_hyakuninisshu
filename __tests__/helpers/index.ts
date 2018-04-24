@@ -1,7 +1,7 @@
 import configureStore from 'redux-mock-store';
 import thunk from 'redux-thunk';
 import axios, { AxiosInstance } from 'axios';
-import { GlobalState } from '../../src/reducers';
+import { GlobalState } from '@src/reducers';
 
 export const mockAppStoreCreateor = (axiosInstance: AxiosInstance = axios) => {
   return configureStore<GlobalState>([

@@ -1,8 +1,8 @@
 import * as React from 'react';
 import { shallow, ShallowWrapper } from 'enzyme';
-import ExamIndex from '../../../src/containers/Exam';
-import ExamMenuSection from '../../../src/components/ExamMenuSection';
-import { ROUTE_PATHS } from '../../../src/constants';
+import ExamIndex from '@src/containers/Exam';
+import ExamMenuSection from '@src/components/ExamMenuSection';
+import { ROUTE_PATHS } from '@src/constants';
 
 describe('<Exam />', () => {
   let wrapper: ShallowWrapper<{}>;

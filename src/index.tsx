@@ -6,9 +6,9 @@ import * as ReactGA from 'react-ga';
 import { Provider } from 'react-redux';
 import { BrowserRouter } from 'react-router-dom';
 import { ThemeProvider } from 'styled-components';
-import Application from './Application';
-import { getStore } from './store';
-import { appTheme } from './styles';
+import Application from '@src/Application';
+import { getStore } from '@src/store';
+import { appTheme } from '@src/styles';
 
 if (process.env.NODE_ENV === 'production') {
   ReactGA.initialize('UA-46787228-6');

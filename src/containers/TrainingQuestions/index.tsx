@@ -1,27 +1,27 @@
 import * as React from 'react';
-import { GlobalState } from '../../reducers/index';
 import { branch, compose, renderComponent } from 'recompose';
 import { withRouter, RouteComponentProps } from 'react-router-dom';
-import { Answer, Question, ToriFuda } from '../../types';
 import { connect, Dispatch } from 'react-redux';
+import { Answer, Question, ToriFuda } from '@src/types';
+import { QuestionState } from '@src/enums';
+import { GlobalState } from '@src/reducers';
 import {
   answerQuestion,
   confirmCorrect,
   finishQuestions,
   openNextQuestion,
   restartQuestions
-} from '../../actions/questions';
+} from '@src/actions/questions';
+import TrainingInitializer from '@src/containers/TrainingInitializer';
 import QuestionSection, {
   QuestionSectionProps
-} from '../../components/QuestionSection';
+} from '@src/components/QuestionSection';
 import QuestionCorrect, {
   QuestionCorrectProps
-} from '../../components/QuestionCorrect';
+} from '@src/components/QuestionCorrect';
 import QuestionsResult, {
   QuestionsResultProps
-} from '../../components/QuestionsResult';
-import TrainingInitializer from '../TrainingInitializer';
-import { QuestionState } from '../../enums';
+} from '@src/components/QuestionsResult';
 
 export type TrainingQuestionsOwnProps = RouteComponentProps<{}>;
 

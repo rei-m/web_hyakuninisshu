@@ -2,7 +2,7 @@ import {
   ColorCondition,
   KarutaStyleCondition,
   KimarijiCondition
-} from '../enums/index';
+} from '@src/enums/index';
 
 const NUMS = ['一', '二', '三', '四', '五', '六', '七', '八', '九'];
 

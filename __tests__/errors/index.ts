@@ -1,4 +1,4 @@
-import { AppError, AppErrorType } from '../../src/errors';
+import { AppError, AppErrorType } from '@src/errors';
 
 describe('errors', () => {
   it('should create AppError', () => {

@@ -1,12 +1,12 @@
 import { connect, Dispatch } from 'react-redux';
 import { withRouter, RouteComponentProps } from 'react-router-dom';
 import { branch } from 'recompose';
-import { GlobalState } from '../../reducers/index';
-import Initializer from '../Initializer';
-import Frame, { FrameProps } from '../../components/Frame';
-import { toKarutaIdString } from '../../components/helper';
-import { ROUTE_PATHS } from '../../constants';
-import { MenuType } from '../../enums';
+import { ROUTE_PATHS } from '@src/constants';
+import { MenuType } from '@src/enums';
+import { GlobalState } from '@src/reducers';
+import Initializer from '@src/containers/Initializer';
+import Frame, { FrameProps } from '@src/components/Frame';
+import { toKarutaIdString } from '@src/components/helper';
 
 export type RootOwnProps = RouteComponentProps<{}>;
 

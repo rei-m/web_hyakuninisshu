@@ -1,8 +1,8 @@
 import * as React from 'react';
 import styled from 'styled-components';
-import { withAppTheme } from '../../styles';
-import { Answer, Karuta, Question } from '../../types';
-import { toKarutaIdString } from '../helper';
+import { withAppTheme } from '@src/styles';
+import { Answer, Karuta, Question } from '@src/types';
+import { toKarutaIdString } from '@src/components/helper';
 import * as correctImage from './check_correct.png';
 import * as incorrectImage from './check_incorrect.png';
 

@@ -1,13 +1,13 @@
+import { create } from '../factories';
 import {
   FetchKarutasAction,
   FETCH_KARUTAS_NAME,
   RaiseKarutasErrorAction,
   RAISE_KARUTAS_ERROR_NAME
-} from '../../src/actions/karutas';
-import { initialState, karutasReducer } from '../../src/reducers/karutas';
-import { AppError, AppErrorType } from '../../src/errors';
-import { Karuta } from '../../src/types';
-import { create } from '../factories';
+} from '@src/actions/karutas';
+import { initialState, karutasReducer } from '@src/reducers/karutas';
+import { AppError, AppErrorType } from '@src/errors';
+import { Karuta } from '@src/types';
 
 describe('Karutas Logic', () => {
   it('should fetch karutas', () => {

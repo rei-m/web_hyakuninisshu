@@ -1,6 +1,6 @@
 import * as ReactTestRenderer from 'react-test-renderer';
 import * as React from 'react';
-import Progress from '../../../src/components/Progress';
+import Progress from '@src/components/Progress';
 
 describe('<Progress />', () => {
   it('should render component', () => {

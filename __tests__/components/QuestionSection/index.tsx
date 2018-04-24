@@ -1,13 +1,13 @@
 import * as ReactTestRenderer from 'react-test-renderer';
 import * as React from 'react';
 import { shallow } from 'enzyme';
-import QuestionSection, {
-  QuestionSectionProps
-} from '../../../src/components/QuestionSection';
-import { ToriFudaViewProps } from '../../../src/components/ToriFudaView';
-import { Answer, Question } from '../../../src/types';
 import { create } from '../../factories';
 import { sel } from '../../helpers';
+import QuestionSection, {
+  QuestionSectionProps
+} from '@src/components/QuestionSection';
+import { ToriFudaViewProps } from '@src/components/ToriFudaView';
+import { Answer, Question } from '@src/types';
 
 describe('<QuestionSection />', () => {
   let baseProps: QuestionSectionProps;

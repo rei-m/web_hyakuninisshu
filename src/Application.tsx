@@ -7,18 +7,18 @@ import {
 } from 'react-router-dom';
 import * as ReactGA from 'react-ga';
 import { lifecycle } from 'recompose';
-import Root from './containers/Root';
-import TrainignsIndex from './containers/Trainings';
-import ExamIndex from './containers/Exam';
-import ExamQuestionsIndex from './containers/ExamQuestions';
-import KarutasIndex from './containers/Karutas';
-import KarutasShow from './containers/Karutas/Show';
-import TrainingQuestionsIndex from './containers/TrainingQuestions';
-import MenuSection from './components/MenuSection';
-import AboutSection from './components/AboutSection';
-import NotFound from './components/NotFound';
-import ErrorBoundary from './components/ErrorBoundary';
-import { ROUTE_PATHS } from './constants';
+import Root from '@src/containers/Root';
+import TrainignsIndex from '@src/containers/Trainings';
+import ExamIndex from '@src/containers/Exam';
+import ExamQuestionsIndex from '@src/containers/ExamQuestions';
+import KarutasIndex from '@src/containers/Karutas';
+import KarutasShow from '@src/containers/Karutas/Show';
+import TrainingQuestionsIndex from '@src/containers/TrainingQuestions';
+import MenuSection from '@src/components/MenuSection';
+import AboutSection from '@src/components/AboutSection';
+import NotFound from '@src/components/NotFound';
+import ErrorBoundary from '@src/components/ErrorBoundary';
+import { ROUTE_PATHS } from '@src/constants';
 
 const Application = (_props: RouteComponentProps<{}>) => (
   <ErrorBoundary>

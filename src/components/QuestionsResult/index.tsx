@@ -1,9 +1,9 @@
 import * as React from 'react';
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
-import { appTheme, withAppTheme } from '../../styles';
-import Tatami from '../Tatami';
-import QuestionResultsSummary from '../QuestionResultsSummary';
+import { appTheme, withAppTheme } from '@src/styles';
+import Tatami from '@src/components/Tatami';
+import QuestionResultsSummary from '@src/components/QuestionResultsSummary';
 
 export interface QuestionsResultProps {
   readonly totalCount: number;

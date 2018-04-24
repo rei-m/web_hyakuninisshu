@@ -2,10 +2,10 @@ import * as ReactTestRenderer from 'react-test-renderer';
 import * as React from 'react';
 import { MemoryRouter } from 'react-router-dom';
 import { shallow } from 'enzyme';
+import { sel } from '../../helpers';
 import QuestionsResult, {
   QuestionsResultProps
-} from '../../../src/components/QuestionsResult';
-import { sel } from '../../helpers';
+} from '@src/components/QuestionsResult';
 
 describe('<QuestionsResult />', () => {
   let baseProps: QuestionsResultProps;

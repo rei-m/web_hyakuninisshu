@@ -1,11 +1,11 @@
 import * as React from 'react';
 import styled from 'styled-components';
-import { withAppTheme } from '../../styles';
-import { Answer, Question, ToriFuda } from '../../types';
-import Tatami from '../Tatami';
-import YomiFudaView from '../YomiFudaView';
-import ToriFudaView from '../ToriFudaView';
-import QuestionResult from '../QuestionResult';
+import { withAppTheme } from '@src/styles';
+import { Answer, Question, ToriFuda } from '@src/types';
+import Tatami from '@src/components/Tatami';
+import YomiFudaView from '@src/components/YomiFudaView';
+import ToriFudaView from '@src/components/ToriFudaView';
+import QuestionResult from '@src/components/QuestionResult';
 
 export interface QuestionSectionProps {
   readonly question: Question;

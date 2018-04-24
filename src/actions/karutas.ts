@@ -1,8 +1,8 @@
 import { Action, Dispatch } from 'redux';
-import { GlobalState } from '../reducers';
-import { Karuta } from '../types';
-import { AppError, AppErrorType } from '../errors';
-import { convertCamelKey } from '../utils';
+import { GlobalState } from '@src/reducers';
+import { Karuta } from '@src/types';
+import { AppError, AppErrorType } from '@src/errors';
+import { convertCamelKey } from '@src/utils';
 
 export const KARUTA_JSON_URL = '/data/karuta_list.json';
 

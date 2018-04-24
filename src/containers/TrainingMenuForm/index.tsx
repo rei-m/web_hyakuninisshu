@@ -1,7 +1,4 @@
 import { withFormik } from 'formik';
-import TrainingMenuInnerForm, {
-  TrainingMenuInnerFormValues
-} from '../../components/TrainingMenuInnerForm';
 import {
   ColorCondition,
   ColorConditions,
@@ -13,7 +10,10 @@ import {
   RangeFromConditions,
   RangeToCondition,
   RangeToConditions
-} from '../../enums';
+} from '@src/enums';
+import TrainingMenuInnerForm, {
+  TrainingMenuInnerFormValues
+} from '@src/components/TrainingMenuInnerForm';
 
 export interface TrainingMenuFormProps {
   readonly initialRangeFrom: RangeFromCondition;

@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { toKarutaIdString } from '../helper';
+import { toKarutaIdString } from '@src/components/helper';
 // TODO: Spriteする??
 import * as karuta001 from './karuta_001.jpg';
 import * as karuta002 from './karuta_002.jpg';

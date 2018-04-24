@@ -1,11 +1,11 @@
 import * as React from 'react';
 import styled from 'styled-components';
-import { withAppTheme } from '../../styles';
 import { Link, LinkProps } from 'react-router-dom';
-import NavIcon from '../NavIcon';
-import { withRipple } from '../../enhancers/withRipple';
-import { MenuType } from '../../enums';
-import { ROUTE_PATHS } from '../../constants';
+import { withAppTheme } from '@src/styles';
+import { MenuType } from '@src/enums';
+import { ROUTE_PATHS } from '@src/constants';
+import { withRipple } from '@src/enhancers/withRipple';
+import NavIcon from '@src/components/NavIcon';
 
 export interface NavigationProps {
   readonly currentMenuType?: MenuType;

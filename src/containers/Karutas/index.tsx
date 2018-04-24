@@ -1,9 +1,9 @@
 import { connect, Dispatch } from 'react-redux';
-import { GlobalState } from '../../reducers/index';
 import { withRouter, RouteComponentProps } from 'react-router-dom';
+import { GlobalState } from '@src/reducers';
 import KarutaListSection, {
   KarutaListSectionProps
-} from '../../components/KarutaListSection';
+} from '@src/components/KarutaListSection';
 
 export type KarutasConnectedProps = Pick<KarutaListSectionProps, 'karutas'>;
 

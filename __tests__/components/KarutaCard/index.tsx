@@ -1,8 +1,8 @@
 import * as ReactTestRenderer from 'react-test-renderer';
 import * as React from 'react';
-import KarutaCard from '../../../src/components/KarutaCard';
-import { Karuta } from '../../../src/types';
 import { create } from '../../factories';
+import KarutaCard from '@src/components/KarutaCard';
+import { Karuta } from '@src/types';
 
 describe('<KarutaCard />', () => {
   it('should render component when kimariji is short', () => {

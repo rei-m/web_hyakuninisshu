@@ -1,7 +1,7 @@
 import * as React from 'react';
 import styled from 'styled-components';
-import { withAppTheme } from '../../styles';
-import PageTitle from '../PageTitle';
+import { withAppTheme } from '@src/styles';
+import PageTitle from '@src/components/PageTitle';
 
 export interface ExamMenuSectionProps {
   readonly onSubmit: () => void;

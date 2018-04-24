@@ -53,7 +53,10 @@
       "enzyme",
       "jest-enzyme",
       "fbjs"
-    ]
+    ],
+    "moduleNameMapper": {
+      "@src/(.*)": "<rootDir>/src/$1"
+    }
   },
   "devDependencies": {
     "@types/enzyme": "^3.1.10",

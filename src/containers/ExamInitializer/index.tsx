@@ -1,7 +1,7 @@
 import { connect, Dispatch } from 'react-redux';
-import { GlobalState } from '../../reducers/index';
-import { startExam } from '../../actions/questions';
-import Progress, { ProgressProps } from '../../components/Progress';
+import { GlobalState } from '@src/reducers';
+import { startExam } from '@src/actions/questions';
+import Progress, { ProgressProps } from '@src/components/Progress';
 
 export type ExamInitializerDispatchProps = Pick<ProgressProps, 'onStart'>;
 

@@ -1,19 +1,19 @@
 import * as React from 'react';
 import styled from 'styled-components';
-import { withAppTheme } from '../../styles';
 import { Form, FormikHandlers, FormikState } from 'formik';
+import { withAppTheme } from '@src/styles';
 import {
   ColorConditions,
   KarutaStyleConditions,
   KimarijiConditions
-} from '../../enums';
-import SelectItem from './SelectItem';
-import SelectRangeFromTo from './SelectRangeFromTo';
+} from '@src/enums';
+import SelectItem from '@src/components/TrainingMenuInnerForm/SelectItem';
+import SelectRangeFromTo from '@src/components/TrainingMenuInnerForm/SelectRangeFromTo';
 import {
   toColorConditionString,
   toKarutaStyleConditionString,
   toKimarijiConditionString
-} from '../helper';
+} from '@src/components/helper';
 
 const StartButton = withAppTheme(styled.button)`
   margin-top: ${({ theme }) => theme.spacing4x};

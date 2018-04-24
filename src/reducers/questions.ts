@@ -7,8 +7,8 @@ import {
   RESTART_QUESTIONS_NAME,
   START_EXAM_NAME,
   START_TRAINING_NAME
-} from '../actions/questions';
-import { Answer, Question } from '../types';
+} from '@src/actions/questions';
+import { Answer, Question } from '@src/types';
 import {
   ColorCondition,
   KarutaStyleCondition,
@@ -16,7 +16,7 @@ import {
   QuestionState,
   RangeFromCondition,
   RangeToCondition
-} from '../enums';
+} from '@src/enums';
 
 export interface QuestionsState {
   readonly currentIndex: number;

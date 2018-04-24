@@ -1,6 +1,6 @@
 import * as React from 'react';
 import styled from 'styled-components';
-import { Answer } from '../../types';
+import { Answer } from '@src/types';
 import * as correctImage from './check_correct.png';
 import * as incorrectImage from './check_incorrect.png';
 

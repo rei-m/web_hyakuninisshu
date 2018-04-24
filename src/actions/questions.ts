@@ -1,8 +1,8 @@
 import { Action, Dispatch } from 'redux';
-import { GlobalState } from '../reducers';
-import { Answer, Karuta, Question } from '../types';
-import { randomizeArray } from '../utils';
-import { fetchTorifudas, questionsFilter } from '../utils/questions';
+import { GlobalState } from '@src/reducers';
+import { Answer, Karuta, Question } from '@src/types';
+import { randomizeArray } from '@src/utils';
+import { fetchTorifudas, questionsFilter } from '@src/utils/questions';
 import {
   ColorCondition,
   KarutaStyleCondition,
@@ -10,7 +10,7 @@ import {
   QuestionState,
   RangeFromCondition,
   RangeToCondition
-} from '../enums';
+} from '@src/enums';
 
 export const START_TRAINING_NAME = 'START_TRAINING_NAME';
 export type START_TRAINING_TYPE = typeof START_TRAINING_NAME;

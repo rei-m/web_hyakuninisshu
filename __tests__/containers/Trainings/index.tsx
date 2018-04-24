@@ -1,13 +1,13 @@
 import * as React from 'react';
 import { MockStore } from 'redux-mock-store';
 import { shallow, ShallowWrapper } from 'enzyme';
-import TrainingsIndex from '../../../src/containers/Trainings';
-import TrainingMenuSection from '../../../src/components/TrainingMenuSection';
-import { GlobalState } from '../../../src/reducers/index';
-import { initialState as karutasState } from '../../../src/reducers/karutas';
-import { initialState as questionsState } from '../../../src/reducers/questions';
 import { mockAppStoreCreateor } from '../../helpers';
-import { ROUTE_PATHS } from '../../../src/constants';
+import TrainingsIndex from '@src/containers/Trainings';
+import TrainingMenuSection from '@src/components/TrainingMenuSection';
+import { GlobalState } from '@src/reducers';
+import { initialState as karutasState } from '@src/reducers/karutas';
+import { initialState as questionsState } from '@src/reducers/questions';
+import { ROUTE_PATHS } from '@src/constants';
 
 describe('<Trainings />', () => {
   let wrapper: ShallowWrapper<{}>;
