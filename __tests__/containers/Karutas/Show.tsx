@@ -2,12 +2,12 @@ import * as React from 'react';
 import { shallow, ShallowWrapper } from 'enzyme';
 import { MockStore } from 'redux-mock-store';
 import { mockAppStoreCreateor } from '../../helpers';
-import { GlobalState } from '../../../src/reducers/index';
-import { initialState as questionsState } from '../../../src/reducers/questions';
-import KarutasShow from '../../../src/containers/Karutas/Show';
-import KarutaDetailSection from '../../../src/components/KarutaDetailSection';
-import { Karuta } from '../../../src/types';
 import { create } from '../../factories';
+import { GlobalState } from '@src/reducers';
+import { initialState as questionsState } from '@src/reducers/questions';
+import KarutasShow from '@src/containers/Karutas/Show';
+import KarutaDetailSection from '@src/components/KarutaDetailSection';
+import { Karuta } from '@src/types';
 
 const createMockRouter = (id: number): any => {
   return {

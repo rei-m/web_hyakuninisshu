@@ -1,7 +1,7 @@
 import { applyMiddleware, createStore, Store } from 'redux';
 import thunk from 'redux-thunk';
 import axios from 'axios';
-import { rootReducer, GlobalState } from '../reducers';
+import { rootReducer, GlobalState } from '@src/reducers';
 
 const store = createStore<GlobalState>(
   rootReducer,

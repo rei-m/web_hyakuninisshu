@@ -1,6 +1,6 @@
 import { combineReducers, Reducer } from 'redux';
-import { karutasReducer, KarutasState } from './karutas';
-import { questionsReducer, QuestionsState } from './questions';
+import { karutasReducer, KarutasState } from '@src/reducers/karutas';
+import { questionsReducer, QuestionsState } from '@src/reducers/questions';
 
 export interface GlobalState {
   karutasState: KarutasState;

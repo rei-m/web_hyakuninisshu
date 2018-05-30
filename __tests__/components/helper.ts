@@ -1,9 +1,9 @@
-import * as helper from '../../src/components/helper';
+import * as helper from '@src/components/helper';
 import {
   ColorCondition,
   KarutaStyleCondition,
   KimarijiCondition
-} from '../../src/enums/index';
+} from '@src/enums/index';
 
 describe('components/helper', () => {
   it('should convert number to chinese character', () => {

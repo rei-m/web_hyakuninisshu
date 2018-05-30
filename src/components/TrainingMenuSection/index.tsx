@@ -1,15 +1,15 @@
 import * as React from 'react';
 import styled from 'styled-components';
-import { withAppTheme } from '../../styles';
-import PageTitle from '../PageTitle';
-import TrainingMenuForm from '../../containers/TrainingMenuForm';
+import { withAppTheme } from '@src/styles';
 import {
   ColorCondition,
   KarutaStyleCondition,
   KimarijiCondition,
   RangeFromCondition,
   RangeToCondition
-} from '../../enums';
+} from '@src/enums';
+import TrainingMenuForm from '@src/containers/TrainingMenuForm';
+import PageTitle from '@src/components/PageTitle';
 
 export interface TrainingMenuSectionProps {
   readonly initialRangeFrom: RangeFromCondition;

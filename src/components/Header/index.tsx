@@ -1,7 +1,7 @@
 import * as React from 'react';
 import styled from 'styled-components';
-import { withRipple } from '../../enhancers/withRipple';
-import { withAppTheme } from '../../styles';
+import { withRipple } from '@src/enhancers/withRipple';
+import { withAppTheme } from '@src/styles';
 
 export interface HeaderProps {
   readonly subTitle: string;

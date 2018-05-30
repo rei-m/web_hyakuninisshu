@@ -1,8 +1,8 @@
 import * as ReactTestRenderer from 'react-test-renderer';
 import * as React from 'react';
 import { MemoryRouter } from 'react-router-dom';
-import Navigation from '../../../src/components/Navigation';
-import { MenuType } from '../../../src/enums';
+import Navigation from '@src/components/Navigation';
+import { MenuType } from '@src/enums';
 
 describe('<Navigation />', () => {
   it('should render component', () => {

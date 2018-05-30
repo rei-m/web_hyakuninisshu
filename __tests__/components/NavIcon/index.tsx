@@ -1,7 +1,7 @@
 import * as ReactTestRenderer from 'react-test-renderer';
 import * as React from 'react';
-import NavIcon from '../../../src/components/NavIcon';
-import { MenuType } from '../../../src/enums';
+import NavIcon from '@src/components/NavIcon';
+import { MenuType } from '@src/enums';
 
 describe('<NavIcon />', () => {
   it('should render component when current', () => {

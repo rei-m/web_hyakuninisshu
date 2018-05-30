@@ -1,5 +1,5 @@
-import { Karuta } from '../types';
-import { getRandomInt, randomizeArray } from '.';
+import { Karuta } from '@src/types';
+import { getRandomInt, randomizeArray } from '@src/utils';
 
 export const filterByRange = (
   karutas: Karuta[],

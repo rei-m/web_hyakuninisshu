@@ -1,9 +1,9 @@
 import * as React from 'react';
 import { withRouter, RouteComponentProps } from 'react-router-dom';
+import { ROUTE_PATHS } from '@src/constants';
 import ExamMenuSection, {
   ExamMenuSectionProps
-} from '../../components/ExamMenuSection';
-import { ROUTE_PATHS } from '../../constants';
+} from '@src/components/ExamMenuSection';
 
 export type ExamDispatchProps = Pick<ExamMenuSectionProps, 'onSubmit'>;
 

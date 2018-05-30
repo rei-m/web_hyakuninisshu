@@ -2,13 +2,13 @@ import * as React from 'react';
 import { Link } from 'react-router-dom';
 import { withState } from 'recompose';
 import styled from 'styled-components';
-import { withAppTheme } from '../../styles';
 import { Dialog } from '@blueprintjs/core';
-import Tatami from '../Tatami';
-import QuestionResultsSummary from '../QuestionResultsSummary';
-import QuestionResultsMap from '../QuestionResultsMap';
-import KarutaCard from '../KarutaCard';
-import { Answer, Karuta, Question } from '../../types';
+import { withAppTheme } from '@src/styles';
+import { Answer, Karuta, Question } from '@src/types';
+import Tatami from '@src/components/Tatami';
+import QuestionResultsSummary from '@src/components/QuestionResultsSummary';
+import QuestionResultsMap from '@src/components/QuestionResultsMap';
+import KarutaCard from '@src/components/KarutaCard';
 
 export interface ExamResultProps {
   readonly totalCount: number;

@@ -2,11 +2,11 @@ import * as React from 'react';
 import { shallow, ShallowWrapper } from 'enzyme';
 import { MockStore } from 'redux-mock-store';
 import { mockAppStoreCreateor } from '../../helpers';
-import { GlobalState } from '../../../src/reducers/index';
-import { initialState as karutasState } from '../../../src/reducers/karutas';
-import { initialState as questionsState } from '../../../src/reducers/questions';
-import KarutasIndex from '../../../src/containers/Karutas';
-import KarutaListSection from '../../../src/components/KarutaListSection';
+import { GlobalState } from '@src/reducers';
+import { initialState as karutasState } from '@src/reducers/karutas';
+import { initialState as questionsState } from '@src/reducers/questions';
+import KarutasIndex from '@src/containers/Karutas';
+import KarutaListSection from '@src/components/KarutaListSection';
 
 describe('<KarutasIndex />', () => {
   let wrapper: ShallowWrapper<{}>;

@@ -2,12 +2,12 @@ import {
   FETCH_KARUTAS_NAME,
   KarutaActions,
   RAISE_KARUTAS_ERROR_NAME
-} from '../actions/karutas';
-import { Karuta } from '../types';
-import { AppError } from '../errors';
+} from '@src/actions/karutas';
+import { Karuta } from '@src/types';
+import { AppError } from '@src/errors';
 
 // SSR実装までの暫定対応
-import { convertCamelKey } from '../utils';
+import { convertCamelKey } from '@src/utils';
 
 // tslint:disable:object-literal-sort-keys
 const data = {
@@ -317,7 +317,7 @@ const data = {
       creator: '中納言行平',
       first_kana: 'たちわかれ',
       first_kanji: '立ち別れ',
-      second_kana: 'いなぱのやまの',
+      second_kana: 'いなばのやまの',
       second_kanji: 'いなばの山の',
       third_kana: 'みねにおふる',
       third_kanji: '峰に生ふる',

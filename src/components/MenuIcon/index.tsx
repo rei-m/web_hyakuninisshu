@@ -1,7 +1,7 @@
 import * as React from 'react';
 import styled from 'styled-components';
-import { MenuType } from '../../enums';
-import { menuTypeToIcon } from '../../utils';
+import { MenuType } from '@src/enums';
+import { menuTypeToIcon } from '@src/utils';
 
 export interface MenuIconProps {
   readonly iconType: MenuType;

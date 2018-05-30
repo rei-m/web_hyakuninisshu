@@ -1,39 +1,40 @@
 import * as React from 'react';
-import { GlobalState } from '../../reducers/index';
 import { branch, compose, renderComponent } from 'recompose';
 import { withRouter, RouteComponentProps } from 'react-router-dom';
-import { Answer, Question, ToriFuda } from '../../types';
 import { connect, Dispatch } from 'react-redux';
+import { Answer, Question, ToriFuda } from '@src/types';
+import { QuestionState } from '@src/enums';
+import { GlobalState } from '@src/reducers';
 import {
   answerQuestion,
   confirmCorrect,
   finishQuestions,
   openNextQuestion,
   restartQuestions
-} from '../../actions/questions';
+} from '@src/actions/questions';
+import TrainingInitializer from '@src/containers/TrainingInitializer';
 import QuestionSection, {
   QuestionSectionProps
-} from '../../components/QuestionSection';
+} from '@src/components/QuestionSection';
 import QuestionCorrect, {
   QuestionCorrectProps
-} from '../../components/QuestionCorrect';
+} from '@src/components/QuestionCorrect';
 import QuestionsResult, {
   QuestionsResultProps
-} from '../../components/QuestionsResult';
-import TrainingInitializer from '../TrainingInitializer';
-import { QuestionState } from '../../enums';
+} from '@src/components/QuestionsResult';
 
-export interface TrainingQuestionsOwnProps {
-  readonly started: boolean;
-  readonly questions: Question[];
-  readonly answers: Answer[];
-  readonly questionState?: QuestionState;
-}
+export type TrainingQuestionsOwnProps = RouteComponentProps<{}>;
 
 export type TrainingQuestionsConnectedProps = Omit<
   QuestionSectionProps,
   'onClickToriFuda' | 'onClickResult'
->;
+> & {
+  readonly submitTime: number;
+  readonly lastStartedTime?: number;
+  readonly questions: Question[];
+  readonly answers: Answer[];
+  readonly questionState?: QuestionState;
+};
 
 export type TrainingQuestionsDispatchProps = Pick<
   QuestionCorrectProps,
@@ -48,8 +49,8 @@ export type TrainingQuestionsProps = TrainingQuestionsOwnProps &
 
 const mapStateToProps = (
   { questionsState }: GlobalState,
-  { location }: RouteComponentProps<{}>
-): TrainingQuestionsOwnProps & TrainingQuestionsConnectedProps => {
+  { location }: TrainingQuestionsOwnProps
+): TrainingQuestionsConnectedProps => {
   const { submitTime } = location.state;
   const {
     answers,
@@ -63,50 +64,53 @@ const mapStateToProps = (
     answer: answers[currentIndex],
     answers,
     currentPosition: currentIndex + 1,
+    lastStartedTime,
     question: questions[currentIndex],
     questionState,
     questions,
-    started: !!lastStartedTime && lastStartedTime > submitTime,
+    submitTime,
     totalCount: questions.length
   };
 };
 
 const mapDispatchToProps = (
   dispatch: Dispatch<GlobalState>
-): TrainingQuestionsDispatchProps => {
-  return {
-    onClickGoToNext: () => {
-      dispatch(openNextQuestion());
-    },
-    onClickGoToResult: () => {
-      dispatch(finishQuestions());
-    },
-    onClickRestart: () => {
-      dispatch(restartQuestions());
-    },
-    onClickResult: () => {
-      dispatch(confirmCorrect());
-    },
-    onClickToriFuda: ({ questionId, karutaId }: ToriFuda) => {
-      dispatch(answerQuestion(questionId, karutaId));
-    }
-  };
-};
+): TrainingQuestionsDispatchProps => ({
+  onClickGoToNext: () => {
+    dispatch(openNextQuestion());
+  },
+  onClickGoToResult: () => {
+    dispatch(finishQuestions());
+  },
+  onClickRestart: () => {
+    dispatch(restartQuestions());
+  },
+  onClickResult: () => {
+    dispatch(confirmCorrect());
+  },
+  onClickToriFuda: ({ questionId, karutaId }: ToriFuda) => {
+    dispatch(answerQuestion(questionId, karutaId));
+  }
+});
 
-const isStarted = ({ started }: TrainingQuestionsOwnProps) => started;
+const isStarted = ({
+  lastStartedTime,
+  submitTime
+}: TrainingQuestionsConnectedProps) =>
+  !!lastStartedTime && lastStartedTime > submitTime;
 
-const withStartedCheck = branch<TrainingQuestionsOwnProps>(
+const withStartedCheck = branch<TrainingQuestionsConnectedProps>(
   isStarted,
   component => component,
   renderComponent(TrainingInitializer)
 );
 
-const hasQuestion = ({ questions }: TrainingQuestionsOwnProps) =>
+const hasQuestion = ({ questions }: TrainingQuestionsConnectedProps) =>
   questions.length > 0;
 
 const EmptyMessage = () => <h3>指定した条件の歌はありませんでした</h3>;
 
-const withHasQuestionCheck = branch<TrainingQuestionsOwnProps>(
+const withHasQuestionCheck = branch<TrainingQuestionsConnectedProps>(
   hasQuestion,
   component => component,
   renderComponent(EmptyMessage)
@@ -114,7 +118,8 @@ const withHasQuestionCheck = branch<TrainingQuestionsOwnProps>(
 
 const isConfirmedQuestionResult = ({
   questionState
-}: TrainingQuestionsOwnProps) => questionState === QuestionState.ConfirmCorrect;
+}: TrainingQuestionsConnectedProps) =>
+  questionState === QuestionState.ConfirmCorrect;
 
 const renderQuestionCorrect = ({
   question,
@@ -134,13 +139,15 @@ const renderQuestionCorrect = ({
   );
 };
 
-const withConfirmedQuestionResultCheck = branch<TrainingQuestionsOwnProps>(
+const withConfirmedQuestionResultCheck = branch<
+  TrainingQuestionsConnectedProps
+>(
   isConfirmedQuestionResult,
   renderComponent(renderQuestionCorrect),
   component => component
 );
 
-const isFinished = ({ questionState }: TrainingQuestionsOwnProps) =>
+const isFinished = ({ questionState }: TrainingQuestionsConnectedProps) =>
   questionState === QuestionState.Finished;
 
 const renderResult = ({
@@ -163,7 +170,7 @@ const renderResult = ({
   );
 };
 
-const withFinishedCheck = branch<TrainingQuestionsOwnProps>(
+const withFinishedCheck = branch<TrainingQuestionsConnectedProps>(
   isFinished,
   renderComponent(renderResult),
   component => component

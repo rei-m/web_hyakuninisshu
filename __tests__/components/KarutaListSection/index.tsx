@@ -1,12 +1,12 @@
 import * as ReactTestRenderer from 'react-test-renderer';
 import * as React from 'react';
 import { shallow } from 'enzyme';
+import { create } from '../../factories';
 import KarutaListSection, {
   KarutaListSectionProps
-} from '../../../src/components/KarutaListSection';
-import KarutaList from '../../../src/components/KarutaList';
-import { Karuta } from '../../../src/types';
-import { create } from '../../factories';
+} from '@src/components/KarutaListSection';
+import KarutaList from '@src/components/KarutaList';
+import { Karuta } from '@src/types';
 
 describe('<KarutaListSection />', () => {
   let props: KarutaListSectionProps;

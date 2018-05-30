@@ -1,11 +1,11 @@
 import * as React from 'react';
 import { Helmet } from 'react-helmet';
 import styled from 'styled-components';
-import { withAppTheme } from '../../styles';
-import Header from '../Header';
-import Navigation from '../Navigation';
-import { MenuType } from '../../enums';
-import { APP_NAME } from '../../constants';
+import { withAppTheme } from '@src/styles';
+import { MenuType } from '@src/enums';
+import { APP_NAME } from '@src/constants';
+import Header from '@src/components/Header';
+import Navigation from '@src/components/Navigation';
 
 export interface FrameProps {
   readonly subTitle: string;

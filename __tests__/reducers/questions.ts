@@ -1,3 +1,4 @@
+import { create } from '../factories';
 import {
   AnswerQuestionAction,
   ANSWER_QUESTION_NAME,
@@ -13,9 +14,9 @@ import {
   StartTrainingAction,
   START_EXAM_NAME,
   START_TRAINING_NAME
-} from '../../src/actions/questions';
-import { initialState, questionsReducer } from '../../src/reducers/questions';
-import { Answer, Question } from '../../src/types';
+} from '@src/actions/questions';
+import { initialState, questionsReducer } from '@src/reducers/questions';
+import { Answer, Question } from '@src/types';
 import {
   ColorCondition,
   KarutaStyleCondition,
@@ -23,8 +24,7 @@ import {
   QuestionState,
   RangeFromCondition,
   RangeToCondition
-} from '../../src/enums';
-import { create } from '../factories';
+} from '@src/enums';
 
 describe('Questions Logic', () => {
   it('should be transition state that is started training', () => {

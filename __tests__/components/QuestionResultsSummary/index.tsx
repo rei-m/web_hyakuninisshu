@@ -1,6 +1,6 @@
 import * as ReactTestRenderer from 'react-test-renderer';
 import * as React from 'react';
-import QuestionResultsSummary from '../../../src/components/QuestionResultsSummary';
+import QuestionResultsSummary from '@src/components/QuestionResultsSummary';
 
 describe('<QuestionResultsSummary />', () => {
   it('should render component', () => {

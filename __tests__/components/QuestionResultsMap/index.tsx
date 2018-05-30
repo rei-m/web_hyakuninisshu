@@ -1,12 +1,12 @@
 import * as ReactTestRenderer from 'react-test-renderer';
 import * as React from 'react';
 import { shallow } from 'enzyme';
-import QuestionResultsMap, {
-  QuestionResultsMapProps
-} from '../../../src/components/QuestionResultsMap';
-import { Answer, Question } from '../../../src/types';
 import { create } from '../../factories';
 import { sel } from '../../helpers';
+import QuestionResultsMap, {
+  QuestionResultsMapProps
+} from '@src/components/QuestionResultsMap';
+import { Answer, Question } from '@src/types';
 
 describe('<QuestionResultsMap />', () => {
   let baseProps: QuestionResultsMapProps;
