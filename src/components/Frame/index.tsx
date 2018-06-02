@@ -45,7 +45,10 @@ const Frame: React.SFC<FrameProps> = ({
 }) => (
   <div>
     <Helmet>
-      <meta name="keywords" content="百人一首,暗記,練習,ゲーム" />
+      <meta
+        name="keywords"
+        content="百人一首,小倉百人一首,歌,一覧,意味,歌番号,暗記,練習,ゲーム"
+      />
       <meta name="description" content={description} />
       {!isDisplayNav && <meta name="robots" content="noindex,nofollow" />}
       <title>{`${APP_NAME} - ${subTitle} -`}</title>
