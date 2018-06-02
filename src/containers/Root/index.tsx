@@ -30,7 +30,7 @@ const mapStateToProps = (
   let isDisplayNav = true;
   let subTitle = '簡単に暗記';
   let description =
-    '百人一首を手軽に暗記できるサイトです。百人一首の始めの一歩にご利用ください。';
+    '百人一首の暗記を練習できます。百人一首の札の画像や現代語訳も載せています。百人一首の歌の意味に触れながら楽しく覚えましょう。';
   let currentMenuType: MenuType | undefined;
 
   const { pathname } = location;
@@ -39,7 +39,7 @@ const mapStateToProps = (
     canBack = true;
     subTitle = '練習';
     description =
-      '百人一首を手軽に暗記できるサイトです。出題条件を組み合わせて自分にあったペースで練習できます。';
+      '百人一首の暗記を練習できます。出題条件を組み合わせて自分にあったペースで練習できます。百人一首の歌の意味に触れながら楽しく覚えましょう。';
     currentMenuType = MenuType.Training;
     if (pathname.indexOf(ROUTE_PATHS.TRAINING_QUESTION) >= 0) {
       isDisplayNav = false;
@@ -48,7 +48,7 @@ const mapStateToProps = (
     canBack = true;
     subTitle = '腕試し';
     description =
-      '百人一首を手軽に暗記できるサイトです。百首覚えられているかチャレンジしましょう。';
+      '百人一首の暗記を練習できます。百首覚えられているかチャレンジしましょう。';
     currentMenuType = MenuType.Exam;
     if (pathname.indexOf(ROUTE_PATHS.EXAM_QUESTION) >= 0) {
       isDisplayNav = false;
@@ -58,7 +58,7 @@ const mapStateToProps = (
     canBack = true;
     subTitle = match ? toKarutaIdString(Number(match[1])) : '資料';
     description =
-      '百人一首を手軽に暗記できるサイトです。札の画像や歌の意味を確認できます。';
+      '百人一首の暗記を練習できます。百人一首の札の画像や現代語訳も載せています。百人一首の歌の意味に触れながら楽しく覚えましょう。';
     currentMenuType = MenuType.Material;
   } else if (pathname.indexOf(ROUTE_PATHS.ABOUT) >= 0) {
     canBack = true;
