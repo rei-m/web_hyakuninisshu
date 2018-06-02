@@ -1,11 +1,11 @@
 import * as React from 'react';
 import { Link, LinkProps } from 'react-router-dom';
 import styled from 'styled-components';
-import { withAppTheme } from '../../styles';
-import { withRipple } from '../../enhancers/withRipple';
-import MenuIcon from '../MenuIcon';
-import { MenuType } from '../../enums';
-import { ROUTE_PATHS } from '../../constants';
+import { withAppTheme } from '@src/styles';
+import { withRipple } from '@src/enhancers/withRipple';
+import { MenuType } from '@src/enums';
+import { ROUTE_PATHS } from '@src/constants';
+import MenuIcon from '@src/components/MenuIcon';
 
 const RootSection = withAppTheme(styled.div)`
   padding: ${({ theme }) => theme.spacing2x};

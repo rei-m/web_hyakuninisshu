@@ -1,4 +1,4 @@
-import { Answer, Karuta, Question, ToriFuda, YomiFuda } from '../../src/types';
+import { Answer, Karuta, Question, ToriFuda, YomiFuda } from '@src/types';
 
 const initializerTree: { [key: string]: () => any } = {};
 const idKeyTree: { [key: string]: string } = {};

@@ -2,14 +2,14 @@ import * as ReactTestRenderer from 'react-test-renderer';
 import * as React from 'react';
 import TrainingMenuSection, {
   TrainingMenuSectionProps
-} from '../../../src/components/TrainingMenuSection';
+} from '@src/components/TrainingMenuSection';
 import {
   ColorCondition,
   KarutaStyleCondition,
   KimarijiCondition,
   RangeFromCondition,
   RangeToCondition
-} from '../../../src/enums';
+} from '@src/enums';
 
 describe('<TrainingMenuSection />', () => {
   it('should render component', () => {

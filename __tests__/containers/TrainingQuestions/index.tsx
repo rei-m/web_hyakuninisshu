@@ -1,25 +1,25 @@
 import { MockStore } from 'redux-mock-store';
-import TrainingQuestions from '../../../src/containers/TrainingQuestions';
+import TrainingQuestions from '@src/containers/TrainingQuestions';
 import { shallow, ShallowWrapper } from 'enzyme';
 import { mockAppStoreCreateor } from '../../helpers';
+import { create } from '../../factories';
 import {
   ANSWER_QUESTION_NAME,
   CONFIRM_CORRECT_NAME,
   FINISH_QUESTIONS_NAME,
   OPEN_NEXT_QUESTION_NAME,
   RESTART_QUESTIONS_NAME
-} from '../../../src/actions/questions';
-import { GlobalState } from '../../../src/reducers/index';
-import { initialState as karutasState } from '../../../src/reducers/karutas';
-import { initialState as questionsState } from '../../../src/reducers/questions';
+} from '@src/actions/questions';
+import { GlobalState } from '@src/reducers';
+import { initialState as karutasState } from '@src/reducers/karutas';
+import { initialState as questionsState } from '@src/reducers/questions';
 import * as React from 'react';
-import TrainingInitializer from '../../../src/containers/TrainingInitializer';
-import QuestionSection from '../../../src/components/QuestionSection';
-import QuestionCorrect from '../../../src/components/QuestionCorrect';
-import QuestionsResult from '../../../src/components/QuestionsResult';
-import { QuestionState } from '../../../src/enums';
-import { Answer, Question, ToriFuda, YomiFuda } from '../../../src/types';
-import { create } from '../../factories';
+import TrainingInitializer from '@src/containers/TrainingInitializer';
+import QuestionSection from '@src/components/QuestionSection';
+import QuestionCorrect from '@src/components/QuestionCorrect';
+import QuestionsResult from '@src/components/QuestionsResult';
+import { QuestionState } from '@src/enums';
+import { Answer, Question, ToriFuda, YomiFuda } from '@src/types';
 
 const createMockRouter = (submitTime: number) => {
   return {

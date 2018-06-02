@@ -1,10 +1,8 @@
 import * as ReactTestRenderer from 'react-test-renderer';
 import * as React from 'react';
-import YomiFudaView, {
-  YomiFudaViewProps
-} from '../../../src/components/YomiFudaView';
-import { YomiFuda } from '../../../src/types';
 import { create } from '../../factories';
+import YomiFudaView, { YomiFudaViewProps } from '@src/components/YomiFudaView';
+import { YomiFuda } from '@src/types';
 
 describe('<YomiFudaView />', () => {
   it('should render component', () => {

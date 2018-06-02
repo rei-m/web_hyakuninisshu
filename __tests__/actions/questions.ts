@@ -1,9 +1,9 @@
 import { MockStore } from 'redux-mock-store';
 import { create } from '../factories';
 import { mockAppStoreCreateor } from '../helpers';
-import * as questionsAction from '../../src/actions/questions';
-import { initialState as questionsInitialState } from '../../src/reducers/questions';
-import { Answer, Karuta, Question } from '../../src/types';
+import * as questionsAction from '@src/actions/questions';
+import { initialState as questionsInitialState } from '@src/reducers/questions';
+import { Answer, Karuta, Question } from '@src/types';
 import {
   ColorCondition,
   KarutaStyleCondition,
@@ -11,8 +11,8 @@ import {
   QuestionState,
   RangeFromCondition,
   RangeToCondition
-} from '../../src/enums';
-import { GlobalState } from '../../src/reducers';
+} from '@src/enums';
+import { GlobalState } from '@src/reducers';
 
 const setUpKarutas = () =>
   [...Array(100).keys()].map(i =>

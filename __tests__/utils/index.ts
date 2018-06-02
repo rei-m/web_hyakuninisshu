@@ -3,8 +3,8 @@ import {
   getRandomInt,
   menuTypeToIcon,
   randomizeArray
-} from '../../src/utils';
-import { MenuType } from '../../src/enums';
+} from '@src/utils';
+import { MenuType } from '@src/enums';
 
 describe('utility functions', () => {
   it('should convert json sneak to camel', () => {

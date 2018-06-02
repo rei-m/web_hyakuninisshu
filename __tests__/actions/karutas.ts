@@ -4,8 +4,8 @@ import {
   fetchKarutas,
   FETCH_KARUTAS_NAME,
   RAISE_KARUTAS_ERROR_NAME
-} from '../../src/actions/karutas';
-import { AppError, AppErrorType } from '../../src/errors';
+} from '@src/actions/karutas';
+import { AppError, AppErrorType } from '@src/errors';
 
 const setUpGetSuccess = () => {
   const axiosInstance = {

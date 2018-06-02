@@ -1,7 +1,7 @@
 import * as React from 'react';
 import styled from 'styled-components';
-import { withAppTheme } from '../../styles';
-import { YomiFuda } from '../../types';
+import { withAppTheme } from '@src/styles';
+import { YomiFuda } from '@src/types';
 
 export interface YomiFudaViewProps {
   readonly yomiFuda: YomiFuda;

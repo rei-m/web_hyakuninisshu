@@ -1,4 +1,4 @@
-import { MenuType } from '../enums';
+import { MenuType } from '@src/enums';
 
 export const convertCamelKey = (json: { [key: string]: any }) => {
   const result = {};

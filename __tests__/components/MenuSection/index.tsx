@@ -1,7 +1,7 @@
 import * as ReactTestRenderer from 'react-test-renderer';
 import * as React from 'react';
 import { MemoryRouter } from 'react-router-dom';
-import MenuSection from '../../../src/components/MenuSection';
+import MenuSection from '@src/components/MenuSection';
 
 describe('<MenuSection />', () => {
   it('should render component', () => {

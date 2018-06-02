@@ -5,7 +5,7 @@ exports[`<TrainingMenuSection /> should render component 1`] = `
   className="sc-iwsKbI ffxTqr"
 >
   <h1
-    className="sc-bdVaJa hRnhkM"
+    className="sc-dnqmqq ieCHlg"
   >
     出題設定
   </h1>
@@ -13,17 +13,17 @@ exports[`<TrainingMenuSection /> should render component 1`] = `
     onSubmit={[Function]}
   >
     <div
-      className="sc-ifAKCX TiiUY"
+      className="sc-bxivhb fVdtmn"
     >
       出題範囲
       <div
-        className="sc-EHOje cmtNwr"
+        className="sc-ifAKCX cCktqy"
       >
         <label
           className="pt-label"
         >
           <div
-            className="pt-select pt-large sc-bZQynM gJwXUW"
+            className="pt-select pt-large sc-EHOje clhbsb"
           >
             <select
               name="rangeFrom"
@@ -85,7 +85,7 @@ exports[`<TrainingMenuSection /> should render component 1`] = `
           </div>
         </label>
         <span
-          className="sc-gzVnrw kDSqyC"
+          className="sc-bZQynM coxNCW"
         >
           〜
         </span>
@@ -93,7 +93,7 @@ exports[`<TrainingMenuSection /> should render component 1`] = `
           className="pt-label"
         >
           <div
-            className="pt-select pt-large sc-bZQynM gJwXUW"
+            className="pt-select pt-large sc-EHOje clhbsb"
           >
             <select
               name="rangeTo"
@@ -157,14 +157,14 @@ exports[`<TrainingMenuSection /> should render component 1`] = `
       </div>
     </div>
     <label
-      className="pt-label sc-bwzfXH gXQQfT"
+      className="pt-label sc-bdVaJa jhRYkF"
     >
       決まり字
       <div
-        className="sc-htpNat dgCRUp"
+        className="sc-bwzfXH hyXkXP"
       >
         <div
-          className="pt-select pt-large sc-bxivhb jcNPuI"
+          className="pt-select pt-large sc-htpNat daVAfG"
         >
           <select
             name="kimariji"
@@ -212,14 +212,14 @@ exports[`<TrainingMenuSection /> should render component 1`] = `
       </div>
     </label>
     <label
-      className="pt-label sc-bwzfXH gXQQfT"
+      className="pt-label sc-bdVaJa jhRYkF"
     >
       五色
       <div
-        className="sc-htpNat dgCRUp"
+        className="sc-bwzfXH hyXkXP"
       >
         <div
-          className="pt-select pt-large sc-bxivhb jcNPuI"
+          className="pt-select pt-large sc-htpNat daVAfG"
         >
           <select
             name="color"
@@ -262,14 +262,14 @@ exports[`<TrainingMenuSection /> should render component 1`] = `
       </div>
     </label>
     <label
-      className="pt-label sc-bwzfXH gXQQfT"
+      className="pt-label sc-bdVaJa jhRYkF"
     >
       上の句
       <div
-        className="sc-htpNat dgCRUp"
+        className="sc-bwzfXH hyXkXP"
       >
         <div
-          className="pt-select pt-large sc-bxivhb jcNPuI"
+          className="pt-select pt-large sc-htpNat daVAfG"
         >
           <select
             name="kamiNoKuStyle"
@@ -292,14 +292,14 @@ exports[`<TrainingMenuSection /> should render component 1`] = `
       </div>
     </label>
     <label
-      className="pt-label sc-bwzfXH gXQQfT"
+      className="pt-label sc-bdVaJa jhRYkF"
     >
       下の句
       <div
-        className="sc-htpNat dgCRUp"
+        className="sc-bwzfXH hyXkXP"
       >
         <div
-          className="pt-select pt-large sc-bxivhb jcNPuI"
+          className="pt-select pt-large sc-htpNat daVAfG"
         >
           <select
             name="shimoNoKuStyle"
@@ -322,7 +322,7 @@ exports[`<TrainingMenuSection /> should render component 1`] = `
       </div>
     </label>
     <button
-      className="pt-button pt-intent-primary pt-large pt-icon-edit sc-dnqmqq hxebi"
+      className="pt-button pt-intent-primary pt-large pt-icon-edit sc-htoDjs hftCed"
       type="submit"
     >
       練習をはじめる

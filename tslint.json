@@ -25,7 +25,7 @@
       ]
     },
     "prefer-const": true,
-    "no-implicit-dependencies": [true, "dev"],
+    "no-implicit-dependencies": false,
     "no-switch-case-fall-through": true,
     "no-submodule-imports": false,
     "triple-equals": true,

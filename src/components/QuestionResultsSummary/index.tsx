@@ -1,6 +1,6 @@
 import * as React from 'react';
 import styled from 'styled-components';
-import { withAppTheme } from '../../styles';
+import { withAppTheme } from '@src/styles';
 
 export interface QuestionResultsSummaryProps {
   readonly title: string;

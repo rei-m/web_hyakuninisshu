@@ -2,13 +2,11 @@ import * as ReactTestRenderer from 'react-test-renderer';
 import * as React from 'react';
 import { MemoryRouter } from 'react-router-dom';
 import { shallow } from 'enzyme';
-import ExamResult, {
-  ExamResultProps
-} from '../../../src/components/ExamResult';
-import QuestionResultsMap from '../../../src/components/QuestionResultsMap';
-import { Answer, Question } from '../../../src/types';
 import { create } from '../../factories';
 import { sel } from '../../helpers';
+import ExamResult, { ExamResultProps } from '@src/components/ExamResult';
+import QuestionResultsMap from '@src/components/QuestionResultsMap';
+import { Answer, Question } from '@src/types';
 
 describe('<ExamResult />', () => {
   const questions = [

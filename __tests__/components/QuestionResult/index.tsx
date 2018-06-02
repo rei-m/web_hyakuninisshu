@@ -1,11 +1,11 @@
 import * as ReactTestRenderer from 'react-test-renderer';
 import * as React from 'react';
 import { shallow } from 'enzyme';
+import { create } from '../../factories';
 import QuestionResult, {
   QuestionResultProps
-} from '../../../src/components/QuestionResult';
-import { Answer } from '../../../src/types';
-import { create } from '../../factories';
+} from '@src/components/QuestionResult';
+import { Answer } from '@src/types';
 
 describe('<QuestionResult />', () => {
   let baseProps: QuestionResultProps;

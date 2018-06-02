@@ -1,11 +1,9 @@
 import * as ReactTestRenderer from 'react-test-renderer';
 import * as React from 'react';
 import { shallow } from 'enzyme';
-import ToriFudaView, {
-  ToriFudaViewProps
-} from '../../../src/components/ToriFudaView';
-import { ToriFuda } from '../../../src/types';
 import { create } from '../../factories';
+import ToriFudaView, { ToriFudaViewProps } from '@src/components/ToriFudaView';
+import { ToriFuda } from '@src/types';
 
 describe('<ToriFudaView />', () => {
   let baseProps: ToriFudaViewProps;

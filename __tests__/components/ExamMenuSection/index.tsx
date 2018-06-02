@@ -1,8 +1,8 @@
 import * as ReactTestRenderer from 'react-test-renderer';
 import * as React from 'react';
 import { shallow } from 'enzyme';
-import ExamMenuSection from '../../../src/components/ExamMenuSection';
 import { sel } from '../../helpers';
+import ExamMenuSection from '@src/components/ExamMenuSection';
 
 describe('<ExamMenuSection />', () => {
   it('should render component', () => {

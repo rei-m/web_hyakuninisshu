@@ -2,14 +2,14 @@ import * as React from 'react';
 import { MockStore } from 'redux-mock-store';
 import { shallow, ShallowWrapper } from 'enzyme';
 import { mockAppStoreCreateor } from '../../helpers';
-import { GlobalState } from '../../../src/reducers/index';
-import { initialState as questionsState } from '../../../src/reducers/questions';
-import Root from '../../../src/containers/Root';
-import Initializer from '../../../src/containers/Initializer';
-import Frame from '../../../src/components/Frame';
-import { Karuta } from '../../../src/types';
 import { create } from '../../factories';
-import { MenuType } from '../../../src/enums';
+import { GlobalState } from '@src/reducers';
+import { initialState as questionsState } from '@src/reducers/questions';
+import Root from '@src/containers/Root';
+import Initializer from '@src/containers/Initializer';
+import Frame from '@src/components/Frame';
+import { Karuta } from '@src/types';
+import { MenuType } from '@src/enums';
 
 const createMockRouter: any = (pathname: string) => {
   return {
@@ -83,7 +83,7 @@ describe('<Root />', () => {
     expect(props.canBack).toBe(true);
     expect(props.currentMenuType).toBe(MenuType.Training);
     expect(props.description).toBe(
-      '百人一首を手軽に暗記できるサイトです。出題条件を組み合わせて自分にあったペースで練習できます。'
+      '百人一首の暗記を練習できます。出題条件を組み合わせて自分にあったペースで練習できます。百人一首の歌の意味に触れながら楽しく覚えましょう。'
     );
     expect(props.isDisplayNav).toBe(true);
     expect(props.subTitle).toBe('練習');
@@ -99,7 +99,7 @@ describe('<Root />', () => {
     expect(props.canBack).toBe(true);
     expect(props.currentMenuType).toBe(MenuType.Training);
     expect(props.description).toBe(
-      '百人一首を手軽に暗記できるサイトです。出題条件を組み合わせて自分にあったペースで練習できます。'
+      '百人一首の暗記を練習できます。出題条件を組み合わせて自分にあったペースで練習できます。百人一首の歌の意味に触れながら楽しく覚えましょう。'
     );
     expect(props.isDisplayNav).toBe(false);
     expect(props.subTitle).toBe('練習');
@@ -115,7 +115,7 @@ describe('<Root />', () => {
     expect(props.canBack).toBe(true);
     expect(props.currentMenuType).toBe(MenuType.Exam);
     expect(props.description).toBe(
-      '百人一首を手軽に暗記できるサイトです。百首覚えられているかチャレンジしましょう。'
+      '百人一首の暗記を練習できます。百首覚えられているかチャレンジしましょう。'
     );
     expect(props.isDisplayNav).toBe(true);
     expect(props.subTitle).toBe('腕試し');
@@ -131,7 +131,7 @@ describe('<Root />', () => {
     expect(props.canBack).toBe(true);
     expect(props.currentMenuType).toBe(MenuType.Exam);
     expect(props.description).toBe(
-      '百人一首を手軽に暗記できるサイトです。百首覚えられているかチャレンジしましょう。'
+      '百人一首の暗記を練習できます。百首覚えられているかチャレンジしましょう。'
     );
     expect(props.isDisplayNav).toBe(false);
     expect(props.subTitle).toBe('腕試し');
@@ -147,7 +147,7 @@ describe('<Root />', () => {
     expect(props.canBack).toBe(true);
     expect(props.currentMenuType).toBe(MenuType.Material);
     expect(props.description).toBe(
-      '百人一首を手軽に暗記できるサイトです。札の画像や歌の意味を確認できます。'
+      '百人一首の暗記を練習できます。百人一首の札の画像や現代語訳も載せています。百人一首の歌の意味に触れながら楽しく覚えましょう。'
     );
     expect(props.isDisplayNav).toBe(true);
     expect(props.subTitle).toBe('資料');
@@ -163,7 +163,7 @@ describe('<Root />', () => {
     expect(props.canBack).toBe(true);
     expect(props.currentMenuType).toBe(MenuType.Other);
     expect(props.description).toBe(
-      '百人一首を手軽に暗記できるサイトです。百人一首の始めの一歩にご利用ください。'
+      '百人一首の暗記を練習できます。百人一首の札の画像や現代語訳も載せています。百人一首の歌の意味に触れながら楽しく覚えましょう。'
     );
     expect(props.isDisplayNav).toBe(true);
     expect(props.subTitle).toBe('サイトについて');
@@ -179,7 +179,7 @@ describe('<Root />', () => {
     expect(props.canBack).toBe(false);
     expect(props.currentMenuType).toBeUndefined();
     expect(props.description).toBe(
-      '百人一首を手軽に暗記できるサイトです。百人一首の始めの一歩にご利用ください。'
+      '百人一首の暗記を練習できます。百人一首の札の画像や現代語訳も載せています。百人一首の歌の意味に触れながら楽しく覚えましょう。'
     );
     expect(props.isDisplayNav).toBe(true);
     expect(props.subTitle).toBe('簡単に暗記');

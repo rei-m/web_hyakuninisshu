@@ -1,7 +1,7 @@
 import * as ReactTestRenderer from 'react-test-renderer';
 import * as React from 'react';
 import { MemoryRouter } from 'react-router-dom';
-import Frame, { FrameProps } from '../../../src/components/Frame';
+import Frame, { FrameProps } from '@src/components/Frame';
 
 describe('<Frame />', () => {
   let baseProps: FrameProps;

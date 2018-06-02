@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { withAppTheme } from '../../styles';
+import { withAppTheme } from '@src/styles';
 import * as tatami from './tatami_part.png';
 
 const Tatami = withAppTheme(styled.div)`

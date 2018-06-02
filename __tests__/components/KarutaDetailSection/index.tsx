@@ -1,8 +1,8 @@
 import * as ReactTestRenderer from 'react-test-renderer';
 import * as React from 'react';
-import KarutaDetailSection from '../../../src/components/KarutaDetailSection';
-import { Karuta } from '../../../src/types';
 import { create } from '../../factories';
+import KarutaDetailSection from '@src/components/KarutaDetailSection';
+import { Karuta } from '@src/types';
 
 describe('<KarutaDetailSection />', () => {
   it('should render component', () => {

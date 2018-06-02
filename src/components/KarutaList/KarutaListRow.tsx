@@ -1,9 +1,9 @@
 import * as React from 'react';
 import styled from 'styled-components';
-import { withAppTheme } from '../../styles';
-import KarutaImage from '../KarutaImage';
-import { Karuta } from '../../types';
-import { toKarutaIdString } from '../helper';
+import { withAppTheme } from '@src/styles';
+import { Karuta } from '@src/types';
+import KarutaImage from '@src/components/KarutaImage';
+import { toKarutaIdString } from '@src/components/helper';
 
 export interface KarutaListRowProps {
   readonly karuta: Karuta;

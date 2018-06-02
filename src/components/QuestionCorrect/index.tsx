@@ -1,12 +1,12 @@
 import * as React from 'react';
 import styled from 'styled-components';
-import { withAppTheme } from '../../styles';
-import { Dialog } from '@blueprintjs/core';
 import { withState } from 'recompose';
-import Tatami from '../Tatami';
-import KarutaCard from '../KarutaCard';
-import { Karuta } from '../../types';
-import { toKarutaIdString, toKimarijiString } from '../helper';
+import { Dialog } from '@blueprintjs/core';
+import { withAppTheme } from '@src/styles';
+import { Karuta } from '@src/types';
+import Tatami from '@src/components/Tatami';
+import KarutaCard from '@src/components/KarutaCard';
+import { toKarutaIdString, toKimarijiString } from '@src/components/helper';
 
 export interface QuestionCorrectProps {
   readonly karuta: Karuta;

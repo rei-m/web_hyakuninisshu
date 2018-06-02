@@ -1,16 +1,16 @@
 import { connect, Dispatch } from 'react-redux';
 import { withRouter, RouteComponentProps } from 'react-router-dom';
-import { GlobalState } from '../../reducers/index';
-import TrainingMenuSection, {
-  TrainingMenuSectionProps
-} from '../../components/TrainingMenuSection';
+import { GlobalState } from '@src/reducers';
 import {
   ColorCondition,
   KarutaStyleCondition,
   KimarijiCondition,
   RangeFromCondition,
   RangeToCondition
-} from '../../enums';
+} from '@src/enums';
+import TrainingMenuSection, {
+  TrainingMenuSectionProps
+} from '@src/components/TrainingMenuSection';
 
 export type TrainingsConnectedProps = Omit<
   TrainingMenuSectionProps,
@@ -36,29 +36,27 @@ const mapStateToProps = ({
 const mapDispatchToProps = (
   _: Dispatch<GlobalState>,
   { history }: RouteComponentProps<{}>
-): TrainingsDispatchProps => {
-  return {
-    onSubmit: (
-      rangeFrom: RangeFromCondition,
-      rangeTo: RangeToCondition,
-      kimariji: KimarijiCondition,
-      color: ColorCondition,
-      kamiNoKuStyle: KarutaStyleCondition,
-      shimoNoKuStyle: KarutaStyleCondition,
-      submitTime: number
-    ) => {
-      history.push('/training/question', {
-        color,
-        kamiNoKuStyle,
-        kimariji,
-        rangeFrom,
-        rangeTo,
-        shimoNoKuStyle,
-        submitTime
-      });
-    }
-  };
-};
+): TrainingsDispatchProps => ({
+  onSubmit: (
+    rangeFrom: RangeFromCondition,
+    rangeTo: RangeToCondition,
+    kimariji: KimarijiCondition,
+    color: ColorCondition,
+    kamiNoKuStyle: KarutaStyleCondition,
+    shimoNoKuStyle: KarutaStyleCondition,
+    submitTime: number
+  ) => {
+    history.push('/training/question', {
+      color,
+      kamiNoKuStyle,
+      kimariji,
+      rangeFrom,
+      rangeTo,
+      shimoNoKuStyle,
+      submitTime
+    });
+  }
+});
 
 export default withRouter(
   connect(mapStateToProps, mapDispatchToProps)(TrainingMenuSection)

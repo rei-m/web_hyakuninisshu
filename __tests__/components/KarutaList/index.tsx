@@ -1,13 +1,11 @@
 import * as ReactTestRenderer from 'react-test-renderer';
 import * as React from 'react';
 import { shallow, ShallowWrapper } from 'enzyme';
-import KarutaList, {
-  KarutaListProps
-} from '../../../src/components/KarutaList';
-import { KarutaListRowProps } from '../../../src/components/KarutaList/KarutaListRow';
-import { Karuta } from '../../../src/types';
 import { create } from '../../factories';
 import { sel } from '../../helpers';
+import KarutaList, { KarutaListProps } from '@src/components/KarutaList';
+import { KarutaListRowProps } from '@src/components/KarutaList/KarutaListRow';
+import { Karuta } from '@src/types';
 
 describe('<KarutaList />', () => {
   let props: KarutaListProps;

@@ -8,7 +8,7 @@ exports[`<Navigation /> should render component 1`] = `
     className="sc-bxivhb geoeNk"
   >
     <div
-      className="sc-bwzfXH eoFNnb"
+      className="sc-bdVaJa gNYCTH"
       onMouseDown={[Function]}
       onMouseUp={[Function]}
     >
@@ -24,7 +24,7 @@ exports[`<Navigation /> should render component 1`] = `
         }
       >
         <i
-          className="material-icons sc-bdVaJa hBfgJv"
+          className="material-icons sc-bwzfXH jFECxi"
         >
           create
         </i>
@@ -35,7 +35,7 @@ exports[`<Navigation /> should render component 1`] = `
     className="sc-bxivhb geoeNk"
   >
     <div
-      className="sc-bwzfXH eoFNnb"
+      className="sc-bdVaJa gNYCTH"
       onMouseDown={[Function]}
       onMouseUp={[Function]}
     >
@@ -51,7 +51,7 @@ exports[`<Navigation /> should render component 1`] = `
         }
       >
         <i
-          className="material-icons sc-bdVaJa hUDbCC"
+          className="material-icons sc-bwzfXH HIQkW"
         >
           note
         </i>
@@ -62,7 +62,7 @@ exports[`<Navigation /> should render component 1`] = `
     className="sc-bxivhb geoeNk"
   >
     <div
-      className="sc-bwzfXH eoFNnb"
+      className="sc-bdVaJa gNYCTH"
       onMouseDown={[Function]}
       onMouseUp={[Function]}
     >
@@ -78,7 +78,7 @@ exports[`<Navigation /> should render component 1`] = `
         }
       >
         <i
-          className="material-icons sc-bdVaJa kwyxYz"
+          className="material-icons sc-bwzfXH iUDGrn"
         >
           library_books
         </i>
@@ -89,7 +89,7 @@ exports[`<Navigation /> should render component 1`] = `
     className="sc-bxivhb geoeNk"
   >
     <div
-      className="sc-bwzfXH eoFNnb"
+      className="sc-bdVaJa gNYCTH"
       onMouseDown={[Function]}
       onMouseUp={[Function]}
     >
@@ -105,7 +105,7 @@ exports[`<Navigation /> should render component 1`] = `
         }
       >
         <i
-          className="material-icons sc-bdVaJa fmFEyH"
+          className="material-icons sc-bwzfXH ehUhAG"
         >
           settings
         </i>
@@ -123,7 +123,7 @@ exports[`<Navigation /> should render component when current is exam 1`] = `
     className="sc-bxivhb geoeNk"
   >
     <div
-      className="sc-bwzfXH eoFNnb"
+      className="sc-bdVaJa gNYCTH"
       onMouseDown={[Function]}
       onMouseUp={[Function]}
     >
@@ -139,7 +139,7 @@ exports[`<Navigation /> should render component when current is exam 1`] = `
         }
       >
         <i
-          className="material-icons sc-bdVaJa hBfgJv"
+          className="material-icons sc-bwzfXH jFECxi"
         >
           create
         </i>
@@ -150,7 +150,7 @@ exports[`<Navigation /> should render component when current is exam 1`] = `
     className="sc-bxivhb geoeNk"
   >
     <div
-      className="sc-bwzfXH eoFNnb"
+      className="sc-bdVaJa gNYCTH"
       onMouseDown={[Function]}
       onMouseUp={[Function]}
     >
@@ -166,7 +166,7 @@ exports[`<Navigation /> should render component when current is exam 1`] = `
         }
       >
         <i
-          className="material-icons sc-bdVaJa cNnMzU"
+          className="material-icons sc-bwzfXH jUzqgP"
         >
           note
         </i>
@@ -177,7 +177,7 @@ exports[`<Navigation /> should render component when current is exam 1`] = `
     className="sc-bxivhb geoeNk"
   >
     <div
-      className="sc-bwzfXH eoFNnb"
+      className="sc-bdVaJa gNYCTH"
       onMouseDown={[Function]}
       onMouseUp={[Function]}
     >
@@ -193,7 +193,7 @@ exports[`<Navigation /> should render component when current is exam 1`] = `
         }
       >
         <i
-          className="material-icons sc-bdVaJa kwyxYz"
+          className="material-icons sc-bwzfXH iUDGrn"
         >
           library_books
         </i>
@@ -204,7 +204,7 @@ exports[`<Navigation /> should render component when current is exam 1`] = `
     className="sc-bxivhb geoeNk"
   >
     <div
-      className="sc-bwzfXH eoFNnb"
+      className="sc-bdVaJa gNYCTH"
       onMouseDown={[Function]}
       onMouseUp={[Function]}
     >
@@ -220,7 +220,7 @@ exports[`<Navigation /> should render component when current is exam 1`] = `
         }
       >
         <i
-          className="material-icons sc-bdVaJa fmFEyH"
+          className="material-icons sc-bwzfXH ehUhAG"
         >
           settings
         </i>
@@ -238,7 +238,7 @@ exports[`<Navigation /> should render component when current is material 1`] = `
     className="sc-bxivhb geoeNk"
   >
     <div
-      className="sc-bwzfXH eoFNnb"
+      className="sc-bdVaJa gNYCTH"
       onMouseDown={[Function]}
       onMouseUp={[Function]}
     >
@@ -254,7 +254,7 @@ exports[`<Navigation /> should render component when current is material 1`] = `
         }
       >
         <i
-          className="material-icons sc-bdVaJa hBfgJv"
+          className="material-icons sc-bwzfXH jFECxi"
         >
           create
         </i>
@@ -265,7 +265,7 @@ exports[`<Navigation /> should render component when current is material 1`] = `
     className="sc-bxivhb geoeNk"
   >
     <div
-      className="sc-bwzfXH eoFNnb"
+      className="sc-bdVaJa gNYCTH"
       onMouseDown={[Function]}
       onMouseUp={[Function]}
     >
@@ -281,7 +281,7 @@ exports[`<Navigation /> should render component when current is material 1`] = `
         }
       >
         <i
-          className="material-icons sc-bdVaJa hUDbCC"
+          className="material-icons sc-bwzfXH HIQkW"
         >
           note
         </i>
@@ -292,7 +292,7 @@ exports[`<Navigation /> should render component when current is material 1`] = `
     className="sc-bxivhb geoeNk"
   >
     <div
-      className="sc-bwzfXH eoFNnb"
+      className="sc-bdVaJa gNYCTH"
       onMouseDown={[Function]}
       onMouseUp={[Function]}
     >
@@ -308,7 +308,7 @@ exports[`<Navigation /> should render component when current is material 1`] = `
         }
       >
         <i
-          className="material-icons sc-bdVaJa dxCDSs"
+          className="material-icons sc-bwzfXH fSUkvT"
         >
           library_books
         </i>
@@ -319,7 +319,7 @@ exports[`<Navigation /> should render component when current is material 1`] = `
     className="sc-bxivhb geoeNk"
   >
     <div
-      className="sc-bwzfXH eoFNnb"
+      className="sc-bdVaJa gNYCTH"
       onMouseDown={[Function]}
       onMouseUp={[Function]}
     >
@@ -335,7 +335,7 @@ exports[`<Navigation /> should render component when current is material 1`] = `
         }
       >
         <i
-          className="material-icons sc-bdVaJa fmFEyH"
+          className="material-icons sc-bwzfXH ehUhAG"
         >
           settings
         </i>
@@ -353,7 +353,7 @@ exports[`<Navigation /> should render component when current is other 1`] = `
     className="sc-bxivhb geoeNk"
   >
     <div
-      className="sc-bwzfXH eoFNnb"
+      className="sc-bdVaJa gNYCTH"
       onMouseDown={[Function]}
       onMouseUp={[Function]}
     >
@@ -369,7 +369,7 @@ exports[`<Navigation /> should render component when current is other 1`] = `
         }
       >
         <i
-          className="material-icons sc-bdVaJa hBfgJv"
+          className="material-icons sc-bwzfXH jFECxi"
         >
           create
         </i>
@@ -380,7 +380,7 @@ exports[`<Navigation /> should render component when current is other 1`] = `
     className="sc-bxivhb geoeNk"
   >
     <div
-      className="sc-bwzfXH eoFNnb"
+      className="sc-bdVaJa gNYCTH"
       onMouseDown={[Function]}
       onMouseUp={[Function]}
     >
@@ -396,7 +396,7 @@ exports[`<Navigation /> should render component when current is other 1`] = `
         }
       >
         <i
-          className="material-icons sc-bdVaJa hUDbCC"
+          className="material-icons sc-bwzfXH HIQkW"
         >
           note
         </i>
@@ -407,7 +407,7 @@ exports[`<Navigation /> should render component when current is other 1`] = `
     className="sc-bxivhb geoeNk"
   >
     <div
-      className="sc-bwzfXH eoFNnb"
+      className="sc-bdVaJa gNYCTH"
       onMouseDown={[Function]}
       onMouseUp={[Function]}
     >
@@ -423,7 +423,7 @@ exports[`<Navigation /> should render component when current is other 1`] = `
         }
       >
         <i
-          className="material-icons sc-bdVaJa kwyxYz"
+          className="material-icons sc-bwzfXH iUDGrn"
         >
           library_books
         </i>
@@ -434,7 +434,7 @@ exports[`<Navigation /> should render component when current is other 1`] = `
     className="sc-bxivhb geoeNk"
   >
     <div
-      className="sc-bwzfXH eoFNnb"
+      className="sc-bdVaJa gNYCTH"
       onMouseDown={[Function]}
       onMouseUp={[Function]}
     >
@@ -450,7 +450,7 @@ exports[`<Navigation /> should render component when current is other 1`] = `
         }
       >
         <i
-          className="material-icons sc-bdVaJa forfEu"
+          className="material-icons sc-bwzfXH jrpbIC"
         >
           settings
         </i>
@@ -468,7 +468,7 @@ exports[`<Navigation /> should render component when current is training 1`] = `
     className="sc-bxivhb geoeNk"
   >
     <div
-      className="sc-bwzfXH eoFNnb"
+      className="sc-bdVaJa gNYCTH"
       onMouseDown={[Function]}
       onMouseUp={[Function]}
     >
@@ -484,7 +484,7 @@ exports[`<Navigation /> should render component when current is training 1`] = `
         }
       >
         <i
-          className="material-icons sc-bdVaJa eZMEOL"
+          className="material-icons sc-bwzfXH kMfTtZ"
         >
           create
         </i>
@@ -495,7 +495,7 @@ exports[`<Navigation /> should render component when current is training 1`] = `
     className="sc-bxivhb geoeNk"
   >
     <div
-      className="sc-bwzfXH eoFNnb"
+      className="sc-bdVaJa gNYCTH"
       onMouseDown={[Function]}
       onMouseUp={[Function]}
     >
@@ -511,7 +511,7 @@ exports[`<Navigation /> should render component when current is training 1`] = `
         }
       >
         <i
-          className="material-icons sc-bdVaJa hUDbCC"
+          className="material-icons sc-bwzfXH HIQkW"
         >
           note
         </i>
@@ -522,7 +522,7 @@ exports[`<Navigation /> should render component when current is training 1`] = `
     className="sc-bxivhb geoeNk"
   >
     <div
-      className="sc-bwzfXH eoFNnb"
+      className="sc-bdVaJa gNYCTH"
       onMouseDown={[Function]}
       onMouseUp={[Function]}
     >
@@ -538,7 +538,7 @@ exports[`<Navigation /> should render component when current is training 1`] = `
         }
       >
         <i
-          className="material-icons sc-bdVaJa kwyxYz"
+          className="material-icons sc-bwzfXH iUDGrn"
         >
           library_books
         </i>
@@ -549,7 +549,7 @@ exports[`<Navigation /> should render component when current is training 1`] = `
     className="sc-bxivhb geoeNk"
   >
     <div
-      className="sc-bwzfXH eoFNnb"
+      className="sc-bdVaJa gNYCTH"
       onMouseDown={[Function]}
       onMouseUp={[Function]}
     >
@@ -565,7 +565,7 @@ exports[`<Navigation /> should render component when current is training 1`] = `
         }
       >
         <i
-          className="material-icons sc-bdVaJa fmFEyH"
+          className="material-icons sc-bwzfXH ehUhAG"
         >
           settings
         </i>

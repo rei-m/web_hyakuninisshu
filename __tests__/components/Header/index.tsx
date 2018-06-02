@@ -1,8 +1,8 @@
 import * as ReactTestRenderer from 'react-test-renderer';
 import * as React from 'react';
 import { shallow } from 'enzyme';
-import Header, { HeaderProps } from '../../../src/components/Header';
 import { sel } from '../../helpers';
+import Header, { HeaderProps } from '@src/components/Header';
 
 describe('<Header />', () => {
   let baseProps: HeaderProps;

@@ -1,12 +1,12 @@
 import * as ReactTestRenderer from 'react-test-renderer';
 import * as React from 'react';
 import { shallow } from 'enzyme';
-import QuestionCorrect, {
-  QuestionCorrectProps
-} from '../../../src/components/QuestionCorrect';
-import { Karuta } from '../../../src/types';
 import { create } from '../../factories';
 import { sel } from '../../helpers';
+import QuestionCorrect, {
+  QuestionCorrectProps
+} from '@src/components/QuestionCorrect';
+import { Karuta } from '@src/types';
 
 describe('<QuestionCorrect />', () => {
   let baseProps: QuestionCorrectProps;

@@ -1,8 +1,8 @@
 import * as React from 'react';
 import styled from 'styled-components';
-import { appTheme, withAppTheme } from '../../styles';
-import Dogeza from '../Dogeza';
-import { AppError, UNKNOWN_MESSAGE } from '../../errors';
+import { appTheme, withAppTheme } from '@src/styles';
+import { AppError, UNKNOWN_MESSAGE } from '@src/errors';
+import Dogeza from '@src/components/Dogeza';
 
 export interface ErrorBoundaryState {
   readonly error?: Error;
