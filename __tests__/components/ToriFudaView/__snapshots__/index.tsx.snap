@@ -10,7 +10,6 @@ exports[`<ToriFudaView /> should render component 1`] = `
     className="sc-bwzfXH kTKPRr"
     color="#fff"
     onClick={[Function]}
-    style={undefined}
   >
     <div
       className="sc-htpNat eaelvy"

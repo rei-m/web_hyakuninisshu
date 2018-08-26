@@ -4,6 +4,5 @@ exports[`<KarutaImage /> should render component 1`] = `
 <img
   alt="一番"
   src="karuta_001.jpg"
-  style={undefined}
 />
 `;
