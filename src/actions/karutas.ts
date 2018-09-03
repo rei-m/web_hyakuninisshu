@@ -1,5 +1,4 @@
 import { Action, Dispatch } from 'redux';
-import { GlobalState } from '@src/reducers';
 import { Karuta } from '@src/types';
 import { AppError, AppErrorType } from '@src/errors';
 import { convertCamelKey } from '@src/utils';

@@ -1,6 +1,4 @@
 import { connect } from 'react-redux';
-import { ThunkDispatch } from 'redux-thunk';
-import { ThunkExtra } from '@src/store';
 import { withRouter, RouteComponentProps } from 'react-router-dom';
 import { GlobalState } from '@src/reducers';
 import {

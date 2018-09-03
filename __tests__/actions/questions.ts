@@ -19,7 +19,7 @@ const setUpKarutas = () =>
     create<Karuta>('karuta', {
       color: i < 20 ? 'blue' : 'pink',
       id: i + 1,
-      kimariji: i % 5 + 1
+      kimariji: (i % 5) + 1
     })
   );
 
@@ -46,7 +46,7 @@ describe('QuestionsActionCreator', () => {
     );
 
     const store = setUpStoreWithKarutas();
-    store.dispatch(actionCreator);
+    store.dispatch(actionCreator as any);
 
     const action = store.getActions()[0];
     const { type, payload } = action;
@@ -76,7 +76,7 @@ describe('QuestionsActionCreator', () => {
     );
 
     const store = setUpStoreWithKarutas();
-    store.dispatch(actionCreator);
+    store.dispatch(actionCreator as any);
 
     const action = store.getActions()[0];
     const { payload } = action;
@@ -99,7 +99,7 @@ describe('QuestionsActionCreator', () => {
     );
 
     const store = setUpStoreWithKarutas();
-    store.dispatch(actionCreator);
+    store.dispatch(actionCreator as any);
 
     const action = store.getActions()[0];
     const { payload } = action;
@@ -120,7 +120,7 @@ describe('QuestionsActionCreator', () => {
     );
 
     const store = setUpStoreWithKarutas();
-    store.dispatch(actionCreator);
+    store.dispatch(actionCreator as any);
 
     const action = store.getActions()[0];
     const { payload } = action;
@@ -141,7 +141,7 @@ describe('QuestionsActionCreator', () => {
     );
 
     const store = setUpStoreWithKarutas();
-    store.dispatch(actionCreator);
+    store.dispatch(actionCreator as any);
 
     const action = store.getActions()[0];
     const { payload } = action;
@@ -160,7 +160,7 @@ describe('QuestionsActionCreator', () => {
     const actionCreator = questionsAction.startExam();
 
     const store = setUpStoreWithKarutas();
-    store.dispatch(actionCreator);
+    store.dispatch(actionCreator as any);
 
     const action = store.getActions()[0];
     const { type, payload } = action;
@@ -199,7 +199,7 @@ describe('QuestionsActionCreator', () => {
         questions: answeredQuestions
       }
     });
-    store.dispatch(actionCreator);
+    store.dispatch(actionCreator as any);
 
     const action = store.getActions()[0];
     const { type, payload } = action;
@@ -240,7 +240,7 @@ describe('QuestionsActionCreator', () => {
 
     it('should create correct', () => {
       const actionCreator = questionsAction.answerQuestion(1, 1);
-      store.dispatch(actionCreator);
+      store.dispatch(actionCreator as any);
 
       const action = store.getActions()[0];
       const { type, payload } = action;
@@ -256,7 +256,7 @@ describe('QuestionsActionCreator', () => {
 
     it('should create wrong', () => {
       const actionCreator = questionsAction.answerQuestion(1, 2);
-      store.dispatch(actionCreator);
+      store.dispatch(actionCreator as any);
 
       const action = store.getActions()[0];
       const { type, payload } = action;
@@ -328,7 +328,7 @@ describe('QuestionsActionCreator', () => {
     });
 
     const actionCreator = questionsAction.openNextQuestion();
-    store.dispatch(actionCreator);
+    store.dispatch(actionCreator as any);
 
     const action = store.getActions()[0];
     const { type, payload } = action;

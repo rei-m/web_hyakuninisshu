@@ -50,11 +50,11 @@ describe('<QuestionCorrect />', () => {
 
   it('should set state when OpenDetail clicked', () => {
     const wrapper = shallow(<QuestionCorrect {...baseProps} />);
-    expect(wrapper.state().stateValue).toEqual(false);
+    expect(wrapper.state()).toEqual({ stateValue: false });
     wrapper
       .dive()
       .find(sel('open-detail'))
       .simulate('click');
-    expect(wrapper.state().stateValue).toEqual(true);
+    expect(wrapper.state()).toEqual({ stateValue: true });
   });
 });

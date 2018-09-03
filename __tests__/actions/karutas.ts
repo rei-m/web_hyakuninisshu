@@ -52,7 +52,7 @@ const setUpGetFailure = () => {
 describe('KarutasActionCreator', () => {
   it('should create FetchKarutasAction', () => {
     const store = mockAppStoreCreateor(setUpGetSuccess() as AxiosInstance)();
-    return store.dispatch(fetchKarutas()).then(() => {
+    return store.dispatch(fetchKarutas() as any).then(() => {
       const action = store.getActions()[0];
       const { type, payload } = action;
       expect(type).toEqual(FETCH_KARUTAS_NAME);
@@ -83,7 +83,7 @@ describe('KarutasActionCreator', () => {
 
   it('should create RaiseKarutasErrorAction', () => {
     const store = mockAppStoreCreateor(setUpGetFailure() as AxiosInstance)();
-    return store.dispatch(fetchKarutas()).then(() => {
+    return store.dispatch(fetchKarutas() as any).then(() => {
       const action = store.getActions()[0];
       const { type, payload } = action;
       expect(type).toEqual(RAISE_KARUTAS_ERROR_NAME);
