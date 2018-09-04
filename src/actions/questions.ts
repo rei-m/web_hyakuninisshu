@@ -118,7 +118,7 @@ export const startTraining = (
   color: ColorCondition,
   kamiNoKuStyle: KarutaStyleCondition,
   shimoNoKuStyle: KarutaStyleCondition
-) => (dispatch: Dispatch<GlobalState>, getState: () => GlobalState) => {
+) => (dispatch: Dispatch<QuestionsActions>, getState: () => GlobalState) => {
   const { karutas } = getState().karutasState;
 
   const questions = new QuestionsFactory(karutas)
@@ -129,7 +129,7 @@ export const startTraining = (
     .setShimoNoKuStyle(shimoNoKuStyle)
     .create();
 
-  const action = {
+  const action: StartTrainingAction = {
     meta: {
       color,
       kamiNoKuStyle,
@@ -150,7 +150,7 @@ export const startTraining = (
 };
 
 export const startExam = () => (
-  dispatch: Dispatch<GlobalState>,
+  dispatch: Dispatch<QuestionsActions>,
   getState: () => GlobalState
 ) => {
   const { karutas } = getState().karutasState;
@@ -162,7 +162,7 @@ export const startExam = () => (
     .setShimoNoKuStyle(KarutaStyleCondition.KanaOnly)
     .create();
 
-  const action = {
+  const action: StartExamAction = {
     payload: {
       nextState: QuestionState.InAnswer,
       questions: randomizeArray(questions),
@@ -175,7 +175,7 @@ export const startExam = () => (
 };
 
 export const restartQuestions = () => (
-  dispatch: Dispatch<GlobalState>,
+  dispatch: Dispatch<QuestionsActions>,
   getState: () => GlobalState
 ) => {
   const { questions, answers } = getState().questionsState;
@@ -191,7 +191,7 @@ export const restartQuestions = () => (
     .map(a => finder[a.questionId])
     .map(q => ({ ...q, toriFudas: randomizeArray(q.toriFudas) }));
 
-  const action = {
+  const action: RestartQuestionsAction = {
     payload: {
       nextState: QuestionState.InAnswer,
       questions: randomizeArray(targets),
@@ -204,7 +204,7 @@ export const restartQuestions = () => (
 };
 
 export const answerQuestion = (questionId: number, karutaId: number) => (
-  dispatch: Dispatch<GlobalState>,
+  dispatch: Dispatch<QuestionsActions>,
   getState: () => GlobalState
 ) => {
   const { questions, lastStartedTime } = getState().questionsState;
@@ -218,7 +218,7 @@ export const answerQuestion = (questionId: number, karutaId: number) => (
     questionId,
     time
   };
-  const action = {
+  const action: AnswerQuestionAction = {
     payload: {
       answer,
       nextState: QuestionState.Answered
@@ -239,12 +239,12 @@ export const confirmCorrect = (): ConfirmCorrectAction => {
 };
 
 export const openNextQuestion = () => (
-  dispatch: Dispatch<GlobalState>,
+  dispatch: Dispatch<QuestionsActions>,
   getState: () => GlobalState
 ) => {
   const { currentIndex } = getState().questionsState;
   const nextIndex = currentIndex + 1;
-  const action = {
+  const action: OpenNextQuestionAction = {
     payload: {
       nextIndex,
       nextState: QuestionState.InAnswer,

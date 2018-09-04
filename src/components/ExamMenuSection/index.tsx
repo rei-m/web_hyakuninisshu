@@ -34,7 +34,9 @@ const ExamMenuSection: React.SFC<ExamMenuSectionProps> = ({ onSubmit }) => (
     <PageTitle title="腕試し" />
     <div>
       <Explain>
-        全百首からランダムに出題されます。<br />練習の成果を確認しましょう。
+        全百首からランダムに出題されます。
+        <br />
+        練習の成果を確認しましょう。
       </Explain>
       <StartButton
         type="submit"

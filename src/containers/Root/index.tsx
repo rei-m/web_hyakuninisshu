@@ -1,9 +1,12 @@
-import { connect, Dispatch } from 'react-redux';
+import { connect } from 'react-redux';
 import { withRouter, RouteComponentProps } from 'react-router-dom';
+import { ThunkDispatch } from 'redux-thunk';
+import { ThunkExtra } from '@src/store';
 import { branch } from 'recompose';
 import { ROUTE_PATHS } from '@src/constants';
 import { MenuType } from '@src/enums';
 import { GlobalState } from '@src/reducers';
+import { KarutaActions } from '@src/actions/karutas';
 import Initializer from '@src/containers/Initializer';
 import Frame, { FrameProps } from '@src/components/Frame';
 import { toKarutaIdString } from '@src/components/helper';
@@ -80,7 +83,7 @@ const mapStateToProps = (
 };
 
 const mapDispatchToProps = (
-  _: Dispatch<GlobalState>,
+  _dispatch: ThunkDispatch<GlobalState, ThunkExtra, KarutaActions>,
   { history, location }: RootOwnProps
 ): RootDispatchProps => ({
   onClickBack: () => {
@@ -108,5 +111,8 @@ const withInitializeCheck = branch<RootProps>(
 );
 
 export default withRouter(
-  connect(mapStateToProps, mapDispatchToProps)(withInitializeCheck(Frame))
+  connect(
+    mapStateToProps,
+    mapDispatchToProps
+  )(withInitializeCheck(Frame))
 );

@@ -1,7 +1,9 @@
 import * as React from 'react';
 import { branch, compose, renderComponent } from 'recompose';
 import { withRouter, RouteComponentProps } from 'react-router-dom';
-import { connect, Dispatch } from 'react-redux';
+import { connect } from 'react-redux';
+import { ThunkDispatch } from 'redux-thunk';
+import { ThunkExtra } from '@src/store';
 import { Answer, Question, ToriFuda } from '@src/types';
 import { QuestionState } from '@src/enums';
 import { GlobalState } from '@src/reducers';
@@ -10,7 +12,8 @@ import {
   confirmCorrect,
   finishQuestions,
   openNextQuestion,
-  restartQuestions
+  restartQuestions,
+  QuestionsActions
 } from '@src/actions/questions';
 import ExamInitializer from '@src/containers/ExamInitializer';
 import QuestionSection, {
@@ -72,7 +75,7 @@ const mapStateToProps = (
 };
 
 const mapDispatchToProps = (
-  dispatch: Dispatch<GlobalState>
+  dispatch: ThunkDispatch<GlobalState, ThunkExtra, QuestionsActions>
 ): ExamQuestionsDispatchProps => ({
   onClickGoToNext: () => {
     dispatch(openNextQuestion());
@@ -164,12 +167,15 @@ const withFinishedCheck = branch<ExamQuestionsConnectedProps>(
   component => component
 );
 
-const ExamQuestionIndex = compose<ExamQuestionsProps, ExamQuestionsProps>(
+const ExamQuestionIndex = compose<QuestionSectionProps, ExamQuestionsProps>(
   withStartedCheck,
   withConfirmedQuestionResultCheck,
   withFinishedCheck
 )(QuestionSection);
 
 export default withRouter(
-  connect(mapStateToProps, mapDispatchToProps)(ExamQuestionIndex)
+  connect(
+    mapStateToProps,
+    mapDispatchToProps
+  )(ExamQuestionIndex)
 );

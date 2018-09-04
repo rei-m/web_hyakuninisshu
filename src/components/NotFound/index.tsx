@@ -24,7 +24,9 @@ const Message = styled.div`
 const NotFound: React.SFC = () => (
   <Root>
     <Message>
-      ページが見つかりませんでした。<br />トップページにお戻りください。
+      ページが見つかりませんでした。
+      <br />
+      トップページにお戻りください。
     </Message>
     <Dogeza
       alt="ページが見つかりませんでした"

@@ -5,31 +5,26 @@ exports[`<Progress /> should render component 1`] = `
   className="sc-bdVaJa fmvnED"
 >
   <div
-    className="pt-spinner pt-large"
+    className="bp3-spinner bp3-large"
   >
-    <div
-      className="pt-spinner-svg-container"
+    <svg
+      height={100}
+      strokeWidth={4}
+      viewBox="0 0 100 100"
+      width={100}
     >
-      <svg
-        viewBox="0 0 100 100"
-      >
-        <path
-          className="pt-spinner-track"
-          d="M 50,50 m 0,-44.5 a 44.5,44.5 0 1 1 0,89 a 44.5,44.5 0 1 1 0,-89"
-        />
-        <path
-          className="pt-spinner-head"
-          d="M 50,50 m 0,-44.5 a 44.5,44.5 0 1 1 0,89 a 44.5,44.5 0 1 1 0,-89"
-          pathLength={280}
-          style={
-            Object {
-              "strokeDasharray": "280 280",
-              "strokeDashoffset": 210,
-            }
-          }
-        />
-      </svg>
-    </div>
+      <path
+        className="bp3-spinner-track"
+        d="M 50,50 m 0,-44.5 a 44.5,44.5 0 1 1 0,89 a 44.5,44.5 0 1 1 0,-89"
+      />
+      <path
+        className="bp3-spinner-head"
+        d="M 50,50 m 0,-44.5 a 44.5,44.5 0 1 1 0,89 a 44.5,44.5 0 1 1 0,-89"
+        pathLength={280}
+        strokeDasharray="280 280"
+        strokeDashoffset={210}
+      />
+    </svg>
   </div>
   <div
     className="sc-bwzfXH jeCWiS"
