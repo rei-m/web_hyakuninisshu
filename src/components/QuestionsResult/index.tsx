@@ -52,7 +52,7 @@ const QuestionsResult: React.SFC<QuestionsResultProps> = ({
       {correctCount !== totalCount && (
         <Button
           onClick={onClickRestart}
-          className="pt-button pt-large pt-icon-repeat"
+          className="bp3-button bp3-large bp3-icon-repeat"
           data-test="restart"
         >
           間違えた歌の練習をする
@@ -60,7 +60,7 @@ const QuestionsResult: React.SFC<QuestionsResultProps> = ({
       )}
       <Link to="/training" replace={true}>
         <Button
-          className="pt-button pt-large pt-icon-undo"
+          className="bp3-button bp3-large bp3-icon-undo"
           style={{ marginTop: 0 }}
         >
           メニューに戻る

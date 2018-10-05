@@ -40,7 +40,7 @@ const ExamMenuSection: React.SFC<ExamMenuSectionProps> = ({ onSubmit }) => (
       </Explain>
       <StartButton
         type="submit"
-        className="pt-button pt-intent-primary pt-large pt-icon-edit"
+        className="bp3-button bp3-intent-primary bp3-large bp3-icon-edit"
         onClick={onSubmit}
         data-test="start-exam-button"
       >
