@@ -54,7 +54,7 @@ const Header: React.SFC<HeaderProps> = ({ subTitle, canBack, onClickBack }) => (
         arrow_back
       </Icon>
     )}
-    <Title>百人一首 - {subTitle} -</Title>
+    <Title>{`百人一首 - ${subTitle} -`}</Title>
   </Root>
 );
 

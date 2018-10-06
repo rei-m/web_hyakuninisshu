@@ -20,10 +20,10 @@ exports[`<TrainingMenuSection /> should render component 1`] = `
         className="sc-ifAKCX cCktqy"
       >
         <label
-          className="pt-label"
+          className="bp3-label"
         >
           <div
-            className="pt-select pt-large sc-EHOje clhbsb"
+            className="bp3-select bp3-large sc-EHOje clhbsb"
           >
             <select
               name="rangeFrom"
@@ -90,10 +90,10 @@ exports[`<TrainingMenuSection /> should render component 1`] = `
           〜
         </span>
         <label
-          className="pt-label"
+          className="bp3-label"
         >
           <div
-            className="pt-select pt-large sc-EHOje clhbsb"
+            className="bp3-select bp3-large sc-EHOje clhbsb"
           >
             <select
               name="rangeTo"
@@ -157,14 +157,14 @@ exports[`<TrainingMenuSection /> should render component 1`] = `
       </div>
     </div>
     <label
-      className="pt-label sc-bdVaJa jhRYkF"
+      className="bp3-label sc-bdVaJa jhRYkF"
     >
       決まり字
       <div
         className="sc-bwzfXH hyXkXP"
       >
         <div
-          className="pt-select pt-large sc-htpNat daVAfG"
+          className="bp3-select bp3-large sc-htpNat daVAfG"
         >
           <select
             name="kimariji"
@@ -212,14 +212,14 @@ exports[`<TrainingMenuSection /> should render component 1`] = `
       </div>
     </label>
     <label
-      className="pt-label sc-bdVaJa jhRYkF"
+      className="bp3-label sc-bdVaJa jhRYkF"
     >
       五色
       <div
         className="sc-bwzfXH hyXkXP"
       >
         <div
-          className="pt-select pt-large sc-htpNat daVAfG"
+          className="bp3-select bp3-large sc-htpNat daVAfG"
         >
           <select
             name="color"
@@ -262,14 +262,14 @@ exports[`<TrainingMenuSection /> should render component 1`] = `
       </div>
     </label>
     <label
-      className="pt-label sc-bdVaJa jhRYkF"
+      className="bp3-label sc-bdVaJa jhRYkF"
     >
       上の句
       <div
         className="sc-bwzfXH hyXkXP"
       >
         <div
-          className="pt-select pt-large sc-htpNat daVAfG"
+          className="bp3-select bp3-large sc-htpNat daVAfG"
         >
           <select
             name="kamiNoKuStyle"
@@ -292,14 +292,14 @@ exports[`<TrainingMenuSection /> should render component 1`] = `
       </div>
     </label>
     <label
-      className="pt-label sc-bdVaJa jhRYkF"
+      className="bp3-label sc-bdVaJa jhRYkF"
     >
       下の句
       <div
         className="sc-bwzfXH hyXkXP"
       >
         <div
-          className="pt-select pt-large sc-htpNat daVAfG"
+          className="bp3-select bp3-large sc-htpNat daVAfG"
         >
           <select
             name="shimoNoKuStyle"
@@ -322,7 +322,7 @@ exports[`<TrainingMenuSection /> should render component 1`] = `
       </div>
     </label>
     <button
-      className="pt-button pt-intent-primary pt-large pt-icon-edit sc-htoDjs hftCed"
+      className="bp3-button bp3-intent-primary bp3-large bp3-icon-edit sc-htoDjs hftCed"
       type="submit"
     >
       練習をはじめる

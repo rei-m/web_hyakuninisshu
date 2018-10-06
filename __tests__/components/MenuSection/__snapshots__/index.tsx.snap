@@ -10,12 +10,14 @@ exports[`<MenuSection /> should render component 1`] = `
     <h1
       className="sc-ifAKCX dkjkSd"
     >
-      百人一首とは
+      百人一首 簡単に暗記について
     </h1>
     <div
       className="sc-EHOje choVX"
     >
-      『百人一首』とは、100人の歌人の和歌を1人1首づつ選んだ歌集のことで、藤原定家が選んだ小倉百人一首が広く知られています。 現代では詠み札と取り札に別れたかるたとしての知名度が高く、散らし取り、坊主めくりなどといった遊戯や競技かるたのように札取りを競い合うスポーツもあり、幅広く親しまれています。
+      <p>
+        このサイトは百人一首を手軽に暗記するためのサイトです。4択のクイズ形式で繰り返し練習することで効率よく百人一首を覚えることが出来ます。
+      </p>
     </div>
   </section>
   <section
@@ -29,7 +31,9 @@ exports[`<MenuSection /> should render component 1`] = `
     <div
       className="sc-EHOje choVX"
     >
-      このサイトでは百人一首暗記の練習ができます。練習は読み札に対応する下の句を四択の中から選ぶクイズ形式となっています。繰り返し練習して百人一首のスタートに立ちましょう。
+      <p>
+        百人一首の練習は詠み札に対応する下の句を四択の中から選ぶクイズ形式となっています。繰り返し練習して百人一首のスタートに立ちましょう。
+      </p>
     </div>
     <div
       className="sc-bZQynM brUMwT"
@@ -158,6 +162,1096 @@ exports[`<MenuSection /> should render component 1`] = `
         </div>
       </div>
     </div>
+  </section>
+  <section
+    className="sc-bxivhb hJcqIQ"
+  >
+    <h1
+      className="sc-ifAKCX dkjkSd"
+    >
+      百人一首とは
+    </h1>
+    <div
+      className="sc-EHOje choVX"
+    >
+      <p>
+        百人一首とは、100人の歌人の和歌を1人1首づつ選んだ歌集のことで、藤原定家が選んだ小倉百人一首が広く知られています。
+        <br />
+        現代では詠み札と取り札に別れたかるたとしての知名度が高く、散らし取り、坊主めくりなどといった遊戯や競技かるたのように札取りを競い合うスポーツもあり、幅広く親しまれています。 百首覚えたあとは色々な遊び方を探してみてはいかがでしょうか。
+      </p>
+    </div>
+  </section>
+  <section
+    className="sc-bxivhb hJcqIQ"
+  >
+    <h1
+      className="sc-ifAKCX dkjkSd"
+    >
+      百人一首の用語について
+    </h1>
+    <div
+      className="sc-EHOje choVX"
+    >
+      <dl>
+        <dt>
+          決まり字
+        </dt>
+        <dd>
+          歌を上の句の最初から読んでいき、その文字が読まれたら、その歌が、どの一首なのかが決まるところの文字をいいます。
+          <br />
+          例えば「村雨の 露もまだひぬ 槇の葉に 霧たちのぼる 秋の夕ぐれ」という歌がありますが、百首のなかで「む」で始まる歌はこの歌しかないので、この歌の決まり字は一字決まりとなります。
+        </dd>
+        <dt>
+          上の句
+        </dt>
+        <dd>
+          歌は五七五七七七の五つの句で構成されており、その前半の五七五の部分のこと。かるた遊びをする際は詠み札となる。
+        </dd>
+        <dt>
+          下の句
+        </dt>
+        <dd>
+          歌は五七五七七七の五つの句で構成されており、その後半の七七の部分のこと。かるた遊びでは取り札となる。
+        </dd>
+      </dl>
+    </div>
+  </section>
+  <section
+    className="sc-bxivhb hJcqIQ"
+  >
+    <h1
+      className="sc-ifAKCX dkjkSd"
+    >
+      競技かるたについて
+    </h1>
+    <div
+      className="sc-EHOje choVX"
+    >
+      <p>
+        小倉百人一首を用いて行う競技です。百人一首というと畳の上で穏やかに遊ぶ印象がありますが、競技かるたはハードなスポーツに近いです。
+        <br />
+        詠み上げた上の句に対応する下の句の札を取るという基本的なルールは普通のかるた遊びと共通していますが、取った枚数を競いはしません。
+        <br />
+        百首のなかから50首が選ばれ、選ばれた歌の取り札が自陣と敵陣にそれぞれ分配されます。競技かるたの試合はこの自陣の札を空にすることで勝利となります。 札は自陣の札を取ればそのまま減らし、敵陣の札を取れば敵陣の札をどけた上で自陣から敵陣に一枚札を送ります。これを送り札といいます。
+        <br />
+        50首を選んでいるので詠まれた札が自陣・敵陣に存在しない場合があります。これは空札といいます。取り札を間違えた場合や空札なのに取り札に触った場合はお手付きとなり、敵陣に札を送れます。
+        <br />
+        自陣の札を取る、または敵陣の札を取って自陣の札を敵陣に送る、という勝負を繰り返して自陣を先に空にしたほうが勝者となります。
+      </p>
+    </div>
+  </section>
+  <section
+    className="sc-bxivhb hJcqIQ"
+  >
+    <h1
+      className="sc-ifAKCX dkjkSd"
+    >
+      歌一覧
+    </h1>
+    <ul
+      className="sc-htoDjs MALmK"
+    >
+      <li
+        className="sc-dnqmqq bGasAc"
+      >
+        <a
+          href="/karutas/1"
+          onClick={[Function]}
+        >
+          一番
+        </a>
+      </li>
+      <li
+        className="sc-dnqmqq bGasAc"
+      >
+        <a
+          href="/karutas/2"
+          onClick={[Function]}
+        >
+          二番
+        </a>
+      </li>
+      <li
+        className="sc-dnqmqq bGasAc"
+      >
+        <a
+          href="/karutas/3"
+          onClick={[Function]}
+        >
+          三番
+        </a>
+      </li>
+      <li
+        className="sc-dnqmqq bGasAc"
+      >
+        <a
+          href="/karutas/4"
+          onClick={[Function]}
+        >
+          四番
+        </a>
+      </li>
+      <li
+        className="sc-dnqmqq bGasAc"
+      >
+        <a
+          href="/karutas/5"
+          onClick={[Function]}
+        >
+          五番
+        </a>
+      </li>
+      <li
+        className="sc-dnqmqq bGasAc"
+      >
+        <a
+          href="/karutas/6"
+          onClick={[Function]}
+        >
+          六番
+        </a>
+      </li>
+      <li
+        className="sc-dnqmqq bGasAc"
+      >
+        <a
+          href="/karutas/7"
+          onClick={[Function]}
+        >
+          七番
+        </a>
+      </li>
+      <li
+        className="sc-dnqmqq bGasAc"
+      >
+        <a
+          href="/karutas/8"
+          onClick={[Function]}
+        >
+          八番
+        </a>
+      </li>
+      <li
+        className="sc-dnqmqq bGasAc"
+      >
+        <a
+          href="/karutas/9"
+          onClick={[Function]}
+        >
+          九番
+        </a>
+      </li>
+      <li
+        className="sc-dnqmqq bGasAc"
+      >
+        <a
+          href="/karutas/10"
+          onClick={[Function]}
+        >
+          十番
+        </a>
+      </li>
+      <li
+        className="sc-dnqmqq bGasAc"
+      >
+        <a
+          href="/karutas/11"
+          onClick={[Function]}
+        >
+          十一番
+        </a>
+      </li>
+      <li
+        className="sc-dnqmqq bGasAc"
+      >
+        <a
+          href="/karutas/12"
+          onClick={[Function]}
+        >
+          十二番
+        </a>
+      </li>
+      <li
+        className="sc-dnqmqq bGasAc"
+      >
+        <a
+          href="/karutas/13"
+          onClick={[Function]}
+        >
+          十三番
+        </a>
+      </li>
+      <li
+        className="sc-dnqmqq bGasAc"
+      >
+        <a
+          href="/karutas/14"
+          onClick={[Function]}
+        >
+          十四番
+        </a>
+      </li>
+      <li
+        className="sc-dnqmqq bGasAc"
+      >
+        <a
+          href="/karutas/15"
+          onClick={[Function]}
+        >
+          十五番
+        </a>
+      </li>
+      <li
+        className="sc-dnqmqq bGasAc"
+      >
+        <a
+          href="/karutas/16"
+          onClick={[Function]}
+        >
+          十六番
+        </a>
+      </li>
+      <li
+        className="sc-dnqmqq bGasAc"
+      >
+        <a
+          href="/karutas/17"
+          onClick={[Function]}
+        >
+          十七番
+        </a>
+      </li>
+      <li
+        className="sc-dnqmqq bGasAc"
+      >
+        <a
+          href="/karutas/18"
+          onClick={[Function]}
+        >
+          十八番
+        </a>
+      </li>
+      <li
+        className="sc-dnqmqq bGasAc"
+      >
+        <a
+          href="/karutas/19"
+          onClick={[Function]}
+        >
+          十九番
+        </a>
+      </li>
+      <li
+        className="sc-dnqmqq bGasAc"
+      >
+        <a
+          href="/karutas/20"
+          onClick={[Function]}
+        >
+          二十番
+        </a>
+      </li>
+      <li
+        className="sc-dnqmqq bGasAc"
+      >
+        <a
+          href="/karutas/21"
+          onClick={[Function]}
+        >
+          二十一番
+        </a>
+      </li>
+      <li
+        className="sc-dnqmqq bGasAc"
+      >
+        <a
+          href="/karutas/22"
+          onClick={[Function]}
+        >
+          二十二番
+        </a>
+      </li>
+      <li
+        className="sc-dnqmqq bGasAc"
+      >
+        <a
+          href="/karutas/23"
+          onClick={[Function]}
+        >
+          二十三番
+        </a>
+      </li>
+      <li
+        className="sc-dnqmqq bGasAc"
+      >
+        <a
+          href="/karutas/24"
+          onClick={[Function]}
+        >
+          二十四番
+        </a>
+      </li>
+      <li
+        className="sc-dnqmqq bGasAc"
+      >
+        <a
+          href="/karutas/25"
+          onClick={[Function]}
+        >
+          二十五番
+        </a>
+      </li>
+      <li
+        className="sc-dnqmqq bGasAc"
+      >
+        <a
+          href="/karutas/26"
+          onClick={[Function]}
+        >
+          二十六番
+        </a>
+      </li>
+      <li
+        className="sc-dnqmqq bGasAc"
+      >
+        <a
+          href="/karutas/27"
+          onClick={[Function]}
+        >
+          二十七番
+        </a>
+      </li>
+      <li
+        className="sc-dnqmqq bGasAc"
+      >
+        <a
+          href="/karutas/28"
+          onClick={[Function]}
+        >
+          二十八番
+        </a>
+      </li>
+      <li
+        className="sc-dnqmqq bGasAc"
+      >
+        <a
+          href="/karutas/29"
+          onClick={[Function]}
+        >
+          二十九番
+        </a>
+      </li>
+      <li
+        className="sc-dnqmqq bGasAc"
+      >
+        <a
+          href="/karutas/30"
+          onClick={[Function]}
+        >
+          三十番
+        </a>
+      </li>
+      <li
+        className="sc-dnqmqq bGasAc"
+      >
+        <a
+          href="/karutas/31"
+          onClick={[Function]}
+        >
+          三十一番
+        </a>
+      </li>
+      <li
+        className="sc-dnqmqq bGasAc"
+      >
+        <a
+          href="/karutas/32"
+          onClick={[Function]}
+        >
+          三十二番
+        </a>
+      </li>
+      <li
+        className="sc-dnqmqq bGasAc"
+      >
+        <a
+          href="/karutas/33"
+          onClick={[Function]}
+        >
+          三十三番
+        </a>
+      </li>
+      <li
+        className="sc-dnqmqq bGasAc"
+      >
+        <a
+          href="/karutas/34"
+          onClick={[Function]}
+        >
+          三十四番
+        </a>
+      </li>
+      <li
+        className="sc-dnqmqq bGasAc"
+      >
+        <a
+          href="/karutas/35"
+          onClick={[Function]}
+        >
+          三十五番
+        </a>
+      </li>
+      <li
+        className="sc-dnqmqq bGasAc"
+      >
+        <a
+          href="/karutas/36"
+          onClick={[Function]}
+        >
+          三十六番
+        </a>
+      </li>
+      <li
+        className="sc-dnqmqq bGasAc"
+      >
+        <a
+          href="/karutas/37"
+          onClick={[Function]}
+        >
+          三十七番
+        </a>
+      </li>
+      <li
+        className="sc-dnqmqq bGasAc"
+      >
+        <a
+          href="/karutas/38"
+          onClick={[Function]}
+        >
+          三十八番
+        </a>
+      </li>
+      <li
+        className="sc-dnqmqq bGasAc"
+      >
+        <a
+          href="/karutas/39"
+          onClick={[Function]}
+        >
+          三十九番
+        </a>
+      </li>
+      <li
+        className="sc-dnqmqq bGasAc"
+      >
+        <a
+          href="/karutas/40"
+          onClick={[Function]}
+        >
+          四十番
+        </a>
+      </li>
+      <li
+        className="sc-dnqmqq bGasAc"
+      >
+        <a
+          href="/karutas/41"
+          onClick={[Function]}
+        >
+          四十一番
+        </a>
+      </li>
+      <li
+        className="sc-dnqmqq bGasAc"
+      >
+        <a
+          href="/karutas/42"
+          onClick={[Function]}
+        >
+          四十二番
+        </a>
+      </li>
+      <li
+        className="sc-dnqmqq bGasAc"
+      >
+        <a
+          href="/karutas/43"
+          onClick={[Function]}
+        >
+          四十三番
+        </a>
+      </li>
+      <li
+        className="sc-dnqmqq bGasAc"
+      >
+        <a
+          href="/karutas/44"
+          onClick={[Function]}
+        >
+          四十四番
+        </a>
+      </li>
+      <li
+        className="sc-dnqmqq bGasAc"
+      >
+        <a
+          href="/karutas/45"
+          onClick={[Function]}
+        >
+          四十五番
+        </a>
+      </li>
+      <li
+        className="sc-dnqmqq bGasAc"
+      >
+        <a
+          href="/karutas/46"
+          onClick={[Function]}
+        >
+          四十六番
+        </a>
+      </li>
+      <li
+        className="sc-dnqmqq bGasAc"
+      >
+        <a
+          href="/karutas/47"
+          onClick={[Function]}
+        >
+          四十七番
+        </a>
+      </li>
+      <li
+        className="sc-dnqmqq bGasAc"
+      >
+        <a
+          href="/karutas/48"
+          onClick={[Function]}
+        >
+          四十八番
+        </a>
+      </li>
+      <li
+        className="sc-dnqmqq bGasAc"
+      >
+        <a
+          href="/karutas/49"
+          onClick={[Function]}
+        >
+          四十九番
+        </a>
+      </li>
+      <li
+        className="sc-dnqmqq bGasAc"
+      >
+        <a
+          href="/karutas/50"
+          onClick={[Function]}
+        >
+          五十番
+        </a>
+      </li>
+      <li
+        className="sc-dnqmqq bGasAc"
+      >
+        <a
+          href="/karutas/51"
+          onClick={[Function]}
+        >
+          五十一番
+        </a>
+      </li>
+      <li
+        className="sc-dnqmqq bGasAc"
+      >
+        <a
+          href="/karutas/52"
+          onClick={[Function]}
+        >
+          五十二番
+        </a>
+      </li>
+      <li
+        className="sc-dnqmqq bGasAc"
+      >
+        <a
+          href="/karutas/53"
+          onClick={[Function]}
+        >
+          五十三番
+        </a>
+      </li>
+      <li
+        className="sc-dnqmqq bGasAc"
+      >
+        <a
+          href="/karutas/54"
+          onClick={[Function]}
+        >
+          五十四番
+        </a>
+      </li>
+      <li
+        className="sc-dnqmqq bGasAc"
+      >
+        <a
+          href="/karutas/55"
+          onClick={[Function]}
+        >
+          五十五番
+        </a>
+      </li>
+      <li
+        className="sc-dnqmqq bGasAc"
+      >
+        <a
+          href="/karutas/56"
+          onClick={[Function]}
+        >
+          五十六番
+        </a>
+      </li>
+      <li
+        className="sc-dnqmqq bGasAc"
+      >
+        <a
+          href="/karutas/57"
+          onClick={[Function]}
+        >
+          五十七番
+        </a>
+      </li>
+      <li
+        className="sc-dnqmqq bGasAc"
+      >
+        <a
+          href="/karutas/58"
+          onClick={[Function]}
+        >
+          五十八番
+        </a>
+      </li>
+      <li
+        className="sc-dnqmqq bGasAc"
+      >
+        <a
+          href="/karutas/59"
+          onClick={[Function]}
+        >
+          五十九番
+        </a>
+      </li>
+      <li
+        className="sc-dnqmqq bGasAc"
+      >
+        <a
+          href="/karutas/60"
+          onClick={[Function]}
+        >
+          六十番
+        </a>
+      </li>
+      <li
+        className="sc-dnqmqq bGasAc"
+      >
+        <a
+          href="/karutas/61"
+          onClick={[Function]}
+        >
+          六十一番
+        </a>
+      </li>
+      <li
+        className="sc-dnqmqq bGasAc"
+      >
+        <a
+          href="/karutas/62"
+          onClick={[Function]}
+        >
+          六十二番
+        </a>
+      </li>
+      <li
+        className="sc-dnqmqq bGasAc"
+      >
+        <a
+          href="/karutas/63"
+          onClick={[Function]}
+        >
+          六十三番
+        </a>
+      </li>
+      <li
+        className="sc-dnqmqq bGasAc"
+      >
+        <a
+          href="/karutas/64"
+          onClick={[Function]}
+        >
+          六十四番
+        </a>
+      </li>
+      <li
+        className="sc-dnqmqq bGasAc"
+      >
+        <a
+          href="/karutas/65"
+          onClick={[Function]}
+        >
+          六十五番
+        </a>
+      </li>
+      <li
+        className="sc-dnqmqq bGasAc"
+      >
+        <a
+          href="/karutas/66"
+          onClick={[Function]}
+        >
+          六十六番
+        </a>
+      </li>
+      <li
+        className="sc-dnqmqq bGasAc"
+      >
+        <a
+          href="/karutas/67"
+          onClick={[Function]}
+        >
+          六十七番
+        </a>
+      </li>
+      <li
+        className="sc-dnqmqq bGasAc"
+      >
+        <a
+          href="/karutas/68"
+          onClick={[Function]}
+        >
+          六十八番
+        </a>
+      </li>
+      <li
+        className="sc-dnqmqq bGasAc"
+      >
+        <a
+          href="/karutas/69"
+          onClick={[Function]}
+        >
+          六十九番
+        </a>
+      </li>
+      <li
+        className="sc-dnqmqq bGasAc"
+      >
+        <a
+          href="/karutas/70"
+          onClick={[Function]}
+        >
+          七十番
+        </a>
+      </li>
+      <li
+        className="sc-dnqmqq bGasAc"
+      >
+        <a
+          href="/karutas/71"
+          onClick={[Function]}
+        >
+          七十一番
+        </a>
+      </li>
+      <li
+        className="sc-dnqmqq bGasAc"
+      >
+        <a
+          href="/karutas/72"
+          onClick={[Function]}
+        >
+          七十二番
+        </a>
+      </li>
+      <li
+        className="sc-dnqmqq bGasAc"
+      >
+        <a
+          href="/karutas/73"
+          onClick={[Function]}
+        >
+          七十三番
+        </a>
+      </li>
+      <li
+        className="sc-dnqmqq bGasAc"
+      >
+        <a
+          href="/karutas/74"
+          onClick={[Function]}
+        >
+          七十四番
+        </a>
+      </li>
+      <li
+        className="sc-dnqmqq bGasAc"
+      >
+        <a
+          href="/karutas/75"
+          onClick={[Function]}
+        >
+          七十五番
+        </a>
+      </li>
+      <li
+        className="sc-dnqmqq bGasAc"
+      >
+        <a
+          href="/karutas/76"
+          onClick={[Function]}
+        >
+          七十六番
+        </a>
+      </li>
+      <li
+        className="sc-dnqmqq bGasAc"
+      >
+        <a
+          href="/karutas/77"
+          onClick={[Function]}
+        >
+          七十七番
+        </a>
+      </li>
+      <li
+        className="sc-dnqmqq bGasAc"
+      >
+        <a
+          href="/karutas/78"
+          onClick={[Function]}
+        >
+          七十八番
+        </a>
+      </li>
+      <li
+        className="sc-dnqmqq bGasAc"
+      >
+        <a
+          href="/karutas/79"
+          onClick={[Function]}
+        >
+          七十九番
+        </a>
+      </li>
+      <li
+        className="sc-dnqmqq bGasAc"
+      >
+        <a
+          href="/karutas/80"
+          onClick={[Function]}
+        >
+          八十番
+        </a>
+      </li>
+      <li
+        className="sc-dnqmqq bGasAc"
+      >
+        <a
+          href="/karutas/81"
+          onClick={[Function]}
+        >
+          八十一番
+        </a>
+      </li>
+      <li
+        className="sc-dnqmqq bGasAc"
+      >
+        <a
+          href="/karutas/82"
+          onClick={[Function]}
+        >
+          八十二番
+        </a>
+      </li>
+      <li
+        className="sc-dnqmqq bGasAc"
+      >
+        <a
+          href="/karutas/83"
+          onClick={[Function]}
+        >
+          八十三番
+        </a>
+      </li>
+      <li
+        className="sc-dnqmqq bGasAc"
+      >
+        <a
+          href="/karutas/84"
+          onClick={[Function]}
+        >
+          八十四番
+        </a>
+      </li>
+      <li
+        className="sc-dnqmqq bGasAc"
+      >
+        <a
+          href="/karutas/85"
+          onClick={[Function]}
+        >
+          八十五番
+        </a>
+      </li>
+      <li
+        className="sc-dnqmqq bGasAc"
+      >
+        <a
+          href="/karutas/86"
+          onClick={[Function]}
+        >
+          八十六番
+        </a>
+      </li>
+      <li
+        className="sc-dnqmqq bGasAc"
+      >
+        <a
+          href="/karutas/87"
+          onClick={[Function]}
+        >
+          八十七番
+        </a>
+      </li>
+      <li
+        className="sc-dnqmqq bGasAc"
+      >
+        <a
+          href="/karutas/88"
+          onClick={[Function]}
+        >
+          八十八番
+        </a>
+      </li>
+      <li
+        className="sc-dnqmqq bGasAc"
+      >
+        <a
+          href="/karutas/89"
+          onClick={[Function]}
+        >
+          八十九番
+        </a>
+      </li>
+      <li
+        className="sc-dnqmqq bGasAc"
+      >
+        <a
+          href="/karutas/90"
+          onClick={[Function]}
+        >
+          九十番
+        </a>
+      </li>
+      <li
+        className="sc-dnqmqq bGasAc"
+      >
+        <a
+          href="/karutas/91"
+          onClick={[Function]}
+        >
+          九十一番
+        </a>
+      </li>
+      <li
+        className="sc-dnqmqq bGasAc"
+      >
+        <a
+          href="/karutas/92"
+          onClick={[Function]}
+        >
+          九十二番
+        </a>
+      </li>
+      <li
+        className="sc-dnqmqq bGasAc"
+      >
+        <a
+          href="/karutas/93"
+          onClick={[Function]}
+        >
+          九十三番
+        </a>
+      </li>
+      <li
+        className="sc-dnqmqq bGasAc"
+      >
+        <a
+          href="/karutas/94"
+          onClick={[Function]}
+        >
+          九十四番
+        </a>
+      </li>
+      <li
+        className="sc-dnqmqq bGasAc"
+      >
+        <a
+          href="/karutas/95"
+          onClick={[Function]}
+        >
+          九十五番
+        </a>
+      </li>
+      <li
+        className="sc-dnqmqq bGasAc"
+      >
+        <a
+          href="/karutas/96"
+          onClick={[Function]}
+        >
+          九十六番
+        </a>
+      </li>
+      <li
+        className="sc-dnqmqq bGasAc"
+      >
+        <a
+          href="/karutas/97"
+          onClick={[Function]}
+        >
+          九十七番
+        </a>
+      </li>
+      <li
+        className="sc-dnqmqq bGasAc"
+      >
+        <a
+          href="/karutas/98"
+          onClick={[Function]}
+        >
+          九十八番
+        </a>
+      </li>
+      <li
+        className="sc-dnqmqq bGasAc"
+      >
+        <a
+          href="/karutas/99"
+          onClick={[Function]}
+        >
+          九十九番
+        </a>
+      </li>
+      <li
+        className="sc-dnqmqq bGasAc"
+      >
+        <a
+          href="/karutas/100"
+          onClick={[Function]}
+        >
+          百番
+        </a>
+      </li>
+    </ul>
   </section>
 </div>
 `;

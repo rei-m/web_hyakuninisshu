@@ -28,10 +28,10 @@ const SelectRange = styled.div`
 `;
 
 const SelectItem = (props: SelectItemProps) => (
-  <Label className="pt-label">
+  <Label className="bp3-label">
     {props.title}
     <SelectRow>
-      <SelectRange className="pt-select pt-large">
+      <SelectRange className="bp3-select bp3-large">
         <Field
           component="select"
           name={props.name}

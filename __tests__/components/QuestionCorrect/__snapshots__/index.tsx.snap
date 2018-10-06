@@ -15,7 +15,7 @@ exports[`<QuestionCorrect /> should render component when finished 1`] = `
       一字決まり
     </div>
     <button
-      className="pt-button sc-iwsKbI fSyGkH"
+      className="bp3-button sc-iwsKbI fSyGkH"
       data-test="open-detail"
       onClick={[Function]}
     >
@@ -61,7 +61,7 @@ exports[`<QuestionCorrect /> should render component when finished 1`] = `
     </div>
   </div>
   <button
-    className="pt-button pt-large pt-icon-double-chevron-right sc-chPdSV hiOXiY"
+    className="bp3-button bp3-large bp3-icon-double-chevron-right sc-chPdSV hiOXiY"
     data-test="go-to-result"
     onClick={[MockFunction]}
   >
@@ -85,7 +85,7 @@ exports[`<QuestionCorrect /> should render component when not finished 1`] = `
       一字決まり
     </div>
     <button
-      className="pt-button sc-iwsKbI fSyGkH"
+      className="bp3-button sc-iwsKbI fSyGkH"
       data-test="open-detail"
       onClick={[Function]}
     >
@@ -131,7 +131,7 @@ exports[`<QuestionCorrect /> should render component when not finished 1`] = `
     </div>
   </div>
   <button
-    className="pt-button pt-large pt-icon-double-chevron-right sc-chPdSV hiOXiY"
+    className="bp3-button bp3-large bp3-icon-double-chevron-right sc-chPdSV hiOXiY"
     data-test="go-to-next"
     onClick={[MockFunction]}
   >

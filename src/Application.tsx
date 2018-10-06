@@ -48,7 +48,12 @@ const Application = (_props: RouteComponentProps<{}>) => (
 const Enhanced = lifecycle<RouteComponentProps<{}>, {}>({
   componentDidUpdate(prevProps: RouteComponentProps<{}>) {
     if (this.props.location.pathname !== prevProps.location.pathname) {
-      ReactGA.pageview(location.pathname + location.search);
+      window.scrollTo(0, 0);
+      if (process.env.NODE_ENV === 'production') {
+        ReactGA.pageview(location.pathname + location.search);
+      } else {
+        console.dir(`page move to ${location.pathname + location.search}`);
+      }
     }
   }
 })(Application);
