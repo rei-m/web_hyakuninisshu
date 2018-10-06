@@ -21,9 +21,7 @@ exports[`<Header /> should render component when can back 1`] = `
   <h1
     className="sc-htpNat iTzsdR"
   >
-    百人一首 - 
-    This is subtitle
-     -
+    百人一首 - This is subtitle -
   </h1>
 </header>
 `;
@@ -35,9 +33,7 @@ exports[`<Header /> should render component when can not back 1`] = `
   <h1
     className="sc-htpNat iTzsdR"
   >
-    百人一首 - 
-    This is subtitle
-     -
+    百人一首 - This is subtitle -
   </h1>
 </header>
 `;
