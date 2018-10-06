@@ -101,7 +101,7 @@ const TrainingMenuInnerForm = ({
     />
     <StartButton
       type="submit"
-      className="pt-button pt-intent-primary pt-large pt-icon-edit"
+      className="bp3-button bp3-intent-primary bp3-large bp3-icon-edit"
     >
       練習をはじめる
     </StartButton>

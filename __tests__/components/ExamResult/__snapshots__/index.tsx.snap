@@ -128,7 +128,7 @@ exports[`<ExamResult /> should render component when correct all 1`] = `
       onClick={[Function]}
     >
       <button
-        className="pt-button pt-large pt-icon-undo sc-jzJRlG hkqcLA"
+        className="bp3-button bp3-large bp3-icon-undo sc-jzJRlG hkqcLA"
         style={
           Object {
             "marginTop": 0,
@@ -266,7 +266,7 @@ exports[`<ExamResult /> should render component when wrong 1`] = `
       </div>
     </div>
     <button
-      className="pt-button pt-large pt-icon-repeat sc-jzJRlG hkqcLA"
+      className="bp3-button bp3-large bp3-icon-repeat sc-jzJRlG hkqcLA"
       data-test="restart-training"
       onClick={[MockFunction]}
     >
@@ -277,7 +277,7 @@ exports[`<ExamResult /> should render component when wrong 1`] = `
       onClick={[Function]}
     >
       <button
-        className="pt-button pt-large pt-icon-undo sc-jzJRlG hkqcLA"
+        className="bp3-button bp3-large bp3-icon-undo sc-jzJRlG hkqcLA"
         style={
           Object {
             "marginTop": 0,

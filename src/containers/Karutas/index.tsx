@@ -1,4 +1,4 @@
-import { connect, Dispatch } from 'react-redux';
+import { connect } from 'react-redux';
 import { withRouter, RouteComponentProps } from 'react-router-dom';
 import { GlobalState } from '@src/reducers';
 import KarutaListSection, {
@@ -19,7 +19,7 @@ const mapStateToProps = ({
 });
 
 const mapDispatchToProps = (
-  _dispatch: Dispatch<GlobalState>,
+  {},
   { history }: RouteComponentProps<{}>
 ): KarutasDispatchProps => ({
   onClickKarutaListRow: (karuatId: number) => {
@@ -28,5 +28,8 @@ const mapDispatchToProps = (
 });
 
 export default withRouter(
-  connect(mapStateToProps, mapDispatchToProps)(KarutaListSection)
+  connect(
+    mapStateToProps,
+    mapDispatchToProps
+  )(KarutaListSection)
 );

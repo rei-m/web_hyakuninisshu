@@ -1,9 +1,13 @@
-import { applyMiddleware, createStore, Store } from 'redux';
+import { applyMiddleware, createStore, Action, Store } from 'redux';
 import thunk from 'redux-thunk';
-import axios from 'axios';
+import axios, { AxiosInstance } from 'axios';
 import { rootReducer, GlobalState } from '@src/reducers';
+import { KarutaActions } from '@src/actions/karutas';
+import { QuestionsActions } from '@src/actions/questions';
 
-const store = createStore<GlobalState>(
+type Actions = KarutaActions & QuestionsActions;
+
+const store = createStore<GlobalState, Action<Actions>, {}, {}>(
   rootReducer,
   applyMiddleware(thunk.withExtraArgument({ axios }))
 );
@@ -11,3 +15,7 @@ const store = createStore<GlobalState>(
 export const getStore = (): Store<GlobalState> => {
   return store;
 };
+
+export interface ThunkExtra {
+  axios: AxiosInstance;
+}

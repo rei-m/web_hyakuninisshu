@@ -143,7 +143,7 @@ const QuestionCorrect = enhance<
           </NumberAndKimariji>
           <OpenDetail
             onClick={onClickOpenDetail}
-            className="pt-button"
+            className="bp3-button"
             data-test="open-detail"
           >
             詳
@@ -162,7 +162,7 @@ const QuestionCorrect = enhance<
         {isAllAnswered ? (
           <NextButton
             onClick={onClickGoToResult}
-            className="pt-button pt-large pt-icon-double-chevron-right"
+            className="bp3-button bp3-large bp3-icon-double-chevron-right"
             data-test="go-to-result"
           >
             結果を見る
@@ -170,7 +170,7 @@ const QuestionCorrect = enhance<
         ) : (
           <NextButton
             onClick={onClickGoToNext}
-            className="pt-button pt-large pt-icon-double-chevron-right"
+            className="bp3-button bp3-large bp3-icon-double-chevron-right"
             data-test="go-to-next"
           >
             次へ進む

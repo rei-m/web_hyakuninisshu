@@ -51,8 +51,8 @@ const SelectRangeFromTo = ({
   <Wrapper>
     出題範囲
     <SelectRow>
-      <label className="pt-label">
-        <SelectRange className="pt-select pt-large">
+      <label className="bp3-label">
+        <SelectRange className="bp3-select bp3-large">
           <Field
             component="select"
             name="rangeFrom"
@@ -68,8 +68,8 @@ const SelectRangeFromTo = ({
         </SelectRange>
       </label>
       <Separate>〜</Separate>
-      <label className="pt-label">
-        <SelectRange className="pt-select pt-large">
+      <label className="bp3-label">
+        <SelectRange className="bp3-select bp3-large">
           <Field
             component="select"
             name="rangeTo"

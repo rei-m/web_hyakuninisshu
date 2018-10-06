@@ -3,7 +3,6 @@
 exports[`<QuestionResultsMap /> should render component 1`] = `
 <div
   className="sc-bdVaJa biXiia"
-  style={undefined}
 >
   <div
     className="sc-bwzfXH igTYpN"

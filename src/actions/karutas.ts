@@ -1,5 +1,4 @@
 import { Action, Dispatch } from 'redux';
-import { GlobalState } from '@src/reducers';
 import { Karuta } from '@src/types';
 import { AppError, AppErrorType } from '@src/errors';
 import { convertCamelKey } from '@src/utils';
@@ -32,7 +31,7 @@ export type KarutaActions = FetchKarutasAction | RaiseKarutasErrorAction;
  * action creators
  */
 export const fetchKarutas = () => {
-  return async (dispatch: Dispatch<GlobalState>, _, { axios }) => {
+  return async (dispatch: Dispatch<KarutaActions>, _, { axios }) => {
     // ここ大したjsonでもないのでbundleしてしまってもいいけど、非同期のactionを作りたかったからあえてこうしている
     const response = await axios.get(KARUTA_JSON_URL);
     if (response.status === 200) {

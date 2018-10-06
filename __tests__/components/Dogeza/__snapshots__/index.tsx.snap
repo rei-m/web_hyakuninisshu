@@ -5,6 +5,5 @@ exports[`<Dogeza /> should render component 1`] = `
   alt="test"
   className="sc-bdVaJa dxKQNh"
   src="dogeza_businessman.png"
-  style={undefined}
 />
 `;

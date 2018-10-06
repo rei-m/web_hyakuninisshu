@@ -18,7 +18,7 @@ exports[`<ExamMenuSection /> should render component 1`] = `
       練習の成果を確認しましょう。
     </div>
     <button
-      className="pt-button pt-intent-primary pt-large pt-icon-edit sc-bxivhb cJoDeg"
+      className="bp3-button bp3-intent-primary bp3-large bp3-icon-edit sc-bxivhb cJoDeg"
       data-test="start-exam-button"
       onClick={[MockFunction]}
       type="submit"

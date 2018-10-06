@@ -1,4 +1,4 @@
-import { connect, Dispatch } from 'react-redux';
+import { connect } from 'react-redux';
 import { withRouter, RouteComponentProps } from 'react-router-dom';
 import { GlobalState } from '@src/reducers';
 import {
@@ -34,7 +34,7 @@ const mapStateToProps = ({
 };
 
 const mapDispatchToProps = (
-  _: Dispatch<GlobalState>,
+  {},
   { history }: RouteComponentProps<{}>
 ): TrainingsDispatchProps => ({
   onSubmit: (
@@ -59,5 +59,8 @@ const mapDispatchToProps = (
 });
 
 export default withRouter(
-  connect(mapStateToProps, mapDispatchToProps)(TrainingMenuSection)
+  connect(
+    mapStateToProps,
+    mapDispatchToProps
+  )(TrainingMenuSection)
 );
