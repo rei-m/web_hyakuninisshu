@@ -147,7 +147,7 @@ describe('<Root />', () => {
     expect(props.canBack).toBe(true);
     expect(props.currentMenuType).toBe(MenuType.Material);
     expect(props.description).toBe(
-      '百人一首の暗記を練習できます。百人一首の札の画像や現代語訳も載せています。百人一首の歌の意味に触れながら楽しく覚えましょう。'
+      '百人一首の資料のページです。百人一首の暗記を練習できます。百人一首の札の画像や現代語訳も載せています。百人一首の歌の意味に触れながら楽しく覚えましょう。'
     );
     expect(props.isDisplayNav).toBe(true);
     expect(props.subTitle).toBe('資料');
