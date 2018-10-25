@@ -60,8 +60,7 @@ const mapStateToProps = (
     const match = pathname.match(/\/(100|\d{2}|[1-9])$/);
     canBack = true;
     subTitle = match ? toKarutaIdString(Number(match[1])) : '資料';
-    description =
-      '百人一首の暗記を練習できます。百人一首の札の画像や現代語訳も載せています。百人一首の歌の意味に触れながら楽しく覚えましょう。';
+    description = `百人一首の${subTitle}のページです。百人一首の暗記を練習できます。百人一首の札の画像や現代語訳も載せています。百人一首の歌の意味に触れながら楽しく覚えましょう。`;
     currentMenuType = MenuType.Material;
   } else if (pathname.indexOf(ROUTE_PATHS.ABOUT) >= 0) {
     canBack = true;

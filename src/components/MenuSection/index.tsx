@@ -100,7 +100,7 @@ const KarutaList = styled.ul`
 `;
 
 const KarutaListItem = styled.li`
-  margin-right: 8px;
+  padding: 8px;
 `;
 
 const LinkWithRipple = withRipple<LinkProps>(Link);
