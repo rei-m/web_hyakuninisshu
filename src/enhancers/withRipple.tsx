@@ -1,5 +1,5 @@
 import * as React from 'react';
-import styled, { keyframes } from 'styled-components';
+import styled, { keyframes } from '@src/styles/styled-components';
 
 const rippleAnimation = keyframes`
   to {
@@ -11,7 +11,6 @@ const rippleAnimation = keyframes`
 const RippleContainer = styled.div`
   position: relative;
   overflow: hidden;
-
   & .ripple-effect {
     position: absolute;
     border-radius: 50%;
@@ -28,16 +27,12 @@ export interface RippledComponentProps {
 }
 
 // このHOC中途半端で汎用的に使えないので注意
-export function withRipple<T extends React.HTMLAttributes<HTMLElement>>(
-  WrappedComponent: React.ComponentClass<T>
-) {
-  return class RippledComponent extends React.Component<
-    RippledComponentProps & T
-  > {
+export function withRipple<T extends React.HTMLAttributes<HTMLElement>>(WrappedComponent: React.ComponentType<T>) {
+  return class RippledComponent extends React.Component<RippledComponentProps & T> {
     public static defaultProps: RippledComponentProps = { color: '#fff' };
 
-    private container: HTMLDivElement;
-    private clearRippleTimer: number;
+    private container?: HTMLDivElement;
+    private clearRippleTimer?: number;
 
     constructor(props: RippledComponentProps & T) {
       super(props);
@@ -48,11 +43,7 @@ export function withRipple<T extends React.HTMLAttributes<HTMLElement>>(
 
     public render() {
       return (
-        <RippleContainer
-          innerRef={this.holdContainer}
-          onMouseDown={this.addRipple}
-          onMouseUp={this.clearRipple}
-        >
+        <RippleContainer ref={this.holdContainer} onMouseDown={this.addRipple} onMouseUp={this.clearRipple}>
           <WrappedComponent {...this.props} />
         </RippleContainer>
       );
@@ -69,16 +60,11 @@ export function withRipple<T extends React.HTMLAttributes<HTMLElement>>(
     }
 
     private addRipple(event: React.MouseEvent<HTMLDivElement>) {
-      const {
-        width,
-        height,
-        left,
-        top
-      } = this.container.getBoundingClientRect();
+      const { width, height, left, top } = this.container!.getBoundingClientRect();
 
       const effect = document.createElement('span');
       effect.className = 'ripple-effect';
-      this.container.appendChild(effect);
+      this.container!.appendChild(effect);
 
       const size = Math.max(width, height);
       const ripplerStyle = [
@@ -86,7 +72,7 @@ export function withRipple<T extends React.HTMLAttributes<HTMLElement>>(
         `top: ${event.clientY - top - size / 2}px`,
         `width: ${size}px`,
         `height: ${size}px`,
-        `background-color: ${this.props.color}`
+        `background-color: ${this.props.color}`,
       ];
       effect.setAttribute('style', ripplerStyle.join('; '));
     }
@@ -96,10 +82,12 @@ export function withRipple<T extends React.HTMLAttributes<HTMLElement>>(
         window.clearTimeout(this.clearRippleTimer);
       }
       this.clearRippleTimer = window.setTimeout(() => {
-        const ripples = this.container.getElementsByClassName('ripple-effect');
-        [...Array(ripples.length).keys()].reverse().forEach(i => {
-          this.container.removeChild(ripples.item(i));
-        });
+        const ripples = this.container!.getElementsByClassName('ripple-effect');
+        Array.from(Array(ripples.length).keys())
+          .reverse()
+          .forEach(i => {
+            this.container!.removeChild(ripples.item(i)!);
+          });
       }, 1000);
     }
   };

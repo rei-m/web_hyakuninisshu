@@ -1,19 +1,17 @@
 import * as React from 'react';
-import styled, { StyledFunction } from 'styled-components';
+import styled from '@src/styles/styled-components';
 import { MenuType } from '@src/enums';
 import { menuTypeToIcon } from '@src/utils';
 
-export interface NavIconProps {
-  readonly iconType: MenuType;
-  readonly text: string;
-  readonly isCurrent: boolean;
+export interface Props {
+  iconType: MenuType;
+  text: string;
+  isCurrent: boolean;
 }
 
-type IconProps = Pick<NavIconProps, 'text' | 'isCurrent'>;
+type IconProps = Pick<Props, 'text' | 'isCurrent'>;
 
-const i: StyledFunction<IconProps & React.HTMLProps<HTMLElement>> = styled.i;
-
-const Icon = i`
+const Icon = styled.i<IconProps>`
   height: 56px;
   color: #fff;
   text-align: center;
@@ -34,7 +32,7 @@ const Icon = i`
   }
 `;
 
-const NavIcon: React.SFC<NavIconProps> = ({ iconType, text, isCurrent }) => (
+const NavIcon: React.FC<Props> = ({ iconType, text, isCurrent }) => (
   <Icon className="material-icons" text={text} isCurrent={isCurrent}>
     {menuTypeToIcon(iconType)}
   </Icon>

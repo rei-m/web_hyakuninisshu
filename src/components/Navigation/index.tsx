@@ -1,17 +1,16 @@
 import * as React from 'react';
-import styled from 'styled-components';
-import { Link, LinkProps } from 'react-router-dom';
-import { withAppTheme } from '@src/styles';
+import { GatsbyLinkProps, Link } from 'gatsby';
+import styled from '@src/styles/styled-components';
+import NavIcon from '@src/components/NavIcon';
+import { withRipple } from '@src/enhancers/withRipple';
 import { MenuType } from '@src/enums';
 import { ROUTE_PATHS } from '@src/constants';
-import { withRipple } from '@src/enhancers/withRipple';
-import NavIcon from '@src/components/NavIcon';
 
-export interface NavigationProps {
-  readonly currentMenuType?: MenuType;
+export interface Props {
+  currentMenuType?: MenuType;
 }
 
-const Root = withAppTheme(styled.nav)`
+const Container = styled.nav`
   display: flex;
   position: fixed;
   height: ${({ theme }) => theme.bottomNavHeight};
@@ -20,7 +19,6 @@ const Root = withAppTheme(styled.nav)`
   background-color: ${({ theme }) => theme.colorPrimary};
   box-shadow: 0 -1px 5px rgba(0, 0, 0, 0.26);
   box-sizing: border-box;
-
   @media screen and (min-width: ${({ theme }) => theme.minWidthWide}) {
     height: 100vh;
     width: ${({ theme }) => theme.sideNavWidth};
@@ -38,59 +36,31 @@ const IconBox = styled.span`
   }
 `;
 
-const LinkWithRipple = withRipple<LinkProps>(Link);
+const LinkWithRipple = withRipple<GatsbyLinkProps<{}>>(Link);
 
-const Navigation: React.SFC<NavigationProps> = ({ currentMenuType }) => (
-  <Root>
+const Navigation: React.FC<Props> = ({ currentMenuType }) => (
+  <Container>
     <IconBox>
-      <LinkWithRipple
-        to={ROUTE_PATHS.TRAINING}
-        style={{ width: '100%', height: '100%' }}
-      >
-        <NavIcon
-          iconType={MenuType.Training}
-          text="練習"
-          isCurrent={currentMenuType === MenuType.Training}
-        />
+      <LinkWithRipple to={ROUTE_PATHS.TRAINING} style={{ width: '100%', height: '100%' }}>
+        <NavIcon iconType={MenuType.Training} text="練習" isCurrent={currentMenuType === MenuType.Training} />
       </LinkWithRipple>
     </IconBox>
     <IconBox>
-      <LinkWithRipple
-        to={ROUTE_PATHS.EXAM}
-        style={{ width: '100%', height: '100%' }}
-      >
-        <NavIcon
-          iconType={MenuType.Exam}
-          text="腕試し"
-          isCurrent={currentMenuType === MenuType.Exam}
-        />
+      <LinkWithRipple to={ROUTE_PATHS.EXAM} style={{ width: '100%', height: '100%' }}>
+        <NavIcon iconType={MenuType.Exam} text="腕試し" isCurrent={currentMenuType === MenuType.Exam} />
       </LinkWithRipple>
     </IconBox>
     <IconBox>
-      <LinkWithRipple
-        to={ROUTE_PATHS.KARUTAS}
-        style={{ width: '100%', height: '100%' }}
-      >
-        <NavIcon
-          iconType={MenuType.Material}
-          text="資料"
-          isCurrent={currentMenuType === MenuType.Material}
-        />
+      <LinkWithRipple to={ROUTE_PATHS.KARUTAS} style={{ width: '100%', height: '100%' }}>
+        <NavIcon iconType={MenuType.Material} text="資料" isCurrent={currentMenuType === MenuType.Material} />
       </LinkWithRipple>
     </IconBox>
     <IconBox>
-      <LinkWithRipple
-        to={ROUTE_PATHS.ABOUT}
-        style={{ width: '100%', height: '100%' }}
-      >
-        <NavIcon
-          iconType={MenuType.Other}
-          text="その他"
-          isCurrent={currentMenuType === MenuType.Other}
-        />
+      <LinkWithRipple to={ROUTE_PATHS.ABOUT} style={{ width: '100%', height: '100%' }}>
+        <NavIcon iconType={MenuType.Other} text="その他" isCurrent={currentMenuType === MenuType.Other} />
       </LinkWithRipple>
     </IconBox>
-  </Root>
+  </Container>
 );
 
 export default Navigation;

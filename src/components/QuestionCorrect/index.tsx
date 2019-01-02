@@ -1,27 +1,32 @@
 import * as React from 'react';
-import styled from 'styled-components';
+import { graphql, StaticQuery } from 'gatsby';
 import { withState } from 'recompose';
 import { Dialog } from '@blueprintjs/core';
-import { withAppTheme } from '@src/styles';
-import { Karuta } from '@src/types';
-import Tatami from '@src/components/Tatami';
+import styled from '@src/styles/styled-components';
 import KarutaCard from '@src/components/KarutaCard';
-import { toKarutaIdString, toKimarijiString } from '@src/components/helper';
+import { Karuta } from '@src/types';
+import { toKarutaNoString, toKimarijiString } from '@src/utils';
 
-export interface QuestionCorrectProps {
-  readonly karuta: Karuta;
-  readonly isAllAnswered: boolean;
-  readonly onClickGoToNext: () => void;
-  readonly onClickGoToResult: () => void;
+export interface Props {
+  karuta: Karuta;
+  isAllAnswered: boolean;
+  onClickGoToNext: () => void;
+  onClickGoToResult: () => void;
 }
 
-const Frame = Tatami.extend`
+interface QueryData {
+  questionCorrectBGImage: {
+    publicURL: string;
+  };
+}
+
+const Container = styled.div<{ bgImageUrl: string }>`
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  background-image: url("${({ bgImageUrl }) => bgImageUrl}");
   min-height: calc(100vh - ${({ theme }) => theme.headerHeight});
-
   @media screen and (min-width: ${({ theme }) => theme.minWidthWide}) {
     min-height: calc(100vh - ${({ theme }) => theme.headerHeightWide});
   }
@@ -32,7 +37,7 @@ const Header = styled.div`
   width: 160px;
 `;
 
-const NumberAndKimariji = withAppTheme(styled.div)`
+const NumberAndKimariji = styled.div`
   padding: ${({ theme }) => `${theme.spacing1x} ${theme.spacing2x}`};
   border: 1px solid #d3d3d3;
   width: 160px;
@@ -49,7 +54,7 @@ const OpenDetail = styled.button`
   width: 33px;
 `;
 
-const KarutaFrame = withAppTheme(styled.div)`
+const KarutaFrame = styled.div`
   width: 200px;
   height: 260px;
   border: 6px solid ${({ theme }) => theme.colorPrimaryDark};
@@ -75,22 +80,22 @@ const Phrase = styled.div`
   line-height: 2rem;
 `;
 
-const SecondPhrase = Phrase.extend`
+const SecondPhrase = styled(Phrase)`
   padding-top: 24px;
   margin-right: 8px;
 `;
 
-const ThirdPhrase = Phrase.extend`
+const ThirdPhrase = styled(Phrase)`
   padding-top: 48px;
   margin-right: 8px;
 `;
 
-const FourthPhrase = Phrase.extend`
+const FourthPhrase = styled(Phrase)`
   padding-top: 32px;
   margin-right: 8px;
 `;
 
-const FifthPhrase = Phrase.extend`
+const FifthPhrase = styled(Phrase)`
   padding-top: 56px;
   margin-right: 8px;
 `;
@@ -107,90 +112,86 @@ const NextButton = styled.button`
   margin-top: 32px;
 `;
 
-const enhance = withState<{}, boolean, 'opened', 'setOpened'>(
-  'opened',
-  'setOpened',
-  false
-);
+const enhance = withState<{}, boolean, 'opened', 'setOpened'>('opened', 'setOpened', false);
 
 const QuestionCorrect = enhance<
-  QuestionCorrectProps & {
+  Props & {
     opened: boolean;
     setOpened: (state: boolean) => boolean;
   }
->(
-  ({
-    karuta,
-    isAllAnswered,
-    onClickGoToNext,
-    onClickGoToResult,
-    opened,
-    setOpened
-  }) => {
-    const onClickOpenDetail = () => {
-      setOpened(true);
-    };
+>(({ karuta, isAllAnswered, onClickGoToNext, onClickGoToResult, opened, setOpened }) => {
+  const onClickOpenDetail = () => {
+    setOpened(true);
+  };
 
-    const onCloseDialog = () => {
-      setOpened(false);
-    };
+  const onCloseDialog = () => {
+    setOpened(false);
+  };
 
-    return (
-      <Frame>
-        <Header>
-          <NumberAndKimariji>
-            {toKarutaIdString(karuta.id)} / {toKimarijiString(karuta.kimariji)}
-          </NumberAndKimariji>
-          <OpenDetail
-            onClick={onClickOpenDetail}
-            className="bp3-button"
-            data-test="open-detail"
+  return (
+    <StaticQuery
+      query={query}
+      render={({ questionCorrectBGImage }: QueryData) => (
+        <Container bgImageUrl={questionCorrectBGImage.publicURL}>
+          <Header>
+            <NumberAndKimariji>
+              {toKarutaNoString(karuta.no)} / {toKimarijiString(karuta.kimariji)}
+            </NumberAndKimariji>
+            <OpenDetail onClick={onClickOpenDetail} className="bp3-button" data-test="open-detail">
+              詳
+            </OpenDetail>
+          </Header>
+          <KarutaFrame>
+            <Inner>
+              <Phrase>{karuta.firstKanji}</Phrase>
+              <SecondPhrase>{karuta.secondKanji}</SecondPhrase>
+              <ThirdPhrase>{karuta.thirdKanji}</ThirdPhrase>
+              <FourthPhrase>{karuta.fourthKanji}</FourthPhrase>
+              <FifthPhrase>{karuta.fifthKanji}</FifthPhrase>
+              <Creator>{karuta.creator}</Creator>
+            </Inner>
+          </KarutaFrame>
+          {isAllAnswered ? (
+            <NextButton
+              onClick={onClickGoToResult}
+              className="bp3-button bp3-large bp3-icon-double-chevron-right"
+              data-test="go-to-result"
+            >
+              結果を見る
+            </NextButton>
+          ) : (
+            <NextButton
+              onClick={onClickGoToNext}
+              className="bp3-button bp3-large bp3-icon-double-chevron-right"
+              data-test="go-to-next"
+            >
+              次へ進む
+            </NextButton>
+          )}
+          <Dialog
+            isOpen={opened}
+            onClose={onCloseDialog}
+            title="正解"
+            style={{
+              maxWidth: 380,
+              padding: 0,
+              width: '80vw',
+            }}
           >
-            詳
-          </OpenDetail>
-        </Header>
-        <KarutaFrame>
-          <Inner>
-            <Phrase>{karuta.firstKanji}</Phrase>
-            <SecondPhrase>{karuta.secondKanji}</SecondPhrase>
-            <ThirdPhrase>{karuta.thirdKanji}</ThirdPhrase>
-            <FourthPhrase>{karuta.fourthKanji}</FourthPhrase>
-            <FifthPhrase>{karuta.fifthKanji}</FifthPhrase>
-            <Creator>{karuta.creator}</Creator>
-          </Inner>
-        </KarutaFrame>
-        {isAllAnswered ? (
-          <NextButton
-            onClick={onClickGoToResult}
-            className="bp3-button bp3-large bp3-icon-double-chevron-right"
-            data-test="go-to-result"
-          >
-            結果を見る
-          </NextButton>
-        ) : (
-          <NextButton
-            onClick={onClickGoToNext}
-            className="bp3-button bp3-large bp3-icon-double-chevron-right"
-            data-test="go-to-next"
-          >
-            次へ進む
-          </NextButton>
-        )}
-        <Dialog
-          isOpen={opened}
-          onClose={onCloseDialog}
-          title="正解"
-          style={{
-            maxWidth: 380,
-            padding: 0,
-            width: '80vw'
-          }}
-        >
-          <KarutaCard karuta={karuta} />
-        </Dialog>
-      </Frame>
-    );
-  }
-);
+            <KarutaCard karuta={karuta} />
+          </Dialog>
+        </Container>
+      )}
+    />
+  );
+});
 
 export default QuestionCorrect;
+
+const query = graphql`
+  query {
+    questionCorrectBGImage: file(relativePath: { eq: "tatami_part.png" }) {
+      publicURL
+    }
+  }
+`;

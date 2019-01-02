@@ -1,5 +1,16 @@
+import { RouteComponentProps } from '@reach/router';
+
+export interface SiteMetaData {
+  title: string;
+  description: string;
+  author: string;
+}
+
+export type GeneratedPageComponentProps<T = {}> = { pageContext: T } & RouteComponentProps<T>;
+
 export interface Karuta {
-  readonly id: number;
+  readonly id: string;
+  readonly no: number;
   readonly imageNo: string;
   readonly creator: string;
   readonly firstKanji: string;
@@ -19,7 +30,7 @@ export interface Karuta {
 
 export interface YomiFuda {
   readonly questionId: number;
-  readonly karutaId: number;
+  readonly karutaNo: number;
   readonly firstText: string;
   readonly secondText: string;
   readonly thirdText: string;
@@ -27,7 +38,7 @@ export interface YomiFuda {
 
 export interface ToriFuda {
   readonly questionId: number;
-  readonly karutaId: number;
+  readonly karutaNo: number;
   readonly fourthText: string;
   readonly fifthText: string;
 }
@@ -41,7 +52,7 @@ export interface Question {
 
 export interface Answer {
   readonly questionId: number;
-  readonly karutaId: number;
+  readonly karutaNo: number;
   readonly correct: boolean;
   readonly time: number;
 }

@@ -38,5 +38,5 @@ jobs:
           key: v1-dependencies-{{ checksum "yarn.lock" }}
         
       # run tests!
-      - run: yarn test-cov
-      - run: $(yarn bin)/codecov
+      # - run: yarn test-cov
+      # - run: $(yarn bin)/codecov

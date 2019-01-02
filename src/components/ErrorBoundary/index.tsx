@@ -1,14 +1,14 @@
 import * as React from 'react';
-import styled from 'styled-components';
-import { appTheme, withAppTheme } from '@src/styles';
-import { AppError, UNKNOWN_MESSAGE } from '@src/errors';
+import styled from '@src/styles/styled-components';
+import { appTheme } from '@src/styles/theme';
 import Dogeza from '@src/components/Dogeza';
+import { AppError, UNKNOWN_MESSAGE } from '@src/errors';
 
-export interface ErrorBoundaryState {
-  readonly error?: Error;
+export interface State {
+  error?: Error;
 }
 
-const Root = withAppTheme(styled.div)`
+const Container = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
@@ -22,14 +22,11 @@ const Message = styled.div`
   font-size: 1.8rem;
 `;
 
-export default class ErrorBoundary extends React.Component<
-  {},
-  ErrorBoundaryState
-> {
+export default class ErrorBoundary extends React.Component<{}, State> {
   constructor(props: {}) {
     super(props);
     this.state = {
-      error: undefined
+      error: undefined,
     };
   }
 
@@ -38,25 +35,24 @@ export default class ErrorBoundary extends React.Component<
       console.error(errorInfo);
     }
     this.setState({
-      error
+      error,
     });
   }
 
   public render() {
     const { error } = this.state;
     if (error) {
-      const message =
-        error instanceof AppError ? error.message : UNKNOWN_MESSAGE;
+      const message = error instanceof AppError ? error.message : UNKNOWN_MESSAGE;
       return (
-        <Root>
+        <Container>
           <Message>{message}</Message>
           <Dogeza
             alt="エラーが起きました"
             style={{
-              marginTop: appTheme.spacing4x
+              marginTop: appTheme.spacing4x,
             }}
           />
-        </Root>
+        </Container>
       );
     }
     return this.props.children;

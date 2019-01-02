@@ -1,11 +1,8 @@
 import { Karuta } from '@src/types';
 import { getRandomInt, randomizeArray } from '@src/utils';
 
-export const filterByRange = (
-  karutas: Karuta[],
-  rangeFrom: number,
-  rangeTo: number
-) => karutas.slice(rangeFrom - 1, rangeTo);
+export const filterByRange = (karutas: Karuta[], rangeFrom: number, rangeTo: number) =>
+  karutas.slice(rangeFrom - 1, rangeTo);
 
 export const filterByKimariji = (karutas: Karuta[], kimariji: number) =>
   kimariji <= 0 ? karutas : karutas.filter(k => k.kimariji === kimariji);
@@ -27,7 +24,7 @@ export const questionsFilter = (karutas: Karuta[]) => {
 
 export const fetchTorifudas = (karutas: Karuta[], correctKaruta: Karuta) => {
   const dupKarutas = [...karutas].filter(k => k.id !== correctKaruta.id);
-  const result = [...Array(3).keys()]
+  const result = Array.from(Array(3).keys())
     .map(_ => {
       const index = getRandomInt(0, dupKarutas.length - 1);
       const [karuta] = dupKarutas.splice(index, 1);

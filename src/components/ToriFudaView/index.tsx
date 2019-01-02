@@ -1,16 +1,15 @@
 import * as React from 'react';
-import styled from 'styled-components';
-import { withAppTheme } from '@src/styles';
-import { ToriFuda } from '@src/types';
+import styled from '@src/styles/styled-components';
 import { withRipple } from '@src/enhancers/withRipple';
+import { ToriFuda } from '@src/types';
 
-export interface ToriFudaViewProps {
-  readonly toriFuda: ToriFuda;
-  readonly style?: React.CSSProperties;
-  readonly onClick: (toriFuda: ToriFuda) => void;
+export interface Props {
+  toriFuda: ToriFuda;
+  style?: React.CSSProperties;
+  onClick: (toriFuda: ToriFuda) => void;
 }
 
-const Frame = withRipple(withAppTheme(styled.div)`
+const Container = withRipple(styled.div`
   height: 220px;
   padding: 0 ${({ theme }) => theme.spacing1x};
   border: 3px solid ${({ theme }) => theme.colorPrimaryDark};
@@ -36,24 +35,20 @@ const Phrase = styled.div`
   line-height: 1.8rem;
 `;
 
-const FifthPhrase = Phrase.extend`
+const FifthPhrase = styled(Phrase)`
   padding-top: 24px;
   margin-right: 8px;
 `;
 
-const ToriFudaView: React.SFC<ToriFudaViewProps> = ({
-  toriFuda,
-  style,
-  onClick
-}) => {
-  const onClickFrame = () => onClick(toriFuda);
+const ToriFudaView: React.FC<Props> = ({ toriFuda, style, onClick }) => {
+  const onClickHandler = () => onClick(toriFuda);
   return (
-    <Frame style={style} onClick={onClickFrame}>
+    <Container style={style} onClick={onClickHandler}>
       <Inner>
         <Phrase>{toriFuda.fourthText}</Phrase>
         <FifthPhrase>{toriFuda.fifthText}</FifthPhrase>
       </Inner>
-    </Frame>
+    </Container>
   );
 };
 
