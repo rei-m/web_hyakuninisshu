@@ -4,8 +4,6 @@ import Header from '@src/components/Header';
 import Navigation from '@src/components/Navigation';
 import { MenuType } from '@src/enums';
 
-import '@src/components/Layout/normalize.css';
-import '@src/components/Layout/layout.css';
 import '@blueprintjs/core/lib/css/blueprint.css';
 import '@blueprintjs/icons/lib/css/blueprint-icons.css';
 
