@@ -26,15 +26,27 @@ exports.createPages = config.createPages;
 
 exports.sourceNodes = config.sourceNodes;
 
-// exports.onCreatePage = config.onCreatePage;
+exports.onCreateWebpackConfig = ({ actions, loaders, getConfig }) => {
+  const config = getConfig()
 
-exports.onCreateWebpackConfig = ({ actions }) => {
-  actions.setWebpackConfig({
-    resolve: {
-      alias: {
-        '@src': resolve(__dirname, 'src/'),
-        '@test': resolve(__dirname, 'test/')
-      }
-    }
-  })
+  config.module.rules = [
+    ...config.module.rules.filter(rule => String(rule.test) !== String(/\.tsx?$/)),
+    {
+      test: /\.tsx?$/,
+      use: [
+        loaders.js(),
+        {
+          loader: resolve('lib/remove-data-test-attr-loader.js')
+        }
+      ]
+    },
+  ]
+
+  config.resolve.alias = {
+    ...config.resolve.alias,
+    '@src': resolve(__dirname, 'src'),
+    '@test': resolve(__dirname, 'test')
+  }
+
+  actions.replaceWebpackConfig(config)
 }

@@ -94,14 +94,3 @@ export const sourceNodes: GatsbySourceNodes<Karuta> = async ({ actions, createNo
     throw new Error('sourceNodes failed');
   }
 };
-
-// export const onCreatePage: GatsbyOnCreatePage<{ todo: Todo }> = async ({ page, actions }) => {
-//   const { createPage } = actions;
-
-//   // page.matchPath is a special key that's used for matching pages
-//   // only on the client.
-//   if (page.path.match(/^\/todos/)) {
-//     page.matchPath = '/todos/:id';
-//     createPage(page);
-//   }
-// };

@@ -36,13 +36,12 @@ interface GatsbyActionCreators<T> {
   ) => void;
 }
 
-// const graphqlRunner = (query, context = {}) => {
-//   const schema = store.getState().schema
-//   return graphql(schema, query, context, context, context)
-// }
-
+// この定義手抜き
 export type GatsbyCreatePages<T> = (
-  fns: { graphql: (query: any, context?: any) => Promise<ExecutionResult<any>>; actions: GatsbyActionCreators<T> }
+  fns: {
+    graphql: (query: any, context?: any) => Promise<ExecutionResult<any>>;
+    actions: GatsbyActionCreators<T>;
+  }
 ) => void;
 
 export type GatsbySourceNodes<T> = (
