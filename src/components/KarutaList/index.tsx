@@ -1,15 +1,14 @@
 import * as React from 'react';
-import styled from 'styled-components';
-import { withAppTheme } from '@src/styles';
+import styled from '@src/styles/styled-components';
+import Row from '@src/components/KarutaList/Row';
 import { Karuta } from '@src/types';
-import KarutaListRow from '@src/components/KarutaList/KarutaListRow';
 
-export interface KarutaListProps {
-  readonly karutas: Karuta[];
-  readonly onClickRow: (karutaId: number) => void;
+export interface Props {
+  karutas: Karuta[];
+  onClickRow: (karutaNo: number) => void;
 }
 
-const Root = withAppTheme(styled.div)`
+const Container = styled.div`
   display: flex;
   flex-wrap: wrap;
   margin: auto;
@@ -21,17 +20,11 @@ const Root = withAppTheme(styled.div)`
   }
 `;
 
-const KarutaList: React.SFC<KarutaListProps> = ({ karutas, onClickRow }) => (
-  <Root>
+const KarutaList: React.FC<Props> = ({ karutas, onClickRow }) => (
+  <Container>
     {karutas.map((k, i) => (
-      <KarutaListRow
-        karuta={k}
-        key={i}
-        onClickRow={onClickRow}
-        data-test={`row-${k.id}`}
-      />
+      <Row karuta={k} key={i} onClickRow={onClickRow} data-test={`row-${k.id}`} />
     ))}
-  </Root>
+  </Container>
 );
-
 export default KarutaList;

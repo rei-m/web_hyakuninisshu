@@ -1,13 +1,41 @@
 import * as React from 'react';
-import styled from 'styled-components';
-import * as dogeza from './dogeza_businessman.png';
+import { graphql, StaticQuery } from 'gatsby';
+import Img, { FluidObject } from 'gatsby-image';
 
-const DogezaImg = styled.img`
-  width: 200px;
-`;
+interface QueryData {
+  dogezaImage: {
+    childImageSharp: {
+      fluid: FluidObject;
+    };
+  };
+}
 
-const Dogeza: React.SFC<React.ImgHTMLAttributes<{}>> = ({ alt, style }) => (
-  <DogezaImg src={dogeza} alt={alt} style={style} />
+const Dogeza: React.FC<React.ImgHTMLAttributes<{}>> = ({ alt, style }) => (
+  <StaticQuery
+    query={query}
+    render={({ dogezaImage }: QueryData) => (
+      <Img
+        fluid={dogezaImage.childImageSharp.fluid}
+        style={{
+          width: 200,
+          ...style,
+        }}
+        alt={alt}
+      />
+    )}
+  />
 );
 
 export default Dogeza;
+
+const query = graphql`
+  query {
+    dogezaImage: file(relativePath: { eq: "dogeza_businessman.png" }) {
+      childImageSharp {
+        fluid(maxWidth: 200) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+  }
+`;

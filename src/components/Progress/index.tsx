@@ -1,13 +1,14 @@
 import * as React from 'react';
-import styled from 'styled-components';
-import { Classes, Spinner } from '@blueprintjs/core';
 import { lifecycle } from 'recompose';
+import CircularProgress from '@material-ui/core/CircularProgress';
+import styled from '@src/styles/styled-components';
+import { appTheme } from '@src/styles/theme';
 
-export interface ProgressProps {
-  readonly onStart: () => void;
+export interface Props {
+  onStart: () => void;
 }
 
-const Root = styled.div`
+const Container = styled.div`
   width: 100vw;
   display: flex;
   justify-content: center;
@@ -23,15 +24,15 @@ const Message = styled.div`
   font-size: 2rem;
 `;
 
-const Progress: React.SFC<ProgressProps> = _props => (
-  <Root>
-    <Spinner className={Classes.LARGE} />
+const Progress: React.FC<Props> = () => (
+  <Container>
+    <CircularProgress style={{ color: appTheme.colorPrimaryDark, width: 64, height: 64 }} />
     <Message>　　　百人一首 準備中。。。</Message>
-  </Root>
+  </Container>
 );
 
-export default lifecycle<ProgressProps, {}>({
+export default lifecycle<Props, {}>({
   componentDidMount() {
     this.props.onStart();
-  }
+  },
 })(Progress);

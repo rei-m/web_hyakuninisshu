@@ -1,17 +1,18 @@
 import * as React from 'react';
-import styled from 'styled-components';
-import { withAppTheme } from '@src/styles';
-import { Karuta } from '@src/types';
+import styled from '@src/styles/styled-components';
 import KarutaImage from '@src/components/KarutaImage';
-import { toKarutaIdString } from '@src/components/helper';
+import { Karuta } from '@src/types';
+import { toKarutaNoString } from '@src/utils';
 
-export interface KarutaCardProps {
-  readonly karuta: Karuta;
+export interface Props {
+  karuta: Karuta;
 }
 
-const Root = withAppTheme(styled.article)`
+const Container = styled.article`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   max-width: 380px;
-  width: 80vw;
   box-shadow: ${({ theme }) => theme.elevationShadow1x};
   background-color: #fff;
   box-sizing: border-box;
@@ -20,12 +21,13 @@ const Root = withAppTheme(styled.article)`
   padding: ${({ theme }) => theme.spacing2x};
 `;
 
-const Title = withAppTheme(styled.h3)`
+const Title = styled.h3`
   font-size: 1.6rem;
   padding: ${({ theme }) => theme.spacing1x};
 `;
 
-const ItemBox = withAppTheme(styled.div)`
+const ItemBox = styled.div`
+  width: 100%;
   padding-top: ${({ theme }) => theme.spacing1x};
   padding-bottom: ${({ theme }) => theme.spacing1x};
 `;
@@ -44,46 +46,35 @@ const Kimariji = styled.span`
   color: #ff0000;
 `;
 
-const KimarijiRow: React.SFC<Karuta> = ({
-  kimariji,
-  firstKana,
-  secondKana,
-  thirdKana
-}) => {
+const KimarijiRow: React.FC<Karuta> = ({ kimariji, firstKana, secondKana, thirdKana }) => {
   const modKimariji = firstKana.length - kimariji;
   return modKimariji >= 0 ? (
     <ItemValue>
       <Kimariji>{firstKana.slice(0, kimariji)}</Kimariji>
-      {`${firstKana.slice(
-        kimariji - firstKana.length
-      )} ${secondKana} ${thirdKana}`}
+      {`${firstKana.slice(kimariji - firstKana.length)} ${secondKana} ${thirdKana}`}
     </ItemValue>
   ) : (
     <ItemValue>
-      <Kimariji>
-        {`${firstKana} ${secondKana.slice(0, modKimariji * -1)}`}
-      </Kimariji>
+      <Kimariji>{`${firstKana} ${secondKana.slice(0, modKimariji * -1)}`}</Kimariji>
       {`${secondKana.slice(modKimariji)} ${thirdKana}`}
     </ItemValue>
   );
 };
 
-const KarutaCard: React.SFC<KarutaCardProps> = ({ karuta }) => (
-  <Root>
+const KarutaCard: React.FC<Props> = ({ karuta }) => (
+  <Container>
     <Title>
-      {toKarutaIdString(karuta.id)} / {karuta.creator}
+      {toKarutaNoString(karuta.no)} / {karuta.creator}
     </Title>
     <KarutaImage
-      karutaId={karuta.id}
+      karutaNo={karuta.no}
       style={{
-        width: 200
+        width: 200,
       }}
     />
     <ItemBox>
       <ItemTitle>原文</ItemTitle>
-      <ItemValue>{`${karuta.firstKanji} ${karuta.secondKanji} ${
-        karuta.thirdKanji
-      }`}</ItemValue>
+      <ItemValue>{`${karuta.firstKanji} ${karuta.secondKanji} ${karuta.thirdKanji}`}</ItemValue>
       <ItemValue>{`${karuta.fourthKanji} ${karuta.fifthKanji}`}</ItemValue>
       {KimarijiRow(karuta)}
       <ItemValue>{`${karuta.fourthKana} ${karuta.fifthKana}`}</ItemValue>
@@ -92,7 +83,7 @@ const KarutaCard: React.SFC<KarutaCardProps> = ({ karuta }) => (
       <ItemTitle>訳</ItemTitle>
       <ItemValue>{karuta.translation}</ItemValue>
     </ItemBox>
-  </Root>
+  </Container>
 );
 
 export default KarutaCard;

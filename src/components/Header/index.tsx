@@ -1,17 +1,16 @@
 import * as React from 'react';
-import styled from 'styled-components';
+import styled from '@src/styles/styled-components';
 import { withRipple } from '@src/enhancers/withRipple';
-import { withAppTheme } from '@src/styles';
 
-export interface HeaderProps {
-  readonly subTitle: string;
-  readonly canBack: boolean;
-  readonly onClickBack: () => void;
+export interface Props {
+  title: string;
+  canBack: boolean;
+  onClickBack: () => void;
 }
 
-type RootProps = Pick<HeaderProps, 'canBack'>;
+type RootProps = Pick<Props, 'canBack'>;
 
-const Root = withAppTheme<RootProps>(styled.header)`
+const Container = styled.header<RootProps>`
   box-shadow: ${({ theme }) => theme.elevationShadow1x};
   left: 0;
   right: 0;
@@ -22,20 +21,19 @@ const Root = withAppTheme<RootProps>(styled.header)`
   display: flex;
 `;
 
-const Title = withAppTheme(styled.h1)`
+const Title = styled.h1`
   font-size: 1.8rem;
   color: #fff;
   line-height: ${({ theme }) => theme.headerHeight};
   margin: 0;
   font-weight: normal;
   text-align: left;
-
   @media screen and (min-width: ${({ theme }) => theme.minWidthWide}) {
     line-height: ${({ theme }) => theme.headerHeightWide};
   }
 `;
 
-const Icon = withRipple(withAppTheme(styled.i)`
+const Icon = withRipple(styled.i`
   line-height: ${({ theme }) => theme.headerHeight};
   width: ${({ theme }) => theme.headerHeight};
   color: #fff;
@@ -47,15 +45,15 @@ const Icon = withRipple(withAppTheme(styled.i)`
   }
 `);
 
-const Header: React.SFC<HeaderProps> = ({ subTitle, canBack, onClickBack }) => (
-  <Root canBack={canBack}>
+const Header: React.FC<Props> = ({ title, canBack, onClickBack }) => (
+  <Container canBack={canBack}>
     {canBack && (
       <Icon className="material-icons" onClick={onClickBack} data-test="back">
         arrow_back
       </Icon>
     )}
-    <Title>{`百人一首 - ${subTitle} -`}</Title>
-  </Root>
+    <Title>{title}</Title>
+  </Container>
 );
 
 export default Header;

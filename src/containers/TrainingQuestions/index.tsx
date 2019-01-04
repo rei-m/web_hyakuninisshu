@@ -1,84 +1,152 @@
 import * as React from 'react';
-import { branch, compose, renderComponent } from 'recompose';
-import { withRouter, RouteComponentProps } from 'react-router-dom';
 import { connect } from 'react-redux';
 import { ThunkDispatch } from 'redux-thunk';
-import { ThunkExtra } from '@src/store';
-import { Answer, Question, ToriFuda } from '@src/types';
-import { QuestionState } from '@src/enums';
-import { GlobalState } from '@src/reducers';
+import TrainingInitializer from '@src/containers/TrainingInitializer';
+import QuestionView, { Props as QuestionViewProps } from '@src/components/QuestionView';
+import QuestionCorrect, { Props as QuestionCorrectProps } from '@src/components/QuestionCorrect';
+import TrainingResult, { Props as TrainingResultProps } from '@src/components/TrainingResult';
+import ErrorMessage from '@src/components/ErrorMessage';
+import { GlobalState } from '@src/state';
 import {
   answerQuestion,
   confirmCorrect,
   finishQuestions,
   openNextQuestion,
   restartQuestions,
-  QuestionsActions
+  QuestionsActions,
 } from '@src/actions/questions';
-import TrainingInitializer from '@src/containers/TrainingInitializer';
-import QuestionSection, {
-  QuestionSectionProps
-} from '@src/components/QuestionSection';
-import QuestionCorrect, {
-  QuestionCorrectProps
-} from '@src/components/QuestionCorrect';
-import QuestionsResult, {
-  QuestionsResultProps
-} from '@src/components/QuestionsResult';
+import {
+  ColorCondition,
+  KarutaStyleCondition,
+  KimarijiCondition,
+  QuestionState,
+  RangeFromCondition,
+  RangeToCondition,
+} from '@src/enums';
+import { Answer, Karuta, Question, ToriFuda } from '@src/types';
 
-export type TrainingQuestionsOwnProps = RouteComponentProps<{}>;
+export interface OwnProps {
+  karutas: Karuta[];
+  rangeFrom: RangeFromCondition;
+  rangeTo: RangeToCondition;
+  kimariji: KimarijiCondition;
+  color: ColorCondition;
+  kamiNoKuStyle: KarutaStyleCondition;
+  shimoNoKuStyle: KarutaStyleCondition;
+  submitTime: number;
+}
 
-export type TrainingQuestionsConnectedProps = Omit<
-  QuestionSectionProps,
-  'onClickToriFuda' | 'onClickResult'
-> & {
-  readonly submitTime: number;
-  readonly lastStartedTime?: number;
-  readonly questions: Question[];
-  readonly answers: Answer[];
-  readonly questionState?: QuestionState;
+export interface ConnectedProps {
+  lastStartedTime?: number;
+  questions: Question[];
+  question: Question;
+  answer?: Answer;
+  answers: Answer[];
+  totalCount: number;
+  currentPosition: number;
+  questionState?: QuestionState;
+}
+
+export type DispatchProps = Pick<QuestionViewProps, 'onClickToriFuda' | 'onClickResult'> &
+  Pick<QuestionCorrectProps, 'onClickGoToNext' | 'onClickGoToResult'> &
+  Pick<TrainingResultProps, 'onClickRestart'>;
+
+export type Props = OwnProps & ConnectedProps & DispatchProps;
+
+export const TrainingQuestions: React.FC<Props> = ({
+  karutas,
+  rangeFrom,
+  rangeTo,
+  kimariji,
+  color,
+  kamiNoKuStyle,
+  shimoNoKuStyle,
+  submitTime,
+  lastStartedTime,
+  questions,
+  question,
+  answer,
+  answers,
+  totalCount,
+  questionState,
+  currentPosition,
+  onClickResult,
+  onClickToriFuda,
+  onClickGoToNext,
+  onClickGoToResult,
+  onClickRestart,
+}) => {
+  const isStarted = !!lastStartedTime && lastStartedTime > submitTime;
+
+  if (!isStarted) {
+    return (
+      <TrainingInitializer
+        karutas={karutas}
+        rangeFrom={rangeFrom}
+        rangeTo={rangeTo}
+        kimariji={kimariji}
+        color={color}
+        kamiNoKuStyle={kamiNoKuStyle}
+        shimoNoKuStyle={shimoNoKuStyle}
+      />
+    );
+  }
+
+  if (questions.length === 0) {
+    return <ErrorMessage text="指定した条件の歌はありませんでした" />;
+  }
+
+  switch (questionState) {
+    case QuestionState.ConfirmCorrect:
+      return (
+        <QuestionCorrect
+          karuta={question.correctKaruta}
+          isAllAnswered={questions.length === answers.length}
+          onClickGoToNext={onClickGoToNext}
+          onClickGoToResult={onClickGoToResult}
+        />
+      );
+    case QuestionState.Finished:
+      const averageAnswerSecond = answers.reduce((prev, current) => prev + current.time, 0) / 1000 / totalCount;
+      return (
+        <TrainingResult
+          averageAnswerSecond={Math.round(averageAnswerSecond * 100) / 100}
+          totalCount={totalCount}
+          correctCount={answers.filter(a => a.correct).length}
+          onClickRestart={onClickRestart}
+        />
+      );
+    default:
+      return (
+        <QuestionView
+          question={question}
+          answer={answer}
+          totalCount={totalCount}
+          currentPosition={currentPosition}
+          onClickResult={onClickResult}
+          onClickToriFuda={onClickToriFuda}
+        />
+      );
+  }
 };
 
-export type TrainingQuestionsDispatchProps = Pick<
-  QuestionCorrectProps,
-  'onClickGoToNext' | 'onClickGoToResult'
-> &
-  Pick<QuestionSectionProps, 'onClickToriFuda' | 'onClickResult'> &
-  Pick<QuestionsResultProps, 'onClickRestart'>;
-
-export type TrainingQuestionsProps = TrainingQuestionsOwnProps &
-  TrainingQuestionsConnectedProps &
-  TrainingQuestionsDispatchProps;
-
-const mapStateToProps = (
-  { questionsState }: GlobalState,
-  { location }: TrainingQuestionsOwnProps
-): TrainingQuestionsConnectedProps => {
-  const { submitTime } = location.state;
-  const {
-    answers,
-    currentIndex,
-    lastStartedTime,
-    questions,
-    questionState
-  } = questionsState;
+const mapStateToProps = ({ questions }: GlobalState, props: OwnProps): ConnectedProps => {
+  const { lastStartedTime, currentIndex, answers, questionState } = questions;
 
   return {
+    ...props,
+    questions: questions.questions,
+    lastStartedTime,
     answer: answers[currentIndex],
     answers,
     currentPosition: currentIndex + 1,
-    lastStartedTime,
-    question: questions[currentIndex],
+    question: questions.questions[currentIndex],
+    totalCount: questions.questions.length,
     questionState,
-    questions,
-    submitTime,
-    totalCount: questions.length
   };
 };
 
-const mapDispatchToProps = (
-  dispatch: ThunkDispatch<GlobalState, ThunkExtra, QuestionsActions>
-): TrainingQuestionsDispatchProps => ({
+const mapDispatchToProps = (dispatch: ThunkDispatch<GlobalState, {}, QuestionsActions>): DispatchProps => ({
   onClickGoToNext: () => {
     dispatch(openNextQuestion());
   },
@@ -91,104 +159,12 @@ const mapDispatchToProps = (
   onClickResult: () => {
     dispatch(confirmCorrect());
   },
-  onClickToriFuda: ({ questionId, karutaId }: ToriFuda) => {
-    dispatch(answerQuestion(questionId, karutaId));
-  }
+  onClickToriFuda: ({ questionId, karutaNo }: ToriFuda) => {
+    dispatch(answerQuestion(questionId, karutaNo));
+  },
 });
 
-const isStarted = ({
-  lastStartedTime,
-  submitTime
-}: TrainingQuestionsConnectedProps) =>
-  !!lastStartedTime && lastStartedTime > submitTime;
-
-const withStartedCheck = branch<TrainingQuestionsConnectedProps>(
-  isStarted,
-  component => component,
-  renderComponent(TrainingInitializer)
-);
-
-const hasQuestion = ({ questions }: TrainingQuestionsConnectedProps) =>
-  questions.length > 0;
-
-const EmptyMessage = () => <h3>指定した条件の歌はありませんでした</h3>;
-
-const withHasQuestionCheck = branch<TrainingQuestionsConnectedProps>(
-  hasQuestion,
-  component => component,
-  renderComponent(EmptyMessage)
-);
-
-const isConfirmedQuestionResult = ({
-  questionState
-}: TrainingQuestionsConnectedProps) =>
-  questionState === QuestionState.ConfirmCorrect;
-
-const renderQuestionCorrect = ({
-  question,
-  questions,
-  answers,
-  onClickGoToNext,
-  onClickGoToResult
-}: TrainingQuestionsProps) => {
-  const { correctKaruta } = question;
-  return (
-    <QuestionCorrect
-      karuta={correctKaruta}
-      isAllAnswered={questions.length === answers.length}
-      onClickGoToNext={onClickGoToNext}
-      onClickGoToResult={onClickGoToResult}
-    />
-  );
-};
-
-const withConfirmedQuestionResultCheck = branch<
-  TrainingQuestionsConnectedProps
->(
-  isConfirmedQuestionResult,
-  renderComponent(renderQuestionCorrect),
-  component => component
-);
-
-const isFinished = ({ questionState }: TrainingQuestionsConnectedProps) =>
-  questionState === QuestionState.Finished;
-
-const renderResult = ({
-  answers,
-  onClickRestart,
-  totalCount
-}: TrainingQuestionsProps) => {
-  const correctCount = answers.filter(a => a.correct).length;
-  const averageAnswerSecond =
-    answers.reduce((prev, current) => prev + current.time, 0) /
-    1000 /
-    totalCount;
-  return (
-    <QuestionsResult
-      averageAnswerSecond={Math.round(averageAnswerSecond * 100) / 100}
-      totalCount={totalCount}
-      correctCount={correctCount}
-      onClickRestart={onClickRestart}
-    />
-  );
-};
-
-const withFinishedCheck = branch<TrainingQuestionsConnectedProps>(
-  isFinished,
-  renderComponent(renderResult),
-  component => component
-);
-
-const QuestionsIndex = compose<QuestionSectionProps, TrainingQuestionsProps>(
-  withStartedCheck,
-  withHasQuestionCheck,
-  withConfirmedQuestionResultCheck,
-  withFinishedCheck
-)(QuestionSection);
-
-export default withRouter(
-  connect(
-    mapStateToProps,
-    mapDispatchToProps
-  )(QuestionsIndex)
-);
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(TrainingQuestions);

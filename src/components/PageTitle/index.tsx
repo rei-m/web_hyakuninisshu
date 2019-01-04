@@ -1,18 +1,17 @@
 import * as React from 'react';
-import styled from 'styled-components';
-import { withAppTheme } from '@src/styles';
+import styled from '@src/styles/styled-components';
 
-export interface PageTitleProps {
-  readonly title: string;
+export interface Props {
+  title: string;
 }
 
-const H2 = withAppTheme(styled.h1)`
+const Title = styled.h1`
   padding: ${({ theme }) => theme.spacing2x};
   font-size: 2rem;
   margin: 0;
   line-height: 2rem;
 `;
 
-const PageTitle: React.SFC<PageTitleProps> = ({ title }) => <H2>{title}</H2>;
+const PageTitle: React.FC<Props> = ({ title }) => <Title>{title}</Title>;
 
 export default PageTitle;

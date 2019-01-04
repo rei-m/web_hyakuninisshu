@@ -1,19 +1,31 @@
 import * as React from 'react';
-import styled from 'styled-components';
-import { withAppTheme } from '@src/styles';
+import { graphql, StaticQuery } from 'gatsby';
+import Img, { FluidObject } from 'gatsby-image';
+import styled from '@src/styles/styled-components';
 import { Answer, Karuta, Question } from '@src/types';
-import { toKarutaIdString } from '@src/components/helper';
-import * as correctImage from './check_correct.png';
-import * as incorrectImage from './check_incorrect.png';
+import { toKarutaNoString } from '@src/utils';
 
-export interface QuestionResultsMapProps {
-  readonly questions: Question[];
-  readonly answers: Answer[];
-  readonly style?: React.CSSProperties;
-  readonly onClickResult: (karuta: Karuta) => void;
+export interface Props {
+  questions: Question[];
+  answers: Answer[];
+  style?: React.CSSProperties;
+  onClickResult: (karuta: Karuta) => void;
 }
 
-const Root = withAppTheme(styled.div)`
+interface QueryData {
+  correctImage: {
+    childImageSharp: {
+      fluid: FluidObject;
+    };
+  };
+  incorrectImage: {
+    childImageSharp: {
+      fluid: FluidObject;
+    };
+  };
+}
+
+const Container = styled.div`
   display: flex;
   flex-wrap: wrap;
   background-color: ${({ theme }) => theme.colorThin};
@@ -46,28 +58,47 @@ const CorrentImageBox = styled.span`
   height: 100%;
 `;
 
-const QuestionResultsMap: React.SFC<QuestionResultsMapProps> = ({
-  questions,
-  answers,
-  style,
-  onClickResult
-}) => (
-  <Root style={style}>
-    {questions.map((q, i) => {
-      const onClickCell = () => onClickResult(q.correctKaruta);
-      return (
-        <Cell onClick={onClickCell} key={i} data-test={`question-${q.id}`}>
-          <KarutaNo>{toKarutaIdString(q.correctKaruta.id)}</KarutaNo>
-          <CorrentImageBox>
-            <img
-              src={answers[i].correct ? correctImage : incorrectImage}
-              style={{ width: '80%' }}
-            />
-          </CorrentImageBox>
-        </Cell>
-      );
-    })}
-  </Root>
+const QuestionResultsMap: React.FC<Props> = ({ questions, answers, style, onClickResult }) => (
+  <StaticQuery
+    query={query}
+    render={({ correctImage, incorrectImage }: QueryData) => (
+      <Container style={style}>
+        {questions.map((q, i) => {
+          const onClickCell = () => onClickResult(q.correctKaruta);
+          return (
+            <Cell onClick={onClickCell} key={i} data-test={`question-${q.id}`}>
+              <KarutaNo>{toKarutaNoString(q.correctKaruta.no)}</KarutaNo>
+              <CorrentImageBox>
+                <Img
+                  fluid={answers[i].correct ? correctImage.childImageSharp.fluid : incorrectImage.childImageSharp.fluid}
+                  style={{ width: '80%' }}
+                />
+              </CorrentImageBox>
+            </Cell>
+          );
+        })}
+      </Container>
+    )}
+  />
 );
 
 export default QuestionResultsMap;
+
+const query = graphql`
+  query {
+    correctImage: file(relativePath: { eq: "check_correct.png" }) {
+      childImageSharp {
+        fluid(maxWidth: 300) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+    incorrectImage: file(relativePath: { eq: "check_incorrect.png" }) {
+      childImageSharp {
+        fluid(maxWidth: 300) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+  }
+`;
