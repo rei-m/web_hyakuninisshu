@@ -6,6 +6,7 @@
   "dependencies": {
     "@material-ui/core": "^3.8.1",
     "@material-ui/icons": "^3.0.1",
+    "@wapps/gatsby-plugin-material-ui": "^1.1.0",
     "axios": "^0.18.0",
     "formik": "^1.4.1",
     "gatsby": "^2.0.84",
