@@ -29,7 +29,7 @@ export type Props = OwnProps & DispatchProps;
 
 const TrainingInitializer = ({ onStart }: Props) => <Progress onStart={onStart} />;
 
-const mapDispatchToProps = (
+export const mapDispatchToProps = (
   dispatch: ThunkDispatch<GlobalState, {}, QuestionsActions>,
   { karutas, rangeFrom, rangeTo, kimariji, color, kamiNoKuStyle, shimoNoKuStyle }: OwnProps
 ): DispatchProps => ({

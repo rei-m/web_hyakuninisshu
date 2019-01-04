@@ -80,12 +80,12 @@ const ExamResult = enhance<
           <Container bgImageUrl={examBGImage.publicURL}>
             <Inner>
               <QuestionResultsSummary
-                title={'正解数'}
+                title="正解数"
                 value={`${correctCount} / ${totalCount}`}
                 style={{ marginBottom: 16 }}
               />
               <QuestionResultsSummary
-                title={'平均回答時間'}
+                title="平均回答時間"
                 value={`${averageAnswerSecond}秒`}
                 style={{ marginBottom: 16 }}
               />
@@ -101,7 +101,7 @@ const ExamResult = enhance<
                   icon="refresh"
                   type="normal"
                   onClick={onClickRestart}
-                  data-test="restart"
+                  data-test="restart-training"
                   style={{ margin: appTheme.spacing2x }}
                 />
               )}

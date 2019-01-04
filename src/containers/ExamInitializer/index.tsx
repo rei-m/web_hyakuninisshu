@@ -16,7 +16,7 @@ export type Props = OwnProps & DispatchProps;
 
 const ExamInitializer = ({ onStart }: Props) => <Progress onStart={onStart} />;
 
-const mapDispatchToProps = (
+export const mapDispatchToProps = (
   dispatch: ThunkDispatch<GlobalState, {}, QuestionsActions>,
   { karutas }: OwnProps
 ): DispatchProps => ({

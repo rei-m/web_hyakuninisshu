@@ -39,7 +39,7 @@
     "develop": "gatsby develop",
     "start": "npm run develop",
     "format": "prettier --write \"src/**/*.js\"",
-    "test": "echo \"Write tests! -> https://gatsby.app/unit-testing\"",
+    "test": "jest",
     "test-update": "jest --updateSnapshot",
     "test-cov": "node --max_old_space_size=2048 $(npm bin)/jest --maxWorkers=2 --coverage",
     "lint": "tslint -c tslint.json '{src,__tests__}/**/*.{ts,tsx}'",
@@ -48,15 +48,31 @@
   },
   "devDependencies": {
     "@babel/core": "^7.2.2",
+    "@types/enzyme": "^3.1.15",
+    "@types/enzyme-adapter-react-16": "^1.0.3",
     "@types/graphql": "^14.0.4",
+    "@types/jest": "^23.3.11",
     "@types/react-helmet": "^5.0.8",
     "@types/react-redux": "^6.0.12",
+    "@types/react-test-renderer": "^16.0.3",
+    "@types/react-transition-group": "^2.0.15",
     "@types/recompose": "^0.30.2",
+    "@types/redux-mock-store": "^1.0.0",
     "@types/styled-components": "^4.1.4",
     "@types/typography": "^0.16.1",
+    "babel-core": "^7.0.0-bridge.0",
+    "babel-jest": "^23.6.0",
     "babel-plugin-styled-components": "^1.10.0",
+    "babel-preset-gatsby": "^0.1.6",
+    "enzyme": "^3.8.0",
+    "enzyme-adapter-react-16": "^1.7.1",
+    "identity-obj-proxy": "^3.0.0",
+    "jest": "^23.6.0",
     "prettier": "^1.15.2",
+    "react-test-renderer": "^16.7.0",
+    "redux-mock-store": "^1.5.3",
     "source-map-support": "^0.5.9",
+    "ts-jest": "^23.10.5",
     "ts-node": "^7.0.1",
     "tsconfig-paths": "^3.7.0",
     "tslint": "^5.12.0",
@@ -68,44 +84,5 @@
   "repository": {
     "type": "git",
     "url": "https://github.com/rei-m/web_hyakuninisshu.git"
-  },
-  "jest": {
-    "setupTestFrameworkScriptFile": "<rootDir>/node_modules/jest-enzyme/lib/index.js",
-    "moduleFileExtensions": [
-      "ts",
-      "tsx",
-      "js"
-    ],
-    "transform": {
-      "\\.(ts|tsx)$": "ts-jest",
-      "\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$": "<rootDir>/__mocks__/fileTransformer.js"
-    },
-    "testMatch": [
-      "**/__tests__/**/*.ts?(x)"
-    ],
-    "testPathIgnorePatterns": [
-      "/node_modules/",
-      "/__tests__/factories/",
-      "/__tests__/helpers/"
-    ],
-    "setupFiles": [
-      "./jest.setup.ts"
-    ],
-    "collectCoverage": false,
-    "collectCoverageFrom": [
-      "src/**/*.ts?(x)"
-    ],
-    "coverageDirectory": "./coverage/",
-    "unmockedModulePathPatterns": [
-      "react",
-      "react-dom",
-      "react-redux",
-      "enzyme",
-      "jest-enzyme",
-      "fbjs"
-    ],
-    "moduleNameMapper": {
-      "@src/(.*)": "<rootDir>/src/$1"
-    }
   }
 }
