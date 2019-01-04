@@ -43,6 +43,7 @@ export const plugins: GatsbyPlugin[] = [
   `gatsby-plugin-remove-trailing-slashes`,
   `gatsby-plugin-styled-components`,
   `gatsby-plugin-no-sourcemaps`,
+  `@wapps/gatsby-plugin-material-ui`,
   {
     resolve: `gatsby-plugin-google-analytics`,
     options: {

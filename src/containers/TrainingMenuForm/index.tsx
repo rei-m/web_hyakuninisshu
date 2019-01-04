@@ -3,7 +3,7 @@ import { navigate } from 'gatsby';
 import { connect } from 'react-redux';
 import { withFormik, Form, FormikHandlers, FormikState } from 'formik';
 import { appTheme } from '@src/styles/theme';
-// import SelectRangeFromTo from '@src/components/SelectRangeFromTo';
+import SelectRangeFromTo from '@src/components/SelectRangeFromTo';
 import SelectItem from '@src/components/SelectItem';
 import AppButton from '@src/components/AppButton';
 import {
@@ -50,9 +50,9 @@ const ColorConditionNameList = ColorConditions.values.map(v => toColorConditionS
 
 const KarutaStyleConditionNameList = KarutaStyleConditions.values.map(v => toKarutaStyleConditionString(v));
 
-const FormView = ({ values, handleChange, handleSubmit }: FormViewProps) => (
+const FormView = ({ values, handleChange, handleSubmit, errors, touched }: FormViewProps) => (
   <Form>
-    {/* <SelectRangeFromTo
+    <SelectRangeFromTo
       from={values.rangeFrom}
       to={values.rangeTo}
       fromTouched={touched.rangeFrom}
@@ -60,7 +60,7 @@ const FormView = ({ values, handleChange, handleSubmit }: FormViewProps) => (
       error={errors.rangeFrom}
       handleChange={handleChange}
       style={{ marginBottom: appTheme.spacing2x }}
-    /> */}
+    />
     <SelectItem
       title="決まり字"
       name="kimariji"
