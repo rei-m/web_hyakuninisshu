@@ -3,7 +3,9 @@ import { graphql, StaticQuery } from 'gatsby';
 import { withState } from 'recompose';
 import { Dialog } from '@blueprintjs/core';
 import styled from '@src/styles/styled-components';
+import { appTheme } from '@src/styles/theme';
 import KarutaCard from '@src/components/KarutaCard';
+import AppButton from '@src/components/AppButton';
 import { Karuta } from '@src/types';
 import { toKarutaNoString, toKimarijiString } from '@src/utils';
 
@@ -44,14 +46,6 @@ const NumberAndKimariji = styled.div`
   margin: 0 auto;
   font-size: 1.2rem;
   background-color: #ffffff;
-`;
-
-const OpenDetail = styled.button`
-  position: absolute;
-  top: 0;
-  right: -48px;
-  height: 33px;
-  width: 33px;
 `;
 
 const KarutaFrame = styled.div`
@@ -108,10 +102,6 @@ const Creator = styled.div`
   align-self: flex-end;
 `;
 
-const NextButton = styled.button`
-  margin-top: 32px;
-`;
-
 const enhance = withState<{}, boolean, 'opened', 'setOpened'>('opened', 'setOpened', false);
 
 const QuestionCorrect = enhance<
@@ -137,9 +127,23 @@ const QuestionCorrect = enhance<
             <NumberAndKimariji>
               {toKarutaNoString(karuta.no)} / {toKimarijiString(karuta.kimariji)}
             </NumberAndKimariji>
-            <OpenDetail onClick={onClickOpenDetail} className="bp3-button" data-test="open-detail">
-              詳
-            </OpenDetail>
+            <AppButton
+              label="詳"
+              type="normal"
+              onClick={onClickOpenDetail}
+              style={{
+                padding: 0,
+                minWidth: 33,
+                minHeight: 33,
+                position: 'absolute',
+                top: 0,
+                right: -48,
+                height: 33,
+                width: 33,
+                fontSize: '1.4rem',
+              }}
+              data-test="open-detail"
+            />
           </Header>
           <KarutaFrame>
             <Inner>
@@ -152,21 +156,23 @@ const QuestionCorrect = enhance<
             </Inner>
           </KarutaFrame>
           {isAllAnswered ? (
-            <NextButton
+            <AppButton
+              label="結果を見る"
+              icon="arrow_forward_ios"
+              type="normal"
               onClick={onClickGoToResult}
-              className="bp3-button bp3-large bp3-icon-double-chevron-right"
               data-test="go-to-result"
-            >
-              結果を見る
-            </NextButton>
+              style={{ marginTop: appTheme.spacing4x }}
+            />
           ) : (
-            <NextButton
+            <AppButton
+              label="次へ進む"
+              icon="arrow_forward_ios"
+              type="normal"
               onClick={onClickGoToNext}
-              className="bp3-button bp3-large bp3-icon-double-chevron-right"
               data-test="go-to-next"
-            >
-              次へ進む
-            </NextButton>
+              style={{ marginTop: appTheme.spacing4x }}
+            />
           )}
           <Dialog
             isOpen={opened}

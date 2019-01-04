@@ -1,11 +1,13 @@
+import { appTheme } from '@src/styles/theme';
 import * as React from 'react';
-import { graphql, Link, StaticQuery } from 'gatsby';
 import { withState } from 'recompose';
 import { Dialog } from '@blueprintjs/core';
 import styled from '@src/styles/styled-components';
+import { graphql, navigate, StaticQuery } from 'gatsby';
 import QuestionResultsSummary from '@src/components/QuestionResultsSummary';
 import QuestionResultsMap from '@src/components/QuestionResultsMap';
 import KarutaCard from '@src/components/KarutaCard';
+import AppButton from '../AppButton';
 import { Answer, Karuta, Question } from '@src/types';
 
 export interface Props {
@@ -38,15 +40,15 @@ const Inner = styled.div`
   margin: auto;
 `;
 
-const Button = styled.button`
-  margin: ${({ theme }) => theme.spacing2x};
-`;
-
 const enhance = withState<{}, Karuta | undefined, 'displayedKaruta', 'setDisplayedKaruta'>(
   'displayedKaruta',
   'setDisplayedKaruta',
   undefined
 );
+
+const onClickBack = () => {
+  navigate('/exam', { replace: true });
+};
 
 const ExamResult = enhance<
   Props & {
@@ -95,19 +97,22 @@ const ExamResult = enhance<
                 style={{ marginBottom: 16 }}
               />
               {correctCount !== totalCount && (
-                <Button
+                <AppButton
+                  label="間違えた歌の練習をする"
+                  icon="refresh"
+                  type="normal"
                   onClick={onClickRestart}
-                  className="bp3-button bp3-large bp3-icon-repeat"
-                  data-test="restart-training"
-                >
-                  間違えた歌の練習をする
-                </Button>
+                  data-test="restart"
+                  style={{ margin: appTheme.spacing2x }}
+                />
               )}
-              <Link to="/exam" replace={true}>
-                <Button className="bp3-button bp3-large bp3-icon-undo" style={{ marginTop: 0 }}>
-                  メニューに戻る
-                </Button>
-              </Link>
+              <AppButton
+                label="メニューに戻る"
+                icon="arrow_back"
+                type="normal"
+                onClick={onClickBack}
+                data-test="back"
+              />
             </Inner>
             <Dialog
               isOpen={!!displayedKaruta}

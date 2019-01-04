@@ -1,10 +1,12 @@
 import * as React from 'react';
 import { navigate } from 'gatsby';
 import styled from '@src/styles/styled-components';
+import { appTheme } from '@src/styles/theme';
 import Layout from '@src/components/Layout';
 import SEO from '@src/components/SEO';
 import ErrorBoundary from '@src/components/ErrorBoundary';
 import PageTitle from '@src/components/PageTitle';
+import AppButton from '@src/components/AppButton';
 import { MenuType } from '@src/enums';
 import { ROUTE_PATHS } from '@src/constants';
 
@@ -17,17 +19,6 @@ const Container = styled.section`
 
 const Explain = styled.div`
   margin: ${({ theme }) => `${theme.spacing4x} ${theme.spacing2x}`};
-`;
-
-const StartButton = styled.button`
-  margin-top: ${({ theme }) => theme.spacing4x};
-  background-color: ${({ theme }) => theme.colorAccent} !important;
-  &:active {
-    background-color: ${({ theme }) => theme.colorAccentActive} !important;
-  }
-  &:hover {
-    background-color: ${({ theme }) => theme.colorAccentHover} !important;
-  }
 `;
 
 const onSubmit = () => {
@@ -66,14 +57,13 @@ const ExamPage: React.FC<{}> = () => {
             <br />
             練習の成果を確認しましょう。
           </Explain>
-          <StartButton
-            type="submit"
-            className="bp3-button bp3-intent-primary bp3-large bp3-icon-edit"
+          <AppButton
+            label="腕試しをはじめる"
+            icon="edit"
+            type="primary"
             onClick={onSubmit}
-            data-test="start-exam-button"
-          >
-            腕試しをはじめる
-          </StartButton>
+            style={{ marginTop: appTheme.spacing4x }}
+          />
         </Container>
       </Layout>
     </ErrorBoundary>

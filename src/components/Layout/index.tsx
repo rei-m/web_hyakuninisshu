@@ -4,8 +4,6 @@ import Header from '@src/components/Header';
 import Navigation from '@src/components/Navigation';
 import { MenuType } from '@src/enums';
 
-import '@blueprintjs/icons/lib/css/blueprint-icons.css';
-
 export interface Props {
   title: string;
   canBack: boolean;

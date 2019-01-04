@@ -1,9 +1,11 @@
 import * as React from 'react';
 import { navigate } from 'gatsby';
+import { connect } from 'react-redux';
 import { withFormik, Form, FormikHandlers, FormikState } from 'formik';
-import styled from '@src/styles/styled-components';
+import { appTheme } from '@src/styles/theme';
 import SelectRangeFromTo from '@src/components/SelectRangeFromTo';
 import SelectItem from '@src/components/SelectItem';
+import AppButton from '@src/components/AppButton';
 import {
   ColorCondition,
   ColorConditions,
@@ -19,7 +21,6 @@ import {
 import { toColorConditionString, toKarutaStyleConditionString, toKimarijiConditionString } from '@src/utils';
 import { GlobalState } from '@src/state';
 import { ROUTE_PATHS } from '@src/constants';
-import { connect } from 'react-redux';
 
 export interface ConnectedProps {
   initialRangeFrom: RangeFromCondition;
@@ -43,24 +44,13 @@ export interface FormValues {
 
 export type FormViewProps = FormikState<FormValues> & FormikHandlers;
 
-const StartButton = styled.button`
-  margin-top: ${({ theme }) => theme.spacing4x};
-  background-color: ${({ theme }) => theme.colorAccent} !important;
-  &:active {
-    background-color: ${({ theme }) => theme.colorAccentActive} !important;
-  }
-  &:hover {
-    background-color: ${({ theme }) => theme.colorAccentHover} !important;
-  }
-`;
-
 const KimarijiConditionNameList = KimarijiConditions.values.map(v => toKimarijiConditionString(v));
 
 const ColorConditionNameList = ColorConditions.values.map(v => toColorConditionString(v));
 
 const KarutaStyleConditionNameList = KarutaStyleConditions.values.map(v => toKarutaStyleConditionString(v));
 
-const FormView = ({ values, handleChange, errors, touched }: FormViewProps) => (
+const FormView = ({ values, handleChange, handleSubmit, errors, touched }: FormViewProps) => (
   <Form>
     <SelectRangeFromTo
       from={values.rangeFrom}
@@ -102,9 +92,13 @@ const FormView = ({ values, handleChange, errors, touched }: FormViewProps) => (
       nameList={KarutaStyleConditionNameList}
       handleChange={handleChange}
     />
-    <StartButton type="submit" className="bp3-button bp3-intent-primary bp3-large bp3-icon-edit">
-      練習をはじめる
-    </StartButton>
+    <AppButton
+      label="練習をはじめる"
+      icon="edit"
+      type="primary"
+      onClick={handleSubmit}
+      style={{ marginTop: appTheme.spacing4x }}
+    />
   </Form>
 );
 

@@ -1,8 +1,9 @@
 import * as React from 'react';
-import { graphql, Link, StaticQuery } from 'gatsby';
+import { graphql, navigate, StaticQuery } from 'gatsby';
 import styled from '@src/styles/styled-components';
-import QuestionResultsSummary from '@src/components/QuestionResultsSummary';
 import { appTheme } from '@src/styles/theme';
+import QuestionResultsSummary from '@src/components/QuestionResultsSummary';
+import AppButton from '@src/components/AppButton';
 
 export interface Props {
   totalCount: number;
@@ -32,9 +33,9 @@ const Inner = styled.div`
   margin: auto;
 `;
 
-const Button = styled.button`
-  margin: ${({ theme }) => theme.spacing2x};
-`;
+const onClickBack = () => {
+  navigate('/training', { replace: true });
+};
 
 const QuestionsResult: React.FC<Props> = ({ averageAnswerSecond, correctCount, totalCount, onClickRestart }) => (
   <StaticQuery
@@ -53,15 +54,16 @@ const QuestionsResult: React.FC<Props> = ({ averageAnswerSecond, correctCount, t
             style={{ marginBottom: appTheme.spacing2x }}
           />
           {correctCount !== totalCount && (
-            <Button onClick={onClickRestart} className="bp3-button bp3-large bp3-icon-repeat" data-test="restart">
-              間違えた歌の練習をする
-            </Button>
+            <AppButton
+              label="間違えた歌の練習をする"
+              icon="refresh"
+              type="normal"
+              onClick={onClickRestart}
+              data-test="restart"
+              style={{ margin: appTheme.spacing2x }}
+            />
           )}
-          <Link to="/training" replace={true}>
-            <Button className="bp3-button bp3-large bp3-icon-undo" style={{ marginTop: 0 }}>
-              メニューに戻る
-            </Button>
-          </Link>
+          <AppButton label="メニューに戻る" icon="arrow_back" type="normal" onClick={onClickBack} data-test="back" />
         </Inner>
       </Container>
     )}
