@@ -13,7 +13,6 @@ const Container = styled.article`
   flex-direction: column;
   align-items: center;
   max-width: 380px;
-  width: 80vw;
   box-shadow: ${({ theme }) => theme.elevationShadow1x};
   background-color: #fff;
   box-sizing: border-box;

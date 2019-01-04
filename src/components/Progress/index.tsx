@@ -1,7 +1,8 @@
 import * as React from 'react';
 import { lifecycle } from 'recompose';
-import { Classes, Spinner } from '@blueprintjs/core';
+import CircularProgress from '@material-ui/core/CircularProgress';
 import styled from '@src/styles/styled-components';
+import { appTheme } from '@src/styles/theme';
 
 export interface Props {
   onStart: () => void;
@@ -25,7 +26,7 @@ const Message = styled.div`
 
 const Progress: React.FC<Props> = () => (
   <Container>
-    <Spinner className={Classes.LARGE} />
+    <CircularProgress style={{ color: appTheme.colorPrimaryDark, width: 64, height: 64 }} />
     <Message>　　　百人一首 準備中。。。</Message>
   </Container>
 );

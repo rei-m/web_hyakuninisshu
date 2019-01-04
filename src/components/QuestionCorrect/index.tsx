@@ -1,10 +1,9 @@
 import * as React from 'react';
 import { graphql, StaticQuery } from 'gatsby';
 import { withState } from 'recompose';
-import { Dialog } from '@blueprintjs/core';
 import styled from '@src/styles/styled-components';
 import { appTheme } from '@src/styles/theme';
-import KarutaCard from '@src/components/KarutaCard';
+import KarutaCardDialog from '@src/components/KarutaCardDialog';
 import AppButton from '@src/components/AppButton';
 import { Karuta } from '@src/types';
 import { toKarutaNoString, toKimarijiString } from '@src/utils';
@@ -174,18 +173,7 @@ const QuestionCorrect = enhance<
               style={{ marginTop: appTheme.spacing4x }}
             />
           )}
-          <Dialog
-            isOpen={opened}
-            onClose={onCloseDialog}
-            title="正解"
-            style={{
-              maxWidth: 380,
-              padding: 0,
-              width: '80vw',
-            }}
-          >
-            <KarutaCard karuta={karuta} />
-          </Dialog>
+          <KarutaCardDialog open={opened} onClose={onCloseDialog} karuta={karuta} />
         </Container>
       )}
     />

@@ -1,12 +1,11 @@
-import { appTheme } from '@src/styles/theme';
 import * as React from 'react';
-import { withState } from 'recompose';
-import { Dialog } from '@blueprintjs/core';
-import styled from '@src/styles/styled-components';
 import { graphql, navigate, StaticQuery } from 'gatsby';
+import { withState } from 'recompose';
+import styled from '@src/styles/styled-components';
+import { appTheme } from '@src/styles/theme';
 import QuestionResultsSummary from '@src/components/QuestionResultsSummary';
 import QuestionResultsMap from '@src/components/QuestionResultsMap';
-import KarutaCard from '@src/components/KarutaCard';
+import KarutaCardDialog from '@src/components/KarutaCardDialog';
 import AppButton from '../AppButton';
 import { Answer, Karuta, Question } from '@src/types';
 
@@ -114,18 +113,7 @@ const ExamResult = enhance<
                 data-test="back"
               />
             </Inner>
-            <Dialog
-              isOpen={!!displayedKaruta}
-              onClose={onCloseDialog}
-              title="正解"
-              style={{
-                maxWidth: 380,
-                padding: 0,
-                width: '80vw',
-              }}
-            >
-              {displayedKaruta && <KarutaCard karuta={displayedKaruta} />}
-            </Dialog>
+            <KarutaCardDialog open={!!displayedKaruta} onClose={onCloseDialog} karuta={displayedKaruta} />
           </Container>
         )}
       />
