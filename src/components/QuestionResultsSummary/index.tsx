@@ -1,14 +1,13 @@
 import * as React from 'react';
-import styled from 'styled-components';
-import { withAppTheme } from '@src/styles';
+import styled from '@src/styles/styled-components';
 
-export interface QuestionResultsSummaryProps {
-  readonly title: string;
-  readonly value: string;
-  readonly style?: React.CSSProperties;
+export interface Props {
+  title: string;
+  value: string;
+  style?: React.CSSProperties;
 }
 
-const Root = withAppTheme(styled.div)`
+const Container = styled.div`
   background-color: ${({ theme }) => theme.colorThin};
   box-sizing: border-box;
   padding: ${({ theme }) => theme.spacing1x};
@@ -25,15 +24,11 @@ const Value = styled.div`
   font-size: 2.8rem;
 `;
 
-const QuestionResultsSummary: React.SFC<QuestionResultsSummaryProps> = ({
-  title,
-  value,
-  style
-}) => (
-  <Root style={style}>
+const QuestionResultsSummary: React.FC<Props> = ({ title, value, style }) => (
+  <Container style={style}>
     <Title>{title}</Title>
     <Value>{value}</Value>
-  </Root>
+  </Container>
 );
 
 export default QuestionResultsSummary;

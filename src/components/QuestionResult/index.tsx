@@ -1,15 +1,28 @@
 import * as React from 'react';
-import styled from 'styled-components';
+import { graphql, StaticQuery } from 'gatsby';
+import Img, { FluidObject } from 'gatsby-image';
+import styled from '@src/styles/styled-components';
 import { Answer } from '@src/types';
-import * as correctImage from './check_correct.png';
-import * as incorrectImage from './check_incorrect.png';
 
-export interface QuestionResultProps {
-  readonly answer: Answer;
-  readonly onClick: () => void;
+export interface Props {
+  answer: Answer;
+  onClick: () => void;
 }
 
-const Frame = styled.div`
+interface QueryData {
+  correctImage: {
+    childImageSharp: {
+      fluid: FluidObject;
+    };
+  };
+  incorrectImage: {
+    childImageSharp: {
+      fluid: FluidObject;
+    };
+  };
+}
+
+const Container = styled.div`
   background-color: transparent;
   position: absolute;
   left: 0;
@@ -21,22 +34,43 @@ const Frame = styled.div`
   justify-content: center;
 `;
 
-const Image = styled.img`
+const Image = styled(Img)`
   width: 300px;
   height: 300px;
 `;
 
-const QuestionResult: React.SFC<QuestionResultProps> = ({
-  answer,
-  onClick
-}) => (
-  <Frame onClick={onClick}>
-    {answer.correct ? (
-      <Image src={correctImage} />
-    ) : (
-      <Image src={incorrectImage} />
+const QuestionResult: React.FC<Props> = ({ answer, onClick }) => (
+  <StaticQuery
+    query={query}
+    render={({ correctImage, incorrectImage }: QueryData) => (
+      <Container onClick={onClick}>
+        {answer.correct ? (
+          <Image fluid={correctImage.childImageSharp.fluid} />
+        ) : (
+          <Image fluid={incorrectImage.childImageSharp.fluid} />
+        )}
+      </Container>
     )}
-  </Frame>
+  />
 );
 
 export default QuestionResult;
+
+const query = graphql`
+  query {
+    correctImage: file(relativePath: { eq: "check_correct.png" }) {
+      childImageSharp {
+        fluid(maxWidth: 300) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+    incorrectImage: file(relativePath: { eq: "check_incorrect.png" }) {
+      childImageSharp {
+        fluid(maxWidth: 300) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+  }
+`;

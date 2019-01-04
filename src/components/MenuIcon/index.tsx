@@ -1,10 +1,10 @@
 import * as React from 'react';
-import styled from 'styled-components';
+import styled from '@src/styles/styled-components';
 import { MenuType } from '@src/enums';
 import { menuTypeToIcon } from '@src/utils';
 
-export interface MenuIconProps {
-  readonly iconType: MenuType;
+export interface Props {
+  iconType: MenuType;
 }
 
 const Icon = styled.i`
@@ -18,8 +18,6 @@ const Icon = styled.i`
   text-align: center;
 `;
 
-const MenuIcon: React.SFC<MenuIconProps> = ({ iconType }) => (
-  <Icon className="material-icons">{menuTypeToIcon(iconType)}</Icon>
-);
+const MenuIcon: React.FC<Props> = ({ iconType }) => <Icon className="material-icons">{menuTypeToIcon(iconType)}</Icon>;
 
 export default MenuIcon;

@@ -4,22 +4,63 @@ exports[`<ErrorBoundary /> should render children 1`] = `"test"`;
 
 exports[`<ErrorBoundary /> should render error 1`] = `
 <div
-  className="sc-bwzfXH bTlVnA"
+  className="sc-bdVaJa iraTCn"
 >
   <div
-    className="sc-htpNat fSNmNw"
+    className="sc-bwzfXH jkGOsS"
   >
     予期せぬエラーが発生しました。時間をおいて再度お試しください。
   </div>
-  <img
-    alt="エラーが起きました"
-    className="sc-bdVaJa dxKQNh"
-    src="dogeza_businessman.png"
+  <div
+    className=" gatsby-image-wrapper"
     style={
       Object {
         "marginTop": "32px",
+        "overflow": "hidden",
+        "position": "relative",
+        "width": 200,
       }
     }
-  />
+  >
+    <div
+      style={
+        Object {
+          "paddingBottom": "100%",
+          "width": "100%",
+        }
+      }
+    />
+    <picture>
+      <source
+        sizes="100 200 300"
+        srcSet="asdfasdf"
+      />
+      <img
+        alt="エラーが起きました"
+        onLoad={[Function]}
+        src="dogeza-base64-encoded-image"
+        style={
+          Object {
+            "height": "100%",
+            "left": 0,
+            "objectFit": "cover",
+            "objectPosition": "center",
+            "opacity": 0,
+            "position": "absolute",
+            "top": 0,
+            "transition": "opacity 0.5s",
+            "width": "100%",
+          }
+        }
+      />
+    </picture>
+    <noscript
+      dangerouslySetInnerHTML={
+        Object {
+          "__html": "<picture><source srcSet=\\"asdfasdf\\" sizes=\\"100 200 300\\" /><img src=\\"dogeza-base64-encoded-image\\" alt=\\"エラーが起きました\\" style=\\"position:absolute;top:0;left:0;transition:opacity 0.5s;transition-delay:0.5s;opacity:1;width:100%;height:100%;object-fit:cover;object-position:center\\"/></picture>",
+        }
+      }
+    />
+  </div>
 </div>
 `;

@@ -1,52 +1,44 @@
 import * as React from 'react';
 import { connect } from 'react-redux';
 import { ThunkDispatch } from 'redux-thunk';
-import { ThunkExtra } from '@src/store';
-import { withRouter, RouteComponentProps } from 'react-router-dom';
-import { GlobalState } from '@src/reducers';
+import Progress, { Props as ProgressProps } from '@src/components/Progress';
 import { startTraining, QuestionsActions } from '@src/actions/questions';
-import Progress, { ProgressProps } from '@src/components/Progress';
+import {
+  ColorCondition,
+  KarutaStyleCondition,
+  KimarijiCondition,
+  RangeFromCondition,
+  RangeToCondition,
+} from '@src/enums';
+import { Karuta } from '@src/types';
+import { GlobalState } from '@src/state';
 
-export type TrainingInitializerOwnProps = RouteComponentProps<{}>;
+export interface OwnProps {
+  karutas: Karuta[];
+  rangeFrom: RangeFromCondition;
+  rangeTo: RangeToCondition;
+  kimariji: KimarijiCondition;
+  color: ColorCondition;
+  kamiNoKuStyle: KarutaStyleCondition;
+  shimoNoKuStyle: KarutaStyleCondition;
+}
 
-export type TrainingInitializerDispatchProps = Pick<ProgressProps, 'onStart'>;
+export type DispatchProps = Pick<ProgressProps, 'onStart'>;
 
-export type TrainingInitializerProps = TrainingInitializerOwnProps &
-  TrainingInitializerDispatchProps;
+export type Props = OwnProps & DispatchProps;
 
-const TrainingInitializer = (props: TrainingInitializerProps) => (
-  <Progress onStart={props.onStart} />
-);
+const TrainingInitializer = ({ onStart }: Props) => <Progress onStart={onStart} />;
 
-const mapDispatchToProps = (
-  dispatch: ThunkDispatch<GlobalState, ThunkExtra, QuestionsActions>,
-  props: TrainingInitializerOwnProps
-): TrainingInitializerDispatchProps => ({
+export const mapDispatchToProps = (
+  dispatch: ThunkDispatch<GlobalState, {}, QuestionsActions>,
+  { karutas, rangeFrom, rangeTo, kimariji, color, kamiNoKuStyle, shimoNoKuStyle }: OwnProps
+): DispatchProps => ({
   onStart: () => {
-    const {
-      rangeFrom,
-      rangeTo,
-      kimariji,
-      color,
-      kamiNoKuStyle,
-      shimoNoKuStyle
-    } = props.location.state;
-    dispatch(
-      startTraining(
-        rangeFrom,
-        rangeTo,
-        kimariji,
-        color,
-        kamiNoKuStyle,
-        shimoNoKuStyle
-      )
-    );
-  }
+    dispatch(startTraining(karutas, rangeFrom, rangeTo, kimariji, color, kamiNoKuStyle, shimoNoKuStyle));
+  },
 });
 
-export default withRouter(
-  connect(
-    undefined,
-    mapDispatchToProps
-  )(TrainingInitializer)
-);
+export default connect(
+  undefined,
+  mapDispatchToProps
+)(TrainingInitializer);

@@ -8,14 +8,14 @@ export enum MenuType {
   Training,
   Exam,
   Material,
-  Other
+  Other,
 }
 
 export enum QuestionState {
   InAnswer,
   Answered,
   ConfirmCorrect,
-  Finished
+  Finished,
 }
 
 export enum RangeFromCondition {
@@ -28,7 +28,7 @@ export enum RangeFromCondition {
   SixtyOne = 61,
   SeventyOne = 71,
   EightyOne = 81,
-  NinetyOne = 91
+  NinetyOne = 91,
 }
 
 export const RangeFromConditions: EnumCollection<RangeFromCondition> = {
@@ -49,8 +49,8 @@ export const RangeFromConditions: EnumCollection<RangeFromCondition> = {
     RangeFromCondition.SixtyOne,
     RangeFromCondition.SeventyOne,
     RangeFromCondition.EightyOne,
-    RangeFromCondition.NinetyOne
-  ]
+    RangeFromCondition.NinetyOne,
+  ],
 };
 
 export enum RangeToCondition {
@@ -63,7 +63,7 @@ export enum RangeToCondition {
   Seventy = 70,
   Eighty = 80,
   Ninety = 90,
-  OneHundred = 100
+  OneHundred = 100,
 }
 
 export const RangeToConditions: EnumCollection<RangeToCondition> = {
@@ -84,8 +84,8 @@ export const RangeToConditions: EnumCollection<RangeToCondition> = {
     RangeToCondition.Seventy,
     RangeToCondition.Eighty,
     RangeToCondition.Ninety,
-    RangeToCondition.OneHundred
-  ]
+    RangeToCondition.OneHundred,
+  ],
 };
 
 export enum KimarijiCondition {
@@ -95,7 +95,7 @@ export enum KimarijiCondition {
   Three = 3,
   Four = 4,
   Five = 5,
-  Six = 6
+  Six = 6,
 }
 
 export const KimarijiConditions: EnumCollection<KimarijiCondition> = {
@@ -113,17 +113,17 @@ export const KimarijiConditions: EnumCollection<KimarijiCondition> = {
     KimarijiCondition.Three,
     KimarijiCondition.Four,
     KimarijiCondition.Five,
-    KimarijiCondition.Six
-  ]
+    KimarijiCondition.Six,
+  ],
 };
 
 export enum ColorCondition {
-  None = '',
+  None = 'none',
   Blue = 'blue',
   Pink = 'pink',
   Yellow = 'yellow',
   Green = 'green',
-  Orange = 'orange'
+  Orange = 'orange',
 }
 
 export const ColorConditions: EnumCollection<ColorCondition> = {
@@ -140,13 +140,13 @@ export const ColorConditions: EnumCollection<ColorCondition> = {
     ColorCondition.Pink,
     ColorCondition.Yellow,
     ColorCondition.Green,
-    ColorCondition.Orange
-  ]
+    ColorCondition.Orange,
+  ],
 };
 
 export enum KarutaStyleCondition {
   KanjiAndKana = 0,
-  KanaOnly = 1
+  KanaOnly = 1,
 }
 
 export const KarutaStyleConditions: EnumCollection<KarutaStyleCondition> = {
@@ -157,5 +157,5 @@ export const KarutaStyleConditions: EnumCollection<KarutaStyleCondition> = {
     }
     throw new Error(`unknown KarutaStyle, value is ${value}`);
   },
-  values: [KarutaStyleCondition.KanjiAndKana, KarutaStyleCondition.KanaOnly]
+  values: [KarutaStyleCondition.KanjiAndKana, KarutaStyleCondition.KanaOnly],
 };

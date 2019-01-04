@@ -2,13 +2,13 @@
 
 exports[`<ExamResult /> should render component when correct all 1`] = `
 <div
-  className="sc-jTzLTM dfLKYC"
+  className="sc-VigVT fZhaCv"
 >
   <div
-    className="sc-fjdhpX gcrVJE"
+    className="sc-jTzLTM cNIXDH"
   >
     <div
-      className="sc-bwzfXH lOjaS"
+      className="sc-bdVaJa jXieMO"
       style={
         Object {
           "marginBottom": 16,
@@ -16,18 +16,18 @@ exports[`<ExamResult /> should render component when correct all 1`] = `
       }
     >
       <div
-        className="sc-htpNat fCqHKh"
+        className="sc-bwzfXH ijMQBI"
       >
         正解数
       </div>
       <div
-        className="sc-bxivhb dTntfs"
+        className="sc-htpNat hHyKqi"
       >
         3 / 3
       </div>
     </div>
     <div
-      className="sc-bwzfXH lOjaS"
+      className="sc-bdVaJa jXieMO"
       style={
         Object {
           "marginBottom": 16,
@@ -35,18 +35,18 @@ exports[`<ExamResult /> should render component when correct all 1`] = `
       }
     >
       <div
-        className="sc-htpNat fCqHKh"
+        className="sc-bwzfXH ijMQBI"
       >
         平均回答時間
       </div>
       <div
-        className="sc-bxivhb dTntfs"
+        className="sc-htpNat hHyKqi"
       >
         3.5秒
       </div>
     </div>
     <div
-      className="sc-ifAKCX jmhkWb"
+      className="sc-bxivhb jtTCMI"
       style={
         Object {
           "marginBottom": 16,
@@ -54,103 +54,247 @@ exports[`<ExamResult /> should render component when correct all 1`] = `
       }
     >
       <div
-        className="sc-EHOje eapnbc"
+        className="sc-ifAKCX dIsoRQ"
         data-test="question-1"
         onClick={[Function]}
       >
         <span
-          className="sc-bZQynM eIYJdI"
+          className="sc-EHOje jUGYtC"
         >
           一番
         </span>
         <span
-          className="sc-gzVnrw MJqTB"
+          className="sc-bZQynM gjRLta"
         >
-          <img
-            src="check_correct.png"
+          <div
+            className=" gatsby-image-wrapper"
             style={
               Object {
+                "overflow": "hidden",
+                "position": "relative",
                 "width": "80%",
               }
             }
-          />
+          >
+            <div
+              style={
+                Object {
+                  "paddingBottom": "100%",
+                  "width": "100%",
+                }
+              }
+            />
+            <picture>
+              <source
+                sizes="100 200 300"
+                srcSet="asdfasdf"
+              />
+              <img
+                alt=""
+                onLoad={[Function]}
+                src="correct-base64-encoded-image"
+                style={
+                  Object {
+                    "height": "100%",
+                    "left": 0,
+                    "objectFit": "cover",
+                    "objectPosition": "center",
+                    "opacity": 0,
+                    "position": "absolute",
+                    "top": 0,
+                    "transition": "opacity 0.5s",
+                    "width": "100%",
+                  }
+                }
+              />
+            </picture>
+            <noscript
+              dangerouslySetInnerHTML={
+                Object {
+                  "__html": "<picture><source srcSet=\\"asdfasdf\\" sizes=\\"100 200 300\\" /><img src=\\"correct-base64-encoded-image\\" alt=\\"\\" style=\\"position:absolute;top:0;left:0;transition:opacity 0.5s;transition-delay:0.5s;opacity:1;width:100%;height:100%;object-fit:cover;object-position:center\\"/></picture>",
+                }
+              }
+            />
+          </div>
         </span>
       </div>
       <div
-        className="sc-EHOje eapnbc"
+        className="sc-ifAKCX dIsoRQ"
         data-test="question-2"
         onClick={[Function]}
       >
         <span
-          className="sc-bZQynM eIYJdI"
+          className="sc-EHOje jUGYtC"
         >
           一番
         </span>
         <span
-          className="sc-gzVnrw MJqTB"
+          className="sc-bZQynM gjRLta"
         >
-          <img
-            src="check_correct.png"
+          <div
+            className=" gatsby-image-wrapper"
             style={
               Object {
+                "overflow": "hidden",
+                "position": "relative",
                 "width": "80%",
               }
             }
-          />
+          >
+            <div
+              style={
+                Object {
+                  "paddingBottom": "100%",
+                  "width": "100%",
+                }
+              }
+            />
+            <picture>
+              <source
+                sizes="100 200 300"
+                srcSet="asdfasdf"
+              />
+              <img
+                alt=""
+                onLoad={[Function]}
+                src="correct-base64-encoded-image"
+                style={
+                  Object {
+                    "height": "100%",
+                    "left": 0,
+                    "objectFit": "cover",
+                    "objectPosition": "center",
+                    "opacity": 0,
+                    "position": "absolute",
+                    "top": 0,
+                    "transition": "opacity 0.5s",
+                    "width": "100%",
+                  }
+                }
+              />
+            </picture>
+            <noscript
+              dangerouslySetInnerHTML={
+                Object {
+                  "__html": "<picture><source srcSet=\\"asdfasdf\\" sizes=\\"100 200 300\\" /><img src=\\"correct-base64-encoded-image\\" alt=\\"\\" style=\\"position:absolute;top:0;left:0;transition:opacity 0.5s;transition-delay:0.5s;opacity:1;width:100%;height:100%;object-fit:cover;object-position:center\\"/></picture>",
+                }
+              }
+            />
+          </div>
         </span>
       </div>
       <div
-        className="sc-EHOje eapnbc"
+        className="sc-ifAKCX dIsoRQ"
         data-test="question-3"
         onClick={[Function]}
       >
         <span
-          className="sc-bZQynM eIYJdI"
+          className="sc-EHOje jUGYtC"
         >
           一番
         </span>
         <span
-          className="sc-gzVnrw MJqTB"
+          className="sc-bZQynM gjRLta"
         >
-          <img
-            src="check_correct.png"
+          <div
+            className=" gatsby-image-wrapper"
             style={
               Object {
+                "overflow": "hidden",
+                "position": "relative",
                 "width": "80%",
               }
             }
-          />
+          >
+            <div
+              style={
+                Object {
+                  "paddingBottom": "100%",
+                  "width": "100%",
+                }
+              }
+            />
+            <picture>
+              <source
+                sizes="100 200 300"
+                srcSet="asdfasdf"
+              />
+              <img
+                alt=""
+                onLoad={[Function]}
+                src="correct-base64-encoded-image"
+                style={
+                  Object {
+                    "height": "100%",
+                    "left": 0,
+                    "objectFit": "cover",
+                    "objectPosition": "center",
+                    "opacity": 0,
+                    "position": "absolute",
+                    "top": 0,
+                    "transition": "opacity 0.5s",
+                    "width": "100%",
+                  }
+                }
+              />
+            </picture>
+            <noscript
+              dangerouslySetInnerHTML={
+                Object {
+                  "__html": "<picture><source srcSet=\\"asdfasdf\\" sizes=\\"100 200 300\\" /><img src=\\"correct-base64-encoded-image\\" alt=\\"\\" style=\\"position:absolute;top:0;left:0;transition:opacity 0.5s;transition-delay:0.5s;opacity:1;width:100%;height:100%;object-fit:cover;object-position:center\\"/></picture>",
+                }
+              }
+            />
+          </div>
         </span>
       </div>
     </div>
-    <a
-      href="/exam"
+    <button
+      className="MuiButtonBase-root-32 MuiButton-root-6 MuiButton-outlined-14 Component-button-1 Component-normalButton-2"
+      disabled={false}
+      onBlur={[Function]}
       onClick={[Function]}
+      onContextMenu={[Function]}
+      onFocus={[Function]}
+      onKeyDown={[Function]}
+      onKeyUp={[Function]}
+      onMouseDown={[Function]}
+      onMouseLeave={[Function]}
+      onMouseUp={[Function]}
+      onTouchEnd={[Function]}
+      onTouchMove={[Function]}
+      onTouchStart={[Function]}
+      tabIndex="0"
+      type="button"
     >
-      <button
-        className="bp3-button bp3-large bp3-icon-undo sc-jzJRlG hkqcLA"
-        style={
-          Object {
-            "marginTop": 0,
-          }
-        }
+      <span
+        className="MuiButton-label-7"
       >
+        <span
+          aria-hidden="true"
+          className="material-icons MuiIcon-root-35 MuiIcon-fontSizeSmall-42 Component-normalIcon-4"
+        >
+          arrow_back
+        </span>
         メニューに戻る
-      </button>
-    </a>
+      </span>
+      <span
+        className="MuiTouchRipple-root-60"
+      />
+    </button>
   </div>
 </div>
 `;
 
 exports[`<ExamResult /> should render component when wrong 1`] = `
 <div
-  className="sc-jTzLTM dfLKYC"
+  className="sc-VigVT fZhaCv"
 >
   <div
-    className="sc-fjdhpX gcrVJE"
+    className="sc-jTzLTM cNIXDH"
   >
     <div
-      className="sc-bwzfXH lOjaS"
+      className="sc-bdVaJa jXieMO"
       style={
         Object {
           "marginBottom": 16,
@@ -158,18 +302,18 @@ exports[`<ExamResult /> should render component when wrong 1`] = `
       }
     >
       <div
-        className="sc-htpNat fCqHKh"
+        className="sc-bwzfXH ijMQBI"
       >
         正解数
       </div>
       <div
-        className="sc-bxivhb dTntfs"
+        className="sc-htpNat hHyKqi"
       >
         2 / 3
       </div>
     </div>
     <div
-      className="sc-bwzfXH lOjaS"
+      className="sc-bdVaJa jXieMO"
       style={
         Object {
           "marginBottom": 16,
@@ -177,18 +321,18 @@ exports[`<ExamResult /> should render component when wrong 1`] = `
       }
     >
       <div
-        className="sc-htpNat fCqHKh"
+        className="sc-bwzfXH ijMQBI"
       >
         平均回答時間
       </div>
       <div
-        className="sc-bxivhb dTntfs"
+        className="sc-htpNat hHyKqi"
       >
         3.5秒
       </div>
     </div>
     <div
-      className="sc-ifAKCX jmhkWb"
+      className="sc-bxivhb jtTCMI"
       style={
         Object {
           "marginBottom": 16,
@@ -196,97 +340,272 @@ exports[`<ExamResult /> should render component when wrong 1`] = `
       }
     >
       <div
-        className="sc-EHOje eapnbc"
+        className="sc-ifAKCX dIsoRQ"
         data-test="question-1"
         onClick={[Function]}
       >
         <span
-          className="sc-bZQynM eIYJdI"
+          className="sc-EHOje jUGYtC"
         >
           一番
         </span>
         <span
-          className="sc-gzVnrw MJqTB"
+          className="sc-bZQynM gjRLta"
         >
-          <img
-            src="check_correct.png"
+          <div
+            className=" gatsby-image-wrapper"
             style={
               Object {
+                "overflow": "hidden",
+                "position": "relative",
                 "width": "80%",
               }
             }
-          />
+          >
+            <div
+              style={
+                Object {
+                  "paddingBottom": "100%",
+                  "width": "100%",
+                }
+              }
+            />
+            <picture>
+              <source
+                sizes="100 200 300"
+                srcSet="asdfasdf"
+              />
+              <img
+                alt=""
+                onLoad={[Function]}
+                src="correct-base64-encoded-image"
+                style={
+                  Object {
+                    "height": "100%",
+                    "left": 0,
+                    "objectFit": "cover",
+                    "objectPosition": "center",
+                    "opacity": 0,
+                    "position": "absolute",
+                    "top": 0,
+                    "transition": "opacity 0.5s",
+                    "width": "100%",
+                  }
+                }
+              />
+            </picture>
+            <noscript
+              dangerouslySetInnerHTML={
+                Object {
+                  "__html": "<picture><source srcSet=\\"asdfasdf\\" sizes=\\"100 200 300\\" /><img src=\\"correct-base64-encoded-image\\" alt=\\"\\" style=\\"position:absolute;top:0;left:0;transition:opacity 0.5s;transition-delay:0.5s;opacity:1;width:100%;height:100%;object-fit:cover;object-position:center\\"/></picture>",
+                }
+              }
+            />
+          </div>
         </span>
       </div>
       <div
-        className="sc-EHOje eapnbc"
+        className="sc-ifAKCX dIsoRQ"
         data-test="question-2"
         onClick={[Function]}
       >
         <span
-          className="sc-bZQynM eIYJdI"
+          className="sc-EHOje jUGYtC"
         >
           一番
         </span>
         <span
-          className="sc-gzVnrw MJqTB"
+          className="sc-bZQynM gjRLta"
         >
-          <img
-            src="check_correct.png"
+          <div
+            className=" gatsby-image-wrapper"
             style={
               Object {
+                "overflow": "hidden",
+                "position": "relative",
                 "width": "80%",
               }
             }
-          />
+          >
+            <div
+              style={
+                Object {
+                  "paddingBottom": "100%",
+                  "width": "100%",
+                }
+              }
+            />
+            <picture>
+              <source
+                sizes="100 200 300"
+                srcSet="asdfasdf"
+              />
+              <img
+                alt=""
+                onLoad={[Function]}
+                src="correct-base64-encoded-image"
+                style={
+                  Object {
+                    "height": "100%",
+                    "left": 0,
+                    "objectFit": "cover",
+                    "objectPosition": "center",
+                    "opacity": 0,
+                    "position": "absolute",
+                    "top": 0,
+                    "transition": "opacity 0.5s",
+                    "width": "100%",
+                  }
+                }
+              />
+            </picture>
+            <noscript
+              dangerouslySetInnerHTML={
+                Object {
+                  "__html": "<picture><source srcSet=\\"asdfasdf\\" sizes=\\"100 200 300\\" /><img src=\\"correct-base64-encoded-image\\" alt=\\"\\" style=\\"position:absolute;top:0;left:0;transition:opacity 0.5s;transition-delay:0.5s;opacity:1;width:100%;height:100%;object-fit:cover;object-position:center\\"/></picture>",
+                }
+              }
+            />
+          </div>
         </span>
       </div>
       <div
-        className="sc-EHOje eapnbc"
+        className="sc-ifAKCX dIsoRQ"
         data-test="question-3"
         onClick={[Function]}
       >
         <span
-          className="sc-bZQynM eIYJdI"
+          className="sc-EHOje jUGYtC"
         >
           一番
         </span>
         <span
-          className="sc-gzVnrw MJqTB"
+          className="sc-bZQynM gjRLta"
         >
-          <img
-            src="check_correct.png"
+          <div
+            className=" gatsby-image-wrapper"
             style={
               Object {
+                "overflow": "hidden",
+                "position": "relative",
                 "width": "80%",
               }
             }
-          />
+          >
+            <div
+              style={
+                Object {
+                  "paddingBottom": "100%",
+                  "width": "100%",
+                }
+              }
+            />
+            <picture>
+              <source
+                sizes="100 200 300"
+                srcSet="asdfasdf"
+              />
+              <img
+                alt=""
+                onLoad={[Function]}
+                src="correct-base64-encoded-image"
+                style={
+                  Object {
+                    "height": "100%",
+                    "left": 0,
+                    "objectFit": "cover",
+                    "objectPosition": "center",
+                    "opacity": 0,
+                    "position": "absolute",
+                    "top": 0,
+                    "transition": "opacity 0.5s",
+                    "width": "100%",
+                  }
+                }
+              />
+            </picture>
+            <noscript
+              dangerouslySetInnerHTML={
+                Object {
+                  "__html": "<picture><source srcSet=\\"asdfasdf\\" sizes=\\"100 200 300\\" /><img src=\\"correct-base64-encoded-image\\" alt=\\"\\" style=\\"position:absolute;top:0;left:0;transition:opacity 0.5s;transition-delay:0.5s;opacity:1;width:100%;height:100%;object-fit:cover;object-position:center\\"/></picture>",
+                }
+              }
+            />
+          </div>
         </span>
       </div>
     </div>
     <button
-      className="bp3-button bp3-large bp3-icon-repeat sc-jzJRlG hkqcLA"
-      data-test="restart-training"
+      className="MuiButtonBase-root-32 MuiButton-root-6 MuiButton-outlined-14 Component-button-1 Component-normalButton-2"
+      disabled={false}
+      onBlur={[Function]}
       onClick={[MockFunction]}
-    >
-      間違えた歌の練習をする
-    </button>
-    <a
-      href="/exam"
-      onClick={[Function]}
-    >
-      <button
-        className="bp3-button bp3-large bp3-icon-undo sc-jzJRlG hkqcLA"
-        style={
-          Object {
-            "marginTop": 0,
-          }
+      onContextMenu={[Function]}
+      onFocus={[Function]}
+      onKeyDown={[Function]}
+      onKeyUp={[Function]}
+      onMouseDown={[Function]}
+      onMouseLeave={[Function]}
+      onMouseUp={[Function]}
+      onTouchEnd={[Function]}
+      onTouchMove={[Function]}
+      onTouchStart={[Function]}
+      style={
+        Object {
+          "margin": "16px",
         }
+      }
+      tabIndex="0"
+      type="button"
+    >
+      <span
+        className="MuiButton-label-7"
       >
+        <span
+          aria-hidden="true"
+          className="material-icons MuiIcon-root-35 MuiIcon-fontSizeSmall-42 Component-normalIcon-4"
+        >
+          refresh
+        </span>
+        間違えた歌の練習をする
+      </span>
+      <span
+        className="MuiTouchRipple-root-60"
+      />
+    </button>
+    <button
+      className="MuiButtonBase-root-32 MuiButton-root-6 MuiButton-outlined-14 Component-button-1 Component-normalButton-2"
+      disabled={false}
+      onBlur={[Function]}
+      onClick={[Function]}
+      onContextMenu={[Function]}
+      onFocus={[Function]}
+      onKeyDown={[Function]}
+      onKeyUp={[Function]}
+      onMouseDown={[Function]}
+      onMouseLeave={[Function]}
+      onMouseUp={[Function]}
+      onTouchEnd={[Function]}
+      onTouchMove={[Function]}
+      onTouchStart={[Function]}
+      tabIndex="0"
+      type="button"
+    >
+      <span
+        className="MuiButton-label-7"
+      >
+        <span
+          aria-hidden="true"
+          className="material-icons MuiIcon-root-35 MuiIcon-fontSizeSmall-42 Component-normalIcon-4"
+        >
+          arrow_back
+        </span>
         メニューに戻る
-      </button>
-    </a>
+      </span>
+      <span
+        className="MuiTouchRipple-root-60"
+      />
+    </button>
   </div>
 </div>
 `;

@@ -1,5 +1,5 @@
 import { Action, Dispatch } from 'redux';
-import { GlobalState } from '@src/reducers';
+import { GlobalState } from '@src/state';
 import { Answer, Karuta, Question } from '@src/types';
 import { randomizeArray } from '@src/utils';
 import { fetchTorifudas, questionsFilter } from '@src/utils/questions';
@@ -9,7 +9,7 @@ import {
   KimarijiCondition,
   QuestionState,
   RangeFromCondition,
-  RangeToCondition
+  RangeToCondition,
 } from '@src/enums';
 
 export const START_TRAINING_NAME = 'START_TRAINING_NAME';
@@ -36,6 +36,7 @@ export type FINISH_QUESTIONS_TYPE = typeof FINISH_QUESTIONS_NAME;
 export interface StartTrainingAction extends Action {
   readonly type: START_TRAINING_TYPE;
   readonly payload: {
+    readonly karutas: Karuta[];
     readonly questions: Question[];
     readonly startedTime: number;
     readonly nextState: QuestionState;
@@ -53,6 +54,7 @@ export interface StartTrainingAction extends Action {
 export interface StartExamAction extends Action {
   readonly type: START_EXAM_TYPE;
   readonly payload: {
+    readonly karutas: Karuta[];
     readonly questions: Question[];
     readonly startedTime: number;
     readonly nextState: QuestionState;
@@ -112,15 +114,14 @@ export type QuestionsActions =
  * action creators
  */
 export const startTraining = (
+  karutas: Karuta[],
   rangeFrom: RangeFromCondition,
   rangeTo: RangeToCondition,
   kimariji: KimarijiCondition,
   color: ColorCondition,
   kamiNoKuStyle: KarutaStyleCondition,
   shimoNoKuStyle: KarutaStyleCondition
-) => (dispatch: Dispatch<QuestionsActions>, getState: () => GlobalState) => {
-  const { karutas } = getState().karutasState;
-
+) => (dispatch: Dispatch<QuestionsActions>) => {
   const questions = new QuestionsFactory(karutas)
     .setRange(rangeFrom, rangeTo)
     .setKimariji(kimariji)
@@ -136,24 +137,21 @@ export const startTraining = (
       kimariji,
       rangeFrom,
       rangeTo,
-      shimoNoKuStyle
+      shimoNoKuStyle,
     },
     payload: {
+      karutas,
       nextState: QuestionState.InAnswer,
-      questions: randomizeArray(questions),
-      startedTime: new Date().getTime()
+      questions: randomizeArray<Question>(questions),
+      startedTime: new Date().getTime(),
     },
-    type: START_TRAINING_NAME
+    type: START_TRAINING_NAME,
   };
 
   dispatch(action);
 };
 
-export const startExam = () => (
-  dispatch: Dispatch<QuestionsActions>,
-  getState: () => GlobalState
-) => {
-  const { karutas } = getState().karutasState;
+export const startExam = (karutas: Karuta[]) => (dispatch: Dispatch<QuestionsActions>) => {
   const questions = new QuestionsFactory(karutas)
     .setRange(RangeFromCondition.One, RangeToCondition.OneHundred)
     .setKimariji(KimarijiCondition.None)
@@ -164,28 +162,23 @@ export const startExam = () => (
 
   const action: StartExamAction = {
     payload: {
+      karutas,
       nextState: QuestionState.InAnswer,
       questions: randomizeArray(questions),
-      startedTime: new Date().getTime()
+      startedTime: new Date().getTime(),
     },
-    type: START_EXAM_NAME
+    type: START_EXAM_NAME,
   };
 
   dispatch(action);
 };
 
-export const restartQuestions = () => (
-  dispatch: Dispatch<QuestionsActions>,
-  getState: () => GlobalState
-) => {
-  const { questions, answers } = getState().questionsState;
+export const restartQuestions = () => (dispatch: Dispatch<QuestionsActions>, getState: () => GlobalState) => {
+  const { questions, answers } = getState().questions;
   // TODO: 全て回答済みでなかったらエラー
-  const finder: { [questionId: number]: Question } = questions.reduce(
-    (previous, current) => {
-      return { ...previous, [current.id]: current };
-    },
-    {}
-  );
+  const finder: { [questionId: number]: Question } = questions.reduce((previous, current) => {
+    return { ...previous, [current.id]: current };
+  }, {});
   const targets = answers
     .filter(a => !a.correct)
     .map(a => finder[a.questionId])
@@ -195,35 +188,35 @@ export const restartQuestions = () => (
     payload: {
       nextState: QuestionState.InAnswer,
       questions: randomizeArray(targets),
-      startedTime: new Date().getTime()
+      startedTime: new Date().getTime(),
     },
-    type: RESTART_QUESTIONS_NAME
+    type: RESTART_QUESTIONS_NAME,
   };
 
   dispatch(action);
 };
 
-export const answerQuestion = (questionId: number, karutaId: number) => (
+export const answerQuestion = (questionId: number, karutaNo: number) => (
   dispatch: Dispatch<QuestionsActions>,
   getState: () => GlobalState
 ) => {
-  const { questions, lastStartedTime } = getState().questionsState;
+  const { questions, lastStartedTime } = getState().questions;
   const question = questions.find(q => q.id === questionId)!;
   // TODO: QuestionとlastStartedTimeがundefinedの場合
-  const correct = question.correctKaruta.id === karutaId;
+  const correct = question.correctKaruta.no === karutaNo;
   const time = new Date().getTime() - lastStartedTime!;
   const answer = {
     correct,
-    karutaId,
+    karutaNo,
     questionId,
-    time
+    time,
   };
   const action: AnswerQuestionAction = {
     payload: {
       answer,
-      nextState: QuestionState.Answered
+      nextState: QuestionState.Answered,
     },
-    type: ANSWER_QUESTION_NAME
+    type: ANSWER_QUESTION_NAME,
   };
 
   dispatch(action);
@@ -232,25 +225,22 @@ export const answerQuestion = (questionId: number, karutaId: number) => (
 export const confirmCorrect = (): ConfirmCorrectAction => {
   return {
     payload: {
-      nextState: QuestionState.ConfirmCorrect
+      nextState: QuestionState.ConfirmCorrect,
     },
-    type: CONFIRM_CORRECT_NAME
+    type: CONFIRM_CORRECT_NAME,
   };
 };
 
-export const openNextQuestion = () => (
-  dispatch: Dispatch<QuestionsActions>,
-  getState: () => GlobalState
-) => {
-  const { currentIndex } = getState().questionsState;
+export const openNextQuestion = () => (dispatch: Dispatch<QuestionsActions>, getState: () => GlobalState) => {
+  const { currentIndex } = getState().questions;
   const nextIndex = currentIndex + 1;
   const action: OpenNextQuestionAction = {
     payload: {
       nextIndex,
       nextState: QuestionState.InAnswer,
-      startedTime: new Date().getTime()
+      startedTime: new Date().getTime(),
     },
-    type: OPEN_NEXT_QUESTION_NAME
+    type: OPEN_NEXT_QUESTION_NAME,
   };
   dispatch(action);
 };
@@ -258,9 +248,9 @@ export const openNextQuestion = () => (
 export const finishQuestions = (): FinishQuestionsAction => {
   return {
     payload: {
-      nextState: QuestionState.Finished
+      nextState: QuestionState.Finished,
     },
-    type: FINISH_QUESTIONS_NAME
+    type: FINISH_QUESTIONS_NAME,
   };
 };
 
@@ -279,6 +269,8 @@ class QuestionsFactory {
     this.rangeTo = RangeToCondition.OneHundred;
     this.kimariji = KimarijiCondition.None;
     this.color = ColorCondition.None;
+    this.kamiNoKuStyle = KarutaStyleCondition.KanjiAndKana;
+    this.shimoNoKuStyle = KarutaStyleCondition.KanaOnly;
   }
 
   public setRange(rangeFrom: number, rangeTo: number) {
@@ -308,10 +300,7 @@ class QuestionsFactory {
   }
 
   public create() {
-    const targetKarutas = questionsFilter(this.karutas)(
-      this.rangeFrom,
-      this.rangeTo
-    )(this.kimariji)(this.color);
+    const targetKarutas = questionsFilter(this.karutas)(this.rangeFrom, this.rangeTo)(this.kimariji)(this.color);
 
     return targetKarutas.map((k, i) => {
       const id = i + 1;
@@ -320,35 +309,33 @@ class QuestionsFactory {
         this.kamiNoKuStyle === 0
           ? {
               firstText: k.firstKanji,
-              karutaId: k.id,
+              karutaNo: k.no,
               questionId: id,
               secondText: k.secondKanji,
-              thirdText: k.thirdKanji
+              thirdText: k.thirdKanji,
             }
           : {
               firstText: k.firstKana,
-              karutaId: k.id,
+              karutaNo: k.no,
               questionId: id,
               secondText: k.secondKana,
-              thirdText: k.thirdKana
+              thirdText: k.thirdKana,
             };
-      const toriFudas = fetchTorifudas(this.karutas, correctKaruta).map(
-        toriFuda => {
-          return this.shimoNoKuStyle === 0
-            ? {
-                fifthText: toriFuda.fifthKanji,
-                fourthText: toriFuda.fourthKanji,
-                karutaId: toriFuda.id,
-                questionId: id
-              }
-            : {
-                fifthText: toriFuda.fifthKana,
-                fourthText: toriFuda.fourthKana,
-                karutaId: toriFuda.id,
-                questionId: id
-              };
-        }
-      );
+      const toriFudas = fetchTorifudas(this.karutas, correctKaruta).map(toriFuda => {
+        return this.shimoNoKuStyle === 0
+          ? {
+              fifthText: toriFuda.fifthKanji,
+              fourthText: toriFuda.fourthKanji,
+              karutaNo: toriFuda.no,
+              questionId: id,
+            }
+          : {
+              fifthText: toriFuda.fifthKana,
+              fourthText: toriFuda.fourthKana,
+              karutaNo: toriFuda.no,
+              questionId: id,
+            };
+      });
       return { id, correctKaruta, yomiFuda, toriFudas };
     });
   }

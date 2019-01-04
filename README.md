@@ -8,5 +8,5 @@ Hyakunin Isshu
 https://hyakuninanki.net/
 
 ### Structure
-React / Redux / TypeScript
+React / Redux / TypeScript / Gatsby
 

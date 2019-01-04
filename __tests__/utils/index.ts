@@ -1,31 +1,7 @@
-import {
-  convertCamelKey,
-  getRandomInt,
-  menuTypeToIcon,
-  randomizeArray
-} from '@src/utils';
+import { getRandomInt, menuTypeToIcon, randomizeArray } from '@src/utils';
 import { MenuType } from '@src/enums';
 
 describe('utility functions', () => {
-  it('should convert json sneak to camel', () => {
-    const target = {
-      test_a: 1,
-      test_b: {
-        test_c: 'a',
-        test_d: true
-      }
-    };
-    const expected = {
-      testA: 1,
-      testB: {
-        testC: 'a',
-        testD: true
-      }
-    };
-    const actual = convertCamelKey(target);
-    expect(actual).toEqual(expected);
-  });
-
   it('should get random intager value', () => {
     const actual = getRandomInt(1, 10);
     expect(actual).toBeGreaterThanOrEqual(1);

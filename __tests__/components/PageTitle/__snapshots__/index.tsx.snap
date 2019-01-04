@@ -1,9 +1,0 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
-
-exports[`<PageTitle /> should render component 1`] = `
-<h1
-  className="sc-bdVaJa hRnhkM"
->
-  hoge
-</h1>
-`;
