@@ -118,7 +118,7 @@ export const KimarijiConditions: EnumCollection<KimarijiCondition> = {
 };
 
 export enum ColorCondition {
-  None = '',
+  None = 'none',
   Blue = 'blue',
   Pink = 'pink',
   Yellow = 'yellow',

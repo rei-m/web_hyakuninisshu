@@ -8,7 +8,7 @@ export const filterByKimariji = (karutas: Karuta[], kimariji: number) =>
   kimariji <= 0 ? karutas : karutas.filter(k => k.kimariji === kimariji);
 
 export const filterByColor = (karutas: Karuta[], color: string) =>
-  color === '' ? karutas : karutas.filter(k => k.color === color);
+  color === 'none' ? karutas : karutas.filter(k => k.color === color);
 
 export const questionsFilter = (karutas: Karuta[]) => {
   return (rangeFrom: number, rangeTo: number) => {

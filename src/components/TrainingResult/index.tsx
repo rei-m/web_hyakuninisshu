@@ -44,12 +44,12 @@ const QuestionsResult: React.FC<Props> = ({ averageAnswerSecond, correctCount, t
       <Container bgImageUrl={trainingResultBGImage.publicURL}>
         <Inner>
           <QuestionResultsSummary
-            title={'正解数'}
+            title="正解数"
             value={`${correctCount} / ${totalCount}`}
             style={{ marginBottom: appTheme.spacing2x }}
           />
           <QuestionResultsSummary
-            title={'平均回答時間'}
+            title="平均回答時間"
             value={`${averageAnswerSecond}秒`}
             style={{ marginBottom: appTheme.spacing2x }}
           />

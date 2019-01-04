@@ -59,6 +59,7 @@ const FormView = ({ values, handleChange, handleSubmit, errors, touched }: FormV
       toTouched={touched.rangeTo}
       error={errors.rangeFrom}
       handleChange={handleChange}
+      style={{ marginBottom: appTheme.spacing2x }}
     />
     <SelectItem
       title="決まり字"
@@ -67,6 +68,7 @@ const FormView = ({ values, handleChange, handleSubmit, errors, touched }: FormV
       valueList={KimarijiConditions.values}
       nameList={KimarijiConditionNameList}
       handleChange={handleChange}
+      style={{ marginBottom: appTheme.spacing2x }}
     />
     <SelectItem
       title="五色"
@@ -75,6 +77,7 @@ const FormView = ({ values, handleChange, handleSubmit, errors, touched }: FormV
       valueList={ColorConditions.values}
       nameList={ColorConditionNameList}
       handleChange={handleChange}
+      style={{ marginBottom: appTheme.spacing2x }}
     />
     <SelectItem
       title="上の句"
@@ -83,6 +86,7 @@ const FormView = ({ values, handleChange, handleSubmit, errors, touched }: FormV
       valueList={KarutaStyleConditions.values}
       nameList={KarutaStyleConditionNameList}
       handleChange={handleChange}
+      style={{ marginBottom: appTheme.spacing2x }}
     />
     <SelectItem
       title="下の句"
@@ -91,6 +95,7 @@ const FormView = ({ values, handleChange, handleSubmit, errors, touched }: FormV
       valueList={KarutaStyleConditions.values}
       nameList={KarutaStyleConditionNameList}
       handleChange={handleChange}
+      style={{ marginBottom: appTheme.spacing2x }}
     />
     <AppButton
       label="練習をはじめる"

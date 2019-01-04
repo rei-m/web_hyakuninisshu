@@ -1,6 +1,10 @@
 import * as React from 'react';
-import { Field } from 'formik';
-import styled from '@src/styles/styled-components';
+import { TextAlignProperty } from 'csstype';
+import withStyles from '@material-ui/core/styles/withStyles';
+import FormControl from '@material-ui/core/FormControl';
+import InputLabel from '@material-ui/core/InputLabel';
+import Select from '@material-ui/core/Select';
+import MenuItem from '@material-ui/core/MenuItem';
 
 export interface Props {
   title: string;
@@ -8,39 +12,57 @@ export interface Props {
   value: string;
   valueList: Array<string | number>;
   nameList: string[];
+  style?: React.CSSProperties;
   handleChange: (e: React.SyntheticEvent<HTMLSelectElement>) => void;
 }
 
-const Label = styled.label`
-  text-align: left;
-`;
+const styles = {
+  formControl: {
+    display: 'flex',
+  },
+  label: {
+    fontSize: '1.4rem',
+    color: '#182026',
+  },
+  select: {
+    fontSize: '1.6rem',
+    textAlign: 'left' as TextAlignProperty,
+  },
+};
 
-const SelectRow = styled.div`
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 0 ${({ theme }) => theme.spacing2x};
-`;
+const stylesProvider = () => styles;
 
-const SelectRange = styled.div`
-  width: 100%;
-`;
+type RenderProps = Props & {
+  classes: {
+    formControl: string;
+    label: string;
+    select: string;
+  };
+};
 
-const SelectItem: React.FC<Props> = ({ title, name, value, handleChange, valueList, nameList }) => (
-  <Label className="bp3-label">
-    {title}
-    <SelectRow>
-      <SelectRange className="bp3-select bp3-large">
-        <Field component="select" name={name} value={value} onChange={handleChange}>
-          {valueList.map((v, i) => (
-            <option value={v} key={`select_item_${i}`}>
-              {nameList[i]}
-            </option>
-          ))}
-        </Field>
-      </SelectRange>
-    </SelectRow>
-  </Label>
+const SelectItem = withStyles(stylesProvider)(
+  ({ title, name, value, handleChange, valueList, nameList, classes, style }: RenderProps) => (
+    <FormControl className={classes.formControl} style={style}>
+      <InputLabel htmlFor={`id-${name}`} className={classes.label}>
+        {title}
+      </InputLabel>
+      <Select
+        value={value}
+        onChange={handleChange}
+        inputProps={{
+          name,
+          id: `id-${name}`,
+        }}
+        className={classes.select}
+      >
+        {valueList.map((v, i) => (
+          <MenuItem value={v} className={classes.select} key={`select_item_${v}`}>
+            {nameList[i]}
+          </MenuItem>
+        ))}
+      </Select>
+    </FormControl>
+  )
 );
 
 export default SelectItem;
