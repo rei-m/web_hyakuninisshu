@@ -25,7 +25,8 @@ const styles = {
   },
   select: {
     fontSize: '1.6rem',
-    width: '150px',
+    maxWidth: '150px',
+    flexGrow: 1,
     textAlign: 'left' as TextAlignProperty,
   },
 };
@@ -38,6 +39,12 @@ type RenderProps = Props & {
     select: string;
   };
 };
+
+const FormRow = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+`;
 
 const Label = styled.label`
   text-align: left;
@@ -59,7 +66,7 @@ const SelectRangeFromTo = withStyles(stylesProvider)(
   ({ from, to, error, handleChange, classes, style }: RenderProps) => (
     <FormControl className={classes.formControl} style={style}>
       <Label>出題範囲</Label>
-      <div>
+      <FormRow>
         <Select
           value={from}
           onChange={handleChange}
@@ -91,7 +98,7 @@ const SelectRangeFromTo = withStyles(stylesProvider)(
             </MenuItem>
           ))}
         </Select>
-      </div>
+      </FormRow>
       {error && <Error>{error}</Error>}
     </FormControl>
   )
