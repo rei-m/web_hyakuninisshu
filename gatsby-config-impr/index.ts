@@ -1,4 +1,5 @@
 import { SiteMetaData } from '../src/types';
+import { appTheme } from '../src/styles/theme';
 import { GatsbyPlugin } from './types';
 
 export const siteMetadata: SiteMetaData = {
@@ -34,6 +35,18 @@ export const plugins: GatsbyPlugin[] = [
   // To learn more, visit: https://gatsby.app/offline
   // 'gatsby-plugin-offline',
   {
+    resolve: `@wapps/gatsby-plugin-material-ui`,
+    options: {
+      theme: {
+        palette: {
+          background: {
+            default: appTheme.colorThin,
+          },
+        },
+      },
+    },
+  },
+  {
     resolve: `gatsby-plugin-typography`,
     options: {
       pathToConfigModule: `src/styles/typography.ts`,
@@ -43,7 +56,6 @@ export const plugins: GatsbyPlugin[] = [
   `gatsby-plugin-remove-trailing-slashes`,
   `gatsby-plugin-styled-components`,
   `gatsby-plugin-no-sourcemaps`,
-  `@wapps/gatsby-plugin-material-ui`,
   {
     resolve: `gatsby-plugin-google-analytics`,
     options: {
