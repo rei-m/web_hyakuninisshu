@@ -14,6 +14,7 @@ const Container = styled.header<RootProps>`
   box-shadow: ${({ theme }) => theme.elevationShadow1x};
   left: 0;
   right: 0;
+  top: 0;
   z-index: 1;
   position: fixed;
   background-color: ${({ theme }) => theme.colorPrimary};
