@@ -12,13 +12,17 @@ type RootProps = Pick<Props, 'canBack'>;
 
 const Container = styled.header<RootProps>`
   box-shadow: ${({ theme }) => theme.elevationShadow1x};
-  left: 0;
-  right: 0;
   z-index: 1;
-  position: fixed;
   background-color: ${({ theme }) => theme.colorPrimary};
   padding-left: ${({ canBack, theme }) => (canBack ? '0' : theme.spacing2x)};
   display: flex;
+
+  @media screen and (min-width: ${({ theme }) => theme.minWidthWide}) {
+    left: 0;
+    right: 0;
+    top: 0;
+    position: fixed;
+  }
 `;
 
 const Title = styled.h1`

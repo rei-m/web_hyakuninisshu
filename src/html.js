@@ -22,8 +22,6 @@ export default class HTML extends React.Component {
           <link rel="apple-touch-icon" href="icons/icon-384x384.png" sizes="384x384" />
           <link rel="apple-touch-icon" href="icons/icon-512x512.png" sizes="512x512" />
           <link href="//fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
-          <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-          <script dangerouslySetInnerHTML={{__html: '(window.adsbygoogle = window.adsbygoogle || []).push({ google_ad_client: "ca-pub-4104372369598017", enable_page_level_ads: true });'}}></script>
           {this.props.headComponents}
         </head>
         <body {...this.props.bodyAttributes}>
@@ -34,6 +32,7 @@ export default class HTML extends React.Component {
             dangerouslySetInnerHTML={{ __html: this.props.body }}
           />
           {this.props.postBodyComponents}
+          <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
         </body>
       </html>
     )
