@@ -7,6 +7,7 @@ import SEO from '@src/components/SEO';
 import ErrorBoundary from '@src/components/ErrorBoundary';
 import PageTitle from '@src/components/PageTitle';
 import AppButton from '@src/components/AppButton';
+import AdBanner from '@src/components/AdBanner';
 import { MenuType } from '@src/enums';
 import { ROUTE_PATHS } from '@src/constants';
 
@@ -64,6 +65,7 @@ const ExamPage: React.FC<{}> = () => {
             onClick={onSubmit}
             style={{ marginTop: appTheme.spacing4x }}
           />
+          <AdBanner />
         </Container>
       </Layout>
     </ErrorBoundary>

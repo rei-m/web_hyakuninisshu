@@ -1,10 +1,10 @@
 import * as React from 'react';
 import { graphql, navigate } from 'gatsby';
-import AdSense from 'react-adsense';
 import styled from '@src/styles/styled-components';
 import Layout from '@src/components/Layout';
 import SEO from '@src/components/SEO';
 import ErrorBoundary from '@src/components/ErrorBoundary';
+import AdBanner from '@src/components/AdBanner';
 import { MenuType } from '@src/enums';
 import { SiteMetaData } from '@src/types';
 import { ROUTE_PATHS } from '@src/constants';
@@ -78,13 +78,7 @@ const AboutPage: React.FC<Props> = ({ data }) => {
               このサイトは百人一首を覚えるためのサイトです。4択のクイズ形式で繰り返し練習することで効率よく百人一首を覚えることが出来ます。
             </SectionText>
           </Section>
-          <AdSense.Google
-            client="ca-pub-4104372369598017"
-            slot="9171068817"
-            style={{ display: 'block' }}
-            format="auto"
-            responsive="true"
-          />
+          <AdBanner />
           <Section>
             <SectionTitle>使い方について</SectionTitle>
             <SectionText>

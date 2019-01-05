@@ -3,6 +3,7 @@ import styled from '@src/styles/styled-components';
 import Layout from '@src/components/Layout';
 import SEO from '@src/components/SEO';
 import ErrorBoundary from '@src/components/ErrorBoundary';
+import AdBanner from '@src/components/AdBanner';
 import KarutaCard from '@src/components/KarutaCard';
 import { GeneratedPageComponentProps, Karuta } from '@src/types';
 import { toKarutaNoString } from '@src/utils';
@@ -58,6 +59,7 @@ const KarutasPageTemplate: React.FC<Props> = ({ pageContext }) => {
         />
         <Container>
           <KarutaCard karuta={karuta} />
+          <AdBanner />
         </Container>
       </Layout>
     </ErrorBoundary>
