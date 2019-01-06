@@ -6,7 +6,7 @@ require("tsconfig-paths").register({
   baseUrl: './',
   paths: {
     '@src/*': [ 'src/*' ],
-    '@test/*': [ 'test/*' ]
+    '@test/*': [ '__tests__/*' ]
   }
 });
 
@@ -48,7 +48,7 @@ exports.onCreateWebpackConfig = ({ actions, loaders, getConfig }) => {
   config.resolve.alias = {
     ...config.resolve.alias,
     '@src': resolve(__dirname, 'src'),
-    '@test': resolve(__dirname, 'test')
+    '@test': resolve(__dirname, '__tests__')
   }
 
   actions.replaceWebpackConfig(config)
