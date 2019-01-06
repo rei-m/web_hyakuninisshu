@@ -63,7 +63,7 @@ const ExamPage: React.FC<{}> = () => {
             icon="edit"
             type="primary"
             onClick={onSubmit}
-            style={{ marginTop: appTheme.spacing4x, marginBottom: appTheme.spacing4x }}
+            style={{ marginTop: appTheme.spacing4x, marginBottom: appTheme.spacing2x }}
           />
           <AdBanner />
         </Container>
