@@ -1,6 +1,6 @@
 import { MockStore } from 'redux-mock-store';
-import { create } from '../factories';
-import { mockAppStoreCreateor } from '../helpers';
+import { create } from '@test/factories';
+import { mockAppStoreCreateor } from '@test/helpers';
 import * as questionsAction from '@src/actions/questions';
 import { initialState as questionsInitialState } from '@src/state/questions';
 import { Answer, Karuta, Question } from '@src/types';

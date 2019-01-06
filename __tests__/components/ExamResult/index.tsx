@@ -1,9 +1,9 @@
 import * as ReactTestRenderer from 'react-test-renderer';
 import * as React from 'react';
 import { shallow } from 'enzyme';
-import { create } from '../../factories';
-import { sel } from '../../helpers';
 import { StaticQuery } from 'gatsby';
+import { create } from '@test/factories';
+import { sel } from '@test/helpers';
 import ExamResult, { Props } from '@src/components/ExamResult';
 import { Answer, Question } from '@src/types';
 

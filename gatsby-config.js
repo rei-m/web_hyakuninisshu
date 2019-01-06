@@ -6,7 +6,7 @@ require("tsconfig-paths").register({
   baseUrl: './',
   paths: {
     '@src/*': [ 'src/*' ],
-    '@test/*': [ 'test/*' ]
+    '@test/*': [ '__tests__/*' ]
   }
 });
 

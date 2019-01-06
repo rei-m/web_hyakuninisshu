@@ -1,7 +1,0 @@
-[Settings]
-ID = "frosty-gates-d2d96b"
-
-[[redirects]]
-  from = "/*"
-  to = "/index.html"
-  status = 200
