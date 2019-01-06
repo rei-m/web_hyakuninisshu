@@ -51,7 +51,6 @@ const SectionText = styled.div`
 `;
 
 const MenuWrapper = styled.div`
-  padding: ${({ theme }) => theme.spacing4x} 0;
   display: flex;
   flex-direction: column;
   justify-content: center;
