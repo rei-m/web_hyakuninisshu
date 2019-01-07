@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<ErrorMessage /> should render component 1`] = `
+<div
+  className="sc-bdVaJa gPmDrA"
+>
+  <p
+    className="sc-bwzfXH jQIpiU"
+  >
+    Test
+  </p>
+</div>
+`;

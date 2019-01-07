@@ -1,11 +1,10 @@
 import * as ReactTestRenderer from 'react-test-renderer';
 import * as React from 'react';
-import { StaticQuery } from 'gatsby';
+import { mockStaticQuery } from '@test/helpers';
 import ErrorBoundary from '@src/components/ErrorBoundary';
 
 describe('<ErrorBoundary />', () => {
   beforeEach(() => {
-    const mockStaticQuery: jest.Mock<StaticQuery> = StaticQuery as jest.Mock<StaticQuery>;
     mockStaticQuery.mockImplementationOnce(({ render }) =>
       render({
         dogezaImage: {

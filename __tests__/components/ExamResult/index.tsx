@@ -1,15 +1,13 @@
 import * as ReactTestRenderer from 'react-test-renderer';
 import * as React from 'react';
 import { shallow } from 'enzyme';
-import { StaticQuery } from 'gatsby';
 import { create } from '@test/factories';
-import { sel } from '@test/helpers';
+import { mockStaticQuery, sel } from '@test/helpers';
 import ExamResult, { Props } from '@src/components/ExamResult';
 import { Answer, Question } from '@src/types';
 
 describe('<ExamResult />', () => {
   beforeEach(() => {
-    const mockStaticQuery: jest.Mock<StaticQuery> = StaticQuery as jest.Mock<StaticQuery>;
     mockStaticQuery.mockImplementationOnce(({ render }) =>
       render({
         examBGImage: {
