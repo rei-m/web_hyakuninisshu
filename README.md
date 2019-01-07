@@ -10,3 +10,5 @@ https://hyakuninanki.net/
 ### Structure
 React / Redux / TypeScript / Gatsby
 
+### Licence
+Licensed under the [MIT](./LICENSE).

@@ -1,0 +1,59 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<AppButton /> should render component when normal 1`] = `
+<button
+  className="MuiButtonBase-root-32 MuiButton-root-6 MuiButton-outlined-14 Component-button-1 Component-normalButton-2"
+  disabled={false}
+  onBlur={[Function]}
+  onContextMenu={[Function]}
+  onFocus={[Function]}
+  onKeyDown={[Function]}
+  onKeyUp={[Function]}
+  onMouseDown={[Function]}
+  onMouseLeave={[Function]}
+  onMouseUp={[Function]}
+  onTouchEnd={[Function]}
+  onTouchMove={[Function]}
+  onTouchStart={[Function]}
+  tabIndex="0"
+  type="button"
+>
+  <span
+    className="MuiButton-label-7"
+  >
+    Test
+  </span>
+  <span
+    className="MuiTouchRipple-root-35"
+  />
+</button>
+`;
+
+exports[`<AppButton /> should render component when primary 1`] = `
+<button
+  className="MuiButtonBase-root-32 MuiButton-root-6 MuiButton-outlined-14 Component-button-1 Component-primaryButton-3"
+  disabled={false}
+  onBlur={[Function]}
+  onContextMenu={[Function]}
+  onFocus={[Function]}
+  onKeyDown={[Function]}
+  onKeyUp={[Function]}
+  onMouseDown={[Function]}
+  onMouseLeave={[Function]}
+  onMouseUp={[Function]}
+  onTouchEnd={[Function]}
+  onTouchMove={[Function]}
+  onTouchStart={[Function]}
+  tabIndex="0"
+  type="button"
+>
+  <span
+    className="MuiButton-label-7"
+  >
+    Test
+  </span>
+  <span
+    className="MuiTouchRipple-root-35"
+  />
+</button>
+`;

@@ -7,7 +7,7 @@ import IconButton from '@material-ui/core/IconButton';
 import KarutaCard from '@src/components/KarutaCard';
 import { Karuta } from '@src/types';
 
-interface Props {
+export interface Props {
   open: boolean;
   karuta?: Karuta;
   onClose: () => void;

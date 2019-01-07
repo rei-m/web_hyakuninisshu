@@ -9,7 +9,7 @@ export interface Props {
   type: 'primary' | 'normal';
   icon?: string;
   style?: React.CSSProperties;
-  onClick: () => void;
+  onClick?: () => void;
 }
 
 const styles = {

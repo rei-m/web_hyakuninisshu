@@ -1,5 +1,5 @@
 import { MockStore } from 'redux-mock-store';
-import { mockAppStoreCreateor } from '../../helpers';
+import { mockAppStoreCreateor } from '@test/helpers';
 import { GlobalState } from '@src/state';
 import { initialState as questionsState } from '@src/state/questions';
 import { START_EXAM_NAME } from '@src/actions/questions';
