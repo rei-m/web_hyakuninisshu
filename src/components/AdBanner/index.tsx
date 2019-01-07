@@ -4,7 +4,6 @@ import styled from '@src/styles/styled-components';
 
 const Container = styled.div`
   padding: ${({ theme }) => theme.spacing2x};
-  max-width: calc(100vw - ${({ theme }) => theme.spacing2x});
 `;
 
 const Dummy = styled.div`
@@ -18,7 +17,15 @@ const Dummy = styled.div`
 const AdBanner: React.FC<{}> = () =>
   process.env.NODE_ENV === 'production' ? (
     <Container>
+      <style
+        dangerouslySetInnerHTML={{
+          __html: `
+  .ad_banner { max-width: calc(100vw - 16px); }
+`,
+        }}
+      />
       <AdSense.Google
+        className="ad_banner"
         client="ca-pub-4104372369598017"
         slot="9171068817"
         style={{ display: 'block' }}
@@ -28,7 +35,14 @@ const AdBanner: React.FC<{}> = () =>
     </Container>
   ) : (
     <Container>
-      <Dummy>この欄は広告枠です</Dummy>
+      <style
+        dangerouslySetInnerHTML={{
+          __html: `
+  .ad_banner { max-width: calc(100vw - 16px); }
+`,
+        }}
+      />
+      <Dummy className="ad_banner">この欄は広告枠です</Dummy>
     </Container>
   );
 
