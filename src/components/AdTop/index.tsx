@@ -3,6 +3,7 @@ import AdSense from 'react-adsense';
 import styled from '@src/styles/styled-components';
 
 const Container = styled.div`
+  text-align: center;
   padding: ${({ theme }) => theme.spacing2x};
 `;
 
@@ -13,6 +14,7 @@ const Dummy = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+  margin: 0 auto;
   @media (min-width: 500px) {
     width: 468px;
     height: 60px;
