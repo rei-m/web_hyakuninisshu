@@ -7,13 +7,12 @@ import SEO from '@src/components/SEO';
 import ErrorBoundary from '@src/components/ErrorBoundary';
 import PageTitle from '@src/components/PageTitle';
 import AppButton from '@src/components/AppButton';
-import AdBanner from '@src/components/AdResponsive';
+import AdTop from '@src/components/AdTop';
+import AdResponsive from '@src/components/AdResponsive';
 import { MenuType } from '@src/enums';
 import { ROUTE_PATHS } from '@src/constants';
 
 const Container = styled.section`
-  max-width: 380px;
-  margin: auto;
   padding: ${({ theme }) => theme.spacing2x};
   box-sizing: border-box;
 `;
@@ -53,6 +52,7 @@ const ExamPage: React.FC<{}> = () => {
         />
         <Container>
           <PageTitle title="腕試し" />
+          <AdTop />
           <Explain>
             全百首からランダムに出題されます。
             <br />
@@ -65,7 +65,7 @@ const ExamPage: React.FC<{}> = () => {
             onClick={onSubmit}
             style={{ marginTop: appTheme.spacing4x, marginBottom: appTheme.spacing2x }}
           />
-          <AdBanner />
+          <AdResponsive />
         </Container>
       </Layout>
     </ErrorBoundary>
