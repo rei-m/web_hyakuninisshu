@@ -4,7 +4,7 @@ import styled from '@src/styles/styled-components';
 import Layout from '@src/components/Layout';
 import SEO from '@src/components/SEO';
 import ErrorBoundary from '@src/components/ErrorBoundary';
-import AdBanner from '@src/components/AdBanner';
+import AdBanner from '@src/components/AdResponsive';
 import MenuIcon from '@src/components/MenuIcon';
 import { withRipple } from '@src/enhancers/withRipple';
 import { SiteMetaData } from '@src/types';

@@ -1,0 +1,53 @@
+import * as React from 'react';
+import AdSense from 'react-adsense';
+import styled from '@src/styles/styled-components';
+
+const Container = styled.div`
+  padding: ${({ theme }) => theme.spacing2x};
+`;
+
+const Dummy = styled.div`
+  width: 320px;
+  height: 100px;
+  border: 1px solid #123;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  @media (min-width: 500px) {
+    width: 468px;
+    height: 60px;
+  }
+  @media (min-width: 800px) {
+    width: 728px;
+    height: 90px;
+  }
+`;
+
+const AdTop: React.FC<{}> = () =>
+  process.env.NODE_ENV === 'production' ? (
+    <Container>
+      <style
+        dangerouslySetInnerHTML={{
+          __html: `
+  .ad_top { width: 320px; height: 100px; }
+  @media(min-width: 500px) { .ad_top { width: 468px; height: 60px; } }
+  @media(min-width: 800px) { .ad_top { width: 728px; height: 90px; } }　        
+`,
+        }}
+      />
+      <AdSense.Google
+        className="ad_top"
+        client="ca-pub-4104372369598017"
+        slot="9171068817"
+        style={{ display: 'inline-block' }}
+        format=""
+        responsive=""
+      />
+    </Container>
+  ) : (
+    <Container>
+      <Dummy>この欄は広告枠です</Dummy>
+    </Container>
+  );
+
+export default AdTop;

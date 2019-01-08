@@ -7,7 +7,7 @@ import SEO from '@src/components/SEO';
 import ErrorBoundary from '@src/components/ErrorBoundary';
 import PageTitle from '@src/components/PageTitle';
 import AppButton from '@src/components/AppButton';
-import AdBanner from '@src/components/AdBanner';
+import AdBanner from '@src/components/AdResponsive';
 import { MenuType } from '@src/enums';
 import { ROUTE_PATHS } from '@src/constants';
 
