@@ -6,15 +6,19 @@ import Layout from '@src/components/Layout';
 import SEO from '@src/components/SEO';
 import ErrorBoundary from '@src/components/ErrorBoundary';
 import PageTitle from '@src/components/PageTitle';
-import AdBanner from '@src/components/AdBanner';
+import AdTop from '@src/components/AdTop';
+import AdResponsive from '@src/components/AdResponsive';
 import { MenuType } from '@src/enums';
 import { ROUTE_PATHS } from '@src/constants';
 
 const Container = styled.section`
-  max-width: 380px;
-  margin: auto;
   padding: ${({ theme }) => theme.spacing2x};
   box-sizing: border-box;
+`;
+
+const FormContainer = styled.div`
+  max-width: 380px;
+  margin: ${({ theme }) => theme.spacing1x} auto;
 `;
 
 const TrainingPage: React.FC<{}> = () => {
@@ -41,8 +45,11 @@ const TrainingPage: React.FC<{}> = () => {
         />
         <Container>
           <PageTitle title="出題設定" />
-          <TrainingMenuForm />
-          <AdBanner />
+          <AdTop />
+          <FormContainer>
+            <TrainingMenuForm />
+          </FormContainer>
+          <AdResponsive />
         </Container>
       </Layout>
     </ErrorBoundary>

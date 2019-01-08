@@ -4,7 +4,8 @@ import styled from '@src/styles/styled-components';
 import Layout from '@src/components/Layout';
 import SEO from '@src/components/SEO';
 import ErrorBoundary from '@src/components/ErrorBoundary';
-import AdBanner from '@src/components/AdBanner';
+import AdTop from '@src/components/AdTop';
+import AdResponsive from '@src/components/AdResponsive';
 import { MenuType } from '@src/enums';
 import { SiteMetaData } from '@src/types';
 import { ROUTE_PATHS } from '@src/constants';
@@ -78,7 +79,7 @@ const AboutPage: React.FC<Props> = ({ data }) => {
               このサイトは百人一首を覚えるためのサイトです。4択のクイズ形式で繰り返し練習することで効率よく百人一首を覚えることが出来ます。
             </SectionText>
           </Section>
-          <AdBanner />
+          <AdTop />
           <Section>
             <SectionTitle>使い方について</SectionTitle>
             <SectionText>
@@ -87,6 +88,7 @@ const AboutPage: React.FC<Props> = ({ data }) => {
               資料では百人一首の詳細な情報を閲覧できます。決まり字や歌の現代語訳などを確認することができます。
             </SectionText>
           </Section>
+          <AdResponsive />
           <Section>
             <SectionTitle>アプリ版について</SectionTitle>
             <SectionText>
