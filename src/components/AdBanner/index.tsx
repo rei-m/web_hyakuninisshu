@@ -4,7 +4,6 @@ import styled from '@src/styles/styled-components';
 
 const Container = styled.div`
   padding: ${({ theme }) => theme.spacing2x};
-  max-width: calc(100vw - ${({ theme }) => theme.spacing2x});
 `;
 
 const Dummy = styled.div`
