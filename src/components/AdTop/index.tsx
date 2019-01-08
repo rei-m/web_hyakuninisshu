@@ -4,7 +4,7 @@ import styled from '@src/styles/styled-components';
 
 const Container = styled.div`
   text-align: center;
-  padding: ${({ theme }) => theme.spacing2x};
+  padding: ${({ theme }) => theme.spacing1x} 0;
 `;
 
 const Dummy = styled.div`
