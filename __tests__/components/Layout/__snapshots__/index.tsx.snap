@@ -1,0 +1,147 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Layout /> with Navigation should render component 1`] = `
+Array [
+  <header
+    className="sc-bwzfXH gGCrXZ"
+  >
+    <h1
+      className="sc-htpNat fxoVCB"
+    >
+      title
+    </h1>
+  </header>,
+  <div
+    className="sc-gzVnrw dnlZFh"
+  >
+    test
+  </div>,
+  <nav
+    className="sc-EHOje extRj"
+  >
+    <span
+      className="sc-bZQynM jmnWoK"
+    >
+      <div
+        className="sc-bdVaJa flBAph"
+        onMouseDown={[Function]}
+        onMouseUp={[Function]}
+      >
+        <a
+          color="#fff"
+          href="/training"
+          style={
+            Object {
+              "height": "100%",
+              "width": "100%",
+            }
+          }
+        >
+          <i
+            className="material-icons sc-ifAKCX hrwKKP"
+          >
+            create
+          </i>
+        </a>
+      </div>
+    </span>
+    <span
+      className="sc-bZQynM jmnWoK"
+    >
+      <div
+        className="sc-bdVaJa flBAph"
+        onMouseDown={[Function]}
+        onMouseUp={[Function]}
+      >
+        <a
+          color="#fff"
+          href="/exam"
+          style={
+            Object {
+              "height": "100%",
+              "width": "100%",
+            }
+          }
+        >
+          <i
+            className="material-icons sc-ifAKCX iiZnFL"
+          >
+            note
+          </i>
+        </a>
+      </div>
+    </span>
+    <span
+      className="sc-bZQynM jmnWoK"
+    >
+      <div
+        className="sc-bdVaJa flBAph"
+        onMouseDown={[Function]}
+        onMouseUp={[Function]}
+      >
+        <a
+          color="#fff"
+          href="/karutas"
+          style={
+            Object {
+              "height": "100%",
+              "width": "100%",
+            }
+          }
+        >
+          <i
+            className="material-icons sc-ifAKCX ihzbNI"
+          >
+            library_books
+          </i>
+        </a>
+      </div>
+    </span>
+    <span
+      className="sc-bZQynM jmnWoK"
+    >
+      <div
+        className="sc-bdVaJa flBAph"
+        onMouseDown={[Function]}
+        onMouseUp={[Function]}
+      >
+        <a
+          color="#fff"
+          href="/about"
+          style={
+            Object {
+              "height": "100%",
+              "width": "100%",
+            }
+          }
+        >
+          <i
+            className="material-icons sc-ifAKCX jzZElc"
+          >
+            settings
+          </i>
+        </a>
+      </div>
+    </span>
+  </nav>,
+]
+`;
+
+exports[`<Layout /> without Navigation should render component 1`] = `
+Array [
+  <header
+    className="sc-bwzfXH gGCrXZ"
+  >
+    <h1
+      className="sc-htpNat fxoVCB"
+    >
+      title
+    </h1>
+  </header>,
+  <div
+    className="sc-gzVnrw glUbhH"
+  >
+    test
+  </div>,
+]
+`;
