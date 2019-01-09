@@ -14,7 +14,7 @@ const Dummy = styled.div`
   align-items: center;
 `;
 
-const AdBanner: React.FC<{}> = () =>
+const AdResponsive: React.FC<{}> = () =>
   process.env.NODE_ENV === 'production' ? (
     <Container>
       <AdSense.Google
@@ -31,4 +31,4 @@ const AdBanner: React.FC<{}> = () =>
     </Container>
   );
 
-export default AdBanner;
+export default AdResponsive;

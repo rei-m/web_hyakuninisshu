@@ -5,7 +5,8 @@ import Layout from '@src/components/Layout';
 import SEO from '@src/components/SEO';
 import ErrorBoundary from '@src/components/ErrorBoundary';
 import PageTitle from '@src/components/PageTitle';
-import AdBanner from '@src/components/AdBanner';
+import AdTop from '@src/components/AdTop';
+import AdResponsive from '@src/components/AdResponsive';
 import KarutaList from '@src/components/KarutaList';
 import { Karuta } from '@src/types';
 import { ROUTE_PATHS } from '@src/constants';
@@ -54,8 +55,9 @@ const KarutasPage: React.FC<Props> = ({ data }) => {
         />
         <Container>
           <PageTitle title="歌一覧" />
+          <AdTop />
           <KarutaList karutas={karutas} onClickRow={onClickKarutaListRow} />
-          <AdBanner />
+          <AdResponsive />
         </Container>
       </Layout>
     </ErrorBoundary>

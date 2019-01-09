@@ -4,7 +4,8 @@ import styled from '@src/styles/styled-components';
 import Layout from '@src/components/Layout';
 import SEO from '@src/components/SEO';
 import ErrorBoundary from '@src/components/ErrorBoundary';
-import AdBanner from '@src/components/AdBanner';
+import AdTop from '@src/components/AdTop';
+import AdResponsive from '@src/components/AdResponsive';
 import MenuIcon from '@src/components/MenuIcon';
 import { withRipple } from '@src/enhancers/withRipple';
 import { SiteMetaData } from '@src/types';
@@ -29,7 +30,7 @@ const Container = styled.div`
 `;
 
 const Section = styled.section`
-  margin: ${({ theme }) => theme.spacing4x} 0;
+  margin: ${({ theme }) => theme.spacing2x} 0;
 `;
 
 const SectionTitle = styled.h1`
@@ -138,6 +139,7 @@ const IndexPage: React.FC<Props> = ({ data }) => (
             </p>
           </SectionText>
         </Section>
+        <AdTop />
         <Section>
           <SectionTitle>メニュー</SectionTitle>
           <SectionText>
@@ -173,7 +175,7 @@ const IndexPage: React.FC<Props> = ({ data }) => (
             </MenuRoot>
           </MenuWrapper>
         </Section>
-        <AdBanner />
+        <AdResponsive />
         <Section>
           <SectionTitle>百人一首とは</SectionTitle>
           <SectionText>
