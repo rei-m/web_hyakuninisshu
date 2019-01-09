@@ -4,9 +4,11 @@ import Layout from '@src/components/Layout';
 import SEO from '@src/components/SEO';
 import ErrorBoundary from '@src/components/ErrorBoundary';
 import KarutaCard from '@src/components/KarutaCard';
+import AdTop from '@src/components/AdTop';
 import { GeneratedPageComponentProps, Karuta } from '@src/types';
 import { toKarutaNoString } from '@src/utils';
 import { MenuType } from '@src/enums';
+import { appTheme } from '@src/styles/theme';
 
 type Props = GeneratedPageComponentProps<{ karuta: Karuta }>;
 
@@ -57,6 +59,7 @@ const KarutasPageTemplate: React.FC<Props> = ({ pageContext }) => {
           description={description}
         />
         <Container>
+          {karuta.no === 50 && <AdTop style={{ marginBottom: appTheme.spacing2x }} />}
           <KarutaCard karuta={karuta} />
         </Container>
       </Layout>
