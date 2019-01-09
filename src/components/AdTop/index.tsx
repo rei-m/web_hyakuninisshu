@@ -25,9 +25,9 @@ const Dummy = styled.div`
   }
 `;
 
-const AdTop: React.FC<{}> = () =>
+const AdTop: React.FC<{ style?: React.CSSProperties }> = ({ style }) =>
   process.env.NODE_ENV === 'production' ? (
-    <Container>
+    <Container style={style}>
       <style
         dangerouslySetInnerHTML={{
           __html: `
@@ -47,7 +47,7 @@ const AdTop: React.FC<{}> = () =>
       />
     </Container>
   ) : (
-    <Container>
+    <Container style={style}>
       <Dummy>この欄は広告枠です</Dummy>
     </Container>
   );
