@@ -1,0 +1,556 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Navigation /> should render component 1`] = `
+<nav
+  className="sc-htpNat dtgQls"
+>
+  <span
+    className="sc-bxivhb geoeNk"
+  >
+    <div
+      className="sc-bwzfXH jRrEes"
+      onMouseDown={[Function]}
+      onMouseUp={[Function]}
+    >
+      <a
+        color="#fff"
+        href="/training"
+        style={
+          Object {
+            "height": "100%",
+            "width": "100%",
+          }
+        }
+      >
+        <i
+          className="material-icons sc-bdVaJa hBfgJv"
+        >
+          create
+        </i>
+      </a>
+    </div>
+  </span>
+  <span
+    className="sc-bxivhb geoeNk"
+  >
+    <div
+      className="sc-bwzfXH jRrEes"
+      onMouseDown={[Function]}
+      onMouseUp={[Function]}
+    >
+      <a
+        color="#fff"
+        href="/exam"
+        style={
+          Object {
+            "height": "100%",
+            "width": "100%",
+          }
+        }
+      >
+        <i
+          className="material-icons sc-bdVaJa hUDbCC"
+        >
+          note
+        </i>
+      </a>
+    </div>
+  </span>
+  <span
+    className="sc-bxivhb geoeNk"
+  >
+    <div
+      className="sc-bwzfXH jRrEes"
+      onMouseDown={[Function]}
+      onMouseUp={[Function]}
+    >
+      <a
+        color="#fff"
+        href="/karutas"
+        style={
+          Object {
+            "height": "100%",
+            "width": "100%",
+          }
+        }
+      >
+        <i
+          className="material-icons sc-bdVaJa kwyxYz"
+        >
+          library_books
+        </i>
+      </a>
+    </div>
+  </span>
+  <span
+    className="sc-bxivhb geoeNk"
+  >
+    <div
+      className="sc-bwzfXH jRrEes"
+      onMouseDown={[Function]}
+      onMouseUp={[Function]}
+    >
+      <a
+        color="#fff"
+        href="/about"
+        style={
+          Object {
+            "height": "100%",
+            "width": "100%",
+          }
+        }
+      >
+        <i
+          className="material-icons sc-bdVaJa fmFEyH"
+        >
+          settings
+        </i>
+      </a>
+    </div>
+  </span>
+</nav>
+`;
+
+exports[`<Navigation /> should render component when current is exam 1`] = `
+<nav
+  className="sc-htpNat dtgQls"
+>
+  <span
+    className="sc-bxivhb geoeNk"
+  >
+    <div
+      className="sc-bwzfXH jRrEes"
+      onMouseDown={[Function]}
+      onMouseUp={[Function]}
+    >
+      <a
+        color="#fff"
+        href="/training"
+        style={
+          Object {
+            "height": "100%",
+            "width": "100%",
+          }
+        }
+      >
+        <i
+          className="material-icons sc-bdVaJa hBfgJv"
+        >
+          create
+        </i>
+      </a>
+    </div>
+  </span>
+  <span
+    className="sc-bxivhb geoeNk"
+  >
+    <div
+      className="sc-bwzfXH jRrEes"
+      onMouseDown={[Function]}
+      onMouseUp={[Function]}
+    >
+      <a
+        color="#fff"
+        href="/exam"
+        style={
+          Object {
+            "height": "100%",
+            "width": "100%",
+          }
+        }
+      >
+        <i
+          className="material-icons sc-bdVaJa cNnMzU"
+        >
+          note
+        </i>
+      </a>
+    </div>
+  </span>
+  <span
+    className="sc-bxivhb geoeNk"
+  >
+    <div
+      className="sc-bwzfXH jRrEes"
+      onMouseDown={[Function]}
+      onMouseUp={[Function]}
+    >
+      <a
+        color="#fff"
+        href="/karutas"
+        style={
+          Object {
+            "height": "100%",
+            "width": "100%",
+          }
+        }
+      >
+        <i
+          className="material-icons sc-bdVaJa kwyxYz"
+        >
+          library_books
+        </i>
+      </a>
+    </div>
+  </span>
+  <span
+    className="sc-bxivhb geoeNk"
+  >
+    <div
+      className="sc-bwzfXH jRrEes"
+      onMouseDown={[Function]}
+      onMouseUp={[Function]}
+    >
+      <a
+        color="#fff"
+        href="/about"
+        style={
+          Object {
+            "height": "100%",
+            "width": "100%",
+          }
+        }
+      >
+        <i
+          className="material-icons sc-bdVaJa fmFEyH"
+        >
+          settings
+        </i>
+      </a>
+    </div>
+  </span>
+</nav>
+`;
+
+exports[`<Navigation /> should render component when current is material 1`] = `
+<nav
+  className="sc-htpNat dtgQls"
+>
+  <span
+    className="sc-bxivhb geoeNk"
+  >
+    <div
+      className="sc-bwzfXH jRrEes"
+      onMouseDown={[Function]}
+      onMouseUp={[Function]}
+    >
+      <a
+        color="#fff"
+        href="/training"
+        style={
+          Object {
+            "height": "100%",
+            "width": "100%",
+          }
+        }
+      >
+        <i
+          className="material-icons sc-bdVaJa hBfgJv"
+        >
+          create
+        </i>
+      </a>
+    </div>
+  </span>
+  <span
+    className="sc-bxivhb geoeNk"
+  >
+    <div
+      className="sc-bwzfXH jRrEes"
+      onMouseDown={[Function]}
+      onMouseUp={[Function]}
+    >
+      <a
+        color="#fff"
+        href="/exam"
+        style={
+          Object {
+            "height": "100%",
+            "width": "100%",
+          }
+        }
+      >
+        <i
+          className="material-icons sc-bdVaJa hUDbCC"
+        >
+          note
+        </i>
+      </a>
+    </div>
+  </span>
+  <span
+    className="sc-bxivhb geoeNk"
+  >
+    <div
+      className="sc-bwzfXH jRrEes"
+      onMouseDown={[Function]}
+      onMouseUp={[Function]}
+    >
+      <a
+        color="#fff"
+        href="/karutas"
+        style={
+          Object {
+            "height": "100%",
+            "width": "100%",
+          }
+        }
+      >
+        <i
+          className="material-icons sc-bdVaJa dxCDSs"
+        >
+          library_books
+        </i>
+      </a>
+    </div>
+  </span>
+  <span
+    className="sc-bxivhb geoeNk"
+  >
+    <div
+      className="sc-bwzfXH jRrEes"
+      onMouseDown={[Function]}
+      onMouseUp={[Function]}
+    >
+      <a
+        color="#fff"
+        href="/about"
+        style={
+          Object {
+            "height": "100%",
+            "width": "100%",
+          }
+        }
+      >
+        <i
+          className="material-icons sc-bdVaJa fmFEyH"
+        >
+          settings
+        </i>
+      </a>
+    </div>
+  </span>
+</nav>
+`;
+
+exports[`<Navigation /> should render component when current is other 1`] = `
+<nav
+  className="sc-htpNat dtgQls"
+>
+  <span
+    className="sc-bxivhb geoeNk"
+  >
+    <div
+      className="sc-bwzfXH jRrEes"
+      onMouseDown={[Function]}
+      onMouseUp={[Function]}
+    >
+      <a
+        color="#fff"
+        href="/training"
+        style={
+          Object {
+            "height": "100%",
+            "width": "100%",
+          }
+        }
+      >
+        <i
+          className="material-icons sc-bdVaJa hBfgJv"
+        >
+          create
+        </i>
+      </a>
+    </div>
+  </span>
+  <span
+    className="sc-bxivhb geoeNk"
+  >
+    <div
+      className="sc-bwzfXH jRrEes"
+      onMouseDown={[Function]}
+      onMouseUp={[Function]}
+    >
+      <a
+        color="#fff"
+        href="/exam"
+        style={
+          Object {
+            "height": "100%",
+            "width": "100%",
+          }
+        }
+      >
+        <i
+          className="material-icons sc-bdVaJa hUDbCC"
+        >
+          note
+        </i>
+      </a>
+    </div>
+  </span>
+  <span
+    className="sc-bxivhb geoeNk"
+  >
+    <div
+      className="sc-bwzfXH jRrEes"
+      onMouseDown={[Function]}
+      onMouseUp={[Function]}
+    >
+      <a
+        color="#fff"
+        href="/karutas"
+        style={
+          Object {
+            "height": "100%",
+            "width": "100%",
+          }
+        }
+      >
+        <i
+          className="material-icons sc-bdVaJa kwyxYz"
+        >
+          library_books
+        </i>
+      </a>
+    </div>
+  </span>
+  <span
+    className="sc-bxivhb geoeNk"
+  >
+    <div
+      className="sc-bwzfXH jRrEes"
+      onMouseDown={[Function]}
+      onMouseUp={[Function]}
+    >
+      <a
+        color="#fff"
+        href="/about"
+        style={
+          Object {
+            "height": "100%",
+            "width": "100%",
+          }
+        }
+      >
+        <i
+          className="material-icons sc-bdVaJa forfEu"
+        >
+          settings
+        </i>
+      </a>
+    </div>
+  </span>
+</nav>
+`;
+
+exports[`<Navigation /> should render component when current is training 1`] = `
+<nav
+  className="sc-htpNat dtgQls"
+>
+  <span
+    className="sc-bxivhb geoeNk"
+  >
+    <div
+      className="sc-bwzfXH jRrEes"
+      onMouseDown={[Function]}
+      onMouseUp={[Function]}
+    >
+      <a
+        color="#fff"
+        href="/training"
+        style={
+          Object {
+            "height": "100%",
+            "width": "100%",
+          }
+        }
+      >
+        <i
+          className="material-icons sc-bdVaJa eZMEOL"
+        >
+          create
+        </i>
+      </a>
+    </div>
+  </span>
+  <span
+    className="sc-bxivhb geoeNk"
+  >
+    <div
+      className="sc-bwzfXH jRrEes"
+      onMouseDown={[Function]}
+      onMouseUp={[Function]}
+    >
+      <a
+        color="#fff"
+        href="/exam"
+        style={
+          Object {
+            "height": "100%",
+            "width": "100%",
+          }
+        }
+      >
+        <i
+          className="material-icons sc-bdVaJa hUDbCC"
+        >
+          note
+        </i>
+      </a>
+    </div>
+  </span>
+  <span
+    className="sc-bxivhb geoeNk"
+  >
+    <div
+      className="sc-bwzfXH jRrEes"
+      onMouseDown={[Function]}
+      onMouseUp={[Function]}
+    >
+      <a
+        color="#fff"
+        href="/karutas"
+        style={
+          Object {
+            "height": "100%",
+            "width": "100%",
+          }
+        }
+      >
+        <i
+          className="material-icons sc-bdVaJa kwyxYz"
+        >
+          library_books
+        </i>
+      </a>
+    </div>
+  </span>
+  <span
+    className="sc-bxivhb geoeNk"
+  >
+    <div
+      className="sc-bwzfXH jRrEes"
+      onMouseDown={[Function]}
+      onMouseUp={[Function]}
+    >
+      <a
+        color="#fff"
+        href="/about"
+        style={
+          Object {
+            "height": "100%",
+            "width": "100%",
+          }
+        }
+      >
+        <i
+          className="material-icons sc-bdVaJa fmFEyH"
+        >
+          settings
+        </i>
+      </a>
+    </div>
+  </span>
+</nav>
+`;

@@ -6,7 +6,7 @@ import { appTheme } from '@src/styles/theme';
 import QuestionResultsSummary from '@src/components/QuestionResultsSummary';
 import QuestionResultsMap from '@src/components/QuestionResultsMap';
 import KarutaCardDialog from '@src/components/KarutaCardDialog';
-import AppButton from '../AppButton';
+import AppButton from '@src/components/AppButton';
 import { Answer, Karuta, Question } from '@src/types';
 
 export interface Props {

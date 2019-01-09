@@ -1,0 +1,411 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<QuestionView /> should render component when answered 1`] = `
+<div
+  className="sc-gqjmRU cASZEH"
+>
+  <div
+    className="sc-VigVT cqVUej"
+  >
+    <div
+      className="sc-fjdhpX kbvaSH"
+    >
+      1
+       / 
+      10
+    </div>
+    <div
+      className="sc-bdVaJa fLVCVI"
+      style={
+        Object {
+          "margin": "auto",
+        }
+      }
+    >
+      <div
+        className="sc-bwzfXH eJMUYF"
+      >
+        <div
+          className="sc-htpNat jzLbZs"
+        >
+          初句
+        </div>
+        <div
+          className="sc-htpNat sc-bxivhb jWORiK"
+        >
+          二句
+        </div>
+        <div
+          className="sc-htpNat sc-ifAKCX kznmZk"
+        >
+          三句
+        </div>
+      </div>
+    </div>
+  </div>
+  <div
+    className="sc-jTzLTM hujYWL"
+  >
+    <div
+      className="sc-EHOje sLQmq"
+      onMouseDown={[Function]}
+      onMouseUp={[Function]}
+    >
+      <div
+        className="sc-bZQynM elUEiH"
+        color="#fff"
+        onClick={[Function]}
+        style={
+          Object {
+            "margin": "8px",
+            "opacity": 0.8,
+          }
+        }
+      >
+        <div
+          className="sc-gzVnrw dQuPak"
+        >
+          <div
+            className="sc-htoDjs iCdNOm"
+          >
+            よんく
+          </div>
+          <div
+            className="sc-htoDjs sc-dnqmqq fFBAQp"
+          >
+            ごく
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      className="sc-EHOje sLQmq"
+      onMouseDown={[Function]}
+      onMouseUp={[Function]}
+    >
+      <div
+        className="sc-bZQynM elUEiH"
+        color="#fff"
+        onClick={[Function]}
+        style={
+          Object {
+            "margin": "8px",
+            "opacity": 0.8,
+          }
+        }
+      >
+        <div
+          className="sc-gzVnrw dQuPak"
+        >
+          <div
+            className="sc-htoDjs iCdNOm"
+          >
+            よんく
+          </div>
+          <div
+            className="sc-htoDjs sc-dnqmqq fFBAQp"
+          >
+            ごく
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      className="sc-EHOje sLQmq"
+      onMouseDown={[Function]}
+      onMouseUp={[Function]}
+    >
+      <div
+        className="sc-bZQynM elUEiH"
+        color="#fff"
+        onClick={[Function]}
+        style={
+          Object {
+            "margin": "8px",
+            "opacity": 1,
+          }
+        }
+      >
+        <div
+          className="sc-gzVnrw dQuPak"
+        >
+          <div
+            className="sc-htoDjs iCdNOm"
+          >
+            よんく
+          </div>
+          <div
+            className="sc-htoDjs sc-dnqmqq fFBAQp"
+          >
+            ごく
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      className="sc-EHOje sLQmq"
+      onMouseDown={[Function]}
+      onMouseUp={[Function]}
+    >
+      <div
+        className="sc-bZQynM elUEiH"
+        color="#fff"
+        onClick={[Function]}
+        style={
+          Object {
+            "margin": "8px",
+            "opacity": 0.8,
+          }
+        }
+      >
+        <div
+          className="sc-gzVnrw dQuPak"
+        >
+          <div
+            className="sc-htoDjs iCdNOm"
+          >
+            よんく
+          </div>
+          <div
+            className="sc-htoDjs sc-dnqmqq fFBAQp"
+          >
+            ごく
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div
+    className="sc-iwsKbI edubxM"
+    onClick={[MockFunction]}
+  >
+    <div
+      className="sc-gZMcBi fkLmkp gatsby-image-wrapper"
+      style={
+        Object {
+          "overflow": "hidden",
+          "position": "relative",
+        }
+      }
+    >
+      <div
+        style={
+          Object {
+            "paddingBottom": "100%",
+            "width": "100%",
+          }
+        }
+      />
+      <picture>
+        <source
+          sizes="100 200 300"
+          srcSet="asdfasdf"
+        />
+        <img
+          alt=""
+          onLoad={[Function]}
+          src="correct-base64-encoded-image"
+          style={
+            Object {
+              "height": "100%",
+              "left": 0,
+              "objectFit": "cover",
+              "objectPosition": "center",
+              "opacity": 0,
+              "position": "absolute",
+              "top": 0,
+              "transition": "opacity 0.5s",
+              "width": "100%",
+            }
+          }
+        />
+      </picture>
+      <noscript
+        dangerouslySetInnerHTML={
+          Object {
+            "__html": "<picture><source srcSet=\\"asdfasdf\\" sizes=\\"100 200 300\\" /><img src=\\"correct-base64-encoded-image\\" alt=\\"\\" style=\\"position:absolute;top:0;left:0;transition:opacity 0.5s;transition-delay:0.5s;opacity:1;width:100%;height:100%;object-fit:cover;object-position:center\\"/></picture>",
+          }
+        }
+      />
+    </div>
+  </div>
+</div>
+`;
+
+exports[`<QuestionView /> should render component when not answered 1`] = `
+<div
+  className="sc-gqjmRU cASZEH"
+>
+  <div
+    className="sc-VigVT cqVUej"
+  >
+    <div
+      className="sc-fjdhpX kbvaSH"
+    >
+      1
+       / 
+      10
+    </div>
+    <div
+      className="sc-bdVaJa fLVCVI"
+      style={
+        Object {
+          "margin": "auto",
+        }
+      }
+    >
+      <div
+        className="sc-bwzfXH eJMUYF"
+      >
+        <div
+          className="sc-htpNat jzLbZs"
+        >
+          初句
+        </div>
+        <div
+          className="sc-htpNat sc-bxivhb jWORiK"
+        >
+          二句
+        </div>
+        <div
+          className="sc-htpNat sc-ifAKCX kznmZk"
+        >
+          三句
+        </div>
+      </div>
+    </div>
+  </div>
+  <div
+    className="sc-jTzLTM hujYWL"
+  >
+    <div
+      className="sc-EHOje sLQmq"
+      onMouseDown={[Function]}
+      onMouseUp={[Function]}
+    >
+      <div
+        className="sc-bZQynM elUEiH"
+        color="#fff"
+        onClick={[Function]}
+        style={
+          Object {
+            "margin": "8px",
+            "opacity": 1,
+          }
+        }
+      >
+        <div
+          className="sc-gzVnrw dQuPak"
+        >
+          <div
+            className="sc-htoDjs iCdNOm"
+          >
+            よんく
+          </div>
+          <div
+            className="sc-htoDjs sc-dnqmqq fFBAQp"
+          >
+            ごく
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      className="sc-EHOje sLQmq"
+      onMouseDown={[Function]}
+      onMouseUp={[Function]}
+    >
+      <div
+        className="sc-bZQynM elUEiH"
+        color="#fff"
+        onClick={[Function]}
+        style={
+          Object {
+            "margin": "8px",
+            "opacity": 1,
+          }
+        }
+      >
+        <div
+          className="sc-gzVnrw dQuPak"
+        >
+          <div
+            className="sc-htoDjs iCdNOm"
+          >
+            よんく
+          </div>
+          <div
+            className="sc-htoDjs sc-dnqmqq fFBAQp"
+          >
+            ごく
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      className="sc-EHOje sLQmq"
+      onMouseDown={[Function]}
+      onMouseUp={[Function]}
+    >
+      <div
+        className="sc-bZQynM elUEiH"
+        color="#fff"
+        onClick={[Function]}
+        style={
+          Object {
+            "margin": "8px",
+            "opacity": 1,
+          }
+        }
+      >
+        <div
+          className="sc-gzVnrw dQuPak"
+        >
+          <div
+            className="sc-htoDjs iCdNOm"
+          >
+            よんく
+          </div>
+          <div
+            className="sc-htoDjs sc-dnqmqq fFBAQp"
+          >
+            ごく
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      className="sc-EHOje sLQmq"
+      onMouseDown={[Function]}
+      onMouseUp={[Function]}
+    >
+      <div
+        className="sc-bZQynM elUEiH"
+        color="#fff"
+        onClick={[Function]}
+        style={
+          Object {
+            "margin": "8px",
+            "opacity": 1,
+          }
+        }
+      >
+        <div
+          className="sc-gzVnrw dQuPak"
+        >
+          <div
+            className="sc-htoDjs iCdNOm"
+          >
+            よんく
+          </div>
+          <div
+            className="sc-htoDjs sc-dnqmqq fFBAQp"
+          >
+            ごく
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;

@@ -1,4 +1,4 @@
-import { create } from '../factories';
+import { create } from '@test/factories';
 import {
   AnswerQuestionAction,
   ANSWER_QUESTION_NAME,

@@ -22,8 +22,8 @@ const Container = styled.div`
 
 const KarutaList: React.FC<Props> = ({ karutas, onClickRow }) => (
   <Container>
-    {karutas.map((k, i) => (
-      <Row karuta={k} key={i} onClickRow={onClickRow} data-test={`row-${k.id}`} />
+    {karutas.map(karuta => (
+      <Row karuta={karuta} key={karuta.id} onClickRow={onClickRow} data-test={`row-${karuta.no}`} />
     ))}
   </Container>
 );
