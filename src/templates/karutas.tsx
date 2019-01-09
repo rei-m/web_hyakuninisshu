@@ -19,7 +19,7 @@ const Container = styled.div`
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  margin-top: 24px;
+  margin-top: ${({ theme }) => theme.spacing2x};
 `;
 
 const KarutasPageTemplate: React.FC<Props> = ({ pageContext }) => {
@@ -59,7 +59,7 @@ const KarutasPageTemplate: React.FC<Props> = ({ pageContext }) => {
           description={description}
         />
         <Container>
-          {karuta.no === 50 && <AdTop style={{ marginBottom: appTheme.spacing2x }} />}
+          <AdTop style={{ marginBottom: appTheme.spacing2x }} />
           <KarutaCard karuta={karuta} />
         </Container>
       </Layout>
