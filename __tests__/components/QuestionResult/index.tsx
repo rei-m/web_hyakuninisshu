@@ -2,38 +2,36 @@ import * as ReactTestRenderer from 'react-test-renderer';
 import * as React from 'react';
 import { shallow } from 'enzyme';
 import { create } from '@test/factories';
-import { mockStaticQuery } from '@test/helpers';
-import QuestionResult, { Props } from '@src/components/QuestionResult';
+import { setUpQueryOnce } from '@test/helpers';
+import QuestionResult, { Props, QueryData } from '@src/components/QuestionResult';
 import { Answer } from '@src/types';
 
 describe('<QuestionResult />', () => {
   let baseProps: Props;
 
   beforeEach(() => {
-    mockStaticQuery.mockImplementationOnce(({ render }) =>
-      render({
-        correctImage: {
-          childImageSharp: {
-            fluid: {
-              aspectRatio: 1,
-              sizes: `100 200 300`,
-              src: `correct-base64-encoded-image`,
-              srcSet: `asdfasdf`,
-            },
+    setUpQueryOnce<QueryData>({
+      correctImage: {
+        childImageSharp: {
+          fluid: {
+            aspectRatio: 1,
+            sizes: `100 200 300`,
+            src: `correct-base64-encoded-image`,
+            srcSet: `asdfasdf`,
           },
         },
-        incorrectImage: {
-          childImageSharp: {
-            fluid: {
-              aspectRatio: 1,
-              sizes: `100 200 300`,
-              src: `incorrect-base64-encoded-image`,
-              srcSet: `asdfasdf`,
-            },
+      },
+      incorrectImage: {
+        childImageSharp: {
+          fluid: {
+            aspectRatio: 1,
+            sizes: `100 200 300`,
+            src: `incorrect-base64-encoded-image`,
+            srcSet: `asdfasdf`,
           },
         },
-      })
-    );
+      },
+    });
     baseProps = {
       answer: create<Answer>('answer'),
       onClick: jest.fn(),

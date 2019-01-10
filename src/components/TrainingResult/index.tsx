@@ -12,7 +12,7 @@ export interface Props {
   onClickRestart: () => void;
 }
 
-interface QueryData {
+export interface QueryData {
   trainingResultBGImage: {
     publicURL: string;
   };

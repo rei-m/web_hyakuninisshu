@@ -1,24 +1,22 @@
 import * as ReactTestRenderer from 'react-test-renderer';
 import * as React from 'react';
-import { mockStaticQuery } from '@test/helpers';
-import Dogeza from '@src/components/Dogeza';
+import { setUpQueryOnce } from '@test/helpers';
+import Dogeza, { QueryData } from '@src/components/Dogeza';
 
 describe('<Dogeza />', () => {
   beforeEach(() => {
-    mockStaticQuery.mockImplementationOnce(({ render }) =>
-      render({
-        dogezaImage: {
-          childImageSharp: {
-            fluid: {
-              aspectRatio: 1,
-              sizes: `100 200 300`,
-              src: `dogeza-base64-encoded-image`,
-              srcSet: `asdfasdf`,
-            },
+    setUpQueryOnce<QueryData>({
+      dogezaImage: {
+        childImageSharp: {
+          fluid: {
+            aspectRatio: 1,
+            sizes: `100 200 300`,
+            src: `dogeza-base64-encoded-image`,
+            srcSet: `asdfasdf`,
           },
         },
-      })
-    );
+      },
+    });
   });
 
   it('should render component', () => {

@@ -8,7 +8,7 @@ export interface Props {
   style?: React.CSSProperties;
 }
 
-interface QueryData {
+export interface QueryData {
   karutaImages: {
     edges: Array<{
       node: {
@@ -22,21 +22,7 @@ interface QueryData {
 
 const KarutaImage: React.FC<Props> = ({ karutaNo, style }) => (
   <StaticQuery
-    query={graphql`
-      query {
-        karutaImages: allFile(filter: { relativePath: { regex: "/karuta_....jpg/" } }) {
-          edges {
-            node {
-              childImageSharp {
-                fluid(maxWidth: 200) {
-                  ...GatsbyImageSharpFluid
-                }
-              }
-            }
-          }
-        }
-      }
-    `}
+    query={query}
     render={({ karutaImages }: QueryData) => {
       const karutaImageNo = `00${karutaNo}`.slice(-3);
       const fileName = `karuta_${karutaImageNo}.jpg`;
@@ -56,3 +42,19 @@ const KarutaImage: React.FC<Props> = ({ karutaNo, style }) => (
 );
 
 export default KarutaImage;
+
+const query = graphql`
+  query {
+    karutaImages: allFile(filter: { relativePath: { regex: "/karuta_....jpg/" } }) {
+      edges {
+        node {
+          childImageSharp {
+            fluid(maxWidth: 200) {
+              ...GatsbyImageSharpFluid
+            }
+          }
+        }
+      }
+    }
+  }
+`;

@@ -12,7 +12,7 @@ export interface Props {
   onClickResult: (karuta: Karuta) => void;
 }
 
-interface QueryData {
+export interface QueryData {
   correctImage: {
     childImageSharp: {
       fluid: FluidObject;

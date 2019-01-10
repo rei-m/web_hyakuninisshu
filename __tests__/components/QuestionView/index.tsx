@@ -2,41 +2,41 @@ import * as ReactTestRenderer from 'react-test-renderer';
 import * as React from 'react';
 import { shallow } from 'enzyme';
 import { create } from '@test/factories';
-import { mockStaticQuery, sel } from '@test/helpers';
-import QuestionView, { Props } from '@src/components/QuestionView';
+import { sel, setUpQuery } from '@test/helpers';
+import QuestionView, { Props, QueryData as QuestionViewQueryData } from '@src/components/QuestionView';
+import { QueryData as QuestionResultQueryData } from '@src/components/QuestionResult';
 import { Answer, Question } from '@src/types';
 
 describe('<QuestionView />', () => {
   let baseProps: Props;
 
   beforeEach(() => {
-    mockStaticQuery.mockImplementation(({ render }) =>
-      render({
-        correctImage: {
-          childImageSharp: {
-            fluid: {
-              aspectRatio: 1,
-              sizes: `100 200 300`,
-              src: `correct-base64-encoded-image`,
-              srcSet: `asdfasdf`,
-            },
+    setUpQuery<QuestionViewQueryData & QuestionResultQueryData>({
+      correctImage: {
+        childImageSharp: {
+          fluid: {
+            aspectRatio: 1,
+            sizes: `100 200 300`,
+            src: `correct-base64-encoded-image`,
+            srcSet: `asdfasdf`,
           },
         },
-        incorrectImage: {
-          childImageSharp: {
-            fluid: {
-              aspectRatio: 1,
-              sizes: `100 200 300`,
-              src: `incorrect-base64-encoded-image`,
-              srcSet: `asdfasdf`,
-            },
+      },
+      incorrectImage: {
+        childImageSharp: {
+          fluid: {
+            aspectRatio: 1,
+            sizes: `100 200 300`,
+            src: `incorrect-base64-encoded-image`,
+            srcSet: `asdfasdf`,
           },
         },
-        questionBGImage: {
-          publicURL: '/tatami.png',
-        },
-      })
-    );
+      },
+      questionBGImage: {
+        publicURL: '/tatami.png',
+      },
+    });
+
     baseProps = {
       currentPosition: 1,
       onClickResult: jest.fn(),
