@@ -39,7 +39,7 @@ export interface OwnProps {
 export interface ConnectedProps {
   lastStartedTime?: number;
   questions: Question[];
-  question: Question;
+  question?: Question;
   answer?: Answer;
   answers: Answer[];
   totalCount: number;
@@ -96,6 +96,10 @@ export const TrainingQuestions: React.FC<Props> = ({
     return <ErrorMessage text="指定した条件の歌はありませんでした" />;
   }
 
+  if (question === undefined) {
+    throw new Error('invalid state');
+  }
+
   switch (questionState) {
     case QuestionState.ConfirmCorrect:
       return (
@@ -130,7 +134,7 @@ export const TrainingQuestions: React.FC<Props> = ({
   }
 };
 
-const mapStateToProps = ({ questions }: GlobalState, props: OwnProps): ConnectedProps => {
+export const mapStateToProps = ({ questions }: GlobalState, props: OwnProps): ConnectedProps => {
   const { lastStartedTime, currentIndex, answers, questionState } = questions;
 
   return {
@@ -146,7 +150,7 @@ const mapStateToProps = ({ questions }: GlobalState, props: OwnProps): Connected
   };
 };
 
-const mapDispatchToProps = (dispatch: ThunkDispatch<GlobalState, {}, QuestionsActions>): DispatchProps => ({
+export const mapDispatchToProps = (dispatch: ThunkDispatch<GlobalState, {}, QuestionsActions>): DispatchProps => ({
   onClickGoToNext: () => {
     dispatch(openNextQuestion());
   },
