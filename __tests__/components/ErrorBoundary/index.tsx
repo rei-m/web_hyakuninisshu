@@ -1,24 +1,23 @@
 import * as ReactTestRenderer from 'react-test-renderer';
 import * as React from 'react';
-import { mockStaticQuery } from '@test/helpers';
+import { setUpQueryOnce } from '@test/helpers';
 import ErrorBoundary from '@src/components/ErrorBoundary';
+import { QueryData } from '@src/components/Dogeza';
 
 describe('<ErrorBoundary />', () => {
   beforeEach(() => {
-    mockStaticQuery.mockImplementationOnce(({ render }) =>
-      render({
-        dogezaImage: {
-          childImageSharp: {
-            fluid: {
-              aspectRatio: 1,
-              sizes: `100 200 300`,
-              src: `dogeza-base64-encoded-image`,
-              srcSet: `asdfasdf`,
-            },
+    setUpQueryOnce<QueryData>({
+      dogezaImage: {
+        childImageSharp: {
+          fluid: {
+            aspectRatio: 1,
+            sizes: `100 200 300`,
+            src: `error-base64-encoded-image`,
+            srcSet: `asdfasdf`,
           },
         },
-      })
-    );
+      },
+    });
   });
 
   it('should render children', () => {

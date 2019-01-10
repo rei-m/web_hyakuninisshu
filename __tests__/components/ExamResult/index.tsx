@@ -2,43 +2,40 @@ import * as ReactTestRenderer from 'react-test-renderer';
 import * as React from 'react';
 import { shallow } from 'enzyme';
 import { create } from '@test/factories';
-import { mockStaticQuery, sel } from '@test/helpers';
-import ExamResult, { Props } from '@src/components/ExamResult';
+import { sel, setUpQuery, setUpQueryOnce } from '@test/helpers';
+import ExamResult, { Props, QueryData as ExamResultQueryData } from '@src/components/ExamResult';
+import { QueryData as QuestionResultQueryData } from '@src/components/QuestionResult';
 import { Answer, Question } from '@src/types';
 
 describe('<ExamResult />', () => {
   beforeEach(() => {
-    mockStaticQuery.mockImplementationOnce(({ render }) =>
-      render({
-        examBGImage: {
-          publicURL: '/tatami.png',
-        },
-      })
-    );
-    mockStaticQuery.mockImplementation(({ render }) =>
-      render({
-        correctImage: {
-          childImageSharp: {
-            fluid: {
-              aspectRatio: 1,
-              sizes: `100 200 300`,
-              src: `correct-base64-encoded-image`,
-              srcSet: `asdfasdf`,
-            },
+    setUpQueryOnce<ExamResultQueryData>({
+      examBGImage: {
+        publicURL: '/tatami.png',
+      },
+    });
+    setUpQuery<QuestionResultQueryData>({
+      correctImage: {
+        childImageSharp: {
+          fluid: {
+            aspectRatio: 1,
+            sizes: `100 200 300`,
+            src: `correct-base64-encoded-image`,
+            srcSet: `asdfasdf`,
           },
         },
-        incorrectImage: {
-          childImageSharp: {
-            fluid: {
-              aspectRatio: 1,
-              sizes: `100 200 300`,
-              src: `incorrect-base64-encoded-image`,
-              srcSet: `asdfasdf`,
-            },
+      },
+      incorrectImage: {
+        childImageSharp: {
+          fluid: {
+            aspectRatio: 1,
+            sizes: `100 200 300`,
+            src: `incorrect-base64-encoded-image`,
+            srcSet: `asdfasdf`,
           },
         },
-      })
-    );
+      },
+    });
   });
 
   const questions = [create<Question>('question'), create<Question>('question'), create<Question>('question')];

@@ -1,44 +1,43 @@
 import * as ReactTestRenderer from 'react-test-renderer';
 import * as React from 'react';
 import { create } from '@test/factories';
-import { mockStaticQuery } from '@test/helpers';
+import { setUpQuery } from '@test/helpers';
 import KarutaCard from '@src/components/KarutaCard';
+import { QueryData } from '@src/components/KarutaImage';
 import { Karuta } from '@src/types';
 
 describe('<KarutaCard />', () => {
   beforeEach(() => {
-    mockStaticQuery.mockImplementationOnce(({ render }) =>
-      render({
-        karutaImages: {
-          edges: [
-            {
-              node: {
-                childImageSharp: {
-                  fluid: {
-                    aspectRatio: 1,
-                    sizes: `100 200 300`,
-                    src: `karuta_001.jpg`,
-                    srcSet: `asdfasdf`,
-                  },
+    setUpQuery<QueryData>({
+      karutaImages: {
+        edges: [
+          {
+            node: {
+              childImageSharp: {
+                fluid: {
+                  aspectRatio: 1,
+                  sizes: `100 200 300`,
+                  src: `karuta_001.jpg`,
+                  srcSet: `asdfasdf`,
                 },
               },
             },
-            {
-              node: {
-                childImageSharp: {
-                  fluid: {
-                    aspectRatio: 1,
-                    sizes: `100 200 300`,
-                    src: `karuta_002.jpg`,
-                    srcSet: `asdfasdf`,
-                  },
+          },
+          {
+            node: {
+              childImageSharp: {
+                fluid: {
+                  aspectRatio: 1,
+                  sizes: `100 200 300`,
+                  src: `karuta_002.jpg`,
+                  srcSet: `asdfasdf`,
                 },
               },
             },
-          ],
-        },
-      })
-    );
+          },
+        ],
+      },
+    });
   });
 
   it('should render component when kimariji is short', () => {
