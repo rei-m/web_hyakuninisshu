@@ -3,7 +3,7 @@
 exports[`/exam/question when invalid state should render component 1`] = `
 Array [
   <header
-    className="sc-Rmtcm fIXffC"
+    className="sc-Rmtcm bbSMDR"
   >
     <div
       className="sc-gzVnrw bQtzYg"
@@ -26,7 +26,7 @@ Array [
     </h1>
   </header>,
   <div
-    className="sc-dVhcbM hvRnMT"
+    className="sc-dVhcbM hXVtek"
   >
     <div
       className="sc-caSCKo VAHpk"
@@ -44,7 +44,7 @@ Array [
 exports[`/exam/question when valid state should render component 1`] = `
 Array [
   <header
-    className="sc-Rmtcm fIXffC"
+    className="sc-Rmtcm bbSMDR"
   >
     <div
       className="sc-gzVnrw bQtzYg"
@@ -67,7 +67,7 @@ Array [
     </h1>
   </header>,
   <div
-    className="sc-dVhcbM hvRnMT"
+    className="sc-dVhcbM hXVtek"
   >
     <div
       className="sc-jTzLTM bvhOsg"

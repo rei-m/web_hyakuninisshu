@@ -3,7 +3,7 @@
 exports[`<Layout /> with Navigation should render component 1`] = `
 Array [
   <header
-    className="sc-bwzfXH gGCrXZ"
+    className="sc-bwzfXH ksdvTF"
   >
     <h1
       className="sc-htpNat fxoVCB"
@@ -12,7 +12,7 @@ Array [
     </h1>
   </header>,
   <div
-    className="sc-gzVnrw dnlZFh"
+    className="sc-gzVnrw hzJxWQ"
   >
     test
   </div>,
@@ -130,7 +130,7 @@ Array [
 exports[`<Layout /> without Navigation should render component 1`] = `
 Array [
   <header
-    className="sc-bwzfXH gGCrXZ"
+    className="sc-bwzfXH ksdvTF"
   >
     <h1
       className="sc-htpNat fxoVCB"
@@ -139,7 +139,7 @@ Array [
     </h1>
   </header>,
   <div
-    className="sc-gzVnrw glUbhH"
+    className="sc-gzVnrw eeAPtW"
   >
     test
   </div>,

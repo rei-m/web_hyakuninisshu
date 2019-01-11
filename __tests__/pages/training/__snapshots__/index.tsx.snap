@@ -3,7 +3,7 @@
 exports[`/training should render component 1`] = `
 Array [
   <header
-    className="sc-EHOje iDSNuT"
+    className="sc-EHOje fzNfhc"
   >
     <div
       className="sc-ifAKCX gDXiY"
@@ -26,7 +26,7 @@ Array [
     </h1>
   </header>,
   <div
-    className="sc-gZMcBi gobYat"
+    className="sc-gZMcBi eXxgPw"
   >
     <section
       className="sc-chPdSV gytgom"
