@@ -1,0 +1,249 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`/exam/question when invalid state should render component 1`] = `
+Array [
+  <header
+    className="sc-Rmtcm fIXffC"
+  >
+    <div
+      className="sc-gzVnrw bQtzYg"
+      onMouseDown={[Function]}
+      onMouseUp={[Function]}
+    >
+      <i
+        className="material-icons sc-hzDkRC fJfPcM"
+        color="#fff"
+        data-test="back"
+        onClick={[Function]}
+      >
+        arrow_back
+      </i>
+    </div>
+    <h1
+      className="sc-bRBYWo dNYUOP"
+    >
+      百人一首 - 腕試し -
+    </h1>
+  </header>,
+  <div
+    className="sc-dVhcbM hvRnMT"
+  >
+    <div
+      className="sc-caSCKo VAHpk"
+    >
+      <p
+        className="sc-gisBJw dPUemq"
+      >
+        不正な遷移を行いました。前の画面からやり直してください。
+      </p>
+    </div>
+  </div>,
+]
+`;
+
+exports[`/exam/question when valid state should render component 1`] = `
+Array [
+  <header
+    className="sc-Rmtcm fIXffC"
+  >
+    <div
+      className="sc-gzVnrw bQtzYg"
+      onMouseDown={[Function]}
+      onMouseUp={[Function]}
+    >
+      <i
+        className="material-icons sc-hzDkRC fJfPcM"
+        color="#fff"
+        data-test="back"
+        onClick={[Function]}
+      >
+        arrow_back
+      </i>
+    </div>
+    <h1
+      className="sc-bRBYWo dNYUOP"
+    >
+      百人一首 - 腕試し -
+    </h1>
+  </header>,
+  <div
+    className="sc-dVhcbM hvRnMT"
+  >
+    <div
+      className="sc-jTzLTM bvhOsg"
+    >
+      <div
+        className="sc-fjdhpX bCXXwx"
+      >
+        <div
+          className="sc-cSHVUG kkLwnz"
+        >
+          1
+           / 
+          100
+        </div>
+        <div
+          className="sc-htpNat HBVUT"
+          style={
+            Object {
+              "margin": "auto",
+            }
+          }
+        >
+          <div
+            className="sc-bxivhb hPDDfp"
+          >
+            <div
+              className="sc-ifAKCX bNrXE"
+            >
+              初句
+            </div>
+            <div
+              className="sc-ifAKCX sc-EHOje fLOkGg"
+            >
+              二句
+            </div>
+            <div
+              className="sc-ifAKCX sc-bZQynM cJBCxN"
+            >
+              三句
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        className="sc-jzJRlG hRablJ"
+      >
+        <div
+          className="sc-gzVnrw bQtzYg"
+          onMouseDown={[Function]}
+          onMouseUp={[Function]}
+        >
+          <div
+            className="sc-htoDjs uzWdL"
+            color="#fff"
+            onClick={[Function]}
+            style={
+              Object {
+                "margin": "8px",
+                "opacity": 1,
+              }
+            }
+          >
+            <div
+              className="sc-dnqmqq kveNia"
+            >
+              <div
+                className="sc-iwsKbI TuLDV"
+              >
+                よんく
+              </div>
+              <div
+                className="sc-iwsKbI sc-gZMcBi gcZWDp"
+              >
+                ごく
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          className="sc-gzVnrw bQtzYg"
+          onMouseDown={[Function]}
+          onMouseUp={[Function]}
+        >
+          <div
+            className="sc-htoDjs uzWdL"
+            color="#fff"
+            onClick={[Function]}
+            style={
+              Object {
+                "margin": "8px",
+                "opacity": 1,
+              }
+            }
+          >
+            <div
+              className="sc-dnqmqq kveNia"
+            >
+              <div
+                className="sc-iwsKbI TuLDV"
+              >
+                よんく
+              </div>
+              <div
+                className="sc-iwsKbI sc-gZMcBi gcZWDp"
+              >
+                ごく
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          className="sc-gzVnrw bQtzYg"
+          onMouseDown={[Function]}
+          onMouseUp={[Function]}
+        >
+          <div
+            className="sc-htoDjs uzWdL"
+            color="#fff"
+            onClick={[Function]}
+            style={
+              Object {
+                "margin": "8px",
+                "opacity": 1,
+              }
+            }
+          >
+            <div
+              className="sc-dnqmqq kveNia"
+            >
+              <div
+                className="sc-iwsKbI TuLDV"
+              >
+                よんく
+              </div>
+              <div
+                className="sc-iwsKbI sc-gZMcBi gcZWDp"
+              >
+                ごく
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          className="sc-gzVnrw bQtzYg"
+          onMouseDown={[Function]}
+          onMouseUp={[Function]}
+        >
+          <div
+            className="sc-htoDjs uzWdL"
+            color="#fff"
+            onClick={[Function]}
+            style={
+              Object {
+                "margin": "8px",
+                "opacity": 1,
+              }
+            }
+          >
+            <div
+              className="sc-dnqmqq kveNia"
+            >
+              <div
+                className="sc-iwsKbI TuLDV"
+              >
+                よんく
+              </div>
+              <div
+                className="sc-iwsKbI sc-gZMcBi gcZWDp"
+              >
+                ごく
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>,
+]
+`;

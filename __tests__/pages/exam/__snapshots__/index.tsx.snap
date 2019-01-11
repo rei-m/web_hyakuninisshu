@@ -1,0 +1,214 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`/exam should render component 1`] = `
+Array [
+  <header
+    className="sc-bwzfXH eXYRwP"
+  >
+    <div
+      className="sc-bdVaJa flBAph"
+      onMouseDown={[Function]}
+      onMouseUp={[Function]}
+    >
+      <i
+        className="material-icons sc-bxivhb jrBfKJ"
+        color="#fff"
+        data-test="back"
+        onClick={[Function]}
+      >
+        arrow_back
+      </i>
+    </div>
+    <h1
+      className="sc-htpNat fxoVCB"
+    >
+      百人一首 - 腕試し -
+    </h1>
+  </header>,
+  <div
+    className="sc-gzVnrw dnlZFh"
+  >
+    <section
+      className="sc-fjdhpX gNpQzj"
+    >
+      <h1
+        className="sc-iwsKbI jkmlvZ"
+      >
+        腕試し
+      </h1>
+      <div
+        className="sc-gZMcBi iXZiBx"
+      >
+        <div
+          className="sc-gqjmRU cCYYjG"
+        >
+          この欄は広告枠です
+        </div>
+      </div>
+      <div
+        className="sc-jzJRlG kwxYRR"
+      >
+        全百首からランダムに出題されます。
+        <br />
+        練習の成果を確認しましょう。
+      </div>
+      <button
+        className="MuiButtonBase-root-32 MuiButton-root-6 MuiButton-outlined-14 Component-button-1 Component-primaryButton-3"
+        disabled={false}
+        onBlur={[Function]}
+        onClick={[Function]}
+        onContextMenu={[Function]}
+        onFocus={[Function]}
+        onKeyDown={[Function]}
+        onKeyUp={[Function]}
+        onMouseDown={[Function]}
+        onMouseLeave={[Function]}
+        onMouseUp={[Function]}
+        onTouchEnd={[Function]}
+        onTouchMove={[Function]}
+        onTouchStart={[Function]}
+        style={
+          Object {
+            "marginBottom": "16px",
+            "marginTop": "32px",
+          }
+        }
+        tabIndex="0"
+        type="button"
+      >
+        <span
+          className="MuiButton-label-7"
+        >
+          <span
+            aria-hidden="true"
+            className="material-icons MuiIcon-root-35 MuiIcon-fontSizeSmall-42 Component-primaryIcon-5"
+          >
+            edit
+          </span>
+          腕試しをはじめる
+        </span>
+        <span
+          className="MuiTouchRipple-root-44"
+        />
+      </button>
+      <div
+        className="sc-VigVT ieiGAu"
+      >
+        <div
+          className="sc-jTzLTM ljXwZC"
+        >
+          この欄は広告枠です
+        </div>
+      </div>
+    </section>
+  </div>,
+  <nav
+    className="sc-EHOje extRj"
+  >
+    <span
+      className="sc-bZQynM jmnWoK"
+    >
+      <div
+        className="sc-bdVaJa flBAph"
+        onMouseDown={[Function]}
+        onMouseUp={[Function]}
+      >
+        <a
+          color="#fff"
+          href="/training"
+          style={
+            Object {
+              "height": "100%",
+              "width": "100%",
+            }
+          }
+        >
+          <i
+            className="material-icons sc-ifAKCX hrwKKP"
+          >
+            create
+          </i>
+        </a>
+      </div>
+    </span>
+    <span
+      className="sc-bZQynM jmnWoK"
+    >
+      <div
+        className="sc-bdVaJa flBAph"
+        onMouseDown={[Function]}
+        onMouseUp={[Function]}
+      >
+        <a
+          color="#fff"
+          href="/exam"
+          style={
+            Object {
+              "height": "100%",
+              "width": "100%",
+            }
+          }
+        >
+          <i
+            className="material-icons sc-ifAKCX bHYFek"
+          >
+            note
+          </i>
+        </a>
+      </div>
+    </span>
+    <span
+      className="sc-bZQynM jmnWoK"
+    >
+      <div
+        className="sc-bdVaJa flBAph"
+        onMouseDown={[Function]}
+        onMouseUp={[Function]}
+      >
+        <a
+          color="#fff"
+          href="/karutas"
+          style={
+            Object {
+              "height": "100%",
+              "width": "100%",
+            }
+          }
+        >
+          <i
+            className="material-icons sc-ifAKCX ihzbNI"
+          >
+            library_books
+          </i>
+        </a>
+      </div>
+    </span>
+    <span
+      className="sc-bZQynM jmnWoK"
+    >
+      <div
+        className="sc-bdVaJa flBAph"
+        onMouseDown={[Function]}
+        onMouseUp={[Function]}
+      >
+        <a
+          color="#fff"
+          href="/about"
+          style={
+            Object {
+              "height": "100%",
+              "width": "100%",
+            }
+          }
+        >
+          <i
+            className="material-icons sc-ifAKCX jzZElc"
+          >
+            settings
+          </i>
+        </a>
+      </div>
+    </span>
+  </nav>,
+]
+`;

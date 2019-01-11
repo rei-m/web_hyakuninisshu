@@ -30,7 +30,7 @@ export interface LocationState {
 
 const ExamQuestionPage: React.FC<Props> = ({ data, location }) => {
   const karutas = data.allKaruta.edges.map(karutaData => JSON.parse(karutaData.node.internal.content) as Karuta);
-  const state: LocationState | undefined = location!.state;
+  const state: LocationState | undefined = location ? location.state : undefined;
   const title = `百人一首 - 腕試し -`;
   const description = '百人一首の暗記を練習できます。百首覚えられているかチャレンジしましょう。';
   const onClickBack = () => {
