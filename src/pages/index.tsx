@@ -118,13 +118,9 @@ const linkStyles = {
   padding: '16px',
 };
 
-const onClickBack = () => {
-  return;
-};
-
 const IndexPage: React.FC<Props> = ({ data }) => (
   <ErrorBoundary>
-    <Layout title={data.site.siteMetadata.title} canBack={false} isDisplayNav={true} onClickBack={onClickBack}>
+    <Layout title={data.site.siteMetadata.title} isDisplayNav={true}>
       <SEO
         title={data.site.siteMetadata.title}
         keywords={[`百人一首`, `小倉百人一首`, `歌`, `一覧`, `意味`, `歌番号`, `暗記`, `練習`]}

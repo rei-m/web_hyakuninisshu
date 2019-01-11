@@ -3,8 +3,22 @@
 exports[`<Layout /> with Navigation should render component 1`] = `
 Array [
   <header
-    className="sc-bwzfXH ksdvTF"
+    className="sc-bwzfXH geYBAS"
   >
+    <div
+      className="sc-bdVaJa flBAph"
+      onMouseDown={[Function]}
+      onMouseUp={[Function]}
+    >
+      <i
+        className="material-icons sc-bxivhb jrBfKJ"
+        color="#fff"
+        data-test="back"
+        onClick={[MockFunction]}
+      >
+        arrow_back
+      </i>
+    </div>
     <h1
       className="sc-htpNat fxoVCB"
     >
@@ -130,8 +144,22 @@ Array [
 exports[`<Layout /> without Navigation should render component 1`] = `
 Array [
   <header
-    className="sc-bwzfXH ksdvTF"
+    className="sc-bwzfXH geYBAS"
   >
+    <div
+      className="sc-bdVaJa flBAph"
+      onMouseDown={[Function]}
+      onMouseUp={[Function]}
+    >
+      <i
+        className="material-icons sc-bxivhb jrBfKJ"
+        color="#fff"
+        data-test="back"
+        onClick={[MockFunction]}
+      >
+        arrow_back
+      </i>
+    </div>
     <h1
       className="sc-htpNat fxoVCB"
     >

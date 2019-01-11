@@ -6,10 +6,9 @@ import { MenuType } from '@src/enums';
 
 export interface Props {
   title: string;
-  canBack: boolean;
   currentMenuType?: MenuType;
   isDisplayNav: boolean;
-  onClickBack: () => void;
+  onClickBack?: () => void;
 }
 
 type BodyProps = Pick<Props, 'isDisplayNav'>;
@@ -27,9 +26,9 @@ export const Body = styled.div<BodyProps>`
   }
 `;
 
-const Layout: React.FC<Props> = ({ title, canBack, children, onClickBack, isDisplayNav, currentMenuType }) => (
+const Layout: React.FC<Props> = ({ title, children, onClickBack, isDisplayNav, currentMenuType }) => (
   <>
-    <Header title={title} canBack={canBack} onClickBack={onClickBack} />
+    <Header title={title} onClickBack={onClickBack} />
     <Body isDisplayNav={isDisplayNav}>{children}</Body>
     {isDisplayNav && <Navigation currentMenuType={currentMenuType} />}
   </>

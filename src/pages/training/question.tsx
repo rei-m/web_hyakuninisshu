@@ -53,13 +53,7 @@ const TrainingQuestionPage: React.FC<Props> = ({ data, location }) => {
 
   return (
     <ErrorBoundary>
-      <Layout
-        title={title}
-        canBack={true}
-        isDisplayNav={false}
-        currentMenuType={MenuType.Training}
-        onClickBack={onClickBack}
-      >
+      <Layout title={title} isDisplayNav={false} currentMenuType={MenuType.Training} onClickBack={onClickBack}>
         <SEO
           title={title}
           keywords={[`百人一首`, `小倉百人一首`, `歌`, `一覧`, `意味`, `歌番号`, `暗記`, `練習`]}

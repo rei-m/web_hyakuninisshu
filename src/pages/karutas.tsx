@@ -41,13 +41,7 @@ const KarutasPage: React.FC<Props> = ({ data }) => {
 
   return (
     <ErrorBoundary>
-      <Layout
-        title={title}
-        canBack={true}
-        isDisplayNav={true}
-        currentMenuType={MenuType.Material}
-        onClickBack={onClickBack}
-      >
+      <Layout title={title} isDisplayNav={true} currentMenuType={MenuType.Material} onClickBack={onClickBack}>
         <SEO
           title={title}
           keywords={[`百人一首`, `小倉百人一首`, `歌`, `一覧`, `意味`, `歌番号`, `暗記`, `練習`]}

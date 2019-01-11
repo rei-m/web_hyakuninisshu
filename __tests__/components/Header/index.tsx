@@ -9,7 +9,6 @@ describe('<Header />', () => {
 
   beforeEach(() => {
     baseProps = {
-      canBack: false,
       onClickBack: jest.fn(),
       title: 'This is title',
     };

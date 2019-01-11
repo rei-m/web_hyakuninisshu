@@ -4,13 +4,10 @@ import { withRipple } from '@src/enhancers/withRipple';
 
 export interface Props {
   title: string;
-  canBack: boolean;
-  onClickBack: () => void;
+  onClickBack?: () => void;
 }
 
-type RootProps = Pick<Props, 'canBack'>;
-
-const Container = styled.header<RootProps>`
+const Container = styled.header<{ canBack: boolean }>`
   box-shadow: ${({ theme }) => theme.elevationShadow1x};
   left: 0;
   right: 0;
@@ -46,9 +43,9 @@ const Icon = withRipple(styled.i`
   }
 `);
 
-const Header: React.FC<Props> = ({ title, canBack, onClickBack }) => (
-  <Container canBack={canBack}>
-    {canBack && (
+const Header: React.FC<Props> = ({ title, onClickBack }) => (
+  <Container canBack={!!onClickBack}>
+    {!!onClickBack && (
       <Icon className="material-icons" onClick={onClickBack} data-test="back">
         arrow_back
       </Icon>
