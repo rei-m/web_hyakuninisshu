@@ -2,7 +2,7 @@
 
 exports[`<Header /> should render component when can back 1`] = `
 <header
-  className="sc-bwzfXH eXYRwP"
+  className="sc-bwzfXH geYBAS"
 >
   <div
     className="sc-bdVaJa flBAph"
@@ -28,7 +28,7 @@ exports[`<Header /> should render component when can back 1`] = `
 
 exports[`<Header /> should render component when can not back 1`] = `
 <header
-  className="sc-bwzfXH gGCrXZ"
+  className="sc-bwzfXH ksdvTF"
 >
   <h1
     className="sc-htpNat fxoVCB"

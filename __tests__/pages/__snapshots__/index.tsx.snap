@@ -3,7 +3,7 @@
 exports[`/ should render component 1`] = `
 Array [
   <header
-    className="sc-bwzfXH gGCrXZ"
+    className="sc-bwzfXH ksdvTF"
   >
     <h1
       className="sc-htpNat fxoVCB"
@@ -12,7 +12,7 @@ Array [
     </h1>
   </header>,
   <div
-    className="sc-gzVnrw dnlZFh"
+    className="sc-gzVnrw hzJxWQ"
   >
     <div
       className="sc-fjdhpX gNyWJC"
