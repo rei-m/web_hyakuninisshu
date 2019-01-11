@@ -9,7 +9,7 @@ export interface Props {
   onClick: () => void;
 }
 
-interface QueryData {
+export interface QueryData {
   correctImage: {
     childImageSharp: {
       fluid: FluidObject;

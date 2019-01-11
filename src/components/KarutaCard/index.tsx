@@ -51,12 +51,14 @@ const KimarijiRow: React.FC<Karuta> = ({ kimariji, firstKana, secondKana, thirdK
   return modKimariji >= 0 ? (
     <ItemValue>
       <Kimariji>{firstKana.slice(0, kimariji)}</Kimariji>
-      {`${firstKana.slice(kimariji - firstKana.length)} ${secondKana} ${thirdKana}`}
+      {modKimariji > 0
+        ? `${firstKana.slice(kimariji - firstKana.length)} ${secondKana} ${thirdKana}`
+        : ` ${secondKana} ${thirdKana}`}
     </ItemValue>
   ) : (
     <ItemValue>
       <Kimariji>{`${firstKana} ${secondKana.slice(0, modKimariji * -1)}`}</Kimariji>
-      {`${secondKana.slice(modKimariji)} ${thirdKana}`}
+      {`${secondKana.slice(modKimariji * -1)} ${thirdKana}`}
     </ItemValue>
   );
 };

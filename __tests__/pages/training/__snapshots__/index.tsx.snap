@@ -1,0 +1,536 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`/training should render component 1`] = `
+Array [
+  <header
+    className="sc-EHOje iDSNuT"
+  >
+    <div
+      className="sc-ifAKCX gDXiY"
+      onMouseDown={[Function]}
+      onMouseUp={[Function]}
+    >
+      <i
+        className="material-icons sc-gzVnrw frDxzG"
+        color="#fff"
+        data-test="back"
+        onClick={[Function]}
+      >
+        arrow_back
+      </i>
+    </div>
+    <h1
+      className="sc-bZQynM cSHetA"
+    >
+      百人一首 - 練習 -
+    </h1>
+  </header>,
+  <div
+    className="sc-gZMcBi gobYat"
+  >
+    <section
+      className="sc-chPdSV gytgom"
+    >
+      <h1
+        className="sc-jTzLTM fIzVOw"
+      >
+        出題設定
+      </h1>
+      <div
+        className="sc-fjdhpX QChbQ"
+      >
+        <div
+          className="sc-jzJRlG hmtsxu"
+        >
+          この欄は広告枠です
+        </div>
+      </div>
+      <div
+        className="sc-kgoBCf djnryy"
+      >
+        <form
+          onReset={[Function]}
+          onSubmit={[Function]}
+        >
+          <div
+            className="MuiFormControl-root-3 Component-formControl-1"
+            style={
+              Object {
+                "marginBottom": "16px",
+              }
+            }
+          >
+            <label
+              className="sc-bwzfXH jjTplH"
+            >
+              出題範囲
+            </label>
+            <div
+              className="sc-bdVaJa grbsvW"
+            >
+              <div
+                className="MuiInputBase-root-27 MuiInput-root-14 MuiInput-underline-18 MuiInputBase-formControl-28 MuiInput-formControl-15 Component-select-2"
+                onClick={[Function]}
+              >
+                <div
+                  className="MuiSelect-root-7"
+                >
+                  <div
+                    aria-haspopup="true"
+                    aria-pressed="false"
+                    className="MuiSelect-select-8 MuiSelect-selectMenu-11 MuiInputBase-input-37 MuiInput-input-22"
+                    onBlur={[Function]}
+                    onClick={[Function]}
+                    onFocus={[Function]}
+                    onKeyDown={[Function]}
+                    role="button"
+                    tabIndex={0}
+                  >
+                    一番
+                  </div>
+                  <input
+                    id="id-range-from"
+                    name="rangeFrom"
+                    type="hidden"
+                    value="1"
+                  />
+                  <svg
+                    aria-hidden="true"
+                    className="MuiSvgIcon-root-44 MuiSelect-icon-13"
+                    focusable="false"
+                    role="presentation"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      d="M7 10l5 5 5-5z"
+                    />
+                  </svg>
+                </div>
+              </div>
+              <span
+                className="sc-htpNat dDpdjb"
+              >
+                〜
+              </span>
+              <div
+                className="MuiInputBase-root-27 MuiInput-root-14 MuiInput-underline-18 MuiInputBase-formControl-28 MuiInput-formControl-15 Component-select-2"
+                onClick={[Function]}
+              >
+                <div
+                  className="MuiSelect-root-7"
+                >
+                  <div
+                    aria-haspopup="true"
+                    aria-pressed="false"
+                    className="MuiSelect-select-8 MuiSelect-selectMenu-11 MuiInputBase-input-37 MuiInput-input-22"
+                    onBlur={[Function]}
+                    onClick={[Function]}
+                    onFocus={[Function]}
+                    onKeyDown={[Function]}
+                    role="button"
+                    tabIndex={0}
+                  >
+                    百番
+                  </div>
+                  <input
+                    id="id-range-to"
+                    name="rangeTo"
+                    type="hidden"
+                    value="100"
+                  />
+                  <svg
+                    aria-hidden="true"
+                    className="MuiSvgIcon-root-44 MuiSelect-icon-13"
+                    focusable="false"
+                    role="presentation"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      d="M7 10l5 5 5-5z"
+                    />
+                  </svg>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            className="MuiFormControl-root-3 Component-formControl-57"
+            style={
+              Object {
+                "marginBottom": "16px",
+              }
+            }
+          >
+            <label
+              className="MuiFormLabel-root-71 MuiFormLabel-filled-75 MuiInputLabel-root-60 MuiInputLabel-formControl-65 MuiInputLabel-animated-68 MuiInputLabel-shrink-67 Component-label-58"
+              data-shrink={true}
+              htmlFor="id-kimariji"
+            >
+              決まり字
+            </label>
+            <div
+              className="MuiInputBase-root-27 MuiInput-root-14 MuiInput-underline-18 MuiInputBase-formControl-28 MuiInput-formControl-15 Component-select-59"
+              onClick={[Function]}
+            >
+              <div
+                className="MuiSelect-root-7"
+              >
+                <div
+                  aria-haspopup="true"
+                  aria-pressed="false"
+                  className="MuiSelect-select-8 MuiSelect-selectMenu-11 MuiInputBase-input-37 MuiInput-input-22"
+                  onBlur={[Function]}
+                  onClick={[Function]}
+                  onFocus={[Function]}
+                  onKeyDown={[Function]}
+                  role="button"
+                  tabIndex={0}
+                >
+                  指定しない
+                </div>
+                <input
+                  id="id-kimariji"
+                  name="kimariji"
+                  type="hidden"
+                  value="0"
+                />
+                <svg
+                  aria-hidden="true"
+                  className="MuiSvgIcon-root-44 MuiSelect-icon-13"
+                  focusable="false"
+                  role="presentation"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    d="M7 10l5 5 5-5z"
+                  />
+                </svg>
+              </div>
+            </div>
+          </div>
+          <div
+            className="MuiFormControl-root-3 Component-formControl-57"
+            style={
+              Object {
+                "marginBottom": "16px",
+              }
+            }
+          >
+            <label
+              className="MuiFormLabel-root-71 MuiFormLabel-filled-75 MuiInputLabel-root-60 MuiInputLabel-formControl-65 MuiInputLabel-animated-68 MuiInputLabel-shrink-67 Component-label-58"
+              data-shrink={true}
+              htmlFor="id-color"
+            >
+              五色
+            </label>
+            <div
+              className="MuiInputBase-root-27 MuiInput-root-14 MuiInput-underline-18 MuiInputBase-formControl-28 MuiInput-formControl-15 Component-select-59"
+              onClick={[Function]}
+            >
+              <div
+                className="MuiSelect-root-7"
+              >
+                <div
+                  aria-haspopup="true"
+                  aria-pressed="false"
+                  className="MuiSelect-select-8 MuiSelect-selectMenu-11 MuiInputBase-input-37 MuiInput-input-22"
+                  onBlur={[Function]}
+                  onClick={[Function]}
+                  onFocus={[Function]}
+                  onKeyDown={[Function]}
+                  role="button"
+                  tabIndex={0}
+                >
+                  指定しない
+                </div>
+                <input
+                  id="id-color"
+                  name="color"
+                  type="hidden"
+                  value="none"
+                />
+                <svg
+                  aria-hidden="true"
+                  className="MuiSvgIcon-root-44 MuiSelect-icon-13"
+                  focusable="false"
+                  role="presentation"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    d="M7 10l5 5 5-5z"
+                  />
+                </svg>
+              </div>
+            </div>
+          </div>
+          <div
+            className="MuiFormControl-root-3 Component-formControl-57"
+            style={
+              Object {
+                "marginBottom": "16px",
+              }
+            }
+          >
+            <label
+              className="MuiFormLabel-root-71 MuiFormLabel-filled-75 MuiInputLabel-root-60 MuiInputLabel-formControl-65 MuiInputLabel-animated-68 MuiInputLabel-shrink-67 Component-label-58"
+              data-shrink={true}
+              htmlFor="id-kamiNoKuStyle"
+            >
+              上の句
+            </label>
+            <div
+              className="MuiInputBase-root-27 MuiInput-root-14 MuiInput-underline-18 MuiInputBase-formControl-28 MuiInput-formControl-15 Component-select-59"
+              onClick={[Function]}
+            >
+              <div
+                className="MuiSelect-root-7"
+              >
+                <div
+                  aria-haspopup="true"
+                  aria-pressed="false"
+                  className="MuiSelect-select-8 MuiSelect-selectMenu-11 MuiInputBase-input-37 MuiInput-input-22"
+                  onBlur={[Function]}
+                  onClick={[Function]}
+                  onFocus={[Function]}
+                  onKeyDown={[Function]}
+                  role="button"
+                  tabIndex={0}
+                >
+                  漢字と仮名で表示
+                </div>
+                <input
+                  id="id-kamiNoKuStyle"
+                  name="kamiNoKuStyle"
+                  type="hidden"
+                  value="0"
+                />
+                <svg
+                  aria-hidden="true"
+                  className="MuiSvgIcon-root-44 MuiSelect-icon-13"
+                  focusable="false"
+                  role="presentation"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    d="M7 10l5 5 5-5z"
+                  />
+                </svg>
+              </div>
+            </div>
+          </div>
+          <div
+            className="MuiFormControl-root-3 Component-formControl-57"
+            style={
+              Object {
+                "marginBottom": "16px",
+              }
+            }
+          >
+            <label
+              className="MuiFormLabel-root-71 MuiFormLabel-filled-75 MuiInputLabel-root-60 MuiInputLabel-formControl-65 MuiInputLabel-animated-68 MuiInputLabel-shrink-67 Component-label-58"
+              data-shrink={true}
+              htmlFor="id-shimoNoKuStyle"
+            >
+              下の句
+            </label>
+            <div
+              className="MuiInputBase-root-27 MuiInput-root-14 MuiInput-underline-18 MuiInputBase-formControl-28 MuiInput-formControl-15 Component-select-59"
+              onClick={[Function]}
+            >
+              <div
+                className="MuiSelect-root-7"
+              >
+                <div
+                  aria-haspopup="true"
+                  aria-pressed="false"
+                  className="MuiSelect-select-8 MuiSelect-selectMenu-11 MuiInputBase-input-37 MuiInput-input-22"
+                  onBlur={[Function]}
+                  onClick={[Function]}
+                  onFocus={[Function]}
+                  onKeyDown={[Function]}
+                  role="button"
+                  tabIndex={0}
+                >
+                  すべて仮名で表示
+                </div>
+                <input
+                  id="id-shimoNoKuStyle"
+                  name="shimoNoKuStyle"
+                  type="hidden"
+                  value="1"
+                />
+                <svg
+                  aria-hidden="true"
+                  className="MuiSvgIcon-root-44 MuiSelect-icon-13"
+                  focusable="false"
+                  role="presentation"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    d="M7 10l5 5 5-5z"
+                  />
+                </svg>
+              </div>
+            </div>
+          </div>
+          <button
+            className="MuiButtonBase-root-109 MuiButton-root-83 MuiButton-outlined-91 Component-button-78 Component-primaryButton-80"
+            disabled={false}
+            onBlur={[Function]}
+            onClick={[Function]}
+            onContextMenu={[Function]}
+            onFocus={[Function]}
+            onKeyDown={[Function]}
+            onKeyUp={[Function]}
+            onMouseDown={[Function]}
+            onMouseLeave={[Function]}
+            onMouseUp={[Function]}
+            onTouchEnd={[Function]}
+            onTouchMove={[Function]}
+            onTouchStart={[Function]}
+            style={
+              Object {
+                "marginTop": "32px",
+              }
+            }
+            tabIndex="0"
+            type="button"
+          >
+            <span
+              className="MuiButton-label-84"
+            >
+              <span
+                aria-hidden="true"
+                className="material-icons MuiIcon-root-112 MuiIcon-fontSizeSmall-119 Component-primaryIcon-82"
+              >
+                edit
+              </span>
+              練習をはじめる
+            </span>
+            <span
+              className="MuiTouchRipple-root-121"
+            />
+          </button>
+        </form>
+      </div>
+      <div
+        className="sc-cSHVUG lopQnD"
+      >
+        <div
+          className="sc-kAzzGY dTlPEQ"
+        >
+          この欄は広告枠です
+        </div>
+      </div>
+    </section>
+  </div>,
+  <nav
+    className="sc-dnqmqq hTWAOb"
+  >
+    <span
+      className="sc-iwsKbI gEZdpE"
+    >
+      <div
+        className="sc-ifAKCX gDXiY"
+        onMouseDown={[Function]}
+        onMouseUp={[Function]}
+      >
+        <a
+          color="#fff"
+          href="/training"
+          style={
+            Object {
+              "height": "100%",
+              "width": "100%",
+            }
+          }
+        >
+          <i
+            className="material-icons sc-htoDjs dEepJM"
+          >
+            create
+          </i>
+        </a>
+      </div>
+    </span>
+    <span
+      className="sc-iwsKbI gEZdpE"
+    >
+      <div
+        className="sc-ifAKCX gDXiY"
+        onMouseDown={[Function]}
+        onMouseUp={[Function]}
+      >
+        <a
+          color="#fff"
+          href="/exam"
+          style={
+            Object {
+              "height": "100%",
+              "width": "100%",
+            }
+          }
+        >
+          <i
+            className="material-icons sc-htoDjs NoVcW"
+          >
+            note
+          </i>
+        </a>
+      </div>
+    </span>
+    <span
+      className="sc-iwsKbI gEZdpE"
+    >
+      <div
+        className="sc-ifAKCX gDXiY"
+        onMouseDown={[Function]}
+        onMouseUp={[Function]}
+      >
+        <a
+          color="#fff"
+          href="/karutas"
+          style={
+            Object {
+              "height": "100%",
+              "width": "100%",
+            }
+          }
+        >
+          <i
+            className="material-icons sc-htoDjs jvjqPK"
+          >
+            library_books
+          </i>
+        </a>
+      </div>
+    </span>
+    <span
+      className="sc-iwsKbI gEZdpE"
+    >
+      <div
+        className="sc-ifAKCX gDXiY"
+        onMouseDown={[Function]}
+        onMouseUp={[Function]}
+      >
+        <a
+          color="#fff"
+          href="/about"
+          style={
+            Object {
+              "height": "100%",
+              "width": "100%",
+            }
+          }
+        >
+          <i
+            className="material-icons sc-htoDjs eFmGnn"
+          >
+            settings
+          </i>
+        </a>
+      </div>
+    </span>
+  </nav>,
+]
+`;

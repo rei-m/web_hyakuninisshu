@@ -1,9 +1,10 @@
 import * as ReactTestRenderer from 'react-test-renderer';
 import * as React from 'react';
+import NotFound from '@src/pages/404';
 import { setUpQueryOnce } from '@test/helpers';
-import Dogeza, { QueryData } from '@src/components/Dogeza';
+import { QueryData } from '@src/components/Dogeza';
 
-describe('<Dogeza />', () => {
+describe('/404', () => {
   beforeEach(() => {
     setUpQueryOnce<QueryData>({
       dogezaImage: {
@@ -20,7 +21,7 @@ describe('<Dogeza />', () => {
   });
 
   it('should render component', () => {
-    const renderer = ReactTestRenderer.create(<Dogeza alt="test" />);
+    const renderer = ReactTestRenderer.create(<NotFound />);
     expect(renderer.toJSON()).toMatchSnapshot();
   });
 });

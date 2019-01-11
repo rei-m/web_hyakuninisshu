@@ -1,0 +1,1295 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`/ should render component 1`] = `
+Array [
+  <header
+    className="sc-bwzfXH gGCrXZ"
+  >
+    <h1
+      className="sc-htpNat fxoVCB"
+    >
+      index title
+    </h1>
+  </header>,
+  <div
+    className="sc-gzVnrw dnlZFh"
+  >
+    <div
+      className="sc-fjdhpX gNyWJC"
+    >
+      <section
+        className="sc-jzJRlG fsWdXU"
+      >
+        <h1
+          className="sc-cSHVUG eJSQJf"
+        >
+          百人一首 簡単に暗記について
+        </h1>
+        <div
+          className="sc-kAzzGY hkVRDm"
+        >
+          <p>
+            このサイトは百人一首を手軽に暗記するためのサイトです。4択のクイズ形式で繰り返し練習することで効率よく百人一首を覚えることが出来ます。
+          </p>
+        </div>
+      </section>
+      <div
+        className="sc-iwsKbI hDfyDa"
+      >
+        <div
+          className="sc-gZMcBi eXoTgE"
+        >
+          この欄は広告枠です
+        </div>
+      </div>
+      <section
+        className="sc-jzJRlG fsWdXU"
+      >
+        <h1
+          className="sc-cSHVUG eJSQJf"
+        >
+          メニュー
+        </h1>
+        <div
+          className="sc-kAzzGY hkVRDm"
+        >
+          <p>
+            百人一首の練習は詠み札に対応する下の句を四択の中から選ぶクイズ形式となっています。繰り返し練習して百人一首のスタートに立ちましょう。
+          </p>
+        </div>
+        <div
+          className="sc-chPdSV frOwXj"
+        >
+          <div
+            className="sc-kgoBCf izmJrf"
+          >
+            <div
+              className="sc-bdVaJa flBAph"
+              onMouseDown={[Function]}
+              onMouseUp={[Function]}
+            >
+              <a
+                color="#fff"
+                href="/training"
+                style={
+                  Object {
+                    ":hover": Object {
+                      "textDecoration": "none",
+                    },
+                    "display": "inline-block",
+                    "height": "100%",
+                    "padding": "16px",
+                  }
+                }
+              >
+                <i
+                  className="material-icons sc-jTzLTM kYcuvX"
+                >
+                  create
+                </i>
+                <div
+                  className="title"
+                >
+                  練習
+                </div>
+                <p
+                  className="text"
+                >
+                  様々な条件を組み合わせて出題範囲を指定できます。ご自身の習熟度に合わせて効率よく練習できます。
+                </p>
+              </a>
+            </div>
+          </div>
+          <div
+            className="sc-kgoBCf izmJrf"
+          >
+            <div
+              className="sc-bdVaJa flBAph"
+              onMouseDown={[Function]}
+              onMouseUp={[Function]}
+            >
+              <a
+                color="#fff"
+                href="/exam"
+                style={
+                  Object {
+                    ":hover": Object {
+                      "textDecoration": "none",
+                    },
+                    "display": "inline-block",
+                    "height": "100%",
+                    "padding": "16px",
+                  }
+                }
+              >
+                <i
+                  className="material-icons sc-jTzLTM kYcuvX"
+                >
+                  note
+                </i>
+                <div
+                  className="title"
+                >
+                  腕試し
+                </div>
+                <p
+                  className="text"
+                >
+                  自身のある方は腕試しに挑戦しましょう。百首通しでランダムに出題されます。
+                </p>
+              </a>
+            </div>
+          </div>
+          <div
+            className="sc-kgoBCf izmJrf"
+          >
+            <div
+              className="sc-bdVaJa flBAph"
+              onMouseDown={[Function]}
+              onMouseUp={[Function]}
+            >
+              <a
+                color="#fff"
+                href="/karutas"
+                style={
+                  Object {
+                    ":hover": Object {
+                      "textDecoration": "none",
+                    },
+                    "display": "inline-block",
+                    "height": "100%",
+                    "padding": "16px",
+                  }
+                }
+              >
+                <i
+                  className="material-icons sc-jTzLTM kYcuvX"
+                >
+                  library_books
+                </i>
+                <div
+                  className="title"
+                >
+                  資料
+                </div>
+                <p
+                  className="text"
+                >
+                  百人一首の詳細な情報を閲覧できます。決まり字や歌の現代語訳などを確認することができます。
+                </p>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+      <div
+        className="sc-gqjmRU dIdbVO"
+      >
+        <div
+          className="sc-VigVT cYoXur"
+        >
+          この欄は広告枠です
+        </div>
+      </div>
+      <section
+        className="sc-jzJRlG fsWdXU"
+      >
+        <h1
+          className="sc-cSHVUG eJSQJf"
+        >
+          百人一首とは
+        </h1>
+        <div
+          className="sc-kAzzGY hkVRDm"
+        >
+          <p>
+            百人一首とは、100人の歌人の和歌を1人1首づつ選んだ歌集のことで、藤原定家が選んだ小倉百人一首が広く知られています。
+            <br />
+            現代では詠み札と取り札に別れたかるたとしての知名度が高く、散らし取り、坊主めくりなどといった遊戯や競技かるたのように札取りを競い合うスポーツもあり、幅広く親しまれています。 百首覚えたあとは色々な遊び方を探してみてはいかがでしょうか。
+          </p>
+        </div>
+      </section>
+      <section
+        className="sc-jzJRlG fsWdXU"
+      >
+        <h1
+          className="sc-cSHVUG eJSQJf"
+        >
+          百人一首の用語について
+        </h1>
+        <div
+          className="sc-kAzzGY hkVRDm"
+        >
+          <dl>
+            <dt>
+              決まり字
+            </dt>
+            <dd>
+              歌を上の句の最初から読んでいき、その文字が読まれたら、その歌が、どの一首なのかが決まるところの文字をいいます。
+              <br />
+              例えば「村雨の 露もまだひぬ 槇の葉に 霧たちのぼる 秋の夕ぐれ」という歌がありますが、百首のなかで「む」で始まる歌はこの歌しかないので、この歌の決まり字は一字決まりとなります。
+            </dd>
+            <dt>
+              上の句
+            </dt>
+            <dd>
+              歌は五七五七七七の五つの句で構成されており、その前半の五七五の部分のこと。かるた遊びをする際は詠み札となる。
+            </dd>
+            <dt>
+              下の句
+            </dt>
+            <dd>
+              歌は五七五七七七の五つの句で構成されており、その後半の七七の部分のこと。かるた遊びでは取り札となる。
+            </dd>
+          </dl>
+        </div>
+      </section>
+      <section
+        className="sc-jzJRlG fsWdXU"
+      >
+        <h1
+          className="sc-cSHVUG eJSQJf"
+        >
+          競技かるたについて
+        </h1>
+        <div
+          className="sc-kAzzGY hkVRDm"
+        >
+          <p>
+            小倉百人一首を用いて行う競技です。百人一首というと畳の上で穏やかに遊ぶ印象がありますが、競技かるたはハードなスポーツに近いです。
+            <br />
+            詠み上げた上の句に対応する下の句の札を取るという基本的なルールは普通のかるた遊びと共通していますが、取った枚数を競いはしません。
+            <br />
+            百首のなかから50首が選ばれ、選ばれた歌の取り札が自陣と敵陣にそれぞれ分配されます。競技かるたの試合はこの自陣の札を空にすることで勝利となります。 札は自陣の札を取ればそのまま減らし、敵陣の札を取れば敵陣の札をどけた上で自陣から敵陣に一枚札を送ります。これを送り札といいます。
+            <br />
+            50首を選んでいるので詠まれた札が自陣・敵陣に存在しない場合があります。これは空札といいます。取り札を間違えた場合や空札なのに取り札に触った場合はお手付きとなり、敵陣に札を送れます。
+            <br />
+            自陣の札を取る、または敵陣の札を取って自陣の札を敵陣に送る、という勝負を繰り返して自陣を先に空にしたほうが勝者となります。
+          </p>
+        </div>
+      </section>
+      <section
+        className="sc-jzJRlG fsWdXU"
+      >
+        <h1
+          className="sc-cSHVUG eJSQJf"
+        >
+          歌一覧
+        </h1>
+        <ul
+          className="sc-kGXeez gJPsfS"
+        >
+          <li
+            className="sc-kpOJdX hstMeh"
+          >
+            <a
+              href="/karutas/1"
+            >
+              一番
+            </a>
+          </li>
+          <li
+            className="sc-kpOJdX hstMeh"
+          >
+            <a
+              href="/karutas/2"
+            >
+              二番
+            </a>
+          </li>
+          <li
+            className="sc-kpOJdX hstMeh"
+          >
+            <a
+              href="/karutas/3"
+            >
+              三番
+            </a>
+          </li>
+          <li
+            className="sc-kpOJdX hstMeh"
+          >
+            <a
+              href="/karutas/4"
+            >
+              四番
+            </a>
+          </li>
+          <li
+            className="sc-kpOJdX hstMeh"
+          >
+            <a
+              href="/karutas/5"
+            >
+              五番
+            </a>
+          </li>
+          <li
+            className="sc-kpOJdX hstMeh"
+          >
+            <a
+              href="/karutas/6"
+            >
+              六番
+            </a>
+          </li>
+          <li
+            className="sc-kpOJdX hstMeh"
+          >
+            <a
+              href="/karutas/7"
+            >
+              七番
+            </a>
+          </li>
+          <li
+            className="sc-kpOJdX hstMeh"
+          >
+            <a
+              href="/karutas/8"
+            >
+              八番
+            </a>
+          </li>
+          <li
+            className="sc-kpOJdX hstMeh"
+          >
+            <a
+              href="/karutas/9"
+            >
+              九番
+            </a>
+          </li>
+          <li
+            className="sc-kpOJdX hstMeh"
+          >
+            <a
+              href="/karutas/10"
+            >
+              十番
+            </a>
+          </li>
+          <li
+            className="sc-kpOJdX hstMeh"
+          >
+            <a
+              href="/karutas/11"
+            >
+              十一番
+            </a>
+          </li>
+          <li
+            className="sc-kpOJdX hstMeh"
+          >
+            <a
+              href="/karutas/12"
+            >
+              十二番
+            </a>
+          </li>
+          <li
+            className="sc-kpOJdX hstMeh"
+          >
+            <a
+              href="/karutas/13"
+            >
+              十三番
+            </a>
+          </li>
+          <li
+            className="sc-kpOJdX hstMeh"
+          >
+            <a
+              href="/karutas/14"
+            >
+              十四番
+            </a>
+          </li>
+          <li
+            className="sc-kpOJdX hstMeh"
+          >
+            <a
+              href="/karutas/15"
+            >
+              十五番
+            </a>
+          </li>
+          <li
+            className="sc-kpOJdX hstMeh"
+          >
+            <a
+              href="/karutas/16"
+            >
+              十六番
+            </a>
+          </li>
+          <li
+            className="sc-kpOJdX hstMeh"
+          >
+            <a
+              href="/karutas/17"
+            >
+              十七番
+            </a>
+          </li>
+          <li
+            className="sc-kpOJdX hstMeh"
+          >
+            <a
+              href="/karutas/18"
+            >
+              十八番
+            </a>
+          </li>
+          <li
+            className="sc-kpOJdX hstMeh"
+          >
+            <a
+              href="/karutas/19"
+            >
+              十九番
+            </a>
+          </li>
+          <li
+            className="sc-kpOJdX hstMeh"
+          >
+            <a
+              href="/karutas/20"
+            >
+              二十番
+            </a>
+          </li>
+          <li
+            className="sc-kpOJdX hstMeh"
+          >
+            <a
+              href="/karutas/21"
+            >
+              二十一番
+            </a>
+          </li>
+          <li
+            className="sc-kpOJdX hstMeh"
+          >
+            <a
+              href="/karutas/22"
+            >
+              二十二番
+            </a>
+          </li>
+          <li
+            className="sc-kpOJdX hstMeh"
+          >
+            <a
+              href="/karutas/23"
+            >
+              二十三番
+            </a>
+          </li>
+          <li
+            className="sc-kpOJdX hstMeh"
+          >
+            <a
+              href="/karutas/24"
+            >
+              二十四番
+            </a>
+          </li>
+          <li
+            className="sc-kpOJdX hstMeh"
+          >
+            <a
+              href="/karutas/25"
+            >
+              二十五番
+            </a>
+          </li>
+          <li
+            className="sc-kpOJdX hstMeh"
+          >
+            <a
+              href="/karutas/26"
+            >
+              二十六番
+            </a>
+          </li>
+          <li
+            className="sc-kpOJdX hstMeh"
+          >
+            <a
+              href="/karutas/27"
+            >
+              二十七番
+            </a>
+          </li>
+          <li
+            className="sc-kpOJdX hstMeh"
+          >
+            <a
+              href="/karutas/28"
+            >
+              二十八番
+            </a>
+          </li>
+          <li
+            className="sc-kpOJdX hstMeh"
+          >
+            <a
+              href="/karutas/29"
+            >
+              二十九番
+            </a>
+          </li>
+          <li
+            className="sc-kpOJdX hstMeh"
+          >
+            <a
+              href="/karutas/30"
+            >
+              三十番
+            </a>
+          </li>
+          <li
+            className="sc-kpOJdX hstMeh"
+          >
+            <a
+              href="/karutas/31"
+            >
+              三十一番
+            </a>
+          </li>
+          <li
+            className="sc-kpOJdX hstMeh"
+          >
+            <a
+              href="/karutas/32"
+            >
+              三十二番
+            </a>
+          </li>
+          <li
+            className="sc-kpOJdX hstMeh"
+          >
+            <a
+              href="/karutas/33"
+            >
+              三十三番
+            </a>
+          </li>
+          <li
+            className="sc-kpOJdX hstMeh"
+          >
+            <a
+              href="/karutas/34"
+            >
+              三十四番
+            </a>
+          </li>
+          <li
+            className="sc-kpOJdX hstMeh"
+          >
+            <a
+              href="/karutas/35"
+            >
+              三十五番
+            </a>
+          </li>
+          <li
+            className="sc-kpOJdX hstMeh"
+          >
+            <a
+              href="/karutas/36"
+            >
+              三十六番
+            </a>
+          </li>
+          <li
+            className="sc-kpOJdX hstMeh"
+          >
+            <a
+              href="/karutas/37"
+            >
+              三十七番
+            </a>
+          </li>
+          <li
+            className="sc-kpOJdX hstMeh"
+          >
+            <a
+              href="/karutas/38"
+            >
+              三十八番
+            </a>
+          </li>
+          <li
+            className="sc-kpOJdX hstMeh"
+          >
+            <a
+              href="/karutas/39"
+            >
+              三十九番
+            </a>
+          </li>
+          <li
+            className="sc-kpOJdX hstMeh"
+          >
+            <a
+              href="/karutas/40"
+            >
+              四十番
+            </a>
+          </li>
+          <li
+            className="sc-kpOJdX hstMeh"
+          >
+            <a
+              href="/karutas/41"
+            >
+              四十一番
+            </a>
+          </li>
+          <li
+            className="sc-kpOJdX hstMeh"
+          >
+            <a
+              href="/karutas/42"
+            >
+              四十二番
+            </a>
+          </li>
+          <li
+            className="sc-kpOJdX hstMeh"
+          >
+            <a
+              href="/karutas/43"
+            >
+              四十三番
+            </a>
+          </li>
+          <li
+            className="sc-kpOJdX hstMeh"
+          >
+            <a
+              href="/karutas/44"
+            >
+              四十四番
+            </a>
+          </li>
+          <li
+            className="sc-kpOJdX hstMeh"
+          >
+            <a
+              href="/karutas/45"
+            >
+              四十五番
+            </a>
+          </li>
+          <li
+            className="sc-kpOJdX hstMeh"
+          >
+            <a
+              href="/karutas/46"
+            >
+              四十六番
+            </a>
+          </li>
+          <li
+            className="sc-kpOJdX hstMeh"
+          >
+            <a
+              href="/karutas/47"
+            >
+              四十七番
+            </a>
+          </li>
+          <li
+            className="sc-kpOJdX hstMeh"
+          >
+            <a
+              href="/karutas/48"
+            >
+              四十八番
+            </a>
+          </li>
+          <li
+            className="sc-kpOJdX hstMeh"
+          >
+            <a
+              href="/karutas/49"
+            >
+              四十九番
+            </a>
+          </li>
+          <li
+            className="sc-kpOJdX hstMeh"
+          >
+            <a
+              href="/karutas/50"
+            >
+              五十番
+            </a>
+          </li>
+          <li
+            className="sc-kpOJdX hstMeh"
+          >
+            <a
+              href="/karutas/51"
+            >
+              五十一番
+            </a>
+          </li>
+          <li
+            className="sc-kpOJdX hstMeh"
+          >
+            <a
+              href="/karutas/52"
+            >
+              五十二番
+            </a>
+          </li>
+          <li
+            className="sc-kpOJdX hstMeh"
+          >
+            <a
+              href="/karutas/53"
+            >
+              五十三番
+            </a>
+          </li>
+          <li
+            className="sc-kpOJdX hstMeh"
+          >
+            <a
+              href="/karutas/54"
+            >
+              五十四番
+            </a>
+          </li>
+          <li
+            className="sc-kpOJdX hstMeh"
+          >
+            <a
+              href="/karutas/55"
+            >
+              五十五番
+            </a>
+          </li>
+          <li
+            className="sc-kpOJdX hstMeh"
+          >
+            <a
+              href="/karutas/56"
+            >
+              五十六番
+            </a>
+          </li>
+          <li
+            className="sc-kpOJdX hstMeh"
+          >
+            <a
+              href="/karutas/57"
+            >
+              五十七番
+            </a>
+          </li>
+          <li
+            className="sc-kpOJdX hstMeh"
+          >
+            <a
+              href="/karutas/58"
+            >
+              五十八番
+            </a>
+          </li>
+          <li
+            className="sc-kpOJdX hstMeh"
+          >
+            <a
+              href="/karutas/59"
+            >
+              五十九番
+            </a>
+          </li>
+          <li
+            className="sc-kpOJdX hstMeh"
+          >
+            <a
+              href="/karutas/60"
+            >
+              六十番
+            </a>
+          </li>
+          <li
+            className="sc-kpOJdX hstMeh"
+          >
+            <a
+              href="/karutas/61"
+            >
+              六十一番
+            </a>
+          </li>
+          <li
+            className="sc-kpOJdX hstMeh"
+          >
+            <a
+              href="/karutas/62"
+            >
+              六十二番
+            </a>
+          </li>
+          <li
+            className="sc-kpOJdX hstMeh"
+          >
+            <a
+              href="/karutas/63"
+            >
+              六十三番
+            </a>
+          </li>
+          <li
+            className="sc-kpOJdX hstMeh"
+          >
+            <a
+              href="/karutas/64"
+            >
+              六十四番
+            </a>
+          </li>
+          <li
+            className="sc-kpOJdX hstMeh"
+          >
+            <a
+              href="/karutas/65"
+            >
+              六十五番
+            </a>
+          </li>
+          <li
+            className="sc-kpOJdX hstMeh"
+          >
+            <a
+              href="/karutas/66"
+            >
+              六十六番
+            </a>
+          </li>
+          <li
+            className="sc-kpOJdX hstMeh"
+          >
+            <a
+              href="/karutas/67"
+            >
+              六十七番
+            </a>
+          </li>
+          <li
+            className="sc-kpOJdX hstMeh"
+          >
+            <a
+              href="/karutas/68"
+            >
+              六十八番
+            </a>
+          </li>
+          <li
+            className="sc-kpOJdX hstMeh"
+          >
+            <a
+              href="/karutas/69"
+            >
+              六十九番
+            </a>
+          </li>
+          <li
+            className="sc-kpOJdX hstMeh"
+          >
+            <a
+              href="/karutas/70"
+            >
+              七十番
+            </a>
+          </li>
+          <li
+            className="sc-kpOJdX hstMeh"
+          >
+            <a
+              href="/karutas/71"
+            >
+              七十一番
+            </a>
+          </li>
+          <li
+            className="sc-kpOJdX hstMeh"
+          >
+            <a
+              href="/karutas/72"
+            >
+              七十二番
+            </a>
+          </li>
+          <li
+            className="sc-kpOJdX hstMeh"
+          >
+            <a
+              href="/karutas/73"
+            >
+              七十三番
+            </a>
+          </li>
+          <li
+            className="sc-kpOJdX hstMeh"
+          >
+            <a
+              href="/karutas/74"
+            >
+              七十四番
+            </a>
+          </li>
+          <li
+            className="sc-kpOJdX hstMeh"
+          >
+            <a
+              href="/karutas/75"
+            >
+              七十五番
+            </a>
+          </li>
+          <li
+            className="sc-kpOJdX hstMeh"
+          >
+            <a
+              href="/karutas/76"
+            >
+              七十六番
+            </a>
+          </li>
+          <li
+            className="sc-kpOJdX hstMeh"
+          >
+            <a
+              href="/karutas/77"
+            >
+              七十七番
+            </a>
+          </li>
+          <li
+            className="sc-kpOJdX hstMeh"
+          >
+            <a
+              href="/karutas/78"
+            >
+              七十八番
+            </a>
+          </li>
+          <li
+            className="sc-kpOJdX hstMeh"
+          >
+            <a
+              href="/karutas/79"
+            >
+              七十九番
+            </a>
+          </li>
+          <li
+            className="sc-kpOJdX hstMeh"
+          >
+            <a
+              href="/karutas/80"
+            >
+              八十番
+            </a>
+          </li>
+          <li
+            className="sc-kpOJdX hstMeh"
+          >
+            <a
+              href="/karutas/81"
+            >
+              八十一番
+            </a>
+          </li>
+          <li
+            className="sc-kpOJdX hstMeh"
+          >
+            <a
+              href="/karutas/82"
+            >
+              八十二番
+            </a>
+          </li>
+          <li
+            className="sc-kpOJdX hstMeh"
+          >
+            <a
+              href="/karutas/83"
+            >
+              八十三番
+            </a>
+          </li>
+          <li
+            className="sc-kpOJdX hstMeh"
+          >
+            <a
+              href="/karutas/84"
+            >
+              八十四番
+            </a>
+          </li>
+          <li
+            className="sc-kpOJdX hstMeh"
+          >
+            <a
+              href="/karutas/85"
+            >
+              八十五番
+            </a>
+          </li>
+          <li
+            className="sc-kpOJdX hstMeh"
+          >
+            <a
+              href="/karutas/86"
+            >
+              八十六番
+            </a>
+          </li>
+          <li
+            className="sc-kpOJdX hstMeh"
+          >
+            <a
+              href="/karutas/87"
+            >
+              八十七番
+            </a>
+          </li>
+          <li
+            className="sc-kpOJdX hstMeh"
+          >
+            <a
+              href="/karutas/88"
+            >
+              八十八番
+            </a>
+          </li>
+          <li
+            className="sc-kpOJdX hstMeh"
+          >
+            <a
+              href="/karutas/89"
+            >
+              八十九番
+            </a>
+          </li>
+          <li
+            className="sc-kpOJdX hstMeh"
+          >
+            <a
+              href="/karutas/90"
+            >
+              九十番
+            </a>
+          </li>
+          <li
+            className="sc-kpOJdX hstMeh"
+          >
+            <a
+              href="/karutas/91"
+            >
+              九十一番
+            </a>
+          </li>
+          <li
+            className="sc-kpOJdX hstMeh"
+          >
+            <a
+              href="/karutas/92"
+            >
+              九十二番
+            </a>
+          </li>
+          <li
+            className="sc-kpOJdX hstMeh"
+          >
+            <a
+              href="/karutas/93"
+            >
+              九十三番
+            </a>
+          </li>
+          <li
+            className="sc-kpOJdX hstMeh"
+          >
+            <a
+              href="/karutas/94"
+            >
+              九十四番
+            </a>
+          </li>
+          <li
+            className="sc-kpOJdX hstMeh"
+          >
+            <a
+              href="/karutas/95"
+            >
+              九十五番
+            </a>
+          </li>
+          <li
+            className="sc-kpOJdX hstMeh"
+          >
+            <a
+              href="/karutas/96"
+            >
+              九十六番
+            </a>
+          </li>
+          <li
+            className="sc-kpOJdX hstMeh"
+          >
+            <a
+              href="/karutas/97"
+            >
+              九十七番
+            </a>
+          </li>
+          <li
+            className="sc-kpOJdX hstMeh"
+          >
+            <a
+              href="/karutas/98"
+            >
+              九十八番
+            </a>
+          </li>
+          <li
+            className="sc-kpOJdX hstMeh"
+          >
+            <a
+              href="/karutas/99"
+            >
+              九十九番
+            </a>
+          </li>
+          <li
+            className="sc-kpOJdX hstMeh"
+          >
+            <a
+              href="/karutas/100"
+            >
+              百番
+            </a>
+          </li>
+        </ul>
+      </section>
+    </div>
+  </div>,
+  <nav
+    className="sc-EHOje extRj"
+  >
+    <span
+      className="sc-bZQynM jmnWoK"
+    >
+      <div
+        className="sc-bdVaJa flBAph"
+        onMouseDown={[Function]}
+        onMouseUp={[Function]}
+      >
+        <a
+          color="#fff"
+          href="/training"
+          style={
+            Object {
+              "height": "100%",
+              "width": "100%",
+            }
+          }
+        >
+          <i
+            className="material-icons sc-ifAKCX hrwKKP"
+          >
+            create
+          </i>
+        </a>
+      </div>
+    </span>
+    <span
+      className="sc-bZQynM jmnWoK"
+    >
+      <div
+        className="sc-bdVaJa flBAph"
+        onMouseDown={[Function]}
+        onMouseUp={[Function]}
+      >
+        <a
+          color="#fff"
+          href="/exam"
+          style={
+            Object {
+              "height": "100%",
+              "width": "100%",
+            }
+          }
+        >
+          <i
+            className="material-icons sc-ifAKCX iiZnFL"
+          >
+            note
+          </i>
+        </a>
+      </div>
+    </span>
+    <span
+      className="sc-bZQynM jmnWoK"
+    >
+      <div
+        className="sc-bdVaJa flBAph"
+        onMouseDown={[Function]}
+        onMouseUp={[Function]}
+      >
+        <a
+          color="#fff"
+          href="/karutas"
+          style={
+            Object {
+              "height": "100%",
+              "width": "100%",
+            }
+          }
+        >
+          <i
+            className="material-icons sc-ifAKCX ihzbNI"
+          >
+            library_books
+          </i>
+        </a>
+      </div>
+    </span>
+    <span
+      className="sc-bZQynM jmnWoK"
+    >
+      <div
+        className="sc-bdVaJa flBAph"
+        onMouseDown={[Function]}
+        onMouseUp={[Function]}
+      >
+        <a
+          color="#fff"
+          href="/about"
+          style={
+            Object {
+              "height": "100%",
+              "width": "100%",
+            }
+          }
+        >
+          <i
+            className="material-icons sc-ifAKCX jzZElc"
+          >
+            settings
+          </i>
+        </a>
+      </div>
+    </span>
+  </nav>,
+]
+`;

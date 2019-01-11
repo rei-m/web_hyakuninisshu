@@ -1,0 +1,256 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`/karutas should render component 1`] = `
+Array [
+  <header
+    className="sc-bwzfXH eXYRwP"
+  >
+    <div
+      className="sc-bdVaJa flBAph"
+      onMouseDown={[Function]}
+      onMouseUp={[Function]}
+    >
+      <i
+        className="material-icons sc-bxivhb jrBfKJ"
+        color="#fff"
+        data-test="back"
+        onClick={[Function]}
+      >
+        arrow_back
+      </i>
+    </div>
+    <h1
+      className="sc-htpNat fxoVCB"
+    >
+      百人一首 - 資料 -
+    </h1>
+  </header>,
+  <div
+    className="sc-gzVnrw dnlZFh"
+  >
+    <section
+      className="sc-kpOJdX dCLkFE"
+    >
+      <h1
+        className="sc-iwsKbI jkmlvZ"
+      >
+        歌一覧
+      </h1>
+      <div
+        className="sc-gZMcBi iXZiBx"
+      >
+        <div
+          className="sc-gqjmRU cCYYjG"
+        >
+          この欄は広告枠です
+        </div>
+      </div>
+      <div
+        className="sc-kGXeez giOOIB"
+      >
+        <div
+          className="sc-fjdhpX DyZeS"
+          onClick={[Function]}
+        >
+          <div
+            className="sc-jzJRlG eedhcw"
+          >
+            <div
+              className="sc-kAzzGY iBHESe"
+            >
+              一番
+            </div>
+            <div
+              className=" gatsby-image-wrapper"
+              style={
+                Object {
+                  "margin": "auto",
+                  "overflow": "hidden",
+                  "position": "relative",
+                  "width": 40,
+                }
+              }
+            >
+              <div
+                style={
+                  Object {
+                    "paddingBottom": "100%",
+                    "width": "100%",
+                  }
+                }
+              />
+              <picture>
+                <source
+                  sizes="100 200 300"
+                  srcSet="asdfasdf"
+                />
+                <img
+                  alt="一番"
+                  onLoad={[Function]}
+                  src="karuta_001.jpg"
+                  style={
+                    Object {
+                      "height": "100%",
+                      "left": 0,
+                      "objectFit": "cover",
+                      "objectPosition": "center",
+                      "opacity": 0,
+                      "position": "absolute",
+                      "top": 0,
+                      "transition": "opacity 0.5s",
+                      "width": "100%",
+                    }
+                  }
+                />
+              </picture>
+              <noscript
+                dangerouslySetInnerHTML={
+                  Object {
+                    "__html": "<picture><source srcSet=\\"asdfasdf\\" sizes=\\"100 200 300\\" /><img src=\\"karuta_001.jpg\\" alt=\\"一番\\" style=\\"position:absolute;top:0;left:0;transition:opacity 0.5s;transition-delay:0.5s;opacity:1;width:100%;height:100%;object-fit:cover;object-position:center\\"/></picture>",
+                  }
+                }
+              />
+            </div>
+          </div>
+          <div
+            className="sc-cSHVUG eDXrDo"
+          >
+            <div
+              className="sc-chPdSV cBMJjQ"
+            >
+              初句 二句 三句
+            </div>
+            <div
+              className="sc-chPdSV cBMJjQ"
+            >
+              四句 五句
+            </div>
+            <div
+              className="sc-kgoBCf dHGwth"
+            >
+              詠み手
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        className="sc-VigVT ieiGAu"
+      >
+        <div
+          className="sc-jTzLTM ljXwZC"
+        >
+          この欄は広告枠です
+        </div>
+      </div>
+    </section>
+  </div>,
+  <nav
+    className="sc-EHOje extRj"
+  >
+    <span
+      className="sc-bZQynM jmnWoK"
+    >
+      <div
+        className="sc-bdVaJa flBAph"
+        onMouseDown={[Function]}
+        onMouseUp={[Function]}
+      >
+        <a
+          color="#fff"
+          href="/training"
+          style={
+            Object {
+              "height": "100%",
+              "width": "100%",
+            }
+          }
+        >
+          <i
+            className="material-icons sc-ifAKCX hrwKKP"
+          >
+            create
+          </i>
+        </a>
+      </div>
+    </span>
+    <span
+      className="sc-bZQynM jmnWoK"
+    >
+      <div
+        className="sc-bdVaJa flBAph"
+        onMouseDown={[Function]}
+        onMouseUp={[Function]}
+      >
+        <a
+          color="#fff"
+          href="/exam"
+          style={
+            Object {
+              "height": "100%",
+              "width": "100%",
+            }
+          }
+        >
+          <i
+            className="material-icons sc-ifAKCX iiZnFL"
+          >
+            note
+          </i>
+        </a>
+      </div>
+    </span>
+    <span
+      className="sc-bZQynM jmnWoK"
+    >
+      <div
+        className="sc-bdVaJa flBAph"
+        onMouseDown={[Function]}
+        onMouseUp={[Function]}
+      >
+        <a
+          color="#fff"
+          href="/karutas"
+          style={
+            Object {
+              "height": "100%",
+              "width": "100%",
+            }
+          }
+        >
+          <i
+            className="material-icons sc-ifAKCX hUNLEv"
+          >
+            library_books
+          </i>
+        </a>
+      </div>
+    </span>
+    <span
+      className="sc-bZQynM jmnWoK"
+    >
+      <div
+        className="sc-bdVaJa flBAph"
+        onMouseDown={[Function]}
+        onMouseUp={[Function]}
+      >
+        <a
+          color="#fff"
+          href="/about"
+          style={
+            Object {
+              "height": "100%",
+              "width": "100%",
+            }
+          }
+        >
+          <i
+            className="material-icons sc-ifAKCX jzZElc"
+          >
+            settings
+          </i>
+        </a>
+      </div>
+    </span>
+  </nav>,
+]
+`;

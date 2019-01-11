@@ -25,7 +25,7 @@ export interface OwnProps {
 export interface ConnectedProps {
   lastStartedTime?: number;
   questions: Question[];
-  question: Question;
+  question?: Question;
   answer?: Answer;
   answers: Answer[];
   totalCount: number;
@@ -39,7 +39,7 @@ export type DispatchProps = Pick<QuestionViewProps, 'onClickToriFuda' | 'onClick
 
 export type Props = OwnProps & ConnectedProps & DispatchProps;
 
-export const TrainingQuestions: React.FC<Props> = ({
+export const ExamQuestions: React.FC<Props> = ({
   karutas,
   submitTime,
   lastStartedTime,
@@ -60,6 +60,10 @@ export const TrainingQuestions: React.FC<Props> = ({
 
   if (!isStarted) {
     return <ExamInitializer karutas={karutas} />;
+  }
+
+  if (question === undefined) {
+    throw new Error('invalid state');
   }
 
   switch (questionState) {
@@ -98,7 +102,7 @@ export const TrainingQuestions: React.FC<Props> = ({
   }
 };
 
-const mapStateToProps = ({ questions }: GlobalState, props: OwnProps): ConnectedProps => {
+export const mapStateToProps = ({ questions }: GlobalState, props: OwnProps): ConnectedProps => {
   const { lastStartedTime, currentIndex, answers, questionState } = questions;
 
   return {
@@ -114,7 +118,7 @@ const mapStateToProps = ({ questions }: GlobalState, props: OwnProps): Connected
   };
 };
 
-const mapDispatchToProps = (dispatch: ThunkDispatch<GlobalState, {}, QuestionsActions>): DispatchProps => ({
+export const mapDispatchToProps = (dispatch: ThunkDispatch<GlobalState, {}, QuestionsActions>): DispatchProps => ({
   onClickGoToNext: () => {
     dispatch(openNextQuestion());
   },
@@ -135,4 +139,4 @@ const mapDispatchToProps = (dispatch: ThunkDispatch<GlobalState, {}, QuestionsAc
 export default connect(
   mapStateToProps,
   mapDispatchToProps
-)(TrainingQuestions);
+)(ExamQuestions);

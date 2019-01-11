@@ -18,7 +18,7 @@ export interface Props {
   onClickRestart: () => void;
 }
 
-interface QueryData {
+export interface QueryData {
   examBGImage: {
     publicURL: string;
   };

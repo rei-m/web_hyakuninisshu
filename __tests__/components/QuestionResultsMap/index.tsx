@@ -2,38 +2,36 @@ import * as ReactTestRenderer from 'react-test-renderer';
 import * as React from 'react';
 import { shallow } from 'enzyme';
 import { create } from '@test/factories';
-import { mockStaticQuery, sel } from '@test/helpers';
-import QuestionResultsMap, { Props } from '@src/components/QuestionResultsMap';
+import { sel, setUpQuery } from '@test/helpers';
+import QuestionResultsMap, { Props, QueryData } from '@src/components/QuestionResultsMap';
 import { Answer, Question } from '@src/types';
 
 describe('<QuestionResultsMap />', () => {
   let baseProps: Props;
 
   beforeEach(() => {
-    mockStaticQuery.mockImplementation(({ render }) =>
-      render({
-        correctImage: {
-          childImageSharp: {
-            fluid: {
-              aspectRatio: 1,
-              sizes: `100 200 300`,
-              src: `correct-base64-encoded-image`,
-              srcSet: `asdfasdf`,
-            },
+    setUpQuery<QueryData>({
+      correctImage: {
+        childImageSharp: {
+          fluid: {
+            aspectRatio: 1,
+            sizes: `100 200 300`,
+            src: `correct-base64-encoded-image`,
+            srcSet: `asdfasdf`,
           },
         },
-        incorrectImage: {
-          childImageSharp: {
-            fluid: {
-              aspectRatio: 1,
-              sizes: `100 200 300`,
-              src: `incorrect-base64-encoded-image`,
-              srcSet: `asdfasdf`,
-            },
+      },
+      incorrectImage: {
+        childImageSharp: {
+          fluid: {
+            aspectRatio: 1,
+            sizes: `100 200 300`,
+            src: `incorrect-base64-encoded-image`,
+            srcSet: `asdfasdf`,
           },
         },
-      })
-    );
+      },
+    });
 
     const questions = [create<Question>('question'), create<Question>('question')];
 

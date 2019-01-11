@@ -87,7 +87,7 @@ exports[`<KarutaCard /> should render component when kimariji is long 1`] = `
       >
         しょく にく
       </span>
-      にく さんく
+       さんく
     </div>
     <div
       className="sc-ifAKCX laGmay"

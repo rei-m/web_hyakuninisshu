@@ -15,7 +15,7 @@ export interface Props {
   onClickGoToResult: () => void;
 }
 
-interface QueryData {
+export interface QueryData {
   questionCorrectBGImage: {
     publicURL: string;
   };

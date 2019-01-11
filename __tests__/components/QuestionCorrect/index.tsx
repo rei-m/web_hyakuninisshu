@@ -2,35 +2,19 @@ import * as ReactTestRenderer from 'react-test-renderer';
 import * as React from 'react';
 import { shallow } from 'enzyme';
 import { create } from '@test/factories';
-import { mockStaticQuery, sel } from '@test/helpers';
-import QuestionCorrect, { Props } from '@src/components/QuestionCorrect';
+import { sel, setUpQueryOnce } from '@test/helpers';
+import QuestionCorrect, { Props, QueryData as QuestionCorrectQueryData } from '@src/components/QuestionCorrect';
 import { Karuta } from '@src/types';
 
 describe('<QuestionCorrect />', () => {
   let baseProps: Props;
 
   beforeEach(() => {
-    mockStaticQuery.mockImplementationOnce(({ render }) =>
-      render({
-        questionCorrectBGImage: {
-          publicURL: '/tatami.png',
-        },
-      })
-    );
-    mockStaticQuery.mockImplementation(({ render }) =>
-      render({
-        correctImage: {
-          childImageSharp: {
-            fluid: {
-              aspectRatio: 1,
-              sizes: `100 200 300`,
-              src: `correct-base64-encoded-image`,
-              srcSet: `asdfasdf`,
-            },
-          },
-        },
-      })
-    );
+    setUpQueryOnce<QuestionCorrectQueryData>({
+      questionCorrectBGImage: {
+        publicURL: '/tatami.png',
+      },
+    });
 
     baseProps = {
       isAllAnswered: false,

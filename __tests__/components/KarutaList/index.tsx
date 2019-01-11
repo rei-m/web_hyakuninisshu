@@ -2,46 +2,45 @@ import * as ReactTestRenderer from 'react-test-renderer';
 import * as React from 'react';
 import { shallow } from 'enzyme';
 import { create } from '@test/factories';
-import { mockStaticQuery, sel } from '@test/helpers';
+import { sel, setUpQuery } from '@test/helpers';
 import KarutaList, { Props } from '@src/components/KarutaList';
+import { QueryData } from '@src/components/KarutaImage';
 import { Karuta } from '@src/types';
 
 describe('<KarutaList />', () => {
   let props: Props;
 
   beforeEach(() => {
-    mockStaticQuery.mockImplementation(({ render }) =>
-      render({
-        karutaImages: {
-          edges: [
-            {
-              node: {
-                childImageSharp: {
-                  fluid: {
-                    aspectRatio: 1,
-                    sizes: `100 200 300`,
-                    src: `karuta_001.jpg`,
-                    srcSet: `asdfasdf`,
-                  },
+    setUpQuery<QueryData>({
+      karutaImages: {
+        edges: [
+          {
+            node: {
+              childImageSharp: {
+                fluid: {
+                  aspectRatio: 1,
+                  sizes: `100 200 300`,
+                  src: `karuta_001.jpg`,
+                  srcSet: `asdfasdf`,
                 },
               },
             },
-            {
-              node: {
-                childImageSharp: {
-                  fluid: {
-                    aspectRatio: 1,
-                    sizes: `100 200 300`,
-                    src: `karuta_002.jpg`,
-                    srcSet: `gheohgae`,
-                  },
+          },
+          {
+            node: {
+              childImageSharp: {
+                fluid: {
+                  aspectRatio: 1,
+                  sizes: `100 200 300`,
+                  src: `karuta_002.jpg`,
+                  srcSet: `asdfasdf`,
                 },
               },
             },
-          ],
-        },
-      })
-    );
+          },
+        ],
+      },
+    });
 
     props = {
       karutas: [

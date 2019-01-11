@@ -43,7 +43,7 @@ export interface LocationState {
 
 const TrainingQuestionPage: React.FC<Props> = ({ data, location }) => {
   const karutas = data.allKaruta.edges.map(karutaData => JSON.parse(karutaData.node.internal.content) as Karuta);
-  const state: LocationState | undefined = location!.state;
+  const state: LocationState | undefined = location ? location.state : undefined;
   const title = `百人一首 - 練習 -`;
   const description =
     '百人一首の暗記を練習できます。出題条件を組み合わせて自分にあったペースで練習できます。百人一首の歌の意味に触れながら楽しく覚えましょう。';

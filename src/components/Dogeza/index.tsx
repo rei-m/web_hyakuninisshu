@@ -2,7 +2,7 @@ import * as React from 'react';
 import { graphql, StaticQuery } from 'gatsby';
 import Img, { FluidObject } from 'gatsby-image';
 
-interface QueryData {
+export interface QueryData {
   dogezaImage: {
     childImageSharp: {
       fluid: FluidObject;

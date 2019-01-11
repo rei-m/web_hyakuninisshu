@@ -1,20 +1,18 @@
 import * as ReactTestRenderer from 'react-test-renderer';
 import * as React from 'react';
 import { shallow } from 'enzyme';
-import TrainingResult, { Props } from '@src/components/TrainingResult';
-import { mockStaticQuery, sel } from '@test/helpers';
+import TrainingResult, { Props, QueryData } from '@src/components/TrainingResult';
+import { sel, setUpQueryOnce } from '@test/helpers';
 
 describe('<TrainingResult />', () => {
   let baseProps: Props;
 
   beforeEach(() => {
-    mockStaticQuery.mockImplementationOnce(({ render }) =>
-      render({
-        trainingResultBGImage: {
-          publicURL: '/tatami.jpg',
-        },
-      })
-    );
+    setUpQueryOnce<QueryData>({
+      trainingResultBGImage: {
+        publicURL: '/tatami.jpg',
+      },
+    });
     baseProps = {
       averageAnswerSecond: 2.5,
       correctCount: 8,
