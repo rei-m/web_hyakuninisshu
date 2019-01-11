@@ -10,7 +10,7 @@ import { toKarutaNoString } from '@src/utils';
 import { MenuType } from '@src/enums';
 import { appTheme } from '@src/styles/theme';
 
-type Props = GeneratedPageComponentProps<{ karuta: Karuta }>;
+export type Props = GeneratedPageComponentProps<{ karuta: Karuta }>;
 
 const Container = styled.div`
   box-sizing: border-box;

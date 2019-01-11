@@ -3,7 +3,7 @@
 exports[`/about should render component 1`] = `
 Array [
   <header
-    className="sc-bwzfXH eXYRwP"
+    className="sc-bwzfXH geYBAS"
   >
     <div
       className="sc-bdVaJa flBAph"
@@ -26,7 +26,7 @@ Array [
     </h1>
   </header>,
   <div
-    className="sc-gzVnrw dnlZFh"
+    className="sc-gzVnrw hzJxWQ"
   >
     <div
       className="sc-jTzLTM gfFYMq"

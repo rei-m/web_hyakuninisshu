@@ -15,6 +15,7 @@ export interface Props {
 type BodyProps = Pick<Props, 'isDisplayNav'>;
 
 export const Body = styled.div<BodyProps>`
+  padding-top: ${({ theme }) => theme.headerHeight};
   padding-bottom: ${({ isDisplayNav, theme }) => (isDisplayNav ? theme.bottomNavHeight : '0')};
   text-align: center;
   min-height: 100vh;
