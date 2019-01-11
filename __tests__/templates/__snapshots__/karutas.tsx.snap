@@ -1,0 +1,268 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`/karutas/:no should render component 1`] = `
+Array [
+  <header
+    className="sc-bwzfXH geYBAS"
+  >
+    <div
+      className="sc-bdVaJa flBAph"
+      onMouseDown={[Function]}
+      onMouseUp={[Function]}
+    >
+      <i
+        className="material-icons sc-bxivhb jrBfKJ"
+        color="#fff"
+        data-test="back"
+        onClick={[Function]}
+      >
+        arrow_back
+      </i>
+    </div>
+    <h1
+      className="sc-htpNat fxoVCB"
+    >
+      百人一首 - 一番 -
+    </h1>
+  </header>,
+  <div
+    className="sc-gzVnrw hzJxWQ"
+  >
+    <div
+      className="sc-kAzzGY cmqOCI"
+    >
+      <div
+        className="sc-jzJRlG kHwMRt"
+        style={
+          Object {
+            "marginBottom": "16px",
+          }
+        }
+      >
+        <div
+          className="sc-cSHVUG dJDQdj"
+        >
+          この欄は広告枠です
+        </div>
+      </div>
+      <article
+        className="sc-iwsKbI gblhoZ"
+      >
+        <h3
+          className="sc-gZMcBi cKrifa"
+        >
+          一番
+           / 
+          詠み手
+        </h3>
+        <div
+          className=" gatsby-image-wrapper"
+          style={
+            Object {
+              "overflow": "hidden",
+              "position": "relative",
+              "width": 200,
+            }
+          }
+        >
+          <div
+            style={
+              Object {
+                "paddingBottom": "100%",
+                "width": "100%",
+              }
+            }
+          />
+          <picture>
+            <source
+              sizes="100 200 300"
+              srcSet="asdfasdf"
+            />
+            <img
+              alt="一番"
+              onLoad={[Function]}
+              src="karuta_001.jpg"
+              style={
+                Object {
+                  "height": "100%",
+                  "left": 0,
+                  "objectFit": "cover",
+                  "objectPosition": "center",
+                  "opacity": 0,
+                  "position": "absolute",
+                  "top": 0,
+                  "transition": "opacity 0.5s",
+                  "width": "100%",
+                }
+              }
+            />
+          </picture>
+          <noscript
+            dangerouslySetInnerHTML={
+              Object {
+                "__html": "<picture><source srcSet=\\"asdfasdf\\" sizes=\\"100 200 300\\" /><img src=\\"karuta_001.jpg\\" alt=\\"一番\\" style=\\"position:absolute;top:0;left:0;transition:opacity 0.5s;transition-delay:0.5s;opacity:1;width:100%;height:100%;object-fit:cover;object-position:center\\"/></picture>",
+              }
+            }
+          />
+        </div>
+        <div
+          className="sc-gqjmRU ecHVJS"
+        >
+          <div
+            className="sc-VigVT cEMXkL"
+          >
+            原文
+          </div>
+          <div
+            className="sc-jTzLTM gvTSuw"
+          >
+            初句 二句 三句
+          </div>
+          <div
+            className="sc-jTzLTM gvTSuw"
+          >
+            四句 五句
+          </div>
+          <div
+            className="sc-jTzLTM gvTSuw"
+          >
+            <span
+              className="sc-fjdhpX pbGAS"
+            >
+              し
+            </span>
+            ょく にく さんく
+          </div>
+          <div
+            className="sc-jTzLTM gvTSuw"
+          >
+            よんく ごく
+          </div>
+        </div>
+        <div
+          className="sc-gqjmRU ecHVJS"
+        >
+          <div
+            className="sc-VigVT cEMXkL"
+          >
+            訳
+          </div>
+          <div
+            className="sc-jTzLTM gvTSuw"
+          >
+            歌の訳
+          </div>
+        </div>
+      </article>
+    </div>
+  </div>,
+  <nav
+    className="sc-EHOje extRj"
+  >
+    <span
+      className="sc-bZQynM jmnWoK"
+    >
+      <div
+        className="sc-bdVaJa flBAph"
+        onMouseDown={[Function]}
+        onMouseUp={[Function]}
+      >
+        <a
+          color="#fff"
+          href="/training"
+          style={
+            Object {
+              "height": "100%",
+              "width": "100%",
+            }
+          }
+        >
+          <i
+            className="material-icons sc-ifAKCX hrwKKP"
+          >
+            create
+          </i>
+        </a>
+      </div>
+    </span>
+    <span
+      className="sc-bZQynM jmnWoK"
+    >
+      <div
+        className="sc-bdVaJa flBAph"
+        onMouseDown={[Function]}
+        onMouseUp={[Function]}
+      >
+        <a
+          color="#fff"
+          href="/exam"
+          style={
+            Object {
+              "height": "100%",
+              "width": "100%",
+            }
+          }
+        >
+          <i
+            className="material-icons sc-ifAKCX iiZnFL"
+          >
+            note
+          </i>
+        </a>
+      </div>
+    </span>
+    <span
+      className="sc-bZQynM jmnWoK"
+    >
+      <div
+        className="sc-bdVaJa flBAph"
+        onMouseDown={[Function]}
+        onMouseUp={[Function]}
+      >
+        <a
+          color="#fff"
+          href="/karutas"
+          style={
+            Object {
+              "height": "100%",
+              "width": "100%",
+            }
+          }
+        >
+          <i
+            className="material-icons sc-ifAKCX hUNLEv"
+          >
+            library_books
+          </i>
+        </a>
+      </div>
+    </span>
+    <span
+      className="sc-bZQynM jmnWoK"
+    >
+      <div
+        className="sc-bdVaJa flBAph"
+        onMouseDown={[Function]}
+        onMouseUp={[Function]}
+      >
+        <a
+          color="#fff"
+          href="/about"
+          style={
+            Object {
+              "height": "100%",
+              "width": "100%",
+            }
+          }
+        >
+          <i
+            className="material-icons sc-ifAKCX jzZElc"
+          >
+            settings
+          </i>
+        </a>
+      </div>
+    </span>
+  </nav>,
+]
+`;
