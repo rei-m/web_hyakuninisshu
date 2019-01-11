@@ -118,6 +118,16 @@ const AboutPage: React.FC<Props> = ({ data }) => {
               アプリのレビューで読み上げ機能が欲しいというお声をいただくのですが、使用可能ないい音源があれば搭載します。
             </SectionText>
           </Section>
+          <Section>
+            <SectionTitle>プライバシー ポリシー</SectionTitle>
+            <SectionText>
+              サイトの利用状況の把握や広告配信のためにGoogle社が提供しているサービスを利用しております。詳しくは
+              <a href="https://rei-m.github.io/app/policy/" target="_blank">
+                こちら
+              </a>
+              から確認ください。
+            </SectionText>
+          </Section>
         </Container>
       </Layout>
     </ErrorBoundary>

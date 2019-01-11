@@ -1,0 +1,83 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`/training/question when invalid state should render component 1`] = `
+Array [
+  <header
+    className="sc-gipzik dhVFYp"
+  >
+    <div
+      className="sc-gzVnrw bQtzYg"
+      onMouseDown={[Function]}
+      onMouseUp={[Function]}
+    >
+      <i
+        className="material-icons sc-Rmtcm hfPxVl"
+        color="#fff"
+        data-test="back"
+        onClick={[Function]}
+      >
+        arrow_back
+      </i>
+    </div>
+    <h1
+      className="sc-csuQGl eSNLGD"
+    >
+      百人一首 - 練習 -
+    </h1>
+  </header>,
+  <div
+    className="sc-fBuWsC fbmYag"
+  >
+    <div
+      className="sc-iRbamj ecoFXL"
+    >
+      <p
+        className="sc-jlyJG vJuqs"
+      >
+        不正な遷移を行いました。前の画面からやり直してください。
+      </p>
+    </div>
+  </div>,
+]
+`;
+
+exports[`/training/question when valid state should render component 1`] = `
+Array [
+  <header
+    className="sc-gipzik dhVFYp"
+  >
+    <div
+      className="sc-gzVnrw bQtzYg"
+      onMouseDown={[Function]}
+      onMouseUp={[Function]}
+    >
+      <i
+        className="material-icons sc-Rmtcm hfPxVl"
+        color="#fff"
+        data-test="back"
+        onClick={[Function]}
+      >
+        arrow_back
+      </i>
+    </div>
+    <h1
+      className="sc-csuQGl eSNLGD"
+    >
+      百人一首 - 練習 -
+    </h1>
+  </header>,
+  <div
+    className="sc-fBuWsC fbmYag"
+  >
+    <div
+      className="sc-iRbamj ecoFXL"
+    >
+      <p
+        className="sc-jlyJG vJuqs"
+      >
+        指定した条件の歌はありませんでした
+      </p>
+    </div>
+  </div>,
+]
+`;
