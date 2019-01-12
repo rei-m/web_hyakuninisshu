@@ -1,4 +1,5 @@
 import * as React from 'react';
+import shouldUpdate from 'recompose/shouldUpdate';
 import styled from '@src/styles/styled-components';
 import KarutaImage from '@src/components/KarutaImage';
 import { Karuta } from '@src/types';
@@ -74,4 +75,4 @@ const KarutaListRow: React.FC<Props> = ({ karuta, onClickRow }) => {
   );
 };
 
-export default KarutaListRow;
+export default shouldUpdate((props: Props, nextProps: Props) => props.karuta.no !== nextProps.karuta.no)(KarutaListRow);

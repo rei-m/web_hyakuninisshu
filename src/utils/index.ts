@@ -1,4 +1,5 @@
 import { ColorCondition, KarutaStyleCondition, KimarijiCondition, MenuType } from '@src/enums';
+import { Color, Kimariji } from '@src/types';
 
 export const menuTypeToIcon = (iconType: MenuType) => {
   switch (iconType) {
@@ -41,27 +42,30 @@ export const toChineseChar = (num: number) => {
 
 export const toKarutaNoString = (karutaNo: number) => `${toChineseChar(karutaNo)}番`;
 
-export const toKimarijiString = (kimariji: KimarijiCondition) => `${toChineseChar(kimariji)}字決まり`;
+export const toKimarijiString = (kimariji: Kimariji) => `${toChineseChar(kimariji)}字決まり`;
 
 export const toKimarijiConditionString = (kimarijiCondition: KimarijiCondition) =>
   kimarijiCondition === KimarijiCondition.None ? '指定しない' : toKimarijiString(kimarijiCondition);
 
-export const toColorConditionString = (color: ColorCondition) => {
+export const toColorString = (color: Color) => {
   switch (color) {
-    case ColorCondition.Blue:
+    case 'blue':
       return '青色';
-    case ColorCondition.Pink:
+    case 'pink':
       return '桃色';
-    case ColorCondition.Yellow:
+    case 'yellow':
       return '黄色';
-    case ColorCondition.Green:
+    case 'green':
       return '緑色';
-    case ColorCondition.Orange:
+    case 'orange':
       return '橙色';
     default:
-      return '指定しない';
+      throw new Error(`unknown color. value is ${color}`);
   }
 };
+
+export const toColorConditionString = (colorCondition: ColorCondition) =>
+  colorCondition === ColorCondition.None ? '指定しない' : toColorString(colorCondition);
 
 export const toKarutaStyleConditionString = (karutaStyle: KarutaStyleCondition) => {
   switch (karutaStyle) {

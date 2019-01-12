@@ -9,6 +9,7 @@ export interface Props {
   currentMenuType?: MenuType;
   isDisplayNav: boolean;
   onClickBack?: () => void;
+  onClickSearch?: () => void;
 }
 
 type BodyProps = Pick<Props, 'isDisplayNav'>;
@@ -26,9 +27,9 @@ export const Body = styled.div<BodyProps>`
   }
 `;
 
-const Layout: React.FC<Props> = ({ title, children, onClickBack, isDisplayNav, currentMenuType }) => (
+const Layout: React.FC<Props> = ({ title, children, onClickBack, onClickSearch, isDisplayNav, currentMenuType }) => (
   <>
-    <Header title={title} onClickBack={onClickBack} />
+    <Header title={title} onClickBack={onClickBack} onClickSearch={onClickSearch} />
     <Body isDisplayNav={isDisplayNav}>{children}</Body>
     {isDisplayNav && <Navigation currentMenuType={currentMenuType} />}
   </>
