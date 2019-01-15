@@ -8,6 +8,10 @@ export interface SiteMetaData {
 
 export type GeneratedPageComponentProps<T = {}> = { pageContext: T } & RouteComponentProps<T>;
 
+export type Kimariji = 1 | 2 | 3 | 4 | 5 | 6;
+
+export type Color = 'blue' | 'pink' | 'yellow' | 'green' | 'orange';
+
 export interface Karuta {
   readonly id: string;
   readonly no: number;
@@ -23,8 +27,8 @@ export interface Karuta {
   readonly fourthKana: string;
   readonly fifthKanji: string;
   readonly fifthKana: string;
-  readonly kimariji: number;
-  readonly color: string;
+  readonly kimariji: Kimariji;
+  readonly color: Color;
   readonly translation: string;
 }
 

@@ -20,19 +20,19 @@ Array [
       </i>
     </div>
     <h1
-      className="sc-htpNat fxoVCB"
+      className="sc-htpNat eSnwWs"
     >
       百人一首 - 一番 -
     </h1>
   </header>,
   <div
-    className="sc-gzVnrw hzJxWQ"
+    className="sc-htoDjs dfwcpY"
   >
     <div
-      className="sc-kAzzGY cmqOCI"
+      className="sc-chPdSV iTZNlG"
     >
       <div
-        className="sc-jzJRlG kHwMRt"
+        className="sc-cSHVUG hMAsaP"
         style={
           Object {
             "marginBottom": "16px",
@@ -40,16 +40,16 @@ Array [
         }
       >
         <div
-          className="sc-cSHVUG dJDQdj"
+          className="sc-kAzzGY cSPzns"
         >
           この欄は広告枠です
         </div>
       </div>
       <article
-        className="sc-iwsKbI gblhoZ"
+        className="sc-gZMcBi jkEago"
       >
         <h3
-          className="sc-gZMcBi cKrifa"
+          className="sc-gqjmRU jvTRQf"
         >
           一番
            / 
@@ -106,49 +106,49 @@ Array [
           />
         </div>
         <div
-          className="sc-gqjmRU ecHVJS"
+          className="sc-VigVT hOkNKy"
         >
           <div
-            className="sc-VigVT cEMXkL"
+            className="sc-jTzLTM jiZShF"
           >
             原文
           </div>
           <div
-            className="sc-jTzLTM gvTSuw"
+            className="sc-fjdhpX gUsHXb"
           >
             初句 二句 三句
           </div>
           <div
-            className="sc-jTzLTM gvTSuw"
+            className="sc-fjdhpX gUsHXb"
           >
             四句 五句
           </div>
           <div
-            className="sc-jTzLTM gvTSuw"
+            className="sc-fjdhpX gUsHXb"
           >
             <span
-              className="sc-fjdhpX pbGAS"
+              className="sc-jzJRlG KcOhl"
             >
               し
             </span>
             ょく にく さんく
           </div>
           <div
-            className="sc-jTzLTM gvTSuw"
+            className="sc-fjdhpX gUsHXb"
           >
             よんく ごく
           </div>
         </div>
         <div
-          className="sc-gqjmRU ecHVJS"
+          className="sc-VigVT hOkNKy"
         >
           <div
-            className="sc-VigVT cEMXkL"
+            className="sc-jTzLTM jiZShF"
           >
             訳
           </div>
           <div
-            className="sc-jTzLTM gvTSuw"
+            className="sc-fjdhpX gUsHXb"
           >
             歌の訳
           </div>
@@ -157,10 +157,10 @@ Array [
     </div>
   </div>,
   <nav
-    className="sc-EHOje extRj"
+    className="sc-bZQynM gfjWgY"
   >
     <span
-      className="sc-bZQynM jmnWoK"
+      className="sc-gzVnrw klvbjl"
     >
       <div
         className="sc-bdVaJa flBAph"
@@ -178,7 +178,7 @@ Array [
           }
         >
           <i
-            className="material-icons sc-ifAKCX hrwKKP"
+            className="material-icons sc-EHOje evPMQv"
           >
             create
           </i>
@@ -186,7 +186,7 @@ Array [
       </div>
     </span>
     <span
-      className="sc-bZQynM jmnWoK"
+      className="sc-gzVnrw klvbjl"
     >
       <div
         className="sc-bdVaJa flBAph"
@@ -204,7 +204,7 @@ Array [
           }
         >
           <i
-            className="material-icons sc-ifAKCX iiZnFL"
+            className="material-icons sc-EHOje gwxweT"
           >
             note
           </i>
@@ -212,7 +212,7 @@ Array [
       </div>
     </span>
     <span
-      className="sc-bZQynM jmnWoK"
+      className="sc-gzVnrw klvbjl"
     >
       <div
         className="sc-bdVaJa flBAph"
@@ -230,7 +230,7 @@ Array [
           }
         >
           <i
-            className="material-icons sc-ifAKCX hUNLEv"
+            className="material-icons sc-EHOje eTKhrb"
           >
             library_books
           </i>
@@ -238,7 +238,7 @@ Array [
       </div>
     </span>
     <span
-      className="sc-bZQynM jmnWoK"
+      className="sc-gzVnrw klvbjl"
     >
       <div
         className="sc-bdVaJa flBAph"
@@ -256,7 +256,7 @@ Array [
           }
         >
           <i
-            className="material-icons sc-ifAKCX jzZElc"
+            className="material-icons sc-EHOje jsOnhV"
           >
             settings
           </i>

@@ -3,24 +3,38 @@
 exports[`<Layout /> with Navigation should render component 1`] = `
 Array [
   <header
-    className="sc-bwzfXH ksdvTF"
+    className="sc-bwzfXH geYBAS"
   >
+    <div
+      className="sc-bdVaJa flBAph"
+      onMouseDown={[Function]}
+      onMouseUp={[Function]}
+    >
+      <i
+        className="material-icons sc-bxivhb jrBfKJ"
+        color="#fff"
+        data-test="back"
+        onClick={[MockFunction]}
+      >
+        arrow_back
+      </i>
+    </div>
     <h1
-      className="sc-htpNat fxoVCB"
+      className="sc-htpNat eSnwWs"
     >
       title
     </h1>
   </header>,
   <div
-    className="sc-gzVnrw hzJxWQ"
+    className="sc-htoDjs dfwcpY"
   >
     test
   </div>,
   <nav
-    className="sc-EHOje extRj"
+    className="sc-bZQynM gfjWgY"
   >
     <span
-      className="sc-bZQynM jmnWoK"
+      className="sc-gzVnrw klvbjl"
     >
       <div
         className="sc-bdVaJa flBAph"
@@ -38,7 +52,7 @@ Array [
           }
         >
           <i
-            className="material-icons sc-ifAKCX hrwKKP"
+            className="material-icons sc-EHOje evPMQv"
           >
             create
           </i>
@@ -46,7 +60,7 @@ Array [
       </div>
     </span>
     <span
-      className="sc-bZQynM jmnWoK"
+      className="sc-gzVnrw klvbjl"
     >
       <div
         className="sc-bdVaJa flBAph"
@@ -64,7 +78,7 @@ Array [
           }
         >
           <i
-            className="material-icons sc-ifAKCX iiZnFL"
+            className="material-icons sc-EHOje gwxweT"
           >
             note
           </i>
@@ -72,7 +86,7 @@ Array [
       </div>
     </span>
     <span
-      className="sc-bZQynM jmnWoK"
+      className="sc-gzVnrw klvbjl"
     >
       <div
         className="sc-bdVaJa flBAph"
@@ -90,7 +104,7 @@ Array [
           }
         >
           <i
-            className="material-icons sc-ifAKCX ihzbNI"
+            className="material-icons sc-EHOje kZpNpk"
           >
             library_books
           </i>
@@ -98,7 +112,7 @@ Array [
       </div>
     </span>
     <span
-      className="sc-bZQynM jmnWoK"
+      className="sc-gzVnrw klvbjl"
     >
       <div
         className="sc-bdVaJa flBAph"
@@ -116,7 +130,7 @@ Array [
           }
         >
           <i
-            className="material-icons sc-ifAKCX jzZElc"
+            className="material-icons sc-EHOje jsOnhV"
           >
             settings
           </i>
@@ -130,16 +144,30 @@ Array [
 exports[`<Layout /> without Navigation should render component 1`] = `
 Array [
   <header
-    className="sc-bwzfXH ksdvTF"
+    className="sc-bwzfXH geYBAS"
   >
+    <div
+      className="sc-bdVaJa flBAph"
+      onMouseDown={[Function]}
+      onMouseUp={[Function]}
+    >
+      <i
+        className="material-icons sc-bxivhb jrBfKJ"
+        color="#fff"
+        data-test="back"
+        onClick={[MockFunction]}
+      >
+        arrow_back
+      </i>
+    </div>
     <h1
-      className="sc-htpNat fxoVCB"
+      className="sc-htpNat eSnwWs"
     >
       title
     </h1>
   </header>,
   <div
-    className="sc-gzVnrw eeAPtW"
+    className="sc-htoDjs huhDoS"
   >
     test
   </div>,

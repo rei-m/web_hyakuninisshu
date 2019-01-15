@@ -39,6 +39,8 @@ export const plugins: GatsbyPlugin[] = [
     options: {
       theme: {
         palette: {
+          primary: { main: appTheme.colorPrimary },
+          secondary: { main: appTheme.colorPrimaryDark },
           background: {
             default: appTheme.colorThin,
           },

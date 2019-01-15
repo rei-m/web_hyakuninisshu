@@ -10,7 +10,6 @@ describe('<Layout />', () => {
   beforeEach(() => {
     baseProps = {
       title: 'title',
-      canBack: false,
       isDisplayNav: true,
       onClickBack: jest.fn(),
     };

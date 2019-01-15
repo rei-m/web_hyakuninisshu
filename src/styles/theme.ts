@@ -9,6 +9,7 @@ export const appTheme = {
   colorPrimaryDark: '#689F38',
   colorThin: '#fffff0',
   elevationShadow1x: '0 2px 5px rgba(0, 0, 0, 0.26)',
+  elevationShadow2x: '0 4px 10px rgba(0, 0, 0, 0.26)',
   headerHeight: '56px',
   headerHeightWide: '64px',
   minWidthWide: '768px',
