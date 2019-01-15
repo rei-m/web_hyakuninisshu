@@ -35,13 +35,7 @@ const KarutasPageTemplate: React.FC<Props> = ({ pageContext }) => {
 
   return (
     <ErrorBoundary>
-      <Layout
-        title={title}
-        canBack={true}
-        isDisplayNav={true}
-        currentMenuType={MenuType.Material}
-        onClickBack={onClickBack}
-      >
+      <Layout title={title} isDisplayNav={true} currentMenuType={MenuType.Material} onClickBack={onClickBack}>
         <SEO
           title={title}
           keywords={[

@@ -1,6 +1,8 @@
 import * as ReactTestRenderer from 'react-test-renderer';
 import * as React from 'react';
-import Karutas, { Props } from '@src/pages/karutas';
+import { Provider } from 'react-redux';
+import { createStore } from '@src/state';
+import { KarutasPage, Props } from '@src/pages/karutas';
 import { DefaultSEOQueryData } from '@src/components/SEO';
 import { QueryData } from '@src/components/KarutaImage';
 import { Karuta } from '@src/types';
@@ -29,6 +31,7 @@ describe('/karutas', () => {
           ],
         },
       },
+      onClickSearch: jest.fn(),
     };
 
     setUpQueryOnce<DefaultSEOQueryData>({
@@ -62,7 +65,11 @@ describe('/karutas', () => {
   });
 
   it('should render component', () => {
-    const renderer = ReactTestRenderer.create(<Karutas {...baseProps} />);
+    const renderer = ReactTestRenderer.create(
+      <Provider store={createStore()}>
+        <KarutasPage {...baseProps} />
+      </Provider>
+    );
     expect(renderer.toJSON()).toMatchSnapshot();
   });
 });

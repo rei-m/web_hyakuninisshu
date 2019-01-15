@@ -4,13 +4,11 @@ import { withRipple } from '@src/enhancers/withRipple';
 
 export interface Props {
   title: string;
-  canBack: boolean;
-  onClickBack: () => void;
+  onClickBack?: () => void;
+  onClickSearch?: () => void;
 }
 
-type RootProps = Pick<Props, 'canBack'>;
-
-const Container = styled.header<RootProps>`
+const Container = styled.header<{ canBack: boolean }>`
   box-shadow: ${({ theme }) => theme.elevationShadow1x};
   left: 0;
   right: 0;
@@ -29,12 +27,13 @@ const Title = styled.h1`
   margin: 0;
   font-weight: normal;
   text-align: left;
+  flex-grow: 1;
   @media screen and (min-width: ${({ theme }) => theme.minWidthWide}) {
     line-height: ${({ theme }) => theme.headerHeightWide};
   }
 `;
 
-const Icon = withRipple(styled.i`
+const BackIcon = withRipple(styled.i`
   line-height: ${({ theme }) => theme.headerHeight};
   width: ${({ theme }) => theme.headerHeight};
   color: #fff;
@@ -46,14 +45,31 @@ const Icon = withRipple(styled.i`
   }
 `);
 
-const Header: React.FC<Props> = ({ title, canBack, onClickBack }) => (
-  <Container canBack={canBack}>
-    {canBack && (
-      <Icon className="material-icons" onClick={onClickBack} data-test="back">
+const MenuIcon = withRipple(styled.i`
+  line-height: ${({ theme }) => theme.headerHeight};
+  width: ${({ theme }) => theme.headerHeight};
+  color: #fff;
+  text-align: center;
+  cursor: pointer;
+  @media screen and (min-width: ${({ theme }) => theme.minWidthWide}) {
+    line-height: ${({ theme }) => theme.headerHeightWide};
+    width: ${({ theme }) => theme.headerHeightWide};
+  }
+`);
+
+const Header: React.FC<Props> = ({ title, onClickBack, onClickSearch }) => (
+  <Container canBack={!!onClickBack}>
+    {!!onClickBack && (
+      <BackIcon className="material-icons" onClick={onClickBack} data-test="back">
         arrow_back
-      </Icon>
+      </BackIcon>
     )}
     <Title>{title}</Title>
+    {!!onClickSearch && (
+      <MenuIcon className="material-icons" onClick={onClickSearch} data-test="search">
+        search
+      </MenuIcon>
+    )}
   </Container>
 );
 

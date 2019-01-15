@@ -3,7 +3,8 @@ import { create } from '@test/factories';
 import { mockAppStoreCreateor } from '@test/helpers';
 import * as questionsAction from '@src/actions/questions';
 import { initialState as questionsInitialState } from '@src/state/questions';
-import { Answer, Karuta, Question } from '@src/types';
+import { initialState as uiInitialState } from '@src/state/ui';
+import { Answer, Color, Karuta, Kimariji, Question } from '@src/types';
 import {
   ColorCondition,
   KarutaStyleCondition,
@@ -17,20 +18,20 @@ import { GlobalState } from '@src/state';
 const setUpKarutas = () =>
   Array.from(Array(100).keys()).map(i =>
     create<Karuta>('karuta', {
-      color: i < 20 ? 'blue' : 'pink',
+      color: (i < 20 ? 'blue' : 'pink') as Color,
       id: (i + 1).toString(),
       no: i + 1,
-      kimariji: (i % 5) + 1,
+      kimariji: ((i % 5) + 1) as Kimariji,
     })
   );
 
 const setUpQuestions = () => [...Array(10).keys()].map(_ => create<Question>('question'));
 
-const setUpStoreWithKarutas = () => {
-  return mockAppStoreCreateor()({
+const setUpStoreWithKarutas = () =>
+  mockAppStoreCreateor()({
     questions: questionsInitialState,
+    ui: uiInitialState,
   });
-};
 
 describe('QuestionsActionCreator', () => {
   it('should create StartTrainingAction', () => {
@@ -199,6 +200,7 @@ describe('QuestionsActionCreator', () => {
         answers,
         questions: answeredQuestions,
       },
+      ui: uiInitialState,
     });
     store.dispatch(actionCreator as any);
 
@@ -234,6 +236,7 @@ describe('QuestionsActionCreator', () => {
           ...questionsInitialState,
           questions: [question],
         },
+        ui: uiInitialState,
       });
     });
 
@@ -290,6 +293,7 @@ describe('QuestionsActionCreator', () => {
         questionState: QuestionState.Answered,
         questions: [question],
       },
+      ui: uiInitialState,
     });
 
     const actionCreator = questionsAction.confirmCorrect();
@@ -321,6 +325,7 @@ describe('QuestionsActionCreator', () => {
         questionState: QuestionState.Answered,
         questions: [question1, question2],
       },
+      ui: uiInitialState,
     });
 
     const actionCreator = questionsAction.openNextQuestion();

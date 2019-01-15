@@ -3,7 +3,7 @@ import * as React from 'react';
 import { shallow } from 'enzyme';
 import { setUpQueryOnce } from '@test/helpers';
 import { create } from '@test/factories';
-import Row, { Props } from '@src/components/KarutaList/Row';
+import Row, { Props } from '@src/containers/KarutaList/Row';
 import { QueryData } from '@src/components/KarutaImage';
 import { Karuta } from '@src/types';
 
@@ -44,7 +44,9 @@ describe('KarutaList', () => {
     });
 
     it('should fire onClickRow when clicked', () => {
-      shallow(<Row {...props} />).simulate('click');
+      shallow(<Row {...props} />)
+        .dive()
+        .simulate('click');
       expect(props.onClickRow).toHaveBeenCalledWith(1);
     });
   });

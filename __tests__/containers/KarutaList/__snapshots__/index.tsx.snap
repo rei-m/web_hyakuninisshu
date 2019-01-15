@@ -1,8 +1,8 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<KarutaList /> should render component 1`] = `
+exports[`<KarutaList /> components should render component 1`] = `
 <div
-  className="sc-bZQynM dczuRC"
+  className="sc-htoDjs eacTSX"
 >
   <div
     className="sc-bdVaJa dzVtvu"
@@ -173,4 +173,88 @@ exports[`<KarutaList /> should render component 1`] = `
     </div>
   </div>
 </div>
+`;
+
+exports[`<KarutaList /> mapStateToProps should convert state to props 1`] = `
+Object {
+  "karutas": Array [
+    Object {
+      "color": "blue",
+      "creator": "詠み手",
+      "fifthKana": "ごく",
+      "fifthKanji": "五句",
+      "firstKana": "しょく",
+      "firstKanji": "初句",
+      "fourthKana": "よんく",
+      "fourthKanji": "四句",
+      "id": "1",
+      "imageNo": "001",
+      "kimariji": 1,
+      "no": 1,
+      "secondKana": "にく",
+      "secondKanji": "二句",
+      "thirdKana": "さんく",
+      "thirdKanji": "三句",
+      "translation": "歌の訳",
+    },
+    Object {
+      "color": "blue",
+      "creator": "詠み手",
+      "fifthKana": "ごく",
+      "fifthKanji": "五句",
+      "firstKana": "しょく",
+      "firstKanji": "初句",
+      "fourthKana": "よんく",
+      "fourthKanji": "四句",
+      "id": "6",
+      "imageNo": "001",
+      "kimariji": 1,
+      "no": 6,
+      "secondKana": "にく",
+      "secondKanji": "二句",
+      "thirdKana": "さんく",
+      "thirdKanji": "三句",
+      "translation": "歌の訳",
+    },
+    Object {
+      "color": "blue",
+      "creator": "詠み手",
+      "fifthKana": "ごく",
+      "fifthKanji": "五句",
+      "firstKana": "しょく",
+      "firstKanji": "初句",
+      "fourthKana": "よんく",
+      "fourthKanji": "四句",
+      "id": "11",
+      "imageNo": "001",
+      "kimariji": 1,
+      "no": 11,
+      "secondKana": "にく",
+      "secondKanji": "二句",
+      "thirdKana": "さんく",
+      "thirdKanji": "三句",
+      "translation": "歌の訳",
+    },
+    Object {
+      "color": "blue",
+      "creator": "詠み手",
+      "fifthKana": "ごく",
+      "fifthKanji": "五句",
+      "firstKana": "しょく",
+      "firstKanji": "初句",
+      "fourthKana": "よんく",
+      "fourthKanji": "四句",
+      "id": "16",
+      "imageNo": "001",
+      "kimariji": 1,
+      "no": 16,
+      "secondKana": "にく",
+      "secondKanji": "二句",
+      "thirdKana": "さんく",
+      "thirdKanji": "三句",
+      "translation": "歌の訳",
+    },
+  ],
+  "onClickRow": [MockFunction],
+}
 `;
