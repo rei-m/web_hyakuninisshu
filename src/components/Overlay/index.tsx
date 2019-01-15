@@ -5,9 +5,6 @@ export interface OverlayProps {
   style?: React.CSSProperties;
 }
 
-const body: HTMLElement = document.getElementsByTagName('body')[0]!;
-const rootContainer: HTMLElement = document.getElementById('___gatsby_portal')!;
-
 const rootStyleMap: { [key: string]: string | number } = {
   width: '100vw',
   height: '100vh',
@@ -24,14 +21,18 @@ const rootStyle = Object.keys(rootStyleMap)
   .join(';');
 
 export default class Overlay extends React.Component<OverlayProps> {
+  private body: HTMLElement;
+  private rootContainer: HTMLElement;
   private el: HTMLDivElement;
   private bodyOverflow: string | null;
 
   constructor(props: OverlayProps) {
     super(props);
+    this.body = document.getElementsByTagName('body')[0]!;
+    this.rootContainer = document.getElementById('___gatsby_portal')!;
     this.el = document.createElement('div');
     this.el.style.cssText = rootStyle;
-    this.bodyOverflow = body.style.overflow;
+    this.bodyOverflow = this.body.style.overflow;
   }
 
   componentDidMount() {
@@ -43,13 +44,13 @@ export default class Overlay extends React.Component<OverlayProps> {
     // DOM node, or uses 'autoFocus' in a descendant, add
     // state to Modal and only render the children when Modal
     // is inserted in the DOM tree.
-    rootContainer.appendChild(this.el);
-    body.style.overflow = 'hidden';
+    this.rootContainer.appendChild(this.el);
+    this.body.style.overflow = 'hidden';
   }
 
   componentWillUnmount() {
-    rootContainer.removeChild(this.el);
-    body.style.overflow = this.bodyOverflow;
+    this.rootContainer.removeChild(this.el);
+    this.body.style.overflow = this.bodyOverflow;
   }
 
   render() {
