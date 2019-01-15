@@ -42,7 +42,7 @@ const Container = styled.section`
   padding: ${({ theme }) => theme.spacing2x};
 `;
 
-const KarutasPage: React.FC<Props> = ({ data, onClickSearch }) => {
+export const KarutasPage: React.FC<Props> = ({ data, onClickSearch }) => {
   const karutas = data.allKaruta.edges.map(karutaData => JSON.parse(karutaData.node.internal.content) as Karuta);
   const title = `百人一首 - 資料 -`;
   const description = `百人一首の資料のページです。百人一首の暗記を練習できます。百人一首の札の画像や現代語訳も載せています。百人一首の歌の意味に触れながら楽しく覚えましょう。`;

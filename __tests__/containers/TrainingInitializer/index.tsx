@@ -2,6 +2,7 @@ import { MockStore } from 'redux-mock-store';
 import { mockAppStoreCreateor } from '@test/helpers';
 import { GlobalState } from '@src/state';
 import { initialState as questionsState } from '@src/state/questions';
+import { initialState as uiState } from '@src/state/ui';
 import { START_TRAINING_NAME } from '@src/actions/questions';
 import { mapDispatchToProps } from '@src/containers/TrainingInitializer';
 import {
@@ -18,6 +19,7 @@ describe('<TrainingInitializer />', () => {
   beforeEach(() => {
     mockStore = mockAppStoreCreateor()({
       questions: questionsState,
+      ui: uiState,
     });
   });
 

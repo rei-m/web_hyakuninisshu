@@ -1,15 +1,16 @@
+import ExamResult from '@src/components/ExamResult';
 import * as React from 'react';
-import { MockStore } from 'redux-mock-store';
 import { shallow, ShallowWrapper } from 'enzyme';
 import { mapDispatchToProps, mapStateToProps, ExamQuestions, OwnProps, Props } from '@src/containers/ExamQuestions';
 import ExamInitializer from '@src/containers/ExamInitializer';
 import QuestionView from '@src/components/QuestionView';
 import QuestionCorrect from '@src/components/QuestionCorrect';
-import ExamResult from '@src/components/ExamResult';
+import { MockStore } from 'redux-mock-store';
 import { GlobalState } from '@src/state';
 import { initialState as questionsState } from '@src/state/questions';
+import { initialState as uiState } from '@src/state/ui';
 import { QuestionState } from '@src/enums';
-import { Answer, Karuta, Question, ToriFuda, YomiFuda } from '@src/types';
+import { Answer, Color, Karuta, Kimariji, Question, ToriFuda, YomiFuda } from '@src/types';
 import {
   ANSWER_QUESTION_NAME,
   CONFIRM_CORRECT_NAME,
@@ -46,10 +47,10 @@ describe('<ExamQuestions />', () => {
     beforeEach(() => {
       const karutas: Karuta[] = Array.from(Array(100).keys()).map(i =>
         create<Karuta>('karuta', {
-          color: i < 20 ? 'blue' : 'pink',
+          color: (i < 20 ? 'blue' : 'pink') as Color,
           id: (i + 1).toString(),
           no: i + 1,
-          kimariji: (i % 5) + 1,
+          kimariji: ((i % 5) + 1) as Kimariji,
         })
       );
 
@@ -121,10 +122,10 @@ describe('<ExamQuestions />', () => {
     it('should convert state to props', () => {
       const karutas: Karuta[] = Array.from(Array(100).keys()).map(i =>
         create<Karuta>('karuta', {
-          color: i < 20 ? 'blue' : 'pink',
+          color: (i < 20 ? 'blue' : 'pink') as Color,
           id: (i + 1).toString(),
           no: i + 1,
-          kimariji: (i % 5) + 1,
+          kimariji: ((i % 5) + 1) as Kimariji,
         })
       );
 
@@ -142,6 +143,7 @@ describe('<ExamQuestions />', () => {
           questionState: QuestionState.Finished,
           questions: [createQuestion(1)],
         },
+        ui: uiState,
       };
 
       expect(mapStateToProps(state, props)).toMatchSnapshot();
@@ -154,6 +156,7 @@ describe('<ExamQuestions />', () => {
     beforeEach(() => {
       mockStore = mockAppStoreCreateor()({
         questions: { ...questionsState, questions: [createQuestion(1)] },
+        ui: uiState,
       });
     });
 

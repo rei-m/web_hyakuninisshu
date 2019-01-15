@@ -19,7 +19,7 @@ exports[`<Header /> should render component when can back 1`] = `
     </i>
   </div>
   <h1
-    className="sc-htpNat fxoVCB"
+    className="sc-htpNat eSnwWs"
   >
     This is title
   </h1>
@@ -28,26 +28,38 @@ exports[`<Header /> should render component when can back 1`] = `
 
 exports[`<Header /> should render component when can not back 1`] = `
 <header
-  className="sc-bwzfXH geYBAS"
+  className="sc-bwzfXH ksdvTF"
 >
+  <h1
+    className="sc-htpNat eSnwWs"
+  >
+    This is title
+  </h1>
+</header>
+`;
+
+exports[`<Header /> should render component when can search 1`] = `
+<header
+  className="sc-bwzfXH ksdvTF"
+>
+  <h1
+    className="sc-htpNat eSnwWs"
+  >
+    This is title
+  </h1>
   <div
     className="sc-bdVaJa flBAph"
     onMouseDown={[Function]}
     onMouseUp={[Function]}
   >
     <i
-      className="material-icons sc-bxivhb jrBfKJ"
+      className="material-icons sc-ifAKCX gnWGZx"
       color="#fff"
-      data-test="back"
+      data-test="search"
       onClick={[MockFunction]}
     >
-      arrow_back
+      search
     </i>
   </div>
-  <h1
-    className="sc-htpNat fxoVCB"
-  >
-    This is title
-  </h1>
 </header>
 `;

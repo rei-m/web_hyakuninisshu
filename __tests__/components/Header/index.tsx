@@ -9,7 +9,6 @@ describe('<Header />', () => {
 
   beforeEach(() => {
     baseProps = {
-      onClickBack: jest.fn(),
       title: 'This is title',
     };
   });
@@ -20,15 +19,28 @@ describe('<Header />', () => {
   });
 
   it('should render component when can back', () => {
-    const props = { ...baseProps, canBack: true };
+    const props = { ...baseProps, onClickBack: jest.fn() };
+    const renderer = ReactTestRenderer.create(<Header {...props} />);
+    expect(renderer.toJSON()).toMatchSnapshot();
+  });
+
+  it('should render component when can search', () => {
+    const props = { ...baseProps, onClickSearch: jest.fn() };
     const renderer = ReactTestRenderer.create(<Header {...props} />);
     expect(renderer.toJSON()).toMatchSnapshot();
   });
 
   it('should fire onClickBack when back clicked', () => {
-    const props = { ...baseProps, canBack: true };
+    const props = { ...baseProps, onClickBack: jest.fn() };
     const wrapper = shallow(<Header {...props} />);
     wrapper.find(sel('back')).simulate('click');
-    expect(baseProps.onClickBack).toHaveBeenCalled();
+    expect(props.onClickBack).toHaveBeenCalled();
+  });
+
+  it('should fire onClickSearch when back clicked', () => {
+    const props = { ...baseProps, onClickSearch: jest.fn() };
+    const wrapper = shallow(<Header {...props} />);
+    wrapper.find(sel('search')).simulate('click');
+    expect(props.onClickSearch).toHaveBeenCalled();
   });
 });

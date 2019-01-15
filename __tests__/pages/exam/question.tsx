@@ -1,9 +1,9 @@
+import { Color, Karuta, Kimariji } from '@src/types';
 import * as ReactTestRenderer from 'react-test-renderer';
-import * as React from 'react';
 import { Provider } from 'react-redux';
 import ExamQuestion, { Props } from '@src/pages/exam/question';
 import { DefaultSEOQueryData } from '@src/components/SEO';
-import { Karuta } from '@src/types';
+import * as React from 'react';
 import { createStore } from '@src/state';
 import { QueryData as QuestionViewQueryData } from '@src/components/QuestionView';
 import { QueryData as QuestionResultQueryData } from '@src/components/QuestionResult';
@@ -16,10 +16,10 @@ describe('/exam/question', () => {
   beforeEach(() => {
     const karutas: Karuta[] = Array.from(Array(100).keys()).map(i =>
       create<Karuta>('karuta', {
-        color: i < 20 ? 'blue' : 'pink',
+        color: (i < 20 ? 'blue' : 'pink') as Color,
         id: (i + 1).toString(),
         no: i + 1,
-        kimariji: (i % 5) + 1,
+        kimariji: ((i % 5) + 1) as Kimariji,
       })
     );
 

@@ -1,5 +1,5 @@
+import ErrorMessage from '@src/components/ErrorMessage';
 import * as React from 'react';
-import { MockStore } from 'redux-mock-store';
 import { shallow, ShallowWrapper } from 'enzyme';
 import {
   mapDispatchToProps,
@@ -12,9 +12,10 @@ import TrainingInitializer from '@src/containers/TrainingInitializer';
 import QuestionView from '@src/components/QuestionView';
 import QuestionCorrect from '@src/components/QuestionCorrect';
 import TrainingResult from '@src/components/TrainingResult';
-import ErrorMessage from '@src/components/ErrorMessage';
+import { MockStore } from 'redux-mock-store';
 import { GlobalState } from '@src/state';
 import { initialState as questionsState } from '@src/state/questions';
+import { initialState as uiState } from '@src/state/ui';
 import {
   ColorCondition,
   KarutaStyleCondition,
@@ -23,7 +24,7 @@ import {
   RangeFromCondition,
   RangeToCondition,
 } from '@src/enums';
-import { Answer, Karuta, Question, ToriFuda, YomiFuda } from '@src/types';
+import { Answer, Color, Karuta, Kimariji, Question, ToriFuda, YomiFuda } from '@src/types';
 import {
   ANSWER_QUESTION_NAME,
   CONFIRM_CORRECT_NAME,
@@ -60,10 +61,10 @@ describe('<TrainingQuestions />', () => {
     beforeEach(() => {
       const karutas: Karuta[] = Array.from(Array(100).keys()).map(i =>
         create<Karuta>('karuta', {
-          color: i < 20 ? 'blue' : 'pink',
+          color: (i < 20 ? 'blue' : 'pink') as Color,
           id: (i + 1).toString(),
           no: i + 1,
-          kimariji: (i % 5) + 1,
+          kimariji: ((i % 5) + 1) as Kimariji,
         })
       );
 
@@ -149,10 +150,10 @@ describe('<TrainingQuestions />', () => {
     it('should convert state to props', () => {
       const karutas: Karuta[] = Array.from(Array(100).keys()).map(i =>
         create<Karuta>('karuta', {
-          color: i < 20 ? 'blue' : 'pink',
+          color: (i < 20 ? 'blue' : 'pink') as Color,
           id: (i + 1).toString(),
           no: i + 1,
-          kimariji: (i % 5) + 1,
+          kimariji: ((i % 5) + 1) as Kimariji,
         })
       );
 
@@ -176,6 +177,7 @@ describe('<TrainingQuestions />', () => {
           questionState: QuestionState.Finished,
           questions: [createQuestion(1)],
         },
+        ui: uiState,
       };
 
       expect(mapStateToProps(state, props)).toMatchSnapshot();
@@ -188,6 +190,7 @@ describe('<TrainingQuestions />', () => {
     beforeEach(() => {
       mockStore = mockAppStoreCreateor()({
         questions: { ...questionsState, questions: [createQuestion(1)] },
+        ui: uiState,
       });
     });
 

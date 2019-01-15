@@ -20,43 +20,57 @@ Array [
       </i>
     </div>
     <h1
-      className="sc-htpNat fxoVCB"
+      className="sc-htpNat eSnwWs"
     >
       百人一首 - 資料 -
     </h1>
+    <div
+      className="sc-bdVaJa flBAph"
+      onMouseDown={[Function]}
+      onMouseUp={[Function]}
+    >
+      <i
+        className="material-icons sc-ifAKCX gnWGZx"
+        color="#fff"
+        data-test="search"
+        onClick={[MockFunction]}
+      >
+        search
+      </i>
+    </div>
   </header>,
   <div
-    className="sc-gzVnrw hzJxWQ"
+    className="sc-htoDjs dfwcpY"
   >
     <section
-      className="sc-kpOJdX dCLkFE"
+      className="sc-iAyFgw gpeamf"
     >
       <h1
-        className="sc-iwsKbI jkmlvZ"
+        className="sc-gZMcBi kfNscq"
       >
         歌一覧
       </h1>
       <div
-        className="sc-gZMcBi iXZiBx"
+        className="sc-gqjmRU jzcLeW"
       >
         <div
-          className="sc-gqjmRU cCYYjG"
+          className="sc-VigVT hJAUJT"
         >
           この欄は広告枠です
         </div>
       </div>
       <div
-        className="sc-kGXeez giOOIB"
+        className="sc-ckVGcZ kaYEOo"
       >
         <div
-          className="sc-fjdhpX DyZeS"
+          className="sc-jzJRlG fDQkvL"
           onClick={[Function]}
         >
           <div
-            className="sc-jzJRlG eedhcw"
+            className="sc-cSHVUG fndaal"
           >
             <div
-              className="sc-kAzzGY iBHESe"
+              className="sc-chPdSV eoxeZu"
             >
               一番
             </div>
@@ -113,20 +127,20 @@ Array [
             </div>
           </div>
           <div
-            className="sc-cSHVUG eDXrDo"
+            className="sc-kAzzGY eWFIXO"
           >
             <div
-              className="sc-chPdSV cBMJjQ"
+              className="sc-kgoBCf didWzD"
             >
               初句 二句 三句
             </div>
             <div
-              className="sc-chPdSV cBMJjQ"
+              className="sc-kgoBCf didWzD"
             >
               四句 五句
             </div>
             <div
-              className="sc-kgoBCf dHGwth"
+              className="sc-kGXeez LLoTD"
             >
               詠み手
             </div>
@@ -134,10 +148,10 @@ Array [
         </div>
       </div>
       <div
-        className="sc-VigVT ieiGAu"
+        className="sc-jTzLTM loGiWm"
       >
         <div
-          className="sc-jTzLTM ljXwZC"
+          className="sc-fjdhpX cAdUR"
         >
           この欄は広告枠です
         </div>
@@ -145,10 +159,10 @@ Array [
     </section>
   </div>,
   <nav
-    className="sc-EHOje extRj"
+    className="sc-bZQynM gfjWgY"
   >
     <span
-      className="sc-bZQynM jmnWoK"
+      className="sc-gzVnrw klvbjl"
     >
       <div
         className="sc-bdVaJa flBAph"
@@ -166,7 +180,7 @@ Array [
           }
         >
           <i
-            className="material-icons sc-ifAKCX hrwKKP"
+            className="material-icons sc-EHOje evPMQv"
           >
             create
           </i>
@@ -174,7 +188,7 @@ Array [
       </div>
     </span>
     <span
-      className="sc-bZQynM jmnWoK"
+      className="sc-gzVnrw klvbjl"
     >
       <div
         className="sc-bdVaJa flBAph"
@@ -192,7 +206,7 @@ Array [
           }
         >
           <i
-            className="material-icons sc-ifAKCX iiZnFL"
+            className="material-icons sc-EHOje gwxweT"
           >
             note
           </i>
@@ -200,7 +214,7 @@ Array [
       </div>
     </span>
     <span
-      className="sc-bZQynM jmnWoK"
+      className="sc-gzVnrw klvbjl"
     >
       <div
         className="sc-bdVaJa flBAph"
@@ -218,7 +232,7 @@ Array [
           }
         >
           <i
-            className="material-icons sc-ifAKCX hUNLEv"
+            className="material-icons sc-EHOje eTKhrb"
           >
             library_books
           </i>
@@ -226,7 +240,7 @@ Array [
       </div>
     </span>
     <span
-      className="sc-bZQynM jmnWoK"
+      className="sc-gzVnrw klvbjl"
     >
       <div
         className="sc-bdVaJa flBAph"
@@ -244,7 +258,7 @@ Array [
           }
         >
           <i
-            className="material-icons sc-ifAKCX jzZElc"
+            className="material-icons sc-EHOje jsOnhV"
           >
             settings
           </i>
