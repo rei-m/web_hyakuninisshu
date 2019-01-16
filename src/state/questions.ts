@@ -13,6 +13,7 @@ import {
   ColorCondition,
   KarutaStyleCondition,
   KimarijiCondition,
+  QuestionAnimCondition,
   QuestionState,
   RangeFromCondition,
   RangeToCondition,
@@ -22,6 +23,7 @@ export interface QuestionsState {
   readonly karutas: Karuta[];
   readonly currentIndex: number;
   readonly questions: Question[];
+  readonly dulation: number;
   readonly answers: Answer[];
   readonly lastStartedTime?: number;
   readonly trainingCondition: {
@@ -31,6 +33,7 @@ export interface QuestionsState {
     readonly color: ColorCondition;
     readonly kamiNoKuStyle: KarutaStyleCondition;
     readonly shimoNoKuStyle: KarutaStyleCondition;
+    readonly questionAnim: QuestionAnimCondition;
   };
   readonly questionState?: QuestionState;
 }
@@ -40,6 +43,7 @@ export const initialState: QuestionsState = {
   answers: [],
   currentIndex: 0,
   questions: [],
+  dulation: 0,
   trainingCondition: {
     color: ColorCondition.None,
     kamiNoKuStyle: KarutaStyleCondition.KanjiAndKana,
@@ -47,6 +51,7 @@ export const initialState: QuestionsState = {
     rangeFrom: RangeFromCondition.One,
     rangeTo: RangeToCondition.OneHundred,
     shimoNoKuStyle: KarutaStyleCondition.KanaOnly,
+    questionAnim: QuestionAnimCondition.Normal,
   },
 };
 
@@ -60,6 +65,7 @@ export const questions = (state = initialState, action: QuestionsActions): Quest
         lastStartedTime: action.payload.startedTime,
         questionState: action.payload.nextState,
         questions: action.payload.questions,
+        dulation: action.payload.dulation,
         trainingCondition: {
           ...action.meta,
         },

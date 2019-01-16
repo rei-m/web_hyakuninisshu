@@ -1,9 +1,9 @@
+import QuestionCorrect, { Props as QuestionCorrectProps } from '@src/components/QuestionCorrect';
 import * as React from 'react';
-import { connect } from 'react-redux';
 import { ThunkDispatch } from 'redux-thunk';
 import ExamInitializer from '@src/containers/ExamInitializer';
 import QuestionView, { Props as QuestionViewProps } from '@src/components/QuestionView';
-import QuestionCorrect, { Props as QuestionCorrectProps } from '@src/components/QuestionCorrect';
+import { connect } from 'react-redux';
 import ExamResult, { Props as ExamResultProps } from '@src/components/ExamResult';
 import { GlobalState } from '@src/state';
 import {
@@ -14,8 +14,9 @@ import {
   restartQuestions,
   QuestionsActions,
 } from '@src/actions/questions';
-import { QuestionState } from '@src/enums';
+import { QuestionAnimCondition, QuestionState } from '@src/enums';
 import { Answer, Karuta, Question, ToriFuda } from '@src/types';
+import { toDulation } from '@src/utils/questions';
 
 export interface OwnProps {
   karutas: Karuta[];
@@ -95,6 +96,7 @@ export const ExamQuestions: React.FC<Props> = ({
           answer={answer}
           totalCount={totalCount}
           currentPosition={currentPosition}
+          dulation={toDulation(QuestionAnimCondition.Normal)}
           onClickResult={onClickResult}
           onClickToriFuda={onClickToriFuda}
         />

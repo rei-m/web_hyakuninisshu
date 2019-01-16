@@ -6,6 +6,7 @@ import YomiFudaWord, { SPACE } from '@src/components/YomiFudaWord';
 export interface Props {
   yomiFuda: YomiFuda;
   answered: boolean;
+  dulation: number;
   style?: React.CSSProperties;
 }
 
@@ -59,7 +60,7 @@ class YomiFudaView extends React.Component<Props, State> {
   }
 
   public render() {
-    const { yomiFuda, style, answered } = this.props;
+    const { yomiFuda, style, answered, dulation } = this.props;
     const { firstText, secondText, thirdText } = yomiFuda;
     const firstLine = this.adjustDisplayText(firstText, 0);
     const secondLine = this.adjustDisplayText(secondText, firstText.length);
@@ -67,7 +68,7 @@ class YomiFudaView extends React.Component<Props, State> {
     return (
       <Container style={style}>
         <Inner>
-          {answered ? (
+          {dulation === 0 || answered ? (
             <>
               <Phrase>{yomiFuda.firstText}</Phrase>
               <SecondPhrase>{yomiFuda.secondText}</SecondPhrase>
@@ -77,17 +78,17 @@ class YomiFudaView extends React.Component<Props, State> {
             <>
               <Phrase>
                 {Array.from(firstLine).map((s, i) => (
-                  <YomiFudaWord word={s} onAnimationEnd={this.onAnimationEnd} key={i} />
+                  <YomiFudaWord word={s} dulation={dulation} onAnimationEnd={this.onAnimationEnd} key={i} />
                 ))}
               </Phrase>
               <SecondPhrase>
                 {Array.from(secondLine).map((s, i) => (
-                  <YomiFudaWord word={s} onAnimationEnd={this.onAnimationEnd} key={i} />
+                  <YomiFudaWord word={s} dulation={dulation} onAnimationEnd={this.onAnimationEnd} key={i} />
                 ))}
               </SecondPhrase>
               <ThirdPhrase>
                 {Array.from(thirdLine).map((s, i) => (
-                  <YomiFudaWord word={s} onAnimationEnd={this.onAnimationEnd} key={i} />
+                  <YomiFudaWord word={s} dulation={dulation} onAnimationEnd={this.onAnimationEnd} key={i} />
                 ))}
               </ThirdPhrase>
             </>

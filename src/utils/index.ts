@@ -1,4 +1,4 @@
-import { ColorCondition, KarutaStyleCondition, KimarijiCondition, MenuType } from '@src/enums';
+import { ColorCondition, KarutaStyleCondition, KimarijiCondition, MenuType, QuestionAnimCondition } from '@src/enums';
 import { Color, Kimariji } from '@src/types';
 
 export const menuTypeToIcon = (iconType: MenuType) => {
@@ -73,6 +73,19 @@ export const toKarutaStyleConditionString = (karutaStyle: KarutaStyleCondition) 
       return '漢字と仮名で表示';
     case KarutaStyleCondition.KanaOnly:
       return 'すべて仮名で表示';
+  }
+};
+
+export const toQuestionAnimConditionString = (questionAnimCondition: QuestionAnimCondition) => {
+  switch (questionAnimCondition) {
+    case QuestionAnimCondition.None:
+      return 'なし';
+    case QuestionAnimCondition.Slow:
+      return 'おそめ';
+    case QuestionAnimCondition.Normal:
+      return 'ふつう';
+    case QuestionAnimCondition.Fast:
+      return 'はやめ';
   }
 };
 

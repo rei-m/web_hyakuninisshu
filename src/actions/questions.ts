@@ -2,11 +2,12 @@ import { Action, Dispatch } from 'redux';
 import { GlobalState } from '@src/state';
 import { Answer, Karuta, Question } from '@src/types';
 import { randomizeArray } from '@src/utils';
-import { fetchTorifudas, questionsFilter } from '@src/utils/questions';
+import { fetchTorifudas, questionsFilter, toDulation } from '@src/utils/questions';
 import {
   ColorCondition,
   KarutaStyleCondition,
   KimarijiCondition,
+  QuestionAnimCondition,
   QuestionState,
   RangeFromCondition,
   RangeToCondition,
@@ -40,6 +41,7 @@ export interface StartTrainingAction extends Action {
     readonly questions: Question[];
     readonly startedTime: number;
     readonly nextState: QuestionState;
+    readonly dulation: number;
   };
   readonly meta: {
     readonly rangeFrom: RangeFromCondition;
@@ -48,6 +50,7 @@ export interface StartTrainingAction extends Action {
     readonly color: ColorCondition;
     readonly kamiNoKuStyle: KarutaStyleCondition;
     readonly shimoNoKuStyle: KarutaStyleCondition;
+    readonly questionAnim: QuestionAnimCondition;
   };
 }
 
@@ -120,7 +123,8 @@ export const startTraining = (
   kimariji: KimarijiCondition,
   color: ColorCondition,
   kamiNoKuStyle: KarutaStyleCondition,
-  shimoNoKuStyle: KarutaStyleCondition
+  shimoNoKuStyle: KarutaStyleCondition,
+  questionAnim: QuestionAnimCondition
 ) => (dispatch: Dispatch<QuestionsActions>) => {
   const questions = new QuestionsFactory(karutas)
     .setRange(rangeFrom, rangeTo)
@@ -138,12 +142,14 @@ export const startTraining = (
       rangeFrom,
       rangeTo,
       shimoNoKuStyle,
+      questionAnim,
     },
     payload: {
       karutas,
       nextState: QuestionState.InAnswer,
       questions: randomizeArray<Question>(questions),
       startedTime: new Date().getTime(),
+      dulation: toDulation(questionAnim),
     },
     type: START_TRAINING_NAME,
   };

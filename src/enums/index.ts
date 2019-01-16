@@ -159,3 +159,26 @@ export const KarutaStyleConditions: EnumCollection<KarutaStyleCondition> = {
   },
   values: [KarutaStyleCondition.KanjiAndKana, KarutaStyleCondition.KanaOnly],
 };
+
+export enum QuestionAnimCondition {
+  None = 0,
+  Slow = 1,
+  Normal = 2,
+  Fast = 3,
+}
+
+export const QuestionAnimConditions: EnumCollection<QuestionAnimCondition> = {
+  valueOf: (value: number) => {
+    const result = QuestionAnimConditions.values.find(v => v === value);
+    if (result !== undefined) {
+      return result;
+    }
+    throw new Error(`unknown QuestionAnim, value is ${value}`);
+  },
+  values: [
+    QuestionAnimCondition.None,
+    QuestionAnimCondition.Slow,
+    QuestionAnimCondition.Normal,
+    QuestionAnimCondition.Fast,
+  ],
+};

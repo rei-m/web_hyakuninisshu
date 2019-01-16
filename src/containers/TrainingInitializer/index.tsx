@@ -7,6 +7,7 @@ import {
   ColorCondition,
   KarutaStyleCondition,
   KimarijiCondition,
+  QuestionAnimCondition,
   RangeFromCondition,
   RangeToCondition,
 } from '@src/enums';
@@ -21,6 +22,7 @@ export interface OwnProps {
   color: ColorCondition;
   kamiNoKuStyle: KarutaStyleCondition;
   shimoNoKuStyle: KarutaStyleCondition;
+  questionAnim: QuestionAnimCondition;
 }
 
 export type DispatchProps = Pick<ProgressProps, 'onStart'>;
@@ -31,10 +33,10 @@ const TrainingInitializer = ({ onStart }: Props) => <Progress onStart={onStart} 
 
 export const mapDispatchToProps = (
   dispatch: ThunkDispatch<GlobalState, {}, QuestionsActions>,
-  { karutas, rangeFrom, rangeTo, kimariji, color, kamiNoKuStyle, shimoNoKuStyle }: OwnProps
+  { karutas, rangeFrom, rangeTo, kimariji, color, kamiNoKuStyle, shimoNoKuStyle, questionAnim }: OwnProps
 ): DispatchProps => ({
   onStart: () => {
-    dispatch(startTraining(karutas, rangeFrom, rangeTo, kimariji, color, kamiNoKuStyle, shimoNoKuStyle));
+    dispatch(startTraining(karutas, rangeFrom, rangeTo, kimariji, color, kamiNoKuStyle, shimoNoKuStyle, questionAnim));
   },
 });
 
