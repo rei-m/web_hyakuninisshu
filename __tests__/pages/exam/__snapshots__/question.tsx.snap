@@ -3,15 +3,15 @@
 exports[`/exam/question when invalid state should render component 1`] = `
 Array [
   <header
-    className="sc-Rmtcm bbSMDR"
+    className="sc-bRBYWo laaIjU"
   >
     <div
-      className="sc-gzVnrw bQtzYg"
+      className="sc-htoDjs kcwXek"
       onMouseDown={[Function]}
       onMouseUp={[Function]}
     >
       <i
-        className="material-icons sc-hzDkRC fJfPcM"
+        className="material-icons sc-jhAzac hXKtZV"
         color="#fff"
         data-test="back"
         onClick={[Function]}
@@ -20,19 +20,19 @@ Array [
       </i>
     </div>
     <h1
-      className="sc-bRBYWo grULuh"
+      className="sc-hzDkRC goeXYj"
     >
       百人一首 - 腕試し -
     </h1>
   </header>,
   <div
-    className="sc-eqIVtm fzvReZ"
+    className="sc-fAjcbJ iMTfwe"
   >
     <div
-      className="sc-gisBJw dBZOWh"
+      className="sc-kjoXOD jymkGt"
     >
       <p
-        className="sc-kjoXOD iwBYeM"
+        className="sc-cHGsZl eWofNC"
       >
         不正な遷移を行いました。前の画面からやり直してください。
       </p>
@@ -44,15 +44,15 @@ Array [
 exports[`/exam/question when valid state should render component 1`] = `
 Array [
   <header
-    className="sc-Rmtcm bbSMDR"
+    className="sc-bRBYWo laaIjU"
   >
     <div
-      className="sc-gzVnrw bQtzYg"
+      className="sc-htoDjs kcwXek"
       onMouseDown={[Function]}
       onMouseUp={[Function]}
     >
       <i
-        className="material-icons sc-hzDkRC fJfPcM"
+        className="material-icons sc-jhAzac hXKtZV"
         color="#fff"
         data-test="back"
         onClick={[Function]}
@@ -61,29 +61,29 @@ Array [
       </i>
     </div>
     <h1
-      className="sc-bRBYWo grULuh"
+      className="sc-hzDkRC goeXYj"
     >
       百人一首 - 腕試し -
     </h1>
   </header>,
   <div
-    className="sc-eqIVtm fzvReZ"
+    className="sc-fAjcbJ iMTfwe"
   >
     <div
-      className="sc-jTzLTM bvhOsg"
+      className="sc-fjdhpX fNSJFm"
     >
       <div
-        className="sc-fjdhpX bCXXwx"
+        className="sc-jzJRlG gGPUdI"
       >
         <div
-          className="sc-cSHVUG kkLwnz"
+          className="sc-kAzzGY hmbMrr"
         >
           1
            / 
           100
         </div>
         <div
-          className="sc-htpNat HBVUT"
+          className="sc-bxivhb ivwqSq"
           style={
             Object {
               "margin": "auto",
@@ -91,36 +91,54 @@ Array [
           }
         >
           <div
-            className="sc-bxivhb hPDDfp"
+            className="sc-ifAKCX bKpGVQ"
           >
             <div
-              className="sc-ifAKCX bNrXE"
+              className="sc-EHOje hgQItU"
             >
-              初句
+              <span
+                className="sc-htpNat hRSTEw"
+                onAnimationEnd={[Function]}
+              >
+                初
+              </span>
+              <span>
+                　
+              </span>
             </div>
             <div
-              className="sc-ifAKCX sc-EHOje fLOkGg"
+              className="sc-EHOje sc-bZQynM eZymYX"
             >
-              二句
+              <span>
+                　
+              </span>
+              <span>
+                　
+              </span>
             </div>
             <div
-              className="sc-ifAKCX sc-bZQynM cJBCxN"
+              className="sc-EHOje sc-gzVnrw gddTfW"
             >
-              三句
+              <span>
+                　
+              </span>
+              <span>
+                　
+              </span>
             </div>
           </div>
         </div>
       </div>
       <div
-        className="sc-jzJRlG hRablJ"
+        className="sc-cSHVUG iDZpAS"
       >
         <div
-          className="sc-gzVnrw bQtzYg"
+          className="sc-htoDjs kcwXek"
           onMouseDown={[Function]}
           onMouseUp={[Function]}
         >
           <div
-            className="sc-htoDjs uzWdL"
+            className="sc-dnqmqq BFlSi"
             color="#fff"
             onClick={[Function]}
             style={
@@ -131,15 +149,15 @@ Array [
             }
           >
             <div
-              className="sc-dnqmqq kveNia"
+              className="sc-iwsKbI csWNzc"
             >
               <div
-                className="sc-iwsKbI TuLDV"
+                className="sc-gZMcBi efbCZY"
               >
                 よんく
               </div>
               <div
-                className="sc-iwsKbI sc-gZMcBi gcZWDp"
+                className="sc-gZMcBi sc-gqjmRU OeYjl"
               >
                 ごく
               </div>
@@ -147,12 +165,12 @@ Array [
           </div>
         </div>
         <div
-          className="sc-gzVnrw bQtzYg"
+          className="sc-htoDjs kcwXek"
           onMouseDown={[Function]}
           onMouseUp={[Function]}
         >
           <div
-            className="sc-htoDjs uzWdL"
+            className="sc-dnqmqq BFlSi"
             color="#fff"
             onClick={[Function]}
             style={
@@ -163,15 +181,15 @@ Array [
             }
           >
             <div
-              className="sc-dnqmqq kveNia"
+              className="sc-iwsKbI csWNzc"
             >
               <div
-                className="sc-iwsKbI TuLDV"
+                className="sc-gZMcBi efbCZY"
               >
                 よんく
               </div>
               <div
-                className="sc-iwsKbI sc-gZMcBi gcZWDp"
+                className="sc-gZMcBi sc-gqjmRU OeYjl"
               >
                 ごく
               </div>
@@ -179,12 +197,12 @@ Array [
           </div>
         </div>
         <div
-          className="sc-gzVnrw bQtzYg"
+          className="sc-htoDjs kcwXek"
           onMouseDown={[Function]}
           onMouseUp={[Function]}
         >
           <div
-            className="sc-htoDjs uzWdL"
+            className="sc-dnqmqq BFlSi"
             color="#fff"
             onClick={[Function]}
             style={
@@ -195,15 +213,15 @@ Array [
             }
           >
             <div
-              className="sc-dnqmqq kveNia"
+              className="sc-iwsKbI csWNzc"
             >
               <div
-                className="sc-iwsKbI TuLDV"
+                className="sc-gZMcBi efbCZY"
               >
                 よんく
               </div>
               <div
-                className="sc-iwsKbI sc-gZMcBi gcZWDp"
+                className="sc-gZMcBi sc-gqjmRU OeYjl"
               >
                 ごく
               </div>
@@ -211,12 +229,12 @@ Array [
           </div>
         </div>
         <div
-          className="sc-gzVnrw bQtzYg"
+          className="sc-htoDjs kcwXek"
           onMouseDown={[Function]}
           onMouseUp={[Function]}
         >
           <div
-            className="sc-htoDjs uzWdL"
+            className="sc-dnqmqq BFlSi"
             color="#fff"
             onClick={[Function]}
             style={
@@ -227,15 +245,15 @@ Array [
             }
           >
             <div
-              className="sc-dnqmqq kveNia"
+              className="sc-iwsKbI csWNzc"
             >
               <div
-                className="sc-iwsKbI TuLDV"
+                className="sc-gZMcBi efbCZY"
               >
                 よんく
               </div>
               <div
-                className="sc-iwsKbI sc-gZMcBi gcZWDp"
+                className="sc-gZMcBi sc-gqjmRU OeYjl"
               >
                 ごく
               </div>

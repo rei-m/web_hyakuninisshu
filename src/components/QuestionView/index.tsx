@@ -69,7 +69,7 @@ const QuestionView: React.FC<Props> = ({
           <Position>
             {currentPosition} / {totalCount}
           </Position>
-          <YomiFudaView yomiFuda={question.yomiFuda} style={{ margin: 'auto' }} />
+          <YomiFudaView yomiFuda={question.yomiFuda} answered={!!answer} style={{ margin: 'auto' }} />
         </YomiFudaBox>
         <ToriFudaBox>
           {question.toriFudas.map((toriFuda, i) => (
