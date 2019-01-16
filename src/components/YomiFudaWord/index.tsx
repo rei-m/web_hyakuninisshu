@@ -1,4 +1,5 @@
 import * as React from 'react';
+import shouldUpdate from 'recompose/shouldUpdate';
 import styled, { keyframes } from '@src/styles/styled-components';
 
 export const SPACE = '　';
@@ -27,4 +28,4 @@ const Word = styled.span`
 const YomiFudaWord: React.FC<Props> = ({ word, onAnimationEnd }) =>
   word === SPACE ? <span>{word}</span> : <Word onAnimationEnd={onAnimationEnd}>{word}</Word>;
 
-export default YomiFudaWord;
+export default shouldUpdate((props: Props, nextProps: Props) => props.word !== nextProps.word)(YomiFudaWord);
