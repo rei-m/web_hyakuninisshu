@@ -3,15 +3,15 @@
 exports[`/training/question when invalid state should render component 1`] = `
 Array [
   <header
-    className="sc-gipzik ejqjMq"
+    className="sc-csuQGl dCstgC"
   >
     <div
-      className="sc-gzVnrw bQtzYg"
+      className="sc-htoDjs kcwXek"
       onMouseDown={[Function]}
       onMouseUp={[Function]}
     >
       <i
-        className="material-icons sc-Rmtcm hfPxVl"
+        className="material-icons sc-bRBYWo gfzViQ"
         color="#fff"
         data-test="back"
         onClick={[Function]}
@@ -20,19 +20,19 @@ Array [
       </i>
     </div>
     <h1
-      className="sc-csuQGl hhwdwE"
+      className="sc-Rmtcm hvwJrv"
     >
       百人一首 - 練習 -
     </h1>
   </header>,
   <div
-    className="sc-fMiknA knALky"
+    className="sc-dVhcbM hXVtek"
   >
     <div
-      className="sc-iRbamj ecoFXL"
+      className="sc-jlyJG dDBvSE"
     >
       <p
-        className="sc-jlyJG vJuqs"
+        className="sc-gipzik ewCfZa"
       >
         不正な遷移を行いました。前の画面からやり直してください。
       </p>
@@ -44,15 +44,15 @@ Array [
 exports[`/training/question when valid state should render component 1`] = `
 Array [
   <header
-    className="sc-gipzik ejqjMq"
+    className="sc-csuQGl dCstgC"
   >
     <div
-      className="sc-gzVnrw bQtzYg"
+      className="sc-htoDjs kcwXek"
       onMouseDown={[Function]}
       onMouseUp={[Function]}
     >
       <i
-        className="material-icons sc-Rmtcm hfPxVl"
+        className="material-icons sc-bRBYWo gfzViQ"
         color="#fff"
         data-test="back"
         onClick={[Function]}
@@ -61,19 +61,19 @@ Array [
       </i>
     </div>
     <h1
-      className="sc-csuQGl hhwdwE"
+      className="sc-Rmtcm hvwJrv"
     >
       百人一首 - 練習 -
     </h1>
   </header>,
   <div
-    className="sc-fMiknA knALky"
+    className="sc-dVhcbM hXVtek"
   >
     <div
-      className="sc-iRbamj ecoFXL"
+      className="sc-jlyJG dDBvSE"
     >
       <p
-        className="sc-jlyJG vJuqs"
+        className="sc-gipzik ewCfZa"
       >
         指定した条件の歌はありませんでした
       </p>

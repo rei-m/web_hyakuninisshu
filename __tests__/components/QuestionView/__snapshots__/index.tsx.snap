@@ -2,20 +2,20 @@
 
 exports[`<QuestionView /> should render component when answered 1`] = `
 <div
-  className="sc-gqjmRU cASZEH"
+  className="sc-VigVT ljONEf"
 >
   <div
-    className="sc-VigVT cqVUej"
+    className="sc-jTzLTM jnXhag"
   >
     <div
-      className="sc-fjdhpX kbvaSH"
+      className="sc-jzJRlG hbbPSk"
     >
       1
        / 
       10
     </div>
     <div
-      className="sc-bdVaJa fLVCVI"
+      className="sc-bwzfXH bvmjNt"
       style={
         Object {
           "margin": "auto",
@@ -23,20 +23,20 @@ exports[`<QuestionView /> should render component when answered 1`] = `
       }
     >
       <div
-        className="sc-bwzfXH eJMUYF"
+        className="sc-htpNat eaelvy"
       >
         <div
-          className="sc-htpNat jzLbZs"
+          className="sc-bxivhb cIIvqJ"
         >
           初句
         </div>
         <div
-          className="sc-htpNat sc-bxivhb jWORiK"
+          className="sc-bxivhb sc-ifAKCX ejiZuo"
         >
           二句
         </div>
         <div
-          className="sc-htpNat sc-ifAKCX kznmZk"
+          className="sc-bxivhb sc-EHOje fUTEIU"
         >
           三句
         </div>
@@ -44,15 +44,15 @@ exports[`<QuestionView /> should render component when answered 1`] = `
     </div>
   </div>
   <div
-    className="sc-jTzLTM hujYWL"
+    className="sc-fjdhpX hZnkOe"
   >
     <div
-      className="sc-EHOje sLQmq"
+      className="sc-bZQynM lmXxAo"
       onMouseDown={[Function]}
       onMouseUp={[Function]}
     >
       <div
-        className="sc-bZQynM elUEiH"
+        className="sc-gzVnrw bvFKOA"
         color="#fff"
         onClick={[Function]}
         style={
@@ -63,15 +63,15 @@ exports[`<QuestionView /> should render component when answered 1`] = `
         }
       >
         <div
-          className="sc-gzVnrw dQuPak"
+          className="sc-htoDjs bKhwRD"
         >
           <div
-            className="sc-htoDjs iCdNOm"
+            className="sc-dnqmqq gCITGr"
           >
             よんく
           </div>
           <div
-            className="sc-htoDjs sc-dnqmqq fFBAQp"
+            className="sc-dnqmqq sc-iwsKbI cSrnkn"
           >
             ごく
           </div>
@@ -79,12 +79,12 @@ exports[`<QuestionView /> should render component when answered 1`] = `
       </div>
     </div>
     <div
-      className="sc-EHOje sLQmq"
+      className="sc-bZQynM lmXxAo"
       onMouseDown={[Function]}
       onMouseUp={[Function]}
     >
       <div
-        className="sc-bZQynM elUEiH"
+        className="sc-gzVnrw bvFKOA"
         color="#fff"
         onClick={[Function]}
         style={
@@ -95,15 +95,15 @@ exports[`<QuestionView /> should render component when answered 1`] = `
         }
       >
         <div
-          className="sc-gzVnrw dQuPak"
+          className="sc-htoDjs bKhwRD"
         >
           <div
-            className="sc-htoDjs iCdNOm"
+            className="sc-dnqmqq gCITGr"
           >
             よんく
           </div>
           <div
-            className="sc-htoDjs sc-dnqmqq fFBAQp"
+            className="sc-dnqmqq sc-iwsKbI cSrnkn"
           >
             ごく
           </div>
@@ -111,12 +111,12 @@ exports[`<QuestionView /> should render component when answered 1`] = `
       </div>
     </div>
     <div
-      className="sc-EHOje sLQmq"
+      className="sc-bZQynM lmXxAo"
       onMouseDown={[Function]}
       onMouseUp={[Function]}
     >
       <div
-        className="sc-bZQynM elUEiH"
+        className="sc-gzVnrw bvFKOA"
         color="#fff"
         onClick={[Function]}
         style={
@@ -127,15 +127,15 @@ exports[`<QuestionView /> should render component when answered 1`] = `
         }
       >
         <div
-          className="sc-gzVnrw dQuPak"
+          className="sc-htoDjs bKhwRD"
         >
           <div
-            className="sc-htoDjs iCdNOm"
+            className="sc-dnqmqq gCITGr"
           >
             よんく
           </div>
           <div
-            className="sc-htoDjs sc-dnqmqq fFBAQp"
+            className="sc-dnqmqq sc-iwsKbI cSrnkn"
           >
             ごく
           </div>
@@ -143,12 +143,12 @@ exports[`<QuestionView /> should render component when answered 1`] = `
       </div>
     </div>
     <div
-      className="sc-EHOje sLQmq"
+      className="sc-bZQynM lmXxAo"
       onMouseDown={[Function]}
       onMouseUp={[Function]}
     >
       <div
-        className="sc-bZQynM elUEiH"
+        className="sc-gzVnrw bvFKOA"
         color="#fff"
         onClick={[Function]}
         style={
@@ -159,15 +159,15 @@ exports[`<QuestionView /> should render component when answered 1`] = `
         }
       >
         <div
-          className="sc-gzVnrw dQuPak"
+          className="sc-htoDjs bKhwRD"
         >
           <div
-            className="sc-htoDjs iCdNOm"
+            className="sc-dnqmqq gCITGr"
           >
             よんく
           </div>
           <div
-            className="sc-htoDjs sc-dnqmqq fFBAQp"
+            className="sc-dnqmqq sc-iwsKbI cSrnkn"
           >
             ごく
           </div>
@@ -176,11 +176,11 @@ exports[`<QuestionView /> should render component when answered 1`] = `
     </div>
   </div>
   <div
-    className="sc-iwsKbI edubxM"
+    className="sc-gZMcBi bKdPNs"
     onClick={[MockFunction]}
   >
     <div
-      className="sc-gZMcBi fkLmkp gatsby-image-wrapper"
+      className="sc-gqjmRU kzcJUc gatsby-image-wrapper"
       style={
         Object {
           "overflow": "hidden",
@@ -234,20 +234,20 @@ exports[`<QuestionView /> should render component when answered 1`] = `
 
 exports[`<QuestionView /> should render component when not answered 1`] = `
 <div
-  className="sc-gqjmRU cASZEH"
+  className="sc-VigVT ljONEf"
 >
   <div
-    className="sc-VigVT cqVUej"
+    className="sc-jTzLTM jnXhag"
   >
     <div
-      className="sc-fjdhpX kbvaSH"
+      className="sc-jzJRlG hbbPSk"
     >
       1
        / 
       10
     </div>
     <div
-      className="sc-bdVaJa fLVCVI"
+      className="sc-bwzfXH bvmjNt"
       style={
         Object {
           "margin": "auto",
@@ -255,36 +255,54 @@ exports[`<QuestionView /> should render component when not answered 1`] = `
       }
     >
       <div
-        className="sc-bwzfXH eJMUYF"
+        className="sc-htpNat eaelvy"
       >
         <div
-          className="sc-htpNat jzLbZs"
+          className="sc-bxivhb cIIvqJ"
         >
-          初句
+          <span
+            className="sc-bdVaJa siDlf"
+            onAnimationEnd={[Function]}
+          >
+            初
+          </span>
+          <span>
+            　
+          </span>
         </div>
         <div
-          className="sc-htpNat sc-bxivhb jWORiK"
+          className="sc-bxivhb sc-ifAKCX ejiZuo"
         >
-          二句
+          <span>
+            　
+          </span>
+          <span>
+            　
+          </span>
         </div>
         <div
-          className="sc-htpNat sc-ifAKCX kznmZk"
+          className="sc-bxivhb sc-EHOje fUTEIU"
         >
-          三句
+          <span>
+            　
+          </span>
+          <span>
+            　
+          </span>
         </div>
       </div>
     </div>
   </div>
   <div
-    className="sc-jTzLTM hujYWL"
+    className="sc-fjdhpX hZnkOe"
   >
     <div
-      className="sc-EHOje sLQmq"
+      className="sc-bZQynM lmXxAo"
       onMouseDown={[Function]}
       onMouseUp={[Function]}
     >
       <div
-        className="sc-bZQynM elUEiH"
+        className="sc-gzVnrw bvFKOA"
         color="#fff"
         onClick={[Function]}
         style={
@@ -295,15 +313,15 @@ exports[`<QuestionView /> should render component when not answered 1`] = `
         }
       >
         <div
-          className="sc-gzVnrw dQuPak"
+          className="sc-htoDjs bKhwRD"
         >
           <div
-            className="sc-htoDjs iCdNOm"
+            className="sc-dnqmqq gCITGr"
           >
             よんく
           </div>
           <div
-            className="sc-htoDjs sc-dnqmqq fFBAQp"
+            className="sc-dnqmqq sc-iwsKbI cSrnkn"
           >
             ごく
           </div>
@@ -311,12 +329,12 @@ exports[`<QuestionView /> should render component when not answered 1`] = `
       </div>
     </div>
     <div
-      className="sc-EHOje sLQmq"
+      className="sc-bZQynM lmXxAo"
       onMouseDown={[Function]}
       onMouseUp={[Function]}
     >
       <div
-        className="sc-bZQynM elUEiH"
+        className="sc-gzVnrw bvFKOA"
         color="#fff"
         onClick={[Function]}
         style={
@@ -327,15 +345,15 @@ exports[`<QuestionView /> should render component when not answered 1`] = `
         }
       >
         <div
-          className="sc-gzVnrw dQuPak"
+          className="sc-htoDjs bKhwRD"
         >
           <div
-            className="sc-htoDjs iCdNOm"
+            className="sc-dnqmqq gCITGr"
           >
             よんく
           </div>
           <div
-            className="sc-htoDjs sc-dnqmqq fFBAQp"
+            className="sc-dnqmqq sc-iwsKbI cSrnkn"
           >
             ごく
           </div>
@@ -343,12 +361,12 @@ exports[`<QuestionView /> should render component when not answered 1`] = `
       </div>
     </div>
     <div
-      className="sc-EHOje sLQmq"
+      className="sc-bZQynM lmXxAo"
       onMouseDown={[Function]}
       onMouseUp={[Function]}
     >
       <div
-        className="sc-bZQynM elUEiH"
+        className="sc-gzVnrw bvFKOA"
         color="#fff"
         onClick={[Function]}
         style={
@@ -359,15 +377,15 @@ exports[`<QuestionView /> should render component when not answered 1`] = `
         }
       >
         <div
-          className="sc-gzVnrw dQuPak"
+          className="sc-htoDjs bKhwRD"
         >
           <div
-            className="sc-htoDjs iCdNOm"
+            className="sc-dnqmqq gCITGr"
           >
             よんく
           </div>
           <div
-            className="sc-htoDjs sc-dnqmqq fFBAQp"
+            className="sc-dnqmqq sc-iwsKbI cSrnkn"
           >
             ごく
           </div>
@@ -375,12 +393,12 @@ exports[`<QuestionView /> should render component when not answered 1`] = `
       </div>
     </div>
     <div
-      className="sc-EHOje sLQmq"
+      className="sc-bZQynM lmXxAo"
       onMouseDown={[Function]}
       onMouseUp={[Function]}
     >
       <div
-        className="sc-bZQynM elUEiH"
+        className="sc-gzVnrw bvFKOA"
         color="#fff"
         onClick={[Function]}
         style={
@@ -391,15 +409,15 @@ exports[`<QuestionView /> should render component when not answered 1`] = `
         }
       >
         <div
-          className="sc-gzVnrw dQuPak"
+          className="sc-htoDjs bKhwRD"
         >
           <div
-            className="sc-htoDjs iCdNOm"
+            className="sc-dnqmqq gCITGr"
           >
             よんく
           </div>
           <div
-            className="sc-htoDjs sc-dnqmqq fFBAQp"
+            className="sc-dnqmqq sc-iwsKbI cSrnkn"
           >
             ごく
           </div>

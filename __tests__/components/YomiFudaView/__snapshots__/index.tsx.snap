@@ -2,23 +2,23 @@
 
 exports[`<YomiFudaView /> should render component 1`] = `
 <div
-  className="sc-bdVaJa fLVCVI"
+  className="sc-bwzfXH bvmjNt"
 >
   <div
-    className="sc-bwzfXH eJMUYF"
+    className="sc-htpNat eaelvy"
   >
     <div
-      className="sc-htpNat jzLbZs"
+      className="sc-bxivhb cIIvqJ"
     >
       初句
     </div>
     <div
-      className="sc-htpNat sc-bxivhb jWORiK"
+      className="sc-bxivhb sc-ifAKCX ejiZuo"
     >
       二句
     </div>
     <div
-      className="sc-htpNat sc-ifAKCX kznmZk"
+      className="sc-bxivhb sc-EHOje fUTEIU"
     >
       三句
     </div>
