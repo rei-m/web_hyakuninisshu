@@ -7,6 +7,7 @@ import QuestionResultsSummary from '@src/components/QuestionResultsSummary';
 import QuestionResultsMap from '@src/components/QuestionResultsMap';
 import KarutaCardDialog from '@src/components/KarutaCardDialog';
 import AppButton from '@src/components/AppButton';
+import TweetButton from '@src/components/TweetButton';
 import { Answer, Karuta, Question } from '@src/types';
 
 export interface Props {
@@ -37,6 +38,10 @@ const Inner = styled.div`
   max-width: 380px;
   padding: ${({ theme }) => theme.spacing2x};
   margin: auto;
+`;
+
+const ShareButtonsWrapper = styled.div`
+  text-align: center;
 `;
 
 const enhance = withState<{}, Karuta | undefined, 'displayedKaruta', 'setDisplayedKaruta'>(
@@ -82,18 +87,21 @@ const ExamResult = enhance<
               <QuestionResultsSummary
                 title="正解数"
                 value={`${correctCount} / ${totalCount}`}
-                style={{ marginBottom: 16 }}
+                style={{ marginBottom: appTheme.spacing2x }}
               />
               <QuestionResultsSummary
                 title="平均回答時間"
                 value={`${averageAnswerSecond}秒`}
-                style={{ marginBottom: 16 }}
+                style={{ marginBottom: appTheme.spacing4x }}
               />
+              <ShareButtonsWrapper>
+                <TweetButton text={`百人一首で ${totalCount}問中 ${correctCount}問 正解しました！`} />
+              </ShareButtonsWrapper>
               <QuestionResultsMap
                 questions={questions}
                 answers={answers}
                 onClickResult={onClickResultsMap}
-                style={{ marginBottom: 16 }}
+                style={{ marginBottom: appTheme.spacing2x }}
               />
               {correctCount !== totalCount && (
                 <AppButton

@@ -34,6 +34,7 @@ export default class HTML extends React.Component {
           <div id="___gatsby_portal"></div>
           {this.props.postBodyComponents}
           <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+          <script async src="//platform.twitter.com/widgets.js" charSet="utf-8"></script>
         </body>
       </html>
     )

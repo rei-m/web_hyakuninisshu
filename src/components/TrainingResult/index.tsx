@@ -4,6 +4,7 @@ import styled from '@src/styles/styled-components';
 import { appTheme } from '@src/styles/theme';
 import QuestionResultsSummary from '@src/components/QuestionResultsSummary';
 import AppButton from '@src/components/AppButton';
+import TweetButton from '@src/components/TweetButton';
 
 export interface Props {
   totalCount: number;
@@ -33,6 +34,10 @@ const Inner = styled.div`
   margin: auto;
 `;
 
+const ShareButtonsWrapper = styled.div`
+  text-align: center;
+`;
+
 const onClickBack = () => {
   navigate('/training', { replace: true });
 };
@@ -51,8 +56,11 @@ const QuestionsResult: React.FC<Props> = ({ averageAnswerSecond, correctCount, t
           <QuestionResultsSummary
             title="平均回答時間"
             value={`${averageAnswerSecond}秒`}
-            style={{ marginBottom: appTheme.spacing2x }}
+            style={{ marginBottom: appTheme.spacing4x }}
           />
+          <ShareButtonsWrapper>
+            <TweetButton text={`百人一首で ${totalCount}問中 ${correctCount}問 正解しました！`} />
+          </ShareButtonsWrapper>
           {correctCount !== totalCount && (
             <AppButton
               label="間違えた歌の練習をする"
