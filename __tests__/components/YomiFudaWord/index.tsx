@@ -6,6 +6,7 @@ describe('<YomiFudaWord />', () => {
   it('should render component', () => {
     const props: Props = {
       word: 'あ',
+      dulation: 0.6,
       onAnimationEnd: jest.fn(),
     };
     const renderer = ReactTestRenderer.create(<YomiFudaWord {...props} />);

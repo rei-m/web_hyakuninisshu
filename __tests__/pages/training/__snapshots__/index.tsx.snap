@@ -373,6 +373,61 @@ Array [
               </div>
             </div>
           </div>
+          <div
+            className="MuiFormControl-root-3 Component-formControl-57"
+            style={
+              Object {
+                "marginBottom": "16px",
+              }
+            }
+          >
+            <label
+              className="MuiFormLabel-root-71 MuiFormLabel-filled-75 MuiInputLabel-root-60 MuiInputLabel-formControl-65 MuiInputLabel-animated-68 MuiInputLabel-shrink-67 Component-label-58"
+              data-shrink={true}
+              htmlFor="id-questionAnim"
+            >
+              読み札のアニメーション表示
+            </label>
+            <div
+              className="MuiInputBase-root-27 MuiInput-root-14 MuiInput-underline-18 MuiInputBase-formControl-28 MuiInput-formControl-15 Component-select-59"
+              onClick={[Function]}
+            >
+              <div
+                className="MuiSelect-root-7"
+              >
+                <div
+                  aria-haspopup="true"
+                  aria-pressed="false"
+                  className="MuiSelect-select-8 MuiSelect-selectMenu-11 MuiInputBase-input-37 MuiInput-input-22"
+                  onBlur={[Function]}
+                  onClick={[Function]}
+                  onFocus={[Function]}
+                  onKeyDown={[Function]}
+                  role="button"
+                  tabIndex={0}
+                >
+                  ふつう
+                </div>
+                <input
+                  id="id-questionAnim"
+                  name="questionAnim"
+                  type="hidden"
+                  value="2"
+                />
+                <svg
+                  aria-hidden="true"
+                  className="MuiSvgIcon-root-44 MuiSelect-icon-13"
+                  focusable="false"
+                  role="presentation"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    d="M7 10l5 5 5-5z"
+                  />
+                </svg>
+              </div>
+            </div>
+          </div>
           <button
             className="MuiButtonBase-root-109 MuiButton-root-83 MuiButton-outlined-91 Component-button-78 Component-primaryButton-80"
             disabled={false}

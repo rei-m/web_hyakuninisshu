@@ -13,12 +13,19 @@ import {
   KarutaStyleConditions,
   KimarijiCondition,
   KimarijiConditions,
+  QuestionAnimCondition,
+  QuestionAnimConditions,
   RangeFromCondition,
   RangeFromConditions,
   RangeToCondition,
   RangeToConditions,
 } from '@src/enums';
-import { toColorConditionString, toKarutaStyleConditionString, toKimarijiConditionString } from '@src/utils';
+import {
+  toColorConditionString,
+  toKarutaStyleConditionString,
+  toKimarijiConditionString,
+  toQuestionAnimConditionString,
+} from '@src/utils';
 import { GlobalState } from '@src/state';
 import { ROUTE_PATHS } from '@src/constants';
 
@@ -29,6 +36,7 @@ export interface ConnectedProps {
   initialColor: ColorCondition;
   initialKamiNoKuStyle: KarutaStyleCondition;
   initialShimoNoKuStyle: KarutaStyleCondition;
+  initialQuestionAnim: QuestionAnimCondition;
 }
 
 export type Props = ConnectedProps;
@@ -40,6 +48,7 @@ export interface FormValues {
   color: string;
   kamiNoKuStyle: string;
   shimoNoKuStyle: string;
+  questionAnim: string;
 }
 
 export type FormViewProps = FormikState<FormValues> & FormikHandlers;
@@ -49,6 +58,8 @@ const KimarijiConditionNameList = KimarijiConditions.values.map(v => toKimarijiC
 const ColorConditionNameList = ColorConditions.values.map(v => toColorConditionString(v));
 
 const KarutaStyleConditionNameList = KarutaStyleConditions.values.map(v => toKarutaStyleConditionString(v));
+
+const QuestionAnimConditionNameList = QuestionAnimConditions.values.map(v => toQuestionAnimConditionString(v));
 
 const FormView = ({ values, handleChange, handleSubmit, errors, touched }: FormViewProps) => (
   <Form>
@@ -97,6 +108,15 @@ const FormView = ({ values, handleChange, handleSubmit, errors, touched }: FormV
       handleChange={handleChange}
       style={{ marginBottom: appTheme.spacing2x }}
     />
+    <SelectItem
+      title="読み札のアニメーション表示"
+      name="questionAnim"
+      value={values.questionAnim}
+      valueList={QuestionAnimConditions.values}
+      nameList={QuestionAnimConditionNameList}
+      handleChange={handleChange}
+      style={{ marginBottom: appTheme.spacing2x }}
+    />
     <AppButton
       label="練習をはじめる"
       icon="edit"
@@ -117,6 +137,7 @@ const TrainingMenuForm = withFormik({
         rangeFrom: RangeFromConditions.valueOf(Number(values.rangeFrom)),
         rangeTo: RangeToConditions.valueOf(Number(values.rangeTo)),
         shimoNoKuStyle: KarutaStyleConditions.valueOf(Number(values.shimoNoKuStyle)),
+        questionAnim: QuestionAnimConditions.valueOf(Number(values.questionAnim)),
         submitTime: new Date().getTime(),
       },
     });
@@ -128,6 +149,7 @@ const TrainingMenuForm = withFormik({
     rangeFrom: props.initialRangeFrom.toString(),
     rangeTo: props.initialRangeTo.toString(),
     shimoNoKuStyle: props.initialShimoNoKuStyle.toString(),
+    questionAnim: props.initialQuestionAnim.toString(),
   }),
   validate: (values, _) => {
     const errors: { [P in keyof FormValues]?: string } = {};
@@ -151,6 +173,7 @@ export const mapStateToProps = ({ questions }: GlobalState): ConnectedProps => {
     initialRangeFrom: trainingCondition.rangeFrom,
     initialRangeTo: trainingCondition.rangeTo,
     initialShimoNoKuStyle: trainingCondition.shimoNoKuStyle,
+    initialQuestionAnim: trainingCondition.questionAnim,
   };
 };
 

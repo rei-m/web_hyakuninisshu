@@ -14,8 +14,9 @@ import {
   restartQuestions,
   QuestionsActions,
 } from '@src/actions/questions';
-import { QuestionState } from '@src/enums';
+import { QuestionAnimCondition, QuestionState } from '@src/enums';
 import { Answer, Karuta, Question, ToriFuda } from '@src/types';
+import { toDulation } from '@src/utils/questions';
 
 export interface OwnProps {
   karutas: Karuta[];
@@ -95,6 +96,7 @@ export const ExamQuestions: React.FC<Props> = ({
           answer={answer}
           totalCount={totalCount}
           currentPosition={currentPosition}
+          dulation={toDulation(QuestionAnimCondition.Normal)}
           onClickResult={onClickResult}
           onClickToriFuda={onClickToriFuda}
         />

@@ -18,6 +18,7 @@ Object {
   ],
   "color": "none",
   "currentPosition": 1,
+  "dulation": 0,
   "kamiNoKuStyle": 1,
   "karutas": Array [
     Object {
@@ -1978,6 +1979,7 @@ Object {
       "thirdText": "三句",
     },
   },
+  "questionAnim": 2,
   "questionState": 3,
   "questions": Array [
     Object {
