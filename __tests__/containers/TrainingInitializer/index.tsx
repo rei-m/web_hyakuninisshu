@@ -9,6 +9,7 @@ import {
   ColorCondition,
   KarutaStyleCondition,
   KimarijiCondition,
+  QuestionAnimCondition,
   RangeFromCondition,
   RangeToCondition,
 } from '@src/enums';
@@ -32,6 +33,7 @@ describe('<TrainingInitializer />', () => {
       color: ColorCondition.None,
       kamiNoKuStyle: KarutaStyleCondition.KanaOnly,
       shimoNoKuStyle: KarutaStyleCondition.KanjiAndKana,
+      questionAnim: QuestionAnimCondition.Normal,
     }).onStart();
     const mockActions = mockStore.getActions();
     expect(mockActions[0].type).toBe(START_TRAINING_NAME);

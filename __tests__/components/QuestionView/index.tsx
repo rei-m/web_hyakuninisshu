@@ -43,6 +43,7 @@ describe('<QuestionView />', () => {
       onClickToriFuda: jest.fn(),
       question: create<Question>('question'),
       totalCount: 10,
+      dulation: 0.6,
     };
   });
 

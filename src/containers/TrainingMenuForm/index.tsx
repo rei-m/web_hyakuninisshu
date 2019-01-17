@@ -1,10 +1,10 @@
+import * as React from 'react';
 import { navigate } from 'gatsby';
-import SelectItem from '@src/components/SelectItem';
 import { connect } from 'react-redux';
 import { withFormik, Form, FormikHandlers, FormikState } from 'formik';
 import { appTheme } from '@src/styles/theme';
 import SelectRangeFromTo from '@src/components/SelectRangeFromTo';
-import * as React from 'react';
+import SelectItem from '@src/components/SelectItem';
 import AppButton from '@src/components/AppButton';
 import {
   ColorCondition,

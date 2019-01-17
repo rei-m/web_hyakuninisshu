@@ -1,10 +1,10 @@
-import TrainingResult, { Props as TrainingResultProps } from '@src/components/TrainingResult';
 import * as React from 'react';
+import { connect } from 'react-redux';
 import { ThunkDispatch } from 'redux-thunk';
 import TrainingInitializer from '@src/containers/TrainingInitializer';
 import QuestionView, { Props as QuestionViewProps } from '@src/components/QuestionView';
 import QuestionCorrect, { Props as QuestionCorrectProps } from '@src/components/QuestionCorrect';
-import { connect } from 'react-redux';
+import TrainingResult, { Props as TrainingResultProps } from '@src/components/TrainingResult';
 import ErrorMessage from '@src/components/ErrorMessage';
 import { GlobalState } from '@src/state';
 import {
