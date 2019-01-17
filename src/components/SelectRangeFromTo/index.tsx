@@ -25,7 +25,6 @@ const styles = {
   },
   select: {
     fontSize: '1.6rem',
-    maxWidth: '150px',
     flexGrow: 1,
     textAlign: 'left' as TextAlignProperty,
   },
