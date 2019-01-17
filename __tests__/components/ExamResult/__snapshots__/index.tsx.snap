@@ -11,7 +11,7 @@ exports[`<ExamResult /> should render component when correct all 1`] = `
       className="sc-bdVaJa jXieMO"
       style={
         Object {
-          "marginBottom": 16,
+          "marginBottom": "16px",
         }
       }
     >
@@ -30,7 +30,7 @@ exports[`<ExamResult /> should render component when correct all 1`] = `
       className="sc-bdVaJa jXieMO"
       style={
         Object {
-          "marginBottom": 16,
+          "marginBottom": "32px",
         }
       }
     >
@@ -46,10 +46,24 @@ exports[`<ExamResult /> should render component when correct all 1`] = `
       </div>
     </div>
     <div
+      className="sc-fjdhpX fJdZy"
+    >
+      <a
+        className="twitter-share-button"
+        data-show-count="false"
+        data-size="large"
+        data-text="百人一首で 3問中 3問 正解しました！"
+        data-url="https://hyakuninanki.net"
+        href="https://twitter.com/share"
+      >
+        Tweet
+      </a>
+    </div>
+    <div
       className="sc-bxivhb jtTCMI"
       style={
         Object {
-          "marginBottom": 16,
+          "marginBottom": "16px",
         }
       }
     >
@@ -297,7 +311,7 @@ exports[`<ExamResult /> should render component when wrong 1`] = `
       className="sc-bdVaJa jXieMO"
       style={
         Object {
-          "marginBottom": 16,
+          "marginBottom": "16px",
         }
       }
     >
@@ -316,7 +330,7 @@ exports[`<ExamResult /> should render component when wrong 1`] = `
       className="sc-bdVaJa jXieMO"
       style={
         Object {
-          "marginBottom": 16,
+          "marginBottom": "32px",
         }
       }
     >
@@ -332,10 +346,24 @@ exports[`<ExamResult /> should render component when wrong 1`] = `
       </div>
     </div>
     <div
+      className="sc-fjdhpX fJdZy"
+    >
+      <a
+        className="twitter-share-button"
+        data-show-count="false"
+        data-size="large"
+        data-text="百人一首で 3問中 2問 正解しました！"
+        data-url="https://hyakuninanki.net"
+        href="https://twitter.com/share"
+      >
+        Tweet
+      </a>
+    </div>
+    <div
       className="sc-bxivhb jtTCMI"
       style={
         Object {
-          "marginBottom": 16,
+          "marginBottom": "16px",
         }
       }
     >

@@ -30,7 +30,7 @@ exports[`<TrainingResult /> should render component when has not wrong 1`] = `
       className="sc-bdVaJa jXieMO"
       style={
         Object {
-          "marginBottom": "16px",
+          "marginBottom": "32px",
         }
       }
     >
@@ -44,6 +44,20 @@ exports[`<TrainingResult /> should render component when has not wrong 1`] = `
       >
         2.5秒
       </div>
+    </div>
+    <div
+      className="sc-EHOje fCNSzj"
+    >
+      <a
+        className="twitter-share-button"
+        data-show-count="false"
+        data-size="large"
+        data-text="百人一首で 10問中 10問 正解しました！"
+        data-url="https://hyakuninanki.net"
+        href="https://twitter.com/share"
+      >
+        Tweet
+      </a>
     </div>
     <button
       className="MuiButtonBase-root-32 MuiButton-root-6 MuiButton-outlined-14 Component-button-1 Component-normalButton-2"
@@ -112,7 +126,7 @@ exports[`<TrainingResult /> should render component when has wrong 1`] = `
       className="sc-bdVaJa jXieMO"
       style={
         Object {
-          "marginBottom": "16px",
+          "marginBottom": "32px",
         }
       }
     >
@@ -126,6 +140,20 @@ exports[`<TrainingResult /> should render component when has wrong 1`] = `
       >
         2.5秒
       </div>
+    </div>
+    <div
+      className="sc-EHOje fCNSzj"
+    >
+      <a
+        className="twitter-share-button"
+        data-show-count="false"
+        data-size="large"
+        data-text="百人一首で 10問中 8問 正解しました！"
+        data-url="https://hyakuninanki.net"
+        href="https://twitter.com/share"
+      >
+        Tweet
+      </a>
     </div>
     <button
       className="MuiButtonBase-root-32 MuiButton-root-6 MuiButton-outlined-14 Component-button-1 Component-normalButton-2"
