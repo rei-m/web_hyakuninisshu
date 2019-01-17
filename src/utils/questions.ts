@@ -1,5 +1,6 @@
 import { Karuta } from '@src/types';
 import { getRandomInt, randomizeArray } from '@src/utils';
+import { QuestionAnimCondition } from '@src/enums';
 
 export const filterByRange = (karutas: Karuta[], rangeFrom: number, rangeTo: number) =>
   karutas.slice(rangeFrom - 1, rangeTo);
@@ -33,4 +34,17 @@ export const fetchTorifudas = (karutas: Karuta[], correctKaruta: Karuta) => {
     .concat(correctKaruta);
 
   return randomizeArray(result);
+};
+
+export const toDulation = (questionAnim: QuestionAnimCondition) => {
+  switch (questionAnim) {
+    case QuestionAnimCondition.Normal:
+      return 0.6;
+    case QuestionAnimCondition.Fast:
+      return 0.3;
+    case QuestionAnimCondition.Slow:
+      return 1.0;
+    default:
+      return 0;
+  }
 };

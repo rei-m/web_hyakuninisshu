@@ -9,6 +9,7 @@ import {
   ColorCondition,
   KarutaStyleCondition,
   KimarijiCondition,
+  QuestionAnimCondition,
   QuestionState,
   RangeFromCondition,
   RangeToCondition,
@@ -43,7 +44,8 @@ describe('QuestionsActionCreator', () => {
       KimarijiCondition.None,
       ColorCondition.None,
       KarutaStyleCondition.KanjiAndKana,
-      KarutaStyleCondition.KanaOnly
+      KarutaStyleCondition.KanaOnly,
+      QuestionAnimCondition.Normal
     );
 
     const store = setUpStoreWithKarutas();
@@ -51,7 +53,7 @@ describe('QuestionsActionCreator', () => {
 
     const action = store.getActions()[0] as questionsAction.StartTrainingAction;
     const { type, payload } = action;
-    const { nextState, questions, startedTime } = payload;
+    const { nextState, questions, startedTime, dulation } = payload;
     const { correctKaruta, yomiFuda, toriFudas } = questions[0];
     expect(questions).toHaveLength(100);
     expect(yomiFuda.firstText).toEqual(correctKaruta.firstKanji);
@@ -62,6 +64,7 @@ describe('QuestionsActionCreator', () => {
     expect(type).toEqual(questionsAction.START_TRAINING_NAME);
     expect(nextState).toEqual(QuestionState.InAnswer);
     expect(startedTime).not.toBeUndefined();
+    expect(dulation).toEqual(0.6);
   });
 
   it('should return StartTrainingAction payload filtered by range', () => {
@@ -73,7 +76,8 @@ describe('QuestionsActionCreator', () => {
       KimarijiCondition.None,
       ColorCondition.None,
       KarutaStyleCondition.KanjiAndKana,
-      KarutaStyleCondition.KanaOnly
+      KarutaStyleCondition.KanaOnly,
+      QuestionAnimCondition.Normal
     );
 
     const store = setUpStoreWithKarutas();
@@ -98,7 +102,8 @@ describe('QuestionsActionCreator', () => {
       KimarijiCondition.One,
       ColorCondition.None,
       KarutaStyleCondition.KanjiAndKana,
-      KarutaStyleCondition.KanaOnly
+      KarutaStyleCondition.KanaOnly,
+      QuestionAnimCondition.Normal
     );
 
     const store = setUpStoreWithKarutas();
@@ -121,7 +126,8 @@ describe('QuestionsActionCreator', () => {
       KimarijiCondition.None,
       ColorCondition.Blue,
       KarutaStyleCondition.KanjiAndKana,
-      KarutaStyleCondition.KanaOnly
+      KarutaStyleCondition.KanaOnly,
+      QuestionAnimCondition.Normal
     );
 
     const store = setUpStoreWithKarutas();
@@ -144,7 +150,8 @@ describe('QuestionsActionCreator', () => {
       KimarijiCondition.None,
       ColorCondition.None,
       KarutaStyleCondition.KanaOnly,
-      KarutaStyleCondition.KanjiAndKana
+      KarutaStyleCondition.KanjiAndKana,
+      QuestionAnimCondition.Normal
     );
 
     const store = setUpStoreWithKarutas();

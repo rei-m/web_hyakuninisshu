@@ -1,5 +1,5 @@
+import { MockStore } from 'redux-mock-store';
 import ErrorMessage from '@src/components/ErrorMessage';
-import * as React from 'react';
 import { shallow, ShallowWrapper } from 'enzyme';
 import {
   mapDispatchToProps,
@@ -12,7 +12,7 @@ import TrainingInitializer from '@src/containers/TrainingInitializer';
 import QuestionView from '@src/components/QuestionView';
 import QuestionCorrect from '@src/components/QuestionCorrect';
 import TrainingResult from '@src/components/TrainingResult';
-import { MockStore } from 'redux-mock-store';
+import * as React from 'react';
 import { GlobalState } from '@src/state';
 import { initialState as questionsState } from '@src/state/questions';
 import { initialState as uiState } from '@src/state/ui';
@@ -20,6 +20,7 @@ import {
   ColorCondition,
   KarutaStyleCondition,
   KimarijiCondition,
+  QuestionAnimCondition,
   QuestionState,
   RangeFromCondition,
   RangeToCondition,
@@ -77,12 +78,14 @@ describe('<TrainingQuestions />', () => {
         color: ColorCondition.None,
         kamiNoKuStyle: KarutaStyleCondition.KanaOnly,
         shimoNoKuStyle: KarutaStyleCondition.KanjiAndKana,
+        questionAnim: QuestionAnimCondition.Normal,
         karutas,
         submitTime,
         questions: [createQuestion(1)],
         answers: [],
         totalCount: 0,
         currentPosition: 0,
+        dulation: 0.6,
         onClickToriFuda: jest.fn(),
         onClickResult: jest.fn(),
         onClickGoToNext: jest.fn(),
@@ -165,6 +168,7 @@ describe('<TrainingQuestions />', () => {
         color: ColorCondition.None,
         kamiNoKuStyle: KarutaStyleCondition.KanaOnly,
         shimoNoKuStyle: KarutaStyleCondition.KanjiAndKana,
+        questionAnim: QuestionAnimCondition.Normal,
         karutas,
         submitTime,
       };

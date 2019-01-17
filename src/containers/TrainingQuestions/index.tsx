@@ -19,6 +19,7 @@ import {
   ColorCondition,
   KarutaStyleCondition,
   KimarijiCondition,
+  QuestionAnimCondition,
   QuestionState,
   RangeFromCondition,
   RangeToCondition,
@@ -33,6 +34,7 @@ export interface OwnProps {
   color: ColorCondition;
   kamiNoKuStyle: KarutaStyleCondition;
   shimoNoKuStyle: KarutaStyleCondition;
+  questionAnim: QuestionAnimCondition;
   submitTime: number;
 }
 
@@ -45,6 +47,7 @@ export interface ConnectedProps {
   totalCount: number;
   currentPosition: number;
   questionState?: QuestionState;
+  dulation: number;
 }
 
 export type DispatchProps = Pick<QuestionViewProps, 'onClickToriFuda' | 'onClickResult'> &
@@ -61,6 +64,7 @@ export const TrainingQuestions: React.FC<Props> = ({
   color,
   kamiNoKuStyle,
   shimoNoKuStyle,
+  questionAnim,
   submitTime,
   lastStartedTime,
   questions,
@@ -69,6 +73,7 @@ export const TrainingQuestions: React.FC<Props> = ({
   answers,
   totalCount,
   questionState,
+  dulation,
   currentPosition,
   onClickResult,
   onClickToriFuda,
@@ -88,6 +93,7 @@ export const TrainingQuestions: React.FC<Props> = ({
         color={color}
         kamiNoKuStyle={kamiNoKuStyle}
         shimoNoKuStyle={shimoNoKuStyle}
+        questionAnim={questionAnim}
       />
     );
   }
@@ -127,6 +133,7 @@ export const TrainingQuestions: React.FC<Props> = ({
           answer={answer}
           totalCount={totalCount}
           currentPosition={currentPosition}
+          dulation={dulation}
           onClickResult={onClickResult}
           onClickToriFuda={onClickToriFuda}
         />
@@ -135,7 +142,7 @@ export const TrainingQuestions: React.FC<Props> = ({
 };
 
 export const mapStateToProps = ({ questions }: GlobalState, props: OwnProps): ConnectedProps => {
-  const { lastStartedTime, currentIndex, answers, questionState } = questions;
+  const { lastStartedTime, currentIndex, answers, questionState, dulation } = questions;
 
   return {
     ...props,
@@ -147,6 +154,7 @@ export const mapStateToProps = ({ questions }: GlobalState, props: OwnProps): Co
     question: questions.questions[currentIndex],
     totalCount: questions.questions.length,
     questionState,
+    dulation,
   };
 };
 

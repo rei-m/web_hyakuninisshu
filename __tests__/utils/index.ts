@@ -1,5 +1,5 @@
-import { getRandomInt, menuTypeToIcon, randomizeArray } from '@src/utils';
-import { MenuType } from '@src/enums';
+import { getRandomInt, menuTypeToIcon, randomizeArray, toQuestionAnimConditionString } from '@src/utils';
+import { MenuType, QuestionAnimCondition } from '@src/enums';
 
 describe('utility functions', () => {
   it('should get random intager value', () => {
@@ -25,5 +25,12 @@ describe('utility functions', () => {
     expect(menuTypeToIcon(MenuType.Exam)).toBe('note');
     expect(menuTypeToIcon(MenuType.Material)).toBe('library_books');
     expect(menuTypeToIcon(MenuType.Other)).toBe('settings');
+  });
+
+  it('should return QuestionAnimCondition text', () => {
+    expect(toQuestionAnimConditionString(QuestionAnimCondition.None)).toBe('なし');
+    expect(toQuestionAnimConditionString(QuestionAnimCondition.Slow)).toBe('おそめ');
+    expect(toQuestionAnimConditionString(QuestionAnimCondition.Normal)).toBe('ふつう');
+    expect(toQuestionAnimConditionString(QuestionAnimCondition.Fast)).toBe('はやめ');
   });
 });

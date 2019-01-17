@@ -1,9 +1,9 @@
+import SEO from '@src/components/SEO';
 import * as React from 'react';
-import { RouteComponentProps } from '@reach/router';
 import { graphql, navigate } from 'gatsby';
 import TrainingQuestions from '@src/containers/TrainingQuestions';
 import Layout from '@src/components/Layout';
-import SEO from '@src/components/SEO';
+import { RouteComponentProps } from '@reach/router';
 import ErrorBoundary from '@src/components/ErrorBoundary';
 import ErrorMessage from '@src/components/ErrorMessage';
 import {
@@ -11,6 +11,7 @@ import {
   KarutaStyleCondition,
   KimarijiCondition,
   MenuType,
+  QuestionAnimCondition,
   RangeFromCondition,
   RangeToCondition,
 } from '@src/enums';
@@ -38,6 +39,7 @@ export interface LocationState {
   color: ColorCondition;
   kamiNoKuStyle: KarutaStyleCondition;
   shimoNoKuStyle: KarutaStyleCondition;
+  questionAnim: QuestionAnimCondition;
   submitTime: number;
 }
 

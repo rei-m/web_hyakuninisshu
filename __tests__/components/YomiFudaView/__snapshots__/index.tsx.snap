@@ -1,6 +1,32 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<YomiFudaView /> should render component 1`] = `
+exports[`<YomiFudaView /> should render component with dulation 1`] = `
+<div
+  className="sc-bwzfXH bvmjNt"
+>
+  <div
+    className="sc-htpNat eaelvy"
+  >
+    <div
+      className="sc-bxivhb cIIvqJ"
+    >
+      初句
+    </div>
+    <div
+      className="sc-bxivhb sc-ifAKCX ejiZuo"
+    >
+      二句
+    </div>
+    <div
+      className="sc-bxivhb sc-EHOje fUTEIU"
+    >
+      三句
+    </div>
+  </div>
+</div>
+`;
+
+exports[`<YomiFudaView /> should render component without dulation 1`] = `
 <div
   className="sc-bwzfXH bvmjNt"
 >

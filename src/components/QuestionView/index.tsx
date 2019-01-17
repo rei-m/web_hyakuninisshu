@@ -11,6 +11,7 @@ export interface Props {
   answer?: Answer;
   totalCount: number;
   currentPosition: number;
+  dulation: number;
   onClickToriFuda: (toriFuda: ToriFuda) => void;
   onClickResult: () => void;
 }
@@ -58,6 +59,7 @@ const QuestionView: React.FC<Props> = ({
   currentPosition,
   question,
   totalCount,
+  dulation,
   onClickToriFuda,
   onClickResult,
 }) => (
@@ -69,7 +71,12 @@ const QuestionView: React.FC<Props> = ({
           <Position>
             {currentPosition} / {totalCount}
           </Position>
-          <YomiFudaView yomiFuda={question.yomiFuda} answered={!!answer} style={{ margin: 'auto' }} />
+          <YomiFudaView
+            yomiFuda={question.yomiFuda}
+            answered={!!answer}
+            dulation={dulation}
+            style={{ margin: 'auto' }}
+          />
         </YomiFudaBox>
         <ToriFudaBox>
           {question.toriFudas.map((toriFuda, i) => (
