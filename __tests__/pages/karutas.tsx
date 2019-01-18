@@ -42,6 +42,9 @@ describe('/karutas', () => {
           author: '@rei-m',
         },
       },
+      ogpImage: {
+        publicURL: 'http://localhost:8000/app.png',
+      },
     });
 
     setUpQueryOnce<QueryData>({
