@@ -18,6 +18,9 @@ export interface DefaultSEOQueryData {
   site: {
     siteMetadata: SiteMetaData;
   };
+  ogpImage: {
+    publicURL: string;
+  };
 }
 
 const SEO: React.FC<Props> = ({ description, lang, meta, keywords, title }) => {
@@ -56,6 +59,10 @@ const SEO: React.FC<Props> = ({ description, lang, meta, keywords, title }) => {
               {
                 property: `og:type`,
                 content: `website`,
+              },
+              {
+                name: `og:image`,
+                content: `https://hyakuninanki.net${data.ogpImage.publicURL}`,
               },
               {
                 name: `twitter:card`,
@@ -100,6 +107,9 @@ const query = graphql`
         description
         author
       }
+    }
+    ogpImage: file(relativePath: { eq: "app-icon.png" }) {
+      publicURL
     }
   }
 `;

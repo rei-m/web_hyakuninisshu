@@ -16,6 +16,9 @@ describe('/about', () => {
           author: '@rei-m',
         },
       },
+      ogpImage: {
+        publicURL: 'http://localhost:8000/app.png',
+      },
     });
     baseProps = {
       data: {
