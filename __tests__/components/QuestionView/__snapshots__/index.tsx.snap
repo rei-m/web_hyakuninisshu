@@ -5,10 +5,10 @@ exports[`<QuestionView /> should render component when answered 1`] = `
   className="sc-VigVT ljONEf"
 >
   <div
-    className="sc-jTzLTM jnXhag"
+    className="sc-jTzLTM hrVoKe"
   >
     <div
-      className="sc-jzJRlG hbbPSk"
+      className="sc-jzJRlG gyaIpf"
     >
       1
        / 
@@ -237,10 +237,10 @@ exports[`<QuestionView /> should render component when not answered 1`] = `
   className="sc-VigVT ljONEf"
 >
   <div
-    className="sc-jTzLTM jnXhag"
+    className="sc-jTzLTM hrVoKe"
   >
     <div
-      className="sc-jzJRlG hbbPSk"
+      className="sc-jzJRlG gyaIpf"
     >
       1
        / 
