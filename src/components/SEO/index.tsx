@@ -61,7 +61,7 @@ const SEO: React.FC<Props> = ({ description, lang, meta, keywords, title }) => {
                 content: `website`,
               },
               {
-                name: `og:image`,
+                property: `og:image`,
                 content: `https://hyakuninanki.net${data.ogpImage.publicURL}`,
               },
               {
@@ -79,6 +79,10 @@ const SEO: React.FC<Props> = ({ description, lang, meta, keywords, title }) => {
               {
                 name: `twitter:description`,
                 content: checkedDescription,
+              },
+              {
+                name: `twitter:image`,
+                content: `https://hyakuninanki.net${data.ogpImage.publicURL}`,
               },
             ]
               .concat(
