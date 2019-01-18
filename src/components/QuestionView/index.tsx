@@ -37,7 +37,6 @@ const Container = styled.div<{ bgImageUrl: string }>`
 const YomiFudaBox = styled.div`
   position: relative;
   margin-bottom: ${({ theme }) => theme.spacing3x};
-  padding-top: ${({ theme }) => theme.spacing4x};
   width: 312px;
 `;
 
@@ -50,7 +49,7 @@ const ToriFudaBox = styled.div`
 const Position = styled.div`
   position: absolute;
   right: 0;
-  top: ${({ theme }) => theme.spacing1x};
+  top: -32px;
   color: #fff;
   border-bottom: 1px dotted #fff;
 `;
