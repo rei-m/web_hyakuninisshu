@@ -1,34 +1,17 @@
 import * as React from 'react';
 import { connect } from 'react-redux';
 import { ThunkDispatch } from 'redux-thunk';
-import TrainingInitializer from '@src/containers/TrainingInitializer';
+import ReviewInitializer from '@src/containers/ReviewInitializer';
 import QuestionView, { Props as QuestionViewProps } from '@src/components/QuestionView';
 import QuestionCorrect, { Props as QuestionCorrectProps } from '@src/components/QuestionCorrect';
-import ErrorMessage from '@src/components/ErrorMessage';
 import { GlobalState } from '@src/state';
 import { answerQuestion, confirmCorrect, openNextQuestion, QuestionsActions } from '@src/actions/questions';
-import {
-  ColorCondition,
-  KarutaStyleCondition,
-  KimarijiCondition,
-  QuestionAnimCondition,
-  QuestionState,
-  RangeFromCondition,
-  RangeToCondition,
-} from '@src/enums';
-import { Answer, Karuta, Question, ToriFuda } from '@src/types';
+import { QuestionState } from '@src/enums';
+import { Answer, Question, ToriFuda } from '@src/types';
 import { navigate } from 'gatsby';
 import { ROUTE_PATHS } from '@src/constants';
 
 export interface OwnProps {
-  karutas: Karuta[];
-  rangeFrom: RangeFromCondition;
-  rangeTo: RangeToCondition;
-  kimariji: KimarijiCondition;
-  color: ColorCondition;
-  kamiNoKuStyle: KarutaStyleCondition;
-  shimoNoKuStyle: KarutaStyleCondition;
-  questionAnim: QuestionAnimCondition;
   submitTime: number;
 }
 
@@ -47,15 +30,7 @@ export type DispatchProps = Pick<QuestionViewProps, 'onClickToriFuda' | 'onClick
 
 export type Props = OwnProps & ConnectedProps & DispatchProps;
 
-export const TrainingQuestions: React.FC<Props> = ({
-  karutas,
-  rangeFrom,
-  rangeTo,
-  kimariji,
-  color,
-  kamiNoKuStyle,
-  shimoNoKuStyle,
-  questionAnim,
+export const ReviewQuestions: React.FC<Props> = ({
   submitTime,
   lastStartedTime,
   question,
@@ -72,22 +47,7 @@ export const TrainingQuestions: React.FC<Props> = ({
   const isStarted = !!lastStartedTime && lastStartedTime > submitTime;
 
   if (!isStarted) {
-    return (
-      <TrainingInitializer
-        karutas={karutas}
-        rangeFrom={rangeFrom}
-        rangeTo={rangeTo}
-        kimariji={kimariji}
-        color={color}
-        kamiNoKuStyle={kamiNoKuStyle}
-        shimoNoKuStyle={shimoNoKuStyle}
-        questionAnim={questionAnim}
-      />
-    );
-  }
-
-  if (totalCount === 0) {
-    return <ErrorMessage text="指定した条件の歌はありませんでした" />;
+    return <ReviewInitializer />;
   }
 
   if (question === undefined) {
@@ -155,4 +115,4 @@ export const mapDispatchToProps = (dispatch: ThunkDispatch<GlobalState, {}, Ques
 export default connect(
   mapStateToProps,
   mapDispatchToProps
-)(TrainingQuestions);
+)(ReviewQuestions);

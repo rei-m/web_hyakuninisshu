@@ -1,7 +1,6 @@
 import {
   ANSWER_QUESTION_NAME,
   CONFIRM_CORRECT_NAME,
-  FINISH_QUESTIONS_NAME,
   OPEN_NEXT_QUESTION_NAME,
   QuestionsActions,
   RESTART_QUESTIONS_NAME,
@@ -105,11 +104,6 @@ export const questions = (state = initialState, action: QuestionsActions): Quest
         ...state,
         currentIndex: action.payload.nextIndex,
         lastStartedTime: action.payload.startedTime,
-        questionState: action.payload.nextState,
-      };
-    case FINISH_QUESTIONS_NAME:
-      return {
-        ...state,
         questionState: action.payload.nextState,
       };
     default:

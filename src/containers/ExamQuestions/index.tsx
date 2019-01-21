@@ -4,19 +4,13 @@ import { ThunkDispatch } from 'redux-thunk';
 import ExamInitializer from '@src/containers/ExamInitializer';
 import QuestionView, { Props as QuestionViewProps } from '@src/components/QuestionView';
 import QuestionCorrect, { Props as QuestionCorrectProps } from '@src/components/QuestionCorrect';
-import ExamResult, { Props as ExamResultProps } from '@src/components/ExamResult';
 import { GlobalState } from '@src/state';
-import {
-  answerQuestion,
-  confirmCorrect,
-  finishQuestions,
-  openNextQuestion,
-  restartQuestions,
-  QuestionsActions,
-} from '@src/actions/questions';
+import { answerQuestion, confirmCorrect, openNextQuestion, QuestionsActions } from '@src/actions/questions';
 import { QuestionAnimCondition, QuestionState } from '@src/enums';
 import { Answer, Karuta, Question, ToriFuda } from '@src/types';
 import { toDulation } from '@src/utils/questions';
+import { ROUTE_PATHS } from '@src/constants';
+import { navigate } from 'gatsby';
 
 export interface OwnProps {
   karutas: Karuta[];
@@ -25,18 +19,15 @@ export interface OwnProps {
 
 export interface ConnectedProps {
   lastStartedTime?: number;
-  questions: Question[];
   question?: Question;
   answer?: Answer;
-  answers: Answer[];
   totalCount: number;
   currentPosition: number;
   questionState?: QuestionState;
 }
 
 export type DispatchProps = Pick<QuestionViewProps, 'onClickToriFuda' | 'onClickResult'> &
-  Pick<QuestionCorrectProps, 'onClickGoToNext' | 'onClickGoToResult'> &
-  Pick<ExamResultProps, 'onClickRestart'>;
+  Pick<QuestionCorrectProps, 'onClickGoToNext' | 'onClickGoToResult'>;
 
 export type Props = OwnProps & ConnectedProps & DispatchProps;
 
@@ -44,10 +35,8 @@ export const ExamQuestions: React.FC<Props> = ({
   karutas,
   submitTime,
   lastStartedTime,
-  questions,
   question,
   answer,
-  answers,
   totalCount,
   questionState,
   currentPosition,
@@ -55,7 +44,6 @@ export const ExamQuestions: React.FC<Props> = ({
   onClickToriFuda,
   onClickGoToNext,
   onClickGoToResult,
-  onClickRestart,
 }) => {
   const isStarted = !!lastStartedTime && lastStartedTime > submitTime;
 
@@ -69,24 +57,13 @@ export const ExamQuestions: React.FC<Props> = ({
 
   switch (questionState) {
     case QuestionState.ConfirmCorrect:
+    case QuestionState.Finished:
       return (
         <QuestionCorrect
           karuta={question.correctKaruta}
-          isAllAnswered={questions.length === answers.length}
+          isAllAnswered={questionState === QuestionState.Finished}
           onClickGoToNext={onClickGoToNext}
           onClickGoToResult={onClickGoToResult}
-        />
-      );
-    case QuestionState.Finished:
-      const averageAnswerSecond = answers.reduce((prev, current) => prev + current.time, 0) / 1000 / totalCount;
-      return (
-        <ExamResult
-          averageAnswerSecond={Math.round(averageAnswerSecond * 100) / 100}
-          totalCount={totalCount}
-          correctCount={answers.filter(a => a.correct).length}
-          answers={answers}
-          questions={questions}
-          onClickRestart={onClickRestart}
         />
       );
     default:
@@ -109,10 +86,8 @@ export const mapStateToProps = ({ questions }: GlobalState, props: OwnProps): Co
 
   return {
     ...props,
-    questions: questions.questions,
     lastStartedTime,
     answer: answers[currentIndex],
-    answers,
     currentPosition: currentIndex + 1,
     question: questions.questions[currentIndex],
     totalCount: questions.questions.length,
@@ -125,10 +100,9 @@ export const mapDispatchToProps = (dispatch: ThunkDispatch<GlobalState, {}, Ques
     dispatch(openNextQuestion());
   },
   onClickGoToResult: () => {
-    dispatch(finishQuestions());
-  },
-  onClickRestart: () => {
-    dispatch(restartQuestions());
+    navigate(ROUTE_PATHS.EXAM_RESULT, {
+      replace: true,
+    });
   },
   onClickResult: () => {
     dispatch(confirmCorrect());

@@ -11,7 +11,6 @@ import {
 import TrainingInitializer from '@src/containers/TrainingInitializer';
 import QuestionView from '@src/components/QuestionView';
 import QuestionCorrect from '@src/components/QuestionCorrect';
-import TrainingResult from '@src/components/TrainingResult';
 import * as React from 'react';
 import { GlobalState } from '@src/state';
 import { initialState as questionsState } from '@src/state/questions';
@@ -26,13 +25,7 @@ import {
   RangeToCondition,
 } from '@src/enums';
 import { Answer, Color, Karuta, Kimariji, Question, ToriFuda, YomiFuda } from '@src/types';
-import {
-  ANSWER_QUESTION_NAME,
-  CONFIRM_CORRECT_NAME,
-  FINISH_QUESTIONS_NAME,
-  OPEN_NEXT_QUESTION_NAME,
-  RESTART_QUESTIONS_NAME,
-} from '@src/actions/questions';
+import { ANSWER_QUESTION_NAME, CONFIRM_CORRECT_NAME, OPEN_NEXT_QUESTION_NAME } from '@src/actions/questions';
 import { create } from '@test/factories';
 import { mockAppStoreCreateor } from '@test/helpers';
 
@@ -81,8 +74,6 @@ describe('<TrainingQuestions />', () => {
         questionAnim: QuestionAnimCondition.Normal,
         karutas,
         submitTime,
-        questions: [createQuestion(1)],
-        answers: [],
         totalCount: 0,
         currentPosition: 0,
         dulation: 0.6,
@@ -90,7 +81,6 @@ describe('<TrainingQuestions />', () => {
         onClickResult: jest.fn(),
         onClickGoToNext: jest.fn(),
         onClickGoToResult: jest.fn(),
-        onClickRestart: jest.fn(),
       };
     });
 
@@ -103,7 +93,7 @@ describe('<TrainingQuestions />', () => {
 
     describe('when question is empty', () => {
       it('should render ErrorMessage', () => {
-        const props = { ...baseProps, lastStartedTime: 11000, questions: [] };
+        const props = { ...baseProps, lastStartedTime: 11000, totalCount: 0 };
         wrapper = shallow(<TrainingQuestions {...props} />);
         expect(wrapper.find(ErrorMessage).length).toBe(1);
       });
@@ -116,6 +106,7 @@ describe('<TrainingQuestions />', () => {
           lastStartedTime: 11000,
           questionState: QuestionState.InAnswer,
           question: createQuestion(1),
+          totalCount: 1,
         };
         wrapper = shallow(<TrainingQuestions {...props} />);
         expect(wrapper.find(QuestionView).length).toBe(1);
@@ -129,6 +120,7 @@ describe('<TrainingQuestions />', () => {
           lastStartedTime: 11000,
           questionState: QuestionState.ConfirmCorrect,
           question: createQuestion(1),
+          totalCount: 1,
         };
         wrapper = shallow(<TrainingQuestions {...props} />);
         expect(wrapper.find(QuestionCorrect).length).toBe(1);
@@ -142,9 +134,10 @@ describe('<TrainingQuestions />', () => {
           lastStartedTime: 11000,
           questionState: QuestionState.Finished,
           question: createQuestion(1),
+          totalCount: 1,
         };
         wrapper = shallow(<TrainingQuestions {...props} />);
-        expect(wrapper.find(TrainingResult).length).toBe(1);
+        expect(wrapper.find(QuestionCorrect).length).toBe(1);
       });
     });
   });
@@ -202,18 +195,6 @@ describe('<TrainingQuestions />', () => {
       mapDispatchToProps(mockStore.dispatch).onClickGoToNext();
       const mockActions = mockStore.getActions();
       expect(mockActions[0].type).toEqual(OPEN_NEXT_QUESTION_NAME);
-    });
-
-    it('should dispatch finishQuestions action when onClickGoToResult fired', () => {
-      mapDispatchToProps(mockStore.dispatch).onClickGoToResult();
-      const mockActions = mockStore.getActions();
-      expect(mockActions[0].type).toEqual(FINISH_QUESTIONS_NAME);
-    });
-
-    it('should dispatch restartQuestions action when onClickRestart fired', () => {
-      mapDispatchToProps(mockStore.dispatch).onClickRestart();
-      const mockActions = mockStore.getActions();
-      expect(mockActions[0].type).toEqual(RESTART_QUESTIONS_NAME);
     });
 
     it('should dispatch confirmCorrect action when onClickResult fired', () => {

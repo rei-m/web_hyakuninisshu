@@ -3,7 +3,7 @@
 exports[`/training/question when invalid state should render component 1`] = `
 Array [
   <header
-    className="sc-Rmtcm bbSMDR"
+    className="sc-jDwBTQ gwQURx"
   >
     <div
       className="sc-htoDjs kcwXek"
@@ -11,7 +11,7 @@ Array [
       onMouseUp={[Function]}
     >
       <i
-        className="material-icons sc-hzDkRC fJfPcM"
+        className="material-icons sc-iRbamj iqyeDx"
         color="#fff"
         data-test="back"
         onClick={[Function]}
@@ -20,19 +20,19 @@ Array [
       </i>
     </div>
     <h1
-      className="sc-bRBYWo grULuh"
+      className="sc-gPEVay QCTmM"
     >
       百人一首 - 練習 -
     </h1>
   </header>,
   <div
-    className="sc-eqIVtm fzvReZ"
+    className="sc-bRBYWo fbOzFN"
   >
     <div
-      className="sc-gipzik lbtmUQ"
+      className="sc-cMljjf lnjoVr"
     >
       <p
-        className="sc-csuQGl eWBLyT"
+        className="sc-jAaTju inRTIw"
       >
         不正な遷移を行いました。前の画面からやり直してください。
       </p>
@@ -44,7 +44,7 @@ Array [
 exports[`/training/question when valid state should render component 1`] = `
 Array [
   <header
-    className="sc-Rmtcm bbSMDR"
+    className="sc-jDwBTQ gwQURx"
   >
     <div
       className="sc-htoDjs kcwXek"
@@ -52,7 +52,7 @@ Array [
       onMouseUp={[Function]}
     >
       <i
-        className="material-icons sc-hzDkRC fJfPcM"
+        className="material-icons sc-iRbamj iqyeDx"
         color="#fff"
         data-test="back"
         onClick={[Function]}
@@ -61,19 +61,19 @@ Array [
       </i>
     </div>
     <h1
-      className="sc-bRBYWo grULuh"
+      className="sc-gPEVay QCTmM"
     >
       百人一首 - 練習 -
     </h1>
   </header>,
   <div
-    className="sc-eqIVtm fzvReZ"
+    className="sc-bRBYWo fbOzFN"
   >
     <div
-      className="sc-gipzik lbtmUQ"
+      className="sc-cMljjf lnjoVr"
     >
       <p
-        className="sc-csuQGl eWBLyT"
+        className="sc-jAaTju inRTIw"
       >
         指定した条件の歌はありませんでした
       </p>

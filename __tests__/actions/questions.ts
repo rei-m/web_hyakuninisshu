@@ -281,13 +281,21 @@ describe('QuestionsActionCreator', () => {
   });
 
   it('should create ConfirmCorrectAction', () => {
-    const question = create<Question>('question', {
+    const question1 = create<Question>('question', {
       correctKaruta: create<Karuta>('karuta', {
         id: '1',
         no: 1,
       }),
       id: 1,
     });
+    const question2 = create<Question>('question', {
+      correctKaruta: create<Karuta>('karuta', {
+        id: '2',
+        no: 2,
+      }),
+      id: 2,
+    });
+
     const answer = create<Answer>('answer', {
       correct: true,
       karutaNo: 1,
@@ -298,13 +306,13 @@ describe('QuestionsActionCreator', () => {
         ...questionsInitialState,
         answers: [answer],
         questionState: QuestionState.Answered,
-        questions: [question],
+        questions: [question1, question2],
       },
       ui: uiInitialState,
     });
 
     const actionCreator = questionsAction.confirmCorrect();
-    store.dispatch(actionCreator);
+    store.dispatch(actionCreator as any);
 
     const action = store.getActions()[0];
     const { type, payload } = action;
