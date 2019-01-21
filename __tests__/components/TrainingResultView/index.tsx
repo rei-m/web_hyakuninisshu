@@ -1,18 +1,13 @@
 import * as ReactTestRenderer from 'react-test-renderer';
 import * as React from 'react';
 import { shallow } from 'enzyme';
-import TrainingResult, { Props, QueryData } from '@src/components/TrainingResult';
-import { sel, setUpQueryOnce } from '@test/helpers';
+import TrainingResultView, { Props } from '@src/components/TrainingResultView';
+import { sel } from '@test/helpers';
 
-describe('<TrainingResult />', () => {
+describe('<TrainingResultView />', () => {
   let baseProps: Props;
 
   beforeEach(() => {
-    setUpQueryOnce<QueryData>({
-      trainingResultBGImage: {
-        publicURL: '/tatami.jpg',
-      },
-    });
     baseProps = {
       averageAnswerSecond: 2.5,
       correctCount: 8,
@@ -22,18 +17,18 @@ describe('<TrainingResult />', () => {
   });
 
   it('should render component when has wrong', () => {
-    const renderer = ReactTestRenderer.create(<TrainingResult {...baseProps} />);
+    const renderer = ReactTestRenderer.create(<TrainingResultView {...baseProps} />);
     expect(renderer.toJSON()).toMatchSnapshot();
   });
 
   it('should render component when has not wrong', () => {
     const props = { ...baseProps, correctCount: 10 };
-    const renderer = ReactTestRenderer.create(<TrainingResult {...props} />);
+    const renderer = ReactTestRenderer.create(<TrainingResultView {...props} />);
     expect(renderer.toJSON()).toMatchSnapshot();
   });
 
   it('should fire onClickRestart when restart clicked', () => {
-    const wrapper = shallow(<TrainingResult {...baseProps} />).dive();
+    const wrapper = shallow(<TrainingResultView {...baseProps} />).dive();
     wrapper.find(sel('restart')).simulate('click');
     expect(baseProps.onClickRestart).toHaveBeenCalled();
   });

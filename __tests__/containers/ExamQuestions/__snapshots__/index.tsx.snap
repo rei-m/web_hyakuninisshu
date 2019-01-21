@@ -8,14 +8,6 @@ Object {
     "questionId": 1,
     "time": 1000000,
   },
-  "answers": Array [
-    Object {
-      "correct": true,
-      "karutaNo": 1,
-      "questionId": 1,
-      "time": 1000000,
-    },
-  ],
   "currentPosition": 1,
   "karutas": Array [
     Object {
@@ -1976,63 +1968,6 @@ Object {
     },
   },
   "questionState": 3,
-  "questions": Array [
-    Object {
-      "correctKaruta": Object {
-        "color": "blue",
-        "creator": "詠み手",
-        "fifthKana": "ごく",
-        "fifthKanji": "五句",
-        "firstKana": "しょく",
-        "firstKanji": "初句",
-        "fourthKana": "よんく",
-        "fourthKanji": "四句",
-        "id": 504,
-        "imageNo": "001",
-        "kimariji": 1,
-        "no": 1,
-        "secondKana": "にく",
-        "secondKanji": "二句",
-        "thirdKana": "さんく",
-        "thirdKanji": "三句",
-        "translation": "歌の訳",
-      },
-      "id": 1,
-      "toriFudas": Array [
-        Object {
-          "fifthText": "ごく",
-          "fourthText": "よんく",
-          "karutaNo": 1,
-          "questionId": 1,
-        },
-        Object {
-          "fifthText": "ごく",
-          "fourthText": "よんく",
-          "karutaNo": 1,
-          "questionId": 1,
-        },
-        Object {
-          "fifthText": "ごく",
-          "fourthText": "よんく",
-          "karutaNo": 1,
-          "questionId": 1,
-        },
-        Object {
-          "fifthText": "ごく",
-          "fourthText": "よんく",
-          "karutaNo": 1,
-          "questionId": 1,
-        },
-      ],
-      "yomiFuda": Object {
-        "firstText": "初句",
-        "karutaNo": 1,
-        "questionId": 1,
-        "secondText": "二句",
-        "thirdText": "三句",
-      },
-    },
-  ],
   "submitTime": 1000,
   "totalCount": 1,
 }
