@@ -2,18 +2,13 @@ import * as ReactTestRenderer from 'react-test-renderer';
 import * as React from 'react';
 import { shallow } from 'enzyme';
 import { create } from '@test/factories';
-import { sel, setUpQuery, setUpQueryOnce } from '@test/helpers';
-import ExamResult, { Props, QueryData as ExamResultQueryData } from '@src/components/ExamResult';
+import { sel, setUpQuery } from '@test/helpers';
+import ExamResultView, { Props } from '@src/components/ExamResultView';
 import { QueryData as QuestionResultQueryData } from '@src/components/QuestionResult';
 import { Answer, Question } from '@src/types';
 
-describe('<ExamResult />', () => {
+describe('<ExamResultView />', () => {
   beforeEach(() => {
-    setUpQueryOnce<ExamResultQueryData>({
-      examBGImage: {
-        publicURL: '/tatami.png',
-      },
-    });
     setUpQuery<QuestionResultQueryData>({
       correctImage: {
         childImageSharp: {
@@ -57,17 +52,17 @@ describe('<ExamResult />', () => {
 
   it('should render component when correct all', () => {
     const props = { ...baseProps, correctCount: 3 };
-    const renderer = ReactTestRenderer.create(<ExamResult {...props} />);
+    const renderer = ReactTestRenderer.create(<ExamResultView {...props} />);
     expect(renderer.toJSON()).toMatchSnapshot();
   });
 
   it('should render component when wrong', () => {
-    const renderer = ReactTestRenderer.create(<ExamResult {...baseProps} />);
+    const renderer = ReactTestRenderer.create(<ExamResultView {...baseProps} />);
     expect(renderer.toJSON()).toMatchSnapshot();
   });
 
   it('should fire onClickRestart when restart clicked', () => {
-    const wrapper = shallow(<ExamResult {...baseProps} />)
+    const wrapper = shallow(<ExamResultView {...baseProps} />)
       .dive()
       .dive();
     wrapper.find(sel('restart-training')).simulate('click');

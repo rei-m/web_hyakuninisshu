@@ -1,4 +1,3 @@
-import ExamResult from '@src/components/ExamResult';
 import * as React from 'react';
 import { shallow, ShallowWrapper } from 'enzyme';
 import { mapDispatchToProps, mapStateToProps, ExamQuestions, OwnProps, Props } from '@src/containers/ExamQuestions';
@@ -11,13 +10,7 @@ import { initialState as questionsState } from '@src/state/questions';
 import { initialState as uiState } from '@src/state/ui';
 import { QuestionState } from '@src/enums';
 import { Answer, Color, Karuta, Kimariji, Question, ToriFuda, YomiFuda } from '@src/types';
-import {
-  ANSWER_QUESTION_NAME,
-  CONFIRM_CORRECT_NAME,
-  FINISH_QUESTIONS_NAME,
-  OPEN_NEXT_QUESTION_NAME,
-  RESTART_QUESTIONS_NAME,
-} from '@src/actions/questions';
+import { ANSWER_QUESTION_NAME, CONFIRM_CORRECT_NAME, OPEN_NEXT_QUESTION_NAME } from '@src/actions/questions';
 import { create } from '@test/factories';
 import { mockAppStoreCreateor } from '@test/helpers';
 
@@ -59,15 +52,12 @@ describe('<ExamQuestions />', () => {
       baseProps = {
         karutas,
         submitTime,
-        questions: [],
-        answers: [],
         totalCount: 0,
         currentPosition: 0,
         onClickToriFuda: jest.fn(),
         onClickResult: jest.fn(),
         onClickGoToNext: jest.fn(),
         onClickGoToResult: jest.fn(),
-        onClickRestart: jest.fn(),
       };
     });
 
@@ -105,7 +95,7 @@ describe('<ExamQuestions />', () => {
     });
 
     describe('when finished', () => {
-      it('should render ExamResult', () => {
+      it('should render QuestionCorrect', () => {
         const props = {
           ...baseProps,
           lastStartedTime: 11000,
@@ -113,7 +103,7 @@ describe('<ExamQuestions />', () => {
           question: createQuestion(1),
         };
         wrapper = shallow(<ExamQuestions {...props} />);
-        expect(wrapper.find(ExamResult).length).toBe(1);
+        expect(wrapper.find(QuestionCorrect).length).toBe(1);
       });
     });
   });
@@ -164,18 +154,6 @@ describe('<ExamQuestions />', () => {
       mapDispatchToProps(mockStore.dispatch).onClickGoToNext();
       const mockActions = mockStore.getActions();
       expect(mockActions[0].type).toEqual(OPEN_NEXT_QUESTION_NAME);
-    });
-
-    it('should dispatch finishQuestions action when onClickGoToResult fired', () => {
-      mapDispatchToProps(mockStore.dispatch).onClickGoToResult();
-      const mockActions = mockStore.getActions();
-      expect(mockActions[0].type).toEqual(FINISH_QUESTIONS_NAME);
-    });
-
-    it('should dispatch restartQuestions action when onClickRestart fired', () => {
-      mapDispatchToProps(mockStore.dispatch).onClickRestart();
-      const mockActions = mockStore.getActions();
-      expect(mockActions[0].type).toEqual(RESTART_QUESTIONS_NAME);
     });
 
     it('should dispatch confirmCorrect action when onClickResult fired', () => {

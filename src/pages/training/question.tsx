@@ -1,9 +1,9 @@
-import SEO from '@src/components/SEO';
 import * as React from 'react';
 import { graphql, navigate } from 'gatsby';
+import { RouteComponentProps } from '@reach/router';
 import TrainingQuestions from '@src/containers/TrainingQuestions';
 import Layout from '@src/components/Layout';
-import { RouteComponentProps } from '@reach/router';
+import SEO from '@src/components/SEO';
 import ErrorBoundary from '@src/components/ErrorBoundary';
 import ErrorMessage from '@src/components/ErrorMessage';
 import {

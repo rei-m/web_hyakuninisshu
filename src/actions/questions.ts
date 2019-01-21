@@ -31,9 +31,6 @@ export type CONFIRM_CORRECT_TYPE = typeof CONFIRM_CORRECT_NAME;
 export const OPEN_NEXT_QUESTION_NAME = 'OPEN_NEXT_QUESTION_NAME';
 export type OPEN_NEXT_QUESTION_TYPE = typeof OPEN_NEXT_QUESTION_NAME;
 
-export const FINISH_QUESTIONS_NAME = 'FINISH_QUESTIONS_NAME';
-export type FINISH_QUESTIONS_TYPE = typeof FINISH_QUESTIONS_NAME;
-
 export interface StartTrainingAction extends Action {
   readonly type: START_TRAINING_TYPE;
   readonly payload: {
@@ -97,21 +94,13 @@ export interface OpenNextQuestionAction extends Action {
   };
 }
 
-export interface FinishQuestionsAction extends Action {
-  readonly type: FINISH_QUESTIONS_TYPE;
-  readonly payload: {
-    readonly nextState: QuestionState;
-  };
-}
-
 export type QuestionsActions =
   | StartTrainingAction
   | StartExamAction
   | RestartQuestionsAction
   | AnswerQuestionAction
   | ConfirmCorrectAction
-  | OpenNextQuestionAction
-  | FinishQuestionsAction;
+  | OpenNextQuestionAction;
 
 /*
  * action creators
@@ -125,7 +114,7 @@ export const startTraining = (
   kamiNoKuStyle: KarutaStyleCondition,
   shimoNoKuStyle: KarutaStyleCondition,
   questionAnim: QuestionAnimCondition
-) => (dispatch: Dispatch<QuestionsActions>) => {
+) => (dispatch: Dispatch<StartTrainingAction>) => {
   const questions = new QuestionsFactory(karutas)
     .setRange(rangeFrom, rangeTo)
     .setKimariji(kimariji)
@@ -157,7 +146,7 @@ export const startTraining = (
   dispatch(action);
 };
 
-export const startExam = (karutas: Karuta[]) => (dispatch: Dispatch<QuestionsActions>) => {
+export const startExam = (karutas: Karuta[]) => (dispatch: Dispatch<StartExamAction>) => {
   const questions = new QuestionsFactory(karutas)
     .setRange(RangeFromCondition.One, RangeToCondition.OneHundred)
     .setKimariji(KimarijiCondition.None)
@@ -179,7 +168,7 @@ export const startExam = (karutas: Karuta[]) => (dispatch: Dispatch<QuestionsAct
   dispatch(action);
 };
 
-export const restartQuestions = () => (dispatch: Dispatch<QuestionsActions>, getState: () => GlobalState) => {
+export const restartQuestions = () => (dispatch: Dispatch<RestartQuestionsAction>, getState: () => GlobalState) => {
   const { questions, answers } = getState().questions;
   // TODO: 全て回答済みでなかったらエラー
   const finder: { [questionId: number]: Question } = questions.reduce((previous, current) => {
@@ -203,7 +192,7 @@ export const restartQuestions = () => (dispatch: Dispatch<QuestionsActions>, get
 };
 
 export const answerQuestion = (questionId: number, karutaNo: number) => (
-  dispatch: Dispatch<QuestionsActions>,
+  dispatch: Dispatch<AnswerQuestionAction>,
   getState: () => GlobalState
 ) => {
   const { questions, lastStartedTime } = getState().questions;
@@ -228,16 +217,18 @@ export const answerQuestion = (questionId: number, karutaNo: number) => (
   dispatch(action);
 };
 
-export const confirmCorrect = (): ConfirmCorrectAction => {
-  return {
+export const confirmCorrect = () => (dispatch: Dispatch<ConfirmCorrectAction>, getState: () => GlobalState) => {
+  const { questions, answers } = getState().questions;
+  const nextState = questions.length === answers.length ? QuestionState.Finished : QuestionState.ConfirmCorrect;
+  dispatch({
     payload: {
-      nextState: QuestionState.ConfirmCorrect,
+      nextState,
     },
     type: CONFIRM_CORRECT_NAME,
-  };
+  });
 };
 
-export const openNextQuestion = () => (dispatch: Dispatch<QuestionsActions>, getState: () => GlobalState) => {
+export const openNextQuestion = () => (dispatch: Dispatch<OpenNextQuestionAction>, getState: () => GlobalState) => {
   const { currentIndex } = getState().questions;
   const nextIndex = currentIndex + 1;
   const action: OpenNextQuestionAction = {
@@ -249,15 +240,6 @@ export const openNextQuestion = () => (dispatch: Dispatch<QuestionsActions>, get
     type: OPEN_NEXT_QUESTION_NAME,
   };
   dispatch(action);
-};
-
-export const finishQuestions = (): FinishQuestionsAction => {
-  return {
-    payload: {
-      nextState: QuestionState.Finished,
-    },
-    type: FINISH_QUESTIONS_NAME,
-  };
 };
 
 class QuestionsFactory {
