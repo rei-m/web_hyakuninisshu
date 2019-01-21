@@ -60,8 +60,6 @@ const TrainingQuestionPage: React.FC<Props> = ({ data, location }) => {
     navigate(ROUTE_PATHS.TRAINING, { replace: true });
   };
 
-  console.dir(state);
-
   return (
     <ErrorBoundary>
       <Layout title={title} isDisplayNav={false} currentMenuType={MenuType.Training} onClickBack={onClickBack}>
