@@ -1,0 +1,16 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<TrainingResult /> mapStateToProps should convert state to props 1`] = `
+Object {
+  "answers": Array [
+    Object {
+      "correct": true,
+      "karutaNo": 1,
+      "questionId": 1,
+      "time": 1000000,
+    },
+  ],
+  "questionState": 3,
+  "totalCount": 0,
+}
+`;
