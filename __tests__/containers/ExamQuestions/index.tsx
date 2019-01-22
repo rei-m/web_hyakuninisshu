@@ -1,14 +1,16 @@
 import * as React from 'react';
+import { MockStore } from 'redux-mock-store';
 import { shallow, ShallowWrapper } from 'enzyme';
+import { navigate } from 'gatsby';
 import { mapDispatchToProps, mapStateToProps, ExamQuestions, OwnProps, Props } from '@src/containers/ExamQuestions';
 import ExamInitializer from '@src/containers/ExamInitializer';
 import QuestionView from '@src/components/QuestionView';
 import QuestionCorrect from '@src/components/QuestionCorrect';
-import { MockStore } from 'redux-mock-store';
 import { GlobalState } from '@src/state';
 import { initialState as questionsState } from '@src/state/questions';
 import { initialState as uiState } from '@src/state/ui';
 import { QuestionState } from '@src/enums';
+import { ROUTE_PATHS } from '@src/constants';
 import { Answer, Color, Karuta, Kimariji, Question, ToriFuda, YomiFuda } from '@src/types';
 import { ANSWER_QUESTION_NAME, CONFIRM_CORRECT_NAME, OPEN_NEXT_QUESTION_NAME } from '@src/actions/questions';
 import { create } from '@test/factories';
@@ -166,6 +168,11 @@ describe('<ExamQuestions />', () => {
       mapDispatchToProps(mockStore.dispatch).onClickToriFuda(mockStore.getState().questions.questions[0].toriFudas[0]);
       const mockActions = mockStore.getActions();
       expect(mockActions[0].type).toEqual(ANSWER_QUESTION_NAME);
+    });
+
+    it('should navigate to result when onClickGoToResult fired', () => {
+      mapDispatchToProps(mockStore.dispatch).onClickGoToResult();
+      expect(navigate).toHaveBeenCalledWith(ROUTE_PATHS.EXAM_RESULT, { replace: true });
     });
   });
 });

@@ -17,7 +17,7 @@ export interface ConnectedProps {
 
 export type Props = ConnectedProps;
 
-export const ExamQuestions: React.FC<Props> = ({ questions, answers, totalCount, questionState }) => {
+export const ExamResult: React.FC<Props> = ({ questions, answers, totalCount, questionState }) => {
   if (questionState !== QuestionState.Finished) {
     return <ErrorMessage text="不正な遷移を行いました。前の画面からやり直してください。" />;
   }
@@ -54,4 +54,4 @@ export const mapStateToProps = ({ questions }: GlobalState): ConnectedProps => {
   };
 };
 
-export default connect(mapStateToProps)(ExamQuestions);
+export default connect(mapStateToProps)(ExamResult);
