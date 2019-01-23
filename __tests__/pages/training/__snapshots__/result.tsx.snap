@@ -1,0 +1,144 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`/training/result should render component 1`] = `
+Array [
+  <header
+    className="sc-bwzfXH geYBAS"
+  >
+    <div
+      className="sc-bdVaJa flBAph"
+      onMouseDown={[Function]}
+      onMouseUp={[Function]}
+    >
+      <i
+        className="material-icons sc-bxivhb jrBfKJ"
+        color="#fff"
+        data-test="back"
+        onClick={[Function]}
+      >
+        arrow_back
+      </i>
+    </div>
+    <h1
+      className="sc-htpNat eSnwWs"
+    >
+      百人一首 - 練習結果 -
+    </h1>
+  </header>,
+  <div
+    className="sc-htoDjs huhDoS"
+  >
+    <div
+      className="sc-kpOJdX jKhkfE"
+    >
+      <div
+        className="sc-gZMcBi iXZiBx"
+      >
+        <div
+          className="sc-gqjmRU cCYYjG"
+        >
+          この欄は広告枠です
+        </div>
+      </div>
+      <div
+        className="sc-kAzzGY cOFAWZ"
+      >
+        <div
+          className="sc-fjdhpX khfApH"
+          style={
+            Object {
+              "marginBottom": "16px",
+            }
+          }
+        >
+          <div
+            className="sc-jzJRlG eSwkcy"
+          >
+            正解数
+          </div>
+          <div
+            className="sc-cSHVUG eNttiL"
+          >
+            0 / 0
+          </div>
+        </div>
+        <div
+          className="sc-fjdhpX khfApH"
+          style={
+            Object {
+              "marginBottom": "32px",
+            }
+          }
+        >
+          <div
+            className="sc-jzJRlG eSwkcy"
+          >
+            平均回答時間
+          </div>
+          <div
+            className="sc-cSHVUG eNttiL"
+          >
+            NaN秒
+          </div>
+        </div>
+        <div
+          className="sc-chPdSV kzZEeT"
+        >
+          <a
+            className="twitter-share-button"
+            data-show-count="false"
+            data-size="large"
+            data-text="百人一首で 0問中 0問 正解しました！"
+            data-url="https://hyakuninanki.net"
+            href="https://twitter.com/share"
+          >
+            Tweet
+          </a>
+        </div>
+        <button
+          className="MuiButtonBase-root-32 MuiButton-root-6 MuiButton-outlined-14 Component-button-1 Component-normalButton-2"
+          disabled={false}
+          onBlur={[Function]}
+          onClick={[Function]}
+          onContextMenu={[Function]}
+          onFocus={[Function]}
+          onKeyDown={[Function]}
+          onKeyUp={[Function]}
+          onMouseDown={[Function]}
+          onMouseLeave={[Function]}
+          onMouseUp={[Function]}
+          onTouchEnd={[Function]}
+          onTouchMove={[Function]}
+          onTouchStart={[Function]}
+          tabIndex="0"
+          type="button"
+        >
+          <span
+            className="MuiButton-label-7"
+          >
+            <span
+              aria-hidden="true"
+              className="material-icons MuiIcon-root-35 MuiIcon-fontSizeSmall-42 Component-normalIcon-4"
+            >
+              arrow_back
+            </span>
+            メニューに戻る
+          </span>
+          <span
+            className="MuiTouchRipple-root-44"
+          />
+        </button>
+      </div>
+      <div
+        className="sc-VigVT ieiGAu"
+      >
+        <div
+          className="sc-jTzLTM ljXwZC"
+        >
+          この欄は広告枠です
+        </div>
+      </div>
+    </div>
+  </div>,
+]
+`;

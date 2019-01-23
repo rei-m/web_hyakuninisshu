@@ -2,16 +2,16 @@ import * as React from 'react';
 import { MockStore } from 'redux-mock-store';
 import { shallow, ShallowWrapper } from 'enzyme';
 import { navigate } from 'gatsby';
-import { mapDispatchToProps, mapStateToProps, ExamQuestions, OwnProps, Props } from '@src/containers/ExamQuestions';
-import ExamInitializer from '@src/containers/ExamInitializer';
+import { mapDispatchToProps, mapStateToProps, OwnProps, Props, ReviewQuestions } from '@src/containers/ReviewQuestions';
+import ReviewInitializer from '@src/containers/ReviewInitializer';
 import QuestionView from '@src/components/QuestionView';
 import QuestionCorrect from '@src/components/QuestionCorrect';
 import { GlobalState } from '@src/state';
 import { initialState as questionsState } from '@src/state/questions';
 import { initialState as uiState } from '@src/state/ui';
-import { QuestionState } from '@src/enums';
 import { ROUTE_PATHS } from '@src/constants';
-import { Answer, Color, Karuta, Kimariji, Question, ToriFuda, YomiFuda } from '@src/types';
+import { QuestionState } from '@src/enums';
+import { Answer, Question, ToriFuda, YomiFuda } from '@src/types';
 import { ANSWER_QUESTION_NAME, CONFIRM_CORRECT_NAME, OPEN_NEXT_QUESTION_NAME } from '@src/actions/questions';
 import { create } from '@test/factories';
 import { mockAppStoreCreateor } from '@test/helpers';
@@ -34,28 +34,19 @@ const createQuestion = (id: number) => {
   });
 };
 
-describe('<ExamQuestions />', () => {
+describe('<ReviewQuestions />', () => {
   describe('components', () => {
     let wrapper: ShallowWrapper;
     let baseProps: Props;
 
     beforeEach(() => {
-      const karutas: Karuta[] = Array.from(Array(100).keys()).map(i =>
-        create<Karuta>('karuta', {
-          color: (i < 20 ? 'blue' : 'pink') as Color,
-          id: (i + 1).toString(),
-          no: i + 1,
-          kimariji: ((i % 5) + 1) as Kimariji,
-        })
-      );
-
       const submitTime = 1000;
 
       baseProps = {
-        karutas,
         submitTime,
         totalCount: 0,
         currentPosition: 0,
+        dulation: 0.6,
         onClickToriFuda: jest.fn(),
         onClickResult: jest.fn(),
         onClickGoToNext: jest.fn(),
@@ -64,9 +55,9 @@ describe('<ExamQuestions />', () => {
     });
 
     describe('when question is not started', () => {
-      it('should render ExamInitializer', () => {
-        wrapper = shallow(<ExamQuestions {...baseProps} />);
-        expect(wrapper.find(ExamInitializer).length).toBe(1);
+      it('should render ReviewInitializer', () => {
+        wrapper = shallow(<ReviewQuestions {...baseProps} />);
+        expect(wrapper.find(ReviewInitializer).length).toBe(1);
       });
     });
 
@@ -78,7 +69,7 @@ describe('<ExamQuestions />', () => {
           questionState: QuestionState.InAnswer,
           question: createQuestion(1),
         };
-        wrapper = shallow(<ExamQuestions {...props} />);
+        wrapper = shallow(<ReviewQuestions {...props} />);
         expect(wrapper.find(QuestionView).length).toBe(1);
       });
     });
@@ -91,7 +82,7 @@ describe('<ExamQuestions />', () => {
           questionState: QuestionState.ConfirmCorrect,
           question: createQuestion(1),
         };
-        wrapper = shallow(<ExamQuestions {...props} />);
+        wrapper = shallow(<ReviewQuestions {...props} />);
         expect(wrapper.find(QuestionCorrect).length).toBe(1);
       });
     });
@@ -104,7 +95,7 @@ describe('<ExamQuestions />', () => {
           questionState: QuestionState.Finished,
           question: createQuestion(1),
         };
-        wrapper = shallow(<ExamQuestions {...props} />);
+        wrapper = shallow(<ReviewQuestions {...props} />);
         expect(wrapper.find(QuestionCorrect).length).toBe(1);
       });
     });
@@ -112,18 +103,8 @@ describe('<ExamQuestions />', () => {
 
   describe('mapStateToProps', () => {
     it('should convert state to props', () => {
-      const karutas: Karuta[] = Array.from(Array(100).keys()).map(i =>
-        create<Karuta>('karuta', {
-          color: (i < 20 ? 'blue' : 'pink') as Color,
-          id: (i + 1).toString(),
-          no: i + 1,
-          kimariji: ((i % 5) + 1) as Kimariji,
-        })
-      );
-
       const submitTime = 1000;
       const props: OwnProps = {
-        karutas,
         submitTime,
       };
 
@@ -172,7 +153,7 @@ describe('<ExamQuestions />', () => {
 
     it('should navigate to result when onClickGoToResult fired', () => {
       mapDispatchToProps(mockStore.dispatch).onClickGoToResult();
-      expect(navigate).toHaveBeenCalledWith(ROUTE_PATHS.EXAM_RESULT, { replace: true });
+      expect(navigate).toHaveBeenCalledWith(ROUTE_PATHS.TRAINING_RESULT, { replace: true });
     });
   });
 });

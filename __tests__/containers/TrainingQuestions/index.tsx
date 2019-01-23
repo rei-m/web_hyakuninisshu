@@ -1,6 +1,7 @@
+import * as React from 'react';
 import { MockStore } from 'redux-mock-store';
-import ErrorMessage from '@src/components/ErrorMessage';
 import { shallow, ShallowWrapper } from 'enzyme';
+import { navigate } from 'gatsby';
 import {
   mapDispatchToProps,
   mapStateToProps,
@@ -11,10 +12,11 @@ import {
 import TrainingInitializer from '@src/containers/TrainingInitializer';
 import QuestionView from '@src/components/QuestionView';
 import QuestionCorrect from '@src/components/QuestionCorrect';
-import * as React from 'react';
+import ErrorMessage from '@src/components/ErrorMessage';
 import { GlobalState } from '@src/state';
 import { initialState as questionsState } from '@src/state/questions';
 import { initialState as uiState } from '@src/state/ui';
+import { ROUTE_PATHS } from '@src/constants';
 import {
   ColorCondition,
   KarutaStyleCondition,
@@ -207,6 +209,11 @@ describe('<TrainingQuestions />', () => {
       mapDispatchToProps(mockStore.dispatch).onClickToriFuda(mockStore.getState().questions.questions[0].toriFudas[0]);
       const mockActions = mockStore.getActions();
       expect(mockActions[0].type).toEqual(ANSWER_QUESTION_NAME);
+    });
+
+    it('should navigate to result when onClickGoToResult fired', () => {
+      mapDispatchToProps(mockStore.dispatch).onClickGoToResult();
+      expect(navigate).toHaveBeenCalledWith(ROUTE_PATHS.TRAINING_RESULT, { replace: true });
     });
   });
 });
