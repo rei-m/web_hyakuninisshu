@@ -1,12 +1,12 @@
-import { Color, Karuta, Kimariji } from '@src/types';
 import * as ReactTestRenderer from 'react-test-renderer';
+import * as React from 'react';
 import { Provider } from 'react-redux';
 import ExamQuestion, { Props } from '@src/pages/exam/question';
 import { DefaultSEOQueryData } from '@src/components/SEO';
-import * as React from 'react';
 import { createStore } from '@src/state';
 import { QueryData as QuestionViewQueryData } from '@src/components/QuestionView';
 import { QueryData as QuestionResultQueryData } from '@src/components/QuestionResult';
+import { Color, Karuta, Kimariji } from '@src/types';
 import { setUpQuery, setUpQueryOnce } from '@test/helpers';
 import { create } from '@test/factories';
 
