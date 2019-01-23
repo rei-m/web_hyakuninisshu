@@ -1,0 +1,73 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<ReviewQuestions /> mapStateToProps should convert state to props 1`] = `
+Object {
+  "answer": Object {
+    "correct": true,
+    "karutaNo": 1,
+    "questionId": 1,
+    "time": 1000000,
+  },
+  "currentPosition": 1,
+  "dulation": 0,
+  "lastStartedTime": 11000,
+  "question": Object {
+    "correctKaruta": Object {
+      "color": "blue",
+      "creator": "詠み手",
+      "fifthKana": "ごく",
+      "fifthKanji": "五句",
+      "firstKana": "しょく",
+      "firstKanji": "初句",
+      "fourthKana": "よんく",
+      "fourthKanji": "四句",
+      "id": 4,
+      "imageNo": "001",
+      "kimariji": 1,
+      "no": 1,
+      "secondKana": "にく",
+      "secondKanji": "二句",
+      "thirdKana": "さんく",
+      "thirdKanji": "三句",
+      "translation": "歌の訳",
+    },
+    "id": 1,
+    "toriFudas": Array [
+      Object {
+        "fifthText": "ごく",
+        "fourthText": "よんく",
+        "karutaNo": 1,
+        "questionId": 1,
+      },
+      Object {
+        "fifthText": "ごく",
+        "fourthText": "よんく",
+        "karutaNo": 1,
+        "questionId": 1,
+      },
+      Object {
+        "fifthText": "ごく",
+        "fourthText": "よんく",
+        "karutaNo": 1,
+        "questionId": 1,
+      },
+      Object {
+        "fifthText": "ごく",
+        "fourthText": "よんく",
+        "karutaNo": 1,
+        "questionId": 1,
+      },
+    ],
+    "yomiFuda": Object {
+      "firstText": "初句",
+      "karutaNo": 1,
+      "questionId": 1,
+      "secondText": "二句",
+      "thirdText": "三句",
+    },
+  },
+  "questionState": 3,
+  "submitTime": 1000,
+  "totalCount": 1,
+}
+`;
