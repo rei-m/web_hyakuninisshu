@@ -28,6 +28,7 @@ import {
 } from '@src/utils';
 import { GlobalState } from '@src/state';
 import { ROUTE_PATHS } from '@src/constants';
+import { gaEvent } from '@src/utils/ga';
 
 export interface ConnectedProps {
   initialRangeFrom: RangeFromCondition;
@@ -129,6 +130,7 @@ const FormView = ({ values, handleChange, handleSubmit, errors, touched }: FormV
 
 const TrainingMenuForm = withFormik({
   handleSubmit: values => {
+    gaEvent('Training', 'click', JSON.stringify(values));
     navigate(ROUTE_PATHS.TRAINING_QUESTION, {
       state: {
         color: ColorConditions.valueOf(values.color),
