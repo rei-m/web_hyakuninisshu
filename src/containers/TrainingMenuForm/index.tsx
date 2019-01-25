@@ -130,16 +130,20 @@ const FormView = ({ values, handleChange, handleSubmit, errors, touched }: FormV
 
 const TrainingMenuForm = withFormik({
   handleSubmit: values => {
-    gaEvent('Training', 'click', JSON.stringify(values));
+    const state = {
+      color: ColorConditions.valueOf(values.color),
+      kamiNoKuStyle: KarutaStyleConditions.valueOf(Number(values.kamiNoKuStyle)),
+      kimariji: KimarijiConditions.valueOf(Number(values.kimariji)),
+      rangeFrom: RangeFromConditions.valueOf(Number(values.rangeFrom)),
+      rangeTo: RangeToConditions.valueOf(Number(values.rangeTo)),
+      shimoNoKuStyle: KarutaStyleConditions.valueOf(Number(values.shimoNoKuStyle)),
+      questionAnim: QuestionAnimConditions.valueOf(Number(values.questionAnim)),
+    };
+
+    gaEvent('Training', 'click', JSON.stringify(state));
     navigate(ROUTE_PATHS.TRAINING_QUESTION, {
       state: {
-        color: ColorConditions.valueOf(values.color),
-        kamiNoKuStyle: KarutaStyleConditions.valueOf(Number(values.kamiNoKuStyle)),
-        kimariji: KimarijiConditions.valueOf(Number(values.kimariji)),
-        rangeFrom: RangeFromConditions.valueOf(Number(values.rangeFrom)),
-        rangeTo: RangeToConditions.valueOf(Number(values.rangeTo)),
-        shimoNoKuStyle: KarutaStyleConditions.valueOf(Number(values.shimoNoKuStyle)),
-        questionAnim: QuestionAnimConditions.valueOf(Number(values.questionAnim)),
+        ...state,
         submitTime: new Date().getTime(),
       },
     });
