@@ -79,6 +79,7 @@ Array [
                     aria-haspopup="true"
                     aria-pressed="false"
                     className="MuiSelect-select-8 MuiSelect-selectMenu-11 MuiInputBase-input-37 MuiInput-input-22"
+                    id="select-rangeFrom"
                     onBlur={[Function]}
                     onClick={[Function]}
                     onFocus={[Function]}
@@ -123,6 +124,7 @@ Array [
                     aria-haspopup="true"
                     aria-pressed="false"
                     className="MuiSelect-select-8 MuiSelect-selectMenu-11 MuiInputBase-input-37 MuiInput-input-22"
+                    id="select-rangeTo"
                     onBlur={[Function]}
                     onClick={[Function]}
                     onFocus={[Function]}
@@ -179,6 +181,7 @@ Array [
                   aria-haspopup="true"
                   aria-pressed="false"
                   className="MuiSelect-select-8 MuiSelect-selectMenu-11 MuiInputBase-input-37 MuiInput-input-22"
+                  id="select-kimariji"
                   onBlur={[Function]}
                   onClick={[Function]}
                   onFocus={[Function]}
@@ -234,6 +237,7 @@ Array [
                   aria-haspopup="true"
                   aria-pressed="false"
                   className="MuiSelect-select-8 MuiSelect-selectMenu-11 MuiInputBase-input-37 MuiInput-input-22"
+                  id="select-color"
                   onBlur={[Function]}
                   onClick={[Function]}
                   onFocus={[Function]}
@@ -289,6 +293,7 @@ Array [
                   aria-haspopup="true"
                   aria-pressed="false"
                   className="MuiSelect-select-8 MuiSelect-selectMenu-11 MuiInputBase-input-37 MuiInput-input-22"
+                  id="select-kamiNoKuStyle"
                   onBlur={[Function]}
                   onClick={[Function]}
                   onFocus={[Function]}
@@ -344,6 +349,7 @@ Array [
                   aria-haspopup="true"
                   aria-pressed="false"
                   className="MuiSelect-select-8 MuiSelect-selectMenu-11 MuiInputBase-input-37 MuiInput-input-22"
+                  id="select-shimoNoKuStyle"
                   onBlur={[Function]}
                   onClick={[Function]}
                   onFocus={[Function]}
@@ -399,6 +405,7 @@ Array [
                   aria-haspopup="true"
                   aria-pressed="false"
                   className="MuiSelect-select-8 MuiSelect-selectMenu-11 MuiInputBase-input-37 MuiInput-input-22"
+                  id="select-questionAnim"
                   onBlur={[Function]}
                   onClick={[Function]}
                   onFocus={[Function]}
