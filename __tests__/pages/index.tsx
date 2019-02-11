@@ -2,12 +2,18 @@ import * as ReactTestRenderer from 'react-test-renderer';
 import * as React from 'react';
 import Index, { Props } from '@src/pages';
 import { DefaultSEOQueryData } from '@src/components/SEO';
+import { Karuta } from '@src/types';
 import { setUpQueryOnce } from '@test/helpers';
+import { create } from '@test/factories';
 
 describe('/', () => {
   let baseProps: Props;
 
   beforeEach(() => {
+    const karuta = create<Karuta>('karuta', {
+      no: 1,
+    });
+
     setUpQueryOnce<DefaultSEOQueryData>({
       site: {
         siteMetadata: {
@@ -27,6 +33,17 @@ describe('/', () => {
             title: 'index title',
             description: 'index description',
           },
+        },
+        allKaruta: {
+          edges: [
+            {
+              node: {
+                internal: {
+                  content: JSON.stringify(karuta),
+                },
+              },
+            },
+          ],
         },
       },
     };

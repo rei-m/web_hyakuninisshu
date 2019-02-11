@@ -21,7 +21,6 @@ export default class HTML extends React.Component {
           <link rel="apple-touch-icon" href="icons/icon-256x256.png" sizes="256x256" />
           <link rel="apple-touch-icon" href="icons/icon-384x384.png" sizes="384x384" />
           <link rel="apple-touch-icon" href="icons/icon-512x512.png" sizes="512x512" />
-          <link href="//fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
           {this.props.headComponents}
         </head>
         <body {...this.props.bodyAttributes}>

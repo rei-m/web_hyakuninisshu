@@ -1,5 +1,5 @@
-import { getRandomInt, menuTypeToIcon, randomizeArray, toQuestionAnimConditionString } from '@src/utils';
-import { MenuType, QuestionAnimCondition } from '@src/enums';
+import { getRandomInt, randomizeArray, toQuestionAnimConditionString } from '@src/utils';
+import { QuestionAnimCondition } from '@src/enums';
 
 describe('utility functions', () => {
   it('should get random intager value', () => {
@@ -18,13 +18,6 @@ describe('utility functions', () => {
     expect(actual).toContain(3);
     expect(actual).toContain(4);
     expect(actual).toContain(5);
-  });
-
-  it('should return icon classname', () => {
-    expect(menuTypeToIcon(MenuType.Training)).toBe('create');
-    expect(menuTypeToIcon(MenuType.Exam)).toBe('note');
-    expect(menuTypeToIcon(MenuType.Material)).toBe('library_books');
-    expect(menuTypeToIcon(MenuType.Other)).toBe('settings');
   });
 
   it('should return QuestionAnimCondition text', () => {

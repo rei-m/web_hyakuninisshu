@@ -1,18 +1,5 @@
-import { ColorCondition, KarutaStyleCondition, KimarijiCondition, MenuType, QuestionAnimCondition } from '@src/enums';
+import { ColorCondition, KarutaStyleCondition, KimarijiCondition, QuestionAnimCondition } from '@src/enums';
 import { Color, Kimariji } from '@src/types';
-
-export const menuTypeToIcon = (iconType: MenuType) => {
-  switch (iconType) {
-    case MenuType.Training:
-      return 'create';
-    case MenuType.Exam:
-      return 'note';
-    case MenuType.Material:
-      return 'library_books';
-    case MenuType.Other:
-      return 'settings';
-  }
-};
 
 const NUMS = ['一', '二', '三', '四', '五', '六', '七', '八', '九'];
 
