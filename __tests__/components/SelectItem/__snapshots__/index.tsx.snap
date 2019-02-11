@@ -22,6 +22,7 @@ exports[`<SelectItem /> should render component 1`] = `
         aria-haspopup="true"
         aria-pressed="false"
         className="MuiSelect-select-27 MuiSelect-selectMenu-30 MuiInputBase-input-56 MuiInput-input-41"
+        id="select-name"
         onBlur={[Function]}
         onClick={[Function]}
         onFocus={[Function]}

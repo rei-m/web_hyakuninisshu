@@ -10,14 +10,28 @@ Array [
       onMouseDown={[Function]}
       onMouseUp={[Function]}
     >
-      <i
-        className="material-icons sc-bxivhb jrBfKJ"
+      <span
+        className="sc-bxivhb iUaUQC"
         color="#fff"
         data-test="back"
         onClick={[Function]}
       >
-        arrow_back
-      </i>
+        <svg
+          aria-hidden="true"
+          className="MuiSvgIcon-root-1"
+          focusable="false"
+          role="presentation"
+          viewBox="0 0 24 24"
+        >
+          <path
+            d="M0 0h24v24H0z"
+            fill="none"
+          />
+          <path
+            d="M20 11H7.83l5.59-5.59L12 4l-8 8 8 8 1.41-1.41L7.83 13H20v-2z"
+          />
+        </svg>
+      </span>
     </div>
     <h1
       className="sc-htpNat eSnwWs"
@@ -26,25 +40,25 @@ Array [
     </h1>
   </header>,
   <div
-    className="sc-htoDjs huhDoS"
+    className="sc-gzVnrw eeAPtW"
   >
     <div
-      className="sc-kpOJdX jKhkfE"
+      className="sc-kGXeez HLrKz"
     >
       <div
-        className="sc-gZMcBi iXZiBx"
+        className="sc-iwsKbI hDfyDa"
       >
         <div
-          className="sc-gqjmRU cCYYjG"
+          className="sc-gZMcBi eXoTgE"
         >
           この欄は広告枠です
         </div>
       </div>
       <div
-        className="sc-kAzzGY cOFAWZ"
+        className="sc-cSHVUG hirGEh"
       >
         <div
-          className="sc-fjdhpX khfApH"
+          className="sc-jTzLTM gkTcKL"
           style={
             Object {
               "marginBottom": "16px",
@@ -52,18 +66,18 @@ Array [
           }
         >
           <div
-            className="sc-jzJRlG eSwkcy"
+            className="sc-fjdhpX jsSKD"
           >
             正解数
           </div>
           <div
-            className="sc-cSHVUG eNttiL"
+            className="sc-jzJRlG fciurp"
           >
             0 / 0
           </div>
         </div>
         <div
-          className="sc-fjdhpX khfApH"
+          className="sc-jTzLTM gkTcKL"
           style={
             Object {
               "marginBottom": "32px",
@@ -71,18 +85,18 @@ Array [
           }
         >
           <div
-            className="sc-jzJRlG eSwkcy"
+            className="sc-fjdhpX jsSKD"
           >
             平均回答時間
           </div>
           <div
-            className="sc-cSHVUG eNttiL"
+            className="sc-jzJRlG fciurp"
           >
             NaN秒
           </div>
         </div>
         <div
-          className="sc-chPdSV kzZEeT"
+          className="sc-kAzzGY ciXhiV"
         >
           <a
             className="twitter-share-button"
@@ -96,7 +110,7 @@ Array [
           </a>
         </div>
         <button
-          className="MuiButtonBase-root-32 MuiButton-root-6 MuiButton-outlined-14 Component-button-1 Component-normalButton-2"
+          className="MuiButtonBase-root-41 MuiButton-root-15 MuiButton-outlined-23 Component-button-10 Component-normalButton-11"
           disabled={false}
           onBlur={[Function]}
           onClick={[Function]}
@@ -114,26 +128,26 @@ Array [
           type="button"
         >
           <span
-            className="MuiButton-label-7"
+            className="MuiButton-label-16"
           >
             <span
               aria-hidden="true"
-              className="material-icons MuiIcon-root-35 MuiIcon-fontSizeSmall-42 Component-normalIcon-4"
+              className="material-icons MuiIcon-root-44 MuiIcon-fontSizeSmall-51 Component-normalIcon-13"
             >
               arrow_back
             </span>
             メニューに戻る
           </span>
           <span
-            className="MuiTouchRipple-root-44"
+            className="MuiTouchRipple-root-53"
           />
         </button>
       </div>
       <div
-        className="sc-VigVT ieiGAu"
+        className="sc-gqjmRU dIdbVO"
       >
         <div
-          className="sc-jTzLTM ljXwZC"
+          className="sc-VigVT cYoXur"
         >
           この欄は広告枠です
         </div>

@@ -27,7 +27,7 @@ export interface RippledComponentProps {
 }
 
 // このHOC中途半端で汎用的に使えないので注意
-export function withRipple<T extends React.HTMLAttributes<HTMLElement>>(WrappedComponent: React.ComponentType<T>) {
+export function withRipple<T>(WrappedComponent: React.ComponentType<T>) {
   return class RippledComponent extends React.Component<RippledComponentProps & T> {
     public static defaultProps: RippledComponentProps = { color: '#fff' };
 
