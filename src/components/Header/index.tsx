@@ -1,5 +1,7 @@
 import * as React from 'react';
 import styled from '@src/styles/styled-components';
+import ArrowBackIcon from '@material-ui/icons/ArrowBack';
+import SearchIcon from '@material-ui/icons/Search';
 import { withRipple } from '@src/enhancers/withRipple';
 
 export interface Props {
@@ -33,21 +35,13 @@ const Title = styled.h1`
   }
 `;
 
-const BackIcon = withRipple(styled.i`
+const IconWrapper = withRipple(styled.span`
   line-height: ${({ theme }) => theme.headerHeight};
   width: ${({ theme }) => theme.headerHeight};
-  color: #fff;
-  text-align: center;
-  cursor: pointer;
-  @media screen and (min-width: ${({ theme }) => theme.minWidthWide}) {
-    line-height: ${({ theme }) => theme.headerHeightWide};
-    width: ${({ theme }) => theme.headerHeightWide};
-  }
-`);
-
-const MenuIcon = withRipple(styled.i`
-  line-height: ${({ theme }) => theme.headerHeight};
-  width: ${({ theme }) => theme.headerHeight};
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   color: #fff;
   text-align: center;
   cursor: pointer;
@@ -60,15 +54,15 @@ const MenuIcon = withRipple(styled.i`
 const Header: React.FC<Props> = ({ title, onClickBack, onClickSearch }) => (
   <Container canBack={!!onClickBack}>
     {!!onClickBack && (
-      <BackIcon className="material-icons" onClick={onClickBack} data-test="back">
-        arrow_back
-      </BackIcon>
+      <IconWrapper onClick={onClickBack} data-test="back">
+        <ArrowBackIcon />
+      </IconWrapper>
     )}
     <Title>{title}</Title>
     {!!onClickSearch && (
-      <MenuIcon className="material-icons" onClick={onClickSearch} data-test="search">
-        search
-      </MenuIcon>
+      <IconWrapper onClick={onClickSearch} data-test="search">
+        <SearchIcon />
+      </IconWrapper>
     )}
   </Container>
 );

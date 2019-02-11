@@ -223,7 +223,7 @@ const IndexPage: React.FC<Props> = ({ data }) => (
           </SectionText>
         </Section>
         <Section>
-          <SectionTitle>歌一覧</SectionTitle>
+          <SectionTitle>百人一首 歌一覧</SectionTitle>
           <KarutaList>
             {Array.from(Array(100).keys()).map(i => {
               const id = i + 1;

@@ -1,7 +1,7 @@
 import * as React from 'react';
 import styled from '@src/styles/styled-components';
 import { MenuType } from '@src/enums';
-import { menuTypeToIcon } from '@src/utils';
+import MenuIconImage from '@src/components/MenuIconImage';
 
 export interface Props {
   iconType: MenuType;
@@ -9,9 +9,9 @@ export interface Props {
   isCurrent: boolean;
 }
 
-type IconProps = Pick<Props, 'text' | 'isCurrent'>;
+type IconWrapperProps = Pick<Props, 'text' | 'isCurrent'>;
 
-const Icon = styled.i<IconProps>`
+const IconWrapper = styled.span<IconWrapperProps>`
   height: 56px;
   color: #fff;
   text-align: center;
@@ -19,13 +19,14 @@ const Icon = styled.i<IconProps>`
   box-sizing: border-box;
   position: relative;
   width: inherit;
+  display: inline-block;
   opacity: ${props => (props.isCurrent ? 1 : 0.8)};
   &:after {
     content: '${props => props.text}';
     width: inherit;
     text-arign: center;
     position: absolute;
-    bottom: 10px;
+    bottom: 8px;
     left: 0;
     font-size: 1.2rem;
     opacity: 1;
@@ -33,9 +34,9 @@ const Icon = styled.i<IconProps>`
 `;
 
 const NavIcon: React.FC<Props> = ({ iconType, text, isCurrent }) => (
-  <Icon className="material-icons" text={text} isCurrent={isCurrent}>
-    {menuTypeToIcon(iconType)}
-  </Icon>
+  <IconWrapper text={text} isCurrent={isCurrent}>
+    <MenuIconImage iconType={iconType} />
+  </IconWrapper>
 );
 
 export default NavIcon;

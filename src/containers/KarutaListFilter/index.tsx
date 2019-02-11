@@ -2,6 +2,7 @@ import * as React from 'react';
 import { connect } from 'react-redux';
 import { ThunkDispatch } from 'redux-thunk';
 import { PositionProperty } from 'csstype';
+import CloseIcon from '@material-ui/icons/Close';
 import Checkbox from '@material-ui/core/Checkbox';
 import List from '@material-ui/core/List';
 import ListItem from '@material-ui/core/ListItem';
@@ -58,14 +59,17 @@ const Header = styled.li`
   border-bottom: 1px solid #808080;
 `;
 
-const CloseIcon = styled.i`
-  line-height: 48px;
+const CloseIconWrapper = styled.span`
+  height: 48px;
   width: 48px;
   text-align: center;
   cursor: pointer;
   position: absolute;
   top: 0;
   right: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 `;
 
 const Ul = styled.ul`
@@ -147,9 +151,9 @@ export const KarutaListFilter: React.FC<RenderProps> = ({
           <List className={classes.root} subheader={<li />}>
             <Header key="header">
               絞り込み
-              <CloseIcon className="material-icons" onClick={onClickCloseHandler}>
-                close
-              </CloseIcon>
+              <CloseIconWrapper onClick={onClickCloseHandler}>
+                <CloseIcon />
+              </CloseIconWrapper>
             </Header>
             <li key="section-kimariji">
               <Ul>

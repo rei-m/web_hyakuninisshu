@@ -1,17 +1,16 @@
 import * as React from 'react';
 import styled from '@src/styles/styled-components';
 import { MenuType } from '@src/enums';
-import { menuTypeToIcon } from '@src/utils';
+import MenuIconImage from '@src/components/MenuIconImage';
 
 export interface Props {
   iconType: MenuType;
 }
 
-const Icon = styled.i`
+const IconWrapper = styled.span`
   width: 32px;
   height: 32px;
   font-size: 1.6rem;
-  line-height: 26px;
   position: absolute;
   top: ${({ theme }) => theme.spacing1x};
   left: ${({ theme }) => theme.spacing1x};
@@ -19,17 +18,23 @@ const Icon = styled.i`
   border-radius: 50%;
   color: #f1b400;
   text-align: center;
-
+  display: flex;
+  justify-content: center;
+  align-items: center;
   @media screen and (min-width: ${({ theme }) => theme.minWidthWide}) {
     position: initial;
     width: 124px;
     height: 124px;
     border: 4px solid;
     font-size: 6rem;
-    line-height: 116px;
+    margin: 0 auto;
   }
 `;
 
-const MenuIcon: React.FC<Props> = ({ iconType }) => <Icon className="material-icons">{menuTypeToIcon(iconType)}</Icon>;
+const MenuIcon: React.FC<Props> = ({ iconType }) => (
+  <IconWrapper>
+    <MenuIconImage iconType={iconType} fontSize="inherit" />
+  </IconWrapper>
+);
 
 export default MenuIcon;
