@@ -10,14 +10,28 @@ Array [
       onMouseDown={[Function]}
       onMouseUp={[Function]}
     >
-      <i
-        className="material-icons sc-gzVnrw frDxzG"
+      <span
+        className="sc-gzVnrw loYMGb"
         color="#fff"
         data-test="back"
         onClick={[Function]}
       >
-        arrow_back
-      </i>
+        <svg
+          aria-hidden="true"
+          className="MuiSvgIcon-root-1"
+          focusable="false"
+          role="presentation"
+          viewBox="0 0 24 24"
+        >
+          <path
+            d="M0 0h24v24H0z"
+            fill="none"
+          />
+          <path
+            d="M20 11H7.83l5.59-5.59L12 4l-8 8 8 8 1.41-1.41L7.83 13H20v-2z"
+          />
+        </svg>
+      </span>
     </div>
     <h1
       className="sc-bZQynM bbbWyM"
@@ -26,34 +40,34 @@ Array [
     </h1>
   </header>,
   <div
-    className="sc-gqjmRU bJEDRz"
+    className="sc-gZMcBi eXxgPw"
   >
     <section
-      className="sc-kgoBCf haorGD"
+      className="sc-chPdSV gytgom"
     >
       <h1
-        className="sc-fjdhpX eVWZuB"
+        className="sc-jTzLTM fIzVOw"
       >
         出題設定
       </h1>
       <div
-        className="sc-jzJRlG kHwMRt"
+        className="sc-fjdhpX QChbQ"
       >
         <div
-          className="sc-cSHVUG dJDQdj"
+          className="sc-jzJRlG hmtsxu"
         >
           この欄は広告枠です
         </div>
       </div>
       <div
-        className="sc-kGXeez kLmzXx"
+        className="sc-kgoBCf djnryy"
       >
         <form
           onReset={[Function]}
           onSubmit={[Function]}
         >
           <div
-            className="MuiFormControl-root-3 Component-formControl-1"
+            className="MuiFormControl-root-12 Component-formControl-10"
             style={
               Object {
                 "marginBottom": "16px",
@@ -69,16 +83,16 @@ Array [
               className="sc-bdVaJa grbsvW"
             >
               <div
-                className="MuiInputBase-root-27 MuiInput-root-14 MuiInput-underline-18 MuiInputBase-formControl-28 MuiInput-formControl-15 Component-select-2"
+                className="MuiInputBase-root-36 MuiInput-root-23 MuiInput-underline-27 MuiInputBase-formControl-37 MuiInput-formControl-24 Component-select-11"
                 onClick={[Function]}
               >
                 <div
-                  className="MuiSelect-root-7"
+                  className="MuiSelect-root-16"
                 >
                   <div
                     aria-haspopup="true"
                     aria-pressed="false"
-                    className="MuiSelect-select-8 MuiSelect-selectMenu-11 MuiInputBase-input-37 MuiInput-input-22"
+                    className="MuiSelect-select-17 MuiSelect-selectMenu-20 MuiInputBase-input-46 MuiInput-input-31"
                     id="select-rangeFrom"
                     onBlur={[Function]}
                     onClick={[Function]}
@@ -97,7 +111,7 @@ Array [
                   />
                   <svg
                     aria-hidden="true"
-                    className="MuiSvgIcon-root-44 MuiSelect-icon-13"
+                    className="MuiSvgIcon-root-1 MuiSelect-icon-22"
                     focusable="false"
                     role="presentation"
                     viewBox="0 0 24 24"
@@ -114,16 +128,16 @@ Array [
                 〜
               </span>
               <div
-                className="MuiInputBase-root-27 MuiInput-root-14 MuiInput-underline-18 MuiInputBase-formControl-28 MuiInput-formControl-15 Component-select-2"
+                className="MuiInputBase-root-36 MuiInput-root-23 MuiInput-underline-27 MuiInputBase-formControl-37 MuiInput-formControl-24 Component-select-11"
                 onClick={[Function]}
               >
                 <div
-                  className="MuiSelect-root-7"
+                  className="MuiSelect-root-16"
                 >
                   <div
                     aria-haspopup="true"
                     aria-pressed="false"
-                    className="MuiSelect-select-8 MuiSelect-selectMenu-11 MuiInputBase-input-37 MuiInput-input-22"
+                    className="MuiSelect-select-17 MuiSelect-selectMenu-20 MuiInputBase-input-46 MuiInput-input-31"
                     id="select-rangeTo"
                     onBlur={[Function]}
                     onClick={[Function]}
@@ -142,7 +156,7 @@ Array [
                   />
                   <svg
                     aria-hidden="true"
-                    className="MuiSvgIcon-root-44 MuiSelect-icon-13"
+                    className="MuiSvgIcon-root-1 MuiSelect-icon-22"
                     focusable="false"
                     role="presentation"
                     viewBox="0 0 24 24"
@@ -156,7 +170,7 @@ Array [
             </div>
           </div>
           <div
-            className="MuiFormControl-root-3 Component-formControl-57"
+            className="MuiFormControl-root-12 Component-formControl-57"
             style={
               Object {
                 "marginBottom": "16px",
@@ -171,16 +185,16 @@ Array [
               決まり字
             </label>
             <div
-              className="MuiInputBase-root-27 MuiInput-root-14 MuiInput-underline-18 MuiInputBase-formControl-28 MuiInput-formControl-15 Component-select-59"
+              className="MuiInputBase-root-36 MuiInput-root-23 MuiInput-underline-27 MuiInputBase-formControl-37 MuiInput-formControl-24 Component-select-59"
               onClick={[Function]}
             >
               <div
-                className="MuiSelect-root-7"
+                className="MuiSelect-root-16"
               >
                 <div
                   aria-haspopup="true"
                   aria-pressed="false"
-                  className="MuiSelect-select-8 MuiSelect-selectMenu-11 MuiInputBase-input-37 MuiInput-input-22"
+                  className="MuiSelect-select-17 MuiSelect-selectMenu-20 MuiInputBase-input-46 MuiInput-input-31"
                   id="select-kimariji"
                   onBlur={[Function]}
                   onClick={[Function]}
@@ -199,7 +213,7 @@ Array [
                 />
                 <svg
                   aria-hidden="true"
-                  className="MuiSvgIcon-root-44 MuiSelect-icon-13"
+                  className="MuiSvgIcon-root-1 MuiSelect-icon-22"
                   focusable="false"
                   role="presentation"
                   viewBox="0 0 24 24"
@@ -212,7 +226,7 @@ Array [
             </div>
           </div>
           <div
-            className="MuiFormControl-root-3 Component-formControl-57"
+            className="MuiFormControl-root-12 Component-formControl-57"
             style={
               Object {
                 "marginBottom": "16px",
@@ -227,16 +241,16 @@ Array [
               五色
             </label>
             <div
-              className="MuiInputBase-root-27 MuiInput-root-14 MuiInput-underline-18 MuiInputBase-formControl-28 MuiInput-formControl-15 Component-select-59"
+              className="MuiInputBase-root-36 MuiInput-root-23 MuiInput-underline-27 MuiInputBase-formControl-37 MuiInput-formControl-24 Component-select-59"
               onClick={[Function]}
             >
               <div
-                className="MuiSelect-root-7"
+                className="MuiSelect-root-16"
               >
                 <div
                   aria-haspopup="true"
                   aria-pressed="false"
-                  className="MuiSelect-select-8 MuiSelect-selectMenu-11 MuiInputBase-input-37 MuiInput-input-22"
+                  className="MuiSelect-select-17 MuiSelect-selectMenu-20 MuiInputBase-input-46 MuiInput-input-31"
                   id="select-color"
                   onBlur={[Function]}
                   onClick={[Function]}
@@ -255,7 +269,7 @@ Array [
                 />
                 <svg
                   aria-hidden="true"
-                  className="MuiSvgIcon-root-44 MuiSelect-icon-13"
+                  className="MuiSvgIcon-root-1 MuiSelect-icon-22"
                   focusable="false"
                   role="presentation"
                   viewBox="0 0 24 24"
@@ -268,7 +282,7 @@ Array [
             </div>
           </div>
           <div
-            className="MuiFormControl-root-3 Component-formControl-57"
+            className="MuiFormControl-root-12 Component-formControl-57"
             style={
               Object {
                 "marginBottom": "16px",
@@ -283,16 +297,16 @@ Array [
               上の句
             </label>
             <div
-              className="MuiInputBase-root-27 MuiInput-root-14 MuiInput-underline-18 MuiInputBase-formControl-28 MuiInput-formControl-15 Component-select-59"
+              className="MuiInputBase-root-36 MuiInput-root-23 MuiInput-underline-27 MuiInputBase-formControl-37 MuiInput-formControl-24 Component-select-59"
               onClick={[Function]}
             >
               <div
-                className="MuiSelect-root-7"
+                className="MuiSelect-root-16"
               >
                 <div
                   aria-haspopup="true"
                   aria-pressed="false"
-                  className="MuiSelect-select-8 MuiSelect-selectMenu-11 MuiInputBase-input-37 MuiInput-input-22"
+                  className="MuiSelect-select-17 MuiSelect-selectMenu-20 MuiInputBase-input-46 MuiInput-input-31"
                   id="select-kamiNoKuStyle"
                   onBlur={[Function]}
                   onClick={[Function]}
@@ -311,7 +325,7 @@ Array [
                 />
                 <svg
                   aria-hidden="true"
-                  className="MuiSvgIcon-root-44 MuiSelect-icon-13"
+                  className="MuiSvgIcon-root-1 MuiSelect-icon-22"
                   focusable="false"
                   role="presentation"
                   viewBox="0 0 24 24"
@@ -324,7 +338,7 @@ Array [
             </div>
           </div>
           <div
-            className="MuiFormControl-root-3 Component-formControl-57"
+            className="MuiFormControl-root-12 Component-formControl-57"
             style={
               Object {
                 "marginBottom": "16px",
@@ -339,16 +353,16 @@ Array [
               下の句
             </label>
             <div
-              className="MuiInputBase-root-27 MuiInput-root-14 MuiInput-underline-18 MuiInputBase-formControl-28 MuiInput-formControl-15 Component-select-59"
+              className="MuiInputBase-root-36 MuiInput-root-23 MuiInput-underline-27 MuiInputBase-formControl-37 MuiInput-formControl-24 Component-select-59"
               onClick={[Function]}
             >
               <div
-                className="MuiSelect-root-7"
+                className="MuiSelect-root-16"
               >
                 <div
                   aria-haspopup="true"
                   aria-pressed="false"
-                  className="MuiSelect-select-8 MuiSelect-selectMenu-11 MuiInputBase-input-37 MuiInput-input-22"
+                  className="MuiSelect-select-17 MuiSelect-selectMenu-20 MuiInputBase-input-46 MuiInput-input-31"
                   id="select-shimoNoKuStyle"
                   onBlur={[Function]}
                   onClick={[Function]}
@@ -367,7 +381,7 @@ Array [
                 />
                 <svg
                   aria-hidden="true"
-                  className="MuiSvgIcon-root-44 MuiSelect-icon-13"
+                  className="MuiSvgIcon-root-1 MuiSelect-icon-22"
                   focusable="false"
                   role="presentation"
                   viewBox="0 0 24 24"
@@ -380,7 +394,7 @@ Array [
             </div>
           </div>
           <div
-            className="MuiFormControl-root-3 Component-formControl-57"
+            className="MuiFormControl-root-12 Component-formControl-57"
             style={
               Object {
                 "marginBottom": "16px",
@@ -395,16 +409,16 @@ Array [
               読み札のアニメーション表示
             </label>
             <div
-              className="MuiInputBase-root-27 MuiInput-root-14 MuiInput-underline-18 MuiInputBase-formControl-28 MuiInput-formControl-15 Component-select-59"
+              className="MuiInputBase-root-36 MuiInput-root-23 MuiInput-underline-27 MuiInputBase-formControl-37 MuiInput-formControl-24 Component-select-59"
               onClick={[Function]}
             >
               <div
-                className="MuiSelect-root-7"
+                className="MuiSelect-root-16"
               >
                 <div
                   aria-haspopup="true"
                   aria-pressed="false"
-                  className="MuiSelect-select-8 MuiSelect-selectMenu-11 MuiInputBase-input-37 MuiInput-input-22"
+                  className="MuiSelect-select-17 MuiSelect-selectMenu-20 MuiInputBase-input-46 MuiInput-input-31"
                   id="select-questionAnim"
                   onBlur={[Function]}
                   onClick={[Function]}
@@ -423,7 +437,7 @@ Array [
                 />
                 <svg
                   aria-hidden="true"
-                  className="MuiSvgIcon-root-44 MuiSelect-icon-13"
+                  className="MuiSvgIcon-root-1 MuiSelect-icon-22"
                   focusable="false"
                   role="presentation"
                   viewBox="0 0 24 24"
@@ -476,10 +490,10 @@ Array [
         </form>
       </div>
       <div
-        className="sc-kAzzGY jkIqmN"
+        className="sc-cSHVUG lopQnD"
       >
         <div
-          className="sc-chPdSV RNuBQ"
+          className="sc-kAzzGY dTlPEQ"
         >
           この欄は広告枠です
         </div>
@@ -487,10 +501,10 @@ Array [
     </section>
   </div>,
   <nav
-    className="sc-iwsKbI gcGFMo"
+    className="sc-dnqmqq hTWAOb"
   >
     <span
-      className="sc-gZMcBi gcfFZP"
+      className="sc-iwsKbI gEZdpE"
     >
       <div
         className="sc-ifAKCX gDXiY"
@@ -507,16 +521,35 @@ Array [
             }
           }
         >
-          <i
-            className="material-icons sc-dnqmqq fitvqF"
+          <span
+            className="sc-htoDjs iFGaQQ"
           >
-            create
-          </i>
+            <svg
+              aria-hidden="true"
+              className="MuiSvgIcon-root-1"
+              focusable="false"
+              role="presentation"
+              style={
+                Object {
+                  "fontSize": undefined,
+                }
+              }
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M3 17.25V21h3.75L17.81 9.94l-3.75-3.75L3 17.25zM20.71 7.04c.39-.39.39-1.02 0-1.41l-2.34-2.34a.9959.9959 0 0 0-1.41 0l-1.83 1.83 3.75 3.75 1.83-1.83z"
+              />
+              <path
+                d="M0 0h24v24H0z"
+                fill="none"
+              />
+            </svg>
+          </span>
         </a>
       </div>
     </span>
     <span
-      className="sc-gZMcBi gcfFZP"
+      className="sc-iwsKbI gEZdpE"
     >
       <div
         className="sc-ifAKCX gDXiY"
@@ -533,16 +566,35 @@ Array [
             }
           }
         >
-          <i
-            className="material-icons sc-dnqmqq gLjlnj"
+          <span
+            className="sc-htoDjs PcjPi"
           >
-            note
-          </i>
+            <svg
+              aria-hidden="true"
+              className="MuiSvgIcon-root-1"
+              focusable="false"
+              role="presentation"
+              style={
+                Object {
+                  "fontSize": undefined,
+                }
+              }
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M22 10l-6-6H4c-1.1 0-2 .9-2 2v12.01c0 1.1.9 1.99 2 1.99l16-.01c1.1 0 2-.89 2-1.99v-8zm-7-4.5l5.5 5.5H15V5.5z"
+              />
+              <path
+                d="M0 0h24v24H0V0z"
+                fill="none"
+              />
+            </svg>
+          </span>
         </a>
       </div>
     </span>
     <span
-      className="sc-gZMcBi gcfFZP"
+      className="sc-iwsKbI gEZdpE"
     >
       <div
         className="sc-ifAKCX gDXiY"
@@ -559,16 +611,35 @@ Array [
             }
           }
         >
-          <i
-            className="material-icons sc-dnqmqq mTKsM"
+          <span
+            className="sc-htoDjs glEsOd"
           >
-            library_books
-          </i>
+            <svg
+              aria-hidden="true"
+              className="MuiSvgIcon-root-1"
+              focusable="false"
+              role="presentation"
+              style={
+                Object {
+                  "fontSize": undefined,
+                }
+              }
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M0 0h24v24H0z"
+                fill="none"
+              />
+              <path
+                d="M4 6H2v14c0 1.1.9 2 2 2h14v-2H4V6zm16-4H8c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm-1 9H9V9h10v2zm-4 4H9v-2h6v2zm4-8H9V5h10v2z"
+              />
+            </svg>
+          </span>
         </a>
       </div>
     </span>
     <span
-      className="sc-gZMcBi gcfFZP"
+      className="sc-iwsKbI gEZdpE"
     >
       <div
         className="sc-ifAKCX gDXiY"
@@ -585,11 +656,32 @@ Array [
             }
           }
         >
-          <i
-            className="material-icons sc-dnqmqq eASDUe"
+          <span
+            className="sc-htoDjs eReHUa"
           >
-            settings
-          </i>
+            <svg
+              aria-hidden="true"
+              className="MuiSvgIcon-root-1"
+              focusable="false"
+              role="presentation"
+              style={
+                Object {
+                  "fontSize": undefined,
+                }
+              }
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M0 0h20v20H0V0z"
+                fill="none"
+                transform="scale(1.2, 1.2)"
+              />
+              <path
+                d="M15.95 10.78c.03-.25.05-.51.05-.78s-.02-.53-.06-.78l1.69-1.32c.15-.12.19-.34.1-.51l-1.6-2.77c-.1-.18-.31-.24-.49-.18l-1.99.8c-.42-.32-.86-.58-1.35-.78L12 2.34c-.03-.2-.2-.34-.4-.34H8.4c-.2 0-.36.14-.39.34l-.3 2.12c-.49.2-.94.47-1.35.78l-1.99-.8c-.18-.07-.39 0-.49.18l-1.6 2.77c-.1.18-.06.39.1.51l1.69 1.32c-.04.25-.07.52-.07.78s.02.53.06.78L2.37 12.1c-.15.12-.19.34-.1.51l1.6 2.77c.1.18.31.24.49.18l1.99-.8c.42.32.86.58 1.35.78l.3 2.12c.04.2.2.34.4.34h3.2c.2 0 .37-.14.39-.34l.3-2.12c.49-.2.94-.47 1.35-.78l1.99.8c.18.07.39 0 .49-.18l1.6-2.77c.1-.18.06-.39-.1-.51l-1.67-1.32zM10 13c-1.65 0-3-1.35-3-3s1.35-3 3-3 3 1.35 3 3-1.35 3-3 3z"
+                transform="scale(1.2, 1.2)"
+              />
+            </svg>
+          </span>
         </a>
       </div>
     </span>

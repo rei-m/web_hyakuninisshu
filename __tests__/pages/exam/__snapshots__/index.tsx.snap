@@ -10,14 +10,28 @@ Array [
       onMouseDown={[Function]}
       onMouseUp={[Function]}
     >
-      <i
-        className="material-icons sc-bxivhb jrBfKJ"
+      <span
+        className="sc-bxivhb iUaUQC"
         color="#fff"
         data-test="back"
         onClick={[Function]}
       >
-        arrow_back
-      </i>
+        <svg
+          aria-hidden="true"
+          className="MuiSvgIcon-root-1"
+          focusable="false"
+          role="presentation"
+          viewBox="0 0 24 24"
+        >
+          <path
+            d="M0 0h24v24H0z"
+            fill="none"
+          />
+          <path
+            d="M20 11H7.83l5.59-5.59L12 4l-8 8 8 8 1.41-1.41L7.83 13H20v-2z"
+          />
+        </svg>
+      </span>
     </div>
     <h1
       className="sc-htpNat eSnwWs"
@@ -26,34 +40,34 @@ Array [
     </h1>
   </header>,
   <div
-    className="sc-htoDjs dfwcpY"
+    className="sc-gzVnrw hzJxWQ"
   >
     <section
-      className="sc-jzJRlG dlldDM"
+      className="sc-fjdhpX gNpQzj"
     >
       <h1
-        className="sc-gZMcBi kfNscq"
+        className="sc-iwsKbI jkmlvZ"
       >
         腕試し
       </h1>
       <div
-        className="sc-gqjmRU jzcLeW"
+        className="sc-gZMcBi iXZiBx"
       >
         <div
-          className="sc-VigVT hJAUJT"
+          className="sc-gqjmRU cCYYjG"
         >
           この欄は広告枠です
         </div>
       </div>
       <div
-        className="sc-cSHVUG fxSHtW"
+        className="sc-jzJRlG kwxYRR"
       >
         全百首からランダムに出題されます。
         <br />
         練習の成果を確認しましょう。
       </div>
       <button
-        className="MuiButtonBase-root-32 MuiButton-root-6 MuiButton-outlined-14 Component-button-1 Component-primaryButton-3"
+        className="MuiButtonBase-root-41 MuiButton-root-15 MuiButton-outlined-23 Component-button-10 Component-primaryButton-12"
         disabled={false}
         onBlur={[Function]}
         onClick={[Function]}
@@ -77,25 +91,25 @@ Array [
         type="button"
       >
         <span
-          className="MuiButton-label-7"
+          className="MuiButton-label-16"
         >
           <span
             aria-hidden="true"
-            className="material-icons MuiIcon-root-35 MuiIcon-fontSizeSmall-42 Component-primaryIcon-5"
+            className="material-icons MuiIcon-root-44 MuiIcon-fontSizeSmall-51 Component-primaryIcon-14"
           >
             edit
           </span>
           腕試しをはじめる
         </span>
         <span
-          className="MuiTouchRipple-root-44"
+          className="MuiTouchRipple-root-53"
         />
       </button>
       <div
-        className="sc-jTzLTM loGiWm"
+        className="sc-VigVT ieiGAu"
       >
         <div
-          className="sc-fjdhpX cAdUR"
+          className="sc-jTzLTM ljXwZC"
         >
           この欄は広告枠です
         </div>
@@ -103,10 +117,10 @@ Array [
     </section>
   </div>,
   <nav
-    className="sc-bZQynM gfjWgY"
+    className="sc-EHOje extRj"
   >
     <span
-      className="sc-gzVnrw klvbjl"
+      className="sc-bZQynM jmnWoK"
     >
       <div
         className="sc-bdVaJa flBAph"
@@ -123,16 +137,35 @@ Array [
             }
           }
         >
-          <i
-            className="material-icons sc-EHOje evPMQv"
+          <span
+            className="sc-ifAKCX xOgRI"
           >
-            create
-          </i>
+            <svg
+              aria-hidden="true"
+              className="MuiSvgIcon-root-1"
+              focusable="false"
+              role="presentation"
+              style={
+                Object {
+                  "fontSize": undefined,
+                }
+              }
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M3 17.25V21h3.75L17.81 9.94l-3.75-3.75L3 17.25zM20.71 7.04c.39-.39.39-1.02 0-1.41l-2.34-2.34a.9959.9959 0 0 0-1.41 0l-1.83 1.83 3.75 3.75 1.83-1.83z"
+              />
+              <path
+                d="M0 0h24v24H0z"
+                fill="none"
+              />
+            </svg>
+          </span>
         </a>
       </div>
     </span>
     <span
-      className="sc-gzVnrw klvbjl"
+      className="sc-bZQynM jmnWoK"
     >
       <div
         className="sc-bdVaJa flBAph"
@@ -149,16 +182,35 @@ Array [
             }
           }
         >
-          <i
-            className="material-icons sc-EHOje dYXidT"
+          <span
+            className="sc-ifAKCX jHOBkV"
           >
-            note
-          </i>
+            <svg
+              aria-hidden="true"
+              className="MuiSvgIcon-root-1"
+              focusable="false"
+              role="presentation"
+              style={
+                Object {
+                  "fontSize": undefined,
+                }
+              }
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M22 10l-6-6H4c-1.1 0-2 .9-2 2v12.01c0 1.1.9 1.99 2 1.99l16-.01c1.1 0 2-.89 2-1.99v-8zm-7-4.5l5.5 5.5H15V5.5z"
+              />
+              <path
+                d="M0 0h24v24H0V0z"
+                fill="none"
+              />
+            </svg>
+          </span>
         </a>
       </div>
     </span>
     <span
-      className="sc-gzVnrw klvbjl"
+      className="sc-bZQynM jmnWoK"
     >
       <div
         className="sc-bdVaJa flBAph"
@@ -175,16 +227,35 @@ Array [
             }
           }
         >
-          <i
-            className="material-icons sc-EHOje kZpNpk"
+          <span
+            className="sc-ifAKCX fGzQGR"
           >
-            library_books
-          </i>
+            <svg
+              aria-hidden="true"
+              className="MuiSvgIcon-root-1"
+              focusable="false"
+              role="presentation"
+              style={
+                Object {
+                  "fontSize": undefined,
+                }
+              }
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M0 0h24v24H0z"
+                fill="none"
+              />
+              <path
+                d="M4 6H2v14c0 1.1.9 2 2 2h14v-2H4V6zm16-4H8c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm-1 9H9V9h10v2zm-4 4H9v-2h6v2zm4-8H9V5h10v2z"
+              />
+            </svg>
+          </span>
         </a>
       </div>
     </span>
     <span
-      className="sc-gzVnrw klvbjl"
+      className="sc-bZQynM jmnWoK"
     >
       <div
         className="sc-bdVaJa flBAph"
@@ -201,11 +272,32 @@ Array [
             }
           }
         >
-          <i
-            className="material-icons sc-EHOje jsOnhV"
+          <span
+            className="sc-ifAKCX btkJVi"
           >
-            settings
-          </i>
+            <svg
+              aria-hidden="true"
+              className="MuiSvgIcon-root-1"
+              focusable="false"
+              role="presentation"
+              style={
+                Object {
+                  "fontSize": undefined,
+                }
+              }
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M0 0h20v20H0V0z"
+                fill="none"
+                transform="scale(1.2, 1.2)"
+              />
+              <path
+                d="M15.95 10.78c.03-.25.05-.51.05-.78s-.02-.53-.06-.78l1.69-1.32c.15-.12.19-.34.1-.51l-1.6-2.77c-.1-.18-.31-.24-.49-.18l-1.99.8c-.42-.32-.86-.58-1.35-.78L12 2.34c-.03-.2-.2-.34-.4-.34H8.4c-.2 0-.36.14-.39.34l-.3 2.12c-.49.2-.94.47-1.35.78l-1.99-.8c-.18-.07-.39 0-.49.18l-1.6 2.77c-.1.18-.06.39.1.51l1.69 1.32c-.04.25-.07.52-.07.78s.02.53.06.78L2.37 12.1c-.15.12-.19.34-.1.51l1.6 2.77c.1.18.31.24.49.18l1.99-.8c.42.32.86.58 1.35.78l.3 2.12c.04.2.2.34.4.34h3.2c.2 0 .37-.14.39-.34l.3-2.12c.49-.2.94-.47 1.35-.78l1.99.8c.18.07.39 0 .49-.18l1.6-2.77c.1-.18.06-.39-.1-.51l-1.67-1.32zM10 13c-1.65 0-3-1.35-3-3s1.35-3 3-3 3 1.35 3 3-1.35 3-3 3z"
+                transform="scale(1.2, 1.2)"
+              />
+            </svg>
+          </span>
         </a>
       </div>
     </span>
