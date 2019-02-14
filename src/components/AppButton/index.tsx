@@ -1,13 +1,16 @@
 import * as React from 'react';
 import withStyles from '@material-ui/core/styles/withStyles';
-import Icon from '@material-ui/core/Icon';
+import ArrowBackIcon from '@material-ui/icons/ArrowBack';
+import RefreshIcon from '@material-ui/icons/Refresh';
+import EditIcon from '@material-ui/icons/Edit';
+import ArrowForwardIcon from '@material-ui/icons/ArrowForwardIos';
 import Button from '@material-ui/core/Button';
 import { appTheme } from '@src/styles/theme';
 
 export interface Props {
   label: string;
   type: 'primary' | 'normal';
-  icon?: string;
+  icon?: 'arrow_back' | 'refresh' | 'arrow_forward_ios' | 'edit';
   style?: React.CSSProperties;
   onClick?: () => void;
 }
@@ -59,6 +62,21 @@ type RenderProps = Props & {
   };
 };
 
+const Icon = ({ icon }: Pick<Props, 'icon'>) => {
+  switch (icon) {
+    case 'arrow_back':
+      return ArrowBackIcon;
+    case 'refresh':
+      return RefreshIcon;
+    case 'arrow_forward_ios':
+      return ArrowForwardIcon;
+    case 'edit':
+      return EditIcon;
+    default:
+      return undefined;
+  }
+};
+
 const AppButton = withStyles(stylesProvider)(({ label, type, icon, style, onClick, classes }: RenderProps) => {
   let buttonClassName = '';
   let iconClassName = '';
@@ -69,14 +87,10 @@ const AppButton = withStyles(stylesProvider)(({ label, type, icon, style, onClic
     buttonClassName = `${classes.button} ${classes.normalButton}`;
     iconClassName = classes.normalIcon;
   }
-
+  const IconComponent = Icon({ icon });
   return (
     <Button variant="outlined" onClick={onClick} className={buttonClassName} style={style}>
-      {icon && (
-        <Icon className={iconClassName} fontSize="small">
-          {icon}
-        </Icon>
-      )}
+      {IconComponent && <IconComponent className={iconClassName} fontSize="small" />}
       {label}
     </Button>
   );

@@ -475,16 +475,25 @@ Array [
             <span
               className="MuiButton-label-84"
             >
-              <span
+              <svg
                 aria-hidden="true"
-                className="material-icons MuiIcon-root-112 MuiIcon-fontSizeSmall-119 Component-primaryIcon-82"
+                className="MuiSvgIcon-root-1 MuiSvgIcon-fontSizeSmall-8 Component-primaryIcon-82"
+                focusable="false"
+                role="presentation"
+                viewBox="0 0 24 24"
               >
-                edit
-              </span>
+                <path
+                  d="M3 17.25V21h3.75L17.81 9.94l-3.75-3.75L3 17.25zM20.71 7.04c.39-.39.39-1.02 0-1.41l-2.34-2.34a.9959.9959 0 0 0-1.41 0l-1.83 1.83 3.75 3.75 1.83-1.83z"
+                />
+                <path
+                  d="M0 0h24v24H0z"
+                  fill="none"
+                />
+              </svg>
               練習をはじめる
             </span>
             <span
-              className="MuiTouchRipple-root-121"
+              className="MuiTouchRipple-root-112"
             />
           </button>
         </form>

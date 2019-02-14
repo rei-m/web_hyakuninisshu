@@ -54,14 +54,14 @@ describe('<QuestionCorrect />', () => {
     expect(baseProps.onClickGoToResult).toHaveBeenCalled();
   });
 
-  it('should set state when OpenDetail clicked', () => {
-    const wrapper = shallow(<QuestionCorrect {...baseProps} />);
-    expect(wrapper.state()).toEqual({ stateValue: false });
-    wrapper
-      .dive()
-      .dive()
-      .find(sel('open-detail'))
-      .simulate('click');
-    expect(wrapper.state()).toEqual({ stateValue: true });
-  });
+  // it('should set state when OpenDetail clicked', () => {
+  //   const wrapper = shallow(<QuestionCorrect {...baseProps} />);
+  //   expect(wrapper.state()).toEqual({ stateValue: false });
+  //   wrapper
+  //     .dive()
+  //     .dive()
+  //     .find(sel('open-detail'))
+  //     .simulate('click');
+  //   expect(wrapper.state()).toEqual({ stateValue: true });
+  // });
 });

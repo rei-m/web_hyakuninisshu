@@ -119,12 +119,21 @@ exports[`<QuestionCorrect /> should render component when finished 1`] = `
     <span
       className="MuiButton-label-7"
     >
-      <span
+      <svg
         aria-hidden="true"
-        className="material-icons MuiIcon-root-35 MuiIcon-fontSizeSmall-42 Component-normalIcon-4"
+        className="MuiSvgIcon-root-35 MuiSvgIcon-fontSizeSmall-42 Component-normalIcon-4"
+        focusable="false"
+        role="presentation"
+        viewBox="0 0 24 24"
       >
-        arrow_forward_ios
-      </span>
+        <path
+          d="M5.88 4.12L13.76 12l-7.88 7.88L8 22l10-10L8 2z"
+        />
+        <path
+          d="M0 0h24v24H0z"
+          fill="none"
+        />
+      </svg>
       結果を見る
     </span>
     <span
@@ -253,12 +262,21 @@ exports[`<QuestionCorrect /> should render component when not finished 1`] = `
     <span
       className="MuiButton-label-7"
     >
-      <span
+      <svg
         aria-hidden="true"
-        className="material-icons MuiIcon-root-35 MuiIcon-fontSizeSmall-42 Component-normalIcon-4"
+        className="MuiSvgIcon-root-35 MuiSvgIcon-fontSizeSmall-42 Component-normalIcon-4"
+        focusable="false"
+        role="presentation"
+        viewBox="0 0 24 24"
       >
-        arrow_forward_ios
-      </span>
+        <path
+          d="M5.88 4.12L13.76 12l-7.88 7.88L8 22l10-10L8 2z"
+        />
+        <path
+          d="M0 0h24v24H0z"
+          fill="none"
+        />
+      </svg>
       次へ進む
     </span>
     <span

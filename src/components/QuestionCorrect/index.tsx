@@ -1,6 +1,5 @@
 import * as React from 'react';
 import { graphql, StaticQuery } from 'gatsby';
-import { withState } from 'recompose';
 import styled from '@src/styles/styled-components';
 import { appTheme } from '@src/styles/theme';
 import KarutaCardDialog from '@src/components/KarutaCardDialog';
@@ -13,6 +12,10 @@ export interface Props {
   isAllAnswered: boolean;
   onClickGoToNext: () => void;
   onClickGoToResult: () => void;
+}
+
+export interface State {
+  opened: boolean;
 }
 
 export interface QueryData {
@@ -100,21 +103,15 @@ const Creator = styled.div`
   line-height: 1.6rem;
   align-self: flex-end;
 `;
+const QuestionCorrect: React.FC<Props> = ({ karuta, isAllAnswered, onClickGoToNext, onClickGoToResult }) => {
+  const [state, setState] = React.useState<State>({ opened: false });
 
-const enhance = withState<{}, boolean, 'opened', 'setOpened'>('opened', 'setOpened', false);
-
-const QuestionCorrect = enhance<
-  Props & {
-    opened: boolean;
-    setOpened: (state: boolean) => boolean;
-  }
->(({ karuta, isAllAnswered, onClickGoToNext, onClickGoToResult, opened, setOpened }) => {
   const onClickOpenDetail = () => {
-    setOpened(true);
+    setState({ opened: true });
   };
 
   const onCloseDialog = () => {
-    setOpened(false);
+    setState({ opened: false });
   };
 
   return (
@@ -173,12 +170,12 @@ const QuestionCorrect = enhance<
               style={{ marginTop: appTheme.spacing4x }}
             />
           )}
-          <KarutaCardDialog open={opened} onClose={onCloseDialog} karuta={karuta} />
+          <KarutaCardDialog open={state.opened} onClose={onCloseDialog} karuta={karuta} />
         </Container>
       )}
     />
   );
-});
+};
 
 export default QuestionCorrect;
 
