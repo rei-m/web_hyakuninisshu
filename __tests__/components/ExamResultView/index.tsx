@@ -62,9 +62,7 @@ describe('<ExamResultView />', () => {
   });
 
   it('should fire onClickRestart when restart clicked', () => {
-    const wrapper = shallow(<ExamResultView {...baseProps} />)
-      .dive()
-      .dive();
+    const wrapper = shallow(<ExamResultView {...baseProps} />);
     wrapper.find(sel('restart-training')).simulate('click');
     expect(baseProps.onClickRestart).toHaveBeenCalled();
   });
