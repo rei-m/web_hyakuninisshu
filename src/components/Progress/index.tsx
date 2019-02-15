@@ -1,5 +1,4 @@
 import * as React from 'react';
-import { lifecycle } from 'recompose';
 import CircularProgress from '@material-ui/core/CircularProgress';
 import styled from '@src/styles/styled-components';
 import { appTheme } from '@src/styles/theme';
@@ -24,15 +23,15 @@ const Message = styled.div`
   font-size: 2rem;
 `;
 
-const Progress: React.FC<Props> = () => (
-  <Container>
-    <CircularProgress style={{ color: appTheme.colorPrimaryDark, width: 64, height: 64 }} />
-    <Message>　　　百人一首 準備中。。。</Message>
-  </Container>
-);
+const Progress: React.FC<Props> = ({ onStart }) => {
+  React.useEffect(onStart);
 
-export default lifecycle<Props, {}>({
-  componentDidMount() {
-    this.props.onStart();
-  },
-})(Progress);
+  return (
+    <Container>
+      <CircularProgress style={{ color: appTheme.colorPrimaryDark, width: 64, height: 64 }} />
+      <Message>　　　百人一首 準備中。。。</Message>
+    </Container>
+  );
+};
+
+export default Progress;
