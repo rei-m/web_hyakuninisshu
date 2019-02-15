@@ -98,196 +98,38 @@ Array [
     className="sc-gipzik ilyEGn"
   >
     <div
-      className="sc-fjdhpX fNSJFm"
+      className="sc-bdVaJa fmvnED"
     >
       <div
-        className="sc-jzJRlG gGPUdI"
-      >
-        <div
-          className="sc-kAzzGY hmbMrr"
-        >
-          1
-           / 
-          100
-        </div>
-        <div
-          className="sc-bxivhb ivwqSq"
-          style={
-            Object {
-              "margin": "auto",
-            }
+        className="MuiCircularProgress-root-10 MuiCircularProgress-colorPrimary-13 MuiCircularProgress-indeterminate-12"
+        role="progressbar"
+        style={
+          Object {
+            "color": "#689F38",
+            "height": 64,
+            "width": 64,
           }
+        }
+      >
+        <svg
+          className="MuiCircularProgress-svg-15"
+          viewBox="22 22 44 44"
         >
-          <div
-            className="sc-ifAKCX bKpGVQ"
-          >
-            <div
-              className="sc-EHOje hgQItU"
-            >
-              <span
-                className="sc-htpNat hRSTEw"
-                onAnimationEnd={[Function]}
-              >
-                初
-              </span>
-              <span>
-                　
-              </span>
-            </div>
-            <div
-              className="sc-EHOje sc-bZQynM eZymYX"
-            >
-              <span>
-                　
-              </span>
-              <span>
-                　
-              </span>
-            </div>
-            <div
-              className="sc-EHOje sc-gzVnrw gddTfW"
-            >
-              <span>
-                　
-              </span>
-              <span>
-                　
-              </span>
-            </div>
-          </div>
-        </div>
+          <circle
+            className="MuiCircularProgress-circle-16 MuiCircularProgress-circleIndeterminate-18"
+            cx={44}
+            cy={44}
+            fill="none"
+            r={20.2}
+            strokeWidth={3.6}
+            style={Object {}}
+          />
+        </svg>
       </div>
       <div
-        className="sc-cSHVUG iDZpAS"
+        className="sc-bwzfXH jeCWiS"
       >
-        <div
-          className="sc-htoDjs kcwXek"
-          onMouseDown={[Function]}
-          onMouseUp={[Function]}
-        >
-          <div
-            className="sc-dnqmqq BFlSi"
-            color="#fff"
-            onClick={[Function]}
-            style={
-              Object {
-                "margin": "8px",
-                "opacity": 1,
-              }
-            }
-          >
-            <div
-              className="sc-iwsKbI csWNzc"
-            >
-              <div
-                className="sc-gZMcBi efbCZY"
-              >
-                よんく
-              </div>
-              <div
-                className="sc-gZMcBi sc-gqjmRU OeYjl"
-              >
-                ごく
-              </div>
-            </div>
-          </div>
-        </div>
-        <div
-          className="sc-htoDjs kcwXek"
-          onMouseDown={[Function]}
-          onMouseUp={[Function]}
-        >
-          <div
-            className="sc-dnqmqq BFlSi"
-            color="#fff"
-            onClick={[Function]}
-            style={
-              Object {
-                "margin": "8px",
-                "opacity": 1,
-              }
-            }
-          >
-            <div
-              className="sc-iwsKbI csWNzc"
-            >
-              <div
-                className="sc-gZMcBi efbCZY"
-              >
-                よんく
-              </div>
-              <div
-                className="sc-gZMcBi sc-gqjmRU OeYjl"
-              >
-                ごく
-              </div>
-            </div>
-          </div>
-        </div>
-        <div
-          className="sc-htoDjs kcwXek"
-          onMouseDown={[Function]}
-          onMouseUp={[Function]}
-        >
-          <div
-            className="sc-dnqmqq BFlSi"
-            color="#fff"
-            onClick={[Function]}
-            style={
-              Object {
-                "margin": "8px",
-                "opacity": 1,
-              }
-            }
-          >
-            <div
-              className="sc-iwsKbI csWNzc"
-            >
-              <div
-                className="sc-gZMcBi efbCZY"
-              >
-                よんく
-              </div>
-              <div
-                className="sc-gZMcBi sc-gqjmRU OeYjl"
-              >
-                ごく
-              </div>
-            </div>
-          </div>
-        </div>
-        <div
-          className="sc-htoDjs kcwXek"
-          onMouseDown={[Function]}
-          onMouseUp={[Function]}
-        >
-          <div
-            className="sc-dnqmqq BFlSi"
-            color="#fff"
-            onClick={[Function]}
-            style={
-              Object {
-                "margin": "8px",
-                "opacity": 1,
-              }
-            }
-          >
-            <div
-              className="sc-iwsKbI csWNzc"
-            >
-              <div
-                className="sc-gZMcBi efbCZY"
-              >
-                よんく
-              </div>
-              <div
-                className="sc-gZMcBi sc-gqjmRU OeYjl"
-              >
-                ごく
-              </div>
-            </div>
-          </div>
-        </div>
+        　　　百人一首 準備中。。。
       </div>
     </div>
   </div>,

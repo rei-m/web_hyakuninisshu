@@ -98,13 +98,39 @@ Array [
     className="sc-Rmtcm cYKzNr"
   >
     <div
-      className="sc-cMljjf lnjoVr"
+      className="sc-bdVaJa fmvnED"
     >
-      <p
-        className="sc-jAaTju inRTIw"
+      <div
+        className="MuiCircularProgress-root-10 MuiCircularProgress-colorPrimary-13 MuiCircularProgress-indeterminate-12"
+        role="progressbar"
+        style={
+          Object {
+            "color": "#689F38",
+            "height": 64,
+            "width": 64,
+          }
+        }
       >
-        指定した条件の歌はありませんでした
-      </p>
+        <svg
+          className="MuiCircularProgress-svg-15"
+          viewBox="22 22 44 44"
+        >
+          <circle
+            className="MuiCircularProgress-circle-16 MuiCircularProgress-circleIndeterminate-18"
+            cx={44}
+            cy={44}
+            fill="none"
+            r={20.2}
+            strokeWidth={3.6}
+            style={Object {}}
+          />
+        </svg>
+      </div>
+      <div
+        className="sc-bwzfXH jeCWiS"
+      >
+        　　　百人一首 準備中。。。
+      </div>
     </div>
   </div>,
 ]

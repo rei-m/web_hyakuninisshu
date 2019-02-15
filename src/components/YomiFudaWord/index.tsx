@@ -1,5 +1,4 @@
 import * as React from 'react';
-import shouldUpdate from 'recompose/shouldUpdate';
 import styled, { keyframes } from '@src/styles/styled-components';
 
 export const SPACE = '　';
@@ -35,4 +34,5 @@ const YomiFudaWord: React.FC<Props> = ({ word, dulation, onAnimationEnd }) =>
     </Word>
   );
 
-export default shouldUpdate((props: Props, nextProps: Props) => props.word !== nextProps.word)(YomiFudaWord);
+export default ({ word, dulation, onAnimationEnd }: Props) =>
+  React.useMemo(() => <YomiFudaWord word={word} dulation={dulation} onAnimationEnd={onAnimationEnd} />, [word]);
