@@ -69,7 +69,6 @@ Array [
               onMouseUp={[Function]}
             >
               <a
-                color="#fff"
                 href="/training"
                 style={
                   Object {
@@ -128,7 +127,6 @@ Array [
               onMouseUp={[Function]}
             >
               <a
-                color="#fff"
                 href="/exam"
                 style={
                   Object {
@@ -187,7 +185,6 @@ Array [
               onMouseUp={[Function]}
             >
               <a
-                color="#fff"
                 href="/karutas"
                 style={
                   Object {
@@ -375,7 +372,6 @@ Array [
         onMouseUp={[Function]}
       >
         <a
-          color="#fff"
           href="/training"
           style={
             Object {
@@ -420,7 +416,6 @@ Array [
         onMouseUp={[Function]}
       >
         <a
-          color="#fff"
           href="/exam"
           style={
             Object {
@@ -465,7 +460,6 @@ Array [
         onMouseUp={[Function]}
       >
         <a
-          color="#fff"
           href="/karutas"
           style={
             Object {
@@ -510,7 +504,6 @@ Array [
         onMouseUp={[Function]}
       >
         <a
-          color="#fff"
           href="/about"
           style={
             Object {

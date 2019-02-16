@@ -53,7 +53,6 @@ exports[`<QuestionView /> should render component when answered 1`] = `
     >
       <div
         className="sc-gzVnrw bvFKOA"
-        color="#fff"
         onClick={[Function]}
         style={
           Object {
@@ -85,7 +84,6 @@ exports[`<QuestionView /> should render component when answered 1`] = `
     >
       <div
         className="sc-gzVnrw bvFKOA"
-        color="#fff"
         onClick={[Function]}
         style={
           Object {
@@ -117,7 +115,6 @@ exports[`<QuestionView /> should render component when answered 1`] = `
     >
       <div
         className="sc-gzVnrw bvFKOA"
-        color="#fff"
         onClick={[Function]}
         style={
           Object {
@@ -149,7 +146,6 @@ exports[`<QuestionView /> should render component when answered 1`] = `
     >
       <div
         className="sc-gzVnrw bvFKOA"
-        color="#fff"
         onClick={[Function]}
         style={
           Object {
@@ -303,7 +299,6 @@ exports[`<QuestionView /> should render component when not answered 1`] = `
     >
       <div
         className="sc-gzVnrw bvFKOA"
-        color="#fff"
         onClick={[Function]}
         style={
           Object {
@@ -335,7 +330,6 @@ exports[`<QuestionView /> should render component when not answered 1`] = `
     >
       <div
         className="sc-gzVnrw bvFKOA"
-        color="#fff"
         onClick={[Function]}
         style={
           Object {
@@ -367,7 +361,6 @@ exports[`<QuestionView /> should render component when not answered 1`] = `
     >
       <div
         className="sc-gzVnrw bvFKOA"
-        color="#fff"
         onClick={[Function]}
         style={
           Object {
@@ -399,7 +392,6 @@ exports[`<QuestionView /> should render component when not answered 1`] = `
     >
       <div
         className="sc-gzVnrw bvFKOA"
-        color="#fff"
         onClick={[Function]}
         style={
           Object {
