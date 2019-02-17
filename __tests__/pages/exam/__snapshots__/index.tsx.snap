@@ -12,7 +12,6 @@ Array [
     >
       <span
         className="sc-bxivhb iUaUQC"
-        color="#fff"
         data-test="back"
         onClick={[Function]}
       >
@@ -137,7 +136,6 @@ Array [
         onMouseUp={[Function]}
       >
         <a
-          color="#fff"
           href="/training"
           style={
             Object {
@@ -182,7 +180,6 @@ Array [
         onMouseUp={[Function]}
       >
         <a
-          color="#fff"
           href="/exam"
           style={
             Object {
@@ -227,7 +224,6 @@ Array [
         onMouseUp={[Function]}
       >
         <a
-          color="#fff"
           href="/karutas"
           style={
             Object {
@@ -272,7 +268,6 @@ Array [
         onMouseUp={[Function]}
       >
         <a
-          color="#fff"
           href="/about"
           style={
             Object {

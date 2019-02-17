@@ -12,7 +12,6 @@ Array [
     >
       <span
         className="sc-jDwBTQ gTnOFI"
-        color="#fff"
         data-test="back"
         onClick={[Function]}
       >
@@ -67,7 +66,6 @@ Array [
     >
       <span
         className="sc-jDwBTQ gTnOFI"
-        color="#fff"
         data-test="back"
         onClick={[Function]}
       >

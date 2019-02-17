@@ -8,7 +8,6 @@ exports[`<ToriFudaView /> should render component 1`] = `
 >
   <div
     className="sc-bwzfXH kTKPRr"
-    color="#fff"
     onClick={[Function]}
   >
     <div
