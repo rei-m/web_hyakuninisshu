@@ -1,12 +1,12 @@
-import * as actions from './actions';
 import { Dispatch } from 'redux';
-import * as types from './types';
 import { Color, Kimariji } from '@src/types';
+import * as actions from './actions';
+import * as types from './types';
 
 export const openKarutasFilter = () => (dispatch: Dispatch<types.OpenKarutasFilterAction>) =>
   dispatch(actions.openKarutasFilter());
 
-export const closeKarutasFilter = (dispatch: Dispatch<types.CloseKarutasFilterAction>) =>
+export const closeKarutasFilter = () => (dispatch: Dispatch<types.CloseKarutasFilterAction>) =>
   dispatch(actions.closeKarutasFilter());
 
 export const toggleKarutasColor = (color: Color, checked: boolean) => (

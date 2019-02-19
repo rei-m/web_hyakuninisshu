@@ -1,17 +1,14 @@
 import { Action } from 'redux';
 import { Color, Kimariji } from '@src/types';
+import * as constants from './constants';
 
-export const OPEN_KARUTAS_FILTER_NAME = 'OPEN_KARUTAS_FILTER';
-export type OPEN_KARUTAS_FILTER_TYPE = typeof OPEN_KARUTAS_FILTER_NAME;
+export type OPEN_KARUTAS_FILTER_TYPE = typeof constants.OPEN_KARUTAS_FILTER_NAME;
 
-export const CLOSE_KARUTAS_FILTER_NAME = 'CLOSE_KARUTAS_FILTER';
-export type CLOSE_KARUTAS_FILTER_TYPE = typeof CLOSE_KARUTAS_FILTER_NAME;
+export type CLOSE_KARUTAS_FILTER_TYPE = typeof constants.CLOSE_KARUTAS_FILTER_NAME;
 
-export const TOGGLE_KARUTAS_COLOR_NAME = 'TOGGLE_KARUTAS_COLOR';
-export type TOGGLE_KARUTAS_COLOR_TYPE = typeof TOGGLE_KARUTAS_COLOR_NAME;
+export type TOGGLE_KARUTAS_COLOR_TYPE = typeof constants.TOGGLE_KARUTAS_COLOR_NAME;
 
-export const TOGGLE_KARUTAS_KIMARIJI_NAME = 'TOGGLE_KARUTAS_KIMARIJI_NAME';
-export type TOGGLE_KARUTAS_KIMARIJI_TYPE = typeof TOGGLE_KARUTAS_KIMARIJI_NAME;
+export type TOGGLE_KARUTAS_KIMARIJI_TYPE = typeof constants.TOGGLE_KARUTAS_KIMARIJI_NAME;
 
 export interface OpenKarutasFilterAction extends Action {
   readonly type: OPEN_KARUTAS_FILTER_TYPE;
@@ -46,3 +43,12 @@ export type Actions =
   | CloseKarutasFilterAction
   | ToggleKarutasColorAction
   | ToggleKarutasKimarijiAction;
+
+export interface KarutasFilter {
+  readonly colors: Array<{ color: Color; checked: boolean }>;
+  readonly kimarijis: Array<{ kimariji: Kimariji; checked: boolean }>;
+}
+
+export interface UiState {
+  readonly karutasFilter: KarutasFilter & { readonly open: boolean };
+}

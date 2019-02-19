@@ -1,12 +1,13 @@
-import * as types from './types';
 import { Color, Kimariji } from '@src/types';
+import * as types from './types';
+import * as constants from './constants';
 
 export const openKarutasFilter = (): types.OpenKarutasFilterAction => ({
-  type: types.OPEN_KARUTAS_FILTER_NAME,
+  type: constants.OPEN_KARUTAS_FILTER_NAME,
 });
 
 export const closeKarutasFilter = (): types.CloseKarutasFilterAction => ({
-  type: types.CLOSE_KARUTAS_FILTER_NAME,
+  type: constants.CLOSE_KARUTAS_FILTER_NAME,
 });
 
 export const toggleKarutasColor = (color: Color, checked: boolean): types.ToggleKarutasColorAction => ({
@@ -14,7 +15,7 @@ export const toggleKarutasColor = (color: Color, checked: boolean): types.Toggle
     color,
     checked,
   },
-  type: types.TOGGLE_KARUTAS_COLOR_NAME,
+  type: constants.TOGGLE_KARUTAS_COLOR_NAME,
 });
 
 export const toggleKarutasKimariji = (kimariji: Kimariji, checked: boolean): types.ToggleKarutasKimarijiAction => ({
@@ -22,5 +23,5 @@ export const toggleKarutasKimariji = (kimariji: Kimariji, checked: boolean): typ
     kimariji,
     checked,
   },
-  type: types.TOGGLE_KARUTAS_KIMARIJI_NAME,
+  type: constants.TOGGLE_KARUTAS_KIMARIJI_NAME,
 });
