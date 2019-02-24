@@ -11,11 +11,11 @@ import ListItemText from '@material-ui/core/ListItemText';
 import withStyles from '@material-ui/core/styles/withStyles';
 import styled from '@src/styles/styled-components';
 import { appTheme } from '@src/styles/theme';
+import { Color, Kimariji } from '@src/types';
+import { uiOperations, uiTypes } from '@src/state/ui';
 import Overlay from '@src/components/Overlay';
-import { closeKarutasFilter, toggleKarutasColor, toggleKarutasKimariji, UiActions } from '@src/actions/ui';
 import { toColorString, toKimarijiString } from '@src/utils';
 import { GlobalState } from '@src/state';
-import { Color, Kimariji } from '@src/types';
 
 export interface ConnectedProps {
   open: boolean;
@@ -202,15 +202,15 @@ export const mapStateToProps = ({ ui }: GlobalState): ConnectedProps => {
   return { ...ui.karutasFilter };
 };
 
-export const mapDispatchToProps = (dispatch: ThunkDispatch<GlobalState, {}, UiActions>): DispatchProps => ({
+export const mapDispatchToProps = (dispatch: ThunkDispatch<GlobalState, {}, uiTypes.Actions>): DispatchProps => ({
   onChangeColor: (color: Color, checked: boolean) => {
-    dispatch(toggleKarutasColor(color, checked));
+    dispatch(uiOperations.toggleKarutasColor(color, checked));
   },
   onChangeKimariji: (kimariji: Kimariji, checked: boolean) => {
-    dispatch(toggleKarutasKimariji(kimariji, checked));
+    dispatch(uiOperations.toggleKarutasKimariji(kimariji, checked));
   },
   onClickClose: () => {
-    dispatch(closeKarutasFilter());
+    dispatch(uiOperations.closeKarutasFilter());
   },
 });
 

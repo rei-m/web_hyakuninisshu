@@ -1,10 +1,11 @@
 import * as React from 'react';
 import { connect } from 'react-redux';
 import styled from '@src/styles/styled-components';
-import Row from '@src/containers/KarutaList/Row';
-import ErrorMessage from '@src/components/ErrorMessage';
-import { Color, Karuta, Kimariji } from '@src/types';
 import { GlobalState } from '@src/state';
+import { uiSelectors } from '@src/state/ui';
+import Row from '@src/containers/KarutaList/Row';
+import { Karuta } from '@src/types';
+import ErrorMessage from '@src/components/ErrorMessage';
 
 export interface Props {
   karutas: Karuta[];
@@ -35,13 +36,9 @@ export const KarutaList: React.FC<Props> = ({ karutas, onClickRow }) => (
   </Container>
 );
 
-export const mapStateToProps = ({ ui }: GlobalState, { karutas, onClickRow }: Props): Props => {
-  const { karutasFilter } = ui;
-  const kimarijiSet = new Set<Kimariji>(karutasFilter.kimarijis.filter(k => k.checked).map(k => k.kimariji));
-  const colorSet = new Set<Color>(karutasFilter.colors.filter(k => k.checked).map(k => k.color));
-  const filterdKarutas = karutas.filter(karuta => kimarijiSet.has(karuta.kimariji) && colorSet.has(karuta.color));
-
-  return { karutas: filterdKarutas, onClickRow };
-};
+export const mapStateToProps = ({ ui }: GlobalState, { karutas, onClickRow }: Props): Props => ({
+  karutas: uiSelectors.filterKarutas(karutas, ui.karutasFilter),
+  onClickRow,
+});
 
 export default connect(mapStateToProps)(KarutaList);

@@ -1,20 +1,20 @@
+import { GlobalState } from '@src/state';
 import * as React from 'react';
-import { MockStore } from 'redux-mock-store';
 import { shallow, ShallowWrapper } from 'enzyme';
 import { navigate } from 'gatsby';
 import { mapDispatchToProps, mapStateToProps, OwnProps, Props, ReviewQuestions } from '@src/containers/ReviewQuestions';
 import ReviewInitializer from '@src/containers/ReviewInitializer';
 import QuestionView from '@src/components/QuestionView';
 import QuestionCorrect from '@src/components/QuestionCorrect';
-import { GlobalState } from '@src/state';
-import { initialState as questionsState } from '@src/state/questions';
-import { initialState as uiState } from '@src/state/ui';
+import { MockStore } from 'redux-mock-store';
+import { initialState as questionsState } from '@src/state/questions/reducers';
+import { initialState as uiState } from '@src/state/ui/reducers';
 import { ROUTE_PATHS } from '@src/constants';
 import { QuestionState } from '@src/enums';
 import { Answer, Question, ToriFuda, YomiFuda } from '@src/types';
-import { ANSWER_QUESTION_NAME, CONFIRM_CORRECT_NAME, OPEN_NEXT_QUESTION_NAME } from '@src/actions/questions';
 import { create } from '@test/factories';
 import { mockAppStoreCreateor } from '@test/helpers';
+import { ANSWER_QUESTION_NAME, CONFIRM_CORRECT_NAME, OPEN_NEXT_QUESTION_NAME } from '@src/state/questions/constants';
 
 const createQuestion = (id: number) => {
   const yomiFuda = create<YomiFuda>('yomiFuda', {

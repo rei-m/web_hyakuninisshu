@@ -52,73 +52,66 @@ const ThirdPhrase = styled(Phrase)`
 // 各フレーズの文字数を最大に合わせる
 // 縦書きのエレメントを絶対位置で指定する
 
-class YomiFudaView extends React.Component<Props, State> {
-  constructor(props: Props) {
-    super(props);
-    this.state = { currentPosition: 1 };
-    this.onAnimationEnd = this.onAnimationEnd.bind(this);
+const adjustDisplayText = (text: string, startIndex: number, currentPosition: number) => {
+  if (currentPosition < startIndex) {
+    return Array.from(Array(text.length).keys())
+      .map(_ => SPACE)
+      .join('');
   }
+  const line = currentPosition > startIndex ? text.substr(0, currentPosition - startIndex) : '';
+  const mod = text.length - (currentPosition - startIndex);
+  const linePad =
+    mod > 0
+      ? Array.from(Array(mod).keys())
+          .map(_ => SPACE)
+          .join('')
+      : '';
+  return line + linePad;
+};
 
-  public render() {
-    const { yomiFuda, style, answered, dulation } = this.props;
-    const { firstText, secondText, thirdText } = yomiFuda;
-    const firstLine = this.adjustDisplayText(firstText, 0);
-    const secondLine = this.adjustDisplayText(secondText, firstText.length);
-    const thirdLine = this.adjustDisplayText(thirdText, firstText.length + secondText.length);
-    return (
-      <Container style={style}>
-        <Inner>
-          {dulation === 0 || answered ? (
-            <>
-              <Phrase>{yomiFuda.firstText}</Phrase>
-              <SecondPhrase>{yomiFuda.secondText}</SecondPhrase>
-              <ThirdPhrase>{yomiFuda.thirdText}</ThirdPhrase>
-            </>
-          ) : (
-            <>
-              <Phrase>
-                {Array.from(firstLine).map((s, i) => (
-                  <YomiFudaWord word={s} dulation={dulation} onAnimationEnd={this.onAnimationEnd} key={i} />
-                ))}
-              </Phrase>
-              <SecondPhrase>
-                {Array.from(secondLine).map((s, i) => (
-                  <YomiFudaWord word={s} dulation={dulation} onAnimationEnd={this.onAnimationEnd} key={i} />
-                ))}
-              </SecondPhrase>
-              <ThirdPhrase>
-                {Array.from(thirdLine).map((s, i) => (
-                  <YomiFudaWord word={s} dulation={dulation} onAnimationEnd={this.onAnimationEnd} key={i} />
-                ))}
-              </ThirdPhrase>
-            </>
-          )}
-        </Inner>
-      </Container>
-    );
-  }
+const YomiFudaView: React.FC<Props> = ({ yomiFuda, style, answered, dulation }) => {
+  const [state, setState] = React.useState<State>({ currentPosition: 1 });
 
-  private adjustDisplayText(text: string, startIndex: number) {
-    const { currentPosition } = this.state;
-    if (currentPosition < startIndex) {
-      return Array.from(Array(text.length).keys())
-        .map(_ => SPACE)
-        .join('');
-    }
-    const line = currentPosition > startIndex ? text.substr(0, currentPosition - startIndex) : '';
-    const mod = text.length - (currentPosition - startIndex);
-    const linePad =
-      mod > 0
-        ? Array.from(Array(mod).keys())
-            .map(_ => SPACE)
-            .join('')
-        : '';
-    return line + linePad;
-  }
+  const { firstText, secondText, thirdText } = yomiFuda;
+  const firstLine = adjustDisplayText(firstText, 0, state.currentPosition);
+  const secondLine = adjustDisplayText(secondText, firstText.length, state.currentPosition);
+  const thirdLine = adjustDisplayText(thirdText, firstText.length + secondText.length, state.currentPosition);
 
-  private onAnimationEnd() {
-    this.setState({ currentPosition: this.state.currentPosition + 1 });
-  }
-}
+  const onAnimationEnd = () => {
+    setState({ currentPosition: state.currentPosition + 1 });
+  };
+
+  return (
+    <Container style={style}>
+      <Inner>
+        {dulation === 0 || answered ? (
+          <>
+            <Phrase>{yomiFuda.firstText}</Phrase>
+            <SecondPhrase>{yomiFuda.secondText}</SecondPhrase>
+            <ThirdPhrase>{yomiFuda.thirdText}</ThirdPhrase>
+          </>
+        ) : (
+          <>
+            <Phrase>
+              {Array.from(firstLine).map((s, i) => (
+                <YomiFudaWord word={s} dulation={dulation} onAnimationEnd={onAnimationEnd} key={i} />
+              ))}
+            </Phrase>
+            <SecondPhrase>
+              {Array.from(secondLine).map((s, i) => (
+                <YomiFudaWord word={s} dulation={dulation} onAnimationEnd={onAnimationEnd} key={i} />
+              ))}
+            </SecondPhrase>
+            <ThirdPhrase>
+              {Array.from(thirdLine).map((s, i) => (
+                <YomiFudaWord word={s} dulation={dulation} onAnimationEnd={onAnimationEnd} key={i} />
+              ))}
+            </ThirdPhrase>
+          </>
+        )}
+      </Inner>
+    </Container>
+  );
+};
 
 export default YomiFudaView;

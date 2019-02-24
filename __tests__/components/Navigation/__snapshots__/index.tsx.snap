@@ -13,7 +13,6 @@ exports[`<Navigation /> should render component 1`] = `
       onMouseUp={[Function]}
     >
       <a
-        color="#fff"
         href="/training"
         style={
           Object {
@@ -58,7 +57,6 @@ exports[`<Navigation /> should render component 1`] = `
       onMouseUp={[Function]}
     >
       <a
-        color="#fff"
         href="/exam"
         style={
           Object {
@@ -103,7 +101,6 @@ exports[`<Navigation /> should render component 1`] = `
       onMouseUp={[Function]}
     >
       <a
-        color="#fff"
         href="/karutas"
         style={
           Object {
@@ -148,7 +145,6 @@ exports[`<Navigation /> should render component 1`] = `
       onMouseUp={[Function]}
     >
       <a
-        color="#fff"
         href="/about"
         style={
           Object {
@@ -202,7 +198,6 @@ exports[`<Navigation /> should render component when current is exam 1`] = `
       onMouseUp={[Function]}
     >
       <a
-        color="#fff"
         href="/training"
         style={
           Object {
@@ -247,7 +242,6 @@ exports[`<Navigation /> should render component when current is exam 1`] = `
       onMouseUp={[Function]}
     >
       <a
-        color="#fff"
         href="/exam"
         style={
           Object {
@@ -292,7 +286,6 @@ exports[`<Navigation /> should render component when current is exam 1`] = `
       onMouseUp={[Function]}
     >
       <a
-        color="#fff"
         href="/karutas"
         style={
           Object {
@@ -337,7 +330,6 @@ exports[`<Navigation /> should render component when current is exam 1`] = `
       onMouseUp={[Function]}
     >
       <a
-        color="#fff"
         href="/about"
         style={
           Object {
@@ -391,7 +383,6 @@ exports[`<Navigation /> should render component when current is material 1`] = `
       onMouseUp={[Function]}
     >
       <a
-        color="#fff"
         href="/training"
         style={
           Object {
@@ -436,7 +427,6 @@ exports[`<Navigation /> should render component when current is material 1`] = `
       onMouseUp={[Function]}
     >
       <a
-        color="#fff"
         href="/exam"
         style={
           Object {
@@ -481,7 +471,6 @@ exports[`<Navigation /> should render component when current is material 1`] = `
       onMouseUp={[Function]}
     >
       <a
-        color="#fff"
         href="/karutas"
         style={
           Object {
@@ -526,7 +515,6 @@ exports[`<Navigation /> should render component when current is material 1`] = `
       onMouseUp={[Function]}
     >
       <a
-        color="#fff"
         href="/about"
         style={
           Object {
@@ -580,7 +568,6 @@ exports[`<Navigation /> should render component when current is other 1`] = `
       onMouseUp={[Function]}
     >
       <a
-        color="#fff"
         href="/training"
         style={
           Object {
@@ -625,7 +612,6 @@ exports[`<Navigation /> should render component when current is other 1`] = `
       onMouseUp={[Function]}
     >
       <a
-        color="#fff"
         href="/exam"
         style={
           Object {
@@ -670,7 +656,6 @@ exports[`<Navigation /> should render component when current is other 1`] = `
       onMouseUp={[Function]}
     >
       <a
-        color="#fff"
         href="/karutas"
         style={
           Object {
@@ -715,7 +700,6 @@ exports[`<Navigation /> should render component when current is other 1`] = `
       onMouseUp={[Function]}
     >
       <a
-        color="#fff"
         href="/about"
         style={
           Object {
@@ -769,7 +753,6 @@ exports[`<Navigation /> should render component when current is training 1`] = `
       onMouseUp={[Function]}
     >
       <a
-        color="#fff"
         href="/training"
         style={
           Object {
@@ -814,7 +797,6 @@ exports[`<Navigation /> should render component when current is training 1`] = `
       onMouseUp={[Function]}
     >
       <a
-        color="#fff"
         href="/exam"
         style={
           Object {
@@ -859,7 +841,6 @@ exports[`<Navigation /> should render component when current is training 1`] = `
       onMouseUp={[Function]}
     >
       <a
-        color="#fff"
         href="/karutas"
         style={
           Object {
@@ -904,7 +885,6 @@ exports[`<Navigation /> should render component when current is training 1`] = `
       onMouseUp={[Function]}
     >
       <a
-        color="#fff"
         href="/about"
         style={
           Object {

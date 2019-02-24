@@ -5,8 +5,8 @@ import { create } from '@test/factories';
 import { sel, setUpQuery } from '@test/helpers';
 import { mapStateToProps, KarutaList, Props } from '@src/containers/KarutaList';
 import { QueryData } from '@src/components/KarutaImage';
-import { initialState as questionsState } from '@src/state/questions';
-import { initialState as uiState } from '@src/state/ui';
+import { initialState as questionsState } from '@src/state/questions/reducers';
+import { initialState as uiState } from '@src/state/ui/reducers';
 import { Color, Karuta, Kimariji } from '@src/types';
 import { GlobalState } from '@src/state';
 

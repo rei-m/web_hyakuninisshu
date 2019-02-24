@@ -1,10 +1,6 @@
 import * as React from 'react';
 import ReactDOM from 'react-dom';
 
-export interface OverlayProps {
-  style?: React.CSSProperties;
-}
-
 const rootStyleMap: { [key: string]: string | number } = {
   width: '100vw',
   height: '100vh',
@@ -20,41 +16,25 @@ const rootStyle = Object.keys(rootStyleMap)
   .map(key => `${key}: ${rootStyleMap[key]}`)
   .join(';');
 
-export default class Overlay extends React.Component<OverlayProps> {
-  private body: HTMLElement;
-  private rootContainer: HTMLElement;
-  private el: HTMLDivElement;
-  private bodyOverflow: string | null;
+const el: HTMLDivElement = document.createElement('div');
+el.style.cssText = rootStyle;
 
-  constructor(props: OverlayProps) {
-    super(props);
-    this.body = document.getElementsByTagName('body')[0]!;
-    this.rootContainer = document.getElementById('___gatsby_portal')!;
-    this.el = document.createElement('div');
-    this.el.style.cssText = rootStyle;
-    this.bodyOverflow = this.body.style.overflow;
-  }
+const Overlay: React.FC<{}> = ({ children }) => {
+  React.useEffect(() => {
+    const body = document.getElementsByTagName('body')[0]!;
+    const bodyOverflow = body.style.overflow;
+    body.style.overflow = 'hidden';
 
-  componentDidMount() {
-    // The portal element is inserted in the DOM tree after
-    // the Modal's children are mounted, meaning that children
-    // will be mounted on a detached DOM node. If a child
-    // component requires to be attached to the DOM tree
-    // immediately when mounted, for example to measure a
-    // DOM node, or uses 'autoFocus' in a descendant, add
-    // state to Modal and only render the children when Modal
-    // is inserted in the DOM tree.
-    this.rootContainer.appendChild(this.el);
-    this.body.style.overflow = 'hidden';
-  }
+    const rootContainer = document.getElementById('___gatsby_portal')!;
+    rootContainer.appendChild(el);
 
-  componentWillUnmount() {
-    this.rootContainer.removeChild(this.el);
-    this.body.style.overflow = this.bodyOverflow;
-  }
+    return function cleanup() {
+      rootContainer.removeChild(el);
+      body.style.overflow = bodyOverflow;
+    };
+  });
 
-  render() {
-    const { children } = this.props;
-    return ReactDOM.createPortal(children, this.el);
-  }
-}
+  return ReactDOM.createPortal(children, el);
+};
+
+export default Overlay;
