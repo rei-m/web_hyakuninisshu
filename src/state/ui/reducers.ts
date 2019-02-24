@@ -5,7 +5,7 @@ import * as constants from './constants';
 const colors: Color[] = ['blue', 'pink', 'yellow', 'green', 'orange'];
 const kimarijis: Kimariji[] = [1, 2, 3, 4, 5, 6];
 
-export const initialState: types.UiState = {
+export const initialState: types.State = {
   karutasFilter: {
     open: false,
     colors: colors.map(color => ({ color, checked: true })),
@@ -13,7 +13,7 @@ export const initialState: types.UiState = {
   },
 };
 
-export const ui = (state: types.UiState = initialState, action: types.Actions): types.UiState => {
+export const reducer = (state: types.State = initialState, action: types.Actions): types.State => {
   switch (action.type) {
     case constants.OPEN_KARUTAS_FILTER_NAME:
       return {

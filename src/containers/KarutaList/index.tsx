@@ -2,7 +2,7 @@ import * as React from 'react';
 import { connect } from 'react-redux';
 import styled from '@src/styles/styled-components';
 import { GlobalState } from '@src/state';
-import { uiSelectors } from '@src/state/ducks/ui';
+import { uiSelectors } from '@src/state/ui';
 import Row from '@src/containers/KarutaList/Row';
 import { Karuta } from '@src/types';
 import ErrorMessage from '@src/components/ErrorMessage';

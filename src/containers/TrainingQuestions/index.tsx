@@ -6,7 +6,7 @@ import QuestionView, { Props as QuestionViewProps } from '@src/components/Questi
 import QuestionCorrect, { Props as QuestionCorrectProps } from '@src/components/QuestionCorrect';
 import ErrorMessage from '@src/components/ErrorMessage';
 import { GlobalState } from '@src/state';
-import { answerQuestion, confirmCorrect, openNextQuestion, QuestionsActions } from '@src/actions/questions';
+import { questionsOperations, questionsTypes } from '@src/state/questions';
 import {
   ColorCondition,
   KarutaStyleCondition,
@@ -135,9 +135,11 @@ export const mapStateToProps = ({ questions }: GlobalState, props: OwnProps): Co
   };
 };
 
-export const mapDispatchToProps = (dispatch: ThunkDispatch<GlobalState, {}, QuestionsActions>): DispatchProps => ({
+export const mapDispatchToProps = (
+  dispatch: ThunkDispatch<GlobalState, {}, questionsTypes.Actions>
+): DispatchProps => ({
   onClickGoToNext: () => {
-    dispatch(openNextQuestion());
+    dispatch(questionsOperations.openNextQuestion());
   },
   onClickGoToResult: () => {
     navigate(ROUTE_PATHS.TRAINING_RESULT, {
@@ -145,10 +147,10 @@ export const mapDispatchToProps = (dispatch: ThunkDispatch<GlobalState, {}, Ques
     });
   },
   onClickResult: () => {
-    dispatch(confirmCorrect());
+    dispatch(questionsOperations.confirmCorrect());
   },
   onClickToriFuda: ({ questionId, karutaNo }: ToriFuda) => {
-    dispatch(answerQuestion(questionId, karutaNo));
+    dispatch(questionsOperations.answerQuestion(questionId, karutaNo));
   },
 });
 

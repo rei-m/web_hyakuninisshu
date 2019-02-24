@@ -49,6 +49,6 @@ export interface KarutasFilter {
   readonly kimarijis: Array<{ kimariji: Kimariji; checked: boolean }>;
 }
 
-export interface UiState {
+export interface State {
   readonly karutasFilter: KarutasFilter & { readonly open: boolean };
 }

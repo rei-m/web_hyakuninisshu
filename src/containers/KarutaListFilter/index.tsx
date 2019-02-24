@@ -12,7 +12,7 @@ import withStyles from '@material-ui/core/styles/withStyles';
 import styled from '@src/styles/styled-components';
 import { appTheme } from '@src/styles/theme';
 import { Color, Kimariji } from '@src/types';
-import { uiOperations, uiTypes } from '@src/state/ducks/ui';
+import { uiOperations, uiTypes } from '@src/state/ui';
 import Overlay from '@src/components/Overlay';
 import { toColorString, toKimarijiString } from '@src/utils';
 import { GlobalState } from '@src/state';

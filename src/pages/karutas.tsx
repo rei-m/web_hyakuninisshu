@@ -12,7 +12,7 @@ import AdResponsive from '@src/components/AdResponsive';
 import KarutaList from '@src/containers/KarutaList';
 import KarutaListFilter from '@src/containers/KarutaListFilter';
 import { GlobalState } from '@src/state';
-import { uiOperations, uiTypes } from '@src/state/ducks/ui';
+import { uiOperations, uiTypes } from '@src/state/ui';
 import { Karuta } from '@src/types';
 import { ROUTE_PATHS } from '@src/constants';
 import { MenuType } from '@src/enums';
