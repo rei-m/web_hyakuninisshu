@@ -16,10 +16,13 @@ const rootStyle = Object.keys(rootStyleMap)
   .map(key => `${key}: ${rootStyleMap[key]}`)
   .join(';');
 
-const el: HTMLDivElement = document.createElement('div');
-el.style.cssText = rootStyle;
-
 const Overlay: React.FC<{}> = ({ children }) => {
+  const el = React.useMemo(() => {
+    const div = document.createElement('div');
+    div.style.cssText = rootStyle;
+    return div;
+  }, []);
+
   React.useEffect(() => {
     const body = document.getElementsByTagName('body')[0]!;
     const bodyOverflow = body.style.overflow;
