@@ -1,24 +1,11 @@
-import {
-  CLOSE_KARUTAS_FILTER_NAME,
-  OPEN_KARUTAS_FILTER_NAME,
-  TOGGLE_KARUTAS_COLOR_NAME,
-  TOGGLE_KARUTAS_KIMARIJI_NAME,
-  UiActions,
-} from '@src/actions/ui';
 import { Color, Kimariji } from '@src/types';
-
-export interface UiState {
-  readonly karutasFilter: {
-    readonly open: boolean;
-    readonly colors: Array<{ color: Color; checked: boolean }>;
-    readonly kimarijis: Array<{ kimariji: Kimariji; checked: boolean }>;
-  };
-}
+import * as types from './types';
+import * as constants from './constants';
 
 const colors: Color[] = ['blue', 'pink', 'yellow', 'green', 'orange'];
 const kimarijis: Kimariji[] = [1, 2, 3, 4, 5, 6];
 
-export const initialState: UiState = {
+export const initialState: types.State = {
   karutasFilter: {
     open: false,
     colors: colors.map(color => ({ color, checked: true })),
@@ -26,23 +13,23 @@ export const initialState: UiState = {
   },
 };
 
-export const ui = (state: UiState = initialState, action: UiActions): UiState => {
+export const reducer = (state: types.State = initialState, action: types.Actions): types.State => {
   switch (action.type) {
-    case OPEN_KARUTAS_FILTER_NAME:
+    case constants.OPEN_KARUTAS_FILTER_NAME:
       return {
         karutasFilter: {
           ...state.karutasFilter,
           open: true,
         },
       };
-    case CLOSE_KARUTAS_FILTER_NAME:
+    case constants.CLOSE_KARUTAS_FILTER_NAME:
       return {
         karutasFilter: {
           ...state.karutasFilter,
           open: false,
         },
       };
-    case TOGGLE_KARUTAS_COLOR_NAME:
+    case constants.TOGGLE_KARUTAS_COLOR_NAME:
       return {
         karutasFilter: {
           ...state.karutasFilter,
@@ -51,7 +38,7 @@ export const ui = (state: UiState = initialState, action: UiActions): UiState =>
           }),
         },
       };
-    case TOGGLE_KARUTAS_KIMARIJI_NAME:
+    case constants.TOGGLE_KARUTAS_KIMARIJI_NAME:
       return {
         karutasFilter: {
           ...state.karutasFilter,

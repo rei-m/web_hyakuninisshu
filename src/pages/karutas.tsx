@@ -11,8 +11,8 @@ import AdTop from '@src/components/AdTop';
 import AdResponsive from '@src/components/AdResponsive';
 import KarutaList from '@src/containers/KarutaList';
 import KarutaListFilter from '@src/containers/KarutaListFilter';
-import { openKarutasFilter, UiActions } from '@src/actions/ui';
 import { GlobalState } from '@src/state';
+import { uiOperations, uiTypes } from '@src/state/ui';
 import { Karuta } from '@src/types';
 import { ROUTE_PATHS } from '@src/constants';
 import { MenuType } from '@src/enums';
@@ -76,9 +76,9 @@ export const KarutasPage: React.FC<Props> = ({ data, onClickSearch }) => {
   );
 };
 
-export const mapDispatchToProps = (dispatch: ThunkDispatch<GlobalState, {}, UiActions>): DispatchProps => ({
+export const mapDispatchToProps = (dispatch: ThunkDispatch<GlobalState, {}, uiTypes.Actions>): DispatchProps => ({
   onClickSearch: () => {
-    dispatch(openKarutasFilter());
+    dispatch(uiOperations.openKarutasFilter());
   },
 });
 

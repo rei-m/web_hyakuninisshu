@@ -1,8 +1,4 @@
-import { Action, Dispatch } from 'redux';
-import { GlobalState } from '@src/state';
 import { Answer, Karuta, Question } from '@src/types';
-import { randomizeArray } from '@src/utils';
-import { fetchTorifudas, questionsFilter, toDulation } from '@src/utils/questions';
 import {
   ColorCondition,
   KarutaStyleCondition,
@@ -12,99 +8,11 @@ import {
   RangeFromCondition,
   RangeToCondition,
 } from '@src/enums';
+import { randomizeArray } from '@src/utils';
+import { fetchTorifudas, questionsFilter, toDulation } from '@src/utils/questions';
+import * as types from './types';
+import * as constants from './constants';
 
-export const START_TRAINING_NAME = 'START_TRAINING_NAME';
-export type START_TRAINING_TYPE = typeof START_TRAINING_NAME;
-
-export const START_EXAM_NAME = 'START_EXAM_NAME';
-export type START_EXAM_TYPE = typeof START_EXAM_NAME;
-
-export const RESTART_QUESTIONS_NAME = 'RESTART_QUESTIONS_NAME';
-export type RESTART_QUESTIONS_TYPE = typeof RESTART_QUESTIONS_NAME;
-
-export const ANSWER_QUESTION_NAME = 'ANSWER_QUESTION_NAME';
-export type ANSWER_QUESTION_TYPE = typeof ANSWER_QUESTION_NAME;
-
-export const CONFIRM_CORRECT_NAME = 'CONFIRM_CORRECT_NAME';
-export type CONFIRM_CORRECT_TYPE = typeof CONFIRM_CORRECT_NAME;
-
-export const OPEN_NEXT_QUESTION_NAME = 'OPEN_NEXT_QUESTION_NAME';
-export type OPEN_NEXT_QUESTION_TYPE = typeof OPEN_NEXT_QUESTION_NAME;
-
-export interface StartTrainingAction extends Action {
-  readonly type: START_TRAINING_TYPE;
-  readonly payload: {
-    readonly karutas: Karuta[];
-    readonly questions: Question[];
-    readonly startedTime: number;
-    readonly nextState: QuestionState;
-    readonly dulation: number;
-  };
-  readonly meta: {
-    readonly rangeFrom: RangeFromCondition;
-    readonly rangeTo: RangeToCondition;
-    readonly kimariji: KimarijiCondition;
-    readonly color: ColorCondition;
-    readonly kamiNoKuStyle: KarutaStyleCondition;
-    readonly shimoNoKuStyle: KarutaStyleCondition;
-    readonly questionAnim: QuestionAnimCondition;
-  };
-}
-
-export interface StartExamAction extends Action {
-  readonly type: START_EXAM_TYPE;
-  readonly payload: {
-    readonly karutas: Karuta[];
-    readonly questions: Question[];
-    readonly startedTime: number;
-    readonly nextState: QuestionState;
-  };
-}
-
-export interface RestartQuestionsAction extends Action {
-  readonly type: RESTART_QUESTIONS_TYPE;
-  readonly payload: {
-    readonly questions: Question[];
-    readonly startedTime: number;
-    readonly nextState: QuestionState;
-  };
-}
-
-export interface AnswerQuestionAction extends Action {
-  readonly type: ANSWER_QUESTION_TYPE;
-  readonly payload: {
-    readonly answer: Answer;
-    readonly nextState: QuestionState;
-  };
-}
-
-export interface ConfirmCorrectAction extends Action {
-  readonly type: CONFIRM_CORRECT_TYPE;
-  readonly payload: {
-    readonly nextState: QuestionState;
-  };
-}
-
-export interface OpenNextQuestionAction extends Action {
-  readonly type: OPEN_NEXT_QUESTION_TYPE;
-  readonly payload: {
-    readonly nextIndex: number;
-    readonly nextState: QuestionState;
-    readonly startedTime: number;
-  };
-}
-
-export type QuestionsActions =
-  | StartTrainingAction
-  | StartExamAction
-  | RestartQuestionsAction
-  | AnswerQuestionAction
-  | ConfirmCorrectAction
-  | OpenNextQuestionAction;
-
-/*
- * action creators
- */
 export const startTraining = (
   karutas: Karuta[],
   rangeFrom: RangeFromCondition,
@@ -114,7 +22,7 @@ export const startTraining = (
   kamiNoKuStyle: KarutaStyleCondition,
   shimoNoKuStyle: KarutaStyleCondition,
   questionAnim: QuestionAnimCondition
-) => (dispatch: Dispatch<StartTrainingAction>) => {
+): types.StartTrainingAction => {
   const questions = new QuestionsFactory(karutas)
     .setRange(rangeFrom, rangeTo)
     .setKimariji(kimariji)
@@ -123,7 +31,7 @@ export const startTraining = (
     .setShimoNoKuStyle(shimoNoKuStyle)
     .create();
 
-  const action: StartTrainingAction = {
+  return {
     meta: {
       color,
       kamiNoKuStyle,
@@ -140,13 +48,11 @@ export const startTraining = (
       startedTime: new Date().getTime(),
       dulation: toDulation(questionAnim),
     },
-    type: START_TRAINING_NAME,
+    type: constants.START_TRAINING_NAME,
   };
-
-  dispatch(action);
 };
 
-export const startExam = (karutas: Karuta[]) => (dispatch: Dispatch<StartExamAction>) => {
+export const startExam = (karutas: Karuta[]): types.StartExamAction => {
   const questions = new QuestionsFactory(karutas)
     .setRange(RangeFromCondition.One, RangeToCondition.OneHundred)
     .setKimariji(KimarijiCondition.None)
@@ -155,21 +61,18 @@ export const startExam = (karutas: Karuta[]) => (dispatch: Dispatch<StartExamAct
     .setShimoNoKuStyle(KarutaStyleCondition.KanaOnly)
     .create();
 
-  const action: StartExamAction = {
+  return {
     payload: {
       karutas,
       nextState: QuestionState.InAnswer,
       questions: randomizeArray(questions),
       startedTime: new Date().getTime(),
     },
-    type: START_EXAM_NAME,
+    type: constants.START_EXAM_NAME,
   };
-
-  dispatch(action);
 };
 
-export const restartQuestions = () => (dispatch: Dispatch<RestartQuestionsAction>, getState: () => GlobalState) => {
-  const { questions, answers } = getState().questions;
+export const restartQuestions = (questions: Question[], answers: Answer[]): types.RestartQuestionsAction => {
   // TODO: 全て回答済みでなかったらエラー
   const finder: { [questionId: number]: Question } = questions.reduce((previous, current) => {
     return { ...previous, [current.id]: current };
@@ -179,23 +82,22 @@ export const restartQuestions = () => (dispatch: Dispatch<RestartQuestionsAction
     .map(a => finder[a.questionId])
     .map(q => ({ ...q, toriFudas: randomizeArray(q.toriFudas) }));
 
-  const action: RestartQuestionsAction = {
+  return {
     payload: {
       nextState: QuestionState.InAnswer,
       questions: randomizeArray(targets),
       startedTime: new Date().getTime(),
     },
-    type: RESTART_QUESTIONS_NAME,
+    type: constants.RESTART_QUESTIONS_NAME,
   };
-
-  dispatch(action);
 };
 
-export const answerQuestion = (questionId: number, karutaNo: number) => (
-  dispatch: Dispatch<AnswerQuestionAction>,
-  getState: () => GlobalState
-) => {
-  const { questions, lastStartedTime } = getState().questions;
+export const answerQuestion = (
+  questionId: number,
+  karutaNo: number,
+  questions: Question[],
+  lastStartedTime?: number
+): types.AnswerQuestionAction => {
   const question = questions.find(q => q.id === questionId)!;
   // TODO: QuestionとlastStartedTimeがundefinedの場合
   const correct = question.correctKaruta.no === karutaNo;
@@ -206,41 +108,31 @@ export const answerQuestion = (questionId: number, karutaNo: number) => (
     questionId,
     time,
   };
-  const action: AnswerQuestionAction = {
+
+  return {
     payload: {
       answer,
       nextState: QuestionState.Answered,
     },
-    type: ANSWER_QUESTION_NAME,
+    type: constants.ANSWER_QUESTION_NAME,
   };
-
-  dispatch(action);
 };
 
-export const confirmCorrect = () => (dispatch: Dispatch<ConfirmCorrectAction>, getState: () => GlobalState) => {
-  const { questions, answers } = getState().questions;
-  const nextState = questions.length === answers.length ? QuestionState.Finished : QuestionState.ConfirmCorrect;
-  dispatch({
-    payload: {
-      nextState,
-    },
-    type: CONFIRM_CORRECT_NAME,
-  });
-};
+export const confirmCorrect = (questions: Question[], answers: Answer[]): types.ConfirmCorrectAction => ({
+  payload: {
+    nextState: questions.length === answers.length ? QuestionState.Finished : QuestionState.ConfirmCorrect,
+  },
+  type: constants.CONFIRM_CORRECT_NAME,
+});
 
-export const openNextQuestion = () => (dispatch: Dispatch<OpenNextQuestionAction>, getState: () => GlobalState) => {
-  const { currentIndex } = getState().questions;
-  const nextIndex = currentIndex + 1;
-  const action: OpenNextQuestionAction = {
-    payload: {
-      nextIndex,
-      nextState: QuestionState.InAnswer,
-      startedTime: new Date().getTime(),
-    },
-    type: OPEN_NEXT_QUESTION_NAME,
-  };
-  dispatch(action);
-};
+export const openNextQuestion = (currentIndex: number): types.OpenNextQuestionAction => ({
+  payload: {
+    nextIndex: currentIndex + 1,
+    nextState: QuestionState.InAnswer,
+    startedTime: new Date().getTime(),
+  },
+  type: constants.OPEN_NEXT_QUESTION_NAME,
+});
 
 class QuestionsFactory {
   private karutas: Karuta[];

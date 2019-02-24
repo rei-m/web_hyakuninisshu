@@ -5,8 +5,8 @@ import { mapStateToProps, Props, TrainingResult } from '@src/containers/Training
 import TrainingResultView from '@src/components/TrainingResultView';
 import ErrorMessage from '@src/components/ErrorMessage';
 import { shallow, ShallowWrapper } from 'enzyme';
-import { initialState as questionsState } from '@src/state/questions';
-import { initialState as uiState } from '@src/state/ui';
+import { initialState as questionsState } from '@src/state/questions/reducers';
+import { initialState as uiState } from '@src/state/ui/reducers';
 import { QuestionState } from '@src/enums';
 import { Answer } from '@src/types';
 import { create } from '@test/factories';

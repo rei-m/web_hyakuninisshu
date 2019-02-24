@@ -1,16 +1,16 @@
 import { applyMiddleware, combineReducers, createStore as reduxCreateStore, Reducer, Store } from 'redux';
 import thunk from 'redux-thunk';
-import { questions, QuestionsState } from '@src/state/questions';
-import { ui, UiState } from '@src/state/ui';
+import { questionsReducer, questionsTypes } from '@src/state/questions';
+import { uiReducer, uiTypes } from '@src/state/ui';
 
 export interface GlobalState {
-  questions: QuestionsState;
-  ui: UiState;
+  questions: questionsTypes.State;
+  ui: uiTypes.State;
 }
 
 export const reducer: Reducer<GlobalState> = combineReducers<GlobalState>({
-  questions,
-  ui,
+  questions: questionsReducer,
+  ui: uiReducer,
 });
 
 export const createStore = (): Store<GlobalState> => reduxCreateStore(reducer, applyMiddleware(thunk));

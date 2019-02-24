@@ -1,9 +1,9 @@
 import { MockStore } from 'redux-mock-store';
 import { mockAppStoreCreateor } from '@test/helpers';
 import { GlobalState } from '@src/state';
-import { initialState as questionsState } from '@src/state/questions';
-import { initialState as uiState } from '@src/state/ui';
-import { RESTART_QUESTIONS_NAME } from '@src/actions/questions';
+import { initialState as questionsState } from '@src/state/questions/reducers';
+import { RESTART_QUESTIONS_NAME } from '@src/state/questions/constants';
+import { initialState as uiState } from '@src/state/ui/reducers';
 import { mapDispatchToProps } from '@src/containers/ReviewInitializer';
 
 describe('<ReviewInitializer />', () => {

@@ -1,9 +1,13 @@
-import { MockStore } from 'redux-mock-store';
 import { create } from '@test/factories';
-import { mockAppStoreCreateor } from '@test/helpers';
-import * as questionsAction from '@src/actions/questions';
-import { initialState as questionsInitialState } from '@src/state/questions';
-import { initialState as uiInitialState } from '@src/state/ui';
+import * as questionsAction from '@src/state/questions/actions';
+import {
+  ANSWER_QUESTION_NAME,
+  CONFIRM_CORRECT_NAME,
+  OPEN_NEXT_QUESTION_NAME,
+  RESTART_QUESTIONS_NAME,
+  START_EXAM_NAME,
+  START_TRAINING_NAME,
+} from '@src/state/questions/constants';
 import { Answer, Color, Karuta, Kimariji, Question } from '@src/types';
 import {
   ColorCondition,
@@ -14,7 +18,6 @@ import {
   RangeFromCondition,
   RangeToCondition,
 } from '@src/enums';
-import { GlobalState } from '@src/state';
 
 const setUpKarutas = () =>
   Array.from(Array(100).keys()).map(i =>
@@ -28,16 +31,10 @@ const setUpKarutas = () =>
 
 const setUpQuestions = () => [...Array(10).keys()].map(_ => create<Question>('question'));
 
-const setUpStoreWithKarutas = () =>
-  mockAppStoreCreateor()({
-    questions: questionsInitialState,
-    ui: uiInitialState,
-  });
-
 describe('QuestionsActionCreator', () => {
   it('should create StartTrainingAction', () => {
     const karutas = setUpKarutas();
-    const actionCreator = questionsAction.startTraining(
+    const actualAction = questionsAction.startTraining(
       karutas,
       RangeFromCondition.One,
       RangeToCondition.OneHundred,
@@ -48,11 +45,7 @@ describe('QuestionsActionCreator', () => {
       QuestionAnimCondition.Normal
     );
 
-    const store = setUpStoreWithKarutas();
-    store.dispatch(actionCreator as any);
-
-    const action = store.getActions()[0] as questionsAction.StartTrainingAction;
-    const { type, payload } = action;
+    const { type, payload } = actualAction;
     const { nextState, questions, startedTime, dulation } = payload;
     const { correctKaruta, yomiFuda, toriFudas } = questions[0];
     expect(questions).toHaveLength(100);
@@ -61,7 +54,7 @@ describe('QuestionsActionCreator', () => {
     expect(yomiFuda.thirdText).toEqual(correctKaruta.thirdKanji);
     expect(toriFudas.map(f => f.fourthText)).toContain(correctKaruta.fourthKana);
     expect(toriFudas.map(f => f.fifthText)).toContain(correctKaruta.fifthKana);
-    expect(type).toEqual(questionsAction.START_TRAINING_NAME);
+    expect(type).toEqual(START_TRAINING_NAME);
     expect(nextState).toEqual(QuestionState.InAnswer);
     expect(startedTime).not.toBeUndefined();
     expect(dulation).toEqual(0.6);
@@ -69,7 +62,7 @@ describe('QuestionsActionCreator', () => {
 
   it('should return StartTrainingAction payload filtered by range', () => {
     const karutas = setUpKarutas();
-    const actionCreator = questionsAction.startTraining(
+    const actualAction = questionsAction.startTraining(
       karutas,
       RangeFromCondition.TwentyOne,
       RangeToCondition.Forty,
@@ -80,11 +73,7 @@ describe('QuestionsActionCreator', () => {
       QuestionAnimCondition.Normal
     );
 
-    const store = setUpStoreWithKarutas();
-    store.dispatch(actionCreator as any);
-
-    const action = store.getActions()[0] as questionsAction.StartTrainingAction;
-    const { payload } = action;
+    const { payload } = actualAction;
     const { questions, startedTime } = payload;
     const karutaNos = questions.map(q => q.correctKaruta.no);
     expect(questions).toHaveLength(20);
@@ -95,7 +84,7 @@ describe('QuestionsActionCreator', () => {
 
   it('should return StartTrainingAction payload filtered by kimariji', () => {
     const karutas = setUpKarutas();
-    const actionCreator = questionsAction.startTraining(
+    const actualAction = questionsAction.startTraining(
       karutas,
       RangeFromCondition.One,
       RangeToCondition.OneHundred,
@@ -106,11 +95,7 @@ describe('QuestionsActionCreator', () => {
       QuestionAnimCondition.Normal
     );
 
-    const store = setUpStoreWithKarutas();
-    store.dispatch(actionCreator as any);
-
-    const action = store.getActions()[0] as questionsAction.StartTrainingAction;
-    const { payload } = action;
+    const { payload } = actualAction;
     const { questions, startedTime } = payload;
     expect(questions).toHaveLength(20);
     expect(questions.every(q => q.correctKaruta.kimariji === 1)).toBeTruthy();
@@ -119,7 +104,7 @@ describe('QuestionsActionCreator', () => {
 
   it('should return StartTrainingAction payload filtered by color', () => {
     const karutas = setUpKarutas();
-    const actionCreator = questionsAction.startTraining(
+    const actualAction = questionsAction.startTraining(
       karutas,
       RangeFromCondition.One,
       RangeToCondition.OneHundred,
@@ -130,11 +115,7 @@ describe('QuestionsActionCreator', () => {
       QuestionAnimCondition.Normal
     );
 
-    const store = setUpStoreWithKarutas();
-    store.dispatch(actionCreator as any);
-
-    const action = store.getActions()[0] as questionsAction.StartTrainingAction;
-    const { payload } = action;
+    const { payload } = actualAction;
     const { questions, startedTime } = payload;
     expect(questions).toHaveLength(20);
     expect(questions.every(q => q.correctKaruta.color === 'blue')).toBeTruthy();
@@ -143,7 +124,7 @@ describe('QuestionsActionCreator', () => {
 
   it('should return StartTrainingAction payload switched by karuta style', () => {
     const karutas = setUpKarutas();
-    const actionCreator = questionsAction.startTraining(
+    const actualAction = questionsAction.startTraining(
       karutas,
       RangeFromCondition.One,
       RangeToCondition.OneHundred,
@@ -154,11 +135,7 @@ describe('QuestionsActionCreator', () => {
       QuestionAnimCondition.Normal
     );
 
-    const store = setUpStoreWithKarutas();
-    store.dispatch(actionCreator as any);
-
-    const action = store.getActions()[0] as questionsAction.StartTrainingAction;
-    const { payload } = action;
+    const { payload } = actualAction;
     const { questions } = payload;
     const { correctKaruta, yomiFuda, toriFudas } = questions[0];
     expect(yomiFuda.firstText).toEqual(correctKaruta.firstKana);
@@ -170,13 +147,9 @@ describe('QuestionsActionCreator', () => {
 
   it('should create StartExamAction', () => {
     const karutas = setUpKarutas();
-    const actionCreator = questionsAction.startExam(karutas);
+    const actualAction = questionsAction.startExam(karutas);
 
-    const store = setUpStoreWithKarutas();
-    store.dispatch(actionCreator as any);
-
-    const action = store.getActions()[0] as questionsAction.StartExamAction;
-    const { type, payload } = action;
+    const { type, payload } = actualAction;
     const { nextState, questions, startedTime } = payload;
     const { correctKaruta, yomiFuda, toriFudas } = questions[0];
     expect(questions).toHaveLength(100);
@@ -185,14 +158,12 @@ describe('QuestionsActionCreator', () => {
     expect(yomiFuda.thirdText).toEqual(correctKaruta.thirdKanji);
     expect(toriFudas.map(f => f.fourthText)).toContain(correctKaruta.fourthKana);
     expect(toriFudas.map(f => f.fifthText)).toContain(correctKaruta.fifthKana);
-    expect(type).toEqual(questionsAction.START_EXAM_NAME);
+    expect(type).toEqual(START_EXAM_NAME);
     expect(nextState).toEqual(QuestionState.InAnswer);
     expect(startedTime).not.toBeUndefined();
   });
 
   it('should create RestartQuestionsAction', () => {
-    const actionCreator = questionsAction.restartQuestions();
-
     const answeredQuestions = setUpQuestions();
     const answers = answeredQuestions.map(q => {
       return create<Answer>('answer', {
@@ -200,21 +171,11 @@ describe('QuestionsActionCreator', () => {
         questionId: q.id,
       });
     });
+    const actualAction = questionsAction.restartQuestions(answeredQuestions, answers);
 
-    const store = mockAppStoreCreateor()({
-      questions: {
-        ...questionsInitialState,
-        answers,
-        questions: answeredQuestions,
-      },
-      ui: uiInitialState,
-    });
-    store.dispatch(actionCreator as any);
-
-    const action = store.getActions()[0] as questionsAction.RestartQuestionsAction;
-    const { type, payload } = action;
+    const { type, payload } = actualAction;
     const { nextState, questions, startedTime } = payload;
-    expect(type).toEqual(questionsAction.RESTART_QUESTIONS_NAME);
+    expect(type).toEqual(RESTART_QUESTIONS_NAME);
     expect(nextState).toEqual(QuestionState.InAnswer);
     const newQuestionIds = questions.map(q => q.id);
     expect(questions).toHaveLength(5);
@@ -228,7 +189,6 @@ describe('QuestionsActionCreator', () => {
 
   describe('AnswerQuestionAction', () => {
     let question: Question;
-    let store: MockStore<GlobalState>;
 
     beforeEach(() => {
       question = create<Question>('question', {
@@ -238,44 +198,31 @@ describe('QuestionsActionCreator', () => {
         }),
         id: 1,
       });
-      store = mockAppStoreCreateor()({
-        questions: {
-          ...questionsInitialState,
-          questions: [question],
-        },
-        ui: uiInitialState,
-      });
     });
 
     it('should create correct', () => {
-      const actionCreator = questionsAction.answerQuestion(1, 1);
-      store.dispatch(actionCreator as any);
-
-      const action = store.getActions()[0];
-      const { type, payload } = action;
+      const actualAction = questionsAction.answerQuestion(1, 1, [question]);
+      const { type, payload } = actualAction;
       const { answer, nextState } = payload;
 
       expect(answer.correct).toBeTruthy();
       expect(answer.questionId).toEqual(1);
       expect(answer.karutaNo).toEqual(1);
       expect(answer.time).not.toBeUndefined();
-      expect(type).toEqual(questionsAction.ANSWER_QUESTION_NAME);
+      expect(type).toEqual(ANSWER_QUESTION_NAME);
       expect(nextState).toEqual(QuestionState.Answered);
     });
 
     it('should create wrong', () => {
-      const actionCreator = questionsAction.answerQuestion(1, 2);
-      store.dispatch(actionCreator as any);
-
-      const action = store.getActions()[0];
-      const { type, payload } = action;
+      const actualAction = questionsAction.answerQuestion(1, 2, [question]);
+      const { type, payload } = actualAction;
       const { answer, nextState } = payload;
 
       expect(answer.correct).toBeFalsy();
       expect(answer.questionId).toEqual(1);
       expect(answer.karutaNo).toEqual(2);
       expect(answer.time).not.toBeUndefined();
-      expect(type).toEqual(questionsAction.ANSWER_QUESTION_NAME);
+      expect(type).toEqual(ANSWER_QUESTION_NAME);
       expect(nextState).toEqual(QuestionState.Answered);
     });
   });
@@ -301,55 +248,20 @@ describe('QuestionsActionCreator', () => {
       karutaNo: 1,
       questionId: 1,
     });
-    const store = mockAppStoreCreateor()({
-      questions: {
-        ...questionsInitialState,
-        answers: [answer],
-        questionState: QuestionState.Answered,
-        questions: [question1, question2],
-      },
-      ui: uiInitialState,
-    });
 
-    const actionCreator = questionsAction.confirmCorrect();
-    store.dispatch(actionCreator as any);
-
-    const action = store.getActions()[0];
-    const { type, payload } = action;
+    const actualAction = questionsAction.confirmCorrect([question1, question2], [answer]);
+    const { type, payload } = actualAction;
     const { nextState } = payload;
-    expect(type).toEqual(questionsAction.CONFIRM_CORRECT_NAME);
+    expect(type).toEqual(CONFIRM_CORRECT_NAME);
     expect(nextState).toEqual(QuestionState.ConfirmCorrect);
   });
 
   it('should create OpenNextQuestionAction', () => {
-    const question1 = create<Question>('question', {
-      id: 1,
-    });
-    const question2 = create<Question>('question', {
-      id: 2,
-    });
-    const answer = create<Answer>('answer', {
-      correct: true,
-      karutaNo: 1,
-      questionId: 1,
-    });
-    const store = mockAppStoreCreateor()({
-      questions: {
-        ...questionsInitialState,
-        answers: [answer],
-        questionState: QuestionState.Answered,
-        questions: [question1, question2],
-      },
-      ui: uiInitialState,
-    });
+    const actualAction = questionsAction.openNextQuestion(0);
 
-    const actionCreator = questionsAction.openNextQuestion();
-    store.dispatch(actionCreator as any);
-
-    const action = store.getActions()[0];
-    const { type, payload } = action;
+    const { type, payload } = actualAction;
     const { nextIndex, nextState, startedTime } = payload;
-    expect(type).toEqual(questionsAction.OPEN_NEXT_QUESTION_NAME);
+    expect(type).toEqual(OPEN_NEXT_QUESTION_NAME);
     expect(nextIndex).toEqual(1);
     expect(nextState).toEqual(QuestionState.InAnswer);
     expect(startedTime).not.toBeUndefined();

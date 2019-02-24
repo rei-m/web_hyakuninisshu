@@ -2,7 +2,7 @@ import * as React from 'react';
 import { connect } from 'react-redux';
 import { ThunkDispatch } from 'redux-thunk';
 import Progress, { Props as ProgressProps } from '@src/components/Progress';
-import { startTraining, QuestionsActions } from '@src/actions/questions';
+import { questionsOperations, questionsTypes } from '@src/state/questions';
 import {
   ColorCondition,
   KarutaStyleCondition,
@@ -32,11 +32,22 @@ export type Props = OwnProps & DispatchProps;
 const TrainingInitializer = ({ onStart }: Props) => <Progress onStart={onStart} />;
 
 export const mapDispatchToProps = (
-  dispatch: ThunkDispatch<GlobalState, {}, QuestionsActions>,
+  dispatch: ThunkDispatch<GlobalState, {}, questionsTypes.Actions>,
   { karutas, rangeFrom, rangeTo, kimariji, color, kamiNoKuStyle, shimoNoKuStyle, questionAnim }: OwnProps
 ): DispatchProps => ({
   onStart: () => {
-    dispatch(startTraining(karutas, rangeFrom, rangeTo, kimariji, color, kamiNoKuStyle, shimoNoKuStyle, questionAnim));
+    dispatch(
+      questionsOperations.startTraining(
+        karutas,
+        rangeFrom,
+        rangeTo,
+        kimariji,
+        color,
+        kamiNoKuStyle,
+        shimoNoKuStyle,
+        questionAnim
+      )
+    );
   },
 });
 

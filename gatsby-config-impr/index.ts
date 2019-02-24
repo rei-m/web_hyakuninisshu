@@ -35,7 +35,7 @@ export const plugins: GatsbyPlugin[] = [
   // To learn more, visit: https://gatsby.app/offline
   // 'gatsby-plugin-offline',
   {
-    resolve: `@wapps/gatsby-plugin-material-ui`,
+    resolve: `gatsby-plugin-material-ui`,
     options: {
       theme: {
         palette: {

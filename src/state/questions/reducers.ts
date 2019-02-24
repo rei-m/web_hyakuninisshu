@@ -1,43 +1,15 @@
 import {
-  ANSWER_QUESTION_NAME,
-  CONFIRM_CORRECT_NAME,
-  OPEN_NEXT_QUESTION_NAME,
-  QuestionsActions,
-  RESTART_QUESTIONS_NAME,
-  START_EXAM_NAME,
-  START_TRAINING_NAME,
-} from '@src/actions/questions';
-import { Answer, Karuta, Question } from '@src/types';
-import {
   ColorCondition,
   KarutaStyleCondition,
   KimarijiCondition,
   QuestionAnimCondition,
-  QuestionState,
   RangeFromCondition,
   RangeToCondition,
 } from '@src/enums';
+import * as types from './types';
+import * as constants from './constants';
 
-export interface QuestionsState {
-  readonly karutas: Karuta[];
-  readonly currentIndex: number;
-  readonly questions: Question[];
-  readonly dulation: number;
-  readonly answers: Answer[];
-  readonly lastStartedTime?: number;
-  readonly trainingCondition: {
-    readonly rangeFrom: RangeFromCondition;
-    readonly rangeTo: RangeToCondition;
-    readonly kimariji: KimarijiCondition;
-    readonly color: ColorCondition;
-    readonly kamiNoKuStyle: KarutaStyleCondition;
-    readonly shimoNoKuStyle: KarutaStyleCondition;
-    readonly questionAnim: QuestionAnimCondition;
-  };
-  readonly questionState?: QuestionState;
-}
-
-export const initialState: QuestionsState = {
+export const initialState: types.State = {
   karutas: [],
   answers: [],
   currentIndex: 0,
@@ -54,9 +26,9 @@ export const initialState: QuestionsState = {
   },
 };
 
-export const questions = (state = initialState, action: QuestionsActions): QuestionsState => {
+export const reducer = (state = initialState, action: types.Actions): types.State => {
   switch (action.type) {
-    case START_TRAINING_NAME:
+    case constants.START_TRAINING_NAME:
       return {
         karutas: action.payload.karutas,
         answers: [],
@@ -69,7 +41,7 @@ export const questions = (state = initialState, action: QuestionsActions): Quest
           ...action.meta,
         },
       };
-    case START_EXAM_NAME:
+    case constants.START_EXAM_NAME:
       return {
         ...state,
         karutas: action.payload.karutas,
@@ -79,7 +51,7 @@ export const questions = (state = initialState, action: QuestionsActions): Quest
         questionState: action.payload.nextState,
         questions: action.payload.questions,
       };
-    case RESTART_QUESTIONS_NAME:
+    case constants.RESTART_QUESTIONS_NAME:
       return {
         ...state,
         answers: [],
@@ -88,18 +60,18 @@ export const questions = (state = initialState, action: QuestionsActions): Quest
         questionState: action.payload.nextState,
         questions: action.payload.questions,
       };
-    case ANSWER_QUESTION_NAME:
+    case constants.ANSWER_QUESTION_NAME:
       return {
         ...state,
         answers: [...state.answers, action.payload.answer],
         questionState: action.payload.nextState,
       };
-    case CONFIRM_CORRECT_NAME:
+    case constants.CONFIRM_CORRECT_NAME:
       return {
         ...state,
         questionState: action.payload.nextState,
       };
-    case OPEN_NEXT_QUESTION_NAME:
+    case constants.OPEN_NEXT_QUESTION_NAME:
       return {
         ...state,
         currentIndex: action.payload.nextIndex,

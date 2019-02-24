@@ -2,7 +2,7 @@ import * as React from 'react';
 import { connect } from 'react-redux';
 import { ThunkDispatch } from 'redux-thunk';
 import Progress, { Props as ProgressProps } from '@src/components/Progress';
-import { startExam, QuestionsActions } from '@src/actions/questions';
+import { questionsOperations, questionsTypes } from '@src/state/questions';
 import { Karuta } from '@src/types';
 import { GlobalState } from '@src/state';
 
@@ -17,11 +17,11 @@ export type Props = OwnProps & DispatchProps;
 const ExamInitializer = ({ onStart }: Props) => <Progress onStart={onStart} />;
 
 export const mapDispatchToProps = (
-  dispatch: ThunkDispatch<GlobalState, {}, QuestionsActions>,
+  dispatch: ThunkDispatch<GlobalState, {}, questionsTypes.Actions>,
   { karutas }: OwnProps
 ): DispatchProps => ({
   onStart: () => {
-    dispatch(startExam(karutas));
+    dispatch(questionsOperations.startExam(karutas));
   },
 });
 
