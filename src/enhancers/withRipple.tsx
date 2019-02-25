@@ -9,8 +9,8 @@ const rippleAnimation = keyframes`
 `;
 
 const RippleContainer = styled.div`
-  position: relative;
-  overflow: hidden;
+  position: relative !important;
+  overflow: hidden !important;
   & .ripple-effect {
     position: absolute;
     border-radius: 50%;
@@ -24,9 +24,10 @@ const RippleContainer = styled.div`
 
 export interface RippledComponentProps {
   color?: string;
+  style?: React.CSSProperties;
 }
 
-// このHOC中途半端で汎用的に使えないので注意
+// このHOC中途半端なので作り直したさ
 export function withRipple<T>(WrappedComponent: React.ComponentType<T>) {
   return (props: T & RippledComponentProps) => {
     const color = props.color ? props.color : '#fff';
@@ -35,6 +36,7 @@ export function withRipple<T>(WrappedComponent: React.ComponentType<T>) {
 
     // tslint:disable-next-line:no-null-keyword
     const containerEl = React.useRef<HTMLDivElement>(null);
+
     React.useEffect(() => {
       return function cleanup() {
         if (timerHolder.clearRippleTimer) {
@@ -69,15 +71,13 @@ export function withRipple<T>(WrappedComponent: React.ComponentType<T>) {
         const ripples = containerEl.current!.getElementsByClassName('ripple-effect');
         Array.from(Array(ripples.length).keys())
           .reverse()
-          .forEach(i => {
-            containerEl.current!.removeChild(ripples.item(i)!);
-          });
+          .forEach(i => containerEl.current!.removeChild(ripples.item(i)!));
       }, 1000);
     };
 
     return (
-      <RippleContainer ref={containerEl} onMouseDown={addRipple} onMouseUp={clearRipple}>
-        <WrappedComponent {...props} />
+      <RippleContainer ref={containerEl} onMouseDown={addRipple} onMouseUp={clearRipple} style={props.style}>
+        <WrappedComponent {...props} style={{}} />
       </RippleContainer>
     );
   };

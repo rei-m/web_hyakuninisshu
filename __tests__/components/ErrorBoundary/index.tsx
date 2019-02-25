@@ -1,8 +1,8 @@
 import * as ReactTestRenderer from 'react-test-renderer';
 import * as React from 'react';
 import { setUpQueryOnce } from '@test/helpers';
-import ErrorBoundary from '@src/components/ErrorBoundary';
-import { QueryData } from '@src/components/Dogeza';
+import ErrorBoundary from '@src/components/organisms/ErrorBoundary';
+import { QueryData } from '@src/components/atoms/Dogeza';
 
 describe('<ErrorBoundary />', () => {
   beforeEach(() => {

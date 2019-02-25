@@ -1,23 +1,22 @@
 import * as React from 'react';
 import { graphql, navigate } from 'gatsby';
 import { RouteComponentProps } from '@reach/router';
-import TrainingQuestions from '@src/containers/TrainingQuestions';
-import ReviewQuestions from '@src/containers/ReviewQuestions';
-import Layout from '@src/components/Layout';
-import SEO from '@src/components/SEO';
-import ErrorBoundary from '@src/components/ErrorBoundary';
-import ErrorMessage from '@src/components/ErrorMessage';
+import styled from '@src/styles/styled-components';
+import PlayingPageTemplate from '@src/components/templates/PlayingPageTemplate';
+import TrainingQuestions from '@src/containers/organisms/TrainingQuestions';
+import ReviewQuestions from '@src/containers/organisms/ReviewQuestions';
+import CenteredFrame from '@src/components/atoms/CenteredFrame';
+import Txt from '@src/components/atoms/Txt';
+import { ROUTE_PATHS } from '@src/constants';
+import { Karuta } from '@src/types';
 import {
   ColorCondition,
   KarutaStyleCondition,
   KimarijiCondition,
-  MenuType,
   QuestionAnimCondition,
   RangeFromCondition,
   RangeToCondition,
 } from '@src/enums';
-import { ROUTE_PATHS } from '@src/constants';
-import { Karuta } from '@src/types';
 
 export type Props = {
   data: {
@@ -50,35 +49,44 @@ export interface RestartState {
   submitTime: number;
 }
 
+const ErrorMessage = styled(CenteredFrame)`
+  height: 300px;
+  width: 100%;
+`;
+
+const onClickGoToResultHandler = () => {
+  navigate(ROUTE_PATHS.TRAINING_RESULT, {
+    replace: true,
+  });
+};
+
+const onClickBackHandler = () => {
+  navigate(ROUTE_PATHS.TRAINING, { replace: true });
+};
+
 const TrainingQuestionPage: React.FC<Props> = ({ data, location }) => {
   const karutas = data.allKaruta.edges.map(karutaData => JSON.parse(karutaData.node.internal.content) as Karuta);
+  // TODO: 本当はちゃんと中身をチェックしたほうがいい。。。
   const state: TrainingState | RestartState | undefined = location ? location.state : undefined;
-  const title = `百人一首 - 練習 -`;
-  const description =
-    '百人一首の暗記を練習できます。出題条件を組み合わせて自分にあったペースで練習できます。百人一首の歌の意味に触れながら楽しく覚えましょう。';
-  const onClickBack = () => {
-    navigate(ROUTE_PATHS.TRAINING, { replace: true });
-  };
-
   return (
-    <ErrorBoundary>
-      <Layout title={title} isDisplayNav={false} currentMenuType={MenuType.Training} onClickBack={onClickBack}>
-        <SEO
-          title={title}
-          keywords={[`百人一首`, `小倉百人一首`, `歌`, `一覧`, `意味`, `歌番号`, `暗記`, `練習`]}
-          description={description}
-        />
-        {state ? (
+    <PlayingPageTemplate
+      title={`百人一首 - 練習 -`}
+      isDisplayNav={false}
+      onClickBack={onClickBackHandler}
+      content={
+        state ? (
           state.restart ? (
-            <ReviewQuestions {...state} />
+            <ReviewQuestions {...state} onClickGoToResult={onClickGoToResultHandler} />
           ) : (
-            <TrainingQuestions karutas={karutas} {...state} />
+            <TrainingQuestions karutas={karutas} {...state} onClickGoToResult={onClickGoToResultHandler} />
           )
         ) : (
-          <ErrorMessage text="不正な遷移を行いました。前の画面からやり直してください。" />
-        )}
-      </Layout>
-    </ErrorBoundary>
+          <ErrorMessage tag={`div`}>
+            <Txt role={`error`}>不正な遷移を行いました。前の画面からやり直してください。</Txt>
+          </ErrorMessage>
+        )
+      }
+    />
   );
 };
 

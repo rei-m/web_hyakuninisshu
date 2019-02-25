@@ -2,11 +2,11 @@ import { Color, Karuta, Kimariji } from '@src/types';
 import * as ReactTestRenderer from 'react-test-renderer';
 import { Provider } from 'react-redux';
 import TrainingQuestion, { Props } from '@src/pages/training/question';
-import { DefaultSEOQueryData } from '@src/components/SEO';
+import { DefaultSEOQueryData } from '@src/components/atoms/SEO';
 import * as React from 'react';
 import { createStore } from '@src/state';
-import { QueryData as QuestionViewQueryData } from '@src/components/QuestionView';
-import { QueryData as QuestionResultQueryData } from '@src/components/QuestionResult';
+import { QueryData as QuestionViewQueryData } from '@src/components/organisms/KarutaPlaying';
+import { QueryData as QuestionResultQueryData } from '@src/components/atoms/CorrectImage';
 import { setUpQuery, setUpQueryOnce } from '@test/helpers';
 import { create } from '@test/factories';
 

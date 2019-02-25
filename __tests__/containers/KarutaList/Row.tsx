@@ -3,8 +3,8 @@ import * as React from 'react';
 import { shallow } from 'enzyme';
 import { setUpQueryOnce } from '@test/helpers';
 import { create } from '@test/factories';
-import Row, { Props } from '@src/containers/KarutaList/Row';
-import { QueryData } from '@src/components/KarutaImage';
+import Row, { Props } from '@src/components/molecules/Material';
+import { QueryData } from '@src/components/atoms/KarutaImage';
 import { Karuta } from '@src/types';
 
 describe('KarutaList', () => {

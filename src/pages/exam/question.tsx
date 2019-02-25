@@ -1,16 +1,11 @@
 import * as React from 'react';
-import { RouteComponentProps } from '@reach/router';
 import { graphql, navigate } from 'gatsby';
-import ExamQuestions from '@src/containers/ExamQuestions';
-import Layout from '@src/components/Layout';
-import SEO from '@src/components/SEO';
-import ErrorBoundary from '@src/components/ErrorBoundary';
-import ErrorMessage from '@src/components/ErrorMessage';
-import { MenuType } from '@src/enums';
+import PlayingPageTemplate from '@src/components/templates/PlayingPageTemplate';
+import ExamQuestions from '@src/containers/organisms/ExamQuestions';
 import { ROUTE_PATHS } from '@src/constants';
 import { Karuta } from '@src/types';
 
-export type Props = {
+export interface Props {
   data: {
     allKaruta: {
       edges: Array<{
@@ -22,37 +17,34 @@ export type Props = {
       }>;
     };
   };
-} & RouteComponentProps<{}>;
-
-export interface LocationState {
-  submitTime: number;
 }
 
-const ExamQuestionPage: React.FC<Props> = ({ data, location }) => {
-  const karutas = data.allKaruta.edges.map(karutaData => JSON.parse(karutaData.node.internal.content) as Karuta);
-  const state: LocationState | undefined = location ? location.state : undefined;
-  const title = `百人一首 - 腕試し -`;
-  const description = '百人一首の暗記を練習できます。百首覚えられているかチャレンジしましょう。';
-  const onClickBack = () => {
-    navigate(ROUTE_PATHS.EXAM, { replace: true });
-  };
+export interface PresenterProps {
+  karutas: Karuta[];
+}
 
-  return (
-    <ErrorBoundary>
-      <Layout title={title} isDisplayNav={false} currentMenuType={MenuType.Exam} onClickBack={onClickBack}>
-        <SEO
-          title={title}
-          keywords={[`百人一首`, `小倉百人一首`, `歌`, `一覧`, `意味`, `歌番号`, `暗記`, `練習`]}
-          description={description}
-        />
-        {state ? (
-          <ExamQuestions karutas={karutas} {...state} />
-        ) : (
-          <ErrorMessage text="不正な遷移を行いました。前の画面からやり直してください。" />
-        )}
-      </Layout>
-    </ErrorBoundary>
-  );
+const onClickGoToResultHandler = () => {
+  navigate(ROUTE_PATHS.EXAM_RESULT, {
+    replace: true,
+  });
+};
+
+const onClickBackHandler = () => {
+  navigate(ROUTE_PATHS.EXAM, { replace: true });
+};
+
+export const ExamQuestionPagePresenter = ({ karutas }: PresenterProps) => (
+  <PlayingPageTemplate
+    title={`百人一首 - 腕試し -`}
+    isDisplayNav={false}
+    onClickBack={onClickBackHandler}
+    content={<ExamQuestions karutas={karutas} onClickGoToResult={onClickGoToResultHandler} />}
+  />
+);
+
+const ExamQuestionPage = ({ data }: Props) => {
+  const karutas = data.allKaruta.edges.map(karutaData => JSON.parse(karutaData.node.internal.content) as Karuta);
+  return <ExamQuestionPagePresenter karutas={karutas} />;
 };
 
 export default ExamQuestionPage;

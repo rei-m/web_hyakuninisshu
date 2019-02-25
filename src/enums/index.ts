@@ -5,10 +5,10 @@ export interface EnumCollection<T> {
 }
 
 export enum MenuType {
-  Training,
-  Exam,
-  Material,
-  Other,
+  Training = '練習',
+  Exam = '腕試し',
+  Material = '資料',
+  Other = 'その他',
 }
 
 export enum QuestionState {

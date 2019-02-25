@@ -1,7 +1,7 @@
 import * as ReactTestRenderer from 'react-test-renderer';
 import * as React from 'react';
 import Index, { Props } from '@src/pages';
-import { DefaultSEOQueryData } from '@src/components/SEO';
+import { DefaultSEOQueryData } from '@src/components/atoms/SEO';
 import { Karuta } from '@src/types';
 import { setUpQueryOnce } from '@test/helpers';
 import { create } from '@test/factories';

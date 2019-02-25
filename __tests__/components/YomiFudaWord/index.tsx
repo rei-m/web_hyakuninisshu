@@ -1,6 +1,6 @@
 import * as ReactTestRenderer from 'react-test-renderer';
 import * as React from 'react';
-import YomiFudaWord, { Props } from '@src/components/YomiFudaWord';
+import YomiFudaWord, { Props } from '@src/components/atoms/YomiFudaPhrase/Word';
 
 describe('<YomiFudaWord />', () => {
   it('should render component', () => {

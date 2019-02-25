@@ -2,7 +2,7 @@ import * as ReactTestRenderer from 'react-test-renderer';
 import * as React from 'react';
 import NotFound from '@src/pages/404';
 import { setUpQueryOnce } from '@test/helpers';
-import { QueryData } from '@src/components/Dogeza';
+import { QueryData } from '@src/components/atoms/Dogeza';
 
 describe('/404', () => {
   beforeEach(() => {

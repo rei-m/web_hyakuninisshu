@@ -97,9 +97,9 @@ export type Actions =
 export interface State {
   readonly karutas: Karuta[];
   readonly currentIndex: number;
-  readonly questions: Question[];
+  readonly questions?: Question[];
   readonly dulation: number;
-  readonly answers: Answer[];
+  readonly answers?: Answer[];
   readonly lastStartedTime?: number;
   readonly trainingCondition: {
     readonly rangeFrom: RangeFromCondition;
