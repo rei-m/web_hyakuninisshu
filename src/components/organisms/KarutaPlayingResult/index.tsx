@@ -116,7 +116,7 @@ export const KarutaPlayingResultContainer: React.FC<ContainerProps> = ({
   const [correctCount, averageAnswerSecond] = React.useMemo(() => {
     const _correctCount = answers.filter(a => a.correct).length;
     const _averageAnswerSecond = answers.reduce((prev, current) => prev + current.time, 0) / 1000 / totalCount;
-    return [_correctCount, _averageAnswerSecond];
+    return [_correctCount, Math.round(_averageAnswerSecond * 100) / 100];
   }, []);
 
   return presenter({

@@ -26,9 +26,12 @@ const Container = styled.ul`
 
 const MaterialContainer = styled.li`
   max-width: 380px;
-  width: 380px;
-  margin: ${({ theme }) => theme.spacing1x};
+  width: 100%;
+  margin: ${({ theme }) => theme.spacing1x} 0;
   box-shadow: ${({ theme }) => theme.elevationShadow1x};
+  @media screen and (min-width: ${({ theme }) => theme.minWidthWide}) {
+    margin: ${({ theme }) => theme.spacing1x};
+  }
 `;
 
 const StyledLink = styled(Link)`
