@@ -1,6 +1,6 @@
 import * as ReactTestRenderer from 'react-test-renderer';
 import * as React from 'react';
-import Navigation from '@src/components/Navigation';
+import Navigation from '@src/components/molecules/Navigation';
 import { MenuType } from '@src/enums';
 
 describe('<Navigation />', () => {

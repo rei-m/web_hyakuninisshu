@@ -1,7 +1,7 @@
 import * as ReactTestRenderer from 'react-test-renderer';
 import * as React from 'react';
 import { shallow } from 'enzyme';
-import AppButton, { Props } from '@src/components/AppButton';
+import AppButton, { Props } from '@src/components/atoms/Button';
 
 describe('<AppButton />', () => {
   let baseProps: Props;

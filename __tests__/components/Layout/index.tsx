@@ -1,8 +1,8 @@
 import * as ReactTestRenderer from 'react-test-renderer';
 import * as React from 'react';
 import { shallow } from 'enzyme';
-import Layout, { Props } from '@src/components/Layout';
-import Navigation from '@src/components/Navigation';
+import Layout, { Props } from '@src/components/templates/Layout';
+import Navigation from '@src/components/molecules/Navigation';
 
 describe('<Layout />', () => {
   let baseProps: Props;

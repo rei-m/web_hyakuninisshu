@@ -2,10 +2,16 @@ import { GlobalState } from '@src/state';
 import * as React from 'react';
 import { shallow, ShallowWrapper } from 'enzyme';
 import { navigate } from 'gatsby';
-import { mapDispatchToProps, mapStateToProps, OwnProps, Props, ReviewQuestions } from '@src/containers/ReviewQuestions';
+import {
+  mapDispatchToProps,
+  mapStateToProps,
+  OwnProps,
+  Props,
+  ReviewQuestions,
+} from '@src/containers/organisms/ReviewQuestions';
 import ReviewInitializer from '@src/containers/ReviewInitializer';
-import QuestionView from '@src/components/QuestionView';
-import QuestionCorrect from '@src/components/QuestionCorrect';
+import QuestionView from '@src/components/organisms/KarutaPlaying';
+import QuestionCorrect from '@src/components/organisms/KarutaPlayingCorrect';
 import { MockStore } from 'redux-mock-store';
 import { initialState as questionsState } from '@src/state/questions/reducers';
 import { initialState as uiState } from '@src/state/ui/reducers';

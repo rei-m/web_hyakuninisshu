@@ -1,6 +1,6 @@
 import * as ReactTestRenderer from 'react-test-renderer';
 import * as React from 'react';
-import ErrorMessage, { Props } from '@src/components/ErrorMessage';
+import ErrorMessage, { Props } from '@src/components/atoms/ErrorMessage';
 
 describe('<ErrorMessage />', () => {
   let baseProps: Props;

@@ -1,7 +1,7 @@
 import * as ReactTestRenderer from 'react-test-renderer';
 import * as React from 'react';
 import { setUpQueryOnce } from '@test/helpers';
-import KarutaImage, { QueryData } from '@src/components/KarutaImage';
+import KarutaImage, { QueryData } from '@src/components/atoms/KarutaImage';
 
 describe('<KarutaImage />', () => {
   beforeEach(() => {

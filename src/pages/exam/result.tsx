@@ -1,67 +1,63 @@
 import * as React from 'react';
-import { graphql, navigate, StaticQuery } from 'gatsby';
+import { connect } from 'react-redux';
+import { navigate } from 'gatsby';
 import styled from '@src/styles/styled-components';
-import Layout from '@src/components/Layout';
-import SEO from '@src/components/SEO';
-import ErrorBoundary from '@src/components/ErrorBoundary';
-import AdTop from '@src/components/AdTop';
-import AdResponsive from '@src/components/AdResponsive';
-import ExamResult from '@src/containers/ExamResult';
-import { MenuType } from '@src/enums';
+import PlayingPageTemplate from '@src/components/templates/PlayingPageTemplate';
+import ExamResult from '@src/containers/organisms/ExamResult';
+import Ad from '@src/components/organisms/Ad';
+import CenteredFrame from '@src/components/atoms/CenteredFrame';
+import Txt from '@src/components/atoms/Txt';
 import { ROUTE_PATHS } from '@src/constants';
+import { QuestionState } from '@src/enums';
+import { GlobalState } from '@src/state';
 
-export interface QueryData {
-  examResultBGImage: {
-    publicURL: string;
-  };
+export interface ConnectedProps {
+  questionState?: QuestionState;
 }
 
-const Container = styled.div<{ bgImageUrl: string }>`
-  padding: ${({ theme }) => theme.spacing2x} 0;
-  width: 100vw;
-  background-image: url("${({ bgImageUrl }) => bgImageUrl}");
-  min-height: calc(100vh - ${({ theme }) => theme.headerHeight});
-  @media screen and (min-width: ${({ theme }) => theme.minWidthWide}) {
-    min-height: calc(100vh - ${({ theme }) => theme.headerHeightWide});
-  }
-`;
+export type Props = ConnectedProps;
 
-const ExamResultPage: React.FC<{}> = () => {
-  const title = `百人一首 - 腕試し結果 -`;
-  const description = '百人一首の暗記を練習できます。百首覚えられているかチャレンジしましょう。';
-  const onClickBack = () => {
-    navigate(ROUTE_PATHS.EXAM, { replace: true });
-  };
-
-  return (
-    <ErrorBoundary>
-      <Layout title={title} isDisplayNav={false} currentMenuType={MenuType.Exam} onClickBack={onClickBack}>
-        <SEO
-          title={title}
-          keywords={[`百人一首`, `小倉百人一首`, `歌`, `一覧`, `意味`, `歌番号`, `暗記`, `練習`]}
-          description={description}
-        />
-        <StaticQuery
-          query={query}
-          render={({ examResultBGImage }: QueryData) => (
-            <Container bgImageUrl={examResultBGImage.publicURL}>
-              <AdTop />
-              <ExamResult />
-              <AdResponsive />
-            </Container>
-          )}
-        />
-      </Layout>
-    </ErrorBoundary>
-  );
+const onClickRestartHandler = () => {
+  navigate(ROUTE_PATHS.TRAINING_QUESTION, {
+    state: {
+      submitTime: new Date().getTime(),
+      restart: true,
+    },
+  });
 };
 
-export default ExamResultPage;
+const onClickBackHandler = () => {
+  navigate(ROUTE_PATHS.EXAM, { replace: true });
+};
 
-const query = graphql`
-  query {
-    examResultBGImage: file(relativePath: { eq: "tatami_part.png" }) {
-      publicURL
-    }
-  }
+const ErrorMessage = styled(CenteredFrame)`
+  height: 300px;
+  width: 100%;
 `;
+
+export const ExamResultPage = ({ questionState }: Props) => (
+  <PlayingPageTemplate
+    title={`百人一首 - 腕試し結果 -`}
+    isDisplayNav={false}
+    onClickBack={onClickBackHandler}
+    content={
+      <>
+        <Ad type={`top`} />
+        {questionState === QuestionState.Finished ? (
+          <ExamResult onClickRestart={onClickRestartHandler} onClickBack={onClickBackHandler} />
+        ) : (
+          <ErrorMessage tag={`div`}>
+            <Txt role={`error`}>不正な遷移を行いました。前の画面からやり直してください。</Txt>
+          </ErrorMessage>
+        )}
+        <Ad type={`responsive`} />
+      </>
+    }
+  />
+);
+
+export const mapStateToProps = ({ questions }: GlobalState): ConnectedProps => ({
+  questionState: questions.questionState,
+});
+
+export default connect(mapStateToProps)(ExamResultPage);

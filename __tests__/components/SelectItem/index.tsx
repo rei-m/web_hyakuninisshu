@@ -1,6 +1,6 @@
 import * as ReactTestRenderer from 'react-test-renderer';
 import * as React from 'react';
-import SelectItem, { Props } from '@src/components/SelectItem';
+import SelectItem, { Props } from '@src/components/molecules/SelectItem';
 
 describe('<SelectItem />', () => {
   it('should render component', () => {

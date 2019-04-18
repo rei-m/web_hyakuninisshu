@@ -1,8 +1,8 @@
 import * as ReactTestRenderer from 'react-test-renderer';
 import * as React from 'react';
 import Karutas, { Props } from '@src/templates/karutas';
-import { DefaultSEOQueryData } from '@src/components/SEO';
-import { QueryData } from '@src/components/KarutaImage';
+import { DefaultSEOQueryData } from '@src/components/atoms/SEO';
+import { QueryData } from '@src/components/atoms/KarutaImage';
 import { Karuta } from '@src/types';
 import { setUpQueryOnce } from '@test/helpers';
 import { create } from '@test/factories';

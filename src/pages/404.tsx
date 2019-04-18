@@ -1,39 +1,26 @@
 import * as React from 'react';
-import styled from '@src/styles/styled-components';
+import Img from 'gatsby-image';
 import { appTheme } from '@src/styles/theme';
-import Dogeza from '@src/components/Dogeza';
+import MessagePageTemplate from '@src/components/templates/MessagePageTemplate';
+import Txt from '@src/components/atoms/Txt';
+import { useAppContext } from '@src/hooks/useAppContext';
 
-const Root = styled.div`
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: ${({ theme }) => theme.colorThin};
-  flex-direction: column;
-  box-sizing: border-box;
-  min-height: calc(100vh - ${({ theme }) => theme.headerHeight});
-  @media screen and (min-width: ${({ theme }) => theme.minWidthWide}) {
-    min-height: calc(100vh - ${({ theme }) => theme.headerHeightWide});
-  }
-`;
-
-const Message = styled.div`
-  font-size: 1.8rem;
-`;
-
-const NotFound: React.FC = () => (
-  <Root>
-    <Message>
+const NotFound = () => (
+  <MessagePageTemplate>
+    <Txt size={`l`}>
       ページが見つかりませんでした。
       <br />
       トップページにお戻りください。
-    </Message>
-    <Dogeza
-      alt="ページが見つかりませんでした"
+    </Txt>
+    <Img
+      fluid={useAppContext().useDogezaImage()}
       style={{
+        width: 200,
         marginTop: appTheme.spacing4x,
       }}
+      alt={`ページが見つかりませんでした`}
     />
-  </Root>
+  </MessagePageTemplate>
 );
 
 export default NotFound;

@@ -1,27 +1,25 @@
 import * as React from 'react';
 import { navigate } from 'gatsby';
 import styled from '@src/styles/styled-components';
-import { appTheme } from '@src/styles/theme';
-import Layout from '@src/components/Layout';
-import SEO from '@src/components/SEO';
-import ErrorBoundary from '@src/components/ErrorBoundary';
-import PageTitle from '@src/components/PageTitle';
-import AppButton from '@src/components/AppButton';
-import AdTop from '@src/components/AdTop';
-import AdResponsive from '@src/components/AdResponsive';
-import { MenuType } from '@src/enums';
+import SingleContentPageTemplate from '@src/components/templates/SingleContentPageTemplate';
+import { EditButton } from '@src/components/molecules/IconLabelButton';
+import Paragraph from '@src/components/atoms/Paragraph';
 import { ROUTE_PATHS } from '@src/constants';
+import { MenuType } from '@src/enums';
 
-const Container = styled.section`
-  padding: ${({ theme }) => theme.spacing2x};
-  box-sizing: border-box;
+const Explain = styled(Paragraph)`
+  padding: ${({ theme }) => `${theme.spacing4x} ${theme.spacing2x}`};
 `;
 
-const Explain = styled.div`
-  margin: ${({ theme }) => `${theme.spacing4x} ${theme.spacing2x}`};
+const StartExamButton = styled(EditButton)`
+  ${({ theme }) => `
+    margin-top: ${theme.spacing4x};
+    margin-bottom: ${theme.spacing2x};
+    box-shadow: ${theme.elevationShadow1x};
+  `}
 `;
 
-const onSubmit = () => {
+const onSubmitHandler = () => {
   navigate(ROUTE_PATHS.EXAM_QUESTION, {
     state: {
       submitTime: new Date().getTime(),
@@ -29,41 +27,31 @@ const onSubmit = () => {
   });
 };
 
-const ExamPage: React.FC<{}> = () => {
-  const title = `百人一首 - 腕試し -`;
-  const description = '百人一首の暗記を練習できます。百首覚えられているかチャレンジしましょう。';
-  const onClickBack = () => {
-    navigate(ROUTE_PATHS.ROOT, { replace: true });
-  };
-
-  return (
-    <ErrorBoundary>
-      <Layout title={title} isDisplayNav={true} currentMenuType={MenuType.Exam} onClickBack={onClickBack}>
-        <SEO
-          title={title}
-          keywords={[`百人一首`, `小倉百人一首`, `歌`, `一覧`, `意味`, `歌番号`, `暗記`, `練習`]}
-          description={description}
-        />
-        <Container>
-          <PageTitle title="腕試し" />
-          <AdTop />
-          <Explain>
-            全百首からランダムに出題されます。
-            <br />
-            練習の成果を確認しましょう。
-          </Explain>
-          <AppButton
-            label="腕試しをはじめる"
-            icon="edit"
-            type="primary"
-            onClick={onSubmit}
-            style={{ marginTop: appTheme.spacing4x, marginBottom: appTheme.spacing2x }}
-          />
-          <AdResponsive />
-        </Container>
-      </Layout>
-    </ErrorBoundary>
-  );
+const onClickBackHandler = () => {
+  navigate(ROUTE_PATHS.ROOT, { replace: true });
 };
+
+const ExamPage = () => (
+  <SingleContentPageTemplate
+    title={`百人一首 - 腕試し -`}
+    description={`百人一首の暗記を練習できます。百首覚えられているかチャレンジしましょう。`}
+    keywords={[`百人一首`, `小倉百人一首`, `歌`, `一覧`, `意味`, `歌番号`, `暗記`, `練習`]}
+    pageTitle={`腕試し`}
+    menuType={MenuType.Exam}
+    onClickBack={onClickBackHandler}
+    content={
+      <>
+        <Explain size={`m`}>
+          全百首からランダムに出題されます。
+          <br />
+          練習の成果を確認しましょう。
+        </Explain>
+        <StartExamButton type={`primary`} onClick={onSubmitHandler}>
+          腕試しをはじめる
+        </StartExamButton>
+      </>
+    }
+  />
+);
 
 export default ExamPage;

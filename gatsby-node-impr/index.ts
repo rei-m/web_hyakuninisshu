@@ -1,7 +1,8 @@
 import { GatsbyCreatePages, GatsbySourceNodes } from './types';
 import axios from 'axios';
-import { Karuta } from '../src/types';
 import { resolve } from 'path';
+import { Karuta } from '../src/types';
+import { PageContext } from '../src/gatsbyPages/karutas/no';
 
 const KARUTA_JSON_URL =
   'https://raw.githubusercontent.com/rei-m/android_hyakuninisshu/develop/app/src/main/assets/karuta_list.json';
@@ -55,12 +56,14 @@ export const createPages: GatsbyCreatePages<{ karuta: Karuta }> = async ({ graph
   `);
   result.data.allKaruta.edges.map(data => {
     const karuta = JSON.parse(data.node.internal.content) as Karuta;
+    const context: PageContext = {
+      karuta,
+    };
+
     createPage({
       path: `/karutas/${karuta.no}`,
-      component: resolve(`./src/templates/karutas.tsx`),
-      context: {
-        karuta,
-      },
+      component: resolve(`./src/gatsbyPages/karutas/no.tsx`),
+      context,
     });
   });
 };

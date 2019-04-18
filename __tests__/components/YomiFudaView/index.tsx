@@ -1,7 +1,7 @@
 import * as ReactTestRenderer from 'react-test-renderer';
 import * as React from 'react';
 import { create } from '@test/factories';
-import YomiFudaView, { Props } from '@src/components/YomiFudaView';
+import YomiFudaView, { Props } from '@src/components/molecules/YomiFuda';
 import { YomiFuda } from '@src/types';
 
 describe('<YomiFudaView />', () => {

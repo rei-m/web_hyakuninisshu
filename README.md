@@ -4,11 +4,21 @@
 Hyakunin Isshu
 ========
 
-### Site
+## Site
 https://hyakuninanki.net/
 
-### Structure
-React / Redux / TypeScript / Gatsby
+## Structure
+### Language
+- TypeScript
 
-### Licence
+### FrameWork
+- [React](https://reactjs.org/)
+- [Gatsby](https://www.gatsbyjs.org/)
+
+### Style
+- Redux - re-ducks style
+- Based on Material Design
+- Atomic Design
+
+## Licence
 Licensed under the [MIT](./LICENSE).

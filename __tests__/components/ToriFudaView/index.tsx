@@ -2,7 +2,7 @@ import * as ReactTestRenderer from 'react-test-renderer';
 import * as React from 'react';
 import { shallow } from 'enzyme';
 import { create } from '@test/factories';
-import ToriFudaView, { Props } from '@src/components/ToriFudaView';
+import ToriFudaView, { Props } from '@src/components/molecules/ToriFuda';
 import { ToriFuda } from '@src/types';
 
 describe('<ToriFudaView />', () => {

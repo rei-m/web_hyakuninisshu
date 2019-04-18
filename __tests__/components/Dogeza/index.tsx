@@ -1,7 +1,7 @@
 import * as ReactTestRenderer from 'react-test-renderer';
 import * as React from 'react';
 import { setUpQueryOnce } from '@test/helpers';
-import Dogeza, { QueryData } from '@src/components/Dogeza';
+import Dogeza, { QueryData } from '@src/components/atoms/Dogeza';
 
 describe('<Dogeza />', () => {
   beforeEach(() => {

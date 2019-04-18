@@ -2,8 +2,8 @@ import * as ReactTestRenderer from 'react-test-renderer';
 import * as React from 'react';
 import { create } from '@test/factories';
 import { setUpQuery } from '@test/helpers';
-import KarutaCard from '@src/components/KarutaCard';
-import { QueryData } from '@src/components/KarutaImage';
+import KarutaCard from '@src/components/organisms/KarutaMaterial';
+import { QueryData } from '@src/components/atoms/KarutaImage';
 import { Karuta } from '@src/types';
 
 describe('<KarutaCard />', () => {

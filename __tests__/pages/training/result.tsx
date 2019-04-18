@@ -2,7 +2,7 @@ import * as ReactTestRenderer from 'react-test-renderer';
 import * as React from 'react';
 import { Provider } from 'react-redux';
 import TrainingResult, { QueryData as PageQueryData } from '@src/pages/training/result';
-import { DefaultSEOQueryData } from '@src/components/SEO';
+import { DefaultSEOQueryData } from '@src/components/atoms/SEO';
 import { createStore } from '@src/state';
 import { setUpQueryOnce } from '@test/helpers';
 import { QuestionState } from '@src/enums';

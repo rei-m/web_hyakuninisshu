@@ -1,7 +1,7 @@
 import * as ReactTestRenderer from 'react-test-renderer';
 import * as React from 'react';
 import About, { Props } from '@src/pages/about';
-import { DefaultSEOQueryData } from '@src/components/SEO';
+import { DefaultSEOQueryData } from '@src/components/atoms/SEO';
 import { setUpQueryOnce } from '@test/helpers';
 
 describe('/about', () => {

@@ -34,7 +34,9 @@ export const restartQuestions = () => (
   getState: () => GlobalState
 ) => {
   const { questions, answers } = getState().questions;
-  dispatch(actions.restartQuestions(questions, answers));
+  if (questions && answers) {
+    dispatch(actions.restartQuestions(questions, answers));
+  }
 };
 
 export const answerQuestion = (questionId: number, karutaNo: number) => (
@@ -42,12 +44,16 @@ export const answerQuestion = (questionId: number, karutaNo: number) => (
   getState: () => GlobalState
 ) => {
   const { questions, lastStartedTime } = getState().questions;
-  dispatch(actions.answerQuestion(questionId, karutaNo, questions, lastStartedTime));
+  if (questions) {
+    dispatch(actions.answerQuestion(questionId, karutaNo, questions, lastStartedTime));
+  }
 };
 
 export const confirmCorrect = () => (dispatch: Dispatch<types.ConfirmCorrectAction>, getState: () => GlobalState) => {
   const { questions, answers } = getState().questions;
-  dispatch(actions.confirmCorrect(questions, answers));
+  if (questions && answers) {
+    dispatch(actions.confirmCorrect(questions, answers));
+  }
 };
 
 export const openNextQuestion = () => (
