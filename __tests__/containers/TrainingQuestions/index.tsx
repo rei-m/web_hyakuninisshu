@@ -8,11 +8,11 @@ import {
   OwnProps,
   Props,
   TrainingQuestions,
-} from '@src/containers/TrainingQuestions';
+} from '@src/containers/organisms/TrainingQuestions';
 import TrainingInitializer from '@src/containers/TrainingInitializer';
-import QuestionView from '@src/components/QuestionView';
-import QuestionCorrect from '@src/components/QuestionCorrect';
-import ErrorMessage from '@src/components/ErrorMessage';
+import QuestionView from '@src/components/organisms/KarutaPlaying';
+import QuestionCorrect from '@src/components/organisms/KarutaPlayingCorrect';
+import ErrorMessage from '@src/components/atoms/ErrorMessage';
 import { MockStore } from 'redux-mock-store';
 import { initialState as questionsState } from '@src/state/questions/reducers';
 import { ANSWER_QUESTION_NAME, CONFIRM_CORRECT_NAME, OPEN_NEXT_QUESTION_NAME } from '@src/state/questions/constants';

@@ -6,7 +6,7 @@ export const gaEvent = (category: string, action: string, label: string) => {
       eventLabel: label,
     });
   } else {
-    console.info('[ga send]', {
+    console.info(`[ga send]`, {
       category,
       action,
       label,

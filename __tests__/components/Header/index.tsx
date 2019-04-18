@@ -2,7 +2,7 @@ import * as ReactTestRenderer from 'react-test-renderer';
 import * as React from 'react';
 import { shallow } from 'enzyme';
 import { sel } from '@test/helpers';
-import Header, { Props } from '@src/components/Header';
+import Header, { Props } from '@src/components/organisms/Header';
 
 describe('<Header />', () => {
   let baseProps: Props;

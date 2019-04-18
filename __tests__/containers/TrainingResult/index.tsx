@@ -1,9 +1,9 @@
 import { GlobalState } from '@src/state';
 import * as React from 'react';
 import { navigate } from 'gatsby';
-import { mapStateToProps, Props, TrainingResult } from '@src/containers/TrainingResult';
+import { mapStateToProps, Props, TrainingResult } from '@src/containers/organisms/TrainingResult';
 import TrainingResultView from '@src/components/TrainingResultView';
-import ErrorMessage from '@src/components/ErrorMessage';
+import ErrorMessage from '@src/components/atoms/ErrorMessage';
 import { shallow, ShallowWrapper } from 'enzyme';
 import { initialState as questionsState } from '@src/state/questions/reducers';
 import { initialState as uiState } from '@src/state/ui/reducers';

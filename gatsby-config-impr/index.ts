@@ -1,5 +1,5 @@
 import { SiteMetaData } from '../src/types';
-import { appTheme } from '../src/styles/theme';
+import { muiTheme } from '../src/styles/theme';
 import { GatsbyPlugin } from './types';
 
 export const siteMetadata: SiteMetaData = {
@@ -37,15 +37,7 @@ export const plugins: GatsbyPlugin[] = [
   {
     resolve: `gatsby-plugin-material-ui`,
     options: {
-      theme: {
-        palette: {
-          primary: { main: appTheme.colorPrimary },
-          secondary: { main: appTheme.colorPrimaryDark },
-          background: {
-            default: appTheme.colorThin,
-          },
-        },
-      },
+      theme: muiTheme,
     },
   },
   {
@@ -55,7 +47,7 @@ export const plugins: GatsbyPlugin[] = [
     },
   },
   `gatsby-plugin-typescript`,
-  `gatsby-plugin-remove-trailing-slashes`,
+  // `gatsby-plugin-remove-trailing-slashes`,
   `gatsby-plugin-styled-components`,
   `gatsby-plugin-no-sourcemaps`,
   {

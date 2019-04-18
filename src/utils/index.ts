@@ -3,12 +3,12 @@ import { Color, Kimariji } from '@src/types';
 
 const NUMS = ['一', '二', '三', '四', '五', '六', '七', '八', '九'];
 
-export const toChineseChar = (num: number) => {
+export const toChineseChar = (num: number): string => {
   if (num === 100) {
     return '百';
   }
 
-  const ret: string[] = [];
+  const ret: string[] = [''];
 
   const doubleDigits = Math.floor(num / 10);
   const singleDigits = num % 10;
@@ -27,14 +27,14 @@ export const toChineseChar = (num: number) => {
   return ret.join('');
 };
 
-export const toKarutaNoString = (karutaNo: number) => `${toChineseChar(karutaNo)}番`;
+export const toKarutaNoString = (karutaNo: number): string => `${toChineseChar(karutaNo)}番`;
 
-export const toKimarijiString = (kimariji: Kimariji) => `${toChineseChar(kimariji)}字決まり`;
+export const toKimarijiString = (kimariji: Kimariji): string => `${toChineseChar(kimariji)}字決まり`;
 
-export const toKimarijiConditionString = (kimarijiCondition: KimarijiCondition) =>
+export const toKimarijiConditionString = (kimarijiCondition: KimarijiCondition): string =>
   kimarijiCondition === KimarijiCondition.None ? '指定しない' : toKimarijiString(kimarijiCondition);
 
-export const toColorString = (color: Color) => {
+export const toColorString = (color: Color): string => {
   switch (color) {
     case 'blue':
       return '青色';
@@ -51,19 +51,21 @@ export const toColorString = (color: Color) => {
   }
 };
 
-export const toColorConditionString = (colorCondition: ColorCondition) =>
+export const toColorConditionString = (colorCondition: ColorCondition): string =>
   colorCondition === ColorCondition.None ? '指定しない' : toColorString(colorCondition);
 
-export const toKarutaStyleConditionString = (karutaStyle: KarutaStyleCondition) => {
+export const toKarutaStyleConditionString = (karutaStyle: KarutaStyleCondition): string => {
   switch (karutaStyle) {
     case KarutaStyleCondition.KanjiAndKana:
       return '漢字と仮名で表示';
     case KarutaStyleCondition.KanaOnly:
       return 'すべて仮名で表示';
+    default:
+      throw new Error(`unknown karutaStyle. value is ${karutaStyle}`);
   }
 };
 
-export const toQuestionAnimConditionString = (questionAnimCondition: QuestionAnimCondition) => {
+export const toQuestionAnimConditionString = (questionAnimCondition: QuestionAnimCondition): string => {
   switch (questionAnimCondition) {
     case QuestionAnimCondition.None:
       return 'なし';
@@ -73,6 +75,8 @@ export const toQuestionAnimConditionString = (questionAnimCondition: QuestionAni
       return 'ふつう';
     case QuestionAnimCondition.Fast:
       return 'はやめ';
+    default:
+      throw new Error(`unknown animCondition. value is ${questionAnimCondition}`);
   }
 };
 

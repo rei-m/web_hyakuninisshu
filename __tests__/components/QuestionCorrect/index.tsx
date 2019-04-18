@@ -3,7 +3,10 @@ import * as React from 'react';
 import { shallow } from 'enzyme';
 import { create } from '@test/factories';
 import { sel, setUpQueryOnce } from '@test/helpers';
-import QuestionCorrect, { Props, QueryData as QuestionCorrectQueryData } from '@src/components/QuestionCorrect';
+import QuestionCorrect, {
+  Props,
+  QueryData as QuestionCorrectQueryData,
+} from '@src/components/organisms/KarutaPlayingCorrect';
 import { Karuta } from '@src/types';
 
 describe('<QuestionCorrect />', () => {

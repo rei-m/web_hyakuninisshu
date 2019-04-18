@@ -1,10 +1,10 @@
 {
   "include": [
     "./src/**/*",
-    "./__tests__/**/*",
+    "./helper/**/*",
     "./@types/**/*.ts",
     "./gatsby-node-config/**/*",
-    "./gatsby-config-config/**/*"
+    "./gatsby-config-config/**/*",
   ],
   "compilerOptions": {
     /* Basic Options */
@@ -48,7 +48,7 @@
     "baseUrl": "./",                       /* Base directory to resolve non-absolute module names. */
     "paths": {
       "@src/*": [ "src/*" ],
-      "@test/*": [ "__tests__/*" ]
+      "@helper/*": [ "helper/*" ],
     },                           /* A series of entries which re-map imports to lookup locations relative to the 'baseUrl'. */
     // "rootDirs": [],                        /* List of root folders whose combined content represents the structure of the project at runtime. */
     "typeRoots": ["./@types"],                       /* List of folders to include type definitions from. */

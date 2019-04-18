@@ -3,8 +3,8 @@ import * as React from 'react';
 import { shallow } from 'enzyme';
 import { create } from '@test/factories';
 import { sel, setUpQuery } from '@test/helpers';
-import ExamResultView, { Props } from '@src/components/ExamResultView';
-import { QueryData as QuestionResultQueryData } from '@src/components/QuestionResult';
+import ExamResultView, { Props } from '@src/containers/organisms/ExamResult';
+import { QueryData as QuestionResultQueryData } from '@src/components/atoms/CorrectImage';
 import { Answer, Question } from '@src/types';
 
 describe('<ExamResultView />', () => {

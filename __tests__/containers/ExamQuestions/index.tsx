@@ -2,10 +2,16 @@ import { GlobalState } from '@src/state';
 import * as React from 'react';
 import { shallow, ShallowWrapper } from 'enzyme';
 import { navigate } from 'gatsby';
-import { mapDispatchToProps, mapStateToProps, ExamQuestions, OwnProps, Props } from '@src/containers/ExamQuestions';
+import {
+  mapDispatchToProps,
+  mapStateToProps,
+  ExamQuestions,
+  OwnProps,
+  Props,
+} from '@src/containers/organisms/ExamQuestions';
 import ExamInitializer from '@src/containers/ExamInitializer';
-import QuestionView from '@src/components/QuestionView';
-import QuestionCorrect from '@src/components/QuestionCorrect';
+import QuestionView from '@src/components/organisms/KarutaPlaying';
+import QuestionCorrect from '@src/components/organisms/KarutaPlayingCorrect';
 import { MockStore } from 'redux-mock-store';
 import { initialState as questionsState } from '@src/state/questions/reducers';
 import { ANSWER_QUESTION_NAME, CONFIRM_CORRECT_NAME, OPEN_NEXT_QUESTION_NAME } from '@src/state/questions/constants';

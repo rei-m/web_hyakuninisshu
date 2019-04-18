@@ -3,7 +3,7 @@ import * as React from 'react';
 import { shallow } from 'enzyme';
 import { create } from '@test/factories';
 import { setUpQueryOnce } from '@test/helpers';
-import QuestionResult, { Props, QueryData } from '@src/components/QuestionResult';
+import QuestionResult, { Props, QueryData } from '@src/components/atoms/CorrectImage';
 import { Answer } from '@src/types';
 
 describe('<QuestionResult />', () => {
