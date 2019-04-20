@@ -1079,6 +1079,28 @@
     prop-types "^15.6.2"
     qs "^6.5.2"
 
+"@storybook/addon-storyshots@^5.0.10":
+  version "5.0.10"
+  resolved "https://registry.yarnpkg.com/@storybook/addon-storyshots/-/addon-storyshots-5.0.10.tgz#315f3f917df3f3733db39973268f70f12c944e86"
+  dependencies:
+    "@storybook/addons" "5.0.10"
+    core-js "^2.6.5"
+    glob "^7.1.3"
+    global "^4.3.2"
+    jest-specific-snapshot "^1.0.0"
+    read-pkg-up "^4.0.0"
+    regenerator-runtime "^0.12.1"
+
+"@storybook/addons@5.0.10":
+  version "5.0.10"
+  resolved "https://registry.yarnpkg.com/@storybook/addons/-/addons-5.0.10.tgz#8911e6e7797185327f0117035a4bc451a57e62d7"
+  dependencies:
+    "@storybook/channels" "5.0.10"
+    "@storybook/client-logger" "5.0.10"
+    core-js "^2.6.5"
+    global "^4.3.2"
+    util-deprecate "^1.0.2"
+
 "@storybook/addons@5.0.9", "@storybook/addons@^5.0.9":
   version "5.0.9"
   resolved "https://registry.yarnpkg.com/@storybook/addons/-/addons-5.0.9.tgz#27791868c84acf36e16ec7b0c61c878b82dbae32"
@@ -1098,6 +1120,12 @@
     core-js "^2.6.5"
     global "^4.3.2"
     telejson "^2.1.0"
+
+"@storybook/channels@5.0.10":
+  version "5.0.10"
+  resolved "https://registry.yarnpkg.com/@storybook/channels/-/channels-5.0.10.tgz#b1ae31784359a3d12403a53a5be8eb2327c4a467"
+  dependencies:
+    core-js "^2.6.5"
 
 "@storybook/channels@5.0.9":
   version "5.0.9"
@@ -1123,6 +1151,12 @@
     lodash.mergewith "^4.6.1"
     memoizerific "^1.11.3"
     qs "^6.5.2"
+
+"@storybook/client-logger@5.0.10":
+  version "5.0.10"
+  resolved "https://registry.yarnpkg.com/@storybook/client-logger/-/client-logger-5.0.10.tgz#710b249c30aa320a0aef7da464d7e621a390bf92"
+  dependencies:
+    core-js "^2.6.5"
 
 "@storybook/client-logger@5.0.9":
   version "5.0.9"
@@ -2636,6 +2670,10 @@ babel-plugin-react-docgen@^2.0.2:
 babel-plugin-remove-graphql-queries@^2.6.3:
   version "2.6.3"
   resolved "https://registry.yarnpkg.com/babel-plugin-remove-graphql-queries/-/babel-plugin-remove-graphql-queries-2.6.3.tgz#f106bc38229789c62e27a3a32d04deb7342bf15d"
+
+babel-plugin-require-context-hook@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/babel-plugin-require-context-hook/-/babel-plugin-require-context-hook-1.0.0.tgz#3f0e7cce87c338f53639b948632fd4e73834632d"
 
 "babel-plugin-styled-components@>= 1", babel-plugin-styled-components@^1.10.0:
   version "1.10.0"
@@ -4229,6 +4267,15 @@ css-vendor@^0.3.8:
 css-what@2.1, css-what@^2.1.2:
   version "2.1.3"
   resolved "https://registry.yarnpkg.com/css-what/-/css-what-2.1.3.tgz#a6d7604573365fe74686c3f311c56513d88285f2"
+
+css@^2.2.4:
+  version "2.2.4"
+  resolved "https://registry.yarnpkg.com/css/-/css-2.2.4.tgz#c646755c73971f2bba6a601e2cf2fd71b1298929"
+  dependencies:
+    inherits "^2.0.3"
+    source-map "^0.6.1"
+    source-map-resolve "^0.5.2"
+    urix "^0.1.0"
 
 cssesc@^0.1.0:
   version "0.1.0"
@@ -8123,6 +8170,18 @@ jest-snapshot@^23.6.0:
     pretty-format "^23.6.0"
     semver "^5.5.0"
 
+jest-specific-snapshot@^1.0.0:
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/jest-specific-snapshot/-/jest-specific-snapshot-1.1.0.tgz#3eaa12a79105ebe73453e2e174c4c0014445d890"
+  dependencies:
+    jest-snapshot "^23.6.0"
+
+jest-styled-components@^6.3.1:
+  version "6.3.1"
+  resolved "https://registry.yarnpkg.com/jest-styled-components/-/jest-styled-components-6.3.1.tgz#fa21a89bfe8c20081c7c083cbaed2200854b60e3"
+  dependencies:
+    css "^2.2.4"
+
 jest-util@^23.4.0:
   version "23.4.0"
   resolved "https://registry.yarnpkg.com/jest-util/-/jest-util-23.4.0.tgz#4d063cb927baf0a23831ff61bec2cbbf49793561"
@@ -8589,6 +8648,15 @@ load-json-file@^2.0.0:
     graceful-fs "^4.1.2"
     parse-json "^2.2.0"
     pify "^2.0.0"
+    strip-bom "^3.0.0"
+
+load-json-file@^4.0.0:
+  version "4.0.0"
+  resolved "https://registry.yarnpkg.com/load-json-file/-/load-json-file-4.0.0.tgz#2f5f45ab91e33216234fd53adab668eb4ec0993b"
+  dependencies:
+    graceful-fs "^4.1.2"
+    parse-json "^4.0.0"
+    pify "^3.0.0"
     strip-bom "^3.0.0"
 
 loader-fs-cache@^1.0.0:
@@ -11256,6 +11324,13 @@ read-pkg-up@^2.0.0:
     find-up "^2.0.0"
     read-pkg "^2.0.0"
 
+read-pkg-up@^4.0.0:
+  version "4.0.0"
+  resolved "https://registry.yarnpkg.com/read-pkg-up/-/read-pkg-up-4.0.0.tgz#1b221c6088ba7799601c808f91161c66e58f8978"
+  dependencies:
+    find-up "^3.0.0"
+    read-pkg "^3.0.0"
+
 read-pkg@^1.0.0:
   version "1.1.0"
   resolved "https://registry.yarnpkg.com/read-pkg/-/read-pkg-1.1.0.tgz#f5ffaa5ecd29cb31c0474bca7d756b6bb29e3f28"
@@ -11271,6 +11346,14 @@ read-pkg@^2.0.0:
     load-json-file "^2.0.0"
     normalize-package-data "^2.3.2"
     path-type "^2.0.0"
+
+read-pkg@^3.0.0:
+  version "3.0.0"
+  resolved "https://registry.yarnpkg.com/read-pkg/-/read-pkg-3.0.0.tgz#9cbc686978fee65d16c00e2b19c237fcf6e38389"
+  dependencies:
+    load-json-file "^4.0.0"
+    normalize-package-data "^2.3.2"
+    path-type "^3.0.0"
 
 read@^1.0.7:
   version "1.0.7"
@@ -12195,7 +12278,7 @@ source-list-map@^2.0.0:
   version "2.0.1"
   resolved "https://registry.yarnpkg.com/source-list-map/-/source-list-map-2.0.1.tgz#3993bd873bfc48479cca9ea3a547835c7c154b34"
 
-source-map-resolve@^0.5.0:
+source-map-resolve@^0.5.0, source-map-resolve@^0.5.2:
   version "0.5.2"
   resolved "https://registry.yarnpkg.com/source-map-resolve/-/source-map-resolve-0.5.2.tgz#72e2cc34095543e43b2c62b2c4c10d4a9054f259"
   dependencies:

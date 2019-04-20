@@ -5,7 +5,6 @@ import Select from '@material-ui/core/Select';
 import MenuItem from '@material-ui/core/MenuItem';
 import styled from '@src/styles/styled-components';
 import { appTheme } from '@src/styles/theme';
-import Txt from '@src/components/atoms/Txt';
 import CenteredFrame from '@src/components/atoms/CenteredFrame';
 
 export interface Props {
