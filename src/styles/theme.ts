@@ -1,3 +1,5 @@
+import { ThemeOptions } from '@material-ui/core/styles/createMuiTheme';
+
 export const SPACING_UNIT = 8;
 
 export const appTheme = {
@@ -39,13 +41,16 @@ export const appTheme = {
   `,
 };
 
-export const muiTheme = {
+export const muiTheme: ThemeOptions = {
   palette: {
     primary: { main: appTheme.colorPrimary },
     secondary: { main: appTheme.colorPrimaryDark },
     background: {
       default: appTheme.colorThin,
     },
+  },
+  typography: {
+    useNextVariants: true,
   },
 };
 

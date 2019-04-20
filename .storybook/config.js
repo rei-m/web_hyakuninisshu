@@ -24,17 +24,23 @@ window.twttr = {
 import typography from '@src/styles/typography';
 typography.injectStyles()
 
-import {
-  createMuiTheme,
-  MuiThemeProvider,
-} from '@material-ui/core/styles';
 import { ThemeProvider } from '@src/styles/styled-components';
+import { createMuiTheme, MuiThemeProvider } from '@material-ui/core/styles';
+
+// MUIが生成するClassNameの差分をなくす対応
+// @see https://github.com/mui-org/material-ui/issues/9492#issuecomment-410443974
+import JssProvider from 'react-jss/lib/JssProvider';
+
 import { appTheme, muiTheme } from '@src/styles/theme';
+
+const generateClassName = (rule, styleSheet) => `${styleSheet.options.classNamePrefix}-${rule.key}`;
 
 addDecorator(story =>
   <ThemeProvider theme={appTheme}>
     <MuiThemeProvider theme={createMuiTheme(muiTheme)}>
-      {story()}
+      <JssProvider generateClassName={generateClassName}>
+        {story()}
+      </JssProvider>
     </MuiThemeProvider>
   </ThemeProvider>
 )

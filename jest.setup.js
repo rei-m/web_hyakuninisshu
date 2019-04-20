@@ -7,3 +7,14 @@ window.twttr = {
     load: (arg) => {}
   }
 }
+
+// import React from 'react';
+// import ReactDOM from 'react-dom';
+// ReactDOM.createPortal = (element, node) => {
+//   return (
+//     <div>
+//       <div>{element}</div>
+//       <div data-target-tag-name={node.tagName}></div>
+//     </div>
+//   );
+// };

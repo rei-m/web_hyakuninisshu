@@ -4,7 +4,8 @@ module.exports = {
     "^.+\\.jsx?$": "<rootDir>/jest-preprocess.js"
   },
   "testMatch": [
-    "**/src/**/*.test.ts?(x)"
+    "**/src/**/*.test.ts?(x)",
+    "**/.storybook/**/*.test.js?(x)",
   ],
   "moduleNameMapper": {
     ".+\\.(css|styl|less|sass|scss)$": "identity-obj-proxy",
@@ -19,10 +20,16 @@ module.exports = {
     "__PATH_PREFIX__": ""
   },
   "testURL": "http://localhost",
-  "setupFiles": ["<rootDir>/loadershim.js", "<rootDir>/jest.setup.js"],
+  "setupFiles": [
+    "<rootDir>/loadershim.js",
+    "<rootDir>/.jest/register-context.js",
+    "<rootDir>/jest.setup.js"
+  ],
   "collectCoverage": false,
   "collectCoverageFrom": [
-    "src/**/*.ts?(x)"
+    "src/**/*.ts?(x)",
+    "!src/**/*.stories.ts?(x)",
+    "!src/**/*.test.ts?(x)",
   ],
   "coverageDirectory": "./coverage/",
 }
