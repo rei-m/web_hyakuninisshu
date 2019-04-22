@@ -24,6 +24,7 @@ const Container = styled(Block)`
   box-sizing: border-box;
   max-width: 960px;
   margin: auto;
+  background-color: ${({ theme }) => theme.colorThin};
 `;
 
 const TripleContentsPageTemplate = ({
