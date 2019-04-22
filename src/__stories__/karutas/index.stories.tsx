@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { storiesOf } from '@storybook/react';
-import { appContextDecorator } from '@helper/storybook';
+import { appContextDecorator, reduxStoreDecorator } from '@helper/storybook';
 import KarutasPage, { OwnProps } from '@src/pages/karutas';
 import { create } from '@helper/factory';
 import { Karuta } from '@src/types';
@@ -27,4 +27,5 @@ const props: OwnProps = {
 
 storiesOf('pages/karutas', module)
   .addDecorator(story => appContextDecorator(story))
+  .addDecorator(story => reduxStoreDecorator(story))
   .add('default', () => <KarutasPage {...props} />);

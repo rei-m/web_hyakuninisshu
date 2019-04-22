@@ -22,6 +22,7 @@ const Container = styled.section`
   padding: ${({ theme }) => theme.spacing2x};
   box-sizing: border-box;
   width: 100%;
+  background-color: ${({ theme }) => theme.colorThin};
 `;
 
 const SectionTitle = styled(Heading)`
