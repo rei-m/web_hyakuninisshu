@@ -26,7 +26,7 @@ const Container = styled(CenteredFrame)<IconWrapperProps>`
   }
   &:after {
     content: '${props => props.menuType}';
-    margin-top: 12px;
+    bottom: 8px;
     position: absolute;
     font-size: 1.2rem;
     opacity: 1;
