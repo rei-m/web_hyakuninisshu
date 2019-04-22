@@ -1,7 +1,7 @@
 module.exports = {
   "transform": {
     "^.+\\.tsx?$": "ts-jest",
-    "^.+\\.jsx?$": "<rootDir>/jest-preprocess.js"
+    "^.+\\.jsx?$": "<rootDir>/.jest/preprocess.js"
   },
   "testMatch": [
     "**/src/**/*.test.ts?(x)",
@@ -21,9 +21,10 @@ module.exports = {
   },
   "testURL": "http://localhost",
   "setupFiles": [
-    "<rootDir>/loadershim.js",
+    "<rootDir>/.jest/loadershim.js",
     "<rootDir>/.jest/register-context.js",
-    "<rootDir>/jest.setup.js"
+    "<rootDir>/.jest/setup-twitter.js",
+    "<rootDir>/.jest/setup-enzyme.js",
   ],
   "collectCoverage": false,
   "collectCoverageFrom": [
