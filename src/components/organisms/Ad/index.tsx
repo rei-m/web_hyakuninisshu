@@ -63,7 +63,7 @@ export const AdProduction = ({ type, style }: Props) => (
           className={`ad_top`}
           style={{ display: 'inline-block' }}
           format={``}
-          responsive={`true`}
+          responsive={``}
         />
       </>
     ) : (
