@@ -1,6 +1,6 @@
 import * as React from 'react';
 import Helmet from 'react-helmet';
-import { useAppContext } from '@src/hooks/useAppContext';
+import { useSEO } from '@src/hooks/staticQueries/useSEO';
 
 export interface Props {
   description?: string;
@@ -12,9 +12,8 @@ export interface Props {
   keywords?: string[];
   title: string;
 }
-
 const SEO = ({ description, lang = 'ja', meta = [], keywords = [], title }: Props) => {
-  const { site, ogpImage } = useAppContext().useSEO();
+  const { site, ogpImage } = useSEO();
   const checkedTitle = title || site.siteMetadata.title;
   const checkedDescription = description || site.siteMetadata.description;
   return (

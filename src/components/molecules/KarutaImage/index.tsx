@@ -1,6 +1,6 @@
 import * as React from 'react';
 import Img from 'gatsby-image';
-import { useAppContext } from '@src/hooks/useAppContext';
+import { useKarutaImage } from '@src/hooks/staticQueries/useKarutaImage';
 import { toKarutaNoString } from '@src/utils';
 
 export interface Props {
@@ -10,12 +10,7 @@ export interface Props {
 }
 
 const KarutaImage: React.FC<Props> = ({ karutaNo, className, style }) => (
-  <Img
-    fluid={useAppContext().useKarutaImage(karutaNo)}
-    className={className}
-    style={style}
-    alt={toKarutaNoString(karutaNo)}
-  />
+  <Img fluid={useKarutaImage(karutaNo)} className={className} style={style} alt={toKarutaNoString(karutaNo)} />
 );
 
 export default React.memo(KarutaImage, (prevProps, nextProps) => prevProps.karutaNo === nextProps.karutaNo);

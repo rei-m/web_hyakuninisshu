@@ -17,7 +17,7 @@ export interface QueryData {
 export const useCorrectImage = () => {
   const { correctImage, incorrectImage } = useStaticQuery(
     graphql`
-      query {
+      query CorrectImageQuery {
         correctImage: file(relativePath: { eq: "check_correct.png" }) {
           childImageSharp {
             fluid(maxWidth: 300) {

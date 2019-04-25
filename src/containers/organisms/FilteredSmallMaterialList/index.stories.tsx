@@ -3,7 +3,6 @@ import { storiesOf } from '@storybook/react';
 import { FilteredSmallMaterialList } from './index';
 import { create } from '@helper/factory';
 import { Karuta } from '@src/types';
-import { appContextDecorator } from '@helper/storybook';
 
 const karutas = [...Array(100).keys()].map(i =>
   create<Karuta>('karuta', {
@@ -12,6 +11,5 @@ const karutas = [...Array(100).keys()].map(i =>
 );
 
 storiesOf('organisms/FilteredSmallMaterialList', module)
-  .addDecorator(story => appContextDecorator(story))
   .add('default', () => <FilteredSmallMaterialList karutas={karutas} />)
   .add('empty', () => <FilteredSmallMaterialList karutas={[]} />);

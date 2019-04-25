@@ -3,7 +3,7 @@ import Img from 'gatsby-image';
 import { appTheme } from '@src/styles/theme';
 import MessagePageTemplate from '@src/components/templates/MessagePageTemplate';
 import Txt from '@src/components/atoms/Txt';
-import { useAppContext } from '@src/hooks/useAppContext';
+import { useDogezaImage } from '@src/hooks/staticQueries/useDogezaImage';
 import { AppError, UNKNOWN_MESSAGE } from '@src/errors';
 
 export interface State {
@@ -35,7 +35,7 @@ export default class ErrorBoundary extends React.Component<{}, State> {
         <MessagePageTemplate>
           <Txt size={`l`}>{message}</Txt>
           <Img
-            fluid={useAppContext().useDogezaImage()}
+            fluid={useDogezaImage()}
             style={{
               width: 200,
               marginTop: appTheme.spacing4x,

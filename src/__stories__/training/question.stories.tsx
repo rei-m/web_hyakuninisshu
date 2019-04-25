@@ -1,6 +1,5 @@
 import * as React from 'react';
 import { storiesOf } from '@storybook/react';
-import { appContextDecorator } from '@helper/storybook';
 import TrainingQuestionPage, { Props } from '@src/pages/training/question';
 import { create } from '@helper/factory';
 import { Karuta } from '@src/types';
@@ -25,6 +24,4 @@ const props: Props = {
   },
 };
 
-storiesOf('pages/training/question', module)
-  .addDecorator(story => appContextDecorator(story))
-  .add('default', () => <TrainingQuestionPage {...props} />);
+storiesOf('pages/training/question', module).add('default', () => <TrainingQuestionPage {...props} />);

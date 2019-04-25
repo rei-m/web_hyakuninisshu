@@ -5,7 +5,6 @@ import { PresenterProps, ReviewQuestionsPresenter } from './index';
 import { create } from '@helper/factory';
 import { Answer, Question } from '@src/types';
 import { QuestionState } from '@src/enums';
-import { appContextDecorator } from '@helper/storybook';
 
 const question = create<Question>('question');
 const answer = create<Answer>('answer');
@@ -26,7 +25,6 @@ const props: PresenterProps = {
 };
 
 storiesOf('organisms/ReviewQuestions', module)
-  .addDecorator(story => appContextDecorator(story))
   .add('waiting', () => <ReviewQuestionsPresenter {...props} ready={false} />)
   .add('in answer', () => (
     <ReviewQuestionsPresenter {...props} questionState={QuestionState.InAnswer} answer={undefined} />

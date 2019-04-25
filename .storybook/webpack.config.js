@@ -38,7 +38,7 @@ module.exports = ({ config }) => {
     ...config.resolve.alias,
     '@src': resolve(__dirname, '../src'),
     '@helper': resolve(__dirname, '../helper'),
-    'gatsby': resolve(__dirname, '../__mocks__/gatsby-storybook'),
+    'gatsby': resolve(__dirname, '../__mocks__/gatsby'),
   }
 
   return config

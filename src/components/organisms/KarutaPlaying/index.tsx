@@ -5,7 +5,7 @@ import Block from '@src/components/atoms/Block';
 import Ratio from '@src/components/atoms/Ratio';
 import YomiFuda from '@src/components/molecules/YomiFuda';
 import ToriFuda from '@src/components/molecules/ToriFuda';
-import { useAppContext } from '@src/hooks/useAppContext';
+import { useCorrectImage } from '@src/hooks/staticQueries/useCorrectImage';
 import { Answer, Question, ToriFuda as ToriFudaType } from '@src/types';
 
 export interface Props {
@@ -96,9 +96,7 @@ const KarutaPlaying = ({
     {answer && (
       <CorrectImageContainer onClick={onClickResult} data-test="result">
         <CorrectImage
-          fluid={useAppContext()
-            .useCorrectImage()
-            .find((_, i) => (i === 0 && answer.correct) || (i === 1 && !answer.correct))}
+          fluid={useCorrectImage().find((_, i) => (i === 0 && answer.correct) || (i === 1 && !answer.correct))}
         />
       </CorrectImageContainer>
     )}

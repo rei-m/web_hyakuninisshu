@@ -5,7 +5,7 @@ module.exports = {
   },
   "testMatch": [
     "**/src/**/*.test.ts?(x)",
-    "**/.storybook/**/*.test.js?(x)",
+    "**/__test__/**/*.test.js?(x)",
   ],
   "moduleNameMapper": {
     ".+\\.(css|styl|less|sass|scss)$": "identity-obj-proxy",
