@@ -1,7 +1,7 @@
 import { graphql, useStaticQuery } from 'gatsby';
 import { SiteMetaData } from '@src/types';
 
-export interface DefaultSEOQueryData {
+export interface QueryData {
   site: {
     siteMetadata: SiteMetaData;
   };
@@ -10,10 +10,10 @@ export interface DefaultSEOQueryData {
   };
 }
 
-export const useSEO = (): DefaultSEOQueryData =>
+export const useSEO = (): QueryData =>
   useStaticQuery(
     graphql`
-      query DefaultSEOQuery {
+      query SEOQuery {
         site {
           siteMetadata {
             title

@@ -5,7 +5,6 @@ import { PresenterProps, TrainingQuestionsPresenter } from './index';
 import { create } from '@helper/factory';
 import { Answer, Question } from '@src/types';
 import { QuestionState } from '@src/enums';
-import { appContextDecorator } from '@helper/storybook';
 
 const question = create<Question>('question');
 const answer = create<Answer>('answer');
@@ -25,7 +24,6 @@ const props: PresenterProps = {
 };
 
 storiesOf('organisms/TrainingQuestions', module)
-  .addDecorator(story => appContextDecorator(story))
   .add('waiting', () => <TrainingQuestionsPresenter {...props} ready={false} />)
   .add('in answer', () => (
     <TrainingQuestionsPresenter {...props} questionState={QuestionState.InAnswer} answer={undefined} />

@@ -2,7 +2,6 @@ import * as React from 'react';
 import { storiesOf } from '@storybook/react';
 import { action } from '@storybook/addon-actions';
 import { Props, TrainingMenuForm } from './index';
-import { appContextDecorator } from '@helper/storybook';
 import {
   ColorCondition,
   KarutaStyleCondition,
@@ -23,6 +22,4 @@ const props: Props = {
   onSubmit: action('onSubmit'),
 };
 
-storiesOf('organisms/TrainingMenuForm', module)
-  .addDecorator(story => appContextDecorator(story))
-  .add('default', () => <TrainingMenuForm {...props} />);
+storiesOf('organisms/TrainingMenuForm', module).add('default', () => <TrainingMenuForm {...props} />);

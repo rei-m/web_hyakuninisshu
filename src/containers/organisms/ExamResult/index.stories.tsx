@@ -4,7 +4,6 @@
 // import { ExamResultPresenter, PresenterProps } from './index';
 // import { create } from '@helper/factory';
 // import { Answer, Karuta, Question } from '@src/types';
-// import { appContextDecorator } from '@helper/storybook';
 
 // const questions = [...Array(100).keys()].map(_ => create<Question>('question'));
 // const answers = [...Array(100).keys()].map(_ => create<Answer>('answer'));
@@ -20,6 +19,5 @@
 // };
 
 // storiesOf('organisms/ExamResult', module)
-//   .addDecorator(story => appContextDecorator(story))
 //   .add('default', () => <ExamResultPresenter {...props} />)
 //   .add('open karuta', () => <ExamResultPresenter {...props} displayedKaruta={karuta} />);

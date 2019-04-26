@@ -1,6 +1,6 @@
 import * as React from 'react';
 import styled from '@src/styles/styled-components';
-import { useAppContext } from '@src/hooks/useAppContext';
+import { useTatamiImage } from '@src/hooks/staticQueries/useTatamiImage';
 
 export interface Props {
   tag?: React.ElementType;
@@ -16,7 +16,7 @@ export interface PresenterProps {
 export type ContainerProps = Props & { presenter: React.FC<PresenterProps> };
 
 export const TatamiLayoutContainer: React.FC<ContainerProps> = ({ presenter, children, tag = 'div', className }) => {
-  const url = useAppContext().useTatamiImage();
+  const url = useTatamiImage();
   const Tag = styled(tag)``;
   return presenter({ Tag, className, children, bgImageUrl: url });
 };
