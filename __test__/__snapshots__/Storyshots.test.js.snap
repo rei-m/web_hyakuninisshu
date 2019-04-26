@@ -2149,7 +2149,7 @@ exports[`Storyshots molecules/QuestionJudgement with correct 1`] = `
                 "opacity": 0,
                 "position": "absolute",
                 "top": 0,
-                "transition": "opacity 0.5s",
+                "transition": "opacity 500ms",
                 "width": "100%",
               }
             }
@@ -2270,7 +2270,7 @@ exports[`Storyshots molecules/QuestionJudgement with incorrect 1`] = `
                 "opacity": 0,
                 "position": "absolute",
                 "top": 0,
-                "transition": "opacity 0.5s",
+                "transition": "opacity 500ms",
                 "width": "100%",
               }
             }
@@ -5085,7 +5085,7 @@ exports[`Storyshots organisms/ExamQuestions answered 1`] = `
               "opacity": 0,
               "position": "absolute",
               "top": 0,
-              "transition": "opacity 0.5s",
+              "transition": "opacity 500ms",
               "width": "100%",
             }
           }
@@ -7538,7 +7538,7 @@ exports[`Storyshots organisms/FilteredSmallMaterialList default 1`] = `
                     "opacity": 0,
                     "position": "absolute",
                     "top": 0,
-                    "transition": "opacity 0.5s",
+                    "transition": "opacity 500ms",
                     "width": "100%",
                   }
                 }
@@ -7628,7 +7628,7 @@ exports[`Storyshots organisms/FilteredSmallMaterialList default 1`] = `
                     "opacity": 0,
                     "position": "absolute",
                     "top": 0,
-                    "transition": "opacity 0.5s",
+                    "transition": "opacity 500ms",
                     "width": "100%",
                   }
                 }
@@ -7718,7 +7718,7 @@ exports[`Storyshots organisms/FilteredSmallMaterialList default 1`] = `
                     "opacity": 0,
                     "position": "absolute",
                     "top": 0,
-                    "transition": "opacity 0.5s",
+                    "transition": "opacity 500ms",
                     "width": "100%",
                   }
                 }
@@ -7808,7 +7808,7 @@ exports[`Storyshots organisms/FilteredSmallMaterialList default 1`] = `
                     "opacity": 0,
                     "position": "absolute",
                     "top": 0,
-                    "transition": "opacity 0.5s",
+                    "transition": "opacity 500ms",
                     "width": "100%",
                   }
                 }
@@ -7898,7 +7898,7 @@ exports[`Storyshots organisms/FilteredSmallMaterialList default 1`] = `
                     "opacity": 0,
                     "position": "absolute",
                     "top": 0,
-                    "transition": "opacity 0.5s",
+                    "transition": "opacity 500ms",
                     "width": "100%",
                   }
                 }
@@ -7988,7 +7988,7 @@ exports[`Storyshots organisms/FilteredSmallMaterialList default 1`] = `
                     "opacity": 0,
                     "position": "absolute",
                     "top": 0,
-                    "transition": "opacity 0.5s",
+                    "transition": "opacity 500ms",
                     "width": "100%",
                   }
                 }
@@ -8078,7 +8078,7 @@ exports[`Storyshots organisms/FilteredSmallMaterialList default 1`] = `
                     "opacity": 0,
                     "position": "absolute",
                     "top": 0,
-                    "transition": "opacity 0.5s",
+                    "transition": "opacity 500ms",
                     "width": "100%",
                   }
                 }
@@ -8168,7 +8168,7 @@ exports[`Storyshots organisms/FilteredSmallMaterialList default 1`] = `
                     "opacity": 0,
                     "position": "absolute",
                     "top": 0,
-                    "transition": "opacity 0.5s",
+                    "transition": "opacity 500ms",
                     "width": "100%",
                   }
                 }
@@ -8258,7 +8258,7 @@ exports[`Storyshots organisms/FilteredSmallMaterialList default 1`] = `
                     "opacity": 0,
                     "position": "absolute",
                     "top": 0,
-                    "transition": "opacity 0.5s",
+                    "transition": "opacity 500ms",
                     "width": "100%",
                   }
                 }
@@ -8348,7 +8348,7 @@ exports[`Storyshots organisms/FilteredSmallMaterialList default 1`] = `
                     "opacity": 0,
                     "position": "absolute",
                     "top": 0,
-                    "transition": "opacity 0.5s",
+                    "transition": "opacity 500ms",
                     "width": "100%",
                   }
                 }
@@ -8438,7 +8438,7 @@ exports[`Storyshots organisms/FilteredSmallMaterialList default 1`] = `
                     "opacity": 0,
                     "position": "absolute",
                     "top": 0,
-                    "transition": "opacity 0.5s",
+                    "transition": "opacity 500ms",
                     "width": "100%",
                   }
                 }
@@ -8528,7 +8528,7 @@ exports[`Storyshots organisms/FilteredSmallMaterialList default 1`] = `
                     "opacity": 0,
                     "position": "absolute",
                     "top": 0,
-                    "transition": "opacity 0.5s",
+                    "transition": "opacity 500ms",
                     "width": "100%",
                   }
                 }
@@ -8618,7 +8618,7 @@ exports[`Storyshots organisms/FilteredSmallMaterialList default 1`] = `
                     "opacity": 0,
                     "position": "absolute",
                     "top": 0,
-                    "transition": "opacity 0.5s",
+                    "transition": "opacity 500ms",
                     "width": "100%",
                   }
                 }
@@ -8708,7 +8708,7 @@ exports[`Storyshots organisms/FilteredSmallMaterialList default 1`] = `
                     "opacity": 0,
                     "position": "absolute",
                     "top": 0,
-                    "transition": "opacity 0.5s",
+                    "transition": "opacity 500ms",
                     "width": "100%",
                   }
                 }
@@ -8798,7 +8798,7 @@ exports[`Storyshots organisms/FilteredSmallMaterialList default 1`] = `
                     "opacity": 0,
                     "position": "absolute",
                     "top": 0,
-                    "transition": "opacity 0.5s",
+                    "transition": "opacity 500ms",
                     "width": "100%",
                   }
                 }
@@ -8888,7 +8888,7 @@ exports[`Storyshots organisms/FilteredSmallMaterialList default 1`] = `
                     "opacity": 0,
                     "position": "absolute",
                     "top": 0,
-                    "transition": "opacity 0.5s",
+                    "transition": "opacity 500ms",
                     "width": "100%",
                   }
                 }
@@ -8978,7 +8978,7 @@ exports[`Storyshots organisms/FilteredSmallMaterialList default 1`] = `
                     "opacity": 0,
                     "position": "absolute",
                     "top": 0,
-                    "transition": "opacity 0.5s",
+                    "transition": "opacity 500ms",
                     "width": "100%",
                   }
                 }
@@ -9068,7 +9068,7 @@ exports[`Storyshots organisms/FilteredSmallMaterialList default 1`] = `
                     "opacity": 0,
                     "position": "absolute",
                     "top": 0,
-                    "transition": "opacity 0.5s",
+                    "transition": "opacity 500ms",
                     "width": "100%",
                   }
                 }
@@ -9158,7 +9158,7 @@ exports[`Storyshots organisms/FilteredSmallMaterialList default 1`] = `
                     "opacity": 0,
                     "position": "absolute",
                     "top": 0,
-                    "transition": "opacity 0.5s",
+                    "transition": "opacity 500ms",
                     "width": "100%",
                   }
                 }
@@ -9248,7 +9248,7 @@ exports[`Storyshots organisms/FilteredSmallMaterialList default 1`] = `
                     "opacity": 0,
                     "position": "absolute",
                     "top": 0,
-                    "transition": "opacity 0.5s",
+                    "transition": "opacity 500ms",
                     "width": "100%",
                   }
                 }
@@ -9338,7 +9338,7 @@ exports[`Storyshots organisms/FilteredSmallMaterialList default 1`] = `
                     "opacity": 0,
                     "position": "absolute",
                     "top": 0,
-                    "transition": "opacity 0.5s",
+                    "transition": "opacity 500ms",
                     "width": "100%",
                   }
                 }
@@ -9428,7 +9428,7 @@ exports[`Storyshots organisms/FilteredSmallMaterialList default 1`] = `
                     "opacity": 0,
                     "position": "absolute",
                     "top": 0,
-                    "transition": "opacity 0.5s",
+                    "transition": "opacity 500ms",
                     "width": "100%",
                   }
                 }
@@ -9518,7 +9518,7 @@ exports[`Storyshots organisms/FilteredSmallMaterialList default 1`] = `
                     "opacity": 0,
                     "position": "absolute",
                     "top": 0,
-                    "transition": "opacity 0.5s",
+                    "transition": "opacity 500ms",
                     "width": "100%",
                   }
                 }
@@ -9608,7 +9608,7 @@ exports[`Storyshots organisms/FilteredSmallMaterialList default 1`] = `
                     "opacity": 0,
                     "position": "absolute",
                     "top": 0,
-                    "transition": "opacity 0.5s",
+                    "transition": "opacity 500ms",
                     "width": "100%",
                   }
                 }
@@ -9698,7 +9698,7 @@ exports[`Storyshots organisms/FilteredSmallMaterialList default 1`] = `
                     "opacity": 0,
                     "position": "absolute",
                     "top": 0,
-                    "transition": "opacity 0.5s",
+                    "transition": "opacity 500ms",
                     "width": "100%",
                   }
                 }
@@ -9788,7 +9788,7 @@ exports[`Storyshots organisms/FilteredSmallMaterialList default 1`] = `
                     "opacity": 0,
                     "position": "absolute",
                     "top": 0,
-                    "transition": "opacity 0.5s",
+                    "transition": "opacity 500ms",
                     "width": "100%",
                   }
                 }
@@ -9878,7 +9878,7 @@ exports[`Storyshots organisms/FilteredSmallMaterialList default 1`] = `
                     "opacity": 0,
                     "position": "absolute",
                     "top": 0,
-                    "transition": "opacity 0.5s",
+                    "transition": "opacity 500ms",
                     "width": "100%",
                   }
                 }
@@ -9968,7 +9968,7 @@ exports[`Storyshots organisms/FilteredSmallMaterialList default 1`] = `
                     "opacity": 0,
                     "position": "absolute",
                     "top": 0,
-                    "transition": "opacity 0.5s",
+                    "transition": "opacity 500ms",
                     "width": "100%",
                   }
                 }
@@ -10058,7 +10058,7 @@ exports[`Storyshots organisms/FilteredSmallMaterialList default 1`] = `
                     "opacity": 0,
                     "position": "absolute",
                     "top": 0,
-                    "transition": "opacity 0.5s",
+                    "transition": "opacity 500ms",
                     "width": "100%",
                   }
                 }
@@ -10148,7 +10148,7 @@ exports[`Storyshots organisms/FilteredSmallMaterialList default 1`] = `
                     "opacity": 0,
                     "position": "absolute",
                     "top": 0,
-                    "transition": "opacity 0.5s",
+                    "transition": "opacity 500ms",
                     "width": "100%",
                   }
                 }
@@ -10238,7 +10238,7 @@ exports[`Storyshots organisms/FilteredSmallMaterialList default 1`] = `
                     "opacity": 0,
                     "position": "absolute",
                     "top": 0,
-                    "transition": "opacity 0.5s",
+                    "transition": "opacity 500ms",
                     "width": "100%",
                   }
                 }
@@ -10328,7 +10328,7 @@ exports[`Storyshots organisms/FilteredSmallMaterialList default 1`] = `
                     "opacity": 0,
                     "position": "absolute",
                     "top": 0,
-                    "transition": "opacity 0.5s",
+                    "transition": "opacity 500ms",
                     "width": "100%",
                   }
                 }
@@ -10418,7 +10418,7 @@ exports[`Storyshots organisms/FilteredSmallMaterialList default 1`] = `
                     "opacity": 0,
                     "position": "absolute",
                     "top": 0,
-                    "transition": "opacity 0.5s",
+                    "transition": "opacity 500ms",
                     "width": "100%",
                   }
                 }
@@ -10508,7 +10508,7 @@ exports[`Storyshots organisms/FilteredSmallMaterialList default 1`] = `
                     "opacity": 0,
                     "position": "absolute",
                     "top": 0,
-                    "transition": "opacity 0.5s",
+                    "transition": "opacity 500ms",
                     "width": "100%",
                   }
                 }
@@ -10598,7 +10598,7 @@ exports[`Storyshots organisms/FilteredSmallMaterialList default 1`] = `
                     "opacity": 0,
                     "position": "absolute",
                     "top": 0,
-                    "transition": "opacity 0.5s",
+                    "transition": "opacity 500ms",
                     "width": "100%",
                   }
                 }
@@ -10688,7 +10688,7 @@ exports[`Storyshots organisms/FilteredSmallMaterialList default 1`] = `
                     "opacity": 0,
                     "position": "absolute",
                     "top": 0,
-                    "transition": "opacity 0.5s",
+                    "transition": "opacity 500ms",
                     "width": "100%",
                   }
                 }
@@ -10778,7 +10778,7 @@ exports[`Storyshots organisms/FilteredSmallMaterialList default 1`] = `
                     "opacity": 0,
                     "position": "absolute",
                     "top": 0,
-                    "transition": "opacity 0.5s",
+                    "transition": "opacity 500ms",
                     "width": "100%",
                   }
                 }
@@ -10868,7 +10868,7 @@ exports[`Storyshots organisms/FilteredSmallMaterialList default 1`] = `
                     "opacity": 0,
                     "position": "absolute",
                     "top": 0,
-                    "transition": "opacity 0.5s",
+                    "transition": "opacity 500ms",
                     "width": "100%",
                   }
                 }
@@ -10958,7 +10958,7 @@ exports[`Storyshots organisms/FilteredSmallMaterialList default 1`] = `
                     "opacity": 0,
                     "position": "absolute",
                     "top": 0,
-                    "transition": "opacity 0.5s",
+                    "transition": "opacity 500ms",
                     "width": "100%",
                   }
                 }
@@ -11048,7 +11048,7 @@ exports[`Storyshots organisms/FilteredSmallMaterialList default 1`] = `
                     "opacity": 0,
                     "position": "absolute",
                     "top": 0,
-                    "transition": "opacity 0.5s",
+                    "transition": "opacity 500ms",
                     "width": "100%",
                   }
                 }
@@ -11138,7 +11138,7 @@ exports[`Storyshots organisms/FilteredSmallMaterialList default 1`] = `
                     "opacity": 0,
                     "position": "absolute",
                     "top": 0,
-                    "transition": "opacity 0.5s",
+                    "transition": "opacity 500ms",
                     "width": "100%",
                   }
                 }
@@ -11228,7 +11228,7 @@ exports[`Storyshots organisms/FilteredSmallMaterialList default 1`] = `
                     "opacity": 0,
                     "position": "absolute",
                     "top": 0,
-                    "transition": "opacity 0.5s",
+                    "transition": "opacity 500ms",
                     "width": "100%",
                   }
                 }
@@ -11318,7 +11318,7 @@ exports[`Storyshots organisms/FilteredSmallMaterialList default 1`] = `
                     "opacity": 0,
                     "position": "absolute",
                     "top": 0,
-                    "transition": "opacity 0.5s",
+                    "transition": "opacity 500ms",
                     "width": "100%",
                   }
                 }
@@ -11408,7 +11408,7 @@ exports[`Storyshots organisms/FilteredSmallMaterialList default 1`] = `
                     "opacity": 0,
                     "position": "absolute",
                     "top": 0,
-                    "transition": "opacity 0.5s",
+                    "transition": "opacity 500ms",
                     "width": "100%",
                   }
                 }
@@ -11498,7 +11498,7 @@ exports[`Storyshots organisms/FilteredSmallMaterialList default 1`] = `
                     "opacity": 0,
                     "position": "absolute",
                     "top": 0,
-                    "transition": "opacity 0.5s",
+                    "transition": "opacity 500ms",
                     "width": "100%",
                   }
                 }
@@ -11588,7 +11588,7 @@ exports[`Storyshots organisms/FilteredSmallMaterialList default 1`] = `
                     "opacity": 0,
                     "position": "absolute",
                     "top": 0,
-                    "transition": "opacity 0.5s",
+                    "transition": "opacity 500ms",
                     "width": "100%",
                   }
                 }
@@ -11678,7 +11678,7 @@ exports[`Storyshots organisms/FilteredSmallMaterialList default 1`] = `
                     "opacity": 0,
                     "position": "absolute",
                     "top": 0,
-                    "transition": "opacity 0.5s",
+                    "transition": "opacity 500ms",
                     "width": "100%",
                   }
                 }
@@ -11768,7 +11768,7 @@ exports[`Storyshots organisms/FilteredSmallMaterialList default 1`] = `
                     "opacity": 0,
                     "position": "absolute",
                     "top": 0,
-                    "transition": "opacity 0.5s",
+                    "transition": "opacity 500ms",
                     "width": "100%",
                   }
                 }
@@ -11858,7 +11858,7 @@ exports[`Storyshots organisms/FilteredSmallMaterialList default 1`] = `
                     "opacity": 0,
                     "position": "absolute",
                     "top": 0,
-                    "transition": "opacity 0.5s",
+                    "transition": "opacity 500ms",
                     "width": "100%",
                   }
                 }
@@ -11948,7 +11948,7 @@ exports[`Storyshots organisms/FilteredSmallMaterialList default 1`] = `
                     "opacity": 0,
                     "position": "absolute",
                     "top": 0,
-                    "transition": "opacity 0.5s",
+                    "transition": "opacity 500ms",
                     "width": "100%",
                   }
                 }
@@ -12038,7 +12038,7 @@ exports[`Storyshots organisms/FilteredSmallMaterialList default 1`] = `
                     "opacity": 0,
                     "position": "absolute",
                     "top": 0,
-                    "transition": "opacity 0.5s",
+                    "transition": "opacity 500ms",
                     "width": "100%",
                   }
                 }
@@ -12128,7 +12128,7 @@ exports[`Storyshots organisms/FilteredSmallMaterialList default 1`] = `
                     "opacity": 0,
                     "position": "absolute",
                     "top": 0,
-                    "transition": "opacity 0.5s",
+                    "transition": "opacity 500ms",
                     "width": "100%",
                   }
                 }
@@ -12218,7 +12218,7 @@ exports[`Storyshots organisms/FilteredSmallMaterialList default 1`] = `
                     "opacity": 0,
                     "position": "absolute",
                     "top": 0,
-                    "transition": "opacity 0.5s",
+                    "transition": "opacity 500ms",
                     "width": "100%",
                   }
                 }
@@ -12308,7 +12308,7 @@ exports[`Storyshots organisms/FilteredSmallMaterialList default 1`] = `
                     "opacity": 0,
                     "position": "absolute",
                     "top": 0,
-                    "transition": "opacity 0.5s",
+                    "transition": "opacity 500ms",
                     "width": "100%",
                   }
                 }
@@ -12398,7 +12398,7 @@ exports[`Storyshots organisms/FilteredSmallMaterialList default 1`] = `
                     "opacity": 0,
                     "position": "absolute",
                     "top": 0,
-                    "transition": "opacity 0.5s",
+                    "transition": "opacity 500ms",
                     "width": "100%",
                   }
                 }
@@ -12488,7 +12488,7 @@ exports[`Storyshots organisms/FilteredSmallMaterialList default 1`] = `
                     "opacity": 0,
                     "position": "absolute",
                     "top": 0,
-                    "transition": "opacity 0.5s",
+                    "transition": "opacity 500ms",
                     "width": "100%",
                   }
                 }
@@ -12578,7 +12578,7 @@ exports[`Storyshots organisms/FilteredSmallMaterialList default 1`] = `
                     "opacity": 0,
                     "position": "absolute",
                     "top": 0,
-                    "transition": "opacity 0.5s",
+                    "transition": "opacity 500ms",
                     "width": "100%",
                   }
                 }
@@ -12668,7 +12668,7 @@ exports[`Storyshots organisms/FilteredSmallMaterialList default 1`] = `
                     "opacity": 0,
                     "position": "absolute",
                     "top": 0,
-                    "transition": "opacity 0.5s",
+                    "transition": "opacity 500ms",
                     "width": "100%",
                   }
                 }
@@ -12758,7 +12758,7 @@ exports[`Storyshots organisms/FilteredSmallMaterialList default 1`] = `
                     "opacity": 0,
                     "position": "absolute",
                     "top": 0,
-                    "transition": "opacity 0.5s",
+                    "transition": "opacity 500ms",
                     "width": "100%",
                   }
                 }
@@ -12848,7 +12848,7 @@ exports[`Storyshots organisms/FilteredSmallMaterialList default 1`] = `
                     "opacity": 0,
                     "position": "absolute",
                     "top": 0,
-                    "transition": "opacity 0.5s",
+                    "transition": "opacity 500ms",
                     "width": "100%",
                   }
                 }
@@ -12938,7 +12938,7 @@ exports[`Storyshots organisms/FilteredSmallMaterialList default 1`] = `
                     "opacity": 0,
                     "position": "absolute",
                     "top": 0,
-                    "transition": "opacity 0.5s",
+                    "transition": "opacity 500ms",
                     "width": "100%",
                   }
                 }
@@ -13028,7 +13028,7 @@ exports[`Storyshots organisms/FilteredSmallMaterialList default 1`] = `
                     "opacity": 0,
                     "position": "absolute",
                     "top": 0,
-                    "transition": "opacity 0.5s",
+                    "transition": "opacity 500ms",
                     "width": "100%",
                   }
                 }
@@ -13118,7 +13118,7 @@ exports[`Storyshots organisms/FilteredSmallMaterialList default 1`] = `
                     "opacity": 0,
                     "position": "absolute",
                     "top": 0,
-                    "transition": "opacity 0.5s",
+                    "transition": "opacity 500ms",
                     "width": "100%",
                   }
                 }
@@ -13208,7 +13208,7 @@ exports[`Storyshots organisms/FilteredSmallMaterialList default 1`] = `
                     "opacity": 0,
                     "position": "absolute",
                     "top": 0,
-                    "transition": "opacity 0.5s",
+                    "transition": "opacity 500ms",
                     "width": "100%",
                   }
                 }
@@ -13298,7 +13298,7 @@ exports[`Storyshots organisms/FilteredSmallMaterialList default 1`] = `
                     "opacity": 0,
                     "position": "absolute",
                     "top": 0,
-                    "transition": "opacity 0.5s",
+                    "transition": "opacity 500ms",
                     "width": "100%",
                   }
                 }
@@ -13388,7 +13388,7 @@ exports[`Storyshots organisms/FilteredSmallMaterialList default 1`] = `
                     "opacity": 0,
                     "position": "absolute",
                     "top": 0,
-                    "transition": "opacity 0.5s",
+                    "transition": "opacity 500ms",
                     "width": "100%",
                   }
                 }
@@ -13478,7 +13478,7 @@ exports[`Storyshots organisms/FilteredSmallMaterialList default 1`] = `
                     "opacity": 0,
                     "position": "absolute",
                     "top": 0,
-                    "transition": "opacity 0.5s",
+                    "transition": "opacity 500ms",
                     "width": "100%",
                   }
                 }
@@ -13568,7 +13568,7 @@ exports[`Storyshots organisms/FilteredSmallMaterialList default 1`] = `
                     "opacity": 0,
                     "position": "absolute",
                     "top": 0,
-                    "transition": "opacity 0.5s",
+                    "transition": "opacity 500ms",
                     "width": "100%",
                   }
                 }
@@ -13658,7 +13658,7 @@ exports[`Storyshots organisms/FilteredSmallMaterialList default 1`] = `
                     "opacity": 0,
                     "position": "absolute",
                     "top": 0,
-                    "transition": "opacity 0.5s",
+                    "transition": "opacity 500ms",
                     "width": "100%",
                   }
                 }
@@ -13748,7 +13748,7 @@ exports[`Storyshots organisms/FilteredSmallMaterialList default 1`] = `
                     "opacity": 0,
                     "position": "absolute",
                     "top": 0,
-                    "transition": "opacity 0.5s",
+                    "transition": "opacity 500ms",
                     "width": "100%",
                   }
                 }
@@ -13838,7 +13838,7 @@ exports[`Storyshots organisms/FilteredSmallMaterialList default 1`] = `
                     "opacity": 0,
                     "position": "absolute",
                     "top": 0,
-                    "transition": "opacity 0.5s",
+                    "transition": "opacity 500ms",
                     "width": "100%",
                   }
                 }
@@ -13928,7 +13928,7 @@ exports[`Storyshots organisms/FilteredSmallMaterialList default 1`] = `
                     "opacity": 0,
                     "position": "absolute",
                     "top": 0,
-                    "transition": "opacity 0.5s",
+                    "transition": "opacity 500ms",
                     "width": "100%",
                   }
                 }
@@ -14018,7 +14018,7 @@ exports[`Storyshots organisms/FilteredSmallMaterialList default 1`] = `
                     "opacity": 0,
                     "position": "absolute",
                     "top": 0,
-                    "transition": "opacity 0.5s",
+                    "transition": "opacity 500ms",
                     "width": "100%",
                   }
                 }
@@ -14108,7 +14108,7 @@ exports[`Storyshots organisms/FilteredSmallMaterialList default 1`] = `
                     "opacity": 0,
                     "position": "absolute",
                     "top": 0,
-                    "transition": "opacity 0.5s",
+                    "transition": "opacity 500ms",
                     "width": "100%",
                   }
                 }
@@ -14198,7 +14198,7 @@ exports[`Storyshots organisms/FilteredSmallMaterialList default 1`] = `
                     "opacity": 0,
                     "position": "absolute",
                     "top": 0,
-                    "transition": "opacity 0.5s",
+                    "transition": "opacity 500ms",
                     "width": "100%",
                   }
                 }
@@ -14288,7 +14288,7 @@ exports[`Storyshots organisms/FilteredSmallMaterialList default 1`] = `
                     "opacity": 0,
                     "position": "absolute",
                     "top": 0,
-                    "transition": "opacity 0.5s",
+                    "transition": "opacity 500ms",
                     "width": "100%",
                   }
                 }
@@ -14378,7 +14378,7 @@ exports[`Storyshots organisms/FilteredSmallMaterialList default 1`] = `
                     "opacity": 0,
                     "position": "absolute",
                     "top": 0,
-                    "transition": "opacity 0.5s",
+                    "transition": "opacity 500ms",
                     "width": "100%",
                   }
                 }
@@ -14468,7 +14468,7 @@ exports[`Storyshots organisms/FilteredSmallMaterialList default 1`] = `
                     "opacity": 0,
                     "position": "absolute",
                     "top": 0,
-                    "transition": "opacity 0.5s",
+                    "transition": "opacity 500ms",
                     "width": "100%",
                   }
                 }
@@ -14558,7 +14558,7 @@ exports[`Storyshots organisms/FilteredSmallMaterialList default 1`] = `
                     "opacity": 0,
                     "position": "absolute",
                     "top": 0,
-                    "transition": "opacity 0.5s",
+                    "transition": "opacity 500ms",
                     "width": "100%",
                   }
                 }
@@ -14648,7 +14648,7 @@ exports[`Storyshots organisms/FilteredSmallMaterialList default 1`] = `
                     "opacity": 0,
                     "position": "absolute",
                     "top": 0,
-                    "transition": "opacity 0.5s",
+                    "transition": "opacity 500ms",
                     "width": "100%",
                   }
                 }
@@ -14738,7 +14738,7 @@ exports[`Storyshots organisms/FilteredSmallMaterialList default 1`] = `
                     "opacity": 0,
                     "position": "absolute",
                     "top": 0,
-                    "transition": "opacity 0.5s",
+                    "transition": "opacity 500ms",
                     "width": "100%",
                   }
                 }
@@ -14828,7 +14828,7 @@ exports[`Storyshots organisms/FilteredSmallMaterialList default 1`] = `
                     "opacity": 0,
                     "position": "absolute",
                     "top": 0,
-                    "transition": "opacity 0.5s",
+                    "transition": "opacity 500ms",
                     "width": "100%",
                   }
                 }
@@ -14918,7 +14918,7 @@ exports[`Storyshots organisms/FilteredSmallMaterialList default 1`] = `
                     "opacity": 0,
                     "position": "absolute",
                     "top": 0,
-                    "transition": "opacity 0.5s",
+                    "transition": "opacity 500ms",
                     "width": "100%",
                   }
                 }
@@ -15008,7 +15008,7 @@ exports[`Storyshots organisms/FilteredSmallMaterialList default 1`] = `
                     "opacity": 0,
                     "position": "absolute",
                     "top": 0,
-                    "transition": "opacity 0.5s",
+                    "transition": "opacity 500ms",
                     "width": "100%",
                   }
                 }
@@ -15098,7 +15098,7 @@ exports[`Storyshots organisms/FilteredSmallMaterialList default 1`] = `
                     "opacity": 0,
                     "position": "absolute",
                     "top": 0,
-                    "transition": "opacity 0.5s",
+                    "transition": "opacity 500ms",
                     "width": "100%",
                   }
                 }
@@ -15188,7 +15188,7 @@ exports[`Storyshots organisms/FilteredSmallMaterialList default 1`] = `
                     "opacity": 0,
                     "position": "absolute",
                     "top": 0,
-                    "transition": "opacity 0.5s",
+                    "transition": "opacity 500ms",
                     "width": "100%",
                   }
                 }
@@ -15278,7 +15278,7 @@ exports[`Storyshots organisms/FilteredSmallMaterialList default 1`] = `
                     "opacity": 0,
                     "position": "absolute",
                     "top": 0,
-                    "transition": "opacity 0.5s",
+                    "transition": "opacity 500ms",
                     "width": "100%",
                   }
                 }
@@ -15368,7 +15368,7 @@ exports[`Storyshots organisms/FilteredSmallMaterialList default 1`] = `
                     "opacity": 0,
                     "position": "absolute",
                     "top": 0,
-                    "transition": "opacity 0.5s",
+                    "transition": "opacity 500ms",
                     "width": "100%",
                   }
                 }
@@ -15458,7 +15458,7 @@ exports[`Storyshots organisms/FilteredSmallMaterialList default 1`] = `
                     "opacity": 0,
                     "position": "absolute",
                     "top": 0,
-                    "transition": "opacity 0.5s",
+                    "transition": "opacity 500ms",
                     "width": "100%",
                   }
                 }
@@ -15548,7 +15548,7 @@ exports[`Storyshots organisms/FilteredSmallMaterialList default 1`] = `
                     "opacity": 0,
                     "position": "absolute",
                     "top": 0,
-                    "transition": "opacity 0.5s",
+                    "transition": "opacity 500ms",
                     "width": "100%",
                   }
                 }
@@ -15638,7 +15638,7 @@ exports[`Storyshots organisms/FilteredSmallMaterialList default 1`] = `
                     "opacity": 0,
                     "position": "absolute",
                     "top": 0,
-                    "transition": "opacity 0.5s",
+                    "transition": "opacity 500ms",
                     "width": "100%",
                   }
                 }
@@ -15728,7 +15728,7 @@ exports[`Storyshots organisms/FilteredSmallMaterialList default 1`] = `
                     "opacity": 0,
                     "position": "absolute",
                     "top": 0,
-                    "transition": "opacity 0.5s",
+                    "transition": "opacity 500ms",
                     "width": "100%",
                   }
                 }
@@ -15818,7 +15818,7 @@ exports[`Storyshots organisms/FilteredSmallMaterialList default 1`] = `
                     "opacity": 0,
                     "position": "absolute",
                     "top": 0,
-                    "transition": "opacity 0.5s",
+                    "transition": "opacity 500ms",
                     "width": "100%",
                   }
                 }
@@ -15908,7 +15908,7 @@ exports[`Storyshots organisms/FilteredSmallMaterialList default 1`] = `
                     "opacity": 0,
                     "position": "absolute",
                     "top": 0,
-                    "transition": "opacity 0.5s",
+                    "transition": "opacity 500ms",
                     "width": "100%",
                   }
                 }
@@ -15998,7 +15998,7 @@ exports[`Storyshots organisms/FilteredSmallMaterialList default 1`] = `
                     "opacity": 0,
                     "position": "absolute",
                     "top": 0,
-                    "transition": "opacity 0.5s",
+                    "transition": "opacity 500ms",
                     "width": "100%",
                   }
                 }
@@ -16088,7 +16088,7 @@ exports[`Storyshots organisms/FilteredSmallMaterialList default 1`] = `
                     "opacity": 0,
                     "position": "absolute",
                     "top": 0,
-                    "transition": "opacity 0.5s",
+                    "transition": "opacity 500ms",
                     "width": "100%",
                   }
                 }
@@ -16178,7 +16178,7 @@ exports[`Storyshots organisms/FilteredSmallMaterialList default 1`] = `
                     "opacity": 0,
                     "position": "absolute",
                     "top": 0,
-                    "transition": "opacity 0.5s",
+                    "transition": "opacity 500ms",
                     "width": "100%",
                   }
                 }
@@ -16268,7 +16268,7 @@ exports[`Storyshots organisms/FilteredSmallMaterialList default 1`] = `
                     "opacity": 0,
                     "position": "absolute",
                     "top": 0,
-                    "transition": "opacity 0.5s",
+                    "transition": "opacity 500ms",
                     "width": "100%",
                   }
                 }
@@ -16358,7 +16358,7 @@ exports[`Storyshots organisms/FilteredSmallMaterialList default 1`] = `
                     "opacity": 0,
                     "position": "absolute",
                     "top": 0,
-                    "transition": "opacity 0.5s",
+                    "transition": "opacity 500ms",
                     "width": "100%",
                   }
                 }
@@ -16448,7 +16448,7 @@ exports[`Storyshots organisms/FilteredSmallMaterialList default 1`] = `
                     "opacity": 0,
                     "position": "absolute",
                     "top": 0,
-                    "transition": "opacity 0.5s",
+                    "transition": "opacity 500ms",
                     "width": "100%",
                   }
                 }
@@ -17404,7 +17404,7 @@ exports[`Storyshots organisms/KarutaPlaying answered 1`] = `
               "opacity": 0,
               "position": "absolute",
               "top": 0,
-              "transition": "opacity 0.5s",
+              "transition": "opacity 500ms",
               "width": "100%",
             }
           }
@@ -19365,7 +19365,7 @@ exports[`Storyshots organisms/Material default 1`] = `
             "opacity": 0,
             "position": "absolute",
             "top": 0,
-            "transition": "opacity 0.5s",
+            "transition": "opacity 500ms",
             "width": "100%",
           }
         }
@@ -21309,7 +21309,7 @@ exports[`Storyshots organisms/ReviewQuestions answered 1`] = `
               "opacity": 0,
               "position": "absolute",
               "top": 0,
-              "transition": "opacity 0.5s",
+              "transition": "opacity 500ms",
               "width": "100%",
             }
           }
@@ -22507,7 +22507,7 @@ exports[`Storyshots organisms/SmallMaterial default 1`] = `
               "opacity": 0,
               "position": "absolute",
               "top": 0,
-              "transition": "opacity 0.5s",
+              "transition": "opacity 500ms",
               "width": "100%",
             }
           }
@@ -22747,7 +22747,7 @@ exports[`Storyshots organisms/SmallMaterial separate space 1`] = `
               "opacity": 0,
               "position": "absolute",
               "top": 0,
-              "transition": "opacity 0.5s",
+              "transition": "opacity 500ms",
               "width": "100%",
             }
           }
@@ -23785,7 +23785,7 @@ exports[`Storyshots organisms/TrainingQuestions answered 1`] = `
               "opacity": 0,
               "position": "absolute",
               "top": 0,
-              "transition": "opacity 0.5s",
+              "transition": "opacity 500ms",
               "width": "100%",
             }
           }
@@ -25106,7 +25106,7 @@ exports[`Storyshots pages/404 default 1`] = `
               "opacity": 0,
               "position": "absolute",
               "top": 0,
-              "transition": "opacity 0.5s",
+              "transition": "opacity 500ms",
               "width": "100%",
             }
           }
@@ -35109,7 +35109,7 @@ Array [
                           "opacity": 0,
                           "position": "absolute",
                           "top": 0,
-                          "transition": "opacity 0.5s",
+                          "transition": "opacity 500ms",
                           "width": "100%",
                         }
                       }
@@ -35199,7 +35199,7 @@ Array [
                           "opacity": 0,
                           "position": "absolute",
                           "top": 0,
-                          "transition": "opacity 0.5s",
+                          "transition": "opacity 500ms",
                           "width": "100%",
                         }
                       }
@@ -35289,7 +35289,7 @@ Array [
                           "opacity": 0,
                           "position": "absolute",
                           "top": 0,
-                          "transition": "opacity 0.5s",
+                          "transition": "opacity 500ms",
                           "width": "100%",
                         }
                       }
@@ -35379,7 +35379,7 @@ Array [
                           "opacity": 0,
                           "position": "absolute",
                           "top": 0,
-                          "transition": "opacity 0.5s",
+                          "transition": "opacity 500ms",
                           "width": "100%",
                         }
                       }
@@ -35469,7 +35469,7 @@ Array [
                           "opacity": 0,
                           "position": "absolute",
                           "top": 0,
-                          "transition": "opacity 0.5s",
+                          "transition": "opacity 500ms",
                           "width": "100%",
                         }
                       }
@@ -35559,7 +35559,7 @@ Array [
                           "opacity": 0,
                           "position": "absolute",
                           "top": 0,
-                          "transition": "opacity 0.5s",
+                          "transition": "opacity 500ms",
                           "width": "100%",
                         }
                       }
@@ -35649,7 +35649,7 @@ Array [
                           "opacity": 0,
                           "position": "absolute",
                           "top": 0,
-                          "transition": "opacity 0.5s",
+                          "transition": "opacity 500ms",
                           "width": "100%",
                         }
                       }
@@ -35739,7 +35739,7 @@ Array [
                           "opacity": 0,
                           "position": "absolute",
                           "top": 0,
-                          "transition": "opacity 0.5s",
+                          "transition": "opacity 500ms",
                           "width": "100%",
                         }
                       }
@@ -35829,7 +35829,7 @@ Array [
                           "opacity": 0,
                           "position": "absolute",
                           "top": 0,
-                          "transition": "opacity 0.5s",
+                          "transition": "opacity 500ms",
                           "width": "100%",
                         }
                       }
@@ -35919,7 +35919,7 @@ Array [
                           "opacity": 0,
                           "position": "absolute",
                           "top": 0,
-                          "transition": "opacity 0.5s",
+                          "transition": "opacity 500ms",
                           "width": "100%",
                         }
                       }
@@ -36009,7 +36009,7 @@ Array [
                           "opacity": 0,
                           "position": "absolute",
                           "top": 0,
-                          "transition": "opacity 0.5s",
+                          "transition": "opacity 500ms",
                           "width": "100%",
                         }
                       }
@@ -36099,7 +36099,7 @@ Array [
                           "opacity": 0,
                           "position": "absolute",
                           "top": 0,
-                          "transition": "opacity 0.5s",
+                          "transition": "opacity 500ms",
                           "width": "100%",
                         }
                       }
@@ -36189,7 +36189,7 @@ Array [
                           "opacity": 0,
                           "position": "absolute",
                           "top": 0,
-                          "transition": "opacity 0.5s",
+                          "transition": "opacity 500ms",
                           "width": "100%",
                         }
                       }
@@ -36279,7 +36279,7 @@ Array [
                           "opacity": 0,
                           "position": "absolute",
                           "top": 0,
-                          "transition": "opacity 0.5s",
+                          "transition": "opacity 500ms",
                           "width": "100%",
                         }
                       }
@@ -36369,7 +36369,7 @@ Array [
                           "opacity": 0,
                           "position": "absolute",
                           "top": 0,
-                          "transition": "opacity 0.5s",
+                          "transition": "opacity 500ms",
                           "width": "100%",
                         }
                       }
@@ -36459,7 +36459,7 @@ Array [
                           "opacity": 0,
                           "position": "absolute",
                           "top": 0,
-                          "transition": "opacity 0.5s",
+                          "transition": "opacity 500ms",
                           "width": "100%",
                         }
                       }
@@ -36549,7 +36549,7 @@ Array [
                           "opacity": 0,
                           "position": "absolute",
                           "top": 0,
-                          "transition": "opacity 0.5s",
+                          "transition": "opacity 500ms",
                           "width": "100%",
                         }
                       }
@@ -36639,7 +36639,7 @@ Array [
                           "opacity": 0,
                           "position": "absolute",
                           "top": 0,
-                          "transition": "opacity 0.5s",
+                          "transition": "opacity 500ms",
                           "width": "100%",
                         }
                       }
@@ -36729,7 +36729,7 @@ Array [
                           "opacity": 0,
                           "position": "absolute",
                           "top": 0,
-                          "transition": "opacity 0.5s",
+                          "transition": "opacity 500ms",
                           "width": "100%",
                         }
                       }
@@ -36819,7 +36819,7 @@ Array [
                           "opacity": 0,
                           "position": "absolute",
                           "top": 0,
-                          "transition": "opacity 0.5s",
+                          "transition": "opacity 500ms",
                           "width": "100%",
                         }
                       }
@@ -36909,7 +36909,7 @@ Array [
                           "opacity": 0,
                           "position": "absolute",
                           "top": 0,
-                          "transition": "opacity 0.5s",
+                          "transition": "opacity 500ms",
                           "width": "100%",
                         }
                       }
@@ -36999,7 +36999,7 @@ Array [
                           "opacity": 0,
                           "position": "absolute",
                           "top": 0,
-                          "transition": "opacity 0.5s",
+                          "transition": "opacity 500ms",
                           "width": "100%",
                         }
                       }
@@ -37089,7 +37089,7 @@ Array [
                           "opacity": 0,
                           "position": "absolute",
                           "top": 0,
-                          "transition": "opacity 0.5s",
+                          "transition": "opacity 500ms",
                           "width": "100%",
                         }
                       }
@@ -37179,7 +37179,7 @@ Array [
                           "opacity": 0,
                           "position": "absolute",
                           "top": 0,
-                          "transition": "opacity 0.5s",
+                          "transition": "opacity 500ms",
                           "width": "100%",
                         }
                       }
@@ -37269,7 +37269,7 @@ Array [
                           "opacity": 0,
                           "position": "absolute",
                           "top": 0,
-                          "transition": "opacity 0.5s",
+                          "transition": "opacity 500ms",
                           "width": "100%",
                         }
                       }
@@ -37359,7 +37359,7 @@ Array [
                           "opacity": 0,
                           "position": "absolute",
                           "top": 0,
-                          "transition": "opacity 0.5s",
+                          "transition": "opacity 500ms",
                           "width": "100%",
                         }
                       }
@@ -37449,7 +37449,7 @@ Array [
                           "opacity": 0,
                           "position": "absolute",
                           "top": 0,
-                          "transition": "opacity 0.5s",
+                          "transition": "opacity 500ms",
                           "width": "100%",
                         }
                       }
@@ -37539,7 +37539,7 @@ Array [
                           "opacity": 0,
                           "position": "absolute",
                           "top": 0,
-                          "transition": "opacity 0.5s",
+                          "transition": "opacity 500ms",
                           "width": "100%",
                         }
                       }
@@ -37629,7 +37629,7 @@ Array [
                           "opacity": 0,
                           "position": "absolute",
                           "top": 0,
-                          "transition": "opacity 0.5s",
+                          "transition": "opacity 500ms",
                           "width": "100%",
                         }
                       }
@@ -37719,7 +37719,7 @@ Array [
                           "opacity": 0,
                           "position": "absolute",
                           "top": 0,
-                          "transition": "opacity 0.5s",
+                          "transition": "opacity 500ms",
                           "width": "100%",
                         }
                       }
@@ -37809,7 +37809,7 @@ Array [
                           "opacity": 0,
                           "position": "absolute",
                           "top": 0,
-                          "transition": "opacity 0.5s",
+                          "transition": "opacity 500ms",
                           "width": "100%",
                         }
                       }
@@ -37899,7 +37899,7 @@ Array [
                           "opacity": 0,
                           "position": "absolute",
                           "top": 0,
-                          "transition": "opacity 0.5s",
+                          "transition": "opacity 500ms",
                           "width": "100%",
                         }
                       }
@@ -37989,7 +37989,7 @@ Array [
                           "opacity": 0,
                           "position": "absolute",
                           "top": 0,
-                          "transition": "opacity 0.5s",
+                          "transition": "opacity 500ms",
                           "width": "100%",
                         }
                       }
@@ -38079,7 +38079,7 @@ Array [
                           "opacity": 0,
                           "position": "absolute",
                           "top": 0,
-                          "transition": "opacity 0.5s",
+                          "transition": "opacity 500ms",
                           "width": "100%",
                         }
                       }
@@ -38169,7 +38169,7 @@ Array [
                           "opacity": 0,
                           "position": "absolute",
                           "top": 0,
-                          "transition": "opacity 0.5s",
+                          "transition": "opacity 500ms",
                           "width": "100%",
                         }
                       }
@@ -38259,7 +38259,7 @@ Array [
                           "opacity": 0,
                           "position": "absolute",
                           "top": 0,
-                          "transition": "opacity 0.5s",
+                          "transition": "opacity 500ms",
                           "width": "100%",
                         }
                       }
@@ -38349,7 +38349,7 @@ Array [
                           "opacity": 0,
                           "position": "absolute",
                           "top": 0,
-                          "transition": "opacity 0.5s",
+                          "transition": "opacity 500ms",
                           "width": "100%",
                         }
                       }
@@ -38439,7 +38439,7 @@ Array [
                           "opacity": 0,
                           "position": "absolute",
                           "top": 0,
-                          "transition": "opacity 0.5s",
+                          "transition": "opacity 500ms",
                           "width": "100%",
                         }
                       }
@@ -38529,7 +38529,7 @@ Array [
                           "opacity": 0,
                           "position": "absolute",
                           "top": 0,
-                          "transition": "opacity 0.5s",
+                          "transition": "opacity 500ms",
                           "width": "100%",
                         }
                       }
@@ -38619,7 +38619,7 @@ Array [
                           "opacity": 0,
                           "position": "absolute",
                           "top": 0,
-                          "transition": "opacity 0.5s",
+                          "transition": "opacity 500ms",
                           "width": "100%",
                         }
                       }
@@ -38709,7 +38709,7 @@ Array [
                           "opacity": 0,
                           "position": "absolute",
                           "top": 0,
-                          "transition": "opacity 0.5s",
+                          "transition": "opacity 500ms",
                           "width": "100%",
                         }
                       }
@@ -38799,7 +38799,7 @@ Array [
                           "opacity": 0,
                           "position": "absolute",
                           "top": 0,
-                          "transition": "opacity 0.5s",
+                          "transition": "opacity 500ms",
                           "width": "100%",
                         }
                       }
@@ -38889,7 +38889,7 @@ Array [
                           "opacity": 0,
                           "position": "absolute",
                           "top": 0,
-                          "transition": "opacity 0.5s",
+                          "transition": "opacity 500ms",
                           "width": "100%",
                         }
                       }
@@ -38979,7 +38979,7 @@ Array [
                           "opacity": 0,
                           "position": "absolute",
                           "top": 0,
-                          "transition": "opacity 0.5s",
+                          "transition": "opacity 500ms",
                           "width": "100%",
                         }
                       }
@@ -39069,7 +39069,7 @@ Array [
                           "opacity": 0,
                           "position": "absolute",
                           "top": 0,
-                          "transition": "opacity 0.5s",
+                          "transition": "opacity 500ms",
                           "width": "100%",
                         }
                       }
@@ -39159,7 +39159,7 @@ Array [
                           "opacity": 0,
                           "position": "absolute",
                           "top": 0,
-                          "transition": "opacity 0.5s",
+                          "transition": "opacity 500ms",
                           "width": "100%",
                         }
                       }
@@ -39249,7 +39249,7 @@ Array [
                           "opacity": 0,
                           "position": "absolute",
                           "top": 0,
-                          "transition": "opacity 0.5s",
+                          "transition": "opacity 500ms",
                           "width": "100%",
                         }
                       }
@@ -39339,7 +39339,7 @@ Array [
                           "opacity": 0,
                           "position": "absolute",
                           "top": 0,
-                          "transition": "opacity 0.5s",
+                          "transition": "opacity 500ms",
                           "width": "100%",
                         }
                       }
@@ -39429,7 +39429,7 @@ Array [
                           "opacity": 0,
                           "position": "absolute",
                           "top": 0,
-                          "transition": "opacity 0.5s",
+                          "transition": "opacity 500ms",
                           "width": "100%",
                         }
                       }
@@ -39519,7 +39519,7 @@ Array [
                           "opacity": 0,
                           "position": "absolute",
                           "top": 0,
-                          "transition": "opacity 0.5s",
+                          "transition": "opacity 500ms",
                           "width": "100%",
                         }
                       }
@@ -39609,7 +39609,7 @@ Array [
                           "opacity": 0,
                           "position": "absolute",
                           "top": 0,
-                          "transition": "opacity 0.5s",
+                          "transition": "opacity 500ms",
                           "width": "100%",
                         }
                       }
@@ -39699,7 +39699,7 @@ Array [
                           "opacity": 0,
                           "position": "absolute",
                           "top": 0,
-                          "transition": "opacity 0.5s",
+                          "transition": "opacity 500ms",
                           "width": "100%",
                         }
                       }
@@ -39789,7 +39789,7 @@ Array [
                           "opacity": 0,
                           "position": "absolute",
                           "top": 0,
-                          "transition": "opacity 0.5s",
+                          "transition": "opacity 500ms",
                           "width": "100%",
                         }
                       }
@@ -39879,7 +39879,7 @@ Array [
                           "opacity": 0,
                           "position": "absolute",
                           "top": 0,
-                          "transition": "opacity 0.5s",
+                          "transition": "opacity 500ms",
                           "width": "100%",
                         }
                       }
@@ -39969,7 +39969,7 @@ Array [
                           "opacity": 0,
                           "position": "absolute",
                           "top": 0,
-                          "transition": "opacity 0.5s",
+                          "transition": "opacity 500ms",
                           "width": "100%",
                         }
                       }
@@ -40059,7 +40059,7 @@ Array [
                           "opacity": 0,
                           "position": "absolute",
                           "top": 0,
-                          "transition": "opacity 0.5s",
+                          "transition": "opacity 500ms",
                           "width": "100%",
                         }
                       }
@@ -40149,7 +40149,7 @@ Array [
                           "opacity": 0,
                           "position": "absolute",
                           "top": 0,
-                          "transition": "opacity 0.5s",
+                          "transition": "opacity 500ms",
                           "width": "100%",
                         }
                       }
@@ -40239,7 +40239,7 @@ Array [
                           "opacity": 0,
                           "position": "absolute",
                           "top": 0,
-                          "transition": "opacity 0.5s",
+                          "transition": "opacity 500ms",
                           "width": "100%",
                         }
                       }
@@ -40329,7 +40329,7 @@ Array [
                           "opacity": 0,
                           "position": "absolute",
                           "top": 0,
-                          "transition": "opacity 0.5s",
+                          "transition": "opacity 500ms",
                           "width": "100%",
                         }
                       }
@@ -40419,7 +40419,7 @@ Array [
                           "opacity": 0,
                           "position": "absolute",
                           "top": 0,
-                          "transition": "opacity 0.5s",
+                          "transition": "opacity 500ms",
                           "width": "100%",
                         }
                       }
@@ -40509,7 +40509,7 @@ Array [
                           "opacity": 0,
                           "position": "absolute",
                           "top": 0,
-                          "transition": "opacity 0.5s",
+                          "transition": "opacity 500ms",
                           "width": "100%",
                         }
                       }
@@ -40599,7 +40599,7 @@ Array [
                           "opacity": 0,
                           "position": "absolute",
                           "top": 0,
-                          "transition": "opacity 0.5s",
+                          "transition": "opacity 500ms",
                           "width": "100%",
                         }
                       }
@@ -40689,7 +40689,7 @@ Array [
                           "opacity": 0,
                           "position": "absolute",
                           "top": 0,
-                          "transition": "opacity 0.5s",
+                          "transition": "opacity 500ms",
                           "width": "100%",
                         }
                       }
@@ -40779,7 +40779,7 @@ Array [
                           "opacity": 0,
                           "position": "absolute",
                           "top": 0,
-                          "transition": "opacity 0.5s",
+                          "transition": "opacity 500ms",
                           "width": "100%",
                         }
                       }
@@ -40869,7 +40869,7 @@ Array [
                           "opacity": 0,
                           "position": "absolute",
                           "top": 0,
-                          "transition": "opacity 0.5s",
+                          "transition": "opacity 500ms",
                           "width": "100%",
                         }
                       }
@@ -40959,7 +40959,7 @@ Array [
                           "opacity": 0,
                           "position": "absolute",
                           "top": 0,
-                          "transition": "opacity 0.5s",
+                          "transition": "opacity 500ms",
                           "width": "100%",
                         }
                       }
@@ -41049,7 +41049,7 @@ Array [
                           "opacity": 0,
                           "position": "absolute",
                           "top": 0,
-                          "transition": "opacity 0.5s",
+                          "transition": "opacity 500ms",
                           "width": "100%",
                         }
                       }
@@ -41139,7 +41139,7 @@ Array [
                           "opacity": 0,
                           "position": "absolute",
                           "top": 0,
-                          "transition": "opacity 0.5s",
+                          "transition": "opacity 500ms",
                           "width": "100%",
                         }
                       }
@@ -41229,7 +41229,7 @@ Array [
                           "opacity": 0,
                           "position": "absolute",
                           "top": 0,
-                          "transition": "opacity 0.5s",
+                          "transition": "opacity 500ms",
                           "width": "100%",
                         }
                       }
@@ -41319,7 +41319,7 @@ Array [
                           "opacity": 0,
                           "position": "absolute",
                           "top": 0,
-                          "transition": "opacity 0.5s",
+                          "transition": "opacity 500ms",
                           "width": "100%",
                         }
                       }
@@ -41409,7 +41409,7 @@ Array [
                           "opacity": 0,
                           "position": "absolute",
                           "top": 0,
-                          "transition": "opacity 0.5s",
+                          "transition": "opacity 500ms",
                           "width": "100%",
                         }
                       }
@@ -41499,7 +41499,7 @@ Array [
                           "opacity": 0,
                           "position": "absolute",
                           "top": 0,
-                          "transition": "opacity 0.5s",
+                          "transition": "opacity 500ms",
                           "width": "100%",
                         }
                       }
@@ -41589,7 +41589,7 @@ Array [
                           "opacity": 0,
                           "position": "absolute",
                           "top": 0,
-                          "transition": "opacity 0.5s",
+                          "transition": "opacity 500ms",
                           "width": "100%",
                         }
                       }
@@ -41679,7 +41679,7 @@ Array [
                           "opacity": 0,
                           "position": "absolute",
                           "top": 0,
-                          "transition": "opacity 0.5s",
+                          "transition": "opacity 500ms",
                           "width": "100%",
                         }
                       }
@@ -41769,7 +41769,7 @@ Array [
                           "opacity": 0,
                           "position": "absolute",
                           "top": 0,
-                          "transition": "opacity 0.5s",
+                          "transition": "opacity 500ms",
                           "width": "100%",
                         }
                       }
@@ -41859,7 +41859,7 @@ Array [
                           "opacity": 0,
                           "position": "absolute",
                           "top": 0,
-                          "transition": "opacity 0.5s",
+                          "transition": "opacity 500ms",
                           "width": "100%",
                         }
                       }
@@ -41949,7 +41949,7 @@ Array [
                           "opacity": 0,
                           "position": "absolute",
                           "top": 0,
-                          "transition": "opacity 0.5s",
+                          "transition": "opacity 500ms",
                           "width": "100%",
                         }
                       }
@@ -42039,7 +42039,7 @@ Array [
                           "opacity": 0,
                           "position": "absolute",
                           "top": 0,
-                          "transition": "opacity 0.5s",
+                          "transition": "opacity 500ms",
                           "width": "100%",
                         }
                       }
@@ -42129,7 +42129,7 @@ Array [
                           "opacity": 0,
                           "position": "absolute",
                           "top": 0,
-                          "transition": "opacity 0.5s",
+                          "transition": "opacity 500ms",
                           "width": "100%",
                         }
                       }
@@ -42219,7 +42219,7 @@ Array [
                           "opacity": 0,
                           "position": "absolute",
                           "top": 0,
-                          "transition": "opacity 0.5s",
+                          "transition": "opacity 500ms",
                           "width": "100%",
                         }
                       }
@@ -42309,7 +42309,7 @@ Array [
                           "opacity": 0,
                           "position": "absolute",
                           "top": 0,
-                          "transition": "opacity 0.5s",
+                          "transition": "opacity 500ms",
                           "width": "100%",
                         }
                       }
@@ -42399,7 +42399,7 @@ Array [
                           "opacity": 0,
                           "position": "absolute",
                           "top": 0,
-                          "transition": "opacity 0.5s",
+                          "transition": "opacity 500ms",
                           "width": "100%",
                         }
                       }
@@ -42489,7 +42489,7 @@ Array [
                           "opacity": 0,
                           "position": "absolute",
                           "top": 0,
-                          "transition": "opacity 0.5s",
+                          "transition": "opacity 500ms",
                           "width": "100%",
                         }
                       }
@@ -42579,7 +42579,7 @@ Array [
                           "opacity": 0,
                           "position": "absolute",
                           "top": 0,
-                          "transition": "opacity 0.5s",
+                          "transition": "opacity 500ms",
                           "width": "100%",
                         }
                       }
@@ -42669,7 +42669,7 @@ Array [
                           "opacity": 0,
                           "position": "absolute",
                           "top": 0,
-                          "transition": "opacity 0.5s",
+                          "transition": "opacity 500ms",
                           "width": "100%",
                         }
                       }
@@ -42759,7 +42759,7 @@ Array [
                           "opacity": 0,
                           "position": "absolute",
                           "top": 0,
-                          "transition": "opacity 0.5s",
+                          "transition": "opacity 500ms",
                           "width": "100%",
                         }
                       }
@@ -42849,7 +42849,7 @@ Array [
                           "opacity": 0,
                           "position": "absolute",
                           "top": 0,
-                          "transition": "opacity 0.5s",
+                          "transition": "opacity 500ms",
                           "width": "100%",
                         }
                       }
@@ -42939,7 +42939,7 @@ Array [
                           "opacity": 0,
                           "position": "absolute",
                           "top": 0,
-                          "transition": "opacity 0.5s",
+                          "transition": "opacity 500ms",
                           "width": "100%",
                         }
                       }
@@ -43029,7 +43029,7 @@ Array [
                           "opacity": 0,
                           "position": "absolute",
                           "top": 0,
-                          "transition": "opacity 0.5s",
+                          "transition": "opacity 500ms",
                           "width": "100%",
                         }
                       }
@@ -43119,7 +43119,7 @@ Array [
                           "opacity": 0,
                           "position": "absolute",
                           "top": 0,
-                          "transition": "opacity 0.5s",
+                          "transition": "opacity 500ms",
                           "width": "100%",
                         }
                       }
@@ -43209,7 +43209,7 @@ Array [
                           "opacity": 0,
                           "position": "absolute",
                           "top": 0,
-                          "transition": "opacity 0.5s",
+                          "transition": "opacity 500ms",
                           "width": "100%",
                         }
                       }
@@ -43299,7 +43299,7 @@ Array [
                           "opacity": 0,
                           "position": "absolute",
                           "top": 0,
-                          "transition": "opacity 0.5s",
+                          "transition": "opacity 500ms",
                           "width": "100%",
                         }
                       }
@@ -43389,7 +43389,7 @@ Array [
                           "opacity": 0,
                           "position": "absolute",
                           "top": 0,
-                          "transition": "opacity 0.5s",
+                          "transition": "opacity 500ms",
                           "width": "100%",
                         }
                       }
@@ -43479,7 +43479,7 @@ Array [
                           "opacity": 0,
                           "position": "absolute",
                           "top": 0,
-                          "transition": "opacity 0.5s",
+                          "transition": "opacity 500ms",
                           "width": "100%",
                         }
                       }
@@ -43569,7 +43569,7 @@ Array [
                           "opacity": 0,
                           "position": "absolute",
                           "top": 0,
-                          "transition": "opacity 0.5s",
+                          "transition": "opacity 500ms",
                           "width": "100%",
                         }
                       }
@@ -43659,7 +43659,7 @@ Array [
                           "opacity": 0,
                           "position": "absolute",
                           "top": 0,
-                          "transition": "opacity 0.5s",
+                          "transition": "opacity 500ms",
                           "width": "100%",
                         }
                       }
@@ -43749,7 +43749,7 @@ Array [
                           "opacity": 0,
                           "position": "absolute",
                           "top": 0,
-                          "transition": "opacity 0.5s",
+                          "transition": "opacity 500ms",
                           "width": "100%",
                         }
                       }
@@ -43839,7 +43839,7 @@ Array [
                           "opacity": 0,
                           "position": "absolute",
                           "top": 0,
-                          "transition": "opacity 0.5s",
+                          "transition": "opacity 500ms",
                           "width": "100%",
                         }
                       }
@@ -43929,7 +43929,7 @@ Array [
                           "opacity": 0,
                           "position": "absolute",
                           "top": 0,
-                          "transition": "opacity 0.5s",
+                          "transition": "opacity 500ms",
                           "width": "100%",
                         }
                       }
@@ -44019,7 +44019,7 @@ Array [
                           "opacity": 0,
                           "position": "absolute",
                           "top": 0,
-                          "transition": "opacity 0.5s",
+                          "transition": "opacity 500ms",
                           "width": "100%",
                         }
                       }
@@ -44873,7 +44873,7 @@ Array [
                     "opacity": 0,
                     "position": "absolute",
                     "top": 0,
-                    "transition": "opacity 0.5s",
+                    "transition": "opacity 500ms",
                     "width": "100%",
                   }
                 }
