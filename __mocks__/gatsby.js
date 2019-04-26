@@ -98,7 +98,7 @@ module.exports = {
                   src: imageSrc(karutaImage),
                 }
               },
-              publicURL: `karuta_${("00" + (i + 1)).slice(-3)}.jpg`
+              name: `karuta_${("00" + (i + 1)).slice(-3)}`
             }
           }))
         }
