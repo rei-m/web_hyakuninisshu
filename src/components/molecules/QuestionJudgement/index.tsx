@@ -4,7 +4,7 @@ import styled from '@src/styles/styled-components';
 import Block from '@src/components/atoms/Block';
 import KarutaNo from '@src/components/atoms/KarutaNo';
 import { Karuta } from '@src/types';
-import { useAppContext } from '@src/hooks/useAppContext';
+import { useCorrectImage } from '@src/hooks/staticQueries/useCorrectImage';
 
 export interface Props {
   karuta: Karuta;
@@ -30,7 +30,7 @@ const ImageBox = styled(Block)`
 `;
 
 const QuestionJudgement = ({ karuta, correct, className, onClick }: Props) => {
-  const [correctImage, incorrectImage] = useAppContext().useCorrectImage();
+  const [correctImage, incorrectImage] = useCorrectImage();
   const handleOnClick = React.useCallback(() => {
     if (onClick) {
       onClick(karuta);

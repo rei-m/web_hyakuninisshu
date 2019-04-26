@@ -1943,6 +1943,7 @@ exports[`Storyshots molecules/MenuLink default 1`] = `
   >
     <a
       href="/"
+      onClick={[Function]}
       style={Object {}}
     >
       <span
@@ -2654,7 +2655,7 @@ exports[`Storyshots molecules/TatamiLayout default 1`] = `
   className=""
   style={
     Object {
-      "backgroundImage": "url([object Object])",
+      "backgroundImage": "url(test-file-stub)",
     }
   }
 >
@@ -2671,7 +2672,7 @@ exports[`Storyshots molecules/TatamiLayout with custom style 1`] = `
   className="c0 "
   style={
     Object {
-      "backgroundImage": "url([object Object])",
+      "backgroundImage": "url(test-file-stub)",
     }
   }
 >
@@ -7489,6 +7490,7 @@ exports[`Storyshots organisms/FilteredSmallMaterialList default 1`] = `
     <a
       className="c2"
       href="/karutas/1/"
+      onClick={[Function]}
     >
       <div
         className="c3 c4 c5"
@@ -7578,6 +7580,7 @@ exports[`Storyshots organisms/FilteredSmallMaterialList default 1`] = `
     <a
       className="c2"
       href="/karutas/2/"
+      onClick={[Function]}
     >
       <div
         className="c3 c4 c5"
@@ -7667,6 +7670,7 @@ exports[`Storyshots organisms/FilteredSmallMaterialList default 1`] = `
     <a
       className="c2"
       href="/karutas/3/"
+      onClick={[Function]}
     >
       <div
         className="c3 c4 c5"
@@ -7756,6 +7760,7 @@ exports[`Storyshots organisms/FilteredSmallMaterialList default 1`] = `
     <a
       className="c2"
       href="/karutas/4/"
+      onClick={[Function]}
     >
       <div
         className="c3 c4 c5"
@@ -7845,6 +7850,7 @@ exports[`Storyshots organisms/FilteredSmallMaterialList default 1`] = `
     <a
       className="c2"
       href="/karutas/5/"
+      onClick={[Function]}
     >
       <div
         className="c3 c4 c5"
@@ -7934,6 +7940,7 @@ exports[`Storyshots organisms/FilteredSmallMaterialList default 1`] = `
     <a
       className="c2"
       href="/karutas/6/"
+      onClick={[Function]}
     >
       <div
         className="c3 c4 c5"
@@ -8023,6 +8030,7 @@ exports[`Storyshots organisms/FilteredSmallMaterialList default 1`] = `
     <a
       className="c2"
       href="/karutas/7/"
+      onClick={[Function]}
     >
       <div
         className="c3 c4 c5"
@@ -8112,6 +8120,7 @@ exports[`Storyshots organisms/FilteredSmallMaterialList default 1`] = `
     <a
       className="c2"
       href="/karutas/8/"
+      onClick={[Function]}
     >
       <div
         className="c3 c4 c5"
@@ -8201,6 +8210,7 @@ exports[`Storyshots organisms/FilteredSmallMaterialList default 1`] = `
     <a
       className="c2"
       href="/karutas/9/"
+      onClick={[Function]}
     >
       <div
         className="c3 c4 c5"
@@ -8290,6 +8300,7 @@ exports[`Storyshots organisms/FilteredSmallMaterialList default 1`] = `
     <a
       className="c2"
       href="/karutas/10/"
+      onClick={[Function]}
     >
       <div
         className="c3 c4 c5"
@@ -8379,6 +8390,7 @@ exports[`Storyshots organisms/FilteredSmallMaterialList default 1`] = `
     <a
       className="c2"
       href="/karutas/11/"
+      onClick={[Function]}
     >
       <div
         className="c3 c4 c5"
@@ -8468,6 +8480,7 @@ exports[`Storyshots organisms/FilteredSmallMaterialList default 1`] = `
     <a
       className="c2"
       href="/karutas/12/"
+      onClick={[Function]}
     >
       <div
         className="c3 c4 c5"
@@ -8557,6 +8570,7 @@ exports[`Storyshots organisms/FilteredSmallMaterialList default 1`] = `
     <a
       className="c2"
       href="/karutas/13/"
+      onClick={[Function]}
     >
       <div
         className="c3 c4 c5"
@@ -8646,6 +8660,7 @@ exports[`Storyshots organisms/FilteredSmallMaterialList default 1`] = `
     <a
       className="c2"
       href="/karutas/14/"
+      onClick={[Function]}
     >
       <div
         className="c3 c4 c5"
@@ -8735,6 +8750,7 @@ exports[`Storyshots organisms/FilteredSmallMaterialList default 1`] = `
     <a
       className="c2"
       href="/karutas/15/"
+      onClick={[Function]}
     >
       <div
         className="c3 c4 c5"
@@ -8824,6 +8840,7 @@ exports[`Storyshots organisms/FilteredSmallMaterialList default 1`] = `
     <a
       className="c2"
       href="/karutas/16/"
+      onClick={[Function]}
     >
       <div
         className="c3 c4 c5"
@@ -8913,6 +8930,7 @@ exports[`Storyshots organisms/FilteredSmallMaterialList default 1`] = `
     <a
       className="c2"
       href="/karutas/17/"
+      onClick={[Function]}
     >
       <div
         className="c3 c4 c5"
@@ -9002,6 +9020,7 @@ exports[`Storyshots organisms/FilteredSmallMaterialList default 1`] = `
     <a
       className="c2"
       href="/karutas/18/"
+      onClick={[Function]}
     >
       <div
         className="c3 c4 c5"
@@ -9091,6 +9110,7 @@ exports[`Storyshots organisms/FilteredSmallMaterialList default 1`] = `
     <a
       className="c2"
       href="/karutas/19/"
+      onClick={[Function]}
     >
       <div
         className="c3 c4 c5"
@@ -9180,6 +9200,7 @@ exports[`Storyshots organisms/FilteredSmallMaterialList default 1`] = `
     <a
       className="c2"
       href="/karutas/20/"
+      onClick={[Function]}
     >
       <div
         className="c3 c4 c5"
@@ -9269,6 +9290,7 @@ exports[`Storyshots organisms/FilteredSmallMaterialList default 1`] = `
     <a
       className="c2"
       href="/karutas/21/"
+      onClick={[Function]}
     >
       <div
         className="c3 c4 c5"
@@ -9358,6 +9380,7 @@ exports[`Storyshots organisms/FilteredSmallMaterialList default 1`] = `
     <a
       className="c2"
       href="/karutas/22/"
+      onClick={[Function]}
     >
       <div
         className="c3 c4 c5"
@@ -9447,6 +9470,7 @@ exports[`Storyshots organisms/FilteredSmallMaterialList default 1`] = `
     <a
       className="c2"
       href="/karutas/23/"
+      onClick={[Function]}
     >
       <div
         className="c3 c4 c5"
@@ -9536,6 +9560,7 @@ exports[`Storyshots organisms/FilteredSmallMaterialList default 1`] = `
     <a
       className="c2"
       href="/karutas/24/"
+      onClick={[Function]}
     >
       <div
         className="c3 c4 c5"
@@ -9625,6 +9650,7 @@ exports[`Storyshots organisms/FilteredSmallMaterialList default 1`] = `
     <a
       className="c2"
       href="/karutas/25/"
+      onClick={[Function]}
     >
       <div
         className="c3 c4 c5"
@@ -9714,6 +9740,7 @@ exports[`Storyshots organisms/FilteredSmallMaterialList default 1`] = `
     <a
       className="c2"
       href="/karutas/26/"
+      onClick={[Function]}
     >
       <div
         className="c3 c4 c5"
@@ -9803,6 +9830,7 @@ exports[`Storyshots organisms/FilteredSmallMaterialList default 1`] = `
     <a
       className="c2"
       href="/karutas/27/"
+      onClick={[Function]}
     >
       <div
         className="c3 c4 c5"
@@ -9892,6 +9920,7 @@ exports[`Storyshots organisms/FilteredSmallMaterialList default 1`] = `
     <a
       className="c2"
       href="/karutas/28/"
+      onClick={[Function]}
     >
       <div
         className="c3 c4 c5"
@@ -9981,6 +10010,7 @@ exports[`Storyshots organisms/FilteredSmallMaterialList default 1`] = `
     <a
       className="c2"
       href="/karutas/29/"
+      onClick={[Function]}
     >
       <div
         className="c3 c4 c5"
@@ -10070,6 +10100,7 @@ exports[`Storyshots organisms/FilteredSmallMaterialList default 1`] = `
     <a
       className="c2"
       href="/karutas/30/"
+      onClick={[Function]}
     >
       <div
         className="c3 c4 c5"
@@ -10159,6 +10190,7 @@ exports[`Storyshots organisms/FilteredSmallMaterialList default 1`] = `
     <a
       className="c2"
       href="/karutas/31/"
+      onClick={[Function]}
     >
       <div
         className="c3 c4 c5"
@@ -10248,6 +10280,7 @@ exports[`Storyshots organisms/FilteredSmallMaterialList default 1`] = `
     <a
       className="c2"
       href="/karutas/32/"
+      onClick={[Function]}
     >
       <div
         className="c3 c4 c5"
@@ -10337,6 +10370,7 @@ exports[`Storyshots organisms/FilteredSmallMaterialList default 1`] = `
     <a
       className="c2"
       href="/karutas/33/"
+      onClick={[Function]}
     >
       <div
         className="c3 c4 c5"
@@ -10426,6 +10460,7 @@ exports[`Storyshots organisms/FilteredSmallMaterialList default 1`] = `
     <a
       className="c2"
       href="/karutas/34/"
+      onClick={[Function]}
     >
       <div
         className="c3 c4 c5"
@@ -10515,6 +10550,7 @@ exports[`Storyshots organisms/FilteredSmallMaterialList default 1`] = `
     <a
       className="c2"
       href="/karutas/35/"
+      onClick={[Function]}
     >
       <div
         className="c3 c4 c5"
@@ -10604,6 +10640,7 @@ exports[`Storyshots organisms/FilteredSmallMaterialList default 1`] = `
     <a
       className="c2"
       href="/karutas/36/"
+      onClick={[Function]}
     >
       <div
         className="c3 c4 c5"
@@ -10693,6 +10730,7 @@ exports[`Storyshots organisms/FilteredSmallMaterialList default 1`] = `
     <a
       className="c2"
       href="/karutas/37/"
+      onClick={[Function]}
     >
       <div
         className="c3 c4 c5"
@@ -10782,6 +10820,7 @@ exports[`Storyshots organisms/FilteredSmallMaterialList default 1`] = `
     <a
       className="c2"
       href="/karutas/38/"
+      onClick={[Function]}
     >
       <div
         className="c3 c4 c5"
@@ -10871,6 +10910,7 @@ exports[`Storyshots organisms/FilteredSmallMaterialList default 1`] = `
     <a
       className="c2"
       href="/karutas/39/"
+      onClick={[Function]}
     >
       <div
         className="c3 c4 c5"
@@ -10960,6 +11000,7 @@ exports[`Storyshots organisms/FilteredSmallMaterialList default 1`] = `
     <a
       className="c2"
       href="/karutas/40/"
+      onClick={[Function]}
     >
       <div
         className="c3 c4 c5"
@@ -11049,6 +11090,7 @@ exports[`Storyshots organisms/FilteredSmallMaterialList default 1`] = `
     <a
       className="c2"
       href="/karutas/41/"
+      onClick={[Function]}
     >
       <div
         className="c3 c4 c5"
@@ -11138,6 +11180,7 @@ exports[`Storyshots organisms/FilteredSmallMaterialList default 1`] = `
     <a
       className="c2"
       href="/karutas/42/"
+      onClick={[Function]}
     >
       <div
         className="c3 c4 c5"
@@ -11227,6 +11270,7 @@ exports[`Storyshots organisms/FilteredSmallMaterialList default 1`] = `
     <a
       className="c2"
       href="/karutas/43/"
+      onClick={[Function]}
     >
       <div
         className="c3 c4 c5"
@@ -11316,6 +11360,7 @@ exports[`Storyshots organisms/FilteredSmallMaterialList default 1`] = `
     <a
       className="c2"
       href="/karutas/44/"
+      onClick={[Function]}
     >
       <div
         className="c3 c4 c5"
@@ -11405,6 +11450,7 @@ exports[`Storyshots organisms/FilteredSmallMaterialList default 1`] = `
     <a
       className="c2"
       href="/karutas/45/"
+      onClick={[Function]}
     >
       <div
         className="c3 c4 c5"
@@ -11494,6 +11540,7 @@ exports[`Storyshots organisms/FilteredSmallMaterialList default 1`] = `
     <a
       className="c2"
       href="/karutas/46/"
+      onClick={[Function]}
     >
       <div
         className="c3 c4 c5"
@@ -11583,6 +11630,7 @@ exports[`Storyshots organisms/FilteredSmallMaterialList default 1`] = `
     <a
       className="c2"
       href="/karutas/47/"
+      onClick={[Function]}
     >
       <div
         className="c3 c4 c5"
@@ -11672,6 +11720,7 @@ exports[`Storyshots organisms/FilteredSmallMaterialList default 1`] = `
     <a
       className="c2"
       href="/karutas/48/"
+      onClick={[Function]}
     >
       <div
         className="c3 c4 c5"
@@ -11761,6 +11810,7 @@ exports[`Storyshots organisms/FilteredSmallMaterialList default 1`] = `
     <a
       className="c2"
       href="/karutas/49/"
+      onClick={[Function]}
     >
       <div
         className="c3 c4 c5"
@@ -11850,6 +11900,7 @@ exports[`Storyshots organisms/FilteredSmallMaterialList default 1`] = `
     <a
       className="c2"
       href="/karutas/50/"
+      onClick={[Function]}
     >
       <div
         className="c3 c4 c5"
@@ -11939,6 +11990,7 @@ exports[`Storyshots organisms/FilteredSmallMaterialList default 1`] = `
     <a
       className="c2"
       href="/karutas/51/"
+      onClick={[Function]}
     >
       <div
         className="c3 c4 c5"
@@ -12028,6 +12080,7 @@ exports[`Storyshots organisms/FilteredSmallMaterialList default 1`] = `
     <a
       className="c2"
       href="/karutas/52/"
+      onClick={[Function]}
     >
       <div
         className="c3 c4 c5"
@@ -12117,6 +12170,7 @@ exports[`Storyshots organisms/FilteredSmallMaterialList default 1`] = `
     <a
       className="c2"
       href="/karutas/53/"
+      onClick={[Function]}
     >
       <div
         className="c3 c4 c5"
@@ -12206,6 +12260,7 @@ exports[`Storyshots organisms/FilteredSmallMaterialList default 1`] = `
     <a
       className="c2"
       href="/karutas/54/"
+      onClick={[Function]}
     >
       <div
         className="c3 c4 c5"
@@ -12295,6 +12350,7 @@ exports[`Storyshots organisms/FilteredSmallMaterialList default 1`] = `
     <a
       className="c2"
       href="/karutas/55/"
+      onClick={[Function]}
     >
       <div
         className="c3 c4 c5"
@@ -12384,6 +12440,7 @@ exports[`Storyshots organisms/FilteredSmallMaterialList default 1`] = `
     <a
       className="c2"
       href="/karutas/56/"
+      onClick={[Function]}
     >
       <div
         className="c3 c4 c5"
@@ -12473,6 +12530,7 @@ exports[`Storyshots organisms/FilteredSmallMaterialList default 1`] = `
     <a
       className="c2"
       href="/karutas/57/"
+      onClick={[Function]}
     >
       <div
         className="c3 c4 c5"
@@ -12562,6 +12620,7 @@ exports[`Storyshots organisms/FilteredSmallMaterialList default 1`] = `
     <a
       className="c2"
       href="/karutas/58/"
+      onClick={[Function]}
     >
       <div
         className="c3 c4 c5"
@@ -12651,6 +12710,7 @@ exports[`Storyshots organisms/FilteredSmallMaterialList default 1`] = `
     <a
       className="c2"
       href="/karutas/59/"
+      onClick={[Function]}
     >
       <div
         className="c3 c4 c5"
@@ -12740,6 +12800,7 @@ exports[`Storyshots organisms/FilteredSmallMaterialList default 1`] = `
     <a
       className="c2"
       href="/karutas/60/"
+      onClick={[Function]}
     >
       <div
         className="c3 c4 c5"
@@ -12829,6 +12890,7 @@ exports[`Storyshots organisms/FilteredSmallMaterialList default 1`] = `
     <a
       className="c2"
       href="/karutas/61/"
+      onClick={[Function]}
     >
       <div
         className="c3 c4 c5"
@@ -12918,6 +12980,7 @@ exports[`Storyshots organisms/FilteredSmallMaterialList default 1`] = `
     <a
       className="c2"
       href="/karutas/62/"
+      onClick={[Function]}
     >
       <div
         className="c3 c4 c5"
@@ -13007,6 +13070,7 @@ exports[`Storyshots organisms/FilteredSmallMaterialList default 1`] = `
     <a
       className="c2"
       href="/karutas/63/"
+      onClick={[Function]}
     >
       <div
         className="c3 c4 c5"
@@ -13096,6 +13160,7 @@ exports[`Storyshots organisms/FilteredSmallMaterialList default 1`] = `
     <a
       className="c2"
       href="/karutas/64/"
+      onClick={[Function]}
     >
       <div
         className="c3 c4 c5"
@@ -13185,6 +13250,7 @@ exports[`Storyshots organisms/FilteredSmallMaterialList default 1`] = `
     <a
       className="c2"
       href="/karutas/65/"
+      onClick={[Function]}
     >
       <div
         className="c3 c4 c5"
@@ -13274,6 +13340,7 @@ exports[`Storyshots organisms/FilteredSmallMaterialList default 1`] = `
     <a
       className="c2"
       href="/karutas/66/"
+      onClick={[Function]}
     >
       <div
         className="c3 c4 c5"
@@ -13363,6 +13430,7 @@ exports[`Storyshots organisms/FilteredSmallMaterialList default 1`] = `
     <a
       className="c2"
       href="/karutas/67/"
+      onClick={[Function]}
     >
       <div
         className="c3 c4 c5"
@@ -13452,6 +13520,7 @@ exports[`Storyshots organisms/FilteredSmallMaterialList default 1`] = `
     <a
       className="c2"
       href="/karutas/68/"
+      onClick={[Function]}
     >
       <div
         className="c3 c4 c5"
@@ -13541,6 +13610,7 @@ exports[`Storyshots organisms/FilteredSmallMaterialList default 1`] = `
     <a
       className="c2"
       href="/karutas/69/"
+      onClick={[Function]}
     >
       <div
         className="c3 c4 c5"
@@ -13630,6 +13700,7 @@ exports[`Storyshots organisms/FilteredSmallMaterialList default 1`] = `
     <a
       className="c2"
       href="/karutas/70/"
+      onClick={[Function]}
     >
       <div
         className="c3 c4 c5"
@@ -13719,6 +13790,7 @@ exports[`Storyshots organisms/FilteredSmallMaterialList default 1`] = `
     <a
       className="c2"
       href="/karutas/71/"
+      onClick={[Function]}
     >
       <div
         className="c3 c4 c5"
@@ -13808,6 +13880,7 @@ exports[`Storyshots organisms/FilteredSmallMaterialList default 1`] = `
     <a
       className="c2"
       href="/karutas/72/"
+      onClick={[Function]}
     >
       <div
         className="c3 c4 c5"
@@ -13897,6 +13970,7 @@ exports[`Storyshots organisms/FilteredSmallMaterialList default 1`] = `
     <a
       className="c2"
       href="/karutas/73/"
+      onClick={[Function]}
     >
       <div
         className="c3 c4 c5"
@@ -13986,6 +14060,7 @@ exports[`Storyshots organisms/FilteredSmallMaterialList default 1`] = `
     <a
       className="c2"
       href="/karutas/74/"
+      onClick={[Function]}
     >
       <div
         className="c3 c4 c5"
@@ -14075,6 +14150,7 @@ exports[`Storyshots organisms/FilteredSmallMaterialList default 1`] = `
     <a
       className="c2"
       href="/karutas/75/"
+      onClick={[Function]}
     >
       <div
         className="c3 c4 c5"
@@ -14164,6 +14240,7 @@ exports[`Storyshots organisms/FilteredSmallMaterialList default 1`] = `
     <a
       className="c2"
       href="/karutas/76/"
+      onClick={[Function]}
     >
       <div
         className="c3 c4 c5"
@@ -14253,6 +14330,7 @@ exports[`Storyshots organisms/FilteredSmallMaterialList default 1`] = `
     <a
       className="c2"
       href="/karutas/77/"
+      onClick={[Function]}
     >
       <div
         className="c3 c4 c5"
@@ -14342,6 +14420,7 @@ exports[`Storyshots organisms/FilteredSmallMaterialList default 1`] = `
     <a
       className="c2"
       href="/karutas/78/"
+      onClick={[Function]}
     >
       <div
         className="c3 c4 c5"
@@ -14431,6 +14510,7 @@ exports[`Storyshots organisms/FilteredSmallMaterialList default 1`] = `
     <a
       className="c2"
       href="/karutas/79/"
+      onClick={[Function]}
     >
       <div
         className="c3 c4 c5"
@@ -14520,6 +14600,7 @@ exports[`Storyshots organisms/FilteredSmallMaterialList default 1`] = `
     <a
       className="c2"
       href="/karutas/80/"
+      onClick={[Function]}
     >
       <div
         className="c3 c4 c5"
@@ -14609,6 +14690,7 @@ exports[`Storyshots organisms/FilteredSmallMaterialList default 1`] = `
     <a
       className="c2"
       href="/karutas/81/"
+      onClick={[Function]}
     >
       <div
         className="c3 c4 c5"
@@ -14698,6 +14780,7 @@ exports[`Storyshots organisms/FilteredSmallMaterialList default 1`] = `
     <a
       className="c2"
       href="/karutas/82/"
+      onClick={[Function]}
     >
       <div
         className="c3 c4 c5"
@@ -14787,6 +14870,7 @@ exports[`Storyshots organisms/FilteredSmallMaterialList default 1`] = `
     <a
       className="c2"
       href="/karutas/83/"
+      onClick={[Function]}
     >
       <div
         className="c3 c4 c5"
@@ -14876,6 +14960,7 @@ exports[`Storyshots organisms/FilteredSmallMaterialList default 1`] = `
     <a
       className="c2"
       href="/karutas/84/"
+      onClick={[Function]}
     >
       <div
         className="c3 c4 c5"
@@ -14965,6 +15050,7 @@ exports[`Storyshots organisms/FilteredSmallMaterialList default 1`] = `
     <a
       className="c2"
       href="/karutas/85/"
+      onClick={[Function]}
     >
       <div
         className="c3 c4 c5"
@@ -15054,6 +15140,7 @@ exports[`Storyshots organisms/FilteredSmallMaterialList default 1`] = `
     <a
       className="c2"
       href="/karutas/86/"
+      onClick={[Function]}
     >
       <div
         className="c3 c4 c5"
@@ -15143,6 +15230,7 @@ exports[`Storyshots organisms/FilteredSmallMaterialList default 1`] = `
     <a
       className="c2"
       href="/karutas/87/"
+      onClick={[Function]}
     >
       <div
         className="c3 c4 c5"
@@ -15232,6 +15320,7 @@ exports[`Storyshots organisms/FilteredSmallMaterialList default 1`] = `
     <a
       className="c2"
       href="/karutas/88/"
+      onClick={[Function]}
     >
       <div
         className="c3 c4 c5"
@@ -15321,6 +15410,7 @@ exports[`Storyshots organisms/FilteredSmallMaterialList default 1`] = `
     <a
       className="c2"
       href="/karutas/89/"
+      onClick={[Function]}
     >
       <div
         className="c3 c4 c5"
@@ -15410,6 +15500,7 @@ exports[`Storyshots organisms/FilteredSmallMaterialList default 1`] = `
     <a
       className="c2"
       href="/karutas/90/"
+      onClick={[Function]}
     >
       <div
         className="c3 c4 c5"
@@ -15499,6 +15590,7 @@ exports[`Storyshots organisms/FilteredSmallMaterialList default 1`] = `
     <a
       className="c2"
       href="/karutas/91/"
+      onClick={[Function]}
     >
       <div
         className="c3 c4 c5"
@@ -15588,6 +15680,7 @@ exports[`Storyshots organisms/FilteredSmallMaterialList default 1`] = `
     <a
       className="c2"
       href="/karutas/92/"
+      onClick={[Function]}
     >
       <div
         className="c3 c4 c5"
@@ -15677,6 +15770,7 @@ exports[`Storyshots organisms/FilteredSmallMaterialList default 1`] = `
     <a
       className="c2"
       href="/karutas/93/"
+      onClick={[Function]}
     >
       <div
         className="c3 c4 c5"
@@ -15766,6 +15860,7 @@ exports[`Storyshots organisms/FilteredSmallMaterialList default 1`] = `
     <a
       className="c2"
       href="/karutas/94/"
+      onClick={[Function]}
     >
       <div
         className="c3 c4 c5"
@@ -15855,6 +15950,7 @@ exports[`Storyshots organisms/FilteredSmallMaterialList default 1`] = `
     <a
       className="c2"
       href="/karutas/95/"
+      onClick={[Function]}
     >
       <div
         className="c3 c4 c5"
@@ -15944,6 +16040,7 @@ exports[`Storyshots organisms/FilteredSmallMaterialList default 1`] = `
     <a
       className="c2"
       href="/karutas/96/"
+      onClick={[Function]}
     >
       <div
         className="c3 c4 c5"
@@ -16033,6 +16130,7 @@ exports[`Storyshots organisms/FilteredSmallMaterialList default 1`] = `
     <a
       className="c2"
       href="/karutas/97/"
+      onClick={[Function]}
     >
       <div
         className="c3 c4 c5"
@@ -16122,6 +16220,7 @@ exports[`Storyshots organisms/FilteredSmallMaterialList default 1`] = `
     <a
       className="c2"
       href="/karutas/98/"
+      onClick={[Function]}
     >
       <div
         className="c3 c4 c5"
@@ -16211,6 +16310,7 @@ exports[`Storyshots organisms/FilteredSmallMaterialList default 1`] = `
     <a
       className="c2"
       href="/karutas/99/"
+      onClick={[Function]}
     >
       <div
         className="c3 c4 c5"
@@ -16300,6 +16400,7 @@ exports[`Storyshots organisms/FilteredSmallMaterialList default 1`] = `
     <a
       className="c2"
       href="/karutas/100/"
+      onClick={[Function]}
     >
       <div
         className="c3 c4 c5"
@@ -18969,6 +19070,7 @@ exports[`Storyshots organisms/MainMenuList default 1`] = `
     >
       <a
         href="/training/"
+        onClick={[Function]}
         style={Object {}}
       >
         <span
@@ -19025,6 +19127,7 @@ exports[`Storyshots organisms/MainMenuList default 1`] = `
     >
       <a
         href="/exam/"
+        onClick={[Function]}
         style={Object {}}
       >
         <span
@@ -19081,6 +19184,7 @@ exports[`Storyshots organisms/MainMenuList default 1`] = `
     >
       <a
         href="/karutas/"
+        onClick={[Function]}
         style={Object {}}
       >
         <span
@@ -20524,6 +20628,7 @@ exports[`Storyshots organisms/Navigation default 1`] = `
     >
       <a
         href="/training/"
+        onClick={[Function]}
         style={Object {}}
       >
         <span
@@ -20564,6 +20669,7 @@ exports[`Storyshots organisms/Navigation default 1`] = `
     >
       <a
         href="/exam/"
+        onClick={[Function]}
         style={Object {}}
       >
         <span
@@ -20604,6 +20710,7 @@ exports[`Storyshots organisms/Navigation default 1`] = `
     >
       <a
         href="/karutas/"
+        onClick={[Function]}
         style={Object {}}
       >
         <span
@@ -20644,6 +20751,7 @@ exports[`Storyshots organisms/Navigation default 1`] = `
     >
       <a
         href="/about/"
+        onClick={[Function]}
         style={Object {}}
       >
         <span
@@ -25678,6 +25786,7 @@ Array [
       >
         <a
           href="/training/"
+          onClick={[Function]}
           style={Object {}}
         >
           <span
@@ -25718,6 +25827,7 @@ Array [
       >
         <a
           href="/exam/"
+          onClick={[Function]}
           style={Object {}}
         >
           <span
@@ -25758,6 +25868,7 @@ Array [
       >
         <a
           href="/karutas/"
+          onClick={[Function]}
           style={Object {}}
         >
           <span
@@ -25798,6 +25909,7 @@ Array [
       >
         <a
           href="/about/"
+          onClick={[Function]}
           style={Object {}}
         >
           <span
@@ -26399,6 +26511,7 @@ Array [
       >
         <a
           href="/training/"
+          onClick={[Function]}
           style={Object {}}
         >
           <span
@@ -26439,6 +26552,7 @@ Array [
       >
         <a
           href="/exam/"
+          onClick={[Function]}
           style={Object {}}
         >
           <span
@@ -26479,6 +26593,7 @@ Array [
       >
         <a
           href="/karutas/"
+          onClick={[Function]}
           style={Object {}}
         >
           <span
@@ -26519,6 +26634,7 @@ Array [
       >
         <a
           href="/about/"
+          onClick={[Function]}
           style={Object {}}
         >
           <span
@@ -26739,7 +26855,7 @@ Array [
       className="c1 "
       style={
         Object {
-          "backgroundImage": "url([object Object])",
+          "backgroundImage": "url(test-file-stub)",
         }
       }
     >
@@ -27045,7 +27161,7 @@ Array [
       className="c1 "
       style={
         Object {
-          "backgroundImage": "url([object Object])",
+          "backgroundImage": "url(test-file-stub)",
         }
       }
     >
@@ -28832,6 +28948,7 @@ Array [
             >
               <a
                 href="/training/"
+                onClick={[Function]}
                 style={Object {}}
               >
                 <span
@@ -28888,6 +29005,7 @@ Array [
             >
               <a
                 href="/exam/"
+                onClick={[Function]}
                 style={Object {}}
               >
                 <span
@@ -28944,6 +29062,7 @@ Array [
             >
               <a
                 href="/karutas/"
+                onClick={[Function]}
                 style={Object {}}
               >
                 <span
@@ -29130,6 +29249,7 @@ Array [
           >
             <a
               href="/karutas/1/"
+              onClick={[Function]}
             >
               <div
                 className="c37 c38 c39"
@@ -29167,6 +29287,7 @@ Array [
           >
             <a
               href="/karutas/2/"
+              onClick={[Function]}
             >
               <div
                 className="c37 c38 c39"
@@ -29204,6 +29325,7 @@ Array [
           >
             <a
               href="/karutas/3/"
+              onClick={[Function]}
             >
               <div
                 className="c37 c38 c39"
@@ -29241,6 +29363,7 @@ Array [
           >
             <a
               href="/karutas/4/"
+              onClick={[Function]}
             >
               <div
                 className="c37 c38 c39"
@@ -29278,6 +29401,7 @@ Array [
           >
             <a
               href="/karutas/5/"
+              onClick={[Function]}
             >
               <div
                 className="c37 c38 c39"
@@ -29315,6 +29439,7 @@ Array [
           >
             <a
               href="/karutas/6/"
+              onClick={[Function]}
             >
               <div
                 className="c37 c38 c39"
@@ -29352,6 +29477,7 @@ Array [
           >
             <a
               href="/karutas/7/"
+              onClick={[Function]}
             >
               <div
                 className="c37 c38 c39"
@@ -29389,6 +29515,7 @@ Array [
           >
             <a
               href="/karutas/8/"
+              onClick={[Function]}
             >
               <div
                 className="c37 c38 c39"
@@ -29426,6 +29553,7 @@ Array [
           >
             <a
               href="/karutas/9/"
+              onClick={[Function]}
             >
               <div
                 className="c37 c38 c39"
@@ -29463,6 +29591,7 @@ Array [
           >
             <a
               href="/karutas/10/"
+              onClick={[Function]}
             >
               <div
                 className="c37 c38 c39"
@@ -29500,6 +29629,7 @@ Array [
           >
             <a
               href="/karutas/11/"
+              onClick={[Function]}
             >
               <div
                 className="c37 c38 c39"
@@ -29537,6 +29667,7 @@ Array [
           >
             <a
               href="/karutas/12/"
+              onClick={[Function]}
             >
               <div
                 className="c37 c38 c39"
@@ -29574,6 +29705,7 @@ Array [
           >
             <a
               href="/karutas/13/"
+              onClick={[Function]}
             >
               <div
                 className="c37 c38 c39"
@@ -29611,6 +29743,7 @@ Array [
           >
             <a
               href="/karutas/14/"
+              onClick={[Function]}
             >
               <div
                 className="c37 c38 c39"
@@ -29648,6 +29781,7 @@ Array [
           >
             <a
               href="/karutas/15/"
+              onClick={[Function]}
             >
               <div
                 className="c37 c38 c39"
@@ -29685,6 +29819,7 @@ Array [
           >
             <a
               href="/karutas/16/"
+              onClick={[Function]}
             >
               <div
                 className="c37 c38 c39"
@@ -29722,6 +29857,7 @@ Array [
           >
             <a
               href="/karutas/17/"
+              onClick={[Function]}
             >
               <div
                 className="c37 c38 c39"
@@ -29759,6 +29895,7 @@ Array [
           >
             <a
               href="/karutas/18/"
+              onClick={[Function]}
             >
               <div
                 className="c37 c38 c39"
@@ -29796,6 +29933,7 @@ Array [
           >
             <a
               href="/karutas/19/"
+              onClick={[Function]}
             >
               <div
                 className="c37 c38 c39"
@@ -29833,6 +29971,7 @@ Array [
           >
             <a
               href="/karutas/20/"
+              onClick={[Function]}
             >
               <div
                 className="c37 c38 c39"
@@ -29870,6 +30009,7 @@ Array [
           >
             <a
               href="/karutas/21/"
+              onClick={[Function]}
             >
               <div
                 className="c37 c38 c39"
@@ -29907,6 +30047,7 @@ Array [
           >
             <a
               href="/karutas/22/"
+              onClick={[Function]}
             >
               <div
                 className="c37 c38 c39"
@@ -29944,6 +30085,7 @@ Array [
           >
             <a
               href="/karutas/23/"
+              onClick={[Function]}
             >
               <div
                 className="c37 c38 c39"
@@ -29981,6 +30123,7 @@ Array [
           >
             <a
               href="/karutas/24/"
+              onClick={[Function]}
             >
               <div
                 className="c37 c38 c39"
@@ -30018,6 +30161,7 @@ Array [
           >
             <a
               href="/karutas/25/"
+              onClick={[Function]}
             >
               <div
                 className="c37 c38 c39"
@@ -30055,6 +30199,7 @@ Array [
           >
             <a
               href="/karutas/26/"
+              onClick={[Function]}
             >
               <div
                 className="c37 c38 c39"
@@ -30092,6 +30237,7 @@ Array [
           >
             <a
               href="/karutas/27/"
+              onClick={[Function]}
             >
               <div
                 className="c37 c38 c39"
@@ -30129,6 +30275,7 @@ Array [
           >
             <a
               href="/karutas/28/"
+              onClick={[Function]}
             >
               <div
                 className="c37 c38 c39"
@@ -30166,6 +30313,7 @@ Array [
           >
             <a
               href="/karutas/29/"
+              onClick={[Function]}
             >
               <div
                 className="c37 c38 c39"
@@ -30203,6 +30351,7 @@ Array [
           >
             <a
               href="/karutas/30/"
+              onClick={[Function]}
             >
               <div
                 className="c37 c38 c39"
@@ -30240,6 +30389,7 @@ Array [
           >
             <a
               href="/karutas/31/"
+              onClick={[Function]}
             >
               <div
                 className="c37 c38 c39"
@@ -30277,6 +30427,7 @@ Array [
           >
             <a
               href="/karutas/32/"
+              onClick={[Function]}
             >
               <div
                 className="c37 c38 c39"
@@ -30314,6 +30465,7 @@ Array [
           >
             <a
               href="/karutas/33/"
+              onClick={[Function]}
             >
               <div
                 className="c37 c38 c39"
@@ -30351,6 +30503,7 @@ Array [
           >
             <a
               href="/karutas/34/"
+              onClick={[Function]}
             >
               <div
                 className="c37 c38 c39"
@@ -30388,6 +30541,7 @@ Array [
           >
             <a
               href="/karutas/35/"
+              onClick={[Function]}
             >
               <div
                 className="c37 c38 c39"
@@ -30425,6 +30579,7 @@ Array [
           >
             <a
               href="/karutas/36/"
+              onClick={[Function]}
             >
               <div
                 className="c37 c38 c39"
@@ -30462,6 +30617,7 @@ Array [
           >
             <a
               href="/karutas/37/"
+              onClick={[Function]}
             >
               <div
                 className="c37 c38 c39"
@@ -30499,6 +30655,7 @@ Array [
           >
             <a
               href="/karutas/38/"
+              onClick={[Function]}
             >
               <div
                 className="c37 c38 c39"
@@ -30536,6 +30693,7 @@ Array [
           >
             <a
               href="/karutas/39/"
+              onClick={[Function]}
             >
               <div
                 className="c37 c38 c39"
@@ -30573,6 +30731,7 @@ Array [
           >
             <a
               href="/karutas/40/"
+              onClick={[Function]}
             >
               <div
                 className="c37 c38 c39"
@@ -30610,6 +30769,7 @@ Array [
           >
             <a
               href="/karutas/41/"
+              onClick={[Function]}
             >
               <div
                 className="c37 c38 c39"
@@ -30647,6 +30807,7 @@ Array [
           >
             <a
               href="/karutas/42/"
+              onClick={[Function]}
             >
               <div
                 className="c37 c38 c39"
@@ -30684,6 +30845,7 @@ Array [
           >
             <a
               href="/karutas/43/"
+              onClick={[Function]}
             >
               <div
                 className="c37 c38 c39"
@@ -30721,6 +30883,7 @@ Array [
           >
             <a
               href="/karutas/44/"
+              onClick={[Function]}
             >
               <div
                 className="c37 c38 c39"
@@ -30758,6 +30921,7 @@ Array [
           >
             <a
               href="/karutas/45/"
+              onClick={[Function]}
             >
               <div
                 className="c37 c38 c39"
@@ -30795,6 +30959,7 @@ Array [
           >
             <a
               href="/karutas/46/"
+              onClick={[Function]}
             >
               <div
                 className="c37 c38 c39"
@@ -30832,6 +30997,7 @@ Array [
           >
             <a
               href="/karutas/47/"
+              onClick={[Function]}
             >
               <div
                 className="c37 c38 c39"
@@ -30869,6 +31035,7 @@ Array [
           >
             <a
               href="/karutas/48/"
+              onClick={[Function]}
             >
               <div
                 className="c37 c38 c39"
@@ -30906,6 +31073,7 @@ Array [
           >
             <a
               href="/karutas/49/"
+              onClick={[Function]}
             >
               <div
                 className="c37 c38 c39"
@@ -30943,6 +31111,7 @@ Array [
           >
             <a
               href="/karutas/50/"
+              onClick={[Function]}
             >
               <div
                 className="c37 c38 c39"
@@ -30980,6 +31149,7 @@ Array [
           >
             <a
               href="/karutas/51/"
+              onClick={[Function]}
             >
               <div
                 className="c37 c38 c39"
@@ -31017,6 +31187,7 @@ Array [
           >
             <a
               href="/karutas/52/"
+              onClick={[Function]}
             >
               <div
                 className="c37 c38 c39"
@@ -31054,6 +31225,7 @@ Array [
           >
             <a
               href="/karutas/53/"
+              onClick={[Function]}
             >
               <div
                 className="c37 c38 c39"
@@ -31091,6 +31263,7 @@ Array [
           >
             <a
               href="/karutas/54/"
+              onClick={[Function]}
             >
               <div
                 className="c37 c38 c39"
@@ -31128,6 +31301,7 @@ Array [
           >
             <a
               href="/karutas/55/"
+              onClick={[Function]}
             >
               <div
                 className="c37 c38 c39"
@@ -31165,6 +31339,7 @@ Array [
           >
             <a
               href="/karutas/56/"
+              onClick={[Function]}
             >
               <div
                 className="c37 c38 c39"
@@ -31202,6 +31377,7 @@ Array [
           >
             <a
               href="/karutas/57/"
+              onClick={[Function]}
             >
               <div
                 className="c37 c38 c39"
@@ -31239,6 +31415,7 @@ Array [
           >
             <a
               href="/karutas/58/"
+              onClick={[Function]}
             >
               <div
                 className="c37 c38 c39"
@@ -31276,6 +31453,7 @@ Array [
           >
             <a
               href="/karutas/59/"
+              onClick={[Function]}
             >
               <div
                 className="c37 c38 c39"
@@ -31313,6 +31491,7 @@ Array [
           >
             <a
               href="/karutas/60/"
+              onClick={[Function]}
             >
               <div
                 className="c37 c38 c39"
@@ -31350,6 +31529,7 @@ Array [
           >
             <a
               href="/karutas/61/"
+              onClick={[Function]}
             >
               <div
                 className="c37 c38 c39"
@@ -31387,6 +31567,7 @@ Array [
           >
             <a
               href="/karutas/62/"
+              onClick={[Function]}
             >
               <div
                 className="c37 c38 c39"
@@ -31424,6 +31605,7 @@ Array [
           >
             <a
               href="/karutas/63/"
+              onClick={[Function]}
             >
               <div
                 className="c37 c38 c39"
@@ -31461,6 +31643,7 @@ Array [
           >
             <a
               href="/karutas/64/"
+              onClick={[Function]}
             >
               <div
                 className="c37 c38 c39"
@@ -31498,6 +31681,7 @@ Array [
           >
             <a
               href="/karutas/65/"
+              onClick={[Function]}
             >
               <div
                 className="c37 c38 c39"
@@ -31535,6 +31719,7 @@ Array [
           >
             <a
               href="/karutas/66/"
+              onClick={[Function]}
             >
               <div
                 className="c37 c38 c39"
@@ -31572,6 +31757,7 @@ Array [
           >
             <a
               href="/karutas/67/"
+              onClick={[Function]}
             >
               <div
                 className="c37 c38 c39"
@@ -31609,6 +31795,7 @@ Array [
           >
             <a
               href="/karutas/68/"
+              onClick={[Function]}
             >
               <div
                 className="c37 c38 c39"
@@ -31646,6 +31833,7 @@ Array [
           >
             <a
               href="/karutas/69/"
+              onClick={[Function]}
             >
               <div
                 className="c37 c38 c39"
@@ -31683,6 +31871,7 @@ Array [
           >
             <a
               href="/karutas/70/"
+              onClick={[Function]}
             >
               <div
                 className="c37 c38 c39"
@@ -31720,6 +31909,7 @@ Array [
           >
             <a
               href="/karutas/71/"
+              onClick={[Function]}
             >
               <div
                 className="c37 c38 c39"
@@ -31757,6 +31947,7 @@ Array [
           >
             <a
               href="/karutas/72/"
+              onClick={[Function]}
             >
               <div
                 className="c37 c38 c39"
@@ -31794,6 +31985,7 @@ Array [
           >
             <a
               href="/karutas/73/"
+              onClick={[Function]}
             >
               <div
                 className="c37 c38 c39"
@@ -31831,6 +32023,7 @@ Array [
           >
             <a
               href="/karutas/74/"
+              onClick={[Function]}
             >
               <div
                 className="c37 c38 c39"
@@ -31868,6 +32061,7 @@ Array [
           >
             <a
               href="/karutas/75/"
+              onClick={[Function]}
             >
               <div
                 className="c37 c38 c39"
@@ -31905,6 +32099,7 @@ Array [
           >
             <a
               href="/karutas/76/"
+              onClick={[Function]}
             >
               <div
                 className="c37 c38 c39"
@@ -31942,6 +32137,7 @@ Array [
           >
             <a
               href="/karutas/77/"
+              onClick={[Function]}
             >
               <div
                 className="c37 c38 c39"
@@ -31979,6 +32175,7 @@ Array [
           >
             <a
               href="/karutas/78/"
+              onClick={[Function]}
             >
               <div
                 className="c37 c38 c39"
@@ -32016,6 +32213,7 @@ Array [
           >
             <a
               href="/karutas/79/"
+              onClick={[Function]}
             >
               <div
                 className="c37 c38 c39"
@@ -32053,6 +32251,7 @@ Array [
           >
             <a
               href="/karutas/80/"
+              onClick={[Function]}
             >
               <div
                 className="c37 c38 c39"
@@ -32090,6 +32289,7 @@ Array [
           >
             <a
               href="/karutas/81/"
+              onClick={[Function]}
             >
               <div
                 className="c37 c38 c39"
@@ -32127,6 +32327,7 @@ Array [
           >
             <a
               href="/karutas/82/"
+              onClick={[Function]}
             >
               <div
                 className="c37 c38 c39"
@@ -32164,6 +32365,7 @@ Array [
           >
             <a
               href="/karutas/83/"
+              onClick={[Function]}
             >
               <div
                 className="c37 c38 c39"
@@ -32201,6 +32403,7 @@ Array [
           >
             <a
               href="/karutas/84/"
+              onClick={[Function]}
             >
               <div
                 className="c37 c38 c39"
@@ -32238,6 +32441,7 @@ Array [
           >
             <a
               href="/karutas/85/"
+              onClick={[Function]}
             >
               <div
                 className="c37 c38 c39"
@@ -32275,6 +32479,7 @@ Array [
           >
             <a
               href="/karutas/86/"
+              onClick={[Function]}
             >
               <div
                 className="c37 c38 c39"
@@ -32312,6 +32517,7 @@ Array [
           >
             <a
               href="/karutas/87/"
+              onClick={[Function]}
             >
               <div
                 className="c37 c38 c39"
@@ -32349,6 +32555,7 @@ Array [
           >
             <a
               href="/karutas/88/"
+              onClick={[Function]}
             >
               <div
                 className="c37 c38 c39"
@@ -32386,6 +32593,7 @@ Array [
           >
             <a
               href="/karutas/89/"
+              onClick={[Function]}
             >
               <div
                 className="c37 c38 c39"
@@ -32423,6 +32631,7 @@ Array [
           >
             <a
               href="/karutas/90/"
+              onClick={[Function]}
             >
               <div
                 className="c37 c38 c39"
@@ -32460,6 +32669,7 @@ Array [
           >
             <a
               href="/karutas/91/"
+              onClick={[Function]}
             >
               <div
                 className="c37 c38 c39"
@@ -32497,6 +32707,7 @@ Array [
           >
             <a
               href="/karutas/92/"
+              onClick={[Function]}
             >
               <div
                 className="c37 c38 c39"
@@ -32534,6 +32745,7 @@ Array [
           >
             <a
               href="/karutas/93/"
+              onClick={[Function]}
             >
               <div
                 className="c37 c38 c39"
@@ -32571,6 +32783,7 @@ Array [
           >
             <a
               href="/karutas/94/"
+              onClick={[Function]}
             >
               <div
                 className="c37 c38 c39"
@@ -32608,6 +32821,7 @@ Array [
           >
             <a
               href="/karutas/95/"
+              onClick={[Function]}
             >
               <div
                 className="c37 c38 c39"
@@ -32645,6 +32859,7 @@ Array [
           >
             <a
               href="/karutas/96/"
+              onClick={[Function]}
             >
               <div
                 className="c37 c38 c39"
@@ -32682,6 +32897,7 @@ Array [
           >
             <a
               href="/karutas/97/"
+              onClick={[Function]}
             >
               <div
                 className="c37 c38 c39"
@@ -32719,6 +32935,7 @@ Array [
           >
             <a
               href="/karutas/98/"
+              onClick={[Function]}
             >
               <div
                 className="c37 c38 c39"
@@ -32756,6 +32973,7 @@ Array [
           >
             <a
               href="/karutas/99/"
+              onClick={[Function]}
             >
               <div
                 className="c37 c38 c39"
@@ -32793,6 +33011,7 @@ Array [
           >
             <a
               href="/karutas/100/"
+              onClick={[Function]}
             >
               <div
                 className="c37 c38 c39"
@@ -33066,6 +33285,7 @@ Array [
       >
         <a
           href="/training/"
+          onClick={[Function]}
           style={Object {}}
         >
           <span
@@ -33106,6 +33326,7 @@ Array [
       >
         <a
           href="/exam/"
+          onClick={[Function]}
           style={Object {}}
         >
           <span
@@ -33146,6 +33367,7 @@ Array [
       >
         <a
           href="/karutas/"
+          onClick={[Function]}
           style={Object {}}
         >
           <span
@@ -33186,6 +33408,7 @@ Array [
       >
         <a
           href="/about/"
+          onClick={[Function]}
           style={Object {}}
         >
           <span
@@ -34838,6 +35061,7 @@ Array [
           <a
             className="c8"
             href="/karutas/1/"
+            onClick={[Function]}
           >
             <div
               className="c9 c10 c11"
@@ -34927,6 +35151,7 @@ Array [
           <a
             className="c8"
             href="/karutas/2/"
+            onClick={[Function]}
           >
             <div
               className="c9 c10 c11"
@@ -35016,6 +35241,7 @@ Array [
           <a
             className="c8"
             href="/karutas/3/"
+            onClick={[Function]}
           >
             <div
               className="c9 c10 c11"
@@ -35105,6 +35331,7 @@ Array [
           <a
             className="c8"
             href="/karutas/4/"
+            onClick={[Function]}
           >
             <div
               className="c9 c10 c11"
@@ -35194,6 +35421,7 @@ Array [
           <a
             className="c8"
             href="/karutas/5/"
+            onClick={[Function]}
           >
             <div
               className="c9 c10 c11"
@@ -35283,6 +35511,7 @@ Array [
           <a
             className="c8"
             href="/karutas/6/"
+            onClick={[Function]}
           >
             <div
               className="c9 c10 c11"
@@ -35372,6 +35601,7 @@ Array [
           <a
             className="c8"
             href="/karutas/7/"
+            onClick={[Function]}
           >
             <div
               className="c9 c10 c11"
@@ -35461,6 +35691,7 @@ Array [
           <a
             className="c8"
             href="/karutas/8/"
+            onClick={[Function]}
           >
             <div
               className="c9 c10 c11"
@@ -35550,6 +35781,7 @@ Array [
           <a
             className="c8"
             href="/karutas/9/"
+            onClick={[Function]}
           >
             <div
               className="c9 c10 c11"
@@ -35639,6 +35871,7 @@ Array [
           <a
             className="c8"
             href="/karutas/10/"
+            onClick={[Function]}
           >
             <div
               className="c9 c10 c11"
@@ -35728,6 +35961,7 @@ Array [
           <a
             className="c8"
             href="/karutas/11/"
+            onClick={[Function]}
           >
             <div
               className="c9 c10 c11"
@@ -35817,6 +36051,7 @@ Array [
           <a
             className="c8"
             href="/karutas/12/"
+            onClick={[Function]}
           >
             <div
               className="c9 c10 c11"
@@ -35906,6 +36141,7 @@ Array [
           <a
             className="c8"
             href="/karutas/13/"
+            onClick={[Function]}
           >
             <div
               className="c9 c10 c11"
@@ -35995,6 +36231,7 @@ Array [
           <a
             className="c8"
             href="/karutas/14/"
+            onClick={[Function]}
           >
             <div
               className="c9 c10 c11"
@@ -36084,6 +36321,7 @@ Array [
           <a
             className="c8"
             href="/karutas/15/"
+            onClick={[Function]}
           >
             <div
               className="c9 c10 c11"
@@ -36173,6 +36411,7 @@ Array [
           <a
             className="c8"
             href="/karutas/16/"
+            onClick={[Function]}
           >
             <div
               className="c9 c10 c11"
@@ -36262,6 +36501,7 @@ Array [
           <a
             className="c8"
             href="/karutas/17/"
+            onClick={[Function]}
           >
             <div
               className="c9 c10 c11"
@@ -36351,6 +36591,7 @@ Array [
           <a
             className="c8"
             href="/karutas/18/"
+            onClick={[Function]}
           >
             <div
               className="c9 c10 c11"
@@ -36440,6 +36681,7 @@ Array [
           <a
             className="c8"
             href="/karutas/19/"
+            onClick={[Function]}
           >
             <div
               className="c9 c10 c11"
@@ -36529,6 +36771,7 @@ Array [
           <a
             className="c8"
             href="/karutas/20/"
+            onClick={[Function]}
           >
             <div
               className="c9 c10 c11"
@@ -36618,6 +36861,7 @@ Array [
           <a
             className="c8"
             href="/karutas/21/"
+            onClick={[Function]}
           >
             <div
               className="c9 c10 c11"
@@ -36707,6 +36951,7 @@ Array [
           <a
             className="c8"
             href="/karutas/22/"
+            onClick={[Function]}
           >
             <div
               className="c9 c10 c11"
@@ -36796,6 +37041,7 @@ Array [
           <a
             className="c8"
             href="/karutas/23/"
+            onClick={[Function]}
           >
             <div
               className="c9 c10 c11"
@@ -36885,6 +37131,7 @@ Array [
           <a
             className="c8"
             href="/karutas/24/"
+            onClick={[Function]}
           >
             <div
               className="c9 c10 c11"
@@ -36974,6 +37221,7 @@ Array [
           <a
             className="c8"
             href="/karutas/25/"
+            onClick={[Function]}
           >
             <div
               className="c9 c10 c11"
@@ -37063,6 +37311,7 @@ Array [
           <a
             className="c8"
             href="/karutas/26/"
+            onClick={[Function]}
           >
             <div
               className="c9 c10 c11"
@@ -37152,6 +37401,7 @@ Array [
           <a
             className="c8"
             href="/karutas/27/"
+            onClick={[Function]}
           >
             <div
               className="c9 c10 c11"
@@ -37241,6 +37491,7 @@ Array [
           <a
             className="c8"
             href="/karutas/28/"
+            onClick={[Function]}
           >
             <div
               className="c9 c10 c11"
@@ -37330,6 +37581,7 @@ Array [
           <a
             className="c8"
             href="/karutas/29/"
+            onClick={[Function]}
           >
             <div
               className="c9 c10 c11"
@@ -37419,6 +37671,7 @@ Array [
           <a
             className="c8"
             href="/karutas/30/"
+            onClick={[Function]}
           >
             <div
               className="c9 c10 c11"
@@ -37508,6 +37761,7 @@ Array [
           <a
             className="c8"
             href="/karutas/31/"
+            onClick={[Function]}
           >
             <div
               className="c9 c10 c11"
@@ -37597,6 +37851,7 @@ Array [
           <a
             className="c8"
             href="/karutas/32/"
+            onClick={[Function]}
           >
             <div
               className="c9 c10 c11"
@@ -37686,6 +37941,7 @@ Array [
           <a
             className="c8"
             href="/karutas/33/"
+            onClick={[Function]}
           >
             <div
               className="c9 c10 c11"
@@ -37775,6 +38031,7 @@ Array [
           <a
             className="c8"
             href="/karutas/34/"
+            onClick={[Function]}
           >
             <div
               className="c9 c10 c11"
@@ -37864,6 +38121,7 @@ Array [
           <a
             className="c8"
             href="/karutas/35/"
+            onClick={[Function]}
           >
             <div
               className="c9 c10 c11"
@@ -37953,6 +38211,7 @@ Array [
           <a
             className="c8"
             href="/karutas/36/"
+            onClick={[Function]}
           >
             <div
               className="c9 c10 c11"
@@ -38042,6 +38301,7 @@ Array [
           <a
             className="c8"
             href="/karutas/37/"
+            onClick={[Function]}
           >
             <div
               className="c9 c10 c11"
@@ -38131,6 +38391,7 @@ Array [
           <a
             className="c8"
             href="/karutas/38/"
+            onClick={[Function]}
           >
             <div
               className="c9 c10 c11"
@@ -38220,6 +38481,7 @@ Array [
           <a
             className="c8"
             href="/karutas/39/"
+            onClick={[Function]}
           >
             <div
               className="c9 c10 c11"
@@ -38309,6 +38571,7 @@ Array [
           <a
             className="c8"
             href="/karutas/40/"
+            onClick={[Function]}
           >
             <div
               className="c9 c10 c11"
@@ -38398,6 +38661,7 @@ Array [
           <a
             className="c8"
             href="/karutas/41/"
+            onClick={[Function]}
           >
             <div
               className="c9 c10 c11"
@@ -38487,6 +38751,7 @@ Array [
           <a
             className="c8"
             href="/karutas/42/"
+            onClick={[Function]}
           >
             <div
               className="c9 c10 c11"
@@ -38576,6 +38841,7 @@ Array [
           <a
             className="c8"
             href="/karutas/43/"
+            onClick={[Function]}
           >
             <div
               className="c9 c10 c11"
@@ -38665,6 +38931,7 @@ Array [
           <a
             className="c8"
             href="/karutas/44/"
+            onClick={[Function]}
           >
             <div
               className="c9 c10 c11"
@@ -38754,6 +39021,7 @@ Array [
           <a
             className="c8"
             href="/karutas/45/"
+            onClick={[Function]}
           >
             <div
               className="c9 c10 c11"
@@ -38843,6 +39111,7 @@ Array [
           <a
             className="c8"
             href="/karutas/46/"
+            onClick={[Function]}
           >
             <div
               className="c9 c10 c11"
@@ -38932,6 +39201,7 @@ Array [
           <a
             className="c8"
             href="/karutas/47/"
+            onClick={[Function]}
           >
             <div
               className="c9 c10 c11"
@@ -39021,6 +39291,7 @@ Array [
           <a
             className="c8"
             href="/karutas/48/"
+            onClick={[Function]}
           >
             <div
               className="c9 c10 c11"
@@ -39110,6 +39381,7 @@ Array [
           <a
             className="c8"
             href="/karutas/49/"
+            onClick={[Function]}
           >
             <div
               className="c9 c10 c11"
@@ -39199,6 +39471,7 @@ Array [
           <a
             className="c8"
             href="/karutas/50/"
+            onClick={[Function]}
           >
             <div
               className="c9 c10 c11"
@@ -39288,6 +39561,7 @@ Array [
           <a
             className="c8"
             href="/karutas/51/"
+            onClick={[Function]}
           >
             <div
               className="c9 c10 c11"
@@ -39377,6 +39651,7 @@ Array [
           <a
             className="c8"
             href="/karutas/52/"
+            onClick={[Function]}
           >
             <div
               className="c9 c10 c11"
@@ -39466,6 +39741,7 @@ Array [
           <a
             className="c8"
             href="/karutas/53/"
+            onClick={[Function]}
           >
             <div
               className="c9 c10 c11"
@@ -39555,6 +39831,7 @@ Array [
           <a
             className="c8"
             href="/karutas/54/"
+            onClick={[Function]}
           >
             <div
               className="c9 c10 c11"
@@ -39644,6 +39921,7 @@ Array [
           <a
             className="c8"
             href="/karutas/55/"
+            onClick={[Function]}
           >
             <div
               className="c9 c10 c11"
@@ -39733,6 +40011,7 @@ Array [
           <a
             className="c8"
             href="/karutas/56/"
+            onClick={[Function]}
           >
             <div
               className="c9 c10 c11"
@@ -39822,6 +40101,7 @@ Array [
           <a
             className="c8"
             href="/karutas/57/"
+            onClick={[Function]}
           >
             <div
               className="c9 c10 c11"
@@ -39911,6 +40191,7 @@ Array [
           <a
             className="c8"
             href="/karutas/58/"
+            onClick={[Function]}
           >
             <div
               className="c9 c10 c11"
@@ -40000,6 +40281,7 @@ Array [
           <a
             className="c8"
             href="/karutas/59/"
+            onClick={[Function]}
           >
             <div
               className="c9 c10 c11"
@@ -40089,6 +40371,7 @@ Array [
           <a
             className="c8"
             href="/karutas/60/"
+            onClick={[Function]}
           >
             <div
               className="c9 c10 c11"
@@ -40178,6 +40461,7 @@ Array [
           <a
             className="c8"
             href="/karutas/61/"
+            onClick={[Function]}
           >
             <div
               className="c9 c10 c11"
@@ -40267,6 +40551,7 @@ Array [
           <a
             className="c8"
             href="/karutas/62/"
+            onClick={[Function]}
           >
             <div
               className="c9 c10 c11"
@@ -40356,6 +40641,7 @@ Array [
           <a
             className="c8"
             href="/karutas/63/"
+            onClick={[Function]}
           >
             <div
               className="c9 c10 c11"
@@ -40445,6 +40731,7 @@ Array [
           <a
             className="c8"
             href="/karutas/64/"
+            onClick={[Function]}
           >
             <div
               className="c9 c10 c11"
@@ -40534,6 +40821,7 @@ Array [
           <a
             className="c8"
             href="/karutas/65/"
+            onClick={[Function]}
           >
             <div
               className="c9 c10 c11"
@@ -40623,6 +40911,7 @@ Array [
           <a
             className="c8"
             href="/karutas/66/"
+            onClick={[Function]}
           >
             <div
               className="c9 c10 c11"
@@ -40712,6 +41001,7 @@ Array [
           <a
             className="c8"
             href="/karutas/67/"
+            onClick={[Function]}
           >
             <div
               className="c9 c10 c11"
@@ -40801,6 +41091,7 @@ Array [
           <a
             className="c8"
             href="/karutas/68/"
+            onClick={[Function]}
           >
             <div
               className="c9 c10 c11"
@@ -40890,6 +41181,7 @@ Array [
           <a
             className="c8"
             href="/karutas/69/"
+            onClick={[Function]}
           >
             <div
               className="c9 c10 c11"
@@ -40979,6 +41271,7 @@ Array [
           <a
             className="c8"
             href="/karutas/70/"
+            onClick={[Function]}
           >
             <div
               className="c9 c10 c11"
@@ -41068,6 +41361,7 @@ Array [
           <a
             className="c8"
             href="/karutas/71/"
+            onClick={[Function]}
           >
             <div
               className="c9 c10 c11"
@@ -41157,6 +41451,7 @@ Array [
           <a
             className="c8"
             href="/karutas/72/"
+            onClick={[Function]}
           >
             <div
               className="c9 c10 c11"
@@ -41246,6 +41541,7 @@ Array [
           <a
             className="c8"
             href="/karutas/73/"
+            onClick={[Function]}
           >
             <div
               className="c9 c10 c11"
@@ -41335,6 +41631,7 @@ Array [
           <a
             className="c8"
             href="/karutas/74/"
+            onClick={[Function]}
           >
             <div
               className="c9 c10 c11"
@@ -41424,6 +41721,7 @@ Array [
           <a
             className="c8"
             href="/karutas/75/"
+            onClick={[Function]}
           >
             <div
               className="c9 c10 c11"
@@ -41513,6 +41811,7 @@ Array [
           <a
             className="c8"
             href="/karutas/76/"
+            onClick={[Function]}
           >
             <div
               className="c9 c10 c11"
@@ -41602,6 +41901,7 @@ Array [
           <a
             className="c8"
             href="/karutas/77/"
+            onClick={[Function]}
           >
             <div
               className="c9 c10 c11"
@@ -41691,6 +41991,7 @@ Array [
           <a
             className="c8"
             href="/karutas/78/"
+            onClick={[Function]}
           >
             <div
               className="c9 c10 c11"
@@ -41780,6 +42081,7 @@ Array [
           <a
             className="c8"
             href="/karutas/79/"
+            onClick={[Function]}
           >
             <div
               className="c9 c10 c11"
@@ -41869,6 +42171,7 @@ Array [
           <a
             className="c8"
             href="/karutas/80/"
+            onClick={[Function]}
           >
             <div
               className="c9 c10 c11"
@@ -41958,6 +42261,7 @@ Array [
           <a
             className="c8"
             href="/karutas/81/"
+            onClick={[Function]}
           >
             <div
               className="c9 c10 c11"
@@ -42047,6 +42351,7 @@ Array [
           <a
             className="c8"
             href="/karutas/82/"
+            onClick={[Function]}
           >
             <div
               className="c9 c10 c11"
@@ -42136,6 +42441,7 @@ Array [
           <a
             className="c8"
             href="/karutas/83/"
+            onClick={[Function]}
           >
             <div
               className="c9 c10 c11"
@@ -42225,6 +42531,7 @@ Array [
           <a
             className="c8"
             href="/karutas/84/"
+            onClick={[Function]}
           >
             <div
               className="c9 c10 c11"
@@ -42314,6 +42621,7 @@ Array [
           <a
             className="c8"
             href="/karutas/85/"
+            onClick={[Function]}
           >
             <div
               className="c9 c10 c11"
@@ -42403,6 +42711,7 @@ Array [
           <a
             className="c8"
             href="/karutas/86/"
+            onClick={[Function]}
           >
             <div
               className="c9 c10 c11"
@@ -42492,6 +42801,7 @@ Array [
           <a
             className="c8"
             href="/karutas/87/"
+            onClick={[Function]}
           >
             <div
               className="c9 c10 c11"
@@ -42581,6 +42891,7 @@ Array [
           <a
             className="c8"
             href="/karutas/88/"
+            onClick={[Function]}
           >
             <div
               className="c9 c10 c11"
@@ -42670,6 +42981,7 @@ Array [
           <a
             className="c8"
             href="/karutas/89/"
+            onClick={[Function]}
           >
             <div
               className="c9 c10 c11"
@@ -42759,6 +43071,7 @@ Array [
           <a
             className="c8"
             href="/karutas/90/"
+            onClick={[Function]}
           >
             <div
               className="c9 c10 c11"
@@ -42848,6 +43161,7 @@ Array [
           <a
             className="c8"
             href="/karutas/91/"
+            onClick={[Function]}
           >
             <div
               className="c9 c10 c11"
@@ -42937,6 +43251,7 @@ Array [
           <a
             className="c8"
             href="/karutas/92/"
+            onClick={[Function]}
           >
             <div
               className="c9 c10 c11"
@@ -43026,6 +43341,7 @@ Array [
           <a
             className="c8"
             href="/karutas/93/"
+            onClick={[Function]}
           >
             <div
               className="c9 c10 c11"
@@ -43115,6 +43431,7 @@ Array [
           <a
             className="c8"
             href="/karutas/94/"
+            onClick={[Function]}
           >
             <div
               className="c9 c10 c11"
@@ -43204,6 +43521,7 @@ Array [
           <a
             className="c8"
             href="/karutas/95/"
+            onClick={[Function]}
           >
             <div
               className="c9 c10 c11"
@@ -43293,6 +43611,7 @@ Array [
           <a
             className="c8"
             href="/karutas/96/"
+            onClick={[Function]}
           >
             <div
               className="c9 c10 c11"
@@ -43382,6 +43701,7 @@ Array [
           <a
             className="c8"
             href="/karutas/97/"
+            onClick={[Function]}
           >
             <div
               className="c9 c10 c11"
@@ -43471,6 +43791,7 @@ Array [
           <a
             className="c8"
             href="/karutas/98/"
+            onClick={[Function]}
           >
             <div
               className="c9 c10 c11"
@@ -43560,6 +43881,7 @@ Array [
           <a
             className="c8"
             href="/karutas/99/"
+            onClick={[Function]}
           >
             <div
               className="c9 c10 c11"
@@ -43649,6 +43971,7 @@ Array [
           <a
             className="c8"
             href="/karutas/100/"
+            onClick={[Function]}
           >
             <div
               className="c9 c10 c11"
@@ -43981,6 +44304,7 @@ Array [
       >
         <a
           href="/training/"
+          onClick={[Function]}
           style={Object {}}
         >
           <span
@@ -44021,6 +44345,7 @@ Array [
       >
         <a
           href="/exam/"
+          onClick={[Function]}
           style={Object {}}
         >
           <span
@@ -44061,6 +44386,7 @@ Array [
       >
         <a
           href="/karutas/"
+          onClick={[Function]}
           style={Object {}}
         >
           <span
@@ -44101,6 +44427,7 @@ Array [
       >
         <a
           href="/about/"
+          onClick={[Function]}
           style={Object {}}
         >
           <span
@@ -44865,6 +45192,7 @@ Array [
       >
         <a
           href="/training/"
+          onClick={[Function]}
           style={Object {}}
         >
           <span
@@ -44905,6 +45233,7 @@ Array [
       >
         <a
           href="/exam/"
+          onClick={[Function]}
           style={Object {}}
         >
           <span
@@ -44945,6 +45274,7 @@ Array [
       >
         <a
           href="/karutas/"
+          onClick={[Function]}
           style={Object {}}
         >
           <span
@@ -44985,6 +45315,7 @@ Array [
       >
         <a
           href="/about/"
+          onClick={[Function]}
           style={Object {}}
         >
           <span
@@ -45997,6 +46328,7 @@ Array [
       >
         <a
           href="/training/"
+          onClick={[Function]}
           style={Object {}}
         >
           <span
@@ -46037,6 +46369,7 @@ Array [
       >
         <a
           href="/exam/"
+          onClick={[Function]}
           style={Object {}}
         >
           <span
@@ -46077,6 +46410,7 @@ Array [
       >
         <a
           href="/karutas/"
+          onClick={[Function]}
           style={Object {}}
         >
           <span
@@ -46117,6 +46451,7 @@ Array [
       >
         <a
           href="/about/"
+          onClick={[Function]}
           style={Object {}}
         >
           <span
@@ -46362,7 +46697,7 @@ Array [
       className="c1 "
       style={
         Object {
-          "backgroundImage": "url([object Object])",
+          "backgroundImage": "url(test-file-stub)",
         }
       }
     >
@@ -46652,7 +46987,7 @@ Array [
       className="c1 "
       style={
         Object {
-          "backgroundImage": "url([object Object])",
+          "backgroundImage": "url(test-file-stub)",
         }
       }
     >
@@ -47162,6 +47497,7 @@ Array [
       >
         <a
           href="/training/"
+          onClick={[Function]}
           style={Object {}}
         >
           <span
@@ -47202,6 +47538,7 @@ Array [
       >
         <a
           href="/exam/"
+          onClick={[Function]}
           style={Object {}}
         >
           <span
@@ -47242,6 +47579,7 @@ Array [
       >
         <a
           href="/karutas/"
+          onClick={[Function]}
           style={Object {}}
         >
           <span
@@ -47282,6 +47620,7 @@ Array [
       >
         <a
           href="/about/"
+          onClick={[Function]}
           style={Object {}}
         >
           <span
@@ -47624,6 +47963,7 @@ Array [
       >
         <a
           href="/training/"
+          onClick={[Function]}
           style={Object {}}
         >
           <span
@@ -47664,6 +48004,7 @@ Array [
       >
         <a
           href="/exam/"
+          onClick={[Function]}
           style={Object {}}
         >
           <span
@@ -47704,6 +48045,7 @@ Array [
       >
         <a
           href="/karutas/"
+          onClick={[Function]}
           style={Object {}}
         >
           <span
@@ -47744,6 +48086,7 @@ Array [
       >
         <a
           href="/about/"
+          onClick={[Function]}
           style={Object {}}
         >
           <span
@@ -48169,6 +48512,7 @@ Array [
       >
         <a
           href="/training/"
+          onClick={[Function]}
           style={Object {}}
         >
           <span
@@ -48209,6 +48553,7 @@ Array [
       >
         <a
           href="/exam/"
+          onClick={[Function]}
           style={Object {}}
         >
           <span
@@ -48249,6 +48594,7 @@ Array [
       >
         <a
           href="/karutas/"
+          onClick={[Function]}
           style={Object {}}
         >
           <span
@@ -48289,6 +48635,7 @@ Array [
       >
         <a
           href="/about/"
+          onClick={[Function]}
           style={Object {}}
         >
           <span
@@ -48454,7 +48801,7 @@ Array [
       className="c1 "
       style={
         Object {
-          "backgroundImage": "url([object Object])",
+          "backgroundImage": "url(test-file-stub)",
         }
       }
     >
@@ -48887,6 +49234,7 @@ Array [
       >
         <a
           href="/training/"
+          onClick={[Function]}
           style={Object {}}
         >
           <span
@@ -48927,6 +49275,7 @@ Array [
       >
         <a
           href="/exam/"
+          onClick={[Function]}
           style={Object {}}
         >
           <span
@@ -48967,6 +49316,7 @@ Array [
       >
         <a
           href="/karutas/"
+          onClick={[Function]}
           style={Object {}}
         >
           <span
@@ -49007,6 +49357,7 @@ Array [
       >
         <a
           href="/about/"
+          onClick={[Function]}
           style={Object {}}
         >
           <span
@@ -49445,6 +49796,7 @@ Array [
       >
         <a
           href="/training/"
+          onClick={[Function]}
           style={Object {}}
         >
           <span
@@ -49485,6 +49837,7 @@ Array [
       >
         <a
           href="/exam/"
+          onClick={[Function]}
           style={Object {}}
         >
           <span
@@ -49525,6 +49878,7 @@ Array [
       >
         <a
           href="/karutas/"
+          onClick={[Function]}
           style={Object {}}
         >
           <span
@@ -49565,6 +49919,7 @@ Array [
       >
         <a
           href="/about/"
+          onClick={[Function]}
           style={Object {}}
         >
           <span

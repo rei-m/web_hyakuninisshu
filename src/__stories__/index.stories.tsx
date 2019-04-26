@@ -1,6 +1,5 @@
 import * as React from 'react';
 import { storiesOf } from '@storybook/react';
-import { appContextDecorator } from '@helper/storybook';
 import IndexPage, { Props } from '@src/pages';
 import { create } from '@helper/factory';
 import { Karuta } from '@src/types';
@@ -25,6 +24,4 @@ const props: Props = {
   },
 };
 
-storiesOf('pages/index', module)
-  .addDecorator(story => appContextDecorator(story))
-  .add('default', () => <IndexPage {...props} />);
+storiesOf('pages/index', module).add('default', () => <IndexPage {...props} />);

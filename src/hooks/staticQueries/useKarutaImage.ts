@@ -8,6 +8,7 @@ export interface QueryData {
         childImageSharp: {
           fluid: FluidObject;
         };
+        publicURL: string;
       };
     }>;
   };
@@ -16,7 +17,7 @@ export interface QueryData {
 export const useKarutaImage = (karutaNo: number) => {
   const result: QueryData = useStaticQuery(
     graphql`
-      query {
+      query KarutaImageQuery {
         karutaImages: allFile(filter: { relativePath: { regex: "/karuta_....jpg/" } }) {
           edges {
             node {
@@ -25,6 +26,7 @@ export const useKarutaImage = (karutaNo: number) => {
                   ...GatsbyImageSharpFluid
                 }
               }
+              publicURL
             }
           }
         }
@@ -33,7 +35,7 @@ export const useKarutaImage = (karutaNo: number) => {
   );
   const karutaImageNo = `00${karutaNo}`.slice(-3);
   const fileName = `karuta_${karutaImageNo}.jpg`;
-  const resource = result.karutaImages.edges.find(i => i.node.childImageSharp.fluid.src.indexOf(fileName) > -1);
+  const resource = result.karutaImages.edges.find(i => i.node.publicURL.indexOf(fileName) > -1);
 
   if (!resource) {
     return undefined;

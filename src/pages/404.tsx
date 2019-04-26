@@ -5,7 +5,7 @@ import { appTheme } from '@src/styles/theme';
 import MessagePageTemplate from '@src/components/templates/MessagePageTemplate';
 import Block from '@src/components/atoms/Block';
 import Txt from '@src/components/atoms/Txt';
-import { useAppContext } from '@src/hooks/useAppContext';
+import { useDogezaImage } from '@src/hooks/staticQueries/useDogezaImage';
 
 const Container = styled(Block)`
   margin: 128px 0;
@@ -21,7 +21,7 @@ const NotFound = () => (
         トップページにお戻りください。
       </Txt>
       <Img
-        fluid={useAppContext().useDogezaImage()}
+        fluid={useDogezaImage()}
         style={{
           marginTop: appTheme.spacing4x,
         }}

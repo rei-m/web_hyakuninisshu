@@ -2,7 +2,6 @@ import * as React from 'react';
 import { storiesOf } from '@storybook/react';
 import { action } from '@storybook/addon-actions';
 import { create } from '@helper/factory';
-import { appContextDecorator } from '@helper/storybook';
 import KarutaPlayingCorrect, { Props } from './index';
 import { Karuta } from '@src/types';
 
@@ -16,6 +15,5 @@ const props: Props = {
 };
 
 storiesOf('organisms/KarutaPlayingCorrect', module)
-  .addDecorator(story => appContextDecorator(story))
   .add('in answer', () => <KarutaPlayingCorrect {...props} />)
   .add('all answered', () => <KarutaPlayingCorrect {...props} isAllAnswered={true} />);

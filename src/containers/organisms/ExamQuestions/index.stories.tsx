@@ -2,7 +2,6 @@ import * as React from 'react';
 import { storiesOf } from '@storybook/react';
 import { action } from '@storybook/addon-actions';
 import { ExamQuestionsPresenter, PresenterProps } from './index';
-import { appContextDecorator } from '@helper/storybook';
 import { create } from '@helper/factory';
 import { Answer, Question } from '@src/types';
 import { QuestionState } from '@src/enums';
@@ -24,7 +23,6 @@ const props: PresenterProps = {
 };
 
 storiesOf('organisms/ExamQuestions', module)
-  .addDecorator(story => appContextDecorator(story))
   .add('waiting', () => <ExamQuestionsPresenter {...props} ready={false} />)
   .add('in answer', () => (
     <ExamQuestionsPresenter {...props} questionState={QuestionState.InAnswer} answer={undefined} />
