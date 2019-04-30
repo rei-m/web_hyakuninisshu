@@ -43,6 +43,9 @@ describe('UiReducer', () => {
       },
     };
     const state = uiReducer(initialState, action);
-    expect(state.karutasFilter.colors.find(({ color }) => color === 'blue')).toEqual({ color: 'blue', checked: false });
+    expect(state.karutasFilter.colors.find(({ color }) => color === 'blue')).toEqual({
+      color: 'blue',
+      checked: false,
+    });
   });
 });

@@ -51,7 +51,7 @@ const AboutPage = () => (
         <ReadingContent title={`運営者について`}>
           <Paragraph size={`s`}>
             当サイトは
-            <a href="https://twitter.com/rei_m" target="_blank">
+            <a href="https://twitter.com/rei_m" target="_blank" rel="noopener noreferrer">
               @rei_m
             </a>
             が個人で運営しています。不具合や要望等あればTwitterまでご連絡ください。
@@ -61,7 +61,7 @@ const AboutPage = () => (
         <ReadingContent title={`プライバシー ポリシー`}>
           <Paragraph size={`s`}>
             サイトの利用状況の把握や広告配信のためにGoogle社が提供しているサービスを利用しております。詳しくは
-            <a href="https://rei-m.github.io/app/policy/" target="_blank">
+            <a href="https://rei-m.github.io/app/policy/" target="_blank" rel="noopener noreferrer">
               こちら
             </a>
           </Paragraph>
