@@ -25514,6 +25514,7 @@ Array [
           当サイトは
           <a
             href="https://twitter.com/rei_m"
+            rel="noopener noreferrer"
             target="_blank"
           >
             @rei_m
@@ -25541,6 +25542,7 @@ Array [
           サイトの利用状況の把握や広告配信のためにGoogle社が提供しているサービスを利用しております。詳しくは
           <a
             href="https://rei-m.github.io/app/policy/"
+            rel="noopener noreferrer"
             target="_blank"
           >
             こちら

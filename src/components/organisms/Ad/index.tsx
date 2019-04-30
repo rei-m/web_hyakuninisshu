@@ -54,7 +54,7 @@ export const AdProduction = ({ type, style }: Props) => (
             __html: `
 .ad_top { width: 320px; height: 100px; }
 @media(min-width: 500px) { .ad_top { width: 468px; height: 60px; } }
-@media(min-width: 800px) { .ad_top { width: 728px; height: 90px; } }　
+@media(min-width: 800px) { .ad_top { width: 728px; height: 90px; } }
 `,
           }}
         />
