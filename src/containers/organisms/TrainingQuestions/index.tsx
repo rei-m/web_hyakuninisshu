@@ -59,8 +59,8 @@ export type PresenterProps = Pick<OwnProps, 'onClickGoToResult'> &
   Omit<DispatchProps, 'onStart' | 'onFinish'>;
 
 const ErrorMessage = styled(CenteredFrame)`
-  height: 300px;
-  width: 100%;
+  padding: ${({ theme }) => theme.spacing2x};
+  background-color: #fff;
 `;
 
 export const TrainingQuestionsPresenter = ({
@@ -75,11 +75,11 @@ export const TrainingQuestionsPresenter = ({
   onClickGoToNext,
   onClickGoToResult,
 }: PresenterProps) => {
-  if (question === undefined || questionState === undefined || questionState === QuestionState.Finished) {
+  if (questionState === undefined || questionState === QuestionState.Finished) {
     return <Progress />;
   }
 
-  if (totalCount === 0) {
+  if (totalCount === 0 || question === undefined) {
     return (
       <ErrorMessage tag={`div`}>
         <Txt role={`error`}>指定した条件の歌はありませんでした。</Txt>
