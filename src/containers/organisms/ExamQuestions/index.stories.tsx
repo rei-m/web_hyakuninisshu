@@ -15,7 +15,6 @@ const props: PresenterProps = {
   totalCount: 10,
   currentPosition: 3,
   questionState: QuestionState.InAnswer,
-  ready: true,
   onClickResult: action('onClickResult'),
   onClickToriFuda: action('onClickToriFuda'),
   onClickGoToNext: action('onClickGoToNext'),
@@ -23,7 +22,7 @@ const props: PresenterProps = {
 };
 
 storiesOf('organisms/ExamQuestions', module)
-  .add('waiting', () => <ExamQuestionsPresenter {...props} ready={false} />)
+  .add('waiting', () => <ExamQuestionsPresenter {...props} />)
   .add('in answer', () => (
     <ExamQuestionsPresenter {...props} questionState={QuestionState.InAnswer} answer={undefined} />
   ))

@@ -63,3 +63,7 @@ export const openNextQuestion = () => (
   const { currentIndex } = getState().questions;
   dispatch(actions.openNextQuestion(currentIndex));
 };
+
+export const finishQuestion = () => (dispatch: Dispatch<types.FinishQuestionAction>, _getState: () => GlobalState) => {
+  dispatch(actions.finishQuestion());
+};

@@ -17,7 +17,6 @@ const props: PresenterProps = {
   dulation: 0.5,
   submitTime: 10000,
   questionState: QuestionState.InAnswer,
-  ready: true,
   onClickResult: action('onClickResult'),
   onClickToriFuda: action('onClickToriFuda'),
   onClickGoToNext: action('onClickGoToNext'),
@@ -25,7 +24,7 @@ const props: PresenterProps = {
 };
 
 storiesOf('organisms/ReviewQuestions', module)
-  .add('waiting', () => <ReviewQuestionsPresenter {...props} ready={false} />)
+  .add('waiting', () => <ReviewQuestionsPresenter {...props} />)
   .add('in answer', () => (
     <ReviewQuestionsPresenter {...props} questionState={QuestionState.InAnswer} answer={undefined} />
   ))

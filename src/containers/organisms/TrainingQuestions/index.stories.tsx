@@ -16,7 +16,6 @@ const props: PresenterProps = {
   currentPosition: 3,
   questionState: QuestionState.InAnswer,
   dulation: 0.5,
-  ready: true,
   onClickResult: action('onClickResult'),
   onClickToriFuda: action('onClickToriFuda'),
   onClickGoToNext: action('onClickGoToNext'),
@@ -24,7 +23,7 @@ const props: PresenterProps = {
 };
 
 storiesOf('organisms/TrainingQuestions', module)
-  .add('waiting', () => <TrainingQuestionsPresenter {...props} ready={false} />)
+  .add('waiting', () => <TrainingQuestionsPresenter {...props} />)
   .add('in answer', () => (
     <TrainingQuestionsPresenter {...props} questionState={QuestionState.InAnswer} answer={undefined} />
   ))

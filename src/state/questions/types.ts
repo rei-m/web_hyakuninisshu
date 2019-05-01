@@ -23,6 +23,8 @@ export type CONFIRM_CORRECT_TYPE = typeof constants.CONFIRM_CORRECT_NAME;
 
 export type OPEN_NEXT_QUESTION_TYPE = typeof constants.OPEN_NEXT_QUESTION_NAME;
 
+export type FINISH_QUESTION_TYPE = typeof constants.FINISH_QUESTION_NAME;
+
 export interface StartTrainingAction extends Action {
   readonly type: START_TRAINING_TYPE;
   readonly payload: {
@@ -86,13 +88,18 @@ export interface OpenNextQuestionAction extends Action {
   };
 }
 
+export interface FinishQuestionAction extends Action {
+  readonly type: FINISH_QUESTION_TYPE;
+}
+
 export type Actions =
   | StartTrainingAction
   | StartExamAction
   | RestartQuestionsAction
   | AnswerQuestionAction
   | ConfirmCorrectAction
-  | OpenNextQuestionAction;
+  | OpenNextQuestionAction
+  | FinishQuestionAction;
 
 export interface State {
   readonly karutas: Karuta[];
