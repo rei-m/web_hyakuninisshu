@@ -118,9 +118,9 @@ export const answerQuestion = (
   };
 };
 
-export const confirmCorrect = (questions: Question[], answers: Answer[]): types.ConfirmCorrectAction => ({
+export const confirmCorrect = (_questions: Question[], _answers: Answer[]): types.ConfirmCorrectAction => ({
   payload: {
-    nextState: questions.length === answers.length ? QuestionState.Finished : QuestionState.ConfirmCorrect,
+    nextState: QuestionState.ConfirmCorrect,
   },
   type: constants.CONFIRM_CORRECT_NAME,
 });
@@ -132,6 +132,10 @@ export const openNextQuestion = (currentIndex: number): types.OpenNextQuestionAc
     startedTime: new Date().getTime(),
   },
   type: constants.OPEN_NEXT_QUESTION_NAME,
+});
+
+export const finishQuestion = (): types.FinishQuestionAction => ({
+  type: constants.FINISH_QUESTION_NAME,
 });
 
 class QuestionsFactory {

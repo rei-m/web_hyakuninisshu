@@ -5,6 +5,7 @@ import {
   QuestionAnimCondition,
   RangeFromCondition,
   RangeToCondition,
+  QuestionState,
 } from '@src/enums';
 import * as types from './types';
 import * as constants from './constants';
@@ -77,6 +78,11 @@ export const reducer = (state = initialState, action: types.Actions): types.Stat
         currentIndex: action.payload.nextIndex,
         lastStartedTime: action.payload.startedTime,
         questionState: action.payload.nextState,
+      };
+    case constants.FINISH_QUESTION_NAME:
+      return {
+        ...state,
+        questionState: QuestionState.Finished,
       };
     default:
       return state;
