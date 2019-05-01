@@ -9,6 +9,7 @@ import KarutaPlayingCorrect, {
 import CenteredFrame from '@src/components/atoms/CenteredFrame';
 import Txt from '@src/components/atoms/Txt';
 import Progress from '@src/components/atoms/Progress';
+import { useLifeCycle } from '@src/hooks/useLifeCycle';
 import { GlobalState } from '@src/state';
 import { questionsOperations, questionsTypes } from '@src/state/questions';
 import {
@@ -39,20 +40,23 @@ export interface ConnectedProps {
   lastStartedTime?: number;
   question?: Question;
   answer?: Answer;
-  totalCount?: number;
+  totalCount: number;
   currentPosition: number;
   questionState?: QuestionState;
   dulation: number;
 }
 
-export type DispatchProps = { onStart: () => void } & Pick<KarutaPlayingProps, 'onClickToriFuda' | 'onClickResult'> &
+export type DispatchProps = { onStart: () => void; onFinish: () => void } & Pick<
+  KarutaPlayingProps,
+  'onClickToriFuda' | 'onClickResult'
+> &
   Pick<KarutaPlayingCorrectProps, 'onClickGoToNext'>;
 
 export type Props = OwnProps & ConnectedProps & DispatchProps;
 
 export type PresenterProps = Pick<OwnProps, 'onClickGoToResult'> &
   ConnectedProps &
-  Omit<DispatchProps, 'onStart'> & { ready: boolean };
+  Omit<DispatchProps, 'onStart' | 'onFinish'>;
 
 const ErrorMessage = styled(CenteredFrame)`
   height: 300px;
@@ -66,13 +70,12 @@ export const TrainingQuestionsPresenter = ({
   questionState,
   dulation,
   currentPosition,
-  ready,
   onClickResult,
   onClickToriFuda,
   onClickGoToNext,
   onClickGoToResult,
 }: PresenterProps) => {
-  if (!ready || question === undefined || totalCount === undefined) {
+  if (question === undefined || questionState === undefined || questionState === QuestionState.Finished) {
     return <Progress />;
   }
 
@@ -86,11 +89,10 @@ export const TrainingQuestionsPresenter = ({
 
   switch (questionState) {
     case QuestionState.ConfirmCorrect:
-    case QuestionState.Finished:
       return (
         <KarutaPlayingCorrect
           karuta={question.correctKaruta}
-          isAllAnswered={questionState === QuestionState.Finished}
+          isAllAnswered={totalCount === currentPosition}
           onClickGoToNext={onClickGoToNext}
           onClickGoToResult={onClickGoToResult}
         />
@@ -111,14 +113,8 @@ export const TrainingQuestionsPresenter = ({
 };
 
 export const TrainingQuestions = (props: Props) => {
-  // ここちょっと後で修正。。。
-  const [ready, setReady] = React.useState(false);
-  React.useEffect(() => {
-    props.onStart();
-    setReady(true);
-  }, []);
-
-  return <TrainingQuestionsPresenter {...props} ready={ready} />;
+  useLifeCycle(props.onStart, props.onFinish);
+  return <TrainingQuestionsPresenter {...props} />;
 };
 
 export const mapStateToProps = ({ questions }: GlobalState, props: OwnProps): ConnectedProps => {
@@ -130,7 +126,7 @@ export const mapStateToProps = ({ questions }: GlobalState, props: OwnProps): Co
     answer: answers ? answers[currentIndex] : undefined,
     currentPosition: currentIndex + 1,
     question: questions.questions ? questions.questions[currentIndex] : undefined,
-    totalCount: questions.questions ? questions.questions.length : undefined,
+    totalCount: questions.questions ? questions.questions.length : 0,
     questionState,
     dulation,
   };
@@ -153,6 +149,9 @@ export const mapDispatchToProps = (
         questionAnim
       )
     );
+  },
+  onFinish: () => {
+    dispatch(questionsOperations.finishQuestion());
   },
   onClickGoToNext: () => {
     dispatch(questionsOperations.openNextQuestion());

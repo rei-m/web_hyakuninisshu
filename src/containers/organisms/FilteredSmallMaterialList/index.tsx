@@ -43,6 +43,7 @@ const StyledLink = styled(Link)`
 `;
 
 const StyledMaterial = styled(SmallMaterial)`
+  padding: ${({ theme }) => theme.spacing1x};
   &:hover {
     background-color: #f5f5f5;
   }

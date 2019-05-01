@@ -7,6 +7,7 @@ import {
   RESTART_QUESTIONS_NAME,
   START_EXAM_NAME,
   START_TRAINING_NAME,
+  FINISH_QUESTION_NAME,
 } from '@src/state/questions/constants';
 import { Answer, Color, Karuta, Kimariji, Question } from '@src/types';
 import {
@@ -265,5 +266,12 @@ describe('QuestionsActionCreator', () => {
     expect(nextIndex).toEqual(1);
     expect(nextState).toEqual(QuestionState.InAnswer);
     expect(startedTime).not.toBeUndefined();
+  });
+
+  it('should create FinishQuestionAction', () => {
+    const actualAction = questionsAction.finishQuestion();
+
+    const { type } = actualAction;
+    expect(type).toEqual(FINISH_QUESTION_NAME);
   });
 });

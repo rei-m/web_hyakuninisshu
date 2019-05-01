@@ -37,12 +37,13 @@ const KarutaList = styled.ul`
   margin: 0;
   display: flex;
   flex-wrap: wrap;
+  justify-content: space-between;
 `;
 
 const KarutaListItem = styled.li`
   width: 100%;
   @media screen and (min-width: ${({ theme }) => theme.minWidthWide}) {
-    width: 50%;
+    width: 49%;
   }
 `;
 

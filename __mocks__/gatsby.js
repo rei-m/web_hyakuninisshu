@@ -10,8 +10,6 @@ const tatamiImage  = require("@src/images/tatami_part.png");
 const linkActionHandler = action("Link:");
 const navigateActionHandler = action("NavigateTo:");
 
-const imageSrc = (image) => (image.default === "test-file-stub" ? image.default : image);
-
 module.exports = {
   graphql: (args) => args,
   Link: ({ to, ...rest }) =>
@@ -36,7 +34,7 @@ module.exports = {
           },
         },
         ogpImage: {
-          publicURL: imageSrc(iconImage),
+          publicURL: iconImage,
         },
       };
     }
@@ -48,7 +46,7 @@ module.exports = {
               aspectRatio: 0.7228915662650602,
               srcSet: "",
               sizes: "(max-width: 300px) 100vw, 200px",
-              src: imageSrc(correctImage),
+              src: correctImage,
             },
           },
         },
@@ -58,7 +56,7 @@ module.exports = {
               aspectRatio: 0.7228915662650602,
               srcSet: "",
               sizes: "(max-width: 300px) 100vw, 200px",
-              src: imageSrc(incorrectImage),
+              src: incorrectImage,
             },
           },
         },
@@ -72,7 +70,7 @@ module.exports = {
               aspectRatio: 0.7228915662650602,
               srcSet: "",
               sizes: "(max-width: 200px) 200px, 200px",
-              src: imageSrc(dogezaImage),
+              src: dogezaImage,
             },
           },
         },
@@ -95,7 +93,7 @@ module.exports = {
                   aspectRatio: 0.7228915662650602,
                   srcSet: "",
                   sizes: "(max-width: 200px) 100vw, 200px",
-                  src: imageSrc(karutaImage),
+                  src: karutaImage,
                 }
               },
               name: `karuta_${("00" + (i + 1)).slice(-3)}`
