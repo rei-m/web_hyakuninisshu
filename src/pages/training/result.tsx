@@ -41,7 +41,7 @@ export const mapStateToProps = ({ questions }: GlobalState): ConnectedProps => (
 
 export const TrainingResultPage = ({ questionState }: Props) => (
   <PlayingPageTemplate
-    title={`百人一首 - 腕試し結果 -`}
+    title={`百人一首 - 練習結果 -`}
     isDisplayNav={false}
     onClickBack={onClickBackHandler}
     content={
