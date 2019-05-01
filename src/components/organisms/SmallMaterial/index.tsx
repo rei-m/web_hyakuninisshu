@@ -20,18 +20,17 @@ const Container = styled(Block)`
   align-items: center;
   width: 100%;
   background-color: #fff;
-  padding: ${({ theme }) => theme.spacing1x};
 `;
 
 const ImageColumn = styled(Block)`
   ${({ theme }) => theme.centering}
   flex-direction: column;
+  margin-right: 8px;
 `;
 
 const TextColumn = styled(Block)`
   flex-grow: 1;
   text-align: left;
-  margin-left: 8px;
   box-sizing: border-box;
 `;
 
