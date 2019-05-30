@@ -5,7 +5,7 @@ import { Karuta } from '../src/types';
 import { PageContext } from '../src/gatsbyPages/karutas/no';
 
 const KARUTA_JSON_URL =
-  'https://raw.githubusercontent.com/rei-m/android_hyakuninisshu/develop/app/src/main/assets/karuta_list.json';
+  'https://raw.githubusercontent.com/rei-m/android_hyakuninisshu/develop/infrastructure/src/main/assets/karuta_list.json';
 
 const convertCamelKey = <T>(json: { [key: string]: any }, result: T) => {
   convert(json, result);
