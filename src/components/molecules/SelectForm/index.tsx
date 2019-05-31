@@ -14,7 +14,7 @@ export interface Props {
   list: Array<{ value: string | number; text: string }>;
   error?: string;
   style?: React.CSSProperties;
-  handleChange: (e: React.SyntheticEvent<HTMLSelectElement>) => void;
+  handleChange: (e: React.ChangeEvent<{ value: unknown }>) => void;
 }
 
 type StylesClassKey = 'formControl' | 'label' | 'select';

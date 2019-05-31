@@ -49,9 +49,6 @@ export const muiTheme: ThemeOptions = {
       default: appTheme.colorThin,
     },
   },
-  typography: {
-    useNextVariants: true,
-  },
 };
 
 export type ThemeInterface = typeof appTheme;

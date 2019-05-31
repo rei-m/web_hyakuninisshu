@@ -29,7 +29,7 @@ import { createMuiTheme, MuiThemeProvider } from '@material-ui/core/styles';
 
 // MUIが生成するClassNameの差分をなくす対応
 // @see https://github.com/mui-org/material-ui/issues/9492#issuecomment-410443974
-import JssProvider from 'react-jss/lib/JssProvider';
+import { StylesProvider } from '@material-ui/styles';
 
 import { appTheme, muiTheme } from '@src/styles/theme';
 
@@ -38,9 +38,9 @@ const generateClassName = (rule, styleSheet) => `${styleSheet.options.classNameP
 addDecorator(story =>
   <ThemeProvider theme={appTheme}>
     <MuiThemeProvider theme={createMuiTheme(muiTheme)}>
-      <JssProvider generateClassName={generateClassName}>
+      <StylesProvider generateClassName={generateClassName}>
         {story()}
-      </JssProvider>
+      </StylesProvider>
     </MuiThemeProvider>
   </ThemeProvider>
 )
