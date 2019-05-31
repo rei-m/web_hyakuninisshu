@@ -14,6 +14,7 @@ const typography = new Typography({
       boxSizing: 'border-box',
     },
     body: {
+      backgroundColor: appTheme.colorThin,
       fontSize: appTheme.fontSizeS,
       textAlign: 'center',
       textTransform: 'none',

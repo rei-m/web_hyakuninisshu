@@ -33,7 +33,7 @@ const LinkWithRipple = withRipple<GatsbyLinkProps<{}>>(Link);
 
 const renderIcon = (menuType: MenuType) => {
   const Icon = menuIcon(menuType);
-  return <Icon />;
+  return <Icon style={{ fontSize: '2.4rem' }} />;
 };
 
 const WrappedItem = ({ to, menuType, active }: { to: string; menuType: MenuType; active: boolean }) => (
