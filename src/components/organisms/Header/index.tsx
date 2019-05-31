@@ -40,8 +40,8 @@ const Title = styled(Heading)`
   }
 `;
 
-const renderArrowBack = () => <ArrowBack />;
-const renderSearch = () => <Search />;
+const renderArrowBack = () => <ArrowBack style={{ fontSize: '2.4rem' }} />;
+const renderSearch = () => <Search style={{ fontSize: '2.4rem' }} />;
 
 const Header = ({ title, className, onClickBack, onClickSearch }: Props) => (
   <Container canBack={!!onClickBack} className={className}>

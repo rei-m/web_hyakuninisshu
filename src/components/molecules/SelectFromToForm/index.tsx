@@ -23,7 +23,7 @@ export interface Props {
   };
   error?: string;
   style?: React.CSSProperties;
-  handleChange: (e: React.SyntheticEvent<HTMLSelectElement>) => void;
+  handleChange: (e: React.ChangeEvent<{ value: unknown }>) => void;
 }
 
 type StylesClassKey = 'formControl' | 'select';
@@ -106,47 +106,5 @@ const SelectRangeFromTo = withStyles<StylesClassKey>(styles)(
     </FormControl>
   )
 );
-
-// const SelectRangeFromTo = withStyles(stylesProvider)(
-//   ({ from, to, error, handleChange, classes, style }: RenderProps) => (
-//     <FormControl className={classes.formControl} style={style}>
-//       <Label>出題範囲</Label>
-//       <FormRow>
-//         <Select
-//           value={from}
-//           onChange={handleChange}
-//           inputProps={{
-//             name: 'rangeFrom',
-//             id: `id-range-from`,
-//           }}
-//           className={classes.select}
-//         >
-//           {RangeFromConditions.values.map(value => (
-//             <MenuItem value={value} className={classes.select} key={`range_from_${value}`}>
-//               {toKarutaNoString(value)}
-//             </MenuItem>
-//           ))}
-//         </Select>
-//         <Separate>〜</Separate>
-//         <Select
-//           value={to}
-//           onChange={handleChange}
-//           inputProps={{
-//             name: 'rangeTo',
-//             id: `id-range-to`,
-//           }}
-//           className={classes.select}
-//         >
-//           {RangeToConditions.values.map(value => (
-//             <MenuItem value={value} className={classes.select} key={`range_to_${value}`}>
-//               {toKarutaNoString(value)}
-//             </MenuItem>
-//           ))}
-//         </Select>
-//       </FormRow>
-//       {error && <Error>{error}</Error>}
-//     </FormControl>
-//   )
-// );
 
 export default SelectRangeFromTo;
