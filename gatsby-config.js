@@ -21,7 +21,7 @@ require('ts-node').register({
   }
 })
 
-const config = require('./gatsby-config-impr');
+const config = require('./gatsby-config-impl');
 
 module.exports = {
   siteMetadata: config.siteMetadata,

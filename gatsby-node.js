@@ -23,7 +23,7 @@ require('ts-node').register({
 
 const { resolve } = require('path');
 
-const config = require('./gatsby-node-impr');
+const config = require('./gatsby-node-impl');
 
 exports.createPages = config.createPages;
 
