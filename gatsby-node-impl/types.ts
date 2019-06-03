@@ -1,4 +1,4 @@
-import { graphql, ExecutionResult } from 'graphql';
+import { ExecutionResult } from 'graphql';
 
 interface PageInput<T> {
   path: string;
