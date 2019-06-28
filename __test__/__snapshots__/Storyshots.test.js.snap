@@ -20220,7 +20220,7 @@ exports[`Storyshots organisms/MaterialListFilter default 1`] = `
   onClick={[Function]}
 >
   <ul
-    className="MuiList-root Component-root MuiList-padding MuiList-subheader"
+    className="MuiList-root makeStyles-root MuiList-padding MuiList-subheader"
   >
     <li />
     <li
@@ -20254,7 +20254,7 @@ exports[`Storyshots organisms/MaterialListFilter default 1`] = `
         className="c5"
       >
         <li
-          className="MuiListSubheader-root Component-listSubHeader MuiListSubheader-sticky MuiListSubheader-gutters"
+          className="MuiListSubheader-root makeStyles-listSubHeader MuiListSubheader-sticky MuiListSubheader-gutters"
         >
           <span
             className="c6"
@@ -20265,7 +20265,7 @@ exports[`Storyshots organisms/MaterialListFilter default 1`] = `
         </li>
         <div
           aria-disabled={false}
-          className="MuiButtonBase-root MuiListItem-root Component-listItem MuiListItem-dense MuiListItem-gutters MuiListItem-button"
+          className="MuiButtonBase-root MuiListItem-root makeStyles-listItem MuiListItem-dense MuiListItem-gutters MuiListItem-button"
           onBlur={[Function]}
           onClick={[Function]}
           onDragLeave={[Function]}
@@ -20320,7 +20320,7 @@ exports[`Storyshots organisms/MaterialListFilter default 1`] = `
             </span>
           </span>
           <div
-            className="MuiListItemText-root Component-listItemText MuiListItemText-dense"
+            className="MuiListItemText-root makeStyles-listItemText MuiListItemText-dense"
           >
             <span
               className="MuiTypography-root MuiListItemText-primary MuiTypography-body2"
@@ -20336,7 +20336,7 @@ exports[`Storyshots organisms/MaterialListFilter default 1`] = `
         </div>
         <div
           aria-disabled={false}
-          className="MuiButtonBase-root MuiListItem-root Component-listItem MuiListItem-dense MuiListItem-gutters MuiListItem-button"
+          className="MuiButtonBase-root MuiListItem-root makeStyles-listItem MuiListItem-dense MuiListItem-gutters MuiListItem-button"
           onBlur={[Function]}
           onClick={[Function]}
           onDragLeave={[Function]}
@@ -20391,7 +20391,7 @@ exports[`Storyshots organisms/MaterialListFilter default 1`] = `
             </span>
           </span>
           <div
-            className="MuiListItemText-root Component-listItemText MuiListItemText-dense"
+            className="MuiListItemText-root makeStyles-listItemText MuiListItemText-dense"
           >
             <span
               className="MuiTypography-root MuiListItemText-primary MuiTypography-body2"
@@ -20407,7 +20407,7 @@ exports[`Storyshots organisms/MaterialListFilter default 1`] = `
         </div>
         <div
           aria-disabled={false}
-          className="MuiButtonBase-root MuiListItem-root Component-listItem MuiListItem-dense MuiListItem-gutters MuiListItem-button"
+          className="MuiButtonBase-root MuiListItem-root makeStyles-listItem MuiListItem-dense MuiListItem-gutters MuiListItem-button"
           onBlur={[Function]}
           onClick={[Function]}
           onDragLeave={[Function]}
@@ -20462,7 +20462,7 @@ exports[`Storyshots organisms/MaterialListFilter default 1`] = `
             </span>
           </span>
           <div
-            className="MuiListItemText-root Component-listItemText MuiListItemText-dense"
+            className="MuiListItemText-root makeStyles-listItemText MuiListItemText-dense"
           >
             <span
               className="MuiTypography-root MuiListItemText-primary MuiTypography-body2"
@@ -20478,7 +20478,7 @@ exports[`Storyshots organisms/MaterialListFilter default 1`] = `
         </div>
         <div
           aria-disabled={false}
-          className="MuiButtonBase-root MuiListItem-root Component-listItem MuiListItem-dense MuiListItem-gutters MuiListItem-button"
+          className="MuiButtonBase-root MuiListItem-root makeStyles-listItem MuiListItem-dense MuiListItem-gutters MuiListItem-button"
           onBlur={[Function]}
           onClick={[Function]}
           onDragLeave={[Function]}
@@ -20533,7 +20533,7 @@ exports[`Storyshots organisms/MaterialListFilter default 1`] = `
             </span>
           </span>
           <div
-            className="MuiListItemText-root Component-listItemText MuiListItemText-dense"
+            className="MuiListItemText-root makeStyles-listItemText MuiListItemText-dense"
           >
             <span
               className="MuiTypography-root MuiListItemText-primary MuiTypography-body2"
@@ -20549,7 +20549,7 @@ exports[`Storyshots organisms/MaterialListFilter default 1`] = `
         </div>
         <div
           aria-disabled={false}
-          className="MuiButtonBase-root MuiListItem-root Component-listItem MuiListItem-dense MuiListItem-gutters MuiListItem-button"
+          className="MuiButtonBase-root MuiListItem-root makeStyles-listItem MuiListItem-dense MuiListItem-gutters MuiListItem-button"
           onBlur={[Function]}
           onClick={[Function]}
           onDragLeave={[Function]}
@@ -20604,7 +20604,7 @@ exports[`Storyshots organisms/MaterialListFilter default 1`] = `
             </span>
           </span>
           <div
-            className="MuiListItemText-root Component-listItemText MuiListItemText-dense"
+            className="MuiListItemText-root makeStyles-listItemText MuiListItemText-dense"
           >
             <span
               className="MuiTypography-root MuiListItemText-primary MuiTypography-body2"
@@ -20620,7 +20620,7 @@ exports[`Storyshots organisms/MaterialListFilter default 1`] = `
         </div>
         <div
           aria-disabled={false}
-          className="MuiButtonBase-root MuiListItem-root Component-listItem MuiListItem-dense MuiListItem-gutters MuiListItem-button"
+          className="MuiButtonBase-root MuiListItem-root makeStyles-listItem MuiListItem-dense MuiListItem-gutters MuiListItem-button"
           onBlur={[Function]}
           onClick={[Function]}
           onDragLeave={[Function]}
@@ -20675,7 +20675,7 @@ exports[`Storyshots organisms/MaterialListFilter default 1`] = `
             </span>
           </span>
           <div
-            className="MuiListItemText-root Component-listItemText MuiListItemText-dense"
+            className="MuiListItemText-root makeStyles-listItemText MuiListItemText-dense"
           >
             <span
               className="MuiTypography-root MuiListItemText-primary MuiTypography-body2"
@@ -20696,7 +20696,7 @@ exports[`Storyshots organisms/MaterialListFilter default 1`] = `
         className="c5"
       >
         <li
-          className="MuiListSubheader-root Component-listSubHeader MuiListSubheader-sticky MuiListSubheader-gutters"
+          className="MuiListSubheader-root makeStyles-listSubHeader MuiListSubheader-sticky MuiListSubheader-gutters"
         >
           <span
             className="c13"
@@ -20707,7 +20707,7 @@ exports[`Storyshots organisms/MaterialListFilter default 1`] = `
         </li>
         <div
           aria-disabled={false}
-          className="MuiButtonBase-root MuiListItem-root Component-listItem MuiListItem-dense MuiListItem-gutters MuiListItem-button"
+          className="MuiButtonBase-root MuiListItem-root makeStyles-listItem MuiListItem-dense MuiListItem-gutters MuiListItem-button"
           onBlur={[Function]}
           onClick={[Function]}
           onDragLeave={[Function]}
@@ -20762,7 +20762,7 @@ exports[`Storyshots organisms/MaterialListFilter default 1`] = `
             </span>
           </span>
           <div
-            className="MuiListItemText-root Component-listItemText MuiListItemText-dense"
+            className="MuiListItemText-root makeStyles-listItemText MuiListItemText-dense"
           >
             <span
               className="MuiTypography-root MuiListItemText-primary MuiTypography-body2"
@@ -20778,7 +20778,7 @@ exports[`Storyshots organisms/MaterialListFilter default 1`] = `
         </div>
         <div
           aria-disabled={false}
-          className="MuiButtonBase-root MuiListItem-root Component-listItem MuiListItem-dense MuiListItem-gutters MuiListItem-button"
+          className="MuiButtonBase-root MuiListItem-root makeStyles-listItem MuiListItem-dense MuiListItem-gutters MuiListItem-button"
           onBlur={[Function]}
           onClick={[Function]}
           onDragLeave={[Function]}
@@ -20833,7 +20833,7 @@ exports[`Storyshots organisms/MaterialListFilter default 1`] = `
             </span>
           </span>
           <div
-            className="MuiListItemText-root Component-listItemText MuiListItemText-dense"
+            className="MuiListItemText-root makeStyles-listItemText MuiListItemText-dense"
           >
             <span
               className="MuiTypography-root MuiListItemText-primary MuiTypography-body2"
@@ -20849,7 +20849,7 @@ exports[`Storyshots organisms/MaterialListFilter default 1`] = `
         </div>
         <div
           aria-disabled={false}
-          className="MuiButtonBase-root MuiListItem-root Component-listItem MuiListItem-dense MuiListItem-gutters MuiListItem-button"
+          className="MuiButtonBase-root MuiListItem-root makeStyles-listItem MuiListItem-dense MuiListItem-gutters MuiListItem-button"
           onBlur={[Function]}
           onClick={[Function]}
           onDragLeave={[Function]}
@@ -20904,7 +20904,7 @@ exports[`Storyshots organisms/MaterialListFilter default 1`] = `
             </span>
           </span>
           <div
-            className="MuiListItemText-root Component-listItemText MuiListItemText-dense"
+            className="MuiListItemText-root makeStyles-listItemText MuiListItemText-dense"
           >
             <span
               className="MuiTypography-root MuiListItemText-primary MuiTypography-body2"
@@ -20920,7 +20920,7 @@ exports[`Storyshots organisms/MaterialListFilter default 1`] = `
         </div>
         <div
           aria-disabled={false}
-          className="MuiButtonBase-root MuiListItem-root Component-listItem MuiListItem-dense MuiListItem-gutters MuiListItem-button"
+          className="MuiButtonBase-root MuiListItem-root makeStyles-listItem MuiListItem-dense MuiListItem-gutters MuiListItem-button"
           onBlur={[Function]}
           onClick={[Function]}
           onDragLeave={[Function]}
@@ -20975,7 +20975,7 @@ exports[`Storyshots organisms/MaterialListFilter default 1`] = `
             </span>
           </span>
           <div
-            className="MuiListItemText-root Component-listItemText MuiListItemText-dense"
+            className="MuiListItemText-root makeStyles-listItemText MuiListItemText-dense"
           >
             <span
               className="MuiTypography-root MuiListItemText-primary MuiTypography-body2"
@@ -20991,7 +20991,7 @@ exports[`Storyshots organisms/MaterialListFilter default 1`] = `
         </div>
         <div
           aria-disabled={false}
-          className="MuiButtonBase-root MuiListItem-root Component-listItem MuiListItem-dense MuiListItem-gutters MuiListItem-button"
+          className="MuiButtonBase-root MuiListItem-root makeStyles-listItem MuiListItem-dense MuiListItem-gutters MuiListItem-button"
           onBlur={[Function]}
           onClick={[Function]}
           onDragLeave={[Function]}
@@ -21046,7 +21046,7 @@ exports[`Storyshots organisms/MaterialListFilter default 1`] = `
             </span>
           </span>
           <div
-            className="MuiListItemText-root Component-listItemText MuiListItemText-dense"
+            className="MuiListItemText-root makeStyles-listItemText MuiListItemText-dense"
           >
             <span
               className="MuiTypography-root MuiListItemText-primary MuiTypography-body2"
@@ -26780,7 +26780,7 @@ Array [
   position: relative;
   box-sizing: border-box;
   width: inherit;
-  opacity: 0.8;
+  opacity: 1;
 }
 
 .c10 svg {
@@ -27484,27 +27484,6 @@ Array [
   opacity: 1;
 }
 
-.c10 {
-  height: 56px;
-  color: #fff;
-  position: relative;
-  box-sizing: border-box;
-  width: inherit;
-  opacity: 0.8;
-}
-
-.c10 svg {
-  margin-bottom: 18px;
-}
-
-.c10:after {
-  content: 'その他';
-  bottom: 8px;
-  position: absolute;
-  font-size: 1.2rem;
-  opacity: 1;
-}
-
 .c6 {
   height: 56px;
   color: #fff;
@@ -27520,6 +27499,27 @@ Array [
 
 .c6:after {
   content: '腕試し';
+  bottom: 8px;
+  position: absolute;
+  font-size: 1.2rem;
+  opacity: 1;
+}
+
+.c10 {
+  height: 56px;
+  color: #fff;
+  position: relative;
+  box-sizing: border-box;
+  width: inherit;
+  opacity: 0.8;
+}
+
+.c10 svg {
+  margin-bottom: 18px;
+}
+
+.c10:after {
+  content: 'その他';
   bottom: 8px;
   position: absolute;
   font-size: 1.2rem;
@@ -28223,7 +28223,7 @@ Array [
   margin: 0 auto;
 }
 
-.c7 {
+.c16 {
   height: 100px;
   border: 1px solid #123;
   display: -webkit-box;
@@ -28263,28 +28263,73 @@ Array [
 }
 
 .c4 {
-  height: 300px;
-  width: 100%;
+  max-width: 380px;
+  padding: 16px;
+}
+
+.c6 {
+  text-align: left;
 }
 
 .c5 {
+  background-color: #fffff0;
+  box-sizing: border-box;
+  padding: 8px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.26);
+  border-radius: 4px;
+  margin-bottom: 16px;
+}
+
+.c9 {
+  background-color: #fffff0;
+  box-sizing: border-box;
+  padding: 8px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.26);
+  border-radius: 4px;
+  margin-bottom: 32px;
+}
+
+.c12 {
+  text-align: center;
+}
+
+.c14 {
+  padding: 8px;
+}
+
+.c15 {
+  box-shadow: 0 1px 3px rgba(0,0,0,0.26);
+}
+
+.c13 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  background-color: #fffff0;
+  box-sizing: border-box;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.26);
+  border-radius: 4px;
+  margin: 16px 0;
 }
 
-.c6 {
-  font-size: 1.6rem;
-  color: #f00;
+.c7 {
+  font-size: 1.2rem;
+}
+
+.c8 {
+  font-size: 1.8rem;
+}
+
+.c10 {
+  font-size: 1.2rem;
+}
+
+.c11 {
+  font-size: 1.8rem;
 }
 
 @media screen and (min-width:768px) {
@@ -28336,20 +28381,114 @@ Array [
         </div>
       </div>
       <div
-        className="c4 c5"
+        className="c4 "
       >
-        <span
-          className="c6"
-          role="error"
+        <div
+          className="c5 "
         >
-          不正な遷移を行いました。前の画面からやり直してください。
-        </span>
+          <div
+            className="c6 c7"
+            size="ss"
+          >
+            正解数
+          </div>
+          <span
+            className="c8"
+            size="l"
+          >
+            0 / 0
+          </span>
+        </div>
+        <div
+          className="c9 "
+        >
+          <div
+            className="c6 c10"
+            size="ss"
+          >
+            平均回答時間
+          </div>
+          <span
+            className="c11"
+            size="l"
+          >
+            NaN秒
+          </span>
+        </div>
+        <div
+          className="c12 "
+        >
+          <a
+            className="twitter-share-button"
+            data-hashtags={
+              Array [
+                "百人一首",
+              ]
+            }
+            data-show-count="false"
+            data-size="large"
+            data-text="百人一首で 0問中 0問 正解しました！"
+            data-url="https://hyakuninanki.net"
+            href="https://twitter.com/share"
+          >
+            Tweet
+          </a>
+        </div>
+        <div
+          className="c13 "
+        />
+        <div
+          className="c14 "
+        >
+          <button
+            className="MuiButtonBase-root MuiButton-root c15 StyledButton-button StyledButton-normal MuiButton-outlined"
+            disabled={false}
+            onBlur={[Function]}
+            onClick={[Function]}
+            onDragLeave={[Function]}
+            onFocus={[Function]}
+            onKeyDown={[Function]}
+            onKeyUp={[Function]}
+            onMouseDown={[Function]}
+            onMouseLeave={[Function]}
+            onMouseUp={[Function]}
+            onTouchEnd={[Function]}
+            onTouchMove={[Function]}
+            onTouchStart={[Function]}
+            tabIndex={0}
+            type="button"
+          >
+            <span
+              className="MuiButton-label"
+            >
+              <svg
+                aria-hidden="true"
+                className="MuiSvgIcon-root"
+                focusable="false"
+                role="presentation"
+                style={
+                  Object {
+                    "color": "#5c7080",
+                    "fontSize": "2rem",
+                    "marginRight": "8px",
+                  }
+                }
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M20 11H7.83l5.59-5.59L12 4l-8 8 8 8 1.41-1.41L7.83 13H20v-2z"
+                />
+              </svg>
+              メニューに戻る
+            </span>
+          </button>
+        </div>
       </div>
       <div
         className="c2 "
       >
         <div
-          className="c7 "
+          className="c16 "
         >
           この欄は広告枠です
         </div>
@@ -48570,7 +48709,7 @@ Array [
   margin: 0 auto;
 }
 
-.c7 {
+.c15 {
   height: 100px;
   border: 1px solid #123;
   display: -webkit-box;
@@ -48610,28 +48749,58 @@ Array [
 }
 
 .c4 {
-  height: 300px;
-  width: 100%;
-}
-
-.c5 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+  max-width: 380px;
+  padding: 16px;
 }
 
 .c6 {
-  font-size: 1.6rem;
-  color: #f00;
+  text-align: left;
+}
+
+.c5 {
+  background-color: #fffff0;
+  box-sizing: border-box;
+  padding: 8px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.26);
+  border-radius: 4px;
+  margin-bottom: 16px;
+}
+
+.c9 {
+  background-color: #fffff0;
+  box-sizing: border-box;
+  padding: 8px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.26);
+  border-radius: 4px;
+  margin-bottom: 32px;
+}
+
+.c12 {
+  text-align: center;
+}
+
+.c13 {
+  padding: 8px;
+}
+
+.c14 {
+  box-shadow: 0 1px 3px rgba(0,0,0,0.26);
+}
+
+.c7 {
+  font-size: 1.2rem;
+}
+
+.c8 {
+  font-size: 1.8rem;
+}
+
+.c10 {
+  font-size: 1.2rem;
+}
+
+.c11 {
+  font-size: 1.8rem;
 }
 
 @media screen and (min-width:768px) {
@@ -48683,20 +48852,111 @@ Array [
         </div>
       </div>
       <div
-        className="c4 c5"
+        className="c4 "
       >
-        <span
-          className="c6"
-          role="error"
+        <div
+          className="c5 "
         >
-          不正な遷移を行いました。前の画面からやり直してください。
-        </span>
+          <div
+            className="c6 c7"
+            size="ss"
+          >
+            正解数
+          </div>
+          <span
+            className="c8"
+            size="l"
+          >
+            0 / 0
+          </span>
+        </div>
+        <div
+          className="c9 "
+        >
+          <div
+            className="c6 c10"
+            size="ss"
+          >
+            平均回答時間
+          </div>
+          <span
+            className="c11"
+            size="l"
+          >
+            NaN秒
+          </span>
+        </div>
+        <div
+          className="c12 "
+        >
+          <a
+            className="twitter-share-button"
+            data-hashtags={
+              Array [
+                "百人一首",
+              ]
+            }
+            data-show-count="false"
+            data-size="large"
+            data-text="百人一首で 0問中 0問 正解しました！"
+            data-url="https://hyakuninanki.net"
+            href="https://twitter.com/share"
+          >
+            Tweet
+          </a>
+        </div>
+        <div
+          className="c13 "
+        >
+          <button
+            className="MuiButtonBase-root MuiButton-root c14 StyledButton-button StyledButton-normal MuiButton-outlined"
+            disabled={false}
+            onBlur={[Function]}
+            onClick={[Function]}
+            onDragLeave={[Function]}
+            onFocus={[Function]}
+            onKeyDown={[Function]}
+            onKeyUp={[Function]}
+            onMouseDown={[Function]}
+            onMouseLeave={[Function]}
+            onMouseUp={[Function]}
+            onTouchEnd={[Function]}
+            onTouchMove={[Function]}
+            onTouchStart={[Function]}
+            tabIndex={0}
+            type="button"
+          >
+            <span
+              className="MuiButton-label"
+            >
+              <svg
+                aria-hidden="true"
+                className="MuiSvgIcon-root"
+                focusable="false"
+                role="presentation"
+                style={
+                  Object {
+                    "color": "#5c7080",
+                    "fontSize": "2rem",
+                    "marginRight": "8px",
+                  }
+                }
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M20 11H7.83l5.59-5.59L12 4l-8 8 8 8 1.41-1.41L7.83 13H20v-2z"
+                />
+              </svg>
+              メニューに戻る
+            </span>
+          </button>
+        </div>
       </div>
       <div
         className="c2 "
       >
         <div
-          className="c7 "
+          className="c15 "
         >
           この欄は広告枠です
         </div>

@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { connect } from 'react-redux';
+import { useSelector } from 'react-redux';
 import { navigate } from 'gatsby';
 import styled from '@src/styles/styled-components';
 import PlayingPageTemplate from '@src/components/templates/PlayingPageTemplate';
@@ -10,12 +10,17 @@ import Txt from '@src/components/atoms/Txt';
 import { ROUTE_PATHS } from '@src/constants';
 import { QuestionState } from '@src/enums';
 import { GlobalState } from '@src/state';
+import { questionsTypes } from '@src/state/questions';
 
 export interface ConnectedProps {
   questionState?: QuestionState;
 }
 
-export type Props = ConnectedProps;
+export type PresenterProps = ConnectedProps;
+
+export type ContainerProps = {
+  presenter: React.FC<PresenterProps>;
+};
 
 const onClickRestartHandler = () => {
   navigate(ROUTE_PATHS.TRAINING_QUESTION, {
@@ -35,7 +40,7 @@ const ErrorMessage = styled(CenteredFrame)`
   width: 100%;
 `;
 
-export const ExamResultPage = ({ questionState }: Props) => (
+export const ExamResultPagePresenter = ({ questionState }: PresenterProps) => (
   <PlayingPageTemplate
     title={`百人一首 - 腕試し結果 -`}
     isDisplayNav={false}
@@ -56,8 +61,11 @@ export const ExamResultPage = ({ questionState }: Props) => (
   />
 );
 
-export const mapStateToProps = ({ questions }: GlobalState): ConnectedProps => ({
-  questionState: questions.questionState,
-});
+export const ExamResultPageContainer = ({ presenter }: ContainerProps) => {
+  const { questionState } = useSelector<GlobalState, questionsTypes.State>(state => state.questions);
+  return presenter({ questionState });
+};
 
-export default connect(mapStateToProps)(ExamResultPage);
+export const ExamResultPage = () => <ExamResultPageContainer presenter={ExamResultPagePresenter} />;
+
+export default ExamResultPage;
