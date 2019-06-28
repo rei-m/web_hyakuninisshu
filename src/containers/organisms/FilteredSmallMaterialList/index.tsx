@@ -1,12 +1,12 @@
 import * as React from 'react';
-import { connect } from 'react-redux';
+import { useSelector } from 'react-redux';
 import { Link } from 'gatsby';
 import styled from '@src/styles/styled-components';
 import Txt from '@src/components/atoms/Txt';
 import CenteredFrame from '@src/components/atoms/CenteredFrame';
 import SmallMaterial from '@src/components/organisms/SmallMaterial';
 import { GlobalState } from '@src/state';
-import { uiSelectors } from '@src/state/ui';
+import { uiSelectors, uiTypes } from '@src/state/ui';
 import { Karuta } from '@src/types';
 import { ROUTE_PATHS } from '@src/constants';
 
@@ -14,6 +14,10 @@ export interface Props {
   karutas: Karuta[];
   className?: string;
 }
+
+export type ContainerProps = Props & {
+  presenter: React.FC<Props>;
+};
 
 const Container = styled.ul`
   ${({ theme }) => theme.centering}
@@ -54,7 +58,7 @@ const ErrorMessage = styled(CenteredFrame)`
   width: 100%;
 `;
 
-export const FilteredSmallMaterialList = ({ karutas, className }: Props) => (
+export const FilteredSmallMaterialListPresenter = ({ karutas, className }: Props) => (
   <Container className={className}>
     {karutas.length > 0 ? (
       karutas.map(karuta => (
@@ -74,8 +78,14 @@ export const FilteredSmallMaterialList = ({ karutas, className }: Props) => (
   </Container>
 );
 
-export const mapStateToProps = ({ ui }: GlobalState, { karutas }: Props): Props => ({
-  karutas: uiSelectors.filterKarutas(karutas, ui.karutasFilter),
-});
+export const FilteredSmallMaterialListContainer = ({ presenter, karutas, className }: ContainerProps) => {
+  const { karutasFilter } = useSelector<GlobalState, uiTypes.State>(state => state.ui);
+  const filteredKarutas = uiSelectors.filterKarutas(karutas, karutasFilter);
+  return presenter({ karutas: filteredKarutas, className });
+};
 
-export default connect(mapStateToProps)(FilteredSmallMaterialList);
+export const FilteredSmallMaterialList = (props: Props) => (
+  <FilteredSmallMaterialListContainer {...props} presenter={FilteredSmallMaterialListPresenter} />
+);
+
+export default FilteredSmallMaterialList;

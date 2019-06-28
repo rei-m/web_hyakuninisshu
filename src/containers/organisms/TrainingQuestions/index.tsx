@@ -1,6 +1,5 @@
 import * as React from 'react';
-import { connect } from 'react-redux';
-import { ThunkDispatch } from 'redux-thunk';
+import { useDispatch, useSelector } from 'react-redux';
 import styled from '@src/styles/styled-components';
 import KarutaPlaying, { Props as KarutaPlayingProps } from '@src/components/organisms/KarutaPlaying';
 import KarutaPlayingCorrect, {
@@ -46,17 +45,14 @@ export interface ConnectedProps {
   dulation: number;
 }
 
-export type DispatchProps = { onStart: () => void; onFinish: () => void } & Pick<
-  KarutaPlayingProps,
-  'onClickToriFuda' | 'onClickResult'
-> &
-  Pick<KarutaPlayingCorrectProps, 'onClickGoToNext'>;
-
-export type Props = OwnProps & ConnectedProps & DispatchProps;
-
 export type PresenterProps = Pick<OwnProps, 'onClickGoToResult'> &
   ConnectedProps &
-  Omit<DispatchProps, 'onStart' | 'onFinish'>;
+  Pick<KarutaPlayingProps, 'onClickToriFuda' | 'onClickResult'> &
+  Pick<KarutaPlayingCorrectProps, 'onClickGoToNext'>;
+
+export type ContainerProps = OwnProps & {
+  presenter: React.FC<PresenterProps>;
+};
 
 const ErrorMessage = styled(CenteredFrame)`
   padding: ${({ theme }) => theme.spacing2x};
@@ -112,59 +108,69 @@ export const TrainingQuestionsPresenter = ({
   }
 };
 
-export const TrainingQuestions = (props: Props) => {
-  useLifeCycle(props.onStart, props.onFinish);
-  return <TrainingQuestionsPresenter {...props} />;
-};
+export const TrainingQuestionsContainer = ({
+  karutas,
+  rangeFrom,
+  rangeTo,
+  kimariji,
+  color,
+  kamiNoKuStyle,
+  shimoNoKuStyle,
+  questionAnim,
+  onClickGoToResult,
+  presenter,
+}: ContainerProps) => {
+  const dispatch = useDispatch();
+  const { questions, currentIndex, answers, questionState, dulation } = useSelector<GlobalState, questionsTypes.State>(
+    state => state.questions
+  );
 
-export const mapStateToProps = ({ questions }: GlobalState, props: OwnProps): ConnectedProps => {
-  const { lastStartedTime, currentIndex, answers, questionState, dulation } = questions;
+  useLifeCycle(
+    () => {
+      dispatch(
+        questionsOperations.startTraining(
+          karutas,
+          rangeFrom,
+          rangeTo,
+          kimariji,
+          color,
+          kamiNoKuStyle,
+          shimoNoKuStyle,
+          questionAnim
+        )
+      );
+    },
+    () => {
+      dispatch(questionsOperations.finishQuestion());
+    }
+  );
 
-  return {
-    ...props,
-    lastStartedTime,
-    answer: answers ? answers[currentIndex] : undefined,
-    currentPosition: currentIndex + 1,
-    question: questions.questions ? questions.questions[currentIndex] : undefined,
-    totalCount: questions.questions ? questions.questions.length : 0,
-    questionState,
-    dulation,
-  };
-};
-
-export const mapDispatchToProps = (
-  dispatch: ThunkDispatch<GlobalState, {}, questionsTypes.Actions>,
-  { karutas, rangeFrom, rangeTo, kimariji, color, kamiNoKuStyle, shimoNoKuStyle, questionAnim }: OwnProps
-): DispatchProps => ({
-  onStart: () => {
-    dispatch(
-      questionsOperations.startTraining(
-        karutas,
-        rangeFrom,
-        rangeTo,
-        kimariji,
-        color,
-        kamiNoKuStyle,
-        shimoNoKuStyle,
-        questionAnim
-      )
-    );
-  },
-  onFinish: () => {
-    dispatch(questionsOperations.finishQuestion());
-  },
-  onClickGoToNext: () => {
+  const handleClickGoToNext = () => {
     dispatch(questionsOperations.openNextQuestion());
-  },
-  onClickResult: () => {
+  };
+  const handleClickResult = () => {
     dispatch(questionsOperations.confirmCorrect());
-  },
-  onClickToriFuda: ({ questionId, karutaNo }: ToriFuda) => {
+  };
+  const handleClickToriFuda = ({ questionId, karutaNo }: ToriFuda) => {
     dispatch(questionsOperations.answerQuestion(questionId, karutaNo));
-  },
-});
+  };
 
-export default connect(
-  mapStateToProps,
-  mapDispatchToProps
-)(TrainingQuestions);
+  return presenter({
+    question: questions ? questions[currentIndex] : undefined,
+    answer: answers ? answers[currentIndex] : undefined,
+    totalCount: questions ? questions.length : 0,
+    questionState,
+    currentPosition: currentIndex + 1,
+    dulation,
+    onClickResult: handleClickResult,
+    onClickToriFuda: handleClickToriFuda,
+    onClickGoToNext: handleClickGoToNext,
+    onClickGoToResult,
+  });
+};
+
+export const TrainingQuestions = (props: OwnProps) => (
+  <TrainingQuestionsContainer {...props} presenter={TrainingQuestionsPresenter} />
+);
+
+export default TrainingQuestions;

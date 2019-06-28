@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { connect } from 'react-redux';
+import { useSelector } from 'react-redux';
 import styled from '@src/styles/styled-components';
 import Block from '@src/components/atoms/Block';
 import ClosableDialog from '@src/components/molecules/ClosableDialog';
@@ -7,6 +7,7 @@ import QuestionJudgement from '@src/components/molecules/QuestionJudgement';
 import KarutaPlayingResult from '@src/components/organisms/KarutaPlayingResult';
 import Material from '@src/components/organisms/Material';
 import { GlobalState } from '@src/state';
+import { questionsTypes } from '@src/state/questions';
 import { Answer, Karuta, Question } from '@src/types';
 
 export interface OwnProps {
@@ -19,16 +20,15 @@ export interface ConnectedProps {
   answers: Answer[];
 }
 
-export type Props = OwnProps & ConnectedProps;
+export type PresenterProps = OwnProps &
+  ConnectedProps & {
+    displayedKaruta?: Karuta;
+    onClickResult: (karuta: Karuta) => void;
+    onCloseDialog: () => void;
+  };
 
-export type PresenterProps = Props & {
-  displayedKaruta?: Karuta;
-  onClickResult: (karuta: Karuta) => void;
-  onCloseDialog: () => void;
-};
-
-export type ContainerProps = Props & {
-  presenter: (props: PresenterProps) => React.ReactElement;
+export type ContainerProps = OwnProps & {
+  presenter: React.FC<PresenterProps>;
 };
 
 const useMaterialDialog = (): [Karuta | undefined, (karuta: Karuta) => void, () => void] => {
@@ -89,11 +89,12 @@ export const ExamResultPresenter = ({
   </KarutaPlayingResult>
 );
 
-export const ExamResultContainer = ({ presenter, questions, answers, onClickRestart, onClickBack }: ContainerProps) => {
+export const ExamResultContainer = ({ presenter, onClickRestart, onClickBack }: ContainerProps) => {
+  const { questions, answers } = useSelector<GlobalState, questionsTypes.State>(state => state.questions);
   const [displayedKaruta, openDialog, closeDialog] = useMaterialDialog();
   return presenter({
-    questions,
-    answers,
+    questions: questions ? questions : [],
+    answers: answers ? answers : [],
     displayedKaruta,
     onClickRestart,
     onClickBack,
@@ -102,11 +103,6 @@ export const ExamResultContainer = ({ presenter, questions, answers, onClickRest
   });
 };
 
-export const ExamResult = (props: Props) => <ExamResultContainer presenter={ExamResultPresenter} {...props} />;
+export const ExamResult = (props: OwnProps) => <ExamResultContainer presenter={ExamResultPresenter} {...props} />;
 
-export const mapStateToProps = ({ questions }: GlobalState): ConnectedProps => ({
-  questions: questions.questions ? questions.questions : [],
-  answers: questions.answers ? questions.answers : [],
-});
-
-export default connect(mapStateToProps)(ExamResult);
+export default ExamResult;

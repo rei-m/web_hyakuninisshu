@@ -1,14 +1,12 @@
 import * as React from 'react';
-import { connect } from 'react-redux';
-import { ThunkDispatch } from 'redux-thunk';
-import { PositionProperty } from 'csstype';
+import { useSelector, useDispatch } from 'react-redux';
 import CloseIcon from '@material-ui/icons/Close';
 import Checkbox from '@material-ui/core/Checkbox';
 import List from '@material-ui/core/List';
 import ListItem from '@material-ui/core/ListItem';
 import ListSubheader from '@material-ui/core/ListSubheader';
 import ListItemText from '@material-ui/core/ListItemText';
-import withStyles from '@material-ui/core/styles/withStyles';
+import makeStyles from '@material-ui/core/styles/makeStyles';
 import styled from '@src/styles/styled-components';
 import { appTheme } from '@src/styles/theme';
 import Txt from '@src/components/atoms/Txt';
@@ -34,7 +32,9 @@ export interface DispatchProps {
   onClickClose: () => void;
 }
 
-export type Props = OwnProps & ConnectedProps & DispatchProps;
+export type PresenterProps = OwnProps & ConnectedProps & DispatchProps;
+
+export type ContainerProps = OwnProps & { presenter: React.FC<PresenterProps> };
 
 const Container = styled.div`
   background-color: ${({ theme }) => theme.colorThin};
@@ -66,11 +66,11 @@ const Ul = styled.ul`
   padding: 0;
 `;
 
-const styles = () => ({
+const useStyles = makeStyles(() => ({
   root: {
     width: '100%',
     backgroundColor: appTheme.colorThin,
-    position: 'relative' as PositionProperty,
+    position: 'relative',
     overflow: 'auto',
     maxHeight: '100vh',
   },
@@ -85,23 +85,22 @@ const styles = () => ({
   listItemText: {
     padding: 0,
   },
-});
-
-type RenderProps = Props & {
-  classes: {
-    root: string;
-    listSubHeader: string;
-    listItem: string;
-    listItemText: string;
-  };
-};
+}));
 
 const onClickContainerHandler = (e: React.SyntheticEvent<HTMLDivElement>) => {
   e.stopPropagation();
 };
 
-export const MaterialListFilter = withStyles(styles)(
-  ({ kimarijis, colors, classes, className, onChangeKimariji, onChangeColor, onClickClose }: RenderProps) => (
+export const MaterialListFilterPresenter = ({
+  className,
+  colors,
+  kimarijis,
+  onChangeColor,
+  onChangeKimariji,
+  onClickClose,
+}: PresenterProps) => {
+  const classes = useStyles();
+  return (
     <Container onClick={onClickContainerHandler} className={className}>
       <List className={classes.root} subheader={<li />}>
         <Header key="header">
@@ -162,24 +161,32 @@ export const MaterialListFilter = withStyles(styles)(
         </li>
       </List>
     </Container>
-  )
+  );
+};
+
+export const MaterialListFilterContainer = ({ presenter, className }: ContainerProps) => {
+  const dispatch = useDispatch();
+  const { karutasFilter } = useSelector<GlobalState, uiTypes.State>(state => state.ui);
+  const handleChangeColor = (color: Color, checked: boolean) => {
+    dispatch(uiOperations.toggleKarutasColor(color, checked));
+  };
+  const handleChangeKimariji = (kimariji: KimarijiType, checked: boolean) => {
+    dispatch(uiOperations.toggleKarutasKimariji(kimariji, checked));
+  };
+  const handleClickClose = () => {
+    dispatch(uiOperations.closeKarutasFilter());
+  };
+  return presenter({
+    className,
+    ...karutasFilter,
+    onChangeColor: handleChangeColor,
+    onChangeKimariji: handleChangeKimariji,
+    onClickClose: handleClickClose,
+  });
+};
+
+export const MaterialListFilter = (props: OwnProps) => (
+  <MaterialListFilterContainer {...props} presenter={MaterialListFilterPresenter} />
 );
 
-export const mapStateToProps = ({ ui }: GlobalState): ConnectedProps => ({ ...ui.karutasFilter });
-
-export const mapDispatchToProps = (dispatch: ThunkDispatch<GlobalState, {}, uiTypes.Actions>): DispatchProps => ({
-  onChangeColor: (color: Color, checked: boolean) => {
-    dispatch(uiOperations.toggleKarutasColor(color, checked));
-  },
-  onChangeKimariji: (kimariji: KimarijiType, checked: boolean) => {
-    dispatch(uiOperations.toggleKarutasKimariji(kimariji, checked));
-  },
-  onClickClose: () => {
-    dispatch(uiOperations.closeKarutasFilter());
-  },
-});
-
-export default connect(
-  mapStateToProps,
-  mapDispatchToProps
-)(MaterialListFilter);
+export default MaterialListFilter;

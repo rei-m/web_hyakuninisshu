@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { storiesOf } from '@storybook/react';
-import { FilteredSmallMaterialList } from './index';
+import { FilteredSmallMaterialListPresenter } from './index';
 import { create } from '@helper/factory';
 import { Karuta } from '@src/types';
 
@@ -11,5 +11,5 @@ const karutas = [...Array(100).keys()].map(i =>
 );
 
 storiesOf('organisms/FilteredSmallMaterialList', module)
-  .add('default', () => <FilteredSmallMaterialList karutas={karutas} />)
-  .add('empty', () => <FilteredSmallMaterialList karutas={[]} />);
+  .add('default', () => <FilteredSmallMaterialListPresenter karutas={karutas} />)
+  .add('empty', () => <FilteredSmallMaterialListPresenter karutas={[]} />);

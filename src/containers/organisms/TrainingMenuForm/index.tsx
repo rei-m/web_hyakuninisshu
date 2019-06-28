@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { connect } from 'react-redux';
+import { useSelector } from 'react-redux';
 import { withFormik, Form, FormikHandlers, FormikState } from 'formik';
 import styled from '@src/styles/styled-components';
 import { appTheme } from '@src/styles/theme';
@@ -28,6 +28,7 @@ import {
   toQuestionAnimConditionString,
 } from '@src/utils';
 import { GlobalState } from '@src/state';
+import { questionsTypes } from '@src/state/questions';
 
 export interface OwnProps {
   onSubmit: (
@@ -51,7 +52,11 @@ export interface ConnectedProps {
   initialQuestionAnim: QuestionAnimCondition;
 }
 
-export type Props = OwnProps & ConnectedProps;
+export type PresenterProps = OwnProps & ConnectedProps;
+
+export type ContainerProps = OwnProps & {
+  Presenter: React.ComponentType<PresenterProps>;
+};
 
 export interface FormValues {
   rangeFrom: string;
@@ -170,7 +175,7 @@ export const FormView = ({ values, handleChange, handleSubmit, errors, touched }
   </StyledForm>
 );
 
-export const TrainingMenuForm = withFormik({
+export const TrainingMenuFormPresenter = withFormik({
   handleSubmit: (values, formikBag) => {
     formikBag.props.onSubmit(
       RangeFromConditions.valueOf(Number(values.rangeFrom)),
@@ -182,7 +187,7 @@ export const TrainingMenuForm = withFormik({
       QuestionAnimConditions.valueOf(Number(values.questionAnim))
     );
   },
-  mapPropsToValues: (props: Props) => ({
+  mapPropsToValues: (props: PresenterProps) => ({
     color: props.initialColor,
     kamiNoKuStyle: props.initialKamiNoKuStyle.toString(),
     kimariji: props.initialKimariji.toString(),
@@ -204,17 +209,24 @@ export const TrainingMenuForm = withFormik({
   },
 })(FormView);
 
-export const mapStateToProps = ({ questions }: GlobalState): ConnectedProps => {
-  const { trainingCondition } = questions;
-  return {
-    initialColor: trainingCondition.color,
-    initialKamiNoKuStyle: trainingCondition.kamiNoKuStyle,
-    initialKimariji: trainingCondition.kimariji,
-    initialRangeFrom: trainingCondition.rangeFrom,
-    initialRangeTo: trainingCondition.rangeTo,
-    initialShimoNoKuStyle: trainingCondition.shimoNoKuStyle,
-    initialQuestionAnim: trainingCondition.questionAnim,
-  };
+export const TrainingMenuFormContainer = ({ onSubmit, Presenter }: ContainerProps) => {
+  const { trainingCondition } = useSelector<GlobalState, questionsTypes.State>(state => state.questions);
+  return (
+    <Presenter
+      initialColor={trainingCondition.color}
+      initialKamiNoKuStyle={trainingCondition.kamiNoKuStyle}
+      initialKimariji={trainingCondition.kimariji}
+      initialRangeFrom={trainingCondition.rangeFrom}
+      initialRangeTo={trainingCondition.rangeTo}
+      initialShimoNoKuStyle={trainingCondition.shimoNoKuStyle}
+      initialQuestionAnim={trainingCondition.questionAnim}
+      onSubmit={onSubmit}
+    />
+  );
 };
 
-export default connect(mapStateToProps)(TrainingMenuForm);
+export const TrainingMenuForm = (props: OwnProps) => (
+  <TrainingMenuFormContainer {...props} Presenter={TrainingMenuFormPresenter} />
+);
+
+export default TrainingMenuForm;
