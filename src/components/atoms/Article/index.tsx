@@ -8,11 +8,11 @@ export interface Props {
   onClick?: () => void;
 }
 
-const Container = styled.article`
-  ${({ onClick }) => (onClick ? 'cursor: pointer;' : '')}
-`;
+const Container = styled.article(({ onClick }) => ({
+  cursor: onClick ? 'pointer' : '',
+}));
 
-const Article: React.FC<Props> = ({ children, heading, className, onClick }) => (
+const Article: React.FC<Props> = ({ children, heading, className = '', onClick }) => (
   <Container className={className} onClick={onClick}>
     {heading}
     {children}

@@ -1,5 +1,4 @@
 import { SiteMetaData } from '../src/types';
-import { muiTheme } from '../src/styles/theme';
 import { GatsbyPlugin } from './types';
 
 export const siteMetadata: SiteMetaData = {
@@ -37,7 +36,9 @@ export const plugins: GatsbyPlugin[] = [
   {
     resolve: `gatsby-plugin-material-ui`,
     options: {
-      theme: muiTheme,
+      stylesProvider: {
+        injectFirst: true,
+      },
     },
   },
   {

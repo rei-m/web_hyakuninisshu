@@ -14,7 +14,7 @@ export interface PageContext {
 export type Props = GeneratedPageComponentProps<PageContext>;
 
 const Container = styled(CenteredFrame)`
-  padding: ${({ theme }) => theme.spacing2x};
+  padding: ${({ theme }) => theme.spacingByPx(2)};
 `;
 
 const onClickBackHandler = () => {

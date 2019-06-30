@@ -55,7 +55,7 @@ export type ContainerProps = OwnProps & {
 };
 
 const ErrorMessage = styled(CenteredFrame)`
-  padding: ${({ theme }) => theme.spacing2x};
+  padding: ${({ theme }) => theme.spacingByPx(2)};
   background-color: #fff;
 `;
 

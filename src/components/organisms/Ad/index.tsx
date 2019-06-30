@@ -11,7 +11,7 @@ export interface Props {
 const Container = styled(Block)`
   text-align: center;
   width: 100%;
-  padding: ${({ theme }) => theme.spacing2x};
+  padding: ${({ theme }) => theme.spacingByPx(2)};
 `;
 
 const DummyTop = styled(Block)`

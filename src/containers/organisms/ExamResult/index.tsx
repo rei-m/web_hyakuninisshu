@@ -47,13 +47,13 @@ const StyledBlock = styled(Block)`
   box-sizing: border-box;
   box-shadow: ${({ theme }) => theme.elevationShadow1x};
   border-radius: 4px;
-  margin: ${({ theme }) => theme.spacing2x} 0;
+  margin: ${({ theme }) => theme.spacingByPx(2)} 0;
 `;
 
 const StyledQuestionJudgement = styled(QuestionJudgement)`
   width: 20%;
   height: 69px;
-  padding: ${({ theme }) => theme.spacing2x};
+  padding: ${({ theme }) => theme.spacingByPx(2)};
 `;
 
 export const ExamResultPresenter = ({

@@ -21,9 +21,9 @@ const Container = styled(Article)`
   flex-direction: column;
   background-color: #fff;
   box-sizing: border-box;
-  border: 8px solid ${({ theme }) => theme.colorPrimary};
+  border: 8px solid ${({ theme }) => theme.palette.primary.main};
   border-radius: 4px;
-  padding: ${({ theme }) => theme.spacing2x};
+  padding: ${({ theme }) => theme.spacingByPx(2)};
   max-width: 380px;
   box-shadow: ${({ theme }) => theme.elevationShadow1x};
 `;
@@ -36,13 +36,13 @@ const SubTitle = styled(Heading)`
 
 const StyledKarutaImage = styled(KarutaImage)`
   width: 200px;
-  margin: ${({ theme }) => theme.spacing1x};
+  margin: ${({ theme }) => theme.spacingByPx(1)};
 `;
 
 const SubContainer = styled(Block)`
   width: 100%;
-  padding-top: ${({ theme }) => theme.spacing1x};
-  padding-bottom: ${({ theme }) => theme.spacing1x};
+  padding-top: ${({ theme }) => theme.spacingByPx(1)};
+  padding-bottom: ${({ theme }) => theme.spacingByPx(1)};
 `;
 
 const Translation = styled(Paragraph)`

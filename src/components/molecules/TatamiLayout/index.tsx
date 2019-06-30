@@ -15,7 +15,12 @@ export interface PresenterProps {
 
 export type ContainerProps = Props & { presenter: React.FC<PresenterProps> };
 
-export const TatamiLayoutContainer: React.FC<ContainerProps> = ({ presenter, children, tag = 'div', className }) => {
+export const TatamiLayoutContainer: React.FC<ContainerProps> = ({
+  presenter,
+  children,
+  tag = 'div',
+  className = '',
+}) => {
   const url = useTatamiImage();
   const Tag = styled(tag)``;
   return presenter({ Tag, className, children, bgImageUrl: url });

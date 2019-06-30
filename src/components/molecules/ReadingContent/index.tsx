@@ -8,14 +8,14 @@ export interface Props {
 }
 
 const Container = styled(Section)`
-  padding: ${({ theme }) => theme.spacing2x} 0;
+  padding: ${({ theme }) => theme.spacingByPx(2)} 0;
   text-align: left;
 `;
 
 const UnderlineHeading = styled(Heading)`
   position: relative;
-  padding-bottom: ${({ theme }) => theme.spacing1x};
-  margin-bottom: ${({ theme }) => theme.spacing2x};
+  padding-bottom: ${({ theme }) => theme.spacingByPx(1)};
+  margin-bottom: ${({ theme }) => theme.spacingByPx(2)};
   &:after {
     content: '';
     width: 100%;

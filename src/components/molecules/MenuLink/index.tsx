@@ -39,8 +39,8 @@ const IconWrapper = styled(CircleFrame)`
   justify-content: center;
   align-items: center;
   position: absolute;
-  top: ${({ theme }) => theme.spacing1x};
-  left: ${({ theme }) => theme.spacing1x};
+  top: ${({ theme }) => theme.spacingByPx(1)};
+  left: ${({ theme }) => theme.spacingByPx(1)};
 
   & svg {
     font-size: inherit;
@@ -57,7 +57,7 @@ const IconWrapper = styled(CircleFrame)`
 `;
 
 const Title = styled(Txt)`
-  margin: ${({ theme }) => theme.spacing1x};
+  margin: ${({ theme }) => theme.spacingByPx(1)};
   position: relative;
   &:after {
     content: '';
@@ -70,7 +70,7 @@ const Title = styled(Txt)`
 `;
 
 const Explain = styled(Paragraph)`
-  margin-top: ${({ theme }) => theme.spacing3x};
+  margin-top: ${({ theme }) => theme.spacingByPx(3)};
 `;
 
 const linkStyles = {
@@ -82,7 +82,7 @@ const linkStyles = {
   padding: '16px',
 };
 
-const MenuLink = ({ to, icon, name, description, className }: Props) => (
+const MenuLink = ({ to, icon, name, description, className = '' }: Props) => (
   <Container className={className}>
     <LinkWithRipple to={to} style={linkStyles}>
       <IconWrapper>{icon}</IconWrapper>

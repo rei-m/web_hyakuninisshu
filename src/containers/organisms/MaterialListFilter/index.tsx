@@ -164,7 +164,7 @@ export const MaterialListFilterPresenter = ({
   );
 };
 
-export const MaterialListFilterContainer = ({ presenter, className }: ContainerProps) => {
+export const MaterialListFilterContainer = ({ presenter, className = '' }: ContainerProps) => {
   const dispatch = useDispatch();
   const { karutasFilter } = useSelector<GlobalState, uiTypes.State>(state => state.ui);
   const handleChangeColor = (color: Color, checked: boolean) => {

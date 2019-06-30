@@ -14,7 +14,7 @@ export interface Props {
   onAnimationEnd: () => void;
 }
 
-const YomiFudaPhrase = ({ text, duration, size, className, onAnimationEnd }: Props) => (
+const YomiFudaPhrase = ({ text, duration, size, className = '', onAnimationEnd }: Props) => (
   <VerticalTxt className={className} size={size}>
     {Array.from(text).map((s, i) => (
       <Word text={s} duration={duration} onAnimationEnd={onAnimationEnd} key={i} />

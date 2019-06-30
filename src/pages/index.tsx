@@ -49,7 +49,7 @@ const KarutaListItem = styled.li`
 
 const StyledMaterial = styled(SmallMaterial)`
   background-color: ${({ theme }) => theme.colorThin};
-  color: ${({ theme }) => theme.fontColorLink};
+  color: ${({ theme }) => theme.fontColor.link};
 `;
 
 export const IndexPagePresenter = ({ karutas }: PresenterProps) => (
