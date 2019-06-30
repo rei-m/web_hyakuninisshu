@@ -33,7 +33,7 @@ const Container = styled(CenteredFrame)<IconWrapperProps>`
   }
 `;
 
-const NavigationItem = ({ menuType, active, className, renderIcon, onClick }: Props) => (
+const NavigationItem = ({ menuType, active, className = '', renderIcon, onClick }: Props) => (
   <Container menuType={menuType} active={active} className={className} onClick={onClick}>
     {renderIcon(menuType)}
   </Container>

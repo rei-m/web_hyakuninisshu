@@ -17,7 +17,7 @@ import {
 import { gaEvent } from '@src/utils/ga';
 
 const FormContainer = styled(Block)`
-  padding: ${({ theme }) => theme.spacing2x} 0;
+  padding: ${({ theme }) => theme.spacingByPx(2)} 0;
   max-width: 380px;
   margin: auto;
 `;

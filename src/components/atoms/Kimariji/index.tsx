@@ -7,7 +7,7 @@ export type Props = {
   kimariji: KimarijType;
 } & Pick<TxtProps, 'className' | 'size'>;
 
-const Kimariji = ({ kimariji, size, className }: Props) => (
+const Kimariji = ({ kimariji, size, className = '' }: Props) => (
   <Txt tag={`span`} size={size} className={className}>
     {toKimarijiString(kimariji)}
   </Txt>

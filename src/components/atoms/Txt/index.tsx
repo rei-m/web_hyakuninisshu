@@ -1,21 +1,19 @@
 import * as React from 'react';
+import makeStyles from '@material-ui/core/styles/makeStyles';
 import styled from '@src/styles/styled-components';
-import { appTheme } from '@src/styles/theme';
+import { FontSize, ThemeInterface } from '@src/styles/theme';
 
-type TextSize = 'sss' | 'ss' | 's' | 'm' | 'l' | 'll';
 type Role = 'default' | 'error';
 
 export interface Props {
   tag?: React.ElementType;
-  size?: TextSize;
+  size?: FontSize;
   role?: Role;
   className?: string;
   style?: React.CSSProperties;
 }
 
 export interface PresenterProps {
-  size?: TextSize;
-  role?: Role;
   className?: string;
   style?: React.CSSProperties;
   Tag: React.ElementType;
@@ -23,35 +21,15 @@ export interface PresenterProps {
 
 export type ContainerProps = Props & { presenter: React.FC<PresenterProps> };
 
-export const textSizeMap = {
-  sss: appTheme.fontSizeSSS,
-  ss: appTheme.fontSizeSS,
-  s: appTheme.fontSizeS,
-  m: appTheme.fontSizeM,
-  l: appTheme.fontSizeL,
-  ll: appTheme.fontSizeLL,
-};
+const useStyles = makeStyles<ThemeInterface, { size: FontSize; role: Role }>(theme => ({
+  root: {
+    fontSize: ({ size }) => theme.fontSize[size],
+    color: ({ role }) => theme.fontColor[role],
+  },
+}));
 
-const colorMap = {
-  default: appTheme.fontColorDefault,
-  error: appTheme.fontColorError,
-};
-
-const propsToStyle = (props: Pick<Props, 'size' | 'role'>) => {
-  const base = {
-    fontSize: props.size ? textSizeMap[props.size] : textSizeMap.m,
-  };
-  if (props.role) {
-    return {
-      ...base,
-      color: colorMap[props.role],
-    };
-  }
-  return base;
-};
-
-export const TxtPresenter: React.FC<PresenterProps> = ({ Tag, size, role, className, style, children }) => (
-  <Tag size={size} role={role} className={className} style={style}>
+export const TxtPresenter: React.FC<PresenterProps> = ({ Tag, className, style, children }) => (
+  <Tag className={className} style={style}>
     {children}
   </Tag>
 );
@@ -59,14 +37,15 @@ export const TxtPresenter: React.FC<PresenterProps> = ({ Tag, size, role, classN
 export const TxtContainer: React.FC<ContainerProps> = ({
   presenter,
   tag = 'span',
-  size,
-  role,
-  className,
+  size = 'm',
+  role = 'default',
+  className = '',
   style,
   children,
 }) => {
-  const Tag = React.useMemo(() => styled(tag)(propsToStyle), []);
-  return presenter({ Tag, size, role, className, style, children });
+  const Tag = React.useMemo(() => styled(tag)({}), []);
+  const classes = useStyles({ size, role });
+  return presenter({ Tag, className: `${classes.root} ${className}`, style, children });
 };
 
 const Txt: React.FC<Props> = props => <TxtContainer presenter={TxtPresenter} {...props} />;

@@ -26,14 +26,16 @@ export interface Props {
 }
 
 const Container = withRipple(styled(Block)<{ thin: boolean; size: Size }>`
-  ${({ theme }) => theme.centering}
+  display: flex;
+  justify-content: center;
+  align-items: center;
   background-color: ${({ theme }) => theme.colorThin};
   border-style: solid;
-  border-color: ${({ theme }) => theme.colorPrimaryDark};
+  border-color: ${({ theme }) => theme.palette.primary.dark};
   border-width: ${({ size }) => `${3 * ratioMap[size]}px`};
   border-radius: 10px;
   height: ${({ size }) => `${220 * ratioMap[size]}px`};
-  padding: 0 ${({ theme }) => theme.spacing1x};
+  padding: 0 ${({ theme }) => theme.spacingByPx(1)};
   font-family: 'Sawarabi Mincho';
   cursor: pointer;
   opacity: ${({ thin }) => (thin ? '0.8' : '1')};
@@ -52,7 +54,7 @@ const FifthPhrase = styled(VerticalTxt)<{ size: Size }>`
   margin-right: ${({ size }) => `${SPACING_UNIT * ratioMap[size]}px`};
 `;
 
-const ToriFuda = ({ toriFuda, size = 'm', thin = false, className, onClick }: Props) => (
+const ToriFuda = ({ toriFuda, size = 'm', thin = false, className = '', onClick }: Props) => (
   <Container size={size} thin={thin} className={className} onClick={() => onClick(toriFuda)}>
     <Inner>
       <FourthPhrase size={size}>{toriFuda.fourthText}</FourthPhrase>

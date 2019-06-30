@@ -23,7 +23,9 @@ const Container = styled(Block)`
 `;
 
 const ImageColumn = styled(Block)`
-  ${({ theme }) => theme.centering}
+  display: flex;
+  justify-content: center;
+  align-items: center;
   flex-direction: column;
   margin-right: 8px;
 `;
@@ -36,17 +38,17 @@ const TextColumn = styled(Block)`
 
 const StyledKarutaImage = styled(KarutaImage)`
   width: 40px;
-  margin-top: ${({ theme }) => theme.spacing0_5x};
+  margin-top: ${({ theme }) => theme.spacingByPx(0.5)};
 `;
 
 const Creator = styled(Txt)`
   display: inline-block;
   width: 100%;
   text-align: right;
-  padding-top: ${({ theme }) => theme.spacing1x};
+  padding-top: ${({ theme }) => theme.spacingByPx(1)};
 `;
 
-export const SmallMaterial = ({ karuta, image = true, separate = <br />, className, onClick }: Props) => {
+export const SmallMaterial = ({ karuta, image = true, separate = <br />, className = '', onClick }: Props) => {
   const handleOnClick = React.useCallback(() => {
     if (onClick) {
       onClick(karuta.no);

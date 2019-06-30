@@ -13,9 +13,11 @@ export interface Props {
 }
 
 const Container = styled(TatamiLayout)`
-  ${({ theme }) => theme.centering};
+  display: flex;
+  justify-content: center;
+  align-items: center;
   flex-direction: column;
-  padding: ${({ theme }) => theme.spacing2x};
+  padding: ${({ theme }) => theme.spacingByPx(2)};
   box-sizing: border-box;
   width: 100%;
   min-height: calc(100vh - ${({ theme }) => theme.headerHeight});

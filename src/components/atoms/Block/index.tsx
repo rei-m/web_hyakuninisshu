@@ -7,11 +7,11 @@ export interface Props {
   onClick?: () => void;
 }
 
-const Container = styled.div`
-  ${({ onClick }) => (onClick ? 'cursor: pointer;' : '')}
-`;
+const Container = styled.div(({ onClick }) => ({
+  cursor: onClick ? 'pointer' : '',
+}));
 
-const Block: React.FC<Props> = ({ children, className, onClick }) => (
+const Block: React.FC<Props> = ({ children, className = '', onClick }) => (
   <Container className={className} onClick={onClick}>
     {children}
   </Container>

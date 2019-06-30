@@ -1,7 +1,6 @@
 import * as React from 'react';
+import { useDispatch, useSelector } from 'react-redux';
 import { graphql, navigate } from 'gatsby';
-import { connect } from 'react-redux';
-import { ThunkDispatch } from 'redux-thunk';
 import styled from '@src/styles/styled-components';
 import SingleContentPageTemplate from '@src/components/templates/SingleContentPageTemplate';
 import FilteredSmallMaterialList from '@src/containers/organisms/FilteredSmallMaterialList';
@@ -31,19 +30,14 @@ export interface ConnectedProps {
   filterOpen: boolean;
 }
 
-export interface DispatchProps {
-  onClickSearch: () => void;
-  onClickOverlay: () => void;
-}
-
-export type Props = OwnProps & ConnectedProps & DispatchProps;
-
 export interface PresenterProps {
   karutas: Karuta[];
   filterOpen: boolean;
   onClickSearch: () => void;
   onClickOverlay: () => void;
 }
+
+export type ContainerProps = OwnProps & { presenter: React.FC<PresenterProps> };
 
 const StyledMaterialListFilter = styled(MaterialListFilter)`
   right: 0;
@@ -76,35 +70,30 @@ export const KarutasPagePresenter = ({ karutas, filterOpen, onClickSearch, onCli
   />
 );
 
-export const KarutasPage: React.FC<Props> = ({ data, filterOpen, onClickSearch, onClickOverlay }) => {
+export const KarutasPageContainer = ({ data, presenter }: ContainerProps) => {
+  const dispatch = useDispatch();
+  const { karutasFilter } = useSelector<GlobalState, uiTypes.State>(state => state.ui);
   const karutas = data.allKaruta.edges.map(karutaData => JSON.parse(karutaData.node.internal.content) as Karuta);
-  return (
-    <KarutasPagePresenter
-      karutas={karutas}
-      filterOpen={filterOpen}
-      onClickSearch={onClickSearch}
-      onClickOverlay={onClickOverlay}
-    />
-  );
+  const handleClickSearch = () => {
+    dispatch(uiOperations.openKarutasFilter());
+  };
+  const handleClickOverlay = () => {
+    dispatch(uiOperations.closeKarutasFilter());
+  };
+
+  return presenter({
+    karutas,
+    filterOpen: karutasFilter.open,
+    onClickSearch: handleClickSearch,
+    onClickOverlay: handleClickOverlay,
+  });
 };
 
-export const mapStateToProps = ({ ui }: GlobalState): ConnectedProps => ({
-  filterOpen: ui.karutasFilter.open,
-});
+export const KarutasPage = (props: OwnProps) => (
+  <KarutasPageContainer data={props.data} presenter={KarutasPagePresenter} />
+);
 
-export const mapDispatchToProps = (dispatch: ThunkDispatch<GlobalState, {}, uiTypes.Actions>): DispatchProps => ({
-  onClickSearch: () => {
-    dispatch(uiOperations.openKarutasFilter());
-  },
-  onClickOverlay: () => {
-    dispatch(uiOperations.closeKarutasFilter());
-  },
-});
-
-export default connect(
-  mapStateToProps,
-  mapDispatchToProps
-)(KarutasPage);
+export default KarutasPage;
 
 export const query = graphql`
   query {

@@ -1,11 +1,11 @@
 import * as React from 'react';
 import { storiesOf } from '@storybook/react';
 import { action } from '@storybook/addon-actions';
-import { MaterialListFilter } from './index';
+import { MaterialListFilterPresenter } from './index';
 import { initialState } from '@src/state/ui/reducers';
 
 storiesOf('organisms/MaterialListFilter', module).add('default', () => (
-  <MaterialListFilter
+  <MaterialListFilterPresenter
     colors={initialState.karutasFilter.colors}
     kimarijis={initialState.karutasFilter.kimarijis}
     onChangeColor={action(`onChangeColor`)}

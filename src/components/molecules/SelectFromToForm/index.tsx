@@ -1,10 +1,10 @@
 import * as React from 'react';
-import withStyles, { StyleRules } from '@material-ui/core/styles/withStyles';
+import makeStyles from '@material-ui/core/styles/makeStyles';
 import FormControl from '@material-ui/core/FormControl';
 import Select from '@material-ui/core/Select';
 import MenuItem from '@material-ui/core/MenuItem';
 import styled from '@src/styles/styled-components';
-import { appTheme } from '@src/styles/theme';
+import { ThemeInterface } from '@src/styles/theme';
 import CenteredFrame from '@src/components/atoms/CenteredFrame';
 
 export interface Props {
@@ -22,22 +22,20 @@ export interface Props {
     touched?: boolean;
   };
   error?: string;
-  style?: React.CSSProperties;
+  className?: string;
   handleChange: (e: React.ChangeEvent<{ value: unknown }>) => void;
 }
 
-type StylesClassKey = 'formControl' | 'select';
-
-const styles: StyleRules<StylesClassKey> = {
+const useStyles = makeStyles<ThemeInterface>(theme => ({
   formControl: {
     display: 'flex',
   },
   select: {
-    fontSize: appTheme.fontSizeM,
+    fontSize: theme.fontSize.m,
     flexGrow: 1,
     textAlign: 'left',
   },
-};
+}));
 
 const Label = styled.label`
   text-align: left;
@@ -46,28 +44,19 @@ const Label = styled.label`
 `;
 
 const Separate = styled.span`
-  padding: ${({ theme }) => theme.spacing2x};
+  padding: ${({ theme }) => `0 ${theme.spacingByPx(2)}`};
 `;
 
 const Error = styled.div`
-  font-size: 1.2rem;
+  font-size: ${({ theme }) => theme.fontSize.ss};
   color: #f00;
-  margin: ${({ theme }) => `${theme.spacing1x} 0`};
+  margin: ${({ theme }) => `${theme.spacingByPx(1)} 0`};
 `;
 
-const SelectRangeFromTo = withStyles<StylesClassKey>(styles)(
-  ({
-    title,
-    from,
-    to,
-    error,
-    classes,
-    style,
-    handleChange,
-  }: Props & {
-    classes: { [key in StylesClassKey]: string };
-  }) => (
-    <FormControl className={classes.formControl} style={style}>
+const SelectRangeFromTo = ({ title, from, to, error, className = '', handleChange }: Props) => {
+  const classes = useStyles();
+  return (
+    <FormControl className={`${classes.formControl} ${className}`}>
       <Label>{title}</Label>
       <CenteredFrame tag={`div`}>
         <Select
@@ -104,7 +93,7 @@ const SelectRangeFromTo = withStyles<StylesClassKey>(styles)(
       </CenteredFrame>
       {error && <Error>{error}</Error>}
     </FormControl>
-  )
-);
+  );
+};
 
 export default SelectRangeFromTo;

@@ -9,5 +9,5 @@ const Enhanced = styled(Button)`
 
 storiesOf('atoms/Button', module)
   .add('normal', () => <Button>ぼたん</Button>)
-  .add('primary', () => <Button type={`primary`}>ぼたん</Button>)
+  .add('primary', () => <Button type={`accent`}>ぼたん</Button>)
   .add('custom class', () => <Enhanced>ぼたん</Enhanced>);

@@ -7,7 +7,7 @@ export type Props = {
   color: ColorType;
 } & Pick<TxtProps, 'className' | 'size'>;
 
-const KarutaColor = ({ color, size, className }: Props) => (
+const KarutaColor = ({ color, size, className = '' }: Props) => (
   <Txt tag={`span`} size={size} className={className}>
     {toColorString(color)}
   </Txt>

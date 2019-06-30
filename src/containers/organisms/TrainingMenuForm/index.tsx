@@ -1,8 +1,7 @@
 import * as React from 'react';
-import { connect } from 'react-redux';
+import { useSelector } from 'react-redux';
 import { withFormik, Form, FormikHandlers, FormikState } from 'formik';
 import styled from '@src/styles/styled-components';
-import { appTheme } from '@src/styles/theme';
 import SelectFromToForm from '@src/components/molecules/SelectFromToForm';
 import SelectForm from '@src/components/molecules/SelectForm';
 import { EditButton } from '@src/components/molecules/IconLabelButton';
@@ -28,6 +27,7 @@ import {
   toQuestionAnimConditionString,
 } from '@src/utils';
 import { GlobalState } from '@src/state';
+import { questionsTypes } from '@src/state/questions';
 
 export interface OwnProps {
   onSubmit: (
@@ -51,7 +51,11 @@ export interface ConnectedProps {
   initialQuestionAnim: QuestionAnimCondition;
 }
 
-export type Props = OwnProps & ConnectedProps;
+export type PresenterProps = OwnProps & ConnectedProps;
+
+export type ContainerProps = OwnProps & {
+  Presenter: React.ComponentType<PresenterProps>;
+};
 
 export interface FormValues {
   rangeFrom: string;
@@ -70,8 +74,16 @@ const StyledForm = styled(Form)`
 `;
 
 const StartTrainingButton = styled(EditButton)`
-  margin-top: ${({ theme }) => theme.spacing2x};
+  margin-top: ${({ theme }) => theme.spacingByPx(2)};
   box-shadow: ${({ theme }) => theme.elevationShadow1x};
+`;
+
+const StyledSelectFromToForm = styled(SelectFromToForm)`
+  margin-bottom: ${({ theme }) => theme.spacingByPx(2)};
+`;
+
+const StyledSelectForm = styled(SelectForm)`
+  margin-bottom: ${({ theme }) => theme.spacingByPx(2)};
 `;
 
 const rangeFromConditionKeyValueList = RangeFromConditions.values.map(value => ({
@@ -106,7 +118,7 @@ const questionAnimConditionKeyValueList = QuestionAnimConditions.values.map(valu
 
 export const FormView = ({ values, handleChange, handleSubmit, errors, touched }: FormViewProps) => (
   <StyledForm>
-    <SelectFromToForm
+    <StyledSelectFromToForm
       title={`出題範囲`}
       from={{
         name: `rangeFrom`,
@@ -122,55 +134,49 @@ export const FormView = ({ values, handleChange, handleSubmit, errors, touched }
       }}
       error={errors.rangeFrom}
       handleChange={handleChange}
-      style={{ marginBottom: appTheme.spacing2x }}
     />
-    <SelectForm
+    <StyledSelectForm
       title={`決まり字`}
       name={`kimariji`}
       list={kimarijiConditionKeyValueList}
       value={values.kimariji}
       handleChange={handleChange}
-      style={{ marginBottom: appTheme.spacing2x }}
     />
-    <SelectForm
+    <StyledSelectForm
       title={`五色`}
       name={`color`}
       list={colorConditionKeyValueList}
       value={values.color}
       handleChange={handleChange}
-      style={{ marginBottom: appTheme.spacing2x }}
     />
-    <SelectForm
+    <StyledSelectForm
       title={`上の句`}
       name={`kamiNoKuStyle`}
       list={karutaStyleConditionKeyValueList}
       value={values.kamiNoKuStyle}
       handleChange={handleChange}
-      style={{ marginBottom: appTheme.spacing2x }}
     />
-    <SelectForm
+    <StyledSelectForm
       title={`下の句`}
       name={`shimoNoKuStyle`}
       list={karutaStyleConditionKeyValueList}
       value={values.shimoNoKuStyle}
       handleChange={handleChange}
-      style={{ marginBottom: appTheme.spacing2x }}
     />
-    <SelectForm
+    <StyledSelectForm
       title={`読み札のアニメーション表示`}
       name={`questionAnim`}
       list={questionAnimConditionKeyValueList}
       value={values.questionAnim}
       handleChange={handleChange}
-      style={{ marginBottom: appTheme.spacing2x }}
     />
-    <StartTrainingButton type={`primary`} onClick={handleSubmit}>
+    <StartTrainingButton type={`accent`} onClick={handleSubmit}>
       練習をはじめる
     </StartTrainingButton>
   </StyledForm>
 );
 
-export const TrainingMenuForm = withFormik({
+export const TrainingMenuFormPresenter = withFormik({
   handleSubmit: (values, formikBag) => {
     formikBag.props.onSubmit(
       RangeFromConditions.valueOf(Number(values.rangeFrom)),
@@ -182,7 +188,7 @@ export const TrainingMenuForm = withFormik({
       QuestionAnimConditions.valueOf(Number(values.questionAnim))
     );
   },
-  mapPropsToValues: (props: Props) => ({
+  mapPropsToValues: (props: PresenterProps) => ({
     color: props.initialColor,
     kamiNoKuStyle: props.initialKamiNoKuStyle.toString(),
     kimariji: props.initialKimariji.toString(),
@@ -204,17 +210,24 @@ export const TrainingMenuForm = withFormik({
   },
 })(FormView);
 
-export const mapStateToProps = ({ questions }: GlobalState): ConnectedProps => {
-  const { trainingCondition } = questions;
-  return {
-    initialColor: trainingCondition.color,
-    initialKamiNoKuStyle: trainingCondition.kamiNoKuStyle,
-    initialKimariji: trainingCondition.kimariji,
-    initialRangeFrom: trainingCondition.rangeFrom,
-    initialRangeTo: trainingCondition.rangeTo,
-    initialShimoNoKuStyle: trainingCondition.shimoNoKuStyle,
-    initialQuestionAnim: trainingCondition.questionAnim,
-  };
+export const TrainingMenuFormContainer = ({ onSubmit, Presenter }: ContainerProps) => {
+  const { trainingCondition } = useSelector<GlobalState, questionsTypes.State>(state => state.questions);
+  return (
+    <Presenter
+      initialColor={trainingCondition.color}
+      initialKamiNoKuStyle={trainingCondition.kamiNoKuStyle}
+      initialKimariji={trainingCondition.kimariji}
+      initialRangeFrom={trainingCondition.rangeFrom}
+      initialRangeTo={trainingCondition.rangeTo}
+      initialShimoNoKuStyle={trainingCondition.shimoNoKuStyle}
+      initialQuestionAnim={trainingCondition.questionAnim}
+      onSubmit={onSubmit}
+    />
+  );
 };
 
-export default connect(mapStateToProps)(TrainingMenuForm);
+export const TrainingMenuForm = (props: OwnProps) => (
+  <TrainingMenuFormContainer {...props} Presenter={TrainingMenuFormPresenter} />
+);
+
+export default TrainingMenuForm;

@@ -20,7 +20,7 @@ const fadeIn = keyframes`
   }
 `;
 
-const FadeInFrame: React.FC<Props> = ({ children, tag = 'span', duration, className, onAnimationEnd }) => {
+const FadeInFrame: React.FC<Props> = ({ children, tag = 'span', duration, className = '', onAnimationEnd }) => {
   const Tag = styled(tag)`
     animation: ${fadeIn} ${duration}s linear 1;
   `;

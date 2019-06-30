@@ -20,7 +20,7 @@ export interface Props {
 }
 
 const Container = styled(Block)`
-  padding: ${({ theme }) => theme.spacing2x};
+  padding: ${({ theme }) => theme.spacingByPx(2)};
   box-sizing: border-box;
   max-width: 960px;
   margin: auto;

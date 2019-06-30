@@ -6,7 +6,7 @@ export type Props = {
   numerator: number;
 } & Pick<TxtProps, 'className' | 'size'>;
 
-const Ratio = ({ numerator, denominator, size, className }: Props) => (
+const Ratio = ({ numerator, denominator, size, className = '' }: Props) => (
   <Txt tag={`span`} size={size} className={className}>
     {`${numerator} / ${denominator}`}
   </Txt>

@@ -15,7 +15,6 @@ const props: PresenterProps = {
   totalCount: 10,
   currentPosition: 3,
   dulation: 0.5,
-  submitTime: 10000,
   questionState: QuestionState.InAnswer,
   onClickResult: action('onClickResult'),
   onClickToriFuda: action('onClickToriFuda'),

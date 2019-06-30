@@ -6,7 +6,7 @@ export type Props = {
   karutaNo: number;
 } & Pick<TxtProps, 'className' | 'size'>;
 
-const KarutaNo = ({ karutaNo, size, className }: Props) => (
+const KarutaNo = ({ karutaNo, size, className = '' }: Props) => (
   <Txt tag={`span`} size={size} className={className}>
     {toKarutaNoString(karutaNo)}
   </Txt>

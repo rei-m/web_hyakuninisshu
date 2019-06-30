@@ -4,10 +4,10 @@ import CenteredFrame, { Props as CenteredFrameProps } from '../CenteredFrame';
 
 export type Props = CenteredFrameProps;
 
-const Container = styled(CenteredFrame)`
-  border: 2px solid #000;
-  border-radius: 50%;
-`;
+const Container = styled(CenteredFrame)({
+  border: '2px solid #000',
+  borderRadius: '50%',
+});
 
 const CircleFrame: React.FC<Props> = props => <Container {...props} />;
 

@@ -7,6 +7,7 @@ import Block from '@src/components/atoms/Block';
 import Paragraph from '@src/components/atoms/Paragraph';
 import PlayStoreBanner from '@src/components/atoms/PlayStoreBanner';
 import { ROUTE_PATHS } from '@src/constants';
+import { MenuType } from '@src/enums';
 
 const BannerContainer = styled(Block)`
   text-align: center;
@@ -21,6 +22,7 @@ const AboutPage = () => (
     title={`百人一首 - サイトについて -`}
     description={`このサイトは百人一首を覚えるためのサイトです。百人一首の暗記を効率よく練習できます。百人一首の札の画像や現代語訳も載せています。百人一首の歌の意味に触れながら楽しく覚えましょう。`}
     keywords={[`百人一首`, `小倉百人一首`, `歌`, `一覧`, `意味`, `歌番号`, `暗記`, `練習`]}
+    menuType={MenuType.Other}
     onClickBack={onClickBackHandler}
     top={
       <ReadingContent title={`サイトについて`}>

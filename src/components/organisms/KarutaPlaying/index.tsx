@@ -19,7 +19,9 @@ export interface Props {
 }
 
 const Container = styled(Block)`
-  ${({ theme }) => theme.centering}
+  display: flex;
+  justify-content: center;
+  align-items: center;
   flex-direction: column;
 `;
 
@@ -27,7 +29,7 @@ const YomiFudaWrapper = styled(Block)`
   display: flex;
   justify-content: center;
   position: relative;
-  margin-bottom: ${({ theme }) => theme.spacing3x};
+  margin-bottom: ${({ theme }) => theme.spacingByPx(3)};
   width: 312px;
 `;
 
@@ -42,7 +44,7 @@ const StyledYomiFuda = styled(YomiFuda)`
 `;
 
 const Position = styled(Ratio)`
-  color: #fff;
+  color: #fff !important;
   border-bottom: 1px dotted #fff;
   position: absolute;
   right: 0;
@@ -50,12 +52,14 @@ const Position = styled(Ratio)`
 `;
 
 const StyledToriFuda = styled(ToriFuda)`
-  margin: ${({ theme }) => theme.spacing1x};
+  margin: ${({ theme }) => theme.spacingByPx(1)};
   box-shadow: ${({ theme }) => theme.elevationShadow1x};
 `;
 
 const CorrectImageContainer = styled(Block)`
-  ${({ theme }) => theme.centering}
+  display: flex;
+  justify-content: center;
+  align-items: center;
   position: absolute;
   left: 0;
   top: 0;

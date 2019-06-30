@@ -1,7 +1,8 @@
 import * as React from 'react';
-import { connect } from 'react-redux';
+import { useSelector } from 'react-redux';
 import KarutaPlayingResult from '@src/components/organisms/KarutaPlayingResult';
 import { GlobalState } from '@src/state';
+import { questionsTypes } from '@src/state/questions';
 import { Answer } from '@src/types';
 
 export interface OwnProps {
@@ -13,14 +14,21 @@ export interface ConnectedProps {
   answers: Answer[];
 }
 
-export type Props = OwnProps & ConnectedProps;
+export type PresenterProps = OwnProps & ConnectedProps;
 
-export const TrainingResult = ({ answers, onClickBack, onClickRestart }: Props) => (
+export type ContainerProps = OwnProps & { presenter: React.FC<PresenterProps> };
+
+export const TrainingResultPresenter = ({ answers, onClickBack, onClickRestart }: PresenterProps) => (
   <KarutaPlayingResult answers={answers} onClickBack={onClickBack} onClickRestart={onClickRestart} />
 );
 
-export const mapStateToProps = ({ questions }: GlobalState): ConnectedProps => ({
-  answers: questions.answers ? questions.answers : [],
-});
+export const TrainingResultContainer = ({ presenter, onClickBack, onClickRestart }: ContainerProps) => {
+  const { answers } = useSelector<GlobalState, questionsTypes.State>(state => state.questions);
+  return presenter({ answers: answers ? answers : [], onClickBack, onClickRestart });
+};
 
-export default connect(mapStateToProps)(TrainingResult);
+export const TrainingResult = (props: OwnProps) => (
+  <TrainingResultContainer {...props} presenter={TrainingResultPresenter} />
+);
+
+export default TrainingResult;

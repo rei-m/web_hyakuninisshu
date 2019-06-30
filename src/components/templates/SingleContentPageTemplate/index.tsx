@@ -19,14 +19,14 @@ export interface Props {
 }
 
 const Container = styled.section`
-  padding: ${({ theme }) => theme.spacing2x};
+  padding: ${({ theme }) => theme.spacingByPx(2)};
   box-sizing: border-box;
   width: 100%;
   background-color: ${({ theme }) => theme.colorThin};
 `;
 
 const SectionTitle = styled(Heading)`
-  margin: ${({ theme }) => theme.spacing1x};
+  margin: ${({ theme }) => theme.spacingByPx(1)};
 `;
 
 const SingleContentPageTemplate = ({

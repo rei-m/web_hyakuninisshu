@@ -14,7 +14,7 @@ export interface Props {
 
 const Container = styled.nav`
   display: flex;
-  background-color: ${({ theme }) => theme.colorPrimary};
+  background-color: ${({ theme }) => theme.palette.primary.main};
   box-shadow: ${({ theme }) => theme.elevationShadow1x};
   box-sizing: border-box;
 `;
@@ -44,7 +44,7 @@ const WrappedItem = ({ to, menuType, active }: { to: string; menuType: MenuType;
   </ItemWrapper>
 );
 
-const Navigation: React.FC<Props> = ({ currentMenuType, className }) => (
+const Navigation: React.FC<Props> = ({ currentMenuType, className = '' }) => (
   <Container className={className}>
     <WrappedItem
       to={ROUTE_PATHS.TRAINING}
