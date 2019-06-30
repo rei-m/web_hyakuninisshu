@@ -9,7 +9,7 @@ export interface Props {
   style?: React.CSSProperties;
 }
 
-const KarutaImage: React.FC<Props> = ({ karutaNo, className, style }) => (
+const KarutaImage: React.FC<Props> = ({ karutaNo, className = '', style }) => (
   <Img fluid={useKarutaImage(karutaNo)} className={className} style={style} alt={toKarutaNoString(karutaNo)} />
 );
 

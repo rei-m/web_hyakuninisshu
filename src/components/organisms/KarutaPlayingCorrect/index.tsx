@@ -32,14 +32,14 @@ const Header = styled(Block)`
 
 const HeaderInner = styled(Block)`
   margin: 0 auto;
-  padding: ${({ theme }) => `${theme.spacing1x} ${theme.spacing2x}`};
+  padding: ${({ theme }) => `${theme.spacingByPx(1)} ${theme.spacingByPx(2)}`};
   border: 1px solid #d3d3d3;
-  font-size: ${({ theme }) => theme.fontSizeS};
+  font-size: ${({ theme }) => theme.fontSize.s};
   background-color: #fff;
 `;
 
 const MaterialButton = styled(Button)`
-  font-size: ${({ theme }) => theme.fontSizeM} !important;
+  font-size: ${({ theme }) => theme.fontSize.m} !important;
   padding: 0 !important;
   height: 33px !important;
   width: 33px !important;
@@ -53,11 +53,11 @@ const MaterialButton = styled(Button)`
 
 const StyledFuda = styled(Fuda)`
   box-shadow: ${({ theme }) => theme.elevationShadow1x};
-  margin: ${({ theme }) => theme.spacing2x} auto 0 auto;
+  margin: ${({ theme }) => theme.spacingByPx(2)} auto 0 auto;
 `;
 
 const StyledArrowForwardButton = styled(ArrowForwardButton)`
-  margin-top: ${({ theme }) => theme.spacing4x} !important;
+  margin-top: ${({ theme }) => theme.spacingByPx(4)} !important;
   box-shadow: ${({ theme }) => theme.elevationShadow1x};
 `;
 

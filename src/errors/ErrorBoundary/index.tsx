@@ -1,6 +1,5 @@
 import * as React from 'react';
 import Img from 'gatsby-image';
-import { appTheme } from '@src/styles/theme';
 import MessagePageTemplate from '@src/components/templates/MessagePageTemplate';
 import Txt from '@src/components/atoms/Txt';
 import { useDogezaImage } from '@src/hooks/staticQueries/useDogezaImage';
@@ -38,7 +37,7 @@ export default class ErrorBoundary extends React.Component<{}, State> {
             fluid={useDogezaImage()}
             style={{
               width: 200,
-              marginTop: appTheme.spacing4x,
+              marginTop: '32px',
             }}
             alt={`エラーが起きました`}
           />

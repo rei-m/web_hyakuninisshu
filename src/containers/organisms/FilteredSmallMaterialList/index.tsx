@@ -1,12 +1,12 @@
 import * as React from 'react';
-import { connect } from 'react-redux';
+import { useSelector } from 'react-redux';
 import { Link } from 'gatsby';
 import styled from '@src/styles/styled-components';
 import Txt from '@src/components/atoms/Txt';
 import CenteredFrame from '@src/components/atoms/CenteredFrame';
 import SmallMaterial from '@src/components/organisms/SmallMaterial';
 import { GlobalState } from '@src/state';
-import { uiSelectors } from '@src/state/ui';
+import { uiSelectors, uiTypes } from '@src/state/ui';
 import { Karuta } from '@src/types';
 import { ROUTE_PATHS } from '@src/constants';
 
@@ -15,8 +15,14 @@ export interface Props {
   className?: string;
 }
 
+export type ContainerProps = Props & {
+  presenter: React.FC<Props>;
+};
+
 const Container = styled.ul`
-  ${({ theme }) => theme.centering}
+  display: flex;
+  justify-content: center;
+  align-items: center;
   flex-wrap: wrap;
   flex-direction: column;
   @media screen and (min-width: ${({ theme }) => theme.minWidthWide}) {
@@ -27,23 +33,23 @@ const Container = styled.ul`
 const MaterialContainer = styled.li`
   max-width: 380px;
   width: 100%;
-  margin: ${({ theme }) => theme.spacing1x} 0;
+  margin: ${({ theme }) => theme.spacingByPx(1)} 0;
   box-shadow: ${({ theme }) => theme.elevationShadow1x};
   @media screen and (min-width: ${({ theme }) => theme.minWidthWide}) {
-    margin: ${({ theme }) => theme.spacing1x};
+    margin: ${({ theme }) => theme.spacingByPx(1)};
   }
 `;
 
 const StyledLink = styled(Link)`
-  color: ${({ theme }) => theme.fontColorDefault};
+  color: ${({ theme }) => theme.fontColor.default};
   &:hover {
-    color: ${({ theme }) => theme.fontColorDefault};
+    color: ${({ theme }) => theme.fontColor.default};
     text-decoration: none;
   }
 `;
 
 const StyledMaterial = styled(SmallMaterial)`
-  padding: ${({ theme }) => theme.spacing1x};
+  padding: ${({ theme }) => theme.spacingByPx(1)};
   &:hover {
     background-color: #f5f5f5;
   }
@@ -54,7 +60,7 @@ const ErrorMessage = styled(CenteredFrame)`
   width: 100%;
 `;
 
-export const FilteredSmallMaterialList = ({ karutas, className }: Props) => (
+export const FilteredSmallMaterialListPresenter = ({ karutas, className }: Props) => (
   <Container className={className}>
     {karutas.length > 0 ? (
       karutas.map(karuta => (
@@ -74,8 +80,14 @@ export const FilteredSmallMaterialList = ({ karutas, className }: Props) => (
   </Container>
 );
 
-export const mapStateToProps = ({ ui }: GlobalState, { karutas }: Props): Props => ({
-  karutas: uiSelectors.filterKarutas(karutas, ui.karutasFilter),
-});
+export const FilteredSmallMaterialListContainer = ({ presenter, karutas, className = '' }: ContainerProps) => {
+  const { karutasFilter } = useSelector<GlobalState, uiTypes.State>(state => state.ui);
+  const filteredKarutas = uiSelectors.filterKarutas(karutas, karutasFilter);
+  return presenter({ karutas: filteredKarutas, className });
+};
 
-export default connect(mapStateToProps)(FilteredSmallMaterialList);
+export const FilteredSmallMaterialList = (props: Props) => (
+  <FilteredSmallMaterialListContainer {...props} presenter={FilteredSmallMaterialListPresenter} />
+);
+
+export default FilteredSmallMaterialList;

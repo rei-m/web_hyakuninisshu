@@ -14,14 +14,18 @@ export interface Props {
 }
 
 const Container = styled(Block)`
-  ${({ theme }) => theme.centering}
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 100px;
   height: 100px;
   position: relative;
 `;
 
 const ImageBox = styled(Block)`
-  ${({ theme }) => theme.centering}
+  display: flex;
+  justify-content: center;
+  align-items: center;
   position: absolute;
   top: 0;
   left: 0;

@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { storiesOf } from '@storybook/react';
 import { action } from '@storybook/addon-actions';
-import { Props, TrainingMenuForm } from './index';
+import { PresenterProps, TrainingMenuFormPresenter } from './index';
 import {
   ColorCondition,
   KarutaStyleCondition,
@@ -11,7 +11,7 @@ import {
   RangeToCondition,
 } from '@src/enums';
 
-const props: Props = {
+const props: PresenterProps = {
   initialRangeFrom: RangeFromCondition.One,
   initialRangeTo: RangeToCondition.OneHundred,
   initialKimariji: KimarijiCondition.None,
@@ -22,4 +22,4 @@ const props: Props = {
   onSubmit: action('onSubmit'),
 };
 
-storiesOf('organisms/TrainingMenuForm', module).add('default', () => <TrainingMenuForm {...props} />);
+storiesOf('organisms/TrainingMenuForm', module).add('default', () => <TrainingMenuFormPresenter {...props} />);

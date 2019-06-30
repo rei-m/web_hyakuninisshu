@@ -75,10 +75,12 @@ const creatorStyleMap = {
 };
 
 const Container = styled(Block)<{ size: Size }>`
-  ${({ theme }) => theme.centering}
+  display: flex;
+  justify-content: center;
+  align-items: center;
   background-color: ${({ theme }) => theme.colorThin};
   border-style: solid;
-  border-color: ${({ theme }) => theme.colorPrimaryDark};
+  border-color: ${({ theme }) => theme.palette.primary.dark};
   border-radius: 10px;
   ${({ size }) => containerStyleMap[size]}
   font-family: 'Sawarabi Mincho';
@@ -112,7 +114,7 @@ const Creator = styled(VerticalTxt)`
   align-self: flex-end;
 `;
 
-const Fuda = ({ karuta, size = 'l', className }: Props) => (
+const Fuda = ({ karuta, size = 'l', className = '' }: Props) => (
   <Container className={className} size={size}>
     <Inner>
       <FirstPhrase size={size}>{karuta.firstKanji}</FirstPhrase>

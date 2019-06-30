@@ -1,11 +1,11 @@
 import * as React from 'react';
-import withStyles, { StyleRules } from '@material-ui/core/styles/withStyles';
+import makeStyles from '@material-ui/core/styles/makeStyles';
 import FormControl from '@material-ui/core/FormControl';
 import InputLabel from '@material-ui/core/InputLabel';
 import Select from '@material-ui/core/Select';
 import MenuItem from '@material-ui/core/MenuItem';
 import styled from '@src/styles/styled-components';
-import { appTheme } from '@src/styles/theme';
+import { ThemeInterface } from '@src/styles/theme';
 
 export interface Props {
   title: string;
@@ -13,48 +13,34 @@ export interface Props {
   value: string;
   list: Array<{ value: string | number; text: string }>;
   error?: string;
-  style?: React.CSSProperties;
+  className?: string;
   handleChange: (e: React.ChangeEvent<{ value: unknown }>) => void;
 }
 
-type StylesClassKey = 'formControl' | 'label' | 'select';
-
-const styles: StyleRules<StylesClassKey> = {
+const useStyles = makeStyles<ThemeInterface>(theme => ({
   formControl: {
     display: 'flex',
   },
   label: {
-    fontSize: appTheme.fontSizeS,
+    fontSize: theme.fontSize.s,
     color: '#182026',
   },
   select: {
-    fontSize: appTheme.fontSizeM,
+    fontSize: theme.fontSize.m,
     textAlign: 'left',
   },
-};
-
-// const stylesProvider = () => styles;
+}));
 
 const Error = styled.div`
-  font-size: 1.2rem;
+  font-size: ${({ theme }) => theme.fontSize.ss};
   color: #f00;
-  margin: ${({ theme }) => `${theme.spacing1x} 0`};
+  margin: ${({ theme }) => `${theme.spacingByPx(1)} 0`};
 `;
 
-const SelectItem = withStyles<StylesClassKey>(styles)(
-  ({
-    title,
-    name,
-    value,
-    list,
-    error,
-    classes,
-    style,
-    handleChange,
-  }: Props & {
-    classes: { [key in StylesClassKey]: string };
-  }) => (
-    <FormControl className={classes.formControl} style={style}>
+const SelectItem = ({ title, name, value, list, error, className = '', handleChange }: Props) => {
+  const classes = useStyles();
+  return (
+    <FormControl className={`${classes.formControl} ${className}`}>
       <InputLabel htmlFor={`id-${name}`} className={classes.label}>
         {title}
       </InputLabel>
@@ -75,7 +61,7 @@ const SelectItem = withStyles<StylesClassKey>(styles)(
       </Select>
       {error && <Error>{error}</Error>}
     </FormControl>
-  )
-);
+  );
+};
 
 export default SelectItem;

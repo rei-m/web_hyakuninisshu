@@ -8,13 +8,13 @@ import { ROUTE_PATHS } from '@src/constants';
 import { MenuType } from '@src/enums';
 
 const Explain = styled(Paragraph)`
-  padding: ${({ theme }) => `${theme.spacing4x} ${theme.spacing2x}`};
+  padding: ${({ theme }) => `${theme.spacingByPx(4)} ${theme.spacingByPx(2)}`};
 `;
 
 const StartExamButton = styled(EditButton)`
   ${({ theme }) => `
-    margin-top: ${theme.spacing4x};
-    margin-bottom: ${theme.spacing2x};
+    margin-top: ${theme.spacingByPx(4)};
+    margin-bottom: ${theme.spacingByPx(2)};
     box-shadow: ${theme.elevationShadow1x};
   `}
 `;
@@ -46,7 +46,7 @@ const ExamPage = () => (
           <br />
           練習の成果を確認しましょう。
         </Explain>
-        <StartExamButton type={`primary`} onClick={onSubmitHandler}>
+        <StartExamButton type={`accent`} onClick={onSubmitHandler}>
           腕試しをはじめる
         </StartExamButton>
       </>

@@ -1,7 +1,6 @@
 import * as React from 'react';
 import Img from 'gatsby-image';
 import styled from '@src/styles/styled-components';
-import { appTheme } from '@src/styles/theme';
 import MessagePageTemplate from '@src/components/templates/MessagePageTemplate';
 import Block from '@src/components/atoms/Block';
 import Txt from '@src/components/atoms/Txt';
@@ -9,7 +8,7 @@ import { useDogezaImage } from '@src/hooks/staticQueries/useDogezaImage';
 
 const Container = styled(Block)`
   margin: 128px 0;
-  padding: ${({ theme }) => theme.spacing2x};
+  padding: ${({ theme }) => theme.spacingByPx(2)};
 `;
 
 const NotFound = () => (
@@ -23,7 +22,7 @@ const NotFound = () => (
       <Img
         fluid={useDogezaImage()}
         style={{
-          marginTop: appTheme.spacing4x,
+          marginTop: '32px',
         }}
         alt={`ページが見つかりませんでした`}
       />

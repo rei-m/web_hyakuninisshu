@@ -1,5 +1,5 @@
 import Typography from 'typography';
-import { appTheme } from './theme';
+import { theme } from './theme';
 
 const typography = new Typography({
   baseLineHeight: 1.28581,
@@ -14,8 +14,8 @@ const typography = new Typography({
       boxSizing: 'border-box',
     },
     body: {
-      backgroundColor: appTheme.colorThin,
-      fontSize: appTheme.fontSizeS,
+      backgroundColor: theme.colorThin,
+      fontSize: theme.fontSize.s,
       textAlign: 'center',
       textTransform: 'none',
       letterSpacing: 0,
@@ -30,7 +30,7 @@ const typography = new Typography({
       listStyle: 'none',
     },
     small: {
-      fontSize: appTheme.fontSizeSS,
+      fontSize: theme.fontSize.ss,
     },
     strong: {
       fontWeight: 600,
@@ -43,12 +43,12 @@ const typography = new Typography({
     },
     a: {
       textDecoration: 'none',
-      color: appTheme.fontColorLink,
+      color: theme.fontColor.link,
     },
     'a:hover': {
       cursor: 'pointer',
       textDecoration: 'underline',
-      color: appTheme.fontColorLink,
+      color: theme.fontColor.link,
     },
     ':focus': {
       outline: 'rgba(19, 124, 189, 0.6) auto 2px',

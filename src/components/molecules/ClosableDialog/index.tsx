@@ -13,7 +13,7 @@ export type Props = {
 
 const ClosableDialog: React.FC<Props> = ({ children, title, open, onClose, PaperProps }) => (
   <Dialog open={open} onClose={onClose} scroll="body" PaperProps={PaperProps}>
-    <DialogTitle style={{ padding: 12, height: 39 }}>
+    <DialogTitle style={{ padding: 12, height: 39, textAlign: 'center' }}>
       {title}
       <IconButton onClick={onClose} style={{ position: 'absolute', right: 0, top: 0, padding: 8 }}>
         <CloseIcon />

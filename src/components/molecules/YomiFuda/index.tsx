@@ -37,10 +37,12 @@ export interface PresenterProps {
 export type ContainerProps = Props & { presenter: React.FC<PresenterProps> };
 
 const Container = styled(Block)<{ size: Size }>`
-  ${({ theme }) => theme.centering}
+  display: flex;
+  justify-content: center;
+  align-items: center;
   background-color: ${({ theme }) => theme.colorThin};
   border-style: solid;
-  border-color: ${({ theme }) => theme.colorPrimaryDark};
+  border-color: ${({ theme }) => theme.palette.primary.dark};
   border-width: ${({ size }) => `${5 * ratioMap[size]}px`};
   border-radius: 10px;
   width: ${({ size }) => `${120 * ratioMap[size]}px`};
@@ -101,7 +103,14 @@ export const YomiFudaPresenter = ({
   </Container>
 );
 
-export const YomiFudaContainer = ({ yomiFuda, className, answered, duration, size, presenter }: ContainerProps) => {
+export const YomiFudaContainer = ({
+  yomiFuda,
+  className = '',
+  answered,
+  duration,
+  size,
+  presenter,
+}: ContainerProps) => {
   const { firstText, secondText, thirdText } = yomiFuda;
   const durationOrAnswered = answered ? 0 : duration;
 

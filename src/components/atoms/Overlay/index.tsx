@@ -7,14 +7,13 @@ export interface Props {
   onClick?: () => void;
 }
 
-const Container = styled.div`
-  width: 100%;
-  height: 100%;
-  overflow-y: scroll;
-  overflow-x: scroll;
-  position: fixed;
-  background-color: rgba(0, 0, 0, 0.5);
-`;
+const Container = styled.div({
+  width: '100%',
+  height: '100%',
+  overflow: 'scroll',
+  position: 'fixed',
+  backgroundColor: 'rgba(0, 0, 0, 0.5)',
+});
 
 const Overlay: React.FC<Props> = ({ children, onClick }) => {
   const el = useReactPortal();

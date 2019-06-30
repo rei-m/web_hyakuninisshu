@@ -9,7 +9,7 @@ export interface Props {
   onAnimationEnd: () => void;
 }
 
-const Word = ({ text, duration, className, onAnimationEnd }: Props) =>
+const Word = ({ text, duration, className = '', onAnimationEnd }: Props) =>
   text === SPACE ? (
     <span>{text}</span>
   ) : (

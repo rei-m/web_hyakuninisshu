@@ -26,13 +26,13 @@ export type ContainerProps = Props & {
 
 const Container = styled(Block)`
   max-width: 380px;
-  padding: ${({ theme }) => theme.spacing2x};
+  padding: ${({ theme }) => theme.spacingByPx(2)};
 `;
 
 const SummaryContainer = styled(Block)`
   background-color: ${({ theme }) => theme.colorThin};
   box-sizing: border-box;
-  padding: ${({ theme }) => theme.spacing1x};
+  padding: ${({ theme }) => theme.spacingByPx(1)};
   box-shadow: ${({ theme }) => theme.elevationShadow1x};
   border-radius: 4px;
 `;
@@ -42,11 +42,11 @@ const SummaryLabel = styled(Txt)`
 `;
 
 const SummaryCorrectCount = styled(SummaryContainer)`
-  margin-bottom: ${({ theme }) => theme.spacing2x};
+  margin-bottom: ${({ theme }) => theme.spacingByPx(2)};
 `;
 
 const SummaryAverage = styled(SummaryContainer)`
-  margin-bottom: ${({ theme }) => theme.spacing4x};
+  margin-bottom: ${({ theme }) => theme.spacingByPx(4)};
 `;
 
 const ShareButtonsWrapper = styled(Block)`
@@ -54,7 +54,7 @@ const ShareButtonsWrapper = styled(Block)`
 `;
 
 const ButtonsWrapper = styled(Block)`
-  padding: ${({ theme }) => theme.spacing1x};
+  padding: ${({ theme }) => theme.spacingByPx(1)};
 `;
 
 const StyledArrowBackButton = styled(ArrowBackButton)`

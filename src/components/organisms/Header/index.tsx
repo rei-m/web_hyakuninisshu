@@ -15,8 +15,8 @@ export interface Props {
 
 const Container = styled.header<{ canBack: boolean }>`
   box-shadow: ${({ theme }) => theme.elevationShadowHeader};
-  background-color: ${({ theme }) => theme.colorPrimary};
-  padding-left: ${({ canBack, theme }) => (canBack ? '0' : theme.spacing2x)};
+  background-color: ${({ theme }) => theme.palette.primary.main};
+  padding-left: ${({ canBack, theme }) => (canBack ? '0' : theme.spacingByPx(2))};
   display: flex;
 `;
 
@@ -43,7 +43,7 @@ const Title = styled(Heading)`
 const renderArrowBack = () => <ArrowBack style={{ fontSize: '2.4rem' }} />;
 const renderSearch = () => <Search style={{ fontSize: '2.4rem' }} />;
 
-const Header = ({ title, className, onClickBack, onClickSearch }: Props) => (
+const Header = ({ title, className = '', onClickBack, onClickSearch }: Props) => (
   <Container canBack={!!onClickBack} className={className}>
     {!!onClickBack && <StyledHeaderItem renderIcon={renderArrowBack} onClick={onClickBack} data-test="back" />}
     <Title level={1} visualLevel={2}>

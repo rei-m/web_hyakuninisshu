@@ -15,7 +15,7 @@ const Container = styled(Block)`
 `;
 
 const StyledMenuLink = styled(MenuLink)`
-  margin: ${({ theme }) => theme.spacing2x};
+  margin: ${({ theme }) => theme.spacingByPx(2)};
   box-shadow: ${({ theme }) => theme.elevationShadow1x};
   flex-grow: 1;
   @media screen and (min-width: ${({ theme }) => theme.minWidthWide}) {

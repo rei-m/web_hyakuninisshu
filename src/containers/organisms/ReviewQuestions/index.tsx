@@ -1,6 +1,5 @@
 import * as React from 'react';
-import { connect } from 'react-redux';
-import { ThunkDispatch } from 'redux-thunk';
+import { useDispatch, useSelector } from 'react-redux';
 import KarutaPlaying, { Props as KarutaPlayingProps } from '@src/components/organisms/KarutaPlaying';
 import KarutaPlayingCorrect, {
   Props as KarutaPlayingCorrectProps,
@@ -27,15 +26,14 @@ export interface ConnectedProps {
   dulation: number;
 }
 
-export type DispatchProps = { onStart: () => void; onFinish: () => void } & Pick<
-  KarutaPlayingProps,
-  'onClickToriFuda' | 'onClickResult'
-> &
+export type PresenterProps = Pick<OwnProps, 'onClickGoToResult'> &
+  ConnectedProps &
+  Pick<KarutaPlayingProps, 'onClickToriFuda' | 'onClickResult'> &
   Pick<KarutaPlayingCorrectProps, 'onClickGoToNext'>;
 
-export type Props = OwnProps & ConnectedProps & DispatchProps;
-
-export type PresenterProps = Omit<Props, 'onStart' | 'onFinish'>;
+export type ContainerProps = OwnProps & {
+  presenter: React.FC<PresenterProps>;
+};
 
 export const ReviewQuestionsPresenter = ({
   question,
@@ -78,47 +76,49 @@ export const ReviewQuestionsPresenter = ({
   }
 };
 
-export const ReviewQuestions = (props: Props) => {
-  useLifeCycle(props.onStart, props.onFinish);
-  return <ReviewQuestionsPresenter {...props} />;
-};
+export const ReviewQuestionsContainer = ({ onClickGoToResult, presenter }: ContainerProps) => {
+  const dispatch = useDispatch();
+  const { questions, lastStartedTime, currentIndex, answers, questionState, dulation } = useSelector<
+    GlobalState,
+    questionsTypes.State
+  >(state => state.questions);
 
-export const mapStateToProps = ({ questions }: GlobalState, props: OwnProps): ConnectedProps => {
-  const { lastStartedTime, currentIndex, answers, questionState, dulation } = questions;
+  useLifeCycle(
+    () => {
+      dispatch(questionsOperations.restartQuestions());
+    },
+    () => {
+      dispatch(questionsOperations.finishQuestion());
+    }
+  );
 
-  return {
-    ...props,
+  const handleClickGoToNext = () => {
+    dispatch(questionsOperations.openNextQuestion());
+  };
+  const handleClickResult = () => {
+    dispatch(questionsOperations.confirmCorrect());
+  };
+  const handleClickToriFuda = ({ questionId, karutaNo }: ToriFuda) => {
+    dispatch(questionsOperations.answerQuestion(questionId, karutaNo));
+  };
+
+  return presenter({
     lastStartedTime,
     answer: answers ? answers[currentIndex] : undefined,
     currentPosition: currentIndex + 1,
-    question: questions.questions ? questions.questions[currentIndex] : undefined,
-    totalCount: questions.questions ? questions.questions.length : 0,
+    question: questions ? questions[currentIndex] : undefined,
+    totalCount: questions ? questions.length : 0,
     questionState,
     dulation,
-  };
+    onClickResult: handleClickResult,
+    onClickToriFuda: handleClickToriFuda,
+    onClickGoToNext: handleClickGoToNext,
+    onClickGoToResult,
+  });
 };
 
-export const mapDispatchToProps = (
-  dispatch: ThunkDispatch<GlobalState, {}, questionsTypes.Actions>
-): DispatchProps => ({
-  onStart: () => {
-    dispatch(questionsOperations.restartQuestions());
-  },
-  onFinish: () => {
-    dispatch(questionsOperations.finishQuestion());
-  },
-  onClickGoToNext: () => {
-    dispatch(questionsOperations.openNextQuestion());
-  },
-  onClickResult: () => {
-    dispatch(questionsOperations.confirmCorrect());
-  },
-  onClickToriFuda: ({ questionId, karutaNo }: ToriFuda) => {
-    dispatch(questionsOperations.answerQuestion(questionId, karutaNo));
-  },
-});
+export const ReviewQuestions = (props: OwnProps) => (
+  <ReviewQuestionsContainer {...props} presenter={ReviewQuestionsPresenter} />
+);
 
-export default connect(
-  mapStateToProps,
-  mapDispatchToProps
-)(ReviewQuestions);
+export default ReviewQuestions;
