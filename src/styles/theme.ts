@@ -71,31 +71,11 @@ export const muiTheme = createMuiTheme({
           backgroundColor: palette.grey[200],
         },
       },
-      outlinedPrimary: {
-        color: '#ffffff',
-        backgroundColor: palette.primary.main,
-        '&:active': {
-          backgroundColor: palette.primary.dark,
-        },
-        '&:hover': {
-          backgroundColor: palette.primary.dark,
-        },
-      },
-      outlinedSecondary: {
-        color: '#ffffff',
-        backgroundColor: palette.secondary.main,
-        '&:active': {
-          backgroundColor: palette.secondary.dark,
-        },
-        '&:hover': {
-          backgroundColor: palette.secondary.dark,
-        },
-      },
     },
   },
   props: {
     MuiButton: {
-      variant: `outlined`,
+      variant: `contained`,
     },
   },
 });
