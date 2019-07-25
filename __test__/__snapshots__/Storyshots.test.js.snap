@@ -37,7 +37,7 @@ exports[`Storyshots atoms/Button custom class 1`] = `
 }
 
 <button
-  className="MuiButtonBase-root MuiButton-root c0 MuiButton-outlined"
+  className="MuiButtonBase-root MuiButton-root c0 MuiButton-contained"
   disabled={false}
   onBlur={[Function]}
   onDragLeave={[Function]}
@@ -63,7 +63,7 @@ exports[`Storyshots atoms/Button custom class 1`] = `
 
 exports[`Storyshots atoms/Button normal 1`] = `
 <button
-  className="MuiButtonBase-root MuiButton-root MuiButton-outlined"
+  className="MuiButtonBase-root MuiButton-root MuiButton-contained"
   disabled={false}
   onBlur={[Function]}
   onDragLeave={[Function]}
@@ -89,7 +89,7 @@ exports[`Storyshots atoms/Button normal 1`] = `
 
 exports[`Storyshots atoms/Button primary 1`] = `
 <button
-  className="MuiButtonBase-root MuiButton-root MuiButton-outlined MuiButton-outlinedSecondary"
+  className="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedSecondary"
   disabled={false}
   onBlur={[Function]}
   onDragLeave={[Function]}
@@ -1134,7 +1134,7 @@ exports[`Storyshots molecules/HeaderItem default 1`] = `
 
 exports[`Storyshots molecules/IconLabelButton with type normal 1`] = `
 <button
-  className="MuiButtonBase-root MuiButton-root MuiButton-outlined"
+  className="MuiButtonBase-root MuiButton-root MuiButton-contained"
   disabled={false}
   onBlur={[Function]}
   onDragLeave={[Function]}
@@ -1171,7 +1171,7 @@ exports[`Storyshots molecules/IconLabelButton with type normal 1`] = `
 
 exports[`Storyshots molecules/IconLabelButton with type primary 1`] = `
 <button
-  className="MuiButtonBase-root MuiButton-root MuiButton-outlined MuiButton-outlinedSecondary"
+  className="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedSecondary"
   disabled={false}
   onBlur={[Function]}
   onDragLeave={[Function]}
@@ -1483,6 +1483,7 @@ exports[`Storyshots molecules/MenuLink default 1`] = `
 
 .c5 {
   margin: 8px;
+  color: #106ba3;
   position: relative;
 }
 
@@ -1497,6 +1498,7 @@ exports[`Storyshots molecules/MenuLink default 1`] = `
 
 .c6 {
   margin-top: 24px;
+  color: #106ba3;
 }
 
 .c4 {
@@ -4605,7 +4607,7 @@ exports[`Storyshots organisms/ExamQuestions confirm correct 1`] = `
       </span>
     </div>
     <button
-      className="MuiButtonBase-root MuiButton-root c2 MuiButton-outlined"
+      className="MuiButtonBase-root MuiButton-root c2 MuiButton-contained"
       disabled={false}
       onBlur={[Function]}
       onClick={[Function]}
@@ -4675,7 +4677,7 @@ exports[`Storyshots organisms/ExamQuestions confirm correct 1`] = `
     </div>
   </div>
   <button
-    className="MuiButtonBase-root MuiButton-root c12 MuiButton-outlined"
+    className="MuiButtonBase-root MuiButton-root c12 MuiButton-contained"
     disabled={false}
     onBlur={[Function]}
     onClick={[Function]}
@@ -16299,7 +16301,7 @@ exports[`Storyshots organisms/KarutaPlayingCorrect all answered 1`] = `
       </span>
     </div>
     <button
-      className="MuiButtonBase-root MuiButton-root c2 MuiButton-outlined"
+      className="MuiButtonBase-root MuiButton-root c2 MuiButton-contained"
       disabled={false}
       onBlur={[Function]}
       onClick={[Function]}
@@ -16369,7 +16371,7 @@ exports[`Storyshots organisms/KarutaPlayingCorrect all answered 1`] = `
     </div>
   </div>
   <button
-    className="MuiButtonBase-root MuiButton-root c12 MuiButton-outlined"
+    className="MuiButtonBase-root MuiButton-root c12 MuiButton-contained"
     disabled={false}
     onBlur={[Function]}
     onClick={[Function]}
@@ -16535,7 +16537,7 @@ exports[`Storyshots organisms/KarutaPlayingCorrect in answer 1`] = `
       </span>
     </div>
     <button
-      className="MuiButtonBase-root MuiButton-root c2 MuiButton-outlined"
+      className="MuiButtonBase-root MuiButton-root c2 MuiButton-contained"
       disabled={false}
       onBlur={[Function]}
       onClick={[Function]}
@@ -16605,7 +16607,7 @@ exports[`Storyshots organisms/KarutaPlayingCorrect in answer 1`] = `
     </div>
   </div>
   <button
-    className="MuiButtonBase-root MuiButton-root c12 MuiButton-outlined"
+    className="MuiButtonBase-root MuiButton-root c12 MuiButton-contained"
     disabled={false}
     onBlur={[Function]}
     onClick={[Function]}
@@ -16736,7 +16738,7 @@ exports[`Storyshots organisms/KarutaPlayingResult all correct 1`] = `
     className="c5 "
   >
     <button
-      className="MuiButtonBase-root MuiButton-root c6 MuiButton-outlined"
+      className="MuiButtonBase-root MuiButton-root c6 MuiButton-contained"
       disabled={false}
       onBlur={[Function]}
       onClick={[Function]}
@@ -16872,7 +16874,7 @@ exports[`Storyshots organisms/KarutaPlayingResult has mistake 1`] = `
     className="c5 "
   >
     <button
-      className="MuiButtonBase-root MuiButton-root c6 MuiButton-outlined"
+      className="MuiButtonBase-root MuiButton-root c6 MuiButton-contained"
       disabled={false}
       onBlur={[Function]}
       onClick={[Function]}
@@ -16911,7 +16913,7 @@ exports[`Storyshots organisms/KarutaPlayingResult has mistake 1`] = `
     className="c5 "
   >
     <button
-      className="MuiButtonBase-root MuiButton-root c7 MuiButton-outlined"
+      className="MuiButtonBase-root MuiButton-root c7 MuiButton-contained"
       disabled={false}
       onBlur={[Function]}
       onClick={[Function]}
@@ -17018,6 +17020,7 @@ exports[`Storyshots organisms/MainMenuList default 1`] = `
 
 .c7 {
   margin: 8px;
+  color: #106ba3;
   position: relative;
 }
 
@@ -17032,6 +17035,7 @@ exports[`Storyshots organisms/MainMenuList default 1`] = `
 
 .c8 {
   margin-top: 24px;
+  color: #106ba3;
 }
 
 .c0 {
@@ -19353,7 +19357,7 @@ exports[`Storyshots organisms/ReviewQuestions confirm correct 1`] = `
       </span>
     </div>
     <button
-      className="MuiButtonBase-root MuiButton-root c2 MuiButton-outlined"
+      className="MuiButtonBase-root MuiButton-root c2 MuiButton-contained"
       disabled={false}
       onBlur={[Function]}
       onClick={[Function]}
@@ -19423,7 +19427,7 @@ exports[`Storyshots organisms/ReviewQuestions confirm correct 1`] = `
     </div>
   </div>
   <button
-    className="MuiButtonBase-root MuiButton-root c12 MuiButton-outlined"
+    className="MuiButtonBase-root MuiButton-root c12 MuiButton-contained"
     disabled={false}
     onBlur={[Function]}
     onClick={[Function]}
@@ -21095,7 +21099,7 @@ exports[`Storyshots organisms/TrainingMenuForm default 1`] = `
     </div>
   </div>
   <button
-    className="MuiButtonBase-root MuiButton-root c6 MuiButton-outlined MuiButton-outlinedSecondary"
+    className="MuiButtonBase-root MuiButton-root c6 MuiButton-contained MuiButton-containedSecondary"
     disabled={false}
     onBlur={[Function]}
     onClick={[Function]}
@@ -21128,6 +21132,9 @@ exports[`Storyshots organisms/TrainingMenuForm default 1`] = `
       </svg>
       練習をはじめる
     </span>
+    <span
+      className="MuiTouchRipple-root"
+    />
   </button>
 </form>
 `;
@@ -21752,7 +21759,7 @@ exports[`Storyshots organisms/TrainingQuestions confirm correct 1`] = `
       </span>
     </div>
     <button
-      className="MuiButtonBase-root MuiButton-root c2 MuiButton-outlined"
+      className="MuiButtonBase-root MuiButton-root c2 MuiButton-contained"
       disabled={false}
       onBlur={[Function]}
       onClick={[Function]}
@@ -21822,7 +21829,7 @@ exports[`Storyshots organisms/TrainingQuestions confirm correct 1`] = `
     </div>
   </div>
   <button
-    className="MuiButtonBase-root MuiButton-root c12 MuiButton-outlined"
+    className="MuiButtonBase-root MuiButton-root c12 MuiButton-contained"
     disabled={false}
     onBlur={[Function]}
     onClick={[Function]}
@@ -22856,7 +22863,7 @@ exports[`Storyshots organisms/TrainingResult default 1`] = `
     className="c5 "
   >
     <button
-      className="MuiButtonBase-root MuiButton-root c6 MuiButton-outlined"
+      className="MuiButtonBase-root MuiButton-root c6 MuiButton-contained"
       disabled={false}
       onBlur={[Function]}
       onClick={[Function]}
@@ -24004,7 +24011,7 @@ Array [
         練習の成果を確認しましょう。
       </p>
       <button
-        className="MuiButtonBase-root MuiButton-root c6 MuiButton-outlined MuiButton-outlinedSecondary"
+        className="MuiButtonBase-root MuiButton-root c6 MuiButton-contained MuiButton-containedSecondary"
         disabled={false}
         onBlur={[Function]}
         onClick={[Function]}
@@ -25026,7 +25033,7 @@ Array [
           className="c10 "
         >
           <button
-            className="MuiButtonBase-root MuiButton-root c11 MuiButton-outlined"
+            className="MuiButtonBase-root MuiButton-root c11 MuiButton-contained"
             disabled={false}
             onBlur={[Function]}
             onClick={[Function]}
@@ -25275,6 +25282,7 @@ Array [
 
 .c13 {
   margin: 8px;
+  color: #106ba3;
   position: relative;
 }
 
@@ -25289,6 +25297,7 @@ Array [
 
 .c14 {
   margin-top: 24px;
+  color: #106ba3;
 }
 
 .c6 {
@@ -41158,7 +41167,7 @@ Array [
             </div>
           </div>
           <button
-            className="MuiButtonBase-root MuiButton-root c12 MuiButton-outlined MuiButton-outlinedSecondary"
+            className="MuiButtonBase-root MuiButton-root c12 MuiButton-contained MuiButton-containedSecondary"
             disabled={false}
             onBlur={[Function]}
             onClick={[Function]}
@@ -41191,6 +41200,9 @@ Array [
               </svg>
               練習をはじめる
             </span>
+            <span
+              className="MuiTouchRipple-root"
+            />
           </button>
         </form>
       </div>
@@ -42168,7 +42180,7 @@ Array [
           className="c9 "
         >
           <button
-            className="MuiButtonBase-root MuiButton-root c10 MuiButton-outlined"
+            className="MuiButtonBase-root MuiButton-root c10 MuiButton-contained"
             disabled={false}
             onBlur={[Function]}
             onClick={[Function]}
