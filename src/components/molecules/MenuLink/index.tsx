@@ -58,6 +58,7 @@ const IconWrapper = styled(CircleFrame)`
 
 const Title = styled(Txt)`
   margin: ${({ theme }) => theme.spacingByPx(1)};
+  color: ${({ theme }) => theme.fontColor.link};
   position: relative;
   &:after {
     content: '';
@@ -71,6 +72,7 @@ const Title = styled(Txt)`
 
 const Explain = styled(Paragraph)`
   margin-top: ${({ theme }) => theme.spacingByPx(3)};
+  color: ${({ theme }) => theme.fontColor.link};
 `;
 
 const linkStyles = {
