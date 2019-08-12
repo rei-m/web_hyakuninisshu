@@ -1,4 +1,4 @@
-import * as React from 'react';
+import React from 'react';
 import makeStyles from '@material-ui/styles/makeStyles';
 import { SvgIconProps } from '@material-ui/core/SvgIcon';
 import EditIcon from '@material-ui/icons/Edit';

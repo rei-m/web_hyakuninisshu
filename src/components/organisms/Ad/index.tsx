@@ -1,4 +1,4 @@
-import * as React from 'react';
+import React from 'react';
 import AdSense from 'react-adsense';
 import styled from '@src/styles/styled-components';
 import Block from '@src/components/atoms/Block';

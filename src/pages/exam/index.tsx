@@ -1,4 +1,4 @@
-import * as React from 'react';
+import React from 'react';
 import { navigate } from 'gatsby';
 import styled from '@src/styles/styled-components';
 import SingleContentPageTemplate from '@src/components/templates/SingleContentPageTemplate';

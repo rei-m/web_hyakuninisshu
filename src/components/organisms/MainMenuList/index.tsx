@@ -1,4 +1,4 @@
-import * as React from 'react';
+import React from 'react';
 import styled from '@src/styles/styled-components';
 import MenuLink from '@src/components/molecules/MenuLink';
 import Block from '@src/components/atoms/Block';

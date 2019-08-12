@@ -1,4 +1,4 @@
-import * as React from 'react';
+import React from 'react';
 import styled from '@src/styles/styled-components';
 import Header from '@src/components/organisms/Header';
 import Navigation from '@src/components/organisms/Navigation';

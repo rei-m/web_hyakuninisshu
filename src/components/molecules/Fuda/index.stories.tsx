@@ -1,4 +1,4 @@
-import * as React from 'react';
+import React from 'react';
 import { storiesOf } from '@storybook/react';
 import Fuda from './index';
 import { create } from '@helper/factory';

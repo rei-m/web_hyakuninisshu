@@ -1,4 +1,4 @@
-import * as React from 'react';
+import React from 'react';
 import styled from '@src/styles/styled-components';
 import { SPACING_UNIT } from '@src/styles/theme';
 import Block from '@src/components/atoms/Block';

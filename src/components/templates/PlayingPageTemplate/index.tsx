@@ -1,4 +1,4 @@
-import * as React from 'react';
+import React from 'react';
 import styled from '@src/styles/styled-components';
 import Layout from '@src/components/templates/Layout';
 import TatamiLayout from '@src/components/molecules/TatamiLayout';

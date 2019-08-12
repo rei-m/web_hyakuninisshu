@@ -1,4 +1,4 @@
-import * as React from 'react';
+import React from 'react';
 import styled from '@src/styles/styled-components';
 import Paragraph, { Props as ParagraphProps } from '@src/components/atoms/Paragraph';
 import { Karuta } from '@src/types';

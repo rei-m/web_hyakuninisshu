@@ -1,4 +1,4 @@
-import * as React from 'react';
+import React from 'react';
 import { storiesOf } from '@storybook/react';
 import TrainingQuestionPage, { Props } from '@src/pages/training/question';
 import { create } from '@helper/factory';

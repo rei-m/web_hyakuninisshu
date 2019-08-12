@@ -1,4 +1,4 @@
-import * as React from 'react';
+import React from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import CloseIcon from '@material-ui/icons/Close';
 import Checkbox from '@material-ui/core/Checkbox';
