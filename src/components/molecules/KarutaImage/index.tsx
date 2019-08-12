@@ -1,4 +1,4 @@
-import * as React from 'react';
+import React from 'react';
 import Img from 'gatsby-image';
 import { useKarutaImage } from '@src/hooks/staticQueries/useKarutaImage';
 import { toKarutaNoString } from '@src/utils';

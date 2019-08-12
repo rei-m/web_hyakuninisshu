@@ -1,4 +1,4 @@
-import * as React from 'react';
+import React from 'react';
 import styled, { keyframes } from '@src/styles/styled-components';
 
 const rippleAnimation = keyframes`

@@ -1,4 +1,4 @@
-import * as React from 'react';
+import React from 'react';
 import MuiButton from '@material-ui/core/Button';
 
 export interface Props {

@@ -1,4 +1,4 @@
-import * as React from 'react';
+import React from 'react';
 import FadeInFrame from '@src/components/atoms/FadeInFrame';
 import { SPACE } from './';
 

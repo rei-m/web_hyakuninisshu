@@ -1,4 +1,4 @@
-import * as React from 'react';
+import React from 'react';
 import ArrowBack from '@material-ui/icons/ArrowBack';
 import Search from '@material-ui/icons/Search';
 import styled from '@src/styles/styled-components';

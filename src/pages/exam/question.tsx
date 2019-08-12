@@ -1,4 +1,4 @@
-import * as React from 'react';
+import React from 'react';
 import { graphql, navigate } from 'gatsby';
 import PlayingPageTemplate from '@src/components/templates/PlayingPageTemplate';
 import ExamQuestions from '@src/containers/organisms/ExamQuestions';

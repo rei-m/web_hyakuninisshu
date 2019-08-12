@@ -1,4 +1,4 @@
-import * as React from 'react';
+import React from 'react';
 import Img from 'gatsby-image';
 import MessagePageTemplate from '@src/components/templates/MessagePageTemplate';
 import Txt from '@src/components/atoms/Txt';

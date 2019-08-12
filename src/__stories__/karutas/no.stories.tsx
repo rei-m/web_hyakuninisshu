@@ -1,4 +1,4 @@
-import * as React from 'react';
+import React from 'react';
 import { storiesOf } from '@storybook/react';
 import KarutasNoPage, { Props } from '@src/gatsbyPages/karutas/no';
 import { create } from '@helper/factory';

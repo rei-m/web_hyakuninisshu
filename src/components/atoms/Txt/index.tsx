@@ -1,4 +1,4 @@
-import * as React from 'react';
+import React from 'react';
 import makeStyles from '@material-ui/core/styles/makeStyles';
 import styled from '@src/styles/styled-components';
 import { FontSize, ThemeInterface } from '@src/styles/theme';
