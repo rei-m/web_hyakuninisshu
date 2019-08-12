@@ -1,4 +1,4 @@
-import * as React from 'react';
+import React from 'react';
 import Img from 'gatsby-image';
 import styled from '@src/styles/styled-components';
 import Block from '@src/components/atoms/Block';

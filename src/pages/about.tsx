@@ -1,4 +1,4 @@
-import * as React from 'react';
+import React from 'react';
 import { navigate } from 'gatsby';
 import styled from '@src/styles/styled-components';
 import TripleContentsPageTemplate from '@src/components/templates/TripleContentsPageTemplate';

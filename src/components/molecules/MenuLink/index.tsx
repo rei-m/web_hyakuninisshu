@@ -1,9 +1,8 @@
-import * as React from 'react';
+import React from 'react';
 import { GatsbyLinkProps, Link } from 'gatsby';
 import { SvgIconProps } from '@material-ui/core/SvgIcon';
 import styled from '@src/styles/styled-components';
 import Block from '@src/components/atoms/Block';
-import CircleFrame from '@src/components/atoms/CircleFrame';
 import Txt from '@src/components/atoms/Txt';
 import Paragraph from '@src/components/atoms/Paragraph';
 import { withRipple } from '@src/enhancers/withRipple';
@@ -30,14 +29,16 @@ const Container = styled(Block)`
   }
 `;
 
-const IconWrapper = styled(CircleFrame)`
+const IconWrapper = styled.span`
   width: 32px;
   height: 32px;
-  border-color: #f1b400;
+  border: 2px solid #f1b400;
+  border-radius: 50%;
   color: #f1b400;
   display: flex;
   justify-content: center;
   align-items: center;
+  cursor: pointer;
   position: absolute;
   top: ${({ theme }) => theme.spacingByPx(1)};
   left: ${({ theme }) => theme.spacingByPx(1)};

@@ -1,4 +1,4 @@
-import * as React from 'react';
+import React from 'react';
 import { GatsbyLinkProps, Link } from 'gatsby';
 import styled from '@src/styles/styled-components';
 import NavigationItem from '@src/components/molecules/NavigationItem';

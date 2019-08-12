@@ -1,4 +1,4 @@
-import * as React from 'react';
+import React from 'react';
 import { storiesOf } from '@storybook/react';
 import { reduxStoreDecorator } from '@helper/storybook';
 import ExamQuestionPage, { Props } from '@src/pages/exam/question';

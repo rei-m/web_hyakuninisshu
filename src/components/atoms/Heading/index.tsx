@@ -1,4 +1,4 @@
-import * as React from 'react';
+import React from 'react';
 import { ThemedStyledFunction } from 'styled-components';
 import makeStyles from '@material-ui/core/styles/makeStyles';
 import styled from '@src/styles/styled-components';

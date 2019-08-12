@@ -1,6 +1,5 @@
-import * as React from 'react';
+import React from 'react';
 import makeStyles from '@material-ui/core/styles/makeStyles';
-import FormControl from '@material-ui/core/FormControl';
 import Select from '@material-ui/core/Select';
 import MenuItem from '@material-ui/core/MenuItem';
 import styled from '@src/styles/styled-components';
@@ -27,9 +26,6 @@ export interface Props {
 }
 
 const useStyles = makeStyles<ThemeInterface>(theme => ({
-  formControl: {
-    display: 'flex',
-  },
   select: {
     fontSize: theme.fontSize.m,
     flexGrow: 1,
@@ -37,9 +33,12 @@ const useStyles = makeStyles<ThemeInterface>(theme => ({
   },
 }));
 
-const Label = styled.label`
+const LabelContainer = styled.div`
   text-align: left;
-  font-size: 1.1rem;
+`;
+
+const Label = styled.label`
+  font-size: 1.05rem;
   color: #182026;
 `;
 
@@ -48,6 +47,7 @@ const Separate = styled.span`
 `;
 
 const Error = styled.div`
+  text-align: left;
   font-size: ${({ theme }) => theme.fontSize.ss};
   color: #f00;
   margin: ${({ theme }) => `${theme.spacingByPx(1)} 0`};
@@ -56,8 +56,10 @@ const Error = styled.div`
 const SelectRangeFromTo = ({ title, from, to, error, className = '', handleChange }: Props) => {
   const classes = useStyles();
   return (
-    <FormControl className={`${classes.formControl} ${className}`}>
-      <Label>{title}</Label>
+    <div className={className}>
+      <LabelContainer>
+        <Label>{title}</Label>
+      </LabelContainer>
       <CenteredFrame tag={`div`}>
         <Select
           value={from.value}
@@ -92,7 +94,7 @@ const SelectRangeFromTo = ({ title, from, to, error, className = '', handleChang
         </Select>
       </CenteredFrame>
       {error && <Error>{error}</Error>}
-    </FormControl>
+    </div>
   );
 };
 

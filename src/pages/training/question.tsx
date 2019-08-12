@@ -1,4 +1,4 @@
-import * as React from 'react';
+import React from 'react';
 import { graphql, navigate } from 'gatsby';
 import { RouteComponentProps } from '@reach/router';
 import styled from '@src/styles/styled-components';

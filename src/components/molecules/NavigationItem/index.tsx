@@ -1,4 +1,4 @@
-import * as React from 'react';
+import React from 'react';
 import { SvgIconProps } from '@material-ui/core/SvgIcon';
 import styled from '@src/styles/styled-components';
 import { MenuType } from '@src/enums';
