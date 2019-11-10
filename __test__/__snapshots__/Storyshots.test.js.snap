@@ -24795,23 +24795,6 @@ Array [
   margin: 0 auto;
 }
 
-.c12 {
-  height: 100px;
-  border: 1px solid #123;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-}
-
 .c1 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -24886,6 +24869,40 @@ Array [
   box-shadow: 0 1px 3px rgba(0,0,0,0.26);
   border-radius: 4px;
   margin: 16px 0;
+}
+
+.c12 {
+  text-align: center;
+  width: 100%;
+  padding: 16px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-flex-flow: wrap;
+  -ms-flex-flow: wrap;
+  flex-flow: wrap;
+}
+
+.c13 {
+  height: 100px;
+  border: 1px solid #123;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
 @media screen and (min-width:768px) {
@@ -25030,12 +25047,12 @@ Array [
         </div>
       </div>
       <div
-        className="c2"
+        className="c12"
       >
         <div
-          className="c12"
+          className="c13"
         >
-          この欄は広告枠です
+          この欄はアフィリエイト枠です
         </div>
       </div>
     </div>
@@ -25195,6 +25212,40 @@ Array [
   text-align: left;
 }
 
+.c14 {
+  text-align: center;
+  width: 100%;
+  padding: 16px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-flex-flow: wrap;
+  -ms-flex-flow: wrap;
+  flex-flow: wrap;
+}
+
+.c15 {
+  height: 100px;
+  border: 1px solid #123;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
 .c7 {
   border: 1px solid #00000030;
   background-color: #fff;
@@ -25307,29 +25358,6 @@ Array [
   width: 100%;
   text-align: right;
   padding-top: 8px;
-}
-
-.c14 {
-  text-align: center;
-  width: 100%;
-  padding: 16px;
-}
-
-.c15 {
-  height: 100px;
-  border: 1px solid #123;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
 }
 
 .c16 {
@@ -25645,6 +25673,24 @@ Array [
         <h2
           className="makeStyles-root makeStyles-root c3"
         >
+          関連商品
+        </h2>
+        <div
+          className="c14"
+        >
+          <div
+            className="c15"
+          >
+            この欄はアフィリエイト枠です
+          </div>
+        </div>
+      </section>
+      <section
+        className="c2"
+      >
+        <h2
+          className="makeStyles-root makeStyles-root c3"
+        >
           百人一首の用語について
         </h2>
         <dl>
@@ -25717,24 +25763,6 @@ Array [
           <br />
           近年では競技かるたを題材とした漫画の「ちはやふる」がアニメ化や実写映画化されるなど人気が高まっています。
         </p>
-      </section>
-      <section
-        className="c2"
-      >
-        <h2
-          className="makeStyles-root makeStyles-root c3"
-        >
-          関連商品
-        </h2>
-        <div
-          className="c14"
-        >
-          <div
-            className="c15"
-          >
-            この欄はアフィリエイト枠です
-          </div>
-        </div>
       </section>
       <section
         className="c2"
@@ -41945,23 +41973,6 @@ Array [
   margin: 0 auto;
 }
 
-.c11 {
-  height: 100px;
-  border: 1px solid #123;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-}
-
 .c1 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -42021,6 +42032,40 @@ Array [
 
 .c10 {
   box-shadow: 0 1px 3px rgba(0,0,0,0.26);
+}
+
+.c11 {
+  text-align: center;
+  width: 100%;
+  padding: 16px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-flex-flow: wrap;
+  -ms-flex-flow: wrap;
+  flex-flow: wrap;
+}
+
+.c12 {
+  height: 100px;
+  border: 1px solid #123;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
 @media screen and (min-width:768px) {
@@ -42162,12 +42207,12 @@ Array [
         </div>
       </div>
       <div
-        className="c2"
+        className="c11"
       >
         <div
-          className="c11"
+          className="c12"
         >
-          この欄は広告枠です
+          この欄はアフィリエイト枠です
         </div>
       </div>
     </div>
