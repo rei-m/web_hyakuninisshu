@@ -82,6 +82,9 @@ export const IndexPagePresenter = ({ karutas }: PresenterProps) => (
             百首覚えたあとは色々な遊び方を探してみてはいかがでしょうか。
           </Paragraph>
         </ReadingContent>
+        <ReadingContent title={`関連商品`}>
+          <Associate />
+        </ReadingContent>
         <ReadingContent title={`百人一首の用語について`}>
           <dl>
             <dt>
@@ -128,9 +131,6 @@ export const IndexPagePresenter = ({ karutas }: PresenterProps) => (
             <br />
             近年では競技かるたを題材とした漫画の「ちはやふる」がアニメ化や実写映画化されるなど人気が高まっています。
           </Paragraph>
-        </ReadingContent>
-        <ReadingContent title={`関連商品`}>
-          <Associate />
         </ReadingContent>
         <ReadingContent title={`百人一首 歌一覧`}>
           <KarutaList>
