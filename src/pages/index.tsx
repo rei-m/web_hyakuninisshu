@@ -4,6 +4,7 @@ import styled from '@src/styles/styled-components';
 import TripleContentsPageTemplate from '@src/components/templates/TripleContentsPageTemplate';
 import MainMenuList from '@src/components/organisms/MainMenuList';
 import SmallMaterial from '@src/components/organisms/SmallMaterial';
+import Associate from '@src/components/organisms/Associate';
 import ReadingContent from '@src/components/molecules/ReadingContent';
 import Paragraph from '@src/components/atoms/Paragraph';
 import Txt from '@src/components/atoms/Txt';
@@ -127,6 +128,9 @@ export const IndexPagePresenter = ({ karutas }: PresenterProps) => (
             <br />
             近年では競技かるたを題材とした漫画の「ちはやふる」がアニメ化や実写映画化されるなど人気が高まっています。
           </Paragraph>
+        </ReadingContent>
+        <ReadingContent title={`関連商品`}>
+          <Associate />
         </ReadingContent>
         <ReadingContent title={`百人一首 歌一覧`}>
           <KarutaList>
