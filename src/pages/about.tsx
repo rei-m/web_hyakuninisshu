@@ -68,6 +68,11 @@ const AboutPage = () => (
             </a>
           </Paragraph>
         </ReadingContent>
+        <ReadingContent title={`その他`}>
+          <Paragraph size={`s`}>
+            当サイトは、Amazon.co.jpを宣伝しリンクすることによってサイトが紹介料を獲得できる手段を提供することを目的に設定されたアフィリエイトプログラムである、Amazonアソシエイト・プログラムの参加者です。
+          </Paragraph>
+        </ReadingContent>
       </>
     }
   />
