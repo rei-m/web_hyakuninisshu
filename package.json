@@ -41,7 +41,7 @@
     "start": "npm run develop",
     "test": "jest",
     "test-update": "jest --updateSnapshot",
-    "test-cov": "node --max_old_space_size=4096 $(npm bin)/jest --maxWorkers=2 --coverage",
+    "test-cov": "node --max_old_space_size=2048 $(npm bin)/jest --maxWorkers=2 --coverage",
     "lint": "eslint '{src,helper}/**/*.{ts,tsx}'",
     "lint-fix": "eslint --fix '{src,helper}/**/*.{ts,tsx}'",
     "storybook": "start-storybook -p 6006",

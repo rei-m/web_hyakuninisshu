@@ -82,7 +82,7 @@ export const IndexPagePresenter = ({ karutas }: PresenterProps) => (
             百首覚えたあとは色々な遊び方を探してみてはいかがでしょうか。
           </Paragraph>
         </ReadingContent>
-        <ReadingContent title={`関連商品`}>
+        <ReadingContent title={``}>
           <Associate />
         </ReadingContent>
         <ReadingContent title={`百人一首の用語について`}>
