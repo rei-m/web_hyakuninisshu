@@ -1912,12 +1912,12 @@ exports[`Storyshots molecules/SelectForm default 1`] = `
     <div
       aria-haspopup="listbox"
       aria-labelledby=" mui-component-select-item"
-      className="MuiSelect-root MuiSelect-select MuiSelect-selectMenu MuiInputBase-input MuiInput-input MuiInputBase-inputSelect"
+      className="MuiSelect-root MuiSelect-select MuiSelect-selectMenu MuiInputBase-input MuiInput-input"
       id="mui-component-select-item"
       onBlur={[Function]}
-      onClick={[Function]}
       onFocus={[Function]}
       onKeyDown={[Function]}
+      onMouseDown={[Function]}
       role="button"
       tabIndex={0}
     >
@@ -1996,12 +1996,12 @@ exports[`Storyshots molecules/SelectFromToForm default 1`] = `
       <div
         aria-haspopup="listbox"
         aria-labelledby=" mui-component-select-ふろむ"
-        className="MuiSelect-root MuiSelect-select MuiSelect-selectMenu MuiInputBase-input MuiInput-input MuiInputBase-inputSelect"
+        className="MuiSelect-root MuiSelect-select MuiSelect-selectMenu MuiInputBase-input MuiInput-input"
         id="mui-component-select-ふろむ"
         onBlur={[Function]}
-        onClick={[Function]}
         onFocus={[Function]}
         onKeyDown={[Function]}
+        onMouseDown={[Function]}
         role="button"
         tabIndex={0}
       >
@@ -2038,12 +2038,12 @@ exports[`Storyshots molecules/SelectFromToForm default 1`] = `
       <div
         aria-haspopup="listbox"
         aria-labelledby=" mui-component-select-とぅー"
-        className="MuiSelect-root MuiSelect-select MuiSelect-selectMenu MuiInputBase-input MuiInput-input MuiInputBase-inputSelect"
+        className="MuiSelect-root MuiSelect-select MuiSelect-selectMenu MuiInputBase-input MuiInput-input"
         id="mui-component-select-とぅー"
         onBlur={[Function]}
-        onClick={[Function]}
         onFocus={[Function]}
         onKeyDown={[Function]}
+        onMouseDown={[Function]}
         role="button"
         tabIndex={0}
       >
@@ -2130,12 +2130,12 @@ exports[`Storyshots molecules/SelectFromToForm with error 1`] = `
       <div
         aria-haspopup="listbox"
         aria-labelledby=" mui-component-select-ふろむ"
-        className="MuiSelect-root MuiSelect-select MuiSelect-selectMenu MuiInputBase-input MuiInput-input MuiInputBase-inputSelect"
+        className="MuiSelect-root MuiSelect-select MuiSelect-selectMenu MuiInputBase-input MuiInput-input"
         id="mui-component-select-ふろむ"
         onBlur={[Function]}
-        onClick={[Function]}
         onFocus={[Function]}
         onKeyDown={[Function]}
+        onMouseDown={[Function]}
         role="button"
         tabIndex={0}
       >
@@ -2172,12 +2172,12 @@ exports[`Storyshots molecules/SelectFromToForm with error 1`] = `
       <div
         aria-haspopup="listbox"
         aria-labelledby=" mui-component-select-とぅー"
-        className="MuiSelect-root MuiSelect-select MuiSelect-selectMenu MuiInputBase-input MuiInput-input MuiInputBase-inputSelect"
+        className="MuiSelect-root MuiSelect-select MuiSelect-selectMenu MuiInputBase-input MuiInput-input"
         id="mui-component-select-とぅー"
         onBlur={[Function]}
-        onClick={[Function]}
         onFocus={[Function]}
         onKeyDown={[Function]}
+        onMouseDown={[Function]}
         role="button"
         tabIndex={0}
       >
@@ -17554,6 +17554,7 @@ exports[`Storyshots organisms/MaterialListFilter default 1`] = `
                 checked={true}
                 className="PrivateSwitchBase-input"
                 data-indeterminate={false}
+                disabled={false}
                 onChange={[Function]}
                 type="checkbox"
               />
@@ -17624,6 +17625,7 @@ exports[`Storyshots organisms/MaterialListFilter default 1`] = `
                 checked={true}
                 className="PrivateSwitchBase-input"
                 data-indeterminate={false}
+                disabled={false}
                 onChange={[Function]}
                 type="checkbox"
               />
@@ -17694,6 +17696,7 @@ exports[`Storyshots organisms/MaterialListFilter default 1`] = `
                 checked={true}
                 className="PrivateSwitchBase-input"
                 data-indeterminate={false}
+                disabled={false}
                 onChange={[Function]}
                 type="checkbox"
               />
@@ -17764,6 +17767,7 @@ exports[`Storyshots organisms/MaterialListFilter default 1`] = `
                 checked={true}
                 className="PrivateSwitchBase-input"
                 data-indeterminate={false}
+                disabled={false}
                 onChange={[Function]}
                 type="checkbox"
               />
@@ -17834,6 +17838,7 @@ exports[`Storyshots organisms/MaterialListFilter default 1`] = `
                 checked={true}
                 className="PrivateSwitchBase-input"
                 data-indeterminate={false}
+                disabled={false}
                 onChange={[Function]}
                 type="checkbox"
               />
@@ -17904,6 +17909,7 @@ exports[`Storyshots organisms/MaterialListFilter default 1`] = `
                 checked={true}
                 className="PrivateSwitchBase-input"
                 data-indeterminate={false}
+                disabled={false}
                 onChange={[Function]}
                 type="checkbox"
               />
@@ -17989,6 +17995,7 @@ exports[`Storyshots organisms/MaterialListFilter default 1`] = `
                 checked={true}
                 className="PrivateSwitchBase-input"
                 data-indeterminate={false}
+                disabled={false}
                 onChange={[Function]}
                 type="checkbox"
               />
@@ -18059,6 +18066,7 @@ exports[`Storyshots organisms/MaterialListFilter default 1`] = `
                 checked={true}
                 className="PrivateSwitchBase-input"
                 data-indeterminate={false}
+                disabled={false}
                 onChange={[Function]}
                 type="checkbox"
               />
@@ -18129,6 +18137,7 @@ exports[`Storyshots organisms/MaterialListFilter default 1`] = `
                 checked={true}
                 className="PrivateSwitchBase-input"
                 data-indeterminate={false}
+                disabled={false}
                 onChange={[Function]}
                 type="checkbox"
               />
@@ -18199,6 +18208,7 @@ exports[`Storyshots organisms/MaterialListFilter default 1`] = `
                 checked={true}
                 className="PrivateSwitchBase-input"
                 data-indeterminate={false}
+                disabled={false}
                 onChange={[Function]}
                 type="checkbox"
               />
@@ -18269,6 +18279,7 @@ exports[`Storyshots organisms/MaterialListFilter default 1`] = `
                 checked={true}
                 className="PrivateSwitchBase-input"
                 data-indeterminate={false}
+                disabled={false}
                 onChange={[Function]}
                 type="checkbox"
               />
@@ -20741,12 +20752,12 @@ exports[`Storyshots organisms/TrainingMenuForm default 1`] = `
         <div
           aria-haspopup="listbox"
           aria-labelledby=" mui-component-select-rangeFrom"
-          className="MuiSelect-root MuiSelect-select MuiSelect-selectMenu MuiInputBase-input MuiInput-input MuiInputBase-inputSelect"
+          className="MuiSelect-root MuiSelect-select MuiSelect-selectMenu MuiInputBase-input MuiInput-input"
           id="mui-component-select-rangeFrom"
           onBlur={[Function]}
-          onClick={[Function]}
           onFocus={[Function]}
           onKeyDown={[Function]}
+          onMouseDown={[Function]}
           role="button"
           tabIndex={0}
         >
@@ -20783,12 +20794,12 @@ exports[`Storyshots organisms/TrainingMenuForm default 1`] = `
         <div
           aria-haspopup="listbox"
           aria-labelledby=" mui-component-select-rangeTo"
-          className="MuiSelect-root MuiSelect-select MuiSelect-selectMenu MuiInputBase-input MuiInput-input MuiInputBase-inputSelect"
+          className="MuiSelect-root MuiSelect-select MuiSelect-selectMenu MuiInputBase-input MuiInput-input"
           id="mui-component-select-rangeTo"
           onBlur={[Function]}
-          onClick={[Function]}
           onFocus={[Function]}
           onKeyDown={[Function]}
+          onMouseDown={[Function]}
           role="button"
           tabIndex={0}
         >
@@ -20832,12 +20843,12 @@ exports[`Storyshots organisms/TrainingMenuForm default 1`] = `
       <div
         aria-haspopup="listbox"
         aria-labelledby=" mui-component-select-kimariji"
-        className="MuiSelect-root MuiSelect-select MuiSelect-selectMenu MuiInputBase-input MuiInput-input MuiInputBase-inputSelect"
+        className="MuiSelect-root MuiSelect-select MuiSelect-selectMenu MuiInputBase-input MuiInput-input"
         id="mui-component-select-kimariji"
         onBlur={[Function]}
-        onClick={[Function]}
         onFocus={[Function]}
         onKeyDown={[Function]}
+        onMouseDown={[Function]}
         role="button"
         tabIndex={0}
       >
@@ -20880,12 +20891,12 @@ exports[`Storyshots organisms/TrainingMenuForm default 1`] = `
       <div
         aria-haspopup="listbox"
         aria-labelledby=" mui-component-select-color"
-        className="MuiSelect-root MuiSelect-select MuiSelect-selectMenu MuiInputBase-input MuiInput-input MuiInputBase-inputSelect"
+        className="MuiSelect-root MuiSelect-select MuiSelect-selectMenu MuiInputBase-input MuiInput-input"
         id="mui-component-select-color"
         onBlur={[Function]}
-        onClick={[Function]}
         onFocus={[Function]}
         onKeyDown={[Function]}
+        onMouseDown={[Function]}
         role="button"
         tabIndex={0}
       >
@@ -20928,12 +20939,12 @@ exports[`Storyshots organisms/TrainingMenuForm default 1`] = `
       <div
         aria-haspopup="listbox"
         aria-labelledby=" mui-component-select-kamiNoKuStyle"
-        className="MuiSelect-root MuiSelect-select MuiSelect-selectMenu MuiInputBase-input MuiInput-input MuiInputBase-inputSelect"
+        className="MuiSelect-root MuiSelect-select MuiSelect-selectMenu MuiInputBase-input MuiInput-input"
         id="mui-component-select-kamiNoKuStyle"
         onBlur={[Function]}
-        onClick={[Function]}
         onFocus={[Function]}
         onKeyDown={[Function]}
+        onMouseDown={[Function]}
         role="button"
         tabIndex={0}
       >
@@ -20976,12 +20987,12 @@ exports[`Storyshots organisms/TrainingMenuForm default 1`] = `
       <div
         aria-haspopup="listbox"
         aria-labelledby=" mui-component-select-shimoNoKuStyle"
-        className="MuiSelect-root MuiSelect-select MuiSelect-selectMenu MuiInputBase-input MuiInput-input MuiInputBase-inputSelect"
+        className="MuiSelect-root MuiSelect-select MuiSelect-selectMenu MuiInputBase-input MuiInput-input"
         id="mui-component-select-shimoNoKuStyle"
         onBlur={[Function]}
-        onClick={[Function]}
         onFocus={[Function]}
         onKeyDown={[Function]}
+        onMouseDown={[Function]}
         role="button"
         tabIndex={0}
       >
@@ -21024,12 +21035,12 @@ exports[`Storyshots organisms/TrainingMenuForm default 1`] = `
       <div
         aria-haspopup="listbox"
         aria-labelledby=" mui-component-select-questionAnim"
-        className="MuiSelect-root MuiSelect-select MuiSelect-selectMenu MuiInputBase-input MuiInput-input MuiInputBase-inputSelect"
+        className="MuiSelect-root MuiSelect-select MuiSelect-selectMenu MuiInputBase-input MuiInput-input"
         id="mui-component-select-questionAnim"
         onBlur={[Function]}
-        onClick={[Function]}
         onFocus={[Function]}
         onKeyDown={[Function]}
+        onMouseDown={[Function]}
         role="button"
         tabIndex={0}
       >
@@ -40832,12 +40843,12 @@ Array [
                 <div
                   aria-haspopup="listbox"
                   aria-labelledby=" mui-component-select-rangeFrom"
-                  className="MuiSelect-root MuiSelect-select MuiSelect-selectMenu MuiInputBase-input MuiInput-input MuiInputBase-inputSelect"
+                  className="MuiSelect-root MuiSelect-select MuiSelect-selectMenu MuiInputBase-input MuiInput-input"
                   id="mui-component-select-rangeFrom"
                   onBlur={[Function]}
-                  onClick={[Function]}
                   onFocus={[Function]}
                   onKeyDown={[Function]}
+                  onMouseDown={[Function]}
                   role="button"
                   tabIndex={0}
                 >
@@ -40874,12 +40885,12 @@ Array [
                 <div
                   aria-haspopup="listbox"
                   aria-labelledby=" mui-component-select-rangeTo"
-                  className="MuiSelect-root MuiSelect-select MuiSelect-selectMenu MuiInputBase-input MuiInput-input MuiInputBase-inputSelect"
+                  className="MuiSelect-root MuiSelect-select MuiSelect-selectMenu MuiInputBase-input MuiInput-input"
                   id="mui-component-select-rangeTo"
                   onBlur={[Function]}
-                  onClick={[Function]}
                   onFocus={[Function]}
                   onKeyDown={[Function]}
+                  onMouseDown={[Function]}
                   role="button"
                   tabIndex={0}
                 >
@@ -40923,12 +40934,12 @@ Array [
               <div
                 aria-haspopup="listbox"
                 aria-labelledby=" mui-component-select-kimariji"
-                className="MuiSelect-root MuiSelect-select MuiSelect-selectMenu MuiInputBase-input MuiInput-input MuiInputBase-inputSelect"
+                className="MuiSelect-root MuiSelect-select MuiSelect-selectMenu MuiInputBase-input MuiInput-input"
                 id="mui-component-select-kimariji"
                 onBlur={[Function]}
-                onClick={[Function]}
                 onFocus={[Function]}
                 onKeyDown={[Function]}
+                onMouseDown={[Function]}
                 role="button"
                 tabIndex={0}
               >
@@ -40971,12 +40982,12 @@ Array [
               <div
                 aria-haspopup="listbox"
                 aria-labelledby=" mui-component-select-color"
-                className="MuiSelect-root MuiSelect-select MuiSelect-selectMenu MuiInputBase-input MuiInput-input MuiInputBase-inputSelect"
+                className="MuiSelect-root MuiSelect-select MuiSelect-selectMenu MuiInputBase-input MuiInput-input"
                 id="mui-component-select-color"
                 onBlur={[Function]}
-                onClick={[Function]}
                 onFocus={[Function]}
                 onKeyDown={[Function]}
+                onMouseDown={[Function]}
                 role="button"
                 tabIndex={0}
               >
@@ -41019,12 +41030,12 @@ Array [
               <div
                 aria-haspopup="listbox"
                 aria-labelledby=" mui-component-select-kamiNoKuStyle"
-                className="MuiSelect-root MuiSelect-select MuiSelect-selectMenu MuiInputBase-input MuiInput-input MuiInputBase-inputSelect"
+                className="MuiSelect-root MuiSelect-select MuiSelect-selectMenu MuiInputBase-input MuiInput-input"
                 id="mui-component-select-kamiNoKuStyle"
                 onBlur={[Function]}
-                onClick={[Function]}
                 onFocus={[Function]}
                 onKeyDown={[Function]}
+                onMouseDown={[Function]}
                 role="button"
                 tabIndex={0}
               >
@@ -41067,12 +41078,12 @@ Array [
               <div
                 aria-haspopup="listbox"
                 aria-labelledby=" mui-component-select-shimoNoKuStyle"
-                className="MuiSelect-root MuiSelect-select MuiSelect-selectMenu MuiInputBase-input MuiInput-input MuiInputBase-inputSelect"
+                className="MuiSelect-root MuiSelect-select MuiSelect-selectMenu MuiInputBase-input MuiInput-input"
                 id="mui-component-select-shimoNoKuStyle"
                 onBlur={[Function]}
-                onClick={[Function]}
                 onFocus={[Function]}
                 onKeyDown={[Function]}
+                onMouseDown={[Function]}
                 role="button"
                 tabIndex={0}
               >
@@ -41115,12 +41126,12 @@ Array [
               <div
                 aria-haspopup="listbox"
                 aria-labelledby=" mui-component-select-questionAnim"
-                className="MuiSelect-root MuiSelect-select MuiSelect-selectMenu MuiInputBase-input MuiInput-input MuiInputBase-inputSelect"
+                className="MuiSelect-root MuiSelect-select MuiSelect-selectMenu MuiInputBase-input MuiInput-input"
                 id="mui-component-select-questionAnim"
                 onBlur={[Function]}
-                onClick={[Function]}
                 onFocus={[Function]}
                 onKeyDown={[Function]}
+                onMouseDown={[Function]}
                 role="button"
                 tabIndex={0}
               >
