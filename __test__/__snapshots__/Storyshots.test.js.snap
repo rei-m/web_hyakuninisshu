@@ -24806,6 +24806,23 @@ Array [
   margin: 0 auto;
 }
 
+.c12 {
+  height: 100px;
+  border: 1px solid #123;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
 .c1 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -24880,40 +24897,6 @@ Array [
   box-shadow: 0 1px 3px rgba(0,0,0,0.26);
   border-radius: 4px;
   margin: 16px 0;
-}
-
-.c12 {
-  text-align: center;
-  width: 100%;
-  padding: 16px;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -webkit-flex-flow: wrap;
-  -ms-flex-flow: wrap;
-  flex-flow: wrap;
-}
-
-.c13 {
-  height: 100px;
-  border: 1px solid #123;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
 }
 
 @media screen and (min-width:768px) {
@@ -25058,12 +25041,12 @@ Array [
         </div>
       </div>
       <div
-        className="c12"
+        className="c2"
       >
         <div
-          className="c13"
+          className="c12"
         >
-          この欄はアフィリエイト枠です
+          この欄は広告枠です
         </div>
       </div>
     </div>
@@ -25117,7 +25100,7 @@ Array [
       百人一首 - 簡単に暗記 -
     </h1>
   </header>,
-  .c18 {
+  .c16 {
   cursor: pointer;
 }
 
@@ -25219,42 +25202,8 @@ Array [
   left: 0;
 }
 
-.c22 {
+.c20 {
   text-align: left;
-}
-
-.c14 {
-  text-align: center;
-  width: 100%;
-  padding: 16px;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -webkit-flex-flow: wrap;
-  -ms-flex-flow: wrap;
-  flex-flow: wrap;
-}
-
-.c15 {
-  height: 100px;
-  border: 1px solid #123;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
 }
 
 .c7 {
@@ -25342,7 +25291,7 @@ Array [
   flex-grow: 1;
 }
 
-.c19 {
+.c17 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -25355,7 +25304,7 @@ Array [
   background-color: #fff;
 }
 
-.c21 {
+.c19 {
   -webkit-box-flex: 1;
   -webkit-flex-grow: 1;
   -ms-flex-positive: 1;
@@ -25364,14 +25313,14 @@ Array [
   box-sizing: border-box;
 }
 
-.c23 {
+.c21 {
   display: inline-block;
   width: 100%;
   text-align: right;
   padding-top: 8px;
 }
 
-.c16 {
+.c14 {
   padding: 0;
   margin: 0;
   display: -webkit-box;
@@ -25387,11 +25336,11 @@ Array [
   justify-content: space-between;
 }
 
-.c17 {
+.c15 {
   width: 100%;
 }
 
-.c20 {
+.c18 {
   background-color: #fffff0;
   color: #106ba3;
 }
@@ -25448,7 +25397,7 @@ Array [
 }
 
 @media screen and (min-width:768px) {
-  .c17 {
+  .c15 {
     width: 49%;
   }
 }
@@ -25684,24 +25633,6 @@ Array [
         <h2
           className="makeStyles-root makeStyles-root c3"
         >
-          
-        </h2>
-        <div
-          className="c14"
-        >
-          <div
-            className="c15"
-          >
-            この欄はアフィリエイト枠です
-          </div>
-        </div>
-      </section>
-      <section
-        className="c2"
-      >
-        <h2
-          className="makeStyles-root makeStyles-root c3"
-        >
           百人一首の用語について
         </h2>
         <dl>
@@ -25784,21 +25715,21 @@ Array [
           百人一首 歌一覧
         </h2>
         <ul
-          className="c16"
+          className="c14"
         >
           <li
-            className="c17"
+            className="c15"
           >
             <a
               href="/karutas/1/"
               onClick={[Function]}
             >
               <div
-                className="c18 c19 c20"
+                className="c16 c17 c18"
                 onClick={[Function]}
               >
                 <div
-                  className="c21"
+                  className="c19"
                 >
                   <span
                     className="makeStyles-root makeStyles-root "
@@ -25806,14 +25737,14 @@ Array [
                     一番
                   </span>
                   <p
-                    className="makeStyles-root makeStyles-root c22"
+                    className="makeStyles-root makeStyles-root c20"
                   >
                     秋の田の かりほの庵の 苫をあらみ
                      
                     わが衣手は 露にぬれつつ
                   </p>
                   <span
-                    className="makeStyles-root makeStyles-root c23"
+                    className="makeStyles-root makeStyles-root c21"
                   >
                     天智天皇
                   </span>
@@ -25822,18 +25753,18 @@ Array [
             </a>
           </li>
           <li
-            className="c17"
+            className="c15"
           >
             <a
               href="/karutas/2/"
               onClick={[Function]}
             >
               <div
-                className="c18 c19 c20"
+                className="c16 c17 c18"
                 onClick={[Function]}
               >
                 <div
-                  className="c21"
+                  className="c19"
                 >
                   <span
                     className="makeStyles-root makeStyles-root "
@@ -25841,14 +25772,14 @@ Array [
                     二番
                   </span>
                   <p
-                    className="makeStyles-root makeStyles-root c22"
+                    className="makeStyles-root makeStyles-root c20"
                   >
                     秋の田の かりほの庵の 苫をあらみ
                      
                     わが衣手は 露にぬれつつ
                   </p>
                   <span
-                    className="makeStyles-root makeStyles-root c23"
+                    className="makeStyles-root makeStyles-root c21"
                   >
                     天智天皇
                   </span>
@@ -25857,18 +25788,18 @@ Array [
             </a>
           </li>
           <li
-            className="c17"
+            className="c15"
           >
             <a
               href="/karutas/3/"
               onClick={[Function]}
             >
               <div
-                className="c18 c19 c20"
+                className="c16 c17 c18"
                 onClick={[Function]}
               >
                 <div
-                  className="c21"
+                  className="c19"
                 >
                   <span
                     className="makeStyles-root makeStyles-root "
@@ -25876,14 +25807,14 @@ Array [
                     三番
                   </span>
                   <p
-                    className="makeStyles-root makeStyles-root c22"
+                    className="makeStyles-root makeStyles-root c20"
                   >
                     秋の田の かりほの庵の 苫をあらみ
                      
                     わが衣手は 露にぬれつつ
                   </p>
                   <span
-                    className="makeStyles-root makeStyles-root c23"
+                    className="makeStyles-root makeStyles-root c21"
                   >
                     天智天皇
                   </span>
@@ -25892,18 +25823,18 @@ Array [
             </a>
           </li>
           <li
-            className="c17"
+            className="c15"
           >
             <a
               href="/karutas/4/"
               onClick={[Function]}
             >
               <div
-                className="c18 c19 c20"
+                className="c16 c17 c18"
                 onClick={[Function]}
               >
                 <div
-                  className="c21"
+                  className="c19"
                 >
                   <span
                     className="makeStyles-root makeStyles-root "
@@ -25911,14 +25842,14 @@ Array [
                     四番
                   </span>
                   <p
-                    className="makeStyles-root makeStyles-root c22"
+                    className="makeStyles-root makeStyles-root c20"
                   >
                     秋の田の かりほの庵の 苫をあらみ
                      
                     わが衣手は 露にぬれつつ
                   </p>
                   <span
-                    className="makeStyles-root makeStyles-root c23"
+                    className="makeStyles-root makeStyles-root c21"
                   >
                     天智天皇
                   </span>
@@ -25927,18 +25858,18 @@ Array [
             </a>
           </li>
           <li
-            className="c17"
+            className="c15"
           >
             <a
               href="/karutas/5/"
               onClick={[Function]}
             >
               <div
-                className="c18 c19 c20"
+                className="c16 c17 c18"
                 onClick={[Function]}
               >
                 <div
-                  className="c21"
+                  className="c19"
                 >
                   <span
                     className="makeStyles-root makeStyles-root "
@@ -25946,14 +25877,14 @@ Array [
                     五番
                   </span>
                   <p
-                    className="makeStyles-root makeStyles-root c22"
+                    className="makeStyles-root makeStyles-root c20"
                   >
                     秋の田の かりほの庵の 苫をあらみ
                      
                     わが衣手は 露にぬれつつ
                   </p>
                   <span
-                    className="makeStyles-root makeStyles-root c23"
+                    className="makeStyles-root makeStyles-root c21"
                   >
                     天智天皇
                   </span>
@@ -25962,18 +25893,18 @@ Array [
             </a>
           </li>
           <li
-            className="c17"
+            className="c15"
           >
             <a
               href="/karutas/6/"
               onClick={[Function]}
             >
               <div
-                className="c18 c19 c20"
+                className="c16 c17 c18"
                 onClick={[Function]}
               >
                 <div
-                  className="c21"
+                  className="c19"
                 >
                   <span
                     className="makeStyles-root makeStyles-root "
@@ -25981,14 +25912,14 @@ Array [
                     六番
                   </span>
                   <p
-                    className="makeStyles-root makeStyles-root c22"
+                    className="makeStyles-root makeStyles-root c20"
                   >
                     秋の田の かりほの庵の 苫をあらみ
                      
                     わが衣手は 露にぬれつつ
                   </p>
                   <span
-                    className="makeStyles-root makeStyles-root c23"
+                    className="makeStyles-root makeStyles-root c21"
                   >
                     天智天皇
                   </span>
@@ -25997,18 +25928,18 @@ Array [
             </a>
           </li>
           <li
-            className="c17"
+            className="c15"
           >
             <a
               href="/karutas/7/"
               onClick={[Function]}
             >
               <div
-                className="c18 c19 c20"
+                className="c16 c17 c18"
                 onClick={[Function]}
               >
                 <div
-                  className="c21"
+                  className="c19"
                 >
                   <span
                     className="makeStyles-root makeStyles-root "
@@ -26016,14 +25947,14 @@ Array [
                     七番
                   </span>
                   <p
-                    className="makeStyles-root makeStyles-root c22"
+                    className="makeStyles-root makeStyles-root c20"
                   >
                     秋の田の かりほの庵の 苫をあらみ
                      
                     わが衣手は 露にぬれつつ
                   </p>
                   <span
-                    className="makeStyles-root makeStyles-root c23"
+                    className="makeStyles-root makeStyles-root c21"
                   >
                     天智天皇
                   </span>
@@ -26032,18 +25963,18 @@ Array [
             </a>
           </li>
           <li
-            className="c17"
+            className="c15"
           >
             <a
               href="/karutas/8/"
               onClick={[Function]}
             >
               <div
-                className="c18 c19 c20"
+                className="c16 c17 c18"
                 onClick={[Function]}
               >
                 <div
-                  className="c21"
+                  className="c19"
                 >
                   <span
                     className="makeStyles-root makeStyles-root "
@@ -26051,14 +25982,14 @@ Array [
                     八番
                   </span>
                   <p
-                    className="makeStyles-root makeStyles-root c22"
+                    className="makeStyles-root makeStyles-root c20"
                   >
                     秋の田の かりほの庵の 苫をあらみ
                      
                     わが衣手は 露にぬれつつ
                   </p>
                   <span
-                    className="makeStyles-root makeStyles-root c23"
+                    className="makeStyles-root makeStyles-root c21"
                   >
                     天智天皇
                   </span>
@@ -26067,18 +25998,18 @@ Array [
             </a>
           </li>
           <li
-            className="c17"
+            className="c15"
           >
             <a
               href="/karutas/9/"
               onClick={[Function]}
             >
               <div
-                className="c18 c19 c20"
+                className="c16 c17 c18"
                 onClick={[Function]}
               >
                 <div
-                  className="c21"
+                  className="c19"
                 >
                   <span
                     className="makeStyles-root makeStyles-root "
@@ -26086,14 +26017,14 @@ Array [
                     九番
                   </span>
                   <p
-                    className="makeStyles-root makeStyles-root c22"
+                    className="makeStyles-root makeStyles-root c20"
                   >
                     秋の田の かりほの庵の 苫をあらみ
                      
                     わが衣手は 露にぬれつつ
                   </p>
                   <span
-                    className="makeStyles-root makeStyles-root c23"
+                    className="makeStyles-root makeStyles-root c21"
                   >
                     天智天皇
                   </span>
@@ -26102,18 +26033,18 @@ Array [
             </a>
           </li>
           <li
-            className="c17"
+            className="c15"
           >
             <a
               href="/karutas/10/"
               onClick={[Function]}
             >
               <div
-                className="c18 c19 c20"
+                className="c16 c17 c18"
                 onClick={[Function]}
               >
                 <div
-                  className="c21"
+                  className="c19"
                 >
                   <span
                     className="makeStyles-root makeStyles-root "
@@ -26121,14 +26052,14 @@ Array [
                     十番
                   </span>
                   <p
-                    className="makeStyles-root makeStyles-root c22"
+                    className="makeStyles-root makeStyles-root c20"
                   >
                     秋の田の かりほの庵の 苫をあらみ
                      
                     わが衣手は 露にぬれつつ
                   </p>
                   <span
-                    className="makeStyles-root makeStyles-root c23"
+                    className="makeStyles-root makeStyles-root c21"
                   >
                     天智天皇
                   </span>
@@ -26137,18 +26068,18 @@ Array [
             </a>
           </li>
           <li
-            className="c17"
+            className="c15"
           >
             <a
               href="/karutas/11/"
               onClick={[Function]}
             >
               <div
-                className="c18 c19 c20"
+                className="c16 c17 c18"
                 onClick={[Function]}
               >
                 <div
-                  className="c21"
+                  className="c19"
                 >
                   <span
                     className="makeStyles-root makeStyles-root "
@@ -26156,14 +26087,14 @@ Array [
                     十一番
                   </span>
                   <p
-                    className="makeStyles-root makeStyles-root c22"
+                    className="makeStyles-root makeStyles-root c20"
                   >
                     秋の田の かりほの庵の 苫をあらみ
                      
                     わが衣手は 露にぬれつつ
                   </p>
                   <span
-                    className="makeStyles-root makeStyles-root c23"
+                    className="makeStyles-root makeStyles-root c21"
                   >
                     天智天皇
                   </span>
@@ -26172,18 +26103,18 @@ Array [
             </a>
           </li>
           <li
-            className="c17"
+            className="c15"
           >
             <a
               href="/karutas/12/"
               onClick={[Function]}
             >
               <div
-                className="c18 c19 c20"
+                className="c16 c17 c18"
                 onClick={[Function]}
               >
                 <div
-                  className="c21"
+                  className="c19"
                 >
                   <span
                     className="makeStyles-root makeStyles-root "
@@ -26191,14 +26122,14 @@ Array [
                     十二番
                   </span>
                   <p
-                    className="makeStyles-root makeStyles-root c22"
+                    className="makeStyles-root makeStyles-root c20"
                   >
                     秋の田の かりほの庵の 苫をあらみ
                      
                     わが衣手は 露にぬれつつ
                   </p>
                   <span
-                    className="makeStyles-root makeStyles-root c23"
+                    className="makeStyles-root makeStyles-root c21"
                   >
                     天智天皇
                   </span>
@@ -26207,18 +26138,18 @@ Array [
             </a>
           </li>
           <li
-            className="c17"
+            className="c15"
           >
             <a
               href="/karutas/13/"
               onClick={[Function]}
             >
               <div
-                className="c18 c19 c20"
+                className="c16 c17 c18"
                 onClick={[Function]}
               >
                 <div
-                  className="c21"
+                  className="c19"
                 >
                   <span
                     className="makeStyles-root makeStyles-root "
@@ -26226,14 +26157,14 @@ Array [
                     十三番
                   </span>
                   <p
-                    className="makeStyles-root makeStyles-root c22"
+                    className="makeStyles-root makeStyles-root c20"
                   >
                     秋の田の かりほの庵の 苫をあらみ
                      
                     わが衣手は 露にぬれつつ
                   </p>
                   <span
-                    className="makeStyles-root makeStyles-root c23"
+                    className="makeStyles-root makeStyles-root c21"
                   >
                     天智天皇
                   </span>
@@ -26242,18 +26173,18 @@ Array [
             </a>
           </li>
           <li
-            className="c17"
+            className="c15"
           >
             <a
               href="/karutas/14/"
               onClick={[Function]}
             >
               <div
-                className="c18 c19 c20"
+                className="c16 c17 c18"
                 onClick={[Function]}
               >
                 <div
-                  className="c21"
+                  className="c19"
                 >
                   <span
                     className="makeStyles-root makeStyles-root "
@@ -26261,14 +26192,14 @@ Array [
                     十四番
                   </span>
                   <p
-                    className="makeStyles-root makeStyles-root c22"
+                    className="makeStyles-root makeStyles-root c20"
                   >
                     秋の田の かりほの庵の 苫をあらみ
                      
                     わが衣手は 露にぬれつつ
                   </p>
                   <span
-                    className="makeStyles-root makeStyles-root c23"
+                    className="makeStyles-root makeStyles-root c21"
                   >
                     天智天皇
                   </span>
@@ -26277,18 +26208,18 @@ Array [
             </a>
           </li>
           <li
-            className="c17"
+            className="c15"
           >
             <a
               href="/karutas/15/"
               onClick={[Function]}
             >
               <div
-                className="c18 c19 c20"
+                className="c16 c17 c18"
                 onClick={[Function]}
               >
                 <div
-                  className="c21"
+                  className="c19"
                 >
                   <span
                     className="makeStyles-root makeStyles-root "
@@ -26296,14 +26227,14 @@ Array [
                     十五番
                   </span>
                   <p
-                    className="makeStyles-root makeStyles-root c22"
+                    className="makeStyles-root makeStyles-root c20"
                   >
                     秋の田の かりほの庵の 苫をあらみ
                      
                     わが衣手は 露にぬれつつ
                   </p>
                   <span
-                    className="makeStyles-root makeStyles-root c23"
+                    className="makeStyles-root makeStyles-root c21"
                   >
                     天智天皇
                   </span>
@@ -26312,18 +26243,18 @@ Array [
             </a>
           </li>
           <li
-            className="c17"
+            className="c15"
           >
             <a
               href="/karutas/16/"
               onClick={[Function]}
             >
               <div
-                className="c18 c19 c20"
+                className="c16 c17 c18"
                 onClick={[Function]}
               >
                 <div
-                  className="c21"
+                  className="c19"
                 >
                   <span
                     className="makeStyles-root makeStyles-root "
@@ -26331,14 +26262,14 @@ Array [
                     十六番
                   </span>
                   <p
-                    className="makeStyles-root makeStyles-root c22"
+                    className="makeStyles-root makeStyles-root c20"
                   >
                     秋の田の かりほの庵の 苫をあらみ
                      
                     わが衣手は 露にぬれつつ
                   </p>
                   <span
-                    className="makeStyles-root makeStyles-root c23"
+                    className="makeStyles-root makeStyles-root c21"
                   >
                     天智天皇
                   </span>
@@ -26347,18 +26278,18 @@ Array [
             </a>
           </li>
           <li
-            className="c17"
+            className="c15"
           >
             <a
               href="/karutas/17/"
               onClick={[Function]}
             >
               <div
-                className="c18 c19 c20"
+                className="c16 c17 c18"
                 onClick={[Function]}
               >
                 <div
-                  className="c21"
+                  className="c19"
                 >
                   <span
                     className="makeStyles-root makeStyles-root "
@@ -26366,14 +26297,14 @@ Array [
                     十七番
                   </span>
                   <p
-                    className="makeStyles-root makeStyles-root c22"
+                    className="makeStyles-root makeStyles-root c20"
                   >
                     秋の田の かりほの庵の 苫をあらみ
                      
                     わが衣手は 露にぬれつつ
                   </p>
                   <span
-                    className="makeStyles-root makeStyles-root c23"
+                    className="makeStyles-root makeStyles-root c21"
                   >
                     天智天皇
                   </span>
@@ -26382,18 +26313,18 @@ Array [
             </a>
           </li>
           <li
-            className="c17"
+            className="c15"
           >
             <a
               href="/karutas/18/"
               onClick={[Function]}
             >
               <div
-                className="c18 c19 c20"
+                className="c16 c17 c18"
                 onClick={[Function]}
               >
                 <div
-                  className="c21"
+                  className="c19"
                 >
                   <span
                     className="makeStyles-root makeStyles-root "
@@ -26401,14 +26332,14 @@ Array [
                     十八番
                   </span>
                   <p
-                    className="makeStyles-root makeStyles-root c22"
+                    className="makeStyles-root makeStyles-root c20"
                   >
                     秋の田の かりほの庵の 苫をあらみ
                      
                     わが衣手は 露にぬれつつ
                   </p>
                   <span
-                    className="makeStyles-root makeStyles-root c23"
+                    className="makeStyles-root makeStyles-root c21"
                   >
                     天智天皇
                   </span>
@@ -26417,18 +26348,18 @@ Array [
             </a>
           </li>
           <li
-            className="c17"
+            className="c15"
           >
             <a
               href="/karutas/19/"
               onClick={[Function]}
             >
               <div
-                className="c18 c19 c20"
+                className="c16 c17 c18"
                 onClick={[Function]}
               >
                 <div
-                  className="c21"
+                  className="c19"
                 >
                   <span
                     className="makeStyles-root makeStyles-root "
@@ -26436,14 +26367,14 @@ Array [
                     十九番
                   </span>
                   <p
-                    className="makeStyles-root makeStyles-root c22"
+                    className="makeStyles-root makeStyles-root c20"
                   >
                     秋の田の かりほの庵の 苫をあらみ
                      
                     わが衣手は 露にぬれつつ
                   </p>
                   <span
-                    className="makeStyles-root makeStyles-root c23"
+                    className="makeStyles-root makeStyles-root c21"
                   >
                     天智天皇
                   </span>
@@ -26452,18 +26383,18 @@ Array [
             </a>
           </li>
           <li
-            className="c17"
+            className="c15"
           >
             <a
               href="/karutas/20/"
               onClick={[Function]}
             >
               <div
-                className="c18 c19 c20"
+                className="c16 c17 c18"
                 onClick={[Function]}
               >
                 <div
-                  className="c21"
+                  className="c19"
                 >
                   <span
                     className="makeStyles-root makeStyles-root "
@@ -26471,14 +26402,14 @@ Array [
                     二十番
                   </span>
                   <p
-                    className="makeStyles-root makeStyles-root c22"
+                    className="makeStyles-root makeStyles-root c20"
                   >
                     秋の田の かりほの庵の 苫をあらみ
                      
                     わが衣手は 露にぬれつつ
                   </p>
                   <span
-                    className="makeStyles-root makeStyles-root c23"
+                    className="makeStyles-root makeStyles-root c21"
                   >
                     天智天皇
                   </span>
@@ -26487,18 +26418,18 @@ Array [
             </a>
           </li>
           <li
-            className="c17"
+            className="c15"
           >
             <a
               href="/karutas/21/"
               onClick={[Function]}
             >
               <div
-                className="c18 c19 c20"
+                className="c16 c17 c18"
                 onClick={[Function]}
               >
                 <div
-                  className="c21"
+                  className="c19"
                 >
                   <span
                     className="makeStyles-root makeStyles-root "
@@ -26506,14 +26437,14 @@ Array [
                     二十一番
                   </span>
                   <p
-                    className="makeStyles-root makeStyles-root c22"
+                    className="makeStyles-root makeStyles-root c20"
                   >
                     秋の田の かりほの庵の 苫をあらみ
                      
                     わが衣手は 露にぬれつつ
                   </p>
                   <span
-                    className="makeStyles-root makeStyles-root c23"
+                    className="makeStyles-root makeStyles-root c21"
                   >
                     天智天皇
                   </span>
@@ -26522,18 +26453,18 @@ Array [
             </a>
           </li>
           <li
-            className="c17"
+            className="c15"
           >
             <a
               href="/karutas/22/"
               onClick={[Function]}
             >
               <div
-                className="c18 c19 c20"
+                className="c16 c17 c18"
                 onClick={[Function]}
               >
                 <div
-                  className="c21"
+                  className="c19"
                 >
                   <span
                     className="makeStyles-root makeStyles-root "
@@ -26541,14 +26472,14 @@ Array [
                     二十二番
                   </span>
                   <p
-                    className="makeStyles-root makeStyles-root c22"
+                    className="makeStyles-root makeStyles-root c20"
                   >
                     秋の田の かりほの庵の 苫をあらみ
                      
                     わが衣手は 露にぬれつつ
                   </p>
                   <span
-                    className="makeStyles-root makeStyles-root c23"
+                    className="makeStyles-root makeStyles-root c21"
                   >
                     天智天皇
                   </span>
@@ -26557,18 +26488,18 @@ Array [
             </a>
           </li>
           <li
-            className="c17"
+            className="c15"
           >
             <a
               href="/karutas/23/"
               onClick={[Function]}
             >
               <div
-                className="c18 c19 c20"
+                className="c16 c17 c18"
                 onClick={[Function]}
               >
                 <div
-                  className="c21"
+                  className="c19"
                 >
                   <span
                     className="makeStyles-root makeStyles-root "
@@ -26576,14 +26507,14 @@ Array [
                     二十三番
                   </span>
                   <p
-                    className="makeStyles-root makeStyles-root c22"
+                    className="makeStyles-root makeStyles-root c20"
                   >
                     秋の田の かりほの庵の 苫をあらみ
                      
                     わが衣手は 露にぬれつつ
                   </p>
                   <span
-                    className="makeStyles-root makeStyles-root c23"
+                    className="makeStyles-root makeStyles-root c21"
                   >
                     天智天皇
                   </span>
@@ -26592,18 +26523,18 @@ Array [
             </a>
           </li>
           <li
-            className="c17"
+            className="c15"
           >
             <a
               href="/karutas/24/"
               onClick={[Function]}
             >
               <div
-                className="c18 c19 c20"
+                className="c16 c17 c18"
                 onClick={[Function]}
               >
                 <div
-                  className="c21"
+                  className="c19"
                 >
                   <span
                     className="makeStyles-root makeStyles-root "
@@ -26611,14 +26542,14 @@ Array [
                     二十四番
                   </span>
                   <p
-                    className="makeStyles-root makeStyles-root c22"
+                    className="makeStyles-root makeStyles-root c20"
                   >
                     秋の田の かりほの庵の 苫をあらみ
                      
                     わが衣手は 露にぬれつつ
                   </p>
                   <span
-                    className="makeStyles-root makeStyles-root c23"
+                    className="makeStyles-root makeStyles-root c21"
                   >
                     天智天皇
                   </span>
@@ -26627,18 +26558,18 @@ Array [
             </a>
           </li>
           <li
-            className="c17"
+            className="c15"
           >
             <a
               href="/karutas/25/"
               onClick={[Function]}
             >
               <div
-                className="c18 c19 c20"
+                className="c16 c17 c18"
                 onClick={[Function]}
               >
                 <div
-                  className="c21"
+                  className="c19"
                 >
                   <span
                     className="makeStyles-root makeStyles-root "
@@ -26646,14 +26577,14 @@ Array [
                     二十五番
                   </span>
                   <p
-                    className="makeStyles-root makeStyles-root c22"
+                    className="makeStyles-root makeStyles-root c20"
                   >
                     秋の田の かりほの庵の 苫をあらみ
                      
                     わが衣手は 露にぬれつつ
                   </p>
                   <span
-                    className="makeStyles-root makeStyles-root c23"
+                    className="makeStyles-root makeStyles-root c21"
                   >
                     天智天皇
                   </span>
@@ -26662,18 +26593,18 @@ Array [
             </a>
           </li>
           <li
-            className="c17"
+            className="c15"
           >
             <a
               href="/karutas/26/"
               onClick={[Function]}
             >
               <div
-                className="c18 c19 c20"
+                className="c16 c17 c18"
                 onClick={[Function]}
               >
                 <div
-                  className="c21"
+                  className="c19"
                 >
                   <span
                     className="makeStyles-root makeStyles-root "
@@ -26681,14 +26612,14 @@ Array [
                     二十六番
                   </span>
                   <p
-                    className="makeStyles-root makeStyles-root c22"
+                    className="makeStyles-root makeStyles-root c20"
                   >
                     秋の田の かりほの庵の 苫をあらみ
                      
                     わが衣手は 露にぬれつつ
                   </p>
                   <span
-                    className="makeStyles-root makeStyles-root c23"
+                    className="makeStyles-root makeStyles-root c21"
                   >
                     天智天皇
                   </span>
@@ -26697,18 +26628,18 @@ Array [
             </a>
           </li>
           <li
-            className="c17"
+            className="c15"
           >
             <a
               href="/karutas/27/"
               onClick={[Function]}
             >
               <div
-                className="c18 c19 c20"
+                className="c16 c17 c18"
                 onClick={[Function]}
               >
                 <div
-                  className="c21"
+                  className="c19"
                 >
                   <span
                     className="makeStyles-root makeStyles-root "
@@ -26716,14 +26647,14 @@ Array [
                     二十七番
                   </span>
                   <p
-                    className="makeStyles-root makeStyles-root c22"
+                    className="makeStyles-root makeStyles-root c20"
                   >
                     秋の田の かりほの庵の 苫をあらみ
                      
                     わが衣手は 露にぬれつつ
                   </p>
                   <span
-                    className="makeStyles-root makeStyles-root c23"
+                    className="makeStyles-root makeStyles-root c21"
                   >
                     天智天皇
                   </span>
@@ -26732,18 +26663,18 @@ Array [
             </a>
           </li>
           <li
-            className="c17"
+            className="c15"
           >
             <a
               href="/karutas/28/"
               onClick={[Function]}
             >
               <div
-                className="c18 c19 c20"
+                className="c16 c17 c18"
                 onClick={[Function]}
               >
                 <div
-                  className="c21"
+                  className="c19"
                 >
                   <span
                     className="makeStyles-root makeStyles-root "
@@ -26751,14 +26682,14 @@ Array [
                     二十八番
                   </span>
                   <p
-                    className="makeStyles-root makeStyles-root c22"
+                    className="makeStyles-root makeStyles-root c20"
                   >
                     秋の田の かりほの庵の 苫をあらみ
                      
                     わが衣手は 露にぬれつつ
                   </p>
                   <span
-                    className="makeStyles-root makeStyles-root c23"
+                    className="makeStyles-root makeStyles-root c21"
                   >
                     天智天皇
                   </span>
@@ -26767,18 +26698,18 @@ Array [
             </a>
           </li>
           <li
-            className="c17"
+            className="c15"
           >
             <a
               href="/karutas/29/"
               onClick={[Function]}
             >
               <div
-                className="c18 c19 c20"
+                className="c16 c17 c18"
                 onClick={[Function]}
               >
                 <div
-                  className="c21"
+                  className="c19"
                 >
                   <span
                     className="makeStyles-root makeStyles-root "
@@ -26786,14 +26717,14 @@ Array [
                     二十九番
                   </span>
                   <p
-                    className="makeStyles-root makeStyles-root c22"
+                    className="makeStyles-root makeStyles-root c20"
                   >
                     秋の田の かりほの庵の 苫をあらみ
                      
                     わが衣手は 露にぬれつつ
                   </p>
                   <span
-                    className="makeStyles-root makeStyles-root c23"
+                    className="makeStyles-root makeStyles-root c21"
                   >
                     天智天皇
                   </span>
@@ -26802,18 +26733,18 @@ Array [
             </a>
           </li>
           <li
-            className="c17"
+            className="c15"
           >
             <a
               href="/karutas/30/"
               onClick={[Function]}
             >
               <div
-                className="c18 c19 c20"
+                className="c16 c17 c18"
                 onClick={[Function]}
               >
                 <div
-                  className="c21"
+                  className="c19"
                 >
                   <span
                     className="makeStyles-root makeStyles-root "
@@ -26821,14 +26752,14 @@ Array [
                     三十番
                   </span>
                   <p
-                    className="makeStyles-root makeStyles-root c22"
+                    className="makeStyles-root makeStyles-root c20"
                   >
                     秋の田の かりほの庵の 苫をあらみ
                      
                     わが衣手は 露にぬれつつ
                   </p>
                   <span
-                    className="makeStyles-root makeStyles-root c23"
+                    className="makeStyles-root makeStyles-root c21"
                   >
                     天智天皇
                   </span>
@@ -26837,18 +26768,18 @@ Array [
             </a>
           </li>
           <li
-            className="c17"
+            className="c15"
           >
             <a
               href="/karutas/31/"
               onClick={[Function]}
             >
               <div
-                className="c18 c19 c20"
+                className="c16 c17 c18"
                 onClick={[Function]}
               >
                 <div
-                  className="c21"
+                  className="c19"
                 >
                   <span
                     className="makeStyles-root makeStyles-root "
@@ -26856,14 +26787,14 @@ Array [
                     三十一番
                   </span>
                   <p
-                    className="makeStyles-root makeStyles-root c22"
+                    className="makeStyles-root makeStyles-root c20"
                   >
                     秋の田の かりほの庵の 苫をあらみ
                      
                     わが衣手は 露にぬれつつ
                   </p>
                   <span
-                    className="makeStyles-root makeStyles-root c23"
+                    className="makeStyles-root makeStyles-root c21"
                   >
                     天智天皇
                   </span>
@@ -26872,18 +26803,18 @@ Array [
             </a>
           </li>
           <li
-            className="c17"
+            className="c15"
           >
             <a
               href="/karutas/32/"
               onClick={[Function]}
             >
               <div
-                className="c18 c19 c20"
+                className="c16 c17 c18"
                 onClick={[Function]}
               >
                 <div
-                  className="c21"
+                  className="c19"
                 >
                   <span
                     className="makeStyles-root makeStyles-root "
@@ -26891,14 +26822,14 @@ Array [
                     三十二番
                   </span>
                   <p
-                    className="makeStyles-root makeStyles-root c22"
+                    className="makeStyles-root makeStyles-root c20"
                   >
                     秋の田の かりほの庵の 苫をあらみ
                      
                     わが衣手は 露にぬれつつ
                   </p>
                   <span
-                    className="makeStyles-root makeStyles-root c23"
+                    className="makeStyles-root makeStyles-root c21"
                   >
                     天智天皇
                   </span>
@@ -26907,18 +26838,18 @@ Array [
             </a>
           </li>
           <li
-            className="c17"
+            className="c15"
           >
             <a
               href="/karutas/33/"
               onClick={[Function]}
             >
               <div
-                className="c18 c19 c20"
+                className="c16 c17 c18"
                 onClick={[Function]}
               >
                 <div
-                  className="c21"
+                  className="c19"
                 >
                   <span
                     className="makeStyles-root makeStyles-root "
@@ -26926,14 +26857,14 @@ Array [
                     三十三番
                   </span>
                   <p
-                    className="makeStyles-root makeStyles-root c22"
+                    className="makeStyles-root makeStyles-root c20"
                   >
                     秋の田の かりほの庵の 苫をあらみ
                      
                     わが衣手は 露にぬれつつ
                   </p>
                   <span
-                    className="makeStyles-root makeStyles-root c23"
+                    className="makeStyles-root makeStyles-root c21"
                   >
                     天智天皇
                   </span>
@@ -26942,18 +26873,18 @@ Array [
             </a>
           </li>
           <li
-            className="c17"
+            className="c15"
           >
             <a
               href="/karutas/34/"
               onClick={[Function]}
             >
               <div
-                className="c18 c19 c20"
+                className="c16 c17 c18"
                 onClick={[Function]}
               >
                 <div
-                  className="c21"
+                  className="c19"
                 >
                   <span
                     className="makeStyles-root makeStyles-root "
@@ -26961,14 +26892,14 @@ Array [
                     三十四番
                   </span>
                   <p
-                    className="makeStyles-root makeStyles-root c22"
+                    className="makeStyles-root makeStyles-root c20"
                   >
                     秋の田の かりほの庵の 苫をあらみ
                      
                     わが衣手は 露にぬれつつ
                   </p>
                   <span
-                    className="makeStyles-root makeStyles-root c23"
+                    className="makeStyles-root makeStyles-root c21"
                   >
                     天智天皇
                   </span>
@@ -26977,18 +26908,18 @@ Array [
             </a>
           </li>
           <li
-            className="c17"
+            className="c15"
           >
             <a
               href="/karutas/35/"
               onClick={[Function]}
             >
               <div
-                className="c18 c19 c20"
+                className="c16 c17 c18"
                 onClick={[Function]}
               >
                 <div
-                  className="c21"
+                  className="c19"
                 >
                   <span
                     className="makeStyles-root makeStyles-root "
@@ -26996,14 +26927,14 @@ Array [
                     三十五番
                   </span>
                   <p
-                    className="makeStyles-root makeStyles-root c22"
+                    className="makeStyles-root makeStyles-root c20"
                   >
                     秋の田の かりほの庵の 苫をあらみ
                      
                     わが衣手は 露にぬれつつ
                   </p>
                   <span
-                    className="makeStyles-root makeStyles-root c23"
+                    className="makeStyles-root makeStyles-root c21"
                   >
                     天智天皇
                   </span>
@@ -27012,18 +26943,18 @@ Array [
             </a>
           </li>
           <li
-            className="c17"
+            className="c15"
           >
             <a
               href="/karutas/36/"
               onClick={[Function]}
             >
               <div
-                className="c18 c19 c20"
+                className="c16 c17 c18"
                 onClick={[Function]}
               >
                 <div
-                  className="c21"
+                  className="c19"
                 >
                   <span
                     className="makeStyles-root makeStyles-root "
@@ -27031,14 +26962,14 @@ Array [
                     三十六番
                   </span>
                   <p
-                    className="makeStyles-root makeStyles-root c22"
+                    className="makeStyles-root makeStyles-root c20"
                   >
                     秋の田の かりほの庵の 苫をあらみ
                      
                     わが衣手は 露にぬれつつ
                   </p>
                   <span
-                    className="makeStyles-root makeStyles-root c23"
+                    className="makeStyles-root makeStyles-root c21"
                   >
                     天智天皇
                   </span>
@@ -27047,18 +26978,18 @@ Array [
             </a>
           </li>
           <li
-            className="c17"
+            className="c15"
           >
             <a
               href="/karutas/37/"
               onClick={[Function]}
             >
               <div
-                className="c18 c19 c20"
+                className="c16 c17 c18"
                 onClick={[Function]}
               >
                 <div
-                  className="c21"
+                  className="c19"
                 >
                   <span
                     className="makeStyles-root makeStyles-root "
@@ -27066,14 +26997,14 @@ Array [
                     三十七番
                   </span>
                   <p
-                    className="makeStyles-root makeStyles-root c22"
+                    className="makeStyles-root makeStyles-root c20"
                   >
                     秋の田の かりほの庵の 苫をあらみ
                      
                     わが衣手は 露にぬれつつ
                   </p>
                   <span
-                    className="makeStyles-root makeStyles-root c23"
+                    className="makeStyles-root makeStyles-root c21"
                   >
                     天智天皇
                   </span>
@@ -27082,18 +27013,18 @@ Array [
             </a>
           </li>
           <li
-            className="c17"
+            className="c15"
           >
             <a
               href="/karutas/38/"
               onClick={[Function]}
             >
               <div
-                className="c18 c19 c20"
+                className="c16 c17 c18"
                 onClick={[Function]}
               >
                 <div
-                  className="c21"
+                  className="c19"
                 >
                   <span
                     className="makeStyles-root makeStyles-root "
@@ -27101,14 +27032,14 @@ Array [
                     三十八番
                   </span>
                   <p
-                    className="makeStyles-root makeStyles-root c22"
+                    className="makeStyles-root makeStyles-root c20"
                   >
                     秋の田の かりほの庵の 苫をあらみ
                      
                     わが衣手は 露にぬれつつ
                   </p>
                   <span
-                    className="makeStyles-root makeStyles-root c23"
+                    className="makeStyles-root makeStyles-root c21"
                   >
                     天智天皇
                   </span>
@@ -27117,18 +27048,18 @@ Array [
             </a>
           </li>
           <li
-            className="c17"
+            className="c15"
           >
             <a
               href="/karutas/39/"
               onClick={[Function]}
             >
               <div
-                className="c18 c19 c20"
+                className="c16 c17 c18"
                 onClick={[Function]}
               >
                 <div
-                  className="c21"
+                  className="c19"
                 >
                   <span
                     className="makeStyles-root makeStyles-root "
@@ -27136,14 +27067,14 @@ Array [
                     三十九番
                   </span>
                   <p
-                    className="makeStyles-root makeStyles-root c22"
+                    className="makeStyles-root makeStyles-root c20"
                   >
                     秋の田の かりほの庵の 苫をあらみ
                      
                     わが衣手は 露にぬれつつ
                   </p>
                   <span
-                    className="makeStyles-root makeStyles-root c23"
+                    className="makeStyles-root makeStyles-root c21"
                   >
                     天智天皇
                   </span>
@@ -27152,18 +27083,18 @@ Array [
             </a>
           </li>
           <li
-            className="c17"
+            className="c15"
           >
             <a
               href="/karutas/40/"
               onClick={[Function]}
             >
               <div
-                className="c18 c19 c20"
+                className="c16 c17 c18"
                 onClick={[Function]}
               >
                 <div
-                  className="c21"
+                  className="c19"
                 >
                   <span
                     className="makeStyles-root makeStyles-root "
@@ -27171,14 +27102,14 @@ Array [
                     四十番
                   </span>
                   <p
-                    className="makeStyles-root makeStyles-root c22"
+                    className="makeStyles-root makeStyles-root c20"
                   >
                     秋の田の かりほの庵の 苫をあらみ
                      
                     わが衣手は 露にぬれつつ
                   </p>
                   <span
-                    className="makeStyles-root makeStyles-root c23"
+                    className="makeStyles-root makeStyles-root c21"
                   >
                     天智天皇
                   </span>
@@ -27187,18 +27118,18 @@ Array [
             </a>
           </li>
           <li
-            className="c17"
+            className="c15"
           >
             <a
               href="/karutas/41/"
               onClick={[Function]}
             >
               <div
-                className="c18 c19 c20"
+                className="c16 c17 c18"
                 onClick={[Function]}
               >
                 <div
-                  className="c21"
+                  className="c19"
                 >
                   <span
                     className="makeStyles-root makeStyles-root "
@@ -27206,14 +27137,14 @@ Array [
                     四十一番
                   </span>
                   <p
-                    className="makeStyles-root makeStyles-root c22"
+                    className="makeStyles-root makeStyles-root c20"
                   >
                     秋の田の かりほの庵の 苫をあらみ
                      
                     わが衣手は 露にぬれつつ
                   </p>
                   <span
-                    className="makeStyles-root makeStyles-root c23"
+                    className="makeStyles-root makeStyles-root c21"
                   >
                     天智天皇
                   </span>
@@ -27222,18 +27153,18 @@ Array [
             </a>
           </li>
           <li
-            className="c17"
+            className="c15"
           >
             <a
               href="/karutas/42/"
               onClick={[Function]}
             >
               <div
-                className="c18 c19 c20"
+                className="c16 c17 c18"
                 onClick={[Function]}
               >
                 <div
-                  className="c21"
+                  className="c19"
                 >
                   <span
                     className="makeStyles-root makeStyles-root "
@@ -27241,14 +27172,14 @@ Array [
                     四十二番
                   </span>
                   <p
-                    className="makeStyles-root makeStyles-root c22"
+                    className="makeStyles-root makeStyles-root c20"
                   >
                     秋の田の かりほの庵の 苫をあらみ
                      
                     わが衣手は 露にぬれつつ
                   </p>
                   <span
-                    className="makeStyles-root makeStyles-root c23"
+                    className="makeStyles-root makeStyles-root c21"
                   >
                     天智天皇
                   </span>
@@ -27257,18 +27188,18 @@ Array [
             </a>
           </li>
           <li
-            className="c17"
+            className="c15"
           >
             <a
               href="/karutas/43/"
               onClick={[Function]}
             >
               <div
-                className="c18 c19 c20"
+                className="c16 c17 c18"
                 onClick={[Function]}
               >
                 <div
-                  className="c21"
+                  className="c19"
                 >
                   <span
                     className="makeStyles-root makeStyles-root "
@@ -27276,14 +27207,14 @@ Array [
                     四十三番
                   </span>
                   <p
-                    className="makeStyles-root makeStyles-root c22"
+                    className="makeStyles-root makeStyles-root c20"
                   >
                     秋の田の かりほの庵の 苫をあらみ
                      
                     わが衣手は 露にぬれつつ
                   </p>
                   <span
-                    className="makeStyles-root makeStyles-root c23"
+                    className="makeStyles-root makeStyles-root c21"
                   >
                     天智天皇
                   </span>
@@ -27292,18 +27223,18 @@ Array [
             </a>
           </li>
           <li
-            className="c17"
+            className="c15"
           >
             <a
               href="/karutas/44/"
               onClick={[Function]}
             >
               <div
-                className="c18 c19 c20"
+                className="c16 c17 c18"
                 onClick={[Function]}
               >
                 <div
-                  className="c21"
+                  className="c19"
                 >
                   <span
                     className="makeStyles-root makeStyles-root "
@@ -27311,14 +27242,14 @@ Array [
                     四十四番
                   </span>
                   <p
-                    className="makeStyles-root makeStyles-root c22"
+                    className="makeStyles-root makeStyles-root c20"
                   >
                     秋の田の かりほの庵の 苫をあらみ
                      
                     わが衣手は 露にぬれつつ
                   </p>
                   <span
-                    className="makeStyles-root makeStyles-root c23"
+                    className="makeStyles-root makeStyles-root c21"
                   >
                     天智天皇
                   </span>
@@ -27327,18 +27258,18 @@ Array [
             </a>
           </li>
           <li
-            className="c17"
+            className="c15"
           >
             <a
               href="/karutas/45/"
               onClick={[Function]}
             >
               <div
-                className="c18 c19 c20"
+                className="c16 c17 c18"
                 onClick={[Function]}
               >
                 <div
-                  className="c21"
+                  className="c19"
                 >
                   <span
                     className="makeStyles-root makeStyles-root "
@@ -27346,14 +27277,14 @@ Array [
                     四十五番
                   </span>
                   <p
-                    className="makeStyles-root makeStyles-root c22"
+                    className="makeStyles-root makeStyles-root c20"
                   >
                     秋の田の かりほの庵の 苫をあらみ
                      
                     わが衣手は 露にぬれつつ
                   </p>
                   <span
-                    className="makeStyles-root makeStyles-root c23"
+                    className="makeStyles-root makeStyles-root c21"
                   >
                     天智天皇
                   </span>
@@ -27362,18 +27293,18 @@ Array [
             </a>
           </li>
           <li
-            className="c17"
+            className="c15"
           >
             <a
               href="/karutas/46/"
               onClick={[Function]}
             >
               <div
-                className="c18 c19 c20"
+                className="c16 c17 c18"
                 onClick={[Function]}
               >
                 <div
-                  className="c21"
+                  className="c19"
                 >
                   <span
                     className="makeStyles-root makeStyles-root "
@@ -27381,14 +27312,14 @@ Array [
                     四十六番
                   </span>
                   <p
-                    className="makeStyles-root makeStyles-root c22"
+                    className="makeStyles-root makeStyles-root c20"
                   >
                     秋の田の かりほの庵の 苫をあらみ
                      
                     わが衣手は 露にぬれつつ
                   </p>
                   <span
-                    className="makeStyles-root makeStyles-root c23"
+                    className="makeStyles-root makeStyles-root c21"
                   >
                     天智天皇
                   </span>
@@ -27397,18 +27328,18 @@ Array [
             </a>
           </li>
           <li
-            className="c17"
+            className="c15"
           >
             <a
               href="/karutas/47/"
               onClick={[Function]}
             >
               <div
-                className="c18 c19 c20"
+                className="c16 c17 c18"
                 onClick={[Function]}
               >
                 <div
-                  className="c21"
+                  className="c19"
                 >
                   <span
                     className="makeStyles-root makeStyles-root "
@@ -27416,14 +27347,14 @@ Array [
                     四十七番
                   </span>
                   <p
-                    className="makeStyles-root makeStyles-root c22"
+                    className="makeStyles-root makeStyles-root c20"
                   >
                     秋の田の かりほの庵の 苫をあらみ
                      
                     わが衣手は 露にぬれつつ
                   </p>
                   <span
-                    className="makeStyles-root makeStyles-root c23"
+                    className="makeStyles-root makeStyles-root c21"
                   >
                     天智天皇
                   </span>
@@ -27432,18 +27363,18 @@ Array [
             </a>
           </li>
           <li
-            className="c17"
+            className="c15"
           >
             <a
               href="/karutas/48/"
               onClick={[Function]}
             >
               <div
-                className="c18 c19 c20"
+                className="c16 c17 c18"
                 onClick={[Function]}
               >
                 <div
-                  className="c21"
+                  className="c19"
                 >
                   <span
                     className="makeStyles-root makeStyles-root "
@@ -27451,14 +27382,14 @@ Array [
                     四十八番
                   </span>
                   <p
-                    className="makeStyles-root makeStyles-root c22"
+                    className="makeStyles-root makeStyles-root c20"
                   >
                     秋の田の かりほの庵の 苫をあらみ
                      
                     わが衣手は 露にぬれつつ
                   </p>
                   <span
-                    className="makeStyles-root makeStyles-root c23"
+                    className="makeStyles-root makeStyles-root c21"
                   >
                     天智天皇
                   </span>
@@ -27467,18 +27398,18 @@ Array [
             </a>
           </li>
           <li
-            className="c17"
+            className="c15"
           >
             <a
               href="/karutas/49/"
               onClick={[Function]}
             >
               <div
-                className="c18 c19 c20"
+                className="c16 c17 c18"
                 onClick={[Function]}
               >
                 <div
-                  className="c21"
+                  className="c19"
                 >
                   <span
                     className="makeStyles-root makeStyles-root "
@@ -27486,14 +27417,14 @@ Array [
                     四十九番
                   </span>
                   <p
-                    className="makeStyles-root makeStyles-root c22"
+                    className="makeStyles-root makeStyles-root c20"
                   >
                     秋の田の かりほの庵の 苫をあらみ
                      
                     わが衣手は 露にぬれつつ
                   </p>
                   <span
-                    className="makeStyles-root makeStyles-root c23"
+                    className="makeStyles-root makeStyles-root c21"
                   >
                     天智天皇
                   </span>
@@ -27502,18 +27433,18 @@ Array [
             </a>
           </li>
           <li
-            className="c17"
+            className="c15"
           >
             <a
               href="/karutas/50/"
               onClick={[Function]}
             >
               <div
-                className="c18 c19 c20"
+                className="c16 c17 c18"
                 onClick={[Function]}
               >
                 <div
-                  className="c21"
+                  className="c19"
                 >
                   <span
                     className="makeStyles-root makeStyles-root "
@@ -27521,14 +27452,14 @@ Array [
                     五十番
                   </span>
                   <p
-                    className="makeStyles-root makeStyles-root c22"
+                    className="makeStyles-root makeStyles-root c20"
                   >
                     秋の田の かりほの庵の 苫をあらみ
                      
                     わが衣手は 露にぬれつつ
                   </p>
                   <span
-                    className="makeStyles-root makeStyles-root c23"
+                    className="makeStyles-root makeStyles-root c21"
                   >
                     天智天皇
                   </span>
@@ -27537,18 +27468,18 @@ Array [
             </a>
           </li>
           <li
-            className="c17"
+            className="c15"
           >
             <a
               href="/karutas/51/"
               onClick={[Function]}
             >
               <div
-                className="c18 c19 c20"
+                className="c16 c17 c18"
                 onClick={[Function]}
               >
                 <div
-                  className="c21"
+                  className="c19"
                 >
                   <span
                     className="makeStyles-root makeStyles-root "
@@ -27556,14 +27487,14 @@ Array [
                     五十一番
                   </span>
                   <p
-                    className="makeStyles-root makeStyles-root c22"
+                    className="makeStyles-root makeStyles-root c20"
                   >
                     秋の田の かりほの庵の 苫をあらみ
                      
                     わが衣手は 露にぬれつつ
                   </p>
                   <span
-                    className="makeStyles-root makeStyles-root c23"
+                    className="makeStyles-root makeStyles-root c21"
                   >
                     天智天皇
                   </span>
@@ -27572,18 +27503,18 @@ Array [
             </a>
           </li>
           <li
-            className="c17"
+            className="c15"
           >
             <a
               href="/karutas/52/"
               onClick={[Function]}
             >
               <div
-                className="c18 c19 c20"
+                className="c16 c17 c18"
                 onClick={[Function]}
               >
                 <div
-                  className="c21"
+                  className="c19"
                 >
                   <span
                     className="makeStyles-root makeStyles-root "
@@ -27591,14 +27522,14 @@ Array [
                     五十二番
                   </span>
                   <p
-                    className="makeStyles-root makeStyles-root c22"
+                    className="makeStyles-root makeStyles-root c20"
                   >
                     秋の田の かりほの庵の 苫をあらみ
                      
                     わが衣手は 露にぬれつつ
                   </p>
                   <span
-                    className="makeStyles-root makeStyles-root c23"
+                    className="makeStyles-root makeStyles-root c21"
                   >
                     天智天皇
                   </span>
@@ -27607,18 +27538,18 @@ Array [
             </a>
           </li>
           <li
-            className="c17"
+            className="c15"
           >
             <a
               href="/karutas/53/"
               onClick={[Function]}
             >
               <div
-                className="c18 c19 c20"
+                className="c16 c17 c18"
                 onClick={[Function]}
               >
                 <div
-                  className="c21"
+                  className="c19"
                 >
                   <span
                     className="makeStyles-root makeStyles-root "
@@ -27626,14 +27557,14 @@ Array [
                     五十三番
                   </span>
                   <p
-                    className="makeStyles-root makeStyles-root c22"
+                    className="makeStyles-root makeStyles-root c20"
                   >
                     秋の田の かりほの庵の 苫をあらみ
                      
                     わが衣手は 露にぬれつつ
                   </p>
                   <span
-                    className="makeStyles-root makeStyles-root c23"
+                    className="makeStyles-root makeStyles-root c21"
                   >
                     天智天皇
                   </span>
@@ -27642,18 +27573,18 @@ Array [
             </a>
           </li>
           <li
-            className="c17"
+            className="c15"
           >
             <a
               href="/karutas/54/"
               onClick={[Function]}
             >
               <div
-                className="c18 c19 c20"
+                className="c16 c17 c18"
                 onClick={[Function]}
               >
                 <div
-                  className="c21"
+                  className="c19"
                 >
                   <span
                     className="makeStyles-root makeStyles-root "
@@ -27661,14 +27592,14 @@ Array [
                     五十四番
                   </span>
                   <p
-                    className="makeStyles-root makeStyles-root c22"
+                    className="makeStyles-root makeStyles-root c20"
                   >
                     秋の田の かりほの庵の 苫をあらみ
                      
                     わが衣手は 露にぬれつつ
                   </p>
                   <span
-                    className="makeStyles-root makeStyles-root c23"
+                    className="makeStyles-root makeStyles-root c21"
                   >
                     天智天皇
                   </span>
@@ -27677,18 +27608,18 @@ Array [
             </a>
           </li>
           <li
-            className="c17"
+            className="c15"
           >
             <a
               href="/karutas/55/"
               onClick={[Function]}
             >
               <div
-                className="c18 c19 c20"
+                className="c16 c17 c18"
                 onClick={[Function]}
               >
                 <div
-                  className="c21"
+                  className="c19"
                 >
                   <span
                     className="makeStyles-root makeStyles-root "
@@ -27696,14 +27627,14 @@ Array [
                     五十五番
                   </span>
                   <p
-                    className="makeStyles-root makeStyles-root c22"
+                    className="makeStyles-root makeStyles-root c20"
                   >
                     秋の田の かりほの庵の 苫をあらみ
                      
                     わが衣手は 露にぬれつつ
                   </p>
                   <span
-                    className="makeStyles-root makeStyles-root c23"
+                    className="makeStyles-root makeStyles-root c21"
                   >
                     天智天皇
                   </span>
@@ -27712,18 +27643,18 @@ Array [
             </a>
           </li>
           <li
-            className="c17"
+            className="c15"
           >
             <a
               href="/karutas/56/"
               onClick={[Function]}
             >
               <div
-                className="c18 c19 c20"
+                className="c16 c17 c18"
                 onClick={[Function]}
               >
                 <div
-                  className="c21"
+                  className="c19"
                 >
                   <span
                     className="makeStyles-root makeStyles-root "
@@ -27731,14 +27662,14 @@ Array [
                     五十六番
                   </span>
                   <p
-                    className="makeStyles-root makeStyles-root c22"
+                    className="makeStyles-root makeStyles-root c20"
                   >
                     秋の田の かりほの庵の 苫をあらみ
                      
                     わが衣手は 露にぬれつつ
                   </p>
                   <span
-                    className="makeStyles-root makeStyles-root c23"
+                    className="makeStyles-root makeStyles-root c21"
                   >
                     天智天皇
                   </span>
@@ -27747,18 +27678,18 @@ Array [
             </a>
           </li>
           <li
-            className="c17"
+            className="c15"
           >
             <a
               href="/karutas/57/"
               onClick={[Function]}
             >
               <div
-                className="c18 c19 c20"
+                className="c16 c17 c18"
                 onClick={[Function]}
               >
                 <div
-                  className="c21"
+                  className="c19"
                 >
                   <span
                     className="makeStyles-root makeStyles-root "
@@ -27766,14 +27697,14 @@ Array [
                     五十七番
                   </span>
                   <p
-                    className="makeStyles-root makeStyles-root c22"
+                    className="makeStyles-root makeStyles-root c20"
                   >
                     秋の田の かりほの庵の 苫をあらみ
                      
                     わが衣手は 露にぬれつつ
                   </p>
                   <span
-                    className="makeStyles-root makeStyles-root c23"
+                    className="makeStyles-root makeStyles-root c21"
                   >
                     天智天皇
                   </span>
@@ -27782,18 +27713,18 @@ Array [
             </a>
           </li>
           <li
-            className="c17"
+            className="c15"
           >
             <a
               href="/karutas/58/"
               onClick={[Function]}
             >
               <div
-                className="c18 c19 c20"
+                className="c16 c17 c18"
                 onClick={[Function]}
               >
                 <div
-                  className="c21"
+                  className="c19"
                 >
                   <span
                     className="makeStyles-root makeStyles-root "
@@ -27801,14 +27732,14 @@ Array [
                     五十八番
                   </span>
                   <p
-                    className="makeStyles-root makeStyles-root c22"
+                    className="makeStyles-root makeStyles-root c20"
                   >
                     秋の田の かりほの庵の 苫をあらみ
                      
                     わが衣手は 露にぬれつつ
                   </p>
                   <span
-                    className="makeStyles-root makeStyles-root c23"
+                    className="makeStyles-root makeStyles-root c21"
                   >
                     天智天皇
                   </span>
@@ -27817,18 +27748,18 @@ Array [
             </a>
           </li>
           <li
-            className="c17"
+            className="c15"
           >
             <a
               href="/karutas/59/"
               onClick={[Function]}
             >
               <div
-                className="c18 c19 c20"
+                className="c16 c17 c18"
                 onClick={[Function]}
               >
                 <div
-                  className="c21"
+                  className="c19"
                 >
                   <span
                     className="makeStyles-root makeStyles-root "
@@ -27836,14 +27767,14 @@ Array [
                     五十九番
                   </span>
                   <p
-                    className="makeStyles-root makeStyles-root c22"
+                    className="makeStyles-root makeStyles-root c20"
                   >
                     秋の田の かりほの庵の 苫をあらみ
                      
                     わが衣手は 露にぬれつつ
                   </p>
                   <span
-                    className="makeStyles-root makeStyles-root c23"
+                    className="makeStyles-root makeStyles-root c21"
                   >
                     天智天皇
                   </span>
@@ -27852,18 +27783,18 @@ Array [
             </a>
           </li>
           <li
-            className="c17"
+            className="c15"
           >
             <a
               href="/karutas/60/"
               onClick={[Function]}
             >
               <div
-                className="c18 c19 c20"
+                className="c16 c17 c18"
                 onClick={[Function]}
               >
                 <div
-                  className="c21"
+                  className="c19"
                 >
                   <span
                     className="makeStyles-root makeStyles-root "
@@ -27871,14 +27802,14 @@ Array [
                     六十番
                   </span>
                   <p
-                    className="makeStyles-root makeStyles-root c22"
+                    className="makeStyles-root makeStyles-root c20"
                   >
                     秋の田の かりほの庵の 苫をあらみ
                      
                     わが衣手は 露にぬれつつ
                   </p>
                   <span
-                    className="makeStyles-root makeStyles-root c23"
+                    className="makeStyles-root makeStyles-root c21"
                   >
                     天智天皇
                   </span>
@@ -27887,18 +27818,18 @@ Array [
             </a>
           </li>
           <li
-            className="c17"
+            className="c15"
           >
             <a
               href="/karutas/61/"
               onClick={[Function]}
             >
               <div
-                className="c18 c19 c20"
+                className="c16 c17 c18"
                 onClick={[Function]}
               >
                 <div
-                  className="c21"
+                  className="c19"
                 >
                   <span
                     className="makeStyles-root makeStyles-root "
@@ -27906,14 +27837,14 @@ Array [
                     六十一番
                   </span>
                   <p
-                    className="makeStyles-root makeStyles-root c22"
+                    className="makeStyles-root makeStyles-root c20"
                   >
                     秋の田の かりほの庵の 苫をあらみ
                      
                     わが衣手は 露にぬれつつ
                   </p>
                   <span
-                    className="makeStyles-root makeStyles-root c23"
+                    className="makeStyles-root makeStyles-root c21"
                   >
                     天智天皇
                   </span>
@@ -27922,18 +27853,18 @@ Array [
             </a>
           </li>
           <li
-            className="c17"
+            className="c15"
           >
             <a
               href="/karutas/62/"
               onClick={[Function]}
             >
               <div
-                className="c18 c19 c20"
+                className="c16 c17 c18"
                 onClick={[Function]}
               >
                 <div
-                  className="c21"
+                  className="c19"
                 >
                   <span
                     className="makeStyles-root makeStyles-root "
@@ -27941,14 +27872,14 @@ Array [
                     六十二番
                   </span>
                   <p
-                    className="makeStyles-root makeStyles-root c22"
+                    className="makeStyles-root makeStyles-root c20"
                   >
                     秋の田の かりほの庵の 苫をあらみ
                      
                     わが衣手は 露にぬれつつ
                   </p>
                   <span
-                    className="makeStyles-root makeStyles-root c23"
+                    className="makeStyles-root makeStyles-root c21"
                   >
                     天智天皇
                   </span>
@@ -27957,18 +27888,18 @@ Array [
             </a>
           </li>
           <li
-            className="c17"
+            className="c15"
           >
             <a
               href="/karutas/63/"
               onClick={[Function]}
             >
               <div
-                className="c18 c19 c20"
+                className="c16 c17 c18"
                 onClick={[Function]}
               >
                 <div
-                  className="c21"
+                  className="c19"
                 >
                   <span
                     className="makeStyles-root makeStyles-root "
@@ -27976,14 +27907,14 @@ Array [
                     六十三番
                   </span>
                   <p
-                    className="makeStyles-root makeStyles-root c22"
+                    className="makeStyles-root makeStyles-root c20"
                   >
                     秋の田の かりほの庵の 苫をあらみ
                      
                     わが衣手は 露にぬれつつ
                   </p>
                   <span
-                    className="makeStyles-root makeStyles-root c23"
+                    className="makeStyles-root makeStyles-root c21"
                   >
                     天智天皇
                   </span>
@@ -27992,18 +27923,18 @@ Array [
             </a>
           </li>
           <li
-            className="c17"
+            className="c15"
           >
             <a
               href="/karutas/64/"
               onClick={[Function]}
             >
               <div
-                className="c18 c19 c20"
+                className="c16 c17 c18"
                 onClick={[Function]}
               >
                 <div
-                  className="c21"
+                  className="c19"
                 >
                   <span
                     className="makeStyles-root makeStyles-root "
@@ -28011,14 +27942,14 @@ Array [
                     六十四番
                   </span>
                   <p
-                    className="makeStyles-root makeStyles-root c22"
+                    className="makeStyles-root makeStyles-root c20"
                   >
                     秋の田の かりほの庵の 苫をあらみ
                      
                     わが衣手は 露にぬれつつ
                   </p>
                   <span
-                    className="makeStyles-root makeStyles-root c23"
+                    className="makeStyles-root makeStyles-root c21"
                   >
                     天智天皇
                   </span>
@@ -28027,18 +27958,18 @@ Array [
             </a>
           </li>
           <li
-            className="c17"
+            className="c15"
           >
             <a
               href="/karutas/65/"
               onClick={[Function]}
             >
               <div
-                className="c18 c19 c20"
+                className="c16 c17 c18"
                 onClick={[Function]}
               >
                 <div
-                  className="c21"
+                  className="c19"
                 >
                   <span
                     className="makeStyles-root makeStyles-root "
@@ -28046,14 +27977,14 @@ Array [
                     六十五番
                   </span>
                   <p
-                    className="makeStyles-root makeStyles-root c22"
+                    className="makeStyles-root makeStyles-root c20"
                   >
                     秋の田の かりほの庵の 苫をあらみ
                      
                     わが衣手は 露にぬれつつ
                   </p>
                   <span
-                    className="makeStyles-root makeStyles-root c23"
+                    className="makeStyles-root makeStyles-root c21"
                   >
                     天智天皇
                   </span>
@@ -28062,18 +27993,18 @@ Array [
             </a>
           </li>
           <li
-            className="c17"
+            className="c15"
           >
             <a
               href="/karutas/66/"
               onClick={[Function]}
             >
               <div
-                className="c18 c19 c20"
+                className="c16 c17 c18"
                 onClick={[Function]}
               >
                 <div
-                  className="c21"
+                  className="c19"
                 >
                   <span
                     className="makeStyles-root makeStyles-root "
@@ -28081,14 +28012,14 @@ Array [
                     六十六番
                   </span>
                   <p
-                    className="makeStyles-root makeStyles-root c22"
+                    className="makeStyles-root makeStyles-root c20"
                   >
                     秋の田の かりほの庵の 苫をあらみ
                      
                     わが衣手は 露にぬれつつ
                   </p>
                   <span
-                    className="makeStyles-root makeStyles-root c23"
+                    className="makeStyles-root makeStyles-root c21"
                   >
                     天智天皇
                   </span>
@@ -28097,18 +28028,18 @@ Array [
             </a>
           </li>
           <li
-            className="c17"
+            className="c15"
           >
             <a
               href="/karutas/67/"
               onClick={[Function]}
             >
               <div
-                className="c18 c19 c20"
+                className="c16 c17 c18"
                 onClick={[Function]}
               >
                 <div
-                  className="c21"
+                  className="c19"
                 >
                   <span
                     className="makeStyles-root makeStyles-root "
@@ -28116,14 +28047,14 @@ Array [
                     六十七番
                   </span>
                   <p
-                    className="makeStyles-root makeStyles-root c22"
+                    className="makeStyles-root makeStyles-root c20"
                   >
                     秋の田の かりほの庵の 苫をあらみ
                      
                     わが衣手は 露にぬれつつ
                   </p>
                   <span
-                    className="makeStyles-root makeStyles-root c23"
+                    className="makeStyles-root makeStyles-root c21"
                   >
                     天智天皇
                   </span>
@@ -28132,18 +28063,18 @@ Array [
             </a>
           </li>
           <li
-            className="c17"
+            className="c15"
           >
             <a
               href="/karutas/68/"
               onClick={[Function]}
             >
               <div
-                className="c18 c19 c20"
+                className="c16 c17 c18"
                 onClick={[Function]}
               >
                 <div
-                  className="c21"
+                  className="c19"
                 >
                   <span
                     className="makeStyles-root makeStyles-root "
@@ -28151,14 +28082,14 @@ Array [
                     六十八番
                   </span>
                   <p
-                    className="makeStyles-root makeStyles-root c22"
+                    className="makeStyles-root makeStyles-root c20"
                   >
                     秋の田の かりほの庵の 苫をあらみ
                      
                     わが衣手は 露にぬれつつ
                   </p>
                   <span
-                    className="makeStyles-root makeStyles-root c23"
+                    className="makeStyles-root makeStyles-root c21"
                   >
                     天智天皇
                   </span>
@@ -28167,18 +28098,18 @@ Array [
             </a>
           </li>
           <li
-            className="c17"
+            className="c15"
           >
             <a
               href="/karutas/69/"
               onClick={[Function]}
             >
               <div
-                className="c18 c19 c20"
+                className="c16 c17 c18"
                 onClick={[Function]}
               >
                 <div
-                  className="c21"
+                  className="c19"
                 >
                   <span
                     className="makeStyles-root makeStyles-root "
@@ -28186,14 +28117,14 @@ Array [
                     六十九番
                   </span>
                   <p
-                    className="makeStyles-root makeStyles-root c22"
+                    className="makeStyles-root makeStyles-root c20"
                   >
                     秋の田の かりほの庵の 苫をあらみ
                      
                     わが衣手は 露にぬれつつ
                   </p>
                   <span
-                    className="makeStyles-root makeStyles-root c23"
+                    className="makeStyles-root makeStyles-root c21"
                   >
                     天智天皇
                   </span>
@@ -28202,18 +28133,18 @@ Array [
             </a>
           </li>
           <li
-            className="c17"
+            className="c15"
           >
             <a
               href="/karutas/70/"
               onClick={[Function]}
             >
               <div
-                className="c18 c19 c20"
+                className="c16 c17 c18"
                 onClick={[Function]}
               >
                 <div
-                  className="c21"
+                  className="c19"
                 >
                   <span
                     className="makeStyles-root makeStyles-root "
@@ -28221,14 +28152,14 @@ Array [
                     七十番
                   </span>
                   <p
-                    className="makeStyles-root makeStyles-root c22"
+                    className="makeStyles-root makeStyles-root c20"
                   >
                     秋の田の かりほの庵の 苫をあらみ
                      
                     わが衣手は 露にぬれつつ
                   </p>
                   <span
-                    className="makeStyles-root makeStyles-root c23"
+                    className="makeStyles-root makeStyles-root c21"
                   >
                     天智天皇
                   </span>
@@ -28237,18 +28168,18 @@ Array [
             </a>
           </li>
           <li
-            className="c17"
+            className="c15"
           >
             <a
               href="/karutas/71/"
               onClick={[Function]}
             >
               <div
-                className="c18 c19 c20"
+                className="c16 c17 c18"
                 onClick={[Function]}
               >
                 <div
-                  className="c21"
+                  className="c19"
                 >
                   <span
                     className="makeStyles-root makeStyles-root "
@@ -28256,14 +28187,14 @@ Array [
                     七十一番
                   </span>
                   <p
-                    className="makeStyles-root makeStyles-root c22"
+                    className="makeStyles-root makeStyles-root c20"
                   >
                     秋の田の かりほの庵の 苫をあらみ
                      
                     わが衣手は 露にぬれつつ
                   </p>
                   <span
-                    className="makeStyles-root makeStyles-root c23"
+                    className="makeStyles-root makeStyles-root c21"
                   >
                     天智天皇
                   </span>
@@ -28272,18 +28203,18 @@ Array [
             </a>
           </li>
           <li
-            className="c17"
+            className="c15"
           >
             <a
               href="/karutas/72/"
               onClick={[Function]}
             >
               <div
-                className="c18 c19 c20"
+                className="c16 c17 c18"
                 onClick={[Function]}
               >
                 <div
-                  className="c21"
+                  className="c19"
                 >
                   <span
                     className="makeStyles-root makeStyles-root "
@@ -28291,14 +28222,14 @@ Array [
                     七十二番
                   </span>
                   <p
-                    className="makeStyles-root makeStyles-root c22"
+                    className="makeStyles-root makeStyles-root c20"
                   >
                     秋の田の かりほの庵の 苫をあらみ
                      
                     わが衣手は 露にぬれつつ
                   </p>
                   <span
-                    className="makeStyles-root makeStyles-root c23"
+                    className="makeStyles-root makeStyles-root c21"
                   >
                     天智天皇
                   </span>
@@ -28307,18 +28238,18 @@ Array [
             </a>
           </li>
           <li
-            className="c17"
+            className="c15"
           >
             <a
               href="/karutas/73/"
               onClick={[Function]}
             >
               <div
-                className="c18 c19 c20"
+                className="c16 c17 c18"
                 onClick={[Function]}
               >
                 <div
-                  className="c21"
+                  className="c19"
                 >
                   <span
                     className="makeStyles-root makeStyles-root "
@@ -28326,14 +28257,14 @@ Array [
                     七十三番
                   </span>
                   <p
-                    className="makeStyles-root makeStyles-root c22"
+                    className="makeStyles-root makeStyles-root c20"
                   >
                     秋の田の かりほの庵の 苫をあらみ
                      
                     わが衣手は 露にぬれつつ
                   </p>
                   <span
-                    className="makeStyles-root makeStyles-root c23"
+                    className="makeStyles-root makeStyles-root c21"
                   >
                     天智天皇
                   </span>
@@ -28342,18 +28273,18 @@ Array [
             </a>
           </li>
           <li
-            className="c17"
+            className="c15"
           >
             <a
               href="/karutas/74/"
               onClick={[Function]}
             >
               <div
-                className="c18 c19 c20"
+                className="c16 c17 c18"
                 onClick={[Function]}
               >
                 <div
-                  className="c21"
+                  className="c19"
                 >
                   <span
                     className="makeStyles-root makeStyles-root "
@@ -28361,14 +28292,14 @@ Array [
                     七十四番
                   </span>
                   <p
-                    className="makeStyles-root makeStyles-root c22"
+                    className="makeStyles-root makeStyles-root c20"
                   >
                     秋の田の かりほの庵の 苫をあらみ
                      
                     わが衣手は 露にぬれつつ
                   </p>
                   <span
-                    className="makeStyles-root makeStyles-root c23"
+                    className="makeStyles-root makeStyles-root c21"
                   >
                     天智天皇
                   </span>
@@ -28377,18 +28308,18 @@ Array [
             </a>
           </li>
           <li
-            className="c17"
+            className="c15"
           >
             <a
               href="/karutas/75/"
               onClick={[Function]}
             >
               <div
-                className="c18 c19 c20"
+                className="c16 c17 c18"
                 onClick={[Function]}
               >
                 <div
-                  className="c21"
+                  className="c19"
                 >
                   <span
                     className="makeStyles-root makeStyles-root "
@@ -28396,14 +28327,14 @@ Array [
                     七十五番
                   </span>
                   <p
-                    className="makeStyles-root makeStyles-root c22"
+                    className="makeStyles-root makeStyles-root c20"
                   >
                     秋の田の かりほの庵の 苫をあらみ
                      
                     わが衣手は 露にぬれつつ
                   </p>
                   <span
-                    className="makeStyles-root makeStyles-root c23"
+                    className="makeStyles-root makeStyles-root c21"
                   >
                     天智天皇
                   </span>
@@ -28412,18 +28343,18 @@ Array [
             </a>
           </li>
           <li
-            className="c17"
+            className="c15"
           >
             <a
               href="/karutas/76/"
               onClick={[Function]}
             >
               <div
-                className="c18 c19 c20"
+                className="c16 c17 c18"
                 onClick={[Function]}
               >
                 <div
-                  className="c21"
+                  className="c19"
                 >
                   <span
                     className="makeStyles-root makeStyles-root "
@@ -28431,14 +28362,14 @@ Array [
                     七十六番
                   </span>
                   <p
-                    className="makeStyles-root makeStyles-root c22"
+                    className="makeStyles-root makeStyles-root c20"
                   >
                     秋の田の かりほの庵の 苫をあらみ
                      
                     わが衣手は 露にぬれつつ
                   </p>
                   <span
-                    className="makeStyles-root makeStyles-root c23"
+                    className="makeStyles-root makeStyles-root c21"
                   >
                     天智天皇
                   </span>
@@ -28447,18 +28378,18 @@ Array [
             </a>
           </li>
           <li
-            className="c17"
+            className="c15"
           >
             <a
               href="/karutas/77/"
               onClick={[Function]}
             >
               <div
-                className="c18 c19 c20"
+                className="c16 c17 c18"
                 onClick={[Function]}
               >
                 <div
-                  className="c21"
+                  className="c19"
                 >
                   <span
                     className="makeStyles-root makeStyles-root "
@@ -28466,14 +28397,14 @@ Array [
                     七十七番
                   </span>
                   <p
-                    className="makeStyles-root makeStyles-root c22"
+                    className="makeStyles-root makeStyles-root c20"
                   >
                     秋の田の かりほの庵の 苫をあらみ
                      
                     わが衣手は 露にぬれつつ
                   </p>
                   <span
-                    className="makeStyles-root makeStyles-root c23"
+                    className="makeStyles-root makeStyles-root c21"
                   >
                     天智天皇
                   </span>
@@ -28482,18 +28413,18 @@ Array [
             </a>
           </li>
           <li
-            className="c17"
+            className="c15"
           >
             <a
               href="/karutas/78/"
               onClick={[Function]}
             >
               <div
-                className="c18 c19 c20"
+                className="c16 c17 c18"
                 onClick={[Function]}
               >
                 <div
-                  className="c21"
+                  className="c19"
                 >
                   <span
                     className="makeStyles-root makeStyles-root "
@@ -28501,14 +28432,14 @@ Array [
                     七十八番
                   </span>
                   <p
-                    className="makeStyles-root makeStyles-root c22"
+                    className="makeStyles-root makeStyles-root c20"
                   >
                     秋の田の かりほの庵の 苫をあらみ
                      
                     わが衣手は 露にぬれつつ
                   </p>
                   <span
-                    className="makeStyles-root makeStyles-root c23"
+                    className="makeStyles-root makeStyles-root c21"
                   >
                     天智天皇
                   </span>
@@ -28517,18 +28448,18 @@ Array [
             </a>
           </li>
           <li
-            className="c17"
+            className="c15"
           >
             <a
               href="/karutas/79/"
               onClick={[Function]}
             >
               <div
-                className="c18 c19 c20"
+                className="c16 c17 c18"
                 onClick={[Function]}
               >
                 <div
-                  className="c21"
+                  className="c19"
                 >
                   <span
                     className="makeStyles-root makeStyles-root "
@@ -28536,14 +28467,14 @@ Array [
                     七十九番
                   </span>
                   <p
-                    className="makeStyles-root makeStyles-root c22"
+                    className="makeStyles-root makeStyles-root c20"
                   >
                     秋の田の かりほの庵の 苫をあらみ
                      
                     わが衣手は 露にぬれつつ
                   </p>
                   <span
-                    className="makeStyles-root makeStyles-root c23"
+                    className="makeStyles-root makeStyles-root c21"
                   >
                     天智天皇
                   </span>
@@ -28552,18 +28483,18 @@ Array [
             </a>
           </li>
           <li
-            className="c17"
+            className="c15"
           >
             <a
               href="/karutas/80/"
               onClick={[Function]}
             >
               <div
-                className="c18 c19 c20"
+                className="c16 c17 c18"
                 onClick={[Function]}
               >
                 <div
-                  className="c21"
+                  className="c19"
                 >
                   <span
                     className="makeStyles-root makeStyles-root "
@@ -28571,14 +28502,14 @@ Array [
                     八十番
                   </span>
                   <p
-                    className="makeStyles-root makeStyles-root c22"
+                    className="makeStyles-root makeStyles-root c20"
                   >
                     秋の田の かりほの庵の 苫をあらみ
                      
                     わが衣手は 露にぬれつつ
                   </p>
                   <span
-                    className="makeStyles-root makeStyles-root c23"
+                    className="makeStyles-root makeStyles-root c21"
                   >
                     天智天皇
                   </span>
@@ -28587,18 +28518,18 @@ Array [
             </a>
           </li>
           <li
-            className="c17"
+            className="c15"
           >
             <a
               href="/karutas/81/"
               onClick={[Function]}
             >
               <div
-                className="c18 c19 c20"
+                className="c16 c17 c18"
                 onClick={[Function]}
               >
                 <div
-                  className="c21"
+                  className="c19"
                 >
                   <span
                     className="makeStyles-root makeStyles-root "
@@ -28606,14 +28537,14 @@ Array [
                     八十一番
                   </span>
                   <p
-                    className="makeStyles-root makeStyles-root c22"
+                    className="makeStyles-root makeStyles-root c20"
                   >
                     秋の田の かりほの庵の 苫をあらみ
                      
                     わが衣手は 露にぬれつつ
                   </p>
                   <span
-                    className="makeStyles-root makeStyles-root c23"
+                    className="makeStyles-root makeStyles-root c21"
                   >
                     天智天皇
                   </span>
@@ -28622,18 +28553,18 @@ Array [
             </a>
           </li>
           <li
-            className="c17"
+            className="c15"
           >
             <a
               href="/karutas/82/"
               onClick={[Function]}
             >
               <div
-                className="c18 c19 c20"
+                className="c16 c17 c18"
                 onClick={[Function]}
               >
                 <div
-                  className="c21"
+                  className="c19"
                 >
                   <span
                     className="makeStyles-root makeStyles-root "
@@ -28641,14 +28572,14 @@ Array [
                     八十二番
                   </span>
                   <p
-                    className="makeStyles-root makeStyles-root c22"
+                    className="makeStyles-root makeStyles-root c20"
                   >
                     秋の田の かりほの庵の 苫をあらみ
                      
                     わが衣手は 露にぬれつつ
                   </p>
                   <span
-                    className="makeStyles-root makeStyles-root c23"
+                    className="makeStyles-root makeStyles-root c21"
                   >
                     天智天皇
                   </span>
@@ -28657,18 +28588,18 @@ Array [
             </a>
           </li>
           <li
-            className="c17"
+            className="c15"
           >
             <a
               href="/karutas/83/"
               onClick={[Function]}
             >
               <div
-                className="c18 c19 c20"
+                className="c16 c17 c18"
                 onClick={[Function]}
               >
                 <div
-                  className="c21"
+                  className="c19"
                 >
                   <span
                     className="makeStyles-root makeStyles-root "
@@ -28676,14 +28607,14 @@ Array [
                     八十三番
                   </span>
                   <p
-                    className="makeStyles-root makeStyles-root c22"
+                    className="makeStyles-root makeStyles-root c20"
                   >
                     秋の田の かりほの庵の 苫をあらみ
                      
                     わが衣手は 露にぬれつつ
                   </p>
                   <span
-                    className="makeStyles-root makeStyles-root c23"
+                    className="makeStyles-root makeStyles-root c21"
                   >
                     天智天皇
                   </span>
@@ -28692,18 +28623,18 @@ Array [
             </a>
           </li>
           <li
-            className="c17"
+            className="c15"
           >
             <a
               href="/karutas/84/"
               onClick={[Function]}
             >
               <div
-                className="c18 c19 c20"
+                className="c16 c17 c18"
                 onClick={[Function]}
               >
                 <div
-                  className="c21"
+                  className="c19"
                 >
                   <span
                     className="makeStyles-root makeStyles-root "
@@ -28711,14 +28642,14 @@ Array [
                     八十四番
                   </span>
                   <p
-                    className="makeStyles-root makeStyles-root c22"
+                    className="makeStyles-root makeStyles-root c20"
                   >
                     秋の田の かりほの庵の 苫をあらみ
                      
                     わが衣手は 露にぬれつつ
                   </p>
                   <span
-                    className="makeStyles-root makeStyles-root c23"
+                    className="makeStyles-root makeStyles-root c21"
                   >
                     天智天皇
                   </span>
@@ -28727,18 +28658,18 @@ Array [
             </a>
           </li>
           <li
-            className="c17"
+            className="c15"
           >
             <a
               href="/karutas/85/"
               onClick={[Function]}
             >
               <div
-                className="c18 c19 c20"
+                className="c16 c17 c18"
                 onClick={[Function]}
               >
                 <div
-                  className="c21"
+                  className="c19"
                 >
                   <span
                     className="makeStyles-root makeStyles-root "
@@ -28746,14 +28677,14 @@ Array [
                     八十五番
                   </span>
                   <p
-                    className="makeStyles-root makeStyles-root c22"
+                    className="makeStyles-root makeStyles-root c20"
                   >
                     秋の田の かりほの庵の 苫をあらみ
                      
                     わが衣手は 露にぬれつつ
                   </p>
                   <span
-                    className="makeStyles-root makeStyles-root c23"
+                    className="makeStyles-root makeStyles-root c21"
                   >
                     天智天皇
                   </span>
@@ -28762,18 +28693,18 @@ Array [
             </a>
           </li>
           <li
-            className="c17"
+            className="c15"
           >
             <a
               href="/karutas/86/"
               onClick={[Function]}
             >
               <div
-                className="c18 c19 c20"
+                className="c16 c17 c18"
                 onClick={[Function]}
               >
                 <div
-                  className="c21"
+                  className="c19"
                 >
                   <span
                     className="makeStyles-root makeStyles-root "
@@ -28781,14 +28712,14 @@ Array [
                     八十六番
                   </span>
                   <p
-                    className="makeStyles-root makeStyles-root c22"
+                    className="makeStyles-root makeStyles-root c20"
                   >
                     秋の田の かりほの庵の 苫をあらみ
                      
                     わが衣手は 露にぬれつつ
                   </p>
                   <span
-                    className="makeStyles-root makeStyles-root c23"
+                    className="makeStyles-root makeStyles-root c21"
                   >
                     天智天皇
                   </span>
@@ -28797,18 +28728,18 @@ Array [
             </a>
           </li>
           <li
-            className="c17"
+            className="c15"
           >
             <a
               href="/karutas/87/"
               onClick={[Function]}
             >
               <div
-                className="c18 c19 c20"
+                className="c16 c17 c18"
                 onClick={[Function]}
               >
                 <div
-                  className="c21"
+                  className="c19"
                 >
                   <span
                     className="makeStyles-root makeStyles-root "
@@ -28816,14 +28747,14 @@ Array [
                     八十七番
                   </span>
                   <p
-                    className="makeStyles-root makeStyles-root c22"
+                    className="makeStyles-root makeStyles-root c20"
                   >
                     秋の田の かりほの庵の 苫をあらみ
                      
                     わが衣手は 露にぬれつつ
                   </p>
                   <span
-                    className="makeStyles-root makeStyles-root c23"
+                    className="makeStyles-root makeStyles-root c21"
                   >
                     天智天皇
                   </span>
@@ -28832,18 +28763,18 @@ Array [
             </a>
           </li>
           <li
-            className="c17"
+            className="c15"
           >
             <a
               href="/karutas/88/"
               onClick={[Function]}
             >
               <div
-                className="c18 c19 c20"
+                className="c16 c17 c18"
                 onClick={[Function]}
               >
                 <div
-                  className="c21"
+                  className="c19"
                 >
                   <span
                     className="makeStyles-root makeStyles-root "
@@ -28851,14 +28782,14 @@ Array [
                     八十八番
                   </span>
                   <p
-                    className="makeStyles-root makeStyles-root c22"
+                    className="makeStyles-root makeStyles-root c20"
                   >
                     秋の田の かりほの庵の 苫をあらみ
                      
                     わが衣手は 露にぬれつつ
                   </p>
                   <span
-                    className="makeStyles-root makeStyles-root c23"
+                    className="makeStyles-root makeStyles-root c21"
                   >
                     天智天皇
                   </span>
@@ -28867,18 +28798,18 @@ Array [
             </a>
           </li>
           <li
-            className="c17"
+            className="c15"
           >
             <a
               href="/karutas/89/"
               onClick={[Function]}
             >
               <div
-                className="c18 c19 c20"
+                className="c16 c17 c18"
                 onClick={[Function]}
               >
                 <div
-                  className="c21"
+                  className="c19"
                 >
                   <span
                     className="makeStyles-root makeStyles-root "
@@ -28886,14 +28817,14 @@ Array [
                     八十九番
                   </span>
                   <p
-                    className="makeStyles-root makeStyles-root c22"
+                    className="makeStyles-root makeStyles-root c20"
                   >
                     秋の田の かりほの庵の 苫をあらみ
                      
                     わが衣手は 露にぬれつつ
                   </p>
                   <span
-                    className="makeStyles-root makeStyles-root c23"
+                    className="makeStyles-root makeStyles-root c21"
                   >
                     天智天皇
                   </span>
@@ -28902,18 +28833,18 @@ Array [
             </a>
           </li>
           <li
-            className="c17"
+            className="c15"
           >
             <a
               href="/karutas/90/"
               onClick={[Function]}
             >
               <div
-                className="c18 c19 c20"
+                className="c16 c17 c18"
                 onClick={[Function]}
               >
                 <div
-                  className="c21"
+                  className="c19"
                 >
                   <span
                     className="makeStyles-root makeStyles-root "
@@ -28921,14 +28852,14 @@ Array [
                     九十番
                   </span>
                   <p
-                    className="makeStyles-root makeStyles-root c22"
+                    className="makeStyles-root makeStyles-root c20"
                   >
                     秋の田の かりほの庵の 苫をあらみ
                      
                     わが衣手は 露にぬれつつ
                   </p>
                   <span
-                    className="makeStyles-root makeStyles-root c23"
+                    className="makeStyles-root makeStyles-root c21"
                   >
                     天智天皇
                   </span>
@@ -28937,18 +28868,18 @@ Array [
             </a>
           </li>
           <li
-            className="c17"
+            className="c15"
           >
             <a
               href="/karutas/91/"
               onClick={[Function]}
             >
               <div
-                className="c18 c19 c20"
+                className="c16 c17 c18"
                 onClick={[Function]}
               >
                 <div
-                  className="c21"
+                  className="c19"
                 >
                   <span
                     className="makeStyles-root makeStyles-root "
@@ -28956,14 +28887,14 @@ Array [
                     九十一番
                   </span>
                   <p
-                    className="makeStyles-root makeStyles-root c22"
+                    className="makeStyles-root makeStyles-root c20"
                   >
                     秋の田の かりほの庵の 苫をあらみ
                      
                     わが衣手は 露にぬれつつ
                   </p>
                   <span
-                    className="makeStyles-root makeStyles-root c23"
+                    className="makeStyles-root makeStyles-root c21"
                   >
                     天智天皇
                   </span>
@@ -28972,18 +28903,18 @@ Array [
             </a>
           </li>
           <li
-            className="c17"
+            className="c15"
           >
             <a
               href="/karutas/92/"
               onClick={[Function]}
             >
               <div
-                className="c18 c19 c20"
+                className="c16 c17 c18"
                 onClick={[Function]}
               >
                 <div
-                  className="c21"
+                  className="c19"
                 >
                   <span
                     className="makeStyles-root makeStyles-root "
@@ -28991,14 +28922,14 @@ Array [
                     九十二番
                   </span>
                   <p
-                    className="makeStyles-root makeStyles-root c22"
+                    className="makeStyles-root makeStyles-root c20"
                   >
                     秋の田の かりほの庵の 苫をあらみ
                      
                     わが衣手は 露にぬれつつ
                   </p>
                   <span
-                    className="makeStyles-root makeStyles-root c23"
+                    className="makeStyles-root makeStyles-root c21"
                   >
                     天智天皇
                   </span>
@@ -29007,18 +28938,18 @@ Array [
             </a>
           </li>
           <li
-            className="c17"
+            className="c15"
           >
             <a
               href="/karutas/93/"
               onClick={[Function]}
             >
               <div
-                className="c18 c19 c20"
+                className="c16 c17 c18"
                 onClick={[Function]}
               >
                 <div
-                  className="c21"
+                  className="c19"
                 >
                   <span
                     className="makeStyles-root makeStyles-root "
@@ -29026,14 +28957,14 @@ Array [
                     九十三番
                   </span>
                   <p
-                    className="makeStyles-root makeStyles-root c22"
+                    className="makeStyles-root makeStyles-root c20"
                   >
                     秋の田の かりほの庵の 苫をあらみ
                      
                     わが衣手は 露にぬれつつ
                   </p>
                   <span
-                    className="makeStyles-root makeStyles-root c23"
+                    className="makeStyles-root makeStyles-root c21"
                   >
                     天智天皇
                   </span>
@@ -29042,18 +28973,18 @@ Array [
             </a>
           </li>
           <li
-            className="c17"
+            className="c15"
           >
             <a
               href="/karutas/94/"
               onClick={[Function]}
             >
               <div
-                className="c18 c19 c20"
+                className="c16 c17 c18"
                 onClick={[Function]}
               >
                 <div
-                  className="c21"
+                  className="c19"
                 >
                   <span
                     className="makeStyles-root makeStyles-root "
@@ -29061,14 +28992,14 @@ Array [
                     九十四番
                   </span>
                   <p
-                    className="makeStyles-root makeStyles-root c22"
+                    className="makeStyles-root makeStyles-root c20"
                   >
                     秋の田の かりほの庵の 苫をあらみ
                      
                     わが衣手は 露にぬれつつ
                   </p>
                   <span
-                    className="makeStyles-root makeStyles-root c23"
+                    className="makeStyles-root makeStyles-root c21"
                   >
                     天智天皇
                   </span>
@@ -29077,18 +29008,18 @@ Array [
             </a>
           </li>
           <li
-            className="c17"
+            className="c15"
           >
             <a
               href="/karutas/95/"
               onClick={[Function]}
             >
               <div
-                className="c18 c19 c20"
+                className="c16 c17 c18"
                 onClick={[Function]}
               >
                 <div
-                  className="c21"
+                  className="c19"
                 >
                   <span
                     className="makeStyles-root makeStyles-root "
@@ -29096,14 +29027,14 @@ Array [
                     九十五番
                   </span>
                   <p
-                    className="makeStyles-root makeStyles-root c22"
+                    className="makeStyles-root makeStyles-root c20"
                   >
                     秋の田の かりほの庵の 苫をあらみ
                      
                     わが衣手は 露にぬれつつ
                   </p>
                   <span
-                    className="makeStyles-root makeStyles-root c23"
+                    className="makeStyles-root makeStyles-root c21"
                   >
                     天智天皇
                   </span>
@@ -29112,18 +29043,18 @@ Array [
             </a>
           </li>
           <li
-            className="c17"
+            className="c15"
           >
             <a
               href="/karutas/96/"
               onClick={[Function]}
             >
               <div
-                className="c18 c19 c20"
+                className="c16 c17 c18"
                 onClick={[Function]}
               >
                 <div
-                  className="c21"
+                  className="c19"
                 >
                   <span
                     className="makeStyles-root makeStyles-root "
@@ -29131,14 +29062,14 @@ Array [
                     九十六番
                   </span>
                   <p
-                    className="makeStyles-root makeStyles-root c22"
+                    className="makeStyles-root makeStyles-root c20"
                   >
                     秋の田の かりほの庵の 苫をあらみ
                      
                     わが衣手は 露にぬれつつ
                   </p>
                   <span
-                    className="makeStyles-root makeStyles-root c23"
+                    className="makeStyles-root makeStyles-root c21"
                   >
                     天智天皇
                   </span>
@@ -29147,18 +29078,18 @@ Array [
             </a>
           </li>
           <li
-            className="c17"
+            className="c15"
           >
             <a
               href="/karutas/97/"
               onClick={[Function]}
             >
               <div
-                className="c18 c19 c20"
+                className="c16 c17 c18"
                 onClick={[Function]}
               >
                 <div
-                  className="c21"
+                  className="c19"
                 >
                   <span
                     className="makeStyles-root makeStyles-root "
@@ -29166,14 +29097,14 @@ Array [
                     九十七番
                   </span>
                   <p
-                    className="makeStyles-root makeStyles-root c22"
+                    className="makeStyles-root makeStyles-root c20"
                   >
                     秋の田の かりほの庵の 苫をあらみ
                      
                     わが衣手は 露にぬれつつ
                   </p>
                   <span
-                    className="makeStyles-root makeStyles-root c23"
+                    className="makeStyles-root makeStyles-root c21"
                   >
                     天智天皇
                   </span>
@@ -29182,18 +29113,18 @@ Array [
             </a>
           </li>
           <li
-            className="c17"
+            className="c15"
           >
             <a
               href="/karutas/98/"
               onClick={[Function]}
             >
               <div
-                className="c18 c19 c20"
+                className="c16 c17 c18"
                 onClick={[Function]}
               >
                 <div
-                  className="c21"
+                  className="c19"
                 >
                   <span
                     className="makeStyles-root makeStyles-root "
@@ -29201,14 +29132,14 @@ Array [
                     九十八番
                   </span>
                   <p
-                    className="makeStyles-root makeStyles-root c22"
+                    className="makeStyles-root makeStyles-root c20"
                   >
                     秋の田の かりほの庵の 苫をあらみ
                      
                     わが衣手は 露にぬれつつ
                   </p>
                   <span
-                    className="makeStyles-root makeStyles-root c23"
+                    className="makeStyles-root makeStyles-root c21"
                   >
                     天智天皇
                   </span>
@@ -29217,18 +29148,18 @@ Array [
             </a>
           </li>
           <li
-            className="c17"
+            className="c15"
           >
             <a
               href="/karutas/99/"
               onClick={[Function]}
             >
               <div
-                className="c18 c19 c20"
+                className="c16 c17 c18"
                 onClick={[Function]}
               >
                 <div
-                  className="c21"
+                  className="c19"
                 >
                   <span
                     className="makeStyles-root makeStyles-root "
@@ -29236,14 +29167,14 @@ Array [
                     九十九番
                   </span>
                   <p
-                    className="makeStyles-root makeStyles-root c22"
+                    className="makeStyles-root makeStyles-root c20"
                   >
                     秋の田の かりほの庵の 苫をあらみ
                      
                     わが衣手は 露にぬれつつ
                   </p>
                   <span
-                    className="makeStyles-root makeStyles-root c23"
+                    className="makeStyles-root makeStyles-root c21"
                   >
                     天智天皇
                   </span>
@@ -29252,18 +29183,18 @@ Array [
             </a>
           </li>
           <li
-            className="c17"
+            className="c15"
           >
             <a
               href="/karutas/100/"
               onClick={[Function]}
             >
               <div
-                className="c18 c19 c20"
+                className="c16 c17 c18"
                 onClick={[Function]}
               >
                 <div
-                  className="c21"
+                  className="c19"
                 >
                   <span
                     className="makeStyles-root makeStyles-root "
@@ -29271,14 +29202,14 @@ Array [
                     百番
                   </span>
                   <p
-                    className="makeStyles-root makeStyles-root c22"
+                    className="makeStyles-root makeStyles-root c20"
                   >
                     秋の田の かりほの庵の 苫をあらみ
                      
                     わが衣手は 露にぬれつつ
                   </p>
                   <span
-                    className="makeStyles-root makeStyles-root c23"
+                    className="makeStyles-root makeStyles-root c21"
                   >
                     天智天皇
                   </span>
@@ -41984,6 +41915,23 @@ Array [
   margin: 0 auto;
 }
 
+.c11 {
+  height: 100px;
+  border: 1px solid #123;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
 .c1 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -42043,40 +41991,6 @@ Array [
 
 .c10 {
   box-shadow: 0 1px 3px rgba(0,0,0,0.26);
-}
-
-.c11 {
-  text-align: center;
-  width: 100%;
-  padding: 16px;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -webkit-flex-flow: wrap;
-  -ms-flex-flow: wrap;
-  flex-flow: wrap;
-}
-
-.c12 {
-  height: 100px;
-  border: 1px solid #123;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
 }
 
 @media screen and (min-width:768px) {
@@ -42218,12 +42132,12 @@ Array [
         </div>
       </div>
       <div
-        className="c11"
+        className="c2"
       >
         <div
-          className="c12"
+          className="c11"
         >
-          この欄はアフィリエイト枠です
+          この欄は広告枠です
         </div>
       </div>
     </div>
