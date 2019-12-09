@@ -5,7 +5,6 @@ import styled from '@src/styles/styled-components';
 import PlayingPageTemplate from '@src/components/templates/PlayingPageTemplate';
 import TrainingResult from '@src/containers/organisms/TrainingResult';
 import Ad from '@src/components/organisms/Ad';
-import Associate from '@src/components/organisms/Associate';
 import CenteredFrame from '@src/components/atoms/CenteredFrame';
 import Txt from '@src/components/atoms/Txt';
 import { QuestionState } from '@src/enums';
@@ -56,7 +55,7 @@ export const TrainingResultPagePresenter = ({ questionState }: PresenterProps) =
             <Txt role={`error`}>不正な遷移を行いました。前の画面からやり直してください。</Txt>
           </ErrorMessage>
         )}
-        <Associate />
+        <Ad type={`responsive`} />
       </>
     }
   />
