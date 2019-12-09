@@ -4,7 +4,6 @@ import styled from '@src/styles/styled-components';
 import TripleContentsPageTemplate from '@src/components/templates/TripleContentsPageTemplate';
 import MainMenuList from '@src/components/organisms/MainMenuList';
 import SmallMaterial from '@src/components/organisms/SmallMaterial';
-import Associate from '@src/components/organisms/Associate';
 import ReadingContent from '@src/components/molecules/ReadingContent';
 import Paragraph from '@src/components/atoms/Paragraph';
 import Txt from '@src/components/atoms/Txt';
@@ -81,9 +80,6 @@ export const IndexPagePresenter = ({ karutas }: PresenterProps) => (
             現代では詠み札と取り札に別れたかるたとしての知名度が高く、散らし取り、坊主めくりなどといった遊戯や競技かるたのように札取りを競い合うスポーツもあり、幅広く親しまれています。
             百首覚えたあとは色々な遊び方を探してみてはいかがでしょうか。
           </Paragraph>
-        </ReadingContent>
-        <ReadingContent title={``}>
-          <Associate />
         </ReadingContent>
         <ReadingContent title={`百人一首の用語について`}>
           <dl>
