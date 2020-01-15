@@ -182,8 +182,8 @@ exports[`Storyshots atoms/FadeInFrame default 1`] = `
 }
 
 .c0 {
-  -webkit-animation: kenLyv 1s linear 1;
-  animation: kenLyv 1s linear 1;
+  -webkit-animation: eWdtyu 1s linear 1;
+  animation: eWdtyu 1s linear 1;
 }
 
 <span
@@ -1428,8 +1428,8 @@ exports[`Storyshots molecules/MenuLink default 1`] = `
   -ms-transform: scale(0);
   transform: scale(0);
   opacity: 0.75;
-  -webkit-animation: fHRFlR 1000ms;
-  animation: fHRFlR 1000ms;
+  -webkit-animation: hctBKm 1000ms;
+  animation: hctBKm 1000ms;
 }
 
 .c0 {
@@ -2263,8 +2263,8 @@ exports[`Storyshots molecules/ToriFuda default 1`] = `
   -ms-transform: scale(0);
   transform: scale(0);
   opacity: 0.75;
-  -webkit-animation: fHRFlR 1000ms;
-  animation: fHRFlR 1000ms;
+  -webkit-animation: hctBKm 1000ms;
+  animation: hctBKm 1000ms;
 }
 
 .c4 {
@@ -2366,8 +2366,8 @@ exports[`Storyshots molecules/ToriFuda with size l 1`] = `
   -ms-transform: scale(0);
   transform: scale(0);
   opacity: 0.75;
-  -webkit-animation: fHRFlR 1000ms;
-  animation: fHRFlR 1000ms;
+  -webkit-animation: hctBKm 1000ms;
+  animation: hctBKm 1000ms;
 }
 
 .c4 {
@@ -2469,8 +2469,8 @@ exports[`Storyshots molecules/ToriFuda with size m 1`] = `
   -ms-transform: scale(0);
   transform: scale(0);
   opacity: 0.75;
-  -webkit-animation: fHRFlR 1000ms;
-  animation: fHRFlR 1000ms;
+  -webkit-animation: hctBKm 1000ms;
+  animation: hctBKm 1000ms;
 }
 
 .c4 {
@@ -2572,8 +2572,8 @@ exports[`Storyshots molecules/ToriFuda with size s 1`] = `
   -ms-transform: scale(0);
   transform: scale(0);
   opacity: 0.75;
-  -webkit-animation: fHRFlR 1000ms;
-  animation: fHRFlR 1000ms;
+  -webkit-animation: hctBKm 1000ms;
+  animation: hctBKm 1000ms;
 }
 
 .c4 {
@@ -2675,8 +2675,8 @@ exports[`Storyshots molecules/ToriFuda with thin style 1`] = `
   -ms-transform: scale(0);
   transform: scale(0);
   opacity: 0.75;
-  -webkit-animation: fHRFlR 1000ms;
-  animation: fHRFlR 1000ms;
+  -webkit-animation: hctBKm 1000ms;
+  animation: hctBKm 1000ms;
 }
 
 .c4 {
@@ -2811,8 +2811,8 @@ exports[`Storyshots molecules/YomiFuda with anim 1`] = `
 }
 
 .c3 {
-  -webkit-animation: kenLyv 1s linear 1;
-  animation: kenLyv 1s linear 1;
+  -webkit-animation: eWdtyu 1s linear 1;
+  animation: eWdtyu 1s linear 1;
 }
 
 <div
@@ -2940,78 +2940,78 @@ exports[`Storyshots molecules/YomiFuda with size l 1`] = `
 }
 
 .c3 {
-  -webkit-animation: kenLyv 0s linear 1;
-  animation: kenLyv 0s linear 1;
+  -webkit-animation: eWdtyu 0s linear 1;
+  animation: eWdtyu 0s linear 1;
 }
 
 .c4 {
-  -webkit-animation: kenLyv 0s linear 1;
-  animation: kenLyv 0s linear 1;
+  -webkit-animation: eWdtyu 0s linear 1;
+  animation: eWdtyu 0s linear 1;
 }
 
 .c5 {
-  -webkit-animation: kenLyv 0s linear 1;
-  animation: kenLyv 0s linear 1;
+  -webkit-animation: eWdtyu 0s linear 1;
+  animation: eWdtyu 0s linear 1;
 }
 
 .c6 {
-  -webkit-animation: kenLyv 0s linear 1;
-  animation: kenLyv 0s linear 1;
+  -webkit-animation: eWdtyu 0s linear 1;
+  animation: eWdtyu 0s linear 1;
 }
 
 .c8 {
-  -webkit-animation: kenLyv 0s linear 1;
-  animation: kenLyv 0s linear 1;
+  -webkit-animation: eWdtyu 0s linear 1;
+  animation: eWdtyu 0s linear 1;
 }
 
 .c9 {
-  -webkit-animation: kenLyv 0s linear 1;
-  animation: kenLyv 0s linear 1;
+  -webkit-animation: eWdtyu 0s linear 1;
+  animation: eWdtyu 0s linear 1;
 }
 
 .c10 {
-  -webkit-animation: kenLyv 0s linear 1;
-  animation: kenLyv 0s linear 1;
+  -webkit-animation: eWdtyu 0s linear 1;
+  animation: eWdtyu 0s linear 1;
 }
 
 .c11 {
-  -webkit-animation: kenLyv 0s linear 1;
-  animation: kenLyv 0s linear 1;
+  -webkit-animation: eWdtyu 0s linear 1;
+  animation: eWdtyu 0s linear 1;
 }
 
 .c12 {
-  -webkit-animation: kenLyv 0s linear 1;
-  animation: kenLyv 0s linear 1;
+  -webkit-animation: eWdtyu 0s linear 1;
+  animation: eWdtyu 0s linear 1;
 }
 
 .c13 {
-  -webkit-animation: kenLyv 0s linear 1;
-  animation: kenLyv 0s linear 1;
+  -webkit-animation: eWdtyu 0s linear 1;
+  animation: eWdtyu 0s linear 1;
 }
 
 .c15 {
-  -webkit-animation: kenLyv 0s linear 1;
-  animation: kenLyv 0s linear 1;
+  -webkit-animation: eWdtyu 0s linear 1;
+  animation: eWdtyu 0s linear 1;
 }
 
 .c16 {
-  -webkit-animation: kenLyv 0s linear 1;
-  animation: kenLyv 0s linear 1;
+  -webkit-animation: eWdtyu 0s linear 1;
+  animation: eWdtyu 0s linear 1;
 }
 
 .c17 {
-  -webkit-animation: kenLyv 0s linear 1;
-  animation: kenLyv 0s linear 1;
+  -webkit-animation: eWdtyu 0s linear 1;
+  animation: eWdtyu 0s linear 1;
 }
 
 .c18 {
-  -webkit-animation: kenLyv 0s linear 1;
-  animation: kenLyv 0s linear 1;
+  -webkit-animation: eWdtyu 0s linear 1;
+  animation: eWdtyu 0s linear 1;
 }
 
 .c19 {
-  -webkit-animation: kenLyv 0s linear 1;
-  animation: kenLyv 0s linear 1;
+  -webkit-animation: eWdtyu 0s linear 1;
+  animation: eWdtyu 0s linear 1;
 }
 
 <div
@@ -3181,78 +3181,78 @@ exports[`Storyshots molecules/YomiFuda with size m 1`] = `
 }
 
 .c3 {
-  -webkit-animation: kenLyv 0s linear 1;
-  animation: kenLyv 0s linear 1;
+  -webkit-animation: eWdtyu 0s linear 1;
+  animation: eWdtyu 0s linear 1;
 }
 
 .c4 {
-  -webkit-animation: kenLyv 0s linear 1;
-  animation: kenLyv 0s linear 1;
+  -webkit-animation: eWdtyu 0s linear 1;
+  animation: eWdtyu 0s linear 1;
 }
 
 .c5 {
-  -webkit-animation: kenLyv 0s linear 1;
-  animation: kenLyv 0s linear 1;
+  -webkit-animation: eWdtyu 0s linear 1;
+  animation: eWdtyu 0s linear 1;
 }
 
 .c6 {
-  -webkit-animation: kenLyv 0s linear 1;
-  animation: kenLyv 0s linear 1;
+  -webkit-animation: eWdtyu 0s linear 1;
+  animation: eWdtyu 0s linear 1;
 }
 
 .c8 {
-  -webkit-animation: kenLyv 0s linear 1;
-  animation: kenLyv 0s linear 1;
+  -webkit-animation: eWdtyu 0s linear 1;
+  animation: eWdtyu 0s linear 1;
 }
 
 .c9 {
-  -webkit-animation: kenLyv 0s linear 1;
-  animation: kenLyv 0s linear 1;
+  -webkit-animation: eWdtyu 0s linear 1;
+  animation: eWdtyu 0s linear 1;
 }
 
 .c10 {
-  -webkit-animation: kenLyv 0s linear 1;
-  animation: kenLyv 0s linear 1;
+  -webkit-animation: eWdtyu 0s linear 1;
+  animation: eWdtyu 0s linear 1;
 }
 
 .c11 {
-  -webkit-animation: kenLyv 0s linear 1;
-  animation: kenLyv 0s linear 1;
+  -webkit-animation: eWdtyu 0s linear 1;
+  animation: eWdtyu 0s linear 1;
 }
 
 .c12 {
-  -webkit-animation: kenLyv 0s linear 1;
-  animation: kenLyv 0s linear 1;
+  -webkit-animation: eWdtyu 0s linear 1;
+  animation: eWdtyu 0s linear 1;
 }
 
 .c13 {
-  -webkit-animation: kenLyv 0s linear 1;
-  animation: kenLyv 0s linear 1;
+  -webkit-animation: eWdtyu 0s linear 1;
+  animation: eWdtyu 0s linear 1;
 }
 
 .c15 {
-  -webkit-animation: kenLyv 0s linear 1;
-  animation: kenLyv 0s linear 1;
+  -webkit-animation: eWdtyu 0s linear 1;
+  animation: eWdtyu 0s linear 1;
 }
 
 .c16 {
-  -webkit-animation: kenLyv 0s linear 1;
-  animation: kenLyv 0s linear 1;
+  -webkit-animation: eWdtyu 0s linear 1;
+  animation: eWdtyu 0s linear 1;
 }
 
 .c17 {
-  -webkit-animation: kenLyv 0s linear 1;
-  animation: kenLyv 0s linear 1;
+  -webkit-animation: eWdtyu 0s linear 1;
+  animation: eWdtyu 0s linear 1;
 }
 
 .c18 {
-  -webkit-animation: kenLyv 0s linear 1;
-  animation: kenLyv 0s linear 1;
+  -webkit-animation: eWdtyu 0s linear 1;
+  animation: eWdtyu 0s linear 1;
 }
 
 .c19 {
-  -webkit-animation: kenLyv 0s linear 1;
-  animation: kenLyv 0s linear 1;
+  -webkit-animation: eWdtyu 0s linear 1;
+  animation: eWdtyu 0s linear 1;
 }
 
 <div
@@ -3422,78 +3422,78 @@ exports[`Storyshots molecules/YomiFuda with size s 1`] = `
 }
 
 .c3 {
-  -webkit-animation: kenLyv 0s linear 1;
-  animation: kenLyv 0s linear 1;
+  -webkit-animation: eWdtyu 0s linear 1;
+  animation: eWdtyu 0s linear 1;
 }
 
 .c4 {
-  -webkit-animation: kenLyv 0s linear 1;
-  animation: kenLyv 0s linear 1;
+  -webkit-animation: eWdtyu 0s linear 1;
+  animation: eWdtyu 0s linear 1;
 }
 
 .c5 {
-  -webkit-animation: kenLyv 0s linear 1;
-  animation: kenLyv 0s linear 1;
+  -webkit-animation: eWdtyu 0s linear 1;
+  animation: eWdtyu 0s linear 1;
 }
 
 .c6 {
-  -webkit-animation: kenLyv 0s linear 1;
-  animation: kenLyv 0s linear 1;
+  -webkit-animation: eWdtyu 0s linear 1;
+  animation: eWdtyu 0s linear 1;
 }
 
 .c8 {
-  -webkit-animation: kenLyv 0s linear 1;
-  animation: kenLyv 0s linear 1;
+  -webkit-animation: eWdtyu 0s linear 1;
+  animation: eWdtyu 0s linear 1;
 }
 
 .c9 {
-  -webkit-animation: kenLyv 0s linear 1;
-  animation: kenLyv 0s linear 1;
+  -webkit-animation: eWdtyu 0s linear 1;
+  animation: eWdtyu 0s linear 1;
 }
 
 .c10 {
-  -webkit-animation: kenLyv 0s linear 1;
-  animation: kenLyv 0s linear 1;
+  -webkit-animation: eWdtyu 0s linear 1;
+  animation: eWdtyu 0s linear 1;
 }
 
 .c11 {
-  -webkit-animation: kenLyv 0s linear 1;
-  animation: kenLyv 0s linear 1;
+  -webkit-animation: eWdtyu 0s linear 1;
+  animation: eWdtyu 0s linear 1;
 }
 
 .c12 {
-  -webkit-animation: kenLyv 0s linear 1;
-  animation: kenLyv 0s linear 1;
+  -webkit-animation: eWdtyu 0s linear 1;
+  animation: eWdtyu 0s linear 1;
 }
 
 .c13 {
-  -webkit-animation: kenLyv 0s linear 1;
-  animation: kenLyv 0s linear 1;
+  -webkit-animation: eWdtyu 0s linear 1;
+  animation: eWdtyu 0s linear 1;
 }
 
 .c15 {
-  -webkit-animation: kenLyv 0s linear 1;
-  animation: kenLyv 0s linear 1;
+  -webkit-animation: eWdtyu 0s linear 1;
+  animation: eWdtyu 0s linear 1;
 }
 
 .c16 {
-  -webkit-animation: kenLyv 0s linear 1;
-  animation: kenLyv 0s linear 1;
+  -webkit-animation: eWdtyu 0s linear 1;
+  animation: eWdtyu 0s linear 1;
 }
 
 .c17 {
-  -webkit-animation: kenLyv 0s linear 1;
-  animation: kenLyv 0s linear 1;
+  -webkit-animation: eWdtyu 0s linear 1;
+  animation: eWdtyu 0s linear 1;
 }
 
 .c18 {
-  -webkit-animation: kenLyv 0s linear 1;
-  animation: kenLyv 0s linear 1;
+  -webkit-animation: eWdtyu 0s linear 1;
+  animation: eWdtyu 0s linear 1;
 }
 
 .c19 {
-  -webkit-animation: kenLyv 0s linear 1;
-  animation: kenLyv 0s linear 1;
+  -webkit-animation: eWdtyu 0s linear 1;
+  animation: eWdtyu 0s linear 1;
 }
 
 <div
@@ -3663,78 +3663,78 @@ exports[`Storyshots molecules/YomiFuda without anim 1`] = `
 }
 
 .c3 {
-  -webkit-animation: kenLyv 0s linear 1;
-  animation: kenLyv 0s linear 1;
+  -webkit-animation: eWdtyu 0s linear 1;
+  animation: eWdtyu 0s linear 1;
 }
 
 .c4 {
-  -webkit-animation: kenLyv 0s linear 1;
-  animation: kenLyv 0s linear 1;
+  -webkit-animation: eWdtyu 0s linear 1;
+  animation: eWdtyu 0s linear 1;
 }
 
 .c5 {
-  -webkit-animation: kenLyv 0s linear 1;
-  animation: kenLyv 0s linear 1;
+  -webkit-animation: eWdtyu 0s linear 1;
+  animation: eWdtyu 0s linear 1;
 }
 
 .c6 {
-  -webkit-animation: kenLyv 0s linear 1;
-  animation: kenLyv 0s linear 1;
+  -webkit-animation: eWdtyu 0s linear 1;
+  animation: eWdtyu 0s linear 1;
 }
 
 .c8 {
-  -webkit-animation: kenLyv 0s linear 1;
-  animation: kenLyv 0s linear 1;
+  -webkit-animation: eWdtyu 0s linear 1;
+  animation: eWdtyu 0s linear 1;
 }
 
 .c9 {
-  -webkit-animation: kenLyv 0s linear 1;
-  animation: kenLyv 0s linear 1;
+  -webkit-animation: eWdtyu 0s linear 1;
+  animation: eWdtyu 0s linear 1;
 }
 
 .c10 {
-  -webkit-animation: kenLyv 0s linear 1;
-  animation: kenLyv 0s linear 1;
+  -webkit-animation: eWdtyu 0s linear 1;
+  animation: eWdtyu 0s linear 1;
 }
 
 .c11 {
-  -webkit-animation: kenLyv 0s linear 1;
-  animation: kenLyv 0s linear 1;
+  -webkit-animation: eWdtyu 0s linear 1;
+  animation: eWdtyu 0s linear 1;
 }
 
 .c12 {
-  -webkit-animation: kenLyv 0s linear 1;
-  animation: kenLyv 0s linear 1;
+  -webkit-animation: eWdtyu 0s linear 1;
+  animation: eWdtyu 0s linear 1;
 }
 
 .c13 {
-  -webkit-animation: kenLyv 0s linear 1;
-  animation: kenLyv 0s linear 1;
+  -webkit-animation: eWdtyu 0s linear 1;
+  animation: eWdtyu 0s linear 1;
 }
 
 .c15 {
-  -webkit-animation: kenLyv 0s linear 1;
-  animation: kenLyv 0s linear 1;
+  -webkit-animation: eWdtyu 0s linear 1;
+  animation: eWdtyu 0s linear 1;
 }
 
 .c16 {
-  -webkit-animation: kenLyv 0s linear 1;
-  animation: kenLyv 0s linear 1;
+  -webkit-animation: eWdtyu 0s linear 1;
+  animation: eWdtyu 0s linear 1;
 }
 
 .c17 {
-  -webkit-animation: kenLyv 0s linear 1;
-  animation: kenLyv 0s linear 1;
+  -webkit-animation: eWdtyu 0s linear 1;
+  animation: eWdtyu 0s linear 1;
 }
 
 .c18 {
-  -webkit-animation: kenLyv 0s linear 1;
-  animation: kenLyv 0s linear 1;
+  -webkit-animation: eWdtyu 0s linear 1;
+  animation: eWdtyu 0s linear 1;
 }
 
 .c19 {
-  -webkit-animation: kenLyv 0s linear 1;
-  animation: kenLyv 0s linear 1;
+  -webkit-animation: eWdtyu 0s linear 1;
+  animation: eWdtyu 0s linear 1;
 }
 
 <div
@@ -3857,28 +3857,28 @@ exports[`Storyshots molecules/YomiFudaPhrase with anim 1`] = `
 }
 
 .c1 {
-  -webkit-animation: kenLyv 1s linear 1;
-  animation: kenLyv 1s linear 1;
+  -webkit-animation: eWdtyu 1s linear 1;
+  animation: eWdtyu 1s linear 1;
 }
 
 .c2 {
-  -webkit-animation: kenLyv 1s linear 1;
-  animation: kenLyv 1s linear 1;
+  -webkit-animation: eWdtyu 1s linear 1;
+  animation: eWdtyu 1s linear 1;
 }
 
 .c3 {
-  -webkit-animation: kenLyv 1s linear 1;
-  animation: kenLyv 1s linear 1;
+  -webkit-animation: eWdtyu 1s linear 1;
+  animation: eWdtyu 1s linear 1;
 }
 
 .c4 {
-  -webkit-animation: kenLyv 1s linear 1;
-  animation: kenLyv 1s linear 1;
+  -webkit-animation: eWdtyu 1s linear 1;
+  animation: eWdtyu 1s linear 1;
 }
 
 .c5 {
-  -webkit-animation: kenLyv 1s linear 1;
-  animation: kenLyv 1s linear 1;
+  -webkit-animation: eWdtyu 1s linear 1;
+  animation: eWdtyu 1s linear 1;
 }
 
 <span
@@ -3925,28 +3925,28 @@ exports[`Storyshots molecules/YomiFudaPhrase without anim 1`] = `
 }
 
 .c1 {
-  -webkit-animation: kenLyv 0s linear 1;
-  animation: kenLyv 0s linear 1;
+  -webkit-animation: eWdtyu 0s linear 1;
+  animation: eWdtyu 0s linear 1;
 }
 
 .c2 {
-  -webkit-animation: kenLyv 0s linear 1;
-  animation: kenLyv 0s linear 1;
+  -webkit-animation: eWdtyu 0s linear 1;
+  animation: eWdtyu 0s linear 1;
 }
 
 .c3 {
-  -webkit-animation: kenLyv 0s linear 1;
-  animation: kenLyv 0s linear 1;
+  -webkit-animation: eWdtyu 0s linear 1;
+  animation: eWdtyu 0s linear 1;
 }
 
 .c4 {
-  -webkit-animation: kenLyv 0s linear 1;
-  animation: kenLyv 0s linear 1;
+  -webkit-animation: eWdtyu 0s linear 1;
+  animation: eWdtyu 0s linear 1;
 }
 
 .c5 {
-  -webkit-animation: kenLyv 0s linear 1;
-  animation: kenLyv 0s linear 1;
+  -webkit-animation: eWdtyu 0s linear 1;
+  animation: eWdtyu 0s linear 1;
 }
 
 <span
@@ -4007,20 +4007,20 @@ exports[`Storyshots organisms/ExamQuestions answered 1`] = `
   -ms-transform: scale(0);
   transform: scale(0);
   opacity: 0.75;
-  -webkit-animation: fHRFlR 1000ms;
-  animation: fHRFlR 1000ms;
-}
-
-.c16 {
-  display: inline-block;
-  width: 1.6rem;
-  line-height: 1.7000000000000002rem;
+  -webkit-animation: hctBKm 1000ms;
+  animation: hctBKm 1000ms;
 }
 
 .c6 {
   display: inline-block;
   width: 1.8rem;
   line-height: 1.9000000000000001rem;
+}
+
+.c16 {
+  display: inline-block;
+  width: 1.6rem;
+  line-height: 1.7000000000000002rem;
 }
 
 .c3 {
@@ -4070,31 +4070,6 @@ exports[`Storyshots organisms/ExamQuestions answered 1`] = `
   padding-top: 55.199999999999996px;
 }
 
-.c18 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  background-color: #fffff0;
-  border-style: solid;
-  border-color: #5a9216;
-  border-width: 3px;
-  border-radius: 10px;
-  height: 220px;
-  padding: 0 8px;
-  font-family: 'Sawarabi Mincho';
-  cursor: pointer;
-  opacity: 1;
-}
-
 .c13 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -4118,6 +4093,31 @@ exports[`Storyshots organisms/ExamQuestions answered 1`] = `
   font-family: 'Sawarabi Mincho';
   cursor: pointer;
   opacity: 0.8;
+}
+
+.c18 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  background-color: #fffff0;
+  border-style: solid;
+  border-color: #5a9216;
+  border-width: 3px;
+  border-radius: 10px;
+  height: 220px;
+  padding: 0 8px;
+  font-family: 'Sawarabi Mincho';
+  cursor: pointer;
+  opacity: 1;
 }
 
 .c15 {
@@ -4228,8 +4228,8 @@ exports[`Storyshots organisms/ExamQuestions answered 1`] = `
 }
 
 .c7 {
-  -webkit-animation: kenLyv 0s linear 1;
-  animation: kenLyv 0s linear 1;
+  -webkit-animation: eWdtyu 0s linear 1;
+  animation: eWdtyu 0s linear 1;
 }
 
 <div
@@ -4762,20 +4762,20 @@ exports[`Storyshots organisms/ExamQuestions in answer 1`] = `
   -ms-transform: scale(0);
   transform: scale(0);
   opacity: 0.75;
-  -webkit-animation: fHRFlR 1000ms;
-  animation: fHRFlR 1000ms;
-}
-
-.c16 {
-  display: inline-block;
-  width: 1.6rem;
-  line-height: 1.7000000000000002rem;
+  -webkit-animation: hctBKm 1000ms;
+  animation: hctBKm 1000ms;
 }
 
 .c6 {
   display: inline-block;
   width: 1.8rem;
   line-height: 1.9000000000000001rem;
+}
+
+.c16 {
+  display: inline-block;
+  width: 1.6rem;
+  line-height: 1.7000000000000002rem;
 }
 
 .c3 {
@@ -4933,8 +4933,8 @@ exports[`Storyshots organisms/ExamQuestions in answer 1`] = `
 }
 
 .c7 {
-  -webkit-animation: kenLyv 0.6s linear 1;
-  animation: kenLyv 0.6s linear 1;
+  -webkit-animation: eWdtyu 0.6s linear 1;
+  animation: eWdtyu 0.6s linear 1;
 }
 
 <div
@@ -5146,20 +5146,20 @@ exports[`Storyshots organisms/ExamQuestions waiting 1`] = `
   -ms-transform: scale(0);
   transform: scale(0);
   opacity: 0.75;
-  -webkit-animation: fHRFlR 1000ms;
-  animation: fHRFlR 1000ms;
-}
-
-.c16 {
-  display: inline-block;
-  width: 1.6rem;
-  line-height: 1.7000000000000002rem;
+  -webkit-animation: hctBKm 1000ms;
+  animation: hctBKm 1000ms;
 }
 
 .c6 {
   display: inline-block;
   width: 1.8rem;
   line-height: 1.9000000000000001rem;
+}
+
+.c16 {
+  display: inline-block;
+  width: 1.6rem;
+  line-height: 1.7000000000000002rem;
 }
 
 .c3 {
@@ -5209,31 +5209,6 @@ exports[`Storyshots organisms/ExamQuestions waiting 1`] = `
   padding-top: 55.199999999999996px;
 }
 
-.c18 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  background-color: #fffff0;
-  border-style: solid;
-  border-color: #5a9216;
-  border-width: 3px;
-  border-radius: 10px;
-  height: 220px;
-  padding: 0 8px;
-  font-family: 'Sawarabi Mincho';
-  cursor: pointer;
-  opacity: 1;
-}
-
 .c13 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -5257,6 +5232,31 @@ exports[`Storyshots organisms/ExamQuestions waiting 1`] = `
   font-family: 'Sawarabi Mincho';
   cursor: pointer;
   opacity: 0.8;
+}
+
+.c18 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  background-color: #fffff0;
+  border-style: solid;
+  border-color: #5a9216;
+  border-width: 3px;
+  border-radius: 10px;
+  height: 220px;
+  padding: 0 8px;
+  font-family: 'Sawarabi Mincho';
+  cursor: pointer;
+  opacity: 1;
 }
 
 .c15 {
@@ -5367,8 +5367,8 @@ exports[`Storyshots organisms/ExamQuestions waiting 1`] = `
 }
 
 .c7 {
-  -webkit-animation: kenLyv 0s linear 1;
-  animation: kenLyv 0s linear 1;
+  -webkit-animation: eWdtyu 0s linear 1;
+  animation: eWdtyu 0s linear 1;
 }
 
 <div
@@ -15067,8 +15067,8 @@ exports[`Storyshots organisms/Header with back button 1`] = `
   -ms-transform: scale(0);
   transform: scale(0);
   opacity: 0.75;
-  -webkit-animation: fHRFlR 1000ms;
-  animation: fHRFlR 1000ms;
+  -webkit-animation: hctBKm 1000ms;
+  animation: hctBKm 1000ms;
 }
 
 .c3 {
@@ -15190,8 +15190,8 @@ exports[`Storyshots organisms/Header with search button 1`] = `
   -ms-transform: scale(0);
   transform: scale(0);
   opacity: 0.75;
-  -webkit-animation: fHRFlR 1000ms;
-  animation: fHRFlR 1000ms;
+  -webkit-animation: hctBKm 1000ms;
+  animation: hctBKm 1000ms;
 }
 
 .c4 {
@@ -15317,20 +15317,20 @@ exports[`Storyshots organisms/KarutaPlaying answered 1`] = `
   -ms-transform: scale(0);
   transform: scale(0);
   opacity: 0.75;
-  -webkit-animation: fHRFlR 1000ms;
-  animation: fHRFlR 1000ms;
-}
-
-.c16 {
-  display: inline-block;
-  width: 1.6rem;
-  line-height: 1.7000000000000002rem;
+  -webkit-animation: hctBKm 1000ms;
+  animation: hctBKm 1000ms;
 }
 
 .c6 {
   display: inline-block;
   width: 1.8rem;
   line-height: 1.9000000000000001rem;
+}
+
+.c16 {
+  display: inline-block;
+  width: 1.6rem;
+  line-height: 1.7000000000000002rem;
 }
 
 .c3 {
@@ -15380,31 +15380,6 @@ exports[`Storyshots organisms/KarutaPlaying answered 1`] = `
   padding-top: 55.199999999999996px;
 }
 
-.c18 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  background-color: #fffff0;
-  border-style: solid;
-  border-color: #5a9216;
-  border-width: 3px;
-  border-radius: 10px;
-  height: 220px;
-  padding: 0 8px;
-  font-family: 'Sawarabi Mincho';
-  cursor: pointer;
-  opacity: 1;
-}
-
 .c13 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -15428,6 +15403,31 @@ exports[`Storyshots organisms/KarutaPlaying answered 1`] = `
   font-family: 'Sawarabi Mincho';
   cursor: pointer;
   opacity: 0.8;
+}
+
+.c18 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  background-color: #fffff0;
+  border-style: solid;
+  border-color: #5a9216;
+  border-width: 3px;
+  border-radius: 10px;
+  height: 220px;
+  padding: 0 8px;
+  font-family: 'Sawarabi Mincho';
+  cursor: pointer;
+  opacity: 1;
 }
 
 .c15 {
@@ -15538,8 +15538,8 @@ exports[`Storyshots organisms/KarutaPlaying answered 1`] = `
 }
 
 .c7 {
-  -webkit-animation: kenLyv 0s linear 1;
-  animation: kenLyv 0s linear 1;
+  -webkit-animation: eWdtyu 0s linear 1;
+  animation: eWdtyu 0s linear 1;
 }
 
 <div
@@ -15808,20 +15808,20 @@ exports[`Storyshots organisms/KarutaPlaying in answer 1`] = `
   -ms-transform: scale(0);
   transform: scale(0);
   opacity: 0.75;
-  -webkit-animation: fHRFlR 1000ms;
-  animation: fHRFlR 1000ms;
-}
-
-.c16 {
-  display: inline-block;
-  width: 1.6rem;
-  line-height: 1.7000000000000002rem;
+  -webkit-animation: hctBKm 1000ms;
+  animation: hctBKm 1000ms;
 }
 
 .c6 {
   display: inline-block;
   width: 1.8rem;
   line-height: 1.9000000000000001rem;
+}
+
+.c16 {
+  display: inline-block;
+  width: 1.6rem;
+  line-height: 1.7000000000000002rem;
 }
 
 .c3 {
@@ -15979,8 +15979,8 @@ exports[`Storyshots organisms/KarutaPlaying in answer 1`] = `
 }
 
 .c7 {
-  -webkit-animation: kenLyv 1s linear 1;
-  animation: kenLyv 1s linear 1;
+  -webkit-animation: eWdtyu 1s linear 1;
+  animation: eWdtyu 1s linear 1;
 }
 
 <div
@@ -16686,7 +16686,7 @@ exports[`Storyshots organisms/KarutaPlayingResult all correct 1`] = `
   className="c0"
 >
   <div
-    className="c1"
+    className="sc-fzXfPI c1"
   >
     <div
       className="makeStyles-root makeStyles-root c2"
@@ -16700,7 +16700,7 @@ exports[`Storyshots organisms/KarutaPlayingResult all correct 1`] = `
     </span>
   </div>
   <div
-    className="c3"
+    className="sc-fzXfPI c3"
   >
     <div
       className="makeStyles-root makeStyles-root c2"
@@ -16822,7 +16822,7 @@ exports[`Storyshots organisms/KarutaPlayingResult has mistake 1`] = `
   className="c0"
 >
   <div
-    className="c1"
+    className="sc-fzXfPI c1"
   >
     <div
       className="makeStyles-root makeStyles-root c2"
@@ -16836,7 +16836,7 @@ exports[`Storyshots organisms/KarutaPlayingResult has mistake 1`] = `
     </span>
   </div>
   <div
-    className="c3"
+    className="sc-fzXfPI c3"
   >
     <div
       className="makeStyles-root makeStyles-root c2"
@@ -16967,8 +16967,8 @@ exports[`Storyshots organisms/MainMenuList default 1`] = `
   -ms-transform: scale(0);
   transform: scale(0);
   opacity: 0.75;
-  -webkit-animation: fHRFlR 1000ms;
-  animation: fHRFlR 1000ms;
+  -webkit-animation: hctBKm 1000ms;
+  animation: hctBKm 1000ms;
 }
 
 .c1 {
@@ -18334,8 +18334,8 @@ exports[`Storyshots organisms/Navigation default 1`] = `
   -ms-transform: scale(0);
   transform: scale(0);
   opacity: 0.75;
-  -webkit-animation: fHRFlR 1000ms;
-  animation: fHRFlR 1000ms;
+  -webkit-animation: hctBKm 1000ms;
+  animation: hctBKm 1000ms;
 }
 
 .c4 {
@@ -18712,20 +18712,20 @@ exports[`Storyshots organisms/ReviewQuestions answered 1`] = `
   -ms-transform: scale(0);
   transform: scale(0);
   opacity: 0.75;
-  -webkit-animation: fHRFlR 1000ms;
-  animation: fHRFlR 1000ms;
-}
-
-.c16 {
-  display: inline-block;
-  width: 1.6rem;
-  line-height: 1.7000000000000002rem;
+  -webkit-animation: hctBKm 1000ms;
+  animation: hctBKm 1000ms;
 }
 
 .c6 {
   display: inline-block;
   width: 1.8rem;
   line-height: 1.9000000000000001rem;
+}
+
+.c16 {
+  display: inline-block;
+  width: 1.6rem;
+  line-height: 1.7000000000000002rem;
 }
 
 .c3 {
@@ -18775,31 +18775,6 @@ exports[`Storyshots organisms/ReviewQuestions answered 1`] = `
   padding-top: 55.199999999999996px;
 }
 
-.c18 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  background-color: #fffff0;
-  border-style: solid;
-  border-color: #5a9216;
-  border-width: 3px;
-  border-radius: 10px;
-  height: 220px;
-  padding: 0 8px;
-  font-family: 'Sawarabi Mincho';
-  cursor: pointer;
-  opacity: 1;
-}
-
 .c13 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -18823,6 +18798,31 @@ exports[`Storyshots organisms/ReviewQuestions answered 1`] = `
   font-family: 'Sawarabi Mincho';
   cursor: pointer;
   opacity: 0.8;
+}
+
+.c18 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  background-color: #fffff0;
+  border-style: solid;
+  border-color: #5a9216;
+  border-width: 3px;
+  border-radius: 10px;
+  height: 220px;
+  padding: 0 8px;
+  font-family: 'Sawarabi Mincho';
+  cursor: pointer;
+  opacity: 1;
 }
 
 .c15 {
@@ -18933,8 +18933,8 @@ exports[`Storyshots organisms/ReviewQuestions answered 1`] = `
 }
 
 .c7 {
-  -webkit-animation: kenLyv 0s linear 1;
-  animation: kenLyv 0s linear 1;
+  -webkit-animation: eWdtyu 0s linear 1;
+  animation: eWdtyu 0s linear 1;
 }
 
 <div
@@ -19467,20 +19467,20 @@ exports[`Storyshots organisms/ReviewQuestions in answer 1`] = `
   -ms-transform: scale(0);
   transform: scale(0);
   opacity: 0.75;
-  -webkit-animation: fHRFlR 1000ms;
-  animation: fHRFlR 1000ms;
-}
-
-.c16 {
-  display: inline-block;
-  width: 1.6rem;
-  line-height: 1.7000000000000002rem;
+  -webkit-animation: hctBKm 1000ms;
+  animation: hctBKm 1000ms;
 }
 
 .c6 {
   display: inline-block;
   width: 1.8rem;
   line-height: 1.9000000000000001rem;
+}
+
+.c16 {
+  display: inline-block;
+  width: 1.6rem;
+  line-height: 1.7000000000000002rem;
 }
 
 .c3 {
@@ -19638,8 +19638,8 @@ exports[`Storyshots organisms/ReviewQuestions in answer 1`] = `
 }
 
 .c7 {
-  -webkit-animation: kenLyv 0.5s linear 1;
-  animation: kenLyv 0.5s linear 1;
+  -webkit-animation: eWdtyu 0.5s linear 1;
+  animation: eWdtyu 0.5s linear 1;
 }
 
 <div
@@ -19851,20 +19851,20 @@ exports[`Storyshots organisms/ReviewQuestions waiting 1`] = `
   -ms-transform: scale(0);
   transform: scale(0);
   opacity: 0.75;
-  -webkit-animation: fHRFlR 1000ms;
-  animation: fHRFlR 1000ms;
-}
-
-.c16 {
-  display: inline-block;
-  width: 1.6rem;
-  line-height: 1.7000000000000002rem;
+  -webkit-animation: hctBKm 1000ms;
+  animation: hctBKm 1000ms;
 }
 
 .c6 {
   display: inline-block;
   width: 1.8rem;
   line-height: 1.9000000000000001rem;
+}
+
+.c16 {
+  display: inline-block;
+  width: 1.6rem;
+  line-height: 1.7000000000000002rem;
 }
 
 .c3 {
@@ -19914,31 +19914,6 @@ exports[`Storyshots organisms/ReviewQuestions waiting 1`] = `
   padding-top: 55.199999999999996px;
 }
 
-.c18 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  background-color: #fffff0;
-  border-style: solid;
-  border-color: #5a9216;
-  border-width: 3px;
-  border-radius: 10px;
-  height: 220px;
-  padding: 0 8px;
-  font-family: 'Sawarabi Mincho';
-  cursor: pointer;
-  opacity: 1;
-}
-
 .c13 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -19962,6 +19937,31 @@ exports[`Storyshots organisms/ReviewQuestions waiting 1`] = `
   font-family: 'Sawarabi Mincho';
   cursor: pointer;
   opacity: 0.8;
+}
+
+.c18 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  background-color: #fffff0;
+  border-style: solid;
+  border-color: #5a9216;
+  border-width: 3px;
+  border-radius: 10px;
+  height: 220px;
+  padding: 0 8px;
+  font-family: 'Sawarabi Mincho';
+  cursor: pointer;
+  opacity: 1;
 }
 
 .c15 {
@@ -20072,8 +20072,8 @@ exports[`Storyshots organisms/ReviewQuestions waiting 1`] = `
 }
 
 .c7 {
-  -webkit-animation: kenLyv 0s linear 1;
-  animation: kenLyv 0s linear 1;
+  -webkit-animation: eWdtyu 0s linear 1;
+  animation: eWdtyu 0s linear 1;
 }
 
 <div
@@ -21126,20 +21126,20 @@ exports[`Storyshots organisms/TrainingQuestions answered 1`] = `
   -ms-transform: scale(0);
   transform: scale(0);
   opacity: 0.75;
-  -webkit-animation: fHRFlR 1000ms;
-  animation: fHRFlR 1000ms;
-}
-
-.c16 {
-  display: inline-block;
-  width: 1.6rem;
-  line-height: 1.7000000000000002rem;
+  -webkit-animation: hctBKm 1000ms;
+  animation: hctBKm 1000ms;
 }
 
 .c6 {
   display: inline-block;
   width: 1.8rem;
   line-height: 1.9000000000000001rem;
+}
+
+.c16 {
+  display: inline-block;
+  width: 1.6rem;
+  line-height: 1.7000000000000002rem;
 }
 
 .c3 {
@@ -21189,31 +21189,6 @@ exports[`Storyshots organisms/TrainingQuestions answered 1`] = `
   padding-top: 55.199999999999996px;
 }
 
-.c18 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  background-color: #fffff0;
-  border-style: solid;
-  border-color: #5a9216;
-  border-width: 3px;
-  border-radius: 10px;
-  height: 220px;
-  padding: 0 8px;
-  font-family: 'Sawarabi Mincho';
-  cursor: pointer;
-  opacity: 1;
-}
-
 .c13 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -21237,6 +21212,31 @@ exports[`Storyshots organisms/TrainingQuestions answered 1`] = `
   font-family: 'Sawarabi Mincho';
   cursor: pointer;
   opacity: 0.8;
+}
+
+.c18 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  background-color: #fffff0;
+  border-style: solid;
+  border-color: #5a9216;
+  border-width: 3px;
+  border-radius: 10px;
+  height: 220px;
+  padding: 0 8px;
+  font-family: 'Sawarabi Mincho';
+  cursor: pointer;
+  opacity: 1;
 }
 
 .c15 {
@@ -21347,8 +21347,8 @@ exports[`Storyshots organisms/TrainingQuestions answered 1`] = `
 }
 
 .c7 {
-  -webkit-animation: kenLyv 0s linear 1;
-  animation: kenLyv 0s linear 1;
+  -webkit-animation: eWdtyu 0s linear 1;
+  animation: eWdtyu 0s linear 1;
 }
 
 <div
@@ -21881,20 +21881,20 @@ exports[`Storyshots organisms/TrainingQuestions in answer 1`] = `
   -ms-transform: scale(0);
   transform: scale(0);
   opacity: 0.75;
-  -webkit-animation: fHRFlR 1000ms;
-  animation: fHRFlR 1000ms;
-}
-
-.c16 {
-  display: inline-block;
-  width: 1.6rem;
-  line-height: 1.7000000000000002rem;
+  -webkit-animation: hctBKm 1000ms;
+  animation: hctBKm 1000ms;
 }
 
 .c6 {
   display: inline-block;
   width: 1.8rem;
   line-height: 1.9000000000000001rem;
+}
+
+.c16 {
+  display: inline-block;
+  width: 1.6rem;
+  line-height: 1.7000000000000002rem;
 }
 
 .c3 {
@@ -22052,8 +22052,8 @@ exports[`Storyshots organisms/TrainingQuestions in answer 1`] = `
 }
 
 .c7 {
-  -webkit-animation: kenLyv 0.5s linear 1;
-  animation: kenLyv 0.5s linear 1;
+  -webkit-animation: eWdtyu 0.5s linear 1;
+  animation: eWdtyu 0.5s linear 1;
 }
 
 <div
@@ -22265,20 +22265,20 @@ exports[`Storyshots organisms/TrainingQuestions waiting 1`] = `
   -ms-transform: scale(0);
   transform: scale(0);
   opacity: 0.75;
-  -webkit-animation: fHRFlR 1000ms;
-  animation: fHRFlR 1000ms;
-}
-
-.c16 {
-  display: inline-block;
-  width: 1.6rem;
-  line-height: 1.7000000000000002rem;
+  -webkit-animation: hctBKm 1000ms;
+  animation: hctBKm 1000ms;
 }
 
 .c6 {
   display: inline-block;
   width: 1.8rem;
   line-height: 1.9000000000000001rem;
+}
+
+.c16 {
+  display: inline-block;
+  width: 1.6rem;
+  line-height: 1.7000000000000002rem;
 }
 
 .c3 {
@@ -22328,31 +22328,6 @@ exports[`Storyshots organisms/TrainingQuestions waiting 1`] = `
   padding-top: 55.199999999999996px;
 }
 
-.c18 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  background-color: #fffff0;
-  border-style: solid;
-  border-color: #5a9216;
-  border-width: 3px;
-  border-radius: 10px;
-  height: 220px;
-  padding: 0 8px;
-  font-family: 'Sawarabi Mincho';
-  cursor: pointer;
-  opacity: 1;
-}
-
 .c13 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -22376,6 +22351,31 @@ exports[`Storyshots organisms/TrainingQuestions waiting 1`] = `
   font-family: 'Sawarabi Mincho';
   cursor: pointer;
   opacity: 0.8;
+}
+
+.c18 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  background-color: #fffff0;
+  border-style: solid;
+  border-color: #5a9216;
+  border-width: 3px;
+  border-radius: 10px;
+  height: 220px;
+  padding: 0 8px;
+  font-family: 'Sawarabi Mincho';
+  cursor: pointer;
+  opacity: 1;
 }
 
 .c15 {
@@ -22486,8 +22486,8 @@ exports[`Storyshots organisms/TrainingQuestions waiting 1`] = `
 }
 
 .c7 {
-  -webkit-animation: kenLyv 0s linear 1;
-  animation: kenLyv 0s linear 1;
+  -webkit-animation: eWdtyu 0s linear 1;
+  animation: eWdtyu 0s linear 1;
 }
 
 <div
@@ -22778,7 +22778,7 @@ exports[`Storyshots organisms/TrainingResult default 1`] = `
   className="c0"
 >
   <div
-    className="c1"
+    className="sc-fzXfPI c1"
   >
     <div
       className="makeStyles-root makeStyles-root c2"
@@ -22792,7 +22792,7 @@ exports[`Storyshots organisms/TrainingResult default 1`] = `
     </span>
   </div>
   <div
-    className="c3"
+    className="sc-fzXfPI c3"
   >
     <div
       className="makeStyles-root makeStyles-root c2"
@@ -22981,8 +22981,8 @@ Array [
   -ms-transform: scale(0);
   transform: scale(0);
   opacity: 0.75;
-  -webkit-animation: fHRFlR 1000ms;
-  animation: fHRFlR 1000ms;
+  -webkit-animation: hctBKm 1000ms;
+  animation: hctBKm 1000ms;
 }
 
 .c4 {
@@ -23054,6 +23054,26 @@ Array [
   .c6 {
     line-height: 64px;
   }
+}
+
+@media screen and (min-width:768px) {
+
+}
+
+@media screen and (min-width:768px) {
+
+}
+
+@media screen and (min-width:768px) {
+
+}
+
+@media (min-width:500px) {
+
+}
+
+@media (min-width:800px) {
+
 }
 
 <header
@@ -23174,11 +23194,27 @@ Array [
 }
 
 @media screen and (min-width:768px) {
+
+}
+
+@media screen and (min-width:768px) {
+
+}
+
+@media screen and (min-width:768px) {
+
+}
+
+@media screen and (min-width:768px) {
   .c0 {
     padding-top: 64px;
     padding-bottom: 0;
     padding-left: 56px;
   }
+}
+
+@media screen and (min-width:768px) {
+
 }
 
 @media (min-width:500px) {
@@ -23354,8 +23390,8 @@ Array [
   -ms-transform: scale(0);
   transform: scale(0);
   opacity: 0.75;
-  -webkit-animation: fHRFlR 1000ms;
-  animation: fHRFlR 1000ms;
+  -webkit-animation: hctBKm 1000ms;
+  animation: hctBKm 1000ms;
 }
 
 .c5 {
@@ -23535,6 +23571,14 @@ Array [
 }
 
 @media screen and (min-width:768px) {
+
+}
+
+@media screen and (min-width:768px) {
+
+}
+
+@media screen and (min-width:768px) {
   .c2 {
     -webkit-box-flex: 0;
     -webkit-flex-grow: 0;
@@ -23542,6 +23586,10 @@ Array [
     flex-grow: 0;
     height: 64px;
   }
+}
+
+@media screen and (min-width:768px) {
+
 }
 
 @media screen and (min-width:768px) {
@@ -23553,6 +23601,14 @@ Array [
     width: 64px;
     padding-top: 64px;
   }
+}
+
+@media (min-width:500px) {
+
+}
+
+@media (min-width:800px) {
+
 }
 
 <nav
@@ -23755,8 +23811,8 @@ Array [
   -ms-transform: scale(0);
   transform: scale(0);
   opacity: 0.75;
-  -webkit-animation: fHRFlR 1000ms;
-  animation: fHRFlR 1000ms;
+  -webkit-animation: hctBKm 1000ms;
+  animation: hctBKm 1000ms;
 }
 
 .c4 {
@@ -23828,6 +23884,26 @@ Array [
   .c6 {
     line-height: 64px;
   }
+}
+
+@media screen and (min-width:768px) {
+
+}
+
+@media screen and (min-width:768px) {
+
+}
+
+@media screen and (min-width:768px) {
+
+}
+
+@media (min-width:500px) {
+
+}
+
+@media (min-width:800px) {
+
 }
 
 <header
@@ -23937,11 +24013,27 @@ Array [
 }
 
 @media screen and (min-width:768px) {
+
+}
+
+@media screen and (min-width:768px) {
+
+}
+
+@media screen and (min-width:768px) {
+
+}
+
+@media screen and (min-width:768px) {
   .c0 {
     padding-top: 64px;
     padding-bottom: 0;
     padding-left: 56px;
   }
+}
+
+@media screen and (min-width:768px) {
+
 }
 
 @media (min-width:500px) {
@@ -24048,8 +24140,8 @@ Array [
   -ms-transform: scale(0);
   transform: scale(0);
   opacity: 0.75;
-  -webkit-animation: fHRFlR 1000ms;
-  animation: fHRFlR 1000ms;
+  -webkit-animation: hctBKm 1000ms;
+  animation: hctBKm 1000ms;
 }
 
 .c5 {
@@ -24073,27 +24165,6 @@ Array [
   opacity: 1;
 }
 
-.c9 {
-  height: 56px;
-  color: #fff;
-  position: relative;
-  box-sizing: border-box;
-  width: inherit;
-  opacity: 0.8;
-}
-
-.c9 svg {
-  margin-bottom: 18px;
-}
-
-.c9:after {
-  content: '資料';
-  bottom: 8px;
-  position: absolute;
-  font-size: 1.2rem;
-  opacity: 1;
-}
-
 .c7 {
   height: 56px;
   color: #fff;
@@ -24109,6 +24180,27 @@ Array [
 
 .c7:after {
   content: '腕試し';
+  bottom: 8px;
+  position: absolute;
+  font-size: 1.2rem;
+  opacity: 1;
+}
+
+.c9 {
+  height: 56px;
+  color: #fff;
+  position: relative;
+  box-sizing: border-box;
+  width: inherit;
+  opacity: 0.8;
+}
+
+.c9 svg {
+  margin-bottom: 18px;
+}
+
+.c9:after {
+  content: '資料';
   bottom: 8px;
   position: absolute;
   font-size: 1.2rem;
@@ -24229,6 +24321,14 @@ Array [
 }
 
 @media screen and (min-width:768px) {
+
+}
+
+@media screen and (min-width:768px) {
+
+}
+
+@media screen and (min-width:768px) {
   .c2 {
     -webkit-box-flex: 0;
     -webkit-flex-grow: 0;
@@ -24236,6 +24336,10 @@ Array [
     flex-grow: 0;
     height: 64px;
   }
+}
+
+@media screen and (min-width:768px) {
+
 }
 
 @media screen and (min-width:768px) {
@@ -24247,6 +24351,14 @@ Array [
     width: 64px;
     padding-top: 64px;
   }
+}
+
+@media (min-width:500px) {
+
+}
+
+@media (min-width:800px) {
+
 }
 
 <nav
@@ -24449,8 +24561,8 @@ Array [
   -ms-transform: scale(0);
   transform: scale(0);
   opacity: 0.75;
-  -webkit-animation: fHRFlR 1000ms;
-  animation: fHRFlR 1000ms;
+  -webkit-animation: hctBKm 1000ms;
+  animation: hctBKm 1000ms;
 }
 
 .c4 {
@@ -24524,6 +24636,14 @@ Array [
   }
 }
 
+@media screen and (min-width:768px) {
+
+}
+
+@media screen and (min-width:768px) {
+
+}
+
 <header
     className="c0 c1"
   >
@@ -24587,6 +24707,14 @@ Array [
   box-sizing: border-box;
   width: 100%;
   min-height: calc(100vh - 56px);
+}
+
+@media screen and (min-width:768px) {
+
+}
+
+@media screen and (min-width:768px) {
+
 }
 
 @media screen and (min-width:768px) {
@@ -24663,8 +24791,8 @@ Array [
   -ms-transform: scale(0);
   transform: scale(0);
   opacity: 0.75;
-  -webkit-animation: fHRFlR 1000ms;
-  animation: fHRFlR 1000ms;
+  -webkit-animation: hctBKm 1000ms;
+  animation: hctBKm 1000ms;
 }
 
 .c4 {
@@ -24736,6 +24864,22 @@ Array [
   .c6 {
     line-height: 64px;
   }
+}
+
+@media screen and (min-width:768px) {
+
+}
+
+@media (min-width:500px) {
+
+}
+
+@media (min-width:800px) {
+
+}
+
+@media screen and (min-width:768px) {
+
 }
 
 <header
@@ -24900,6 +25044,14 @@ Array [
 }
 
 @media screen and (min-width:768px) {
+
+}
+
+@media screen and (min-width:768px) {
+
+}
+
+@media screen and (min-width:768px) {
   .c0 {
     padding-top: 64px;
     padding-bottom: 0;
@@ -24951,7 +25103,7 @@ Array [
         className="c4"
       >
         <div
-          className="c5"
+          className="sc-fzXfPI c5"
         >
           <div
             className="makeStyles-root makeStyles-root c6"
@@ -24965,7 +25117,7 @@ Array [
           </span>
         </div>
         <div
-          className="c7"
+          className="sc-fzXfPI c7"
         >
           <div
             className="makeStyles-root makeStyles-root c6"
@@ -25091,6 +25243,42 @@ Array [
   }
 }
 
+@media screen and (min-width:768px) {
+
+}
+
+@media screen and (min-width:768px) {
+
+}
+
+@media screen and (min-width:768px) {
+
+}
+
+@media (min-width:500px) {
+
+}
+
+@media (min-width:800px) {
+
+}
+
+@media screen and (min-width:768px) {
+
+}
+
+@media screen and (min-width:768px) {
+
+}
+
+@media screen and (min-width:768px) {
+
+}
+
+@media screen and (min-width:768px) {
+
+}
+
 <header
     className="c0 c1"
   >
@@ -25121,8 +25309,8 @@ Array [
   -ms-transform: scale(0);
   transform: scale(0);
   opacity: 0.75;
-  -webkit-animation: fHRFlR 1000ms;
-  animation: fHRFlR 1000ms;
+  -webkit-animation: hctBKm 1000ms;
+  animation: hctBKm 1000ms;
 }
 
 .c0 {
@@ -25346,11 +25534,23 @@ Array [
 }
 
 @media screen and (min-width:768px) {
+
+}
+
+@media screen and (min-width:768px) {
+
+}
+
+@media screen and (min-width:768px) {
   .c0 {
     padding-top: 64px;
     padding-bottom: 0;
     padding-left: 56px;
   }
+}
+
+@media screen and (min-width:768px) {
+
 }
 
 @media (min-width:500px) {
@@ -29238,8 +29438,8 @@ Array [
   -ms-transform: scale(0);
   transform: scale(0);
   opacity: 0.75;
-  -webkit-animation: fHRFlR 1000ms;
-  animation: fHRFlR 1000ms;
+  -webkit-animation: hctBKm 1000ms;
+  animation: hctBKm 1000ms;
 }
 
 .c5 {
@@ -29419,6 +29619,10 @@ Array [
 }
 
 @media screen and (min-width:768px) {
+
+}
+
+@media screen and (min-width:768px) {
   .c2 {
     -webkit-box-flex: 0;
     -webkit-flex-grow: 0;
@@ -29426,6 +29630,10 @@ Array [
     flex-grow: 0;
     height: 64px;
   }
+}
+
+@media screen and (min-width:768px) {
+
 }
 
 @media screen and (min-width:768px) {
@@ -29437,6 +29645,30 @@ Array [
     width: 64px;
     padding-top: 64px;
   }
+}
+
+@media (min-width:500px) {
+
+}
+
+@media (min-width:800px) {
+
+}
+
+@media screen and (min-width:768px) {
+
+}
+
+@media screen and (min-width:768px) {
+
+}
+
+@media screen and (min-width:768px) {
+
+}
+
+@media screen and (min-width:768px) {
+
 }
 
 <nav
@@ -29639,8 +29871,8 @@ Array [
   -ms-transform: scale(0);
   transform: scale(0);
   opacity: 0.75;
-  -webkit-animation: fHRFlR 1000ms;
-  animation: fHRFlR 1000ms;
+  -webkit-animation: hctBKm 1000ms;
+  animation: hctBKm 1000ms;
 }
 
 .c4 {
@@ -29728,6 +29960,34 @@ Array [
   .c6 {
     line-height: 64px;
   }
+}
+
+@media screen and (min-width:768px) {
+
+}
+
+@media screen and (min-width:768px) {
+
+}
+
+@media screen and (min-width:768px) {
+
+}
+
+@media (min-width:500px) {
+
+}
+
+@media (min-width:800px) {
+
+}
+
+@media screen and (min-width:768px) {
+
+}
+
+@media screen and (min-width:768px) {
+
 }
 
 <header
@@ -29961,11 +30221,27 @@ Array [
 }
 
 @media screen and (min-width:768px) {
+
+}
+
+@media screen and (min-width:768px) {
+
+}
+
+@media screen and (min-width:768px) {
+
+}
+
+@media screen and (min-width:768px) {
   .c0 {
     padding-top: 64px;
     padding-bottom: 0;
     padding-left: 56px;
   }
+}
+
+@media screen and (min-width:768px) {
+
 }
 
 @media (min-width:500px) {
@@ -39248,8 +39524,8 @@ Array [
   -ms-transform: scale(0);
   transform: scale(0);
   opacity: 0.75;
-  -webkit-animation: fHRFlR 1000ms;
-  animation: fHRFlR 1000ms;
+  -webkit-animation: hctBKm 1000ms;
+  animation: hctBKm 1000ms;
 }
 
 .c5 {
@@ -39294,27 +39570,6 @@ Array [
   opacity: 1;
 }
 
-.c11 {
-  height: 56px;
-  color: #fff;
-  position: relative;
-  box-sizing: border-box;
-  width: inherit;
-  opacity: 0.8;
-}
-
-.c11 svg {
-  margin-bottom: 18px;
-}
-
-.c11:after {
-  content: 'その他';
-  bottom: 8px;
-  position: absolute;
-  font-size: 1.2rem;
-  opacity: 1;
-}
-
 .c9 {
   height: 56px;
   color: #fff;
@@ -39330,6 +39585,27 @@ Array [
 
 .c9:after {
   content: '資料';
+  bottom: 8px;
+  position: absolute;
+  font-size: 1.2rem;
+  opacity: 1;
+}
+
+.c11 {
+  height: 56px;
+  color: #fff;
+  position: relative;
+  box-sizing: border-box;
+  width: inherit;
+  opacity: 0.8;
+}
+
+.c11 svg {
+  margin-bottom: 18px;
+}
+
+.c11:after {
+  content: 'その他';
   bottom: 8px;
   position: absolute;
   font-size: 1.2rem;
@@ -39429,6 +39705,14 @@ Array [
 }
 
 @media screen and (min-width:768px) {
+
+}
+
+@media screen and (min-width:768px) {
+
+}
+
+@media screen and (min-width:768px) {
   .c2 {
     -webkit-box-flex: 0;
     -webkit-flex-grow: 0;
@@ -39436,6 +39720,10 @@ Array [
     flex-grow: 0;
     height: 64px;
   }
+}
+
+@media screen and (min-width:768px) {
+
 }
 
 @media screen and (min-width:768px) {
@@ -39447,6 +39735,22 @@ Array [
     width: 64px;
     padding-top: 64px;
   }
+}
+
+@media (min-width:500px) {
+
+}
+
+@media (min-width:800px) {
+
+}
+
+@media screen and (min-width:768px) {
+
+}
+
+@media screen and (min-width:768px) {
+
 }
 
 <nav
@@ -39649,8 +39953,8 @@ Array [
   -ms-transform: scale(0);
   transform: scale(0);
   opacity: 0.75;
-  -webkit-animation: fHRFlR 1000ms;
-  animation: fHRFlR 1000ms;
+  -webkit-animation: hctBKm 1000ms;
+  animation: hctBKm 1000ms;
 }
 
 .c4 {
@@ -39722,6 +40026,26 @@ Array [
   .c6 {
     line-height: 64px;
   }
+}
+
+@media screen and (min-width:768px) {
+
+}
+
+@media screen and (min-width:768px) {
+
+}
+
+@media screen and (min-width:768px) {
+
+}
+
+@media (min-width:500px) {
+
+}
+
+@media (min-width:800px) {
+
 }
 
 <header
@@ -39892,11 +40216,27 @@ Array [
 }
 
 @media screen and (min-width:768px) {
+
+}
+
+@media screen and (min-width:768px) {
+
+}
+
+@media screen and (min-width:768px) {
+
+}
+
+@media screen and (min-width:768px) {
   .c0 {
     padding-top: 64px;
     padding-bottom: 0;
     padding-left: 56px;
   }
+}
+
+@media screen and (min-width:768px) {
+
 }
 
 @media (min-width:500px) {
@@ -40078,8 +40418,8 @@ Array [
   -ms-transform: scale(0);
   transform: scale(0);
   opacity: 0.75;
-  -webkit-animation: fHRFlR 1000ms;
-  animation: fHRFlR 1000ms;
+  -webkit-animation: hctBKm 1000ms;
+  animation: hctBKm 1000ms;
 }
 
 .c5 {
@@ -40124,27 +40464,6 @@ Array [
   opacity: 1;
 }
 
-.c11 {
-  height: 56px;
-  color: #fff;
-  position: relative;
-  box-sizing: border-box;
-  width: inherit;
-  opacity: 0.8;
-}
-
-.c11 svg {
-  margin-bottom: 18px;
-}
-
-.c11:after {
-  content: 'その他';
-  bottom: 8px;
-  position: absolute;
-  font-size: 1.2rem;
-  opacity: 1;
-}
-
 .c9 {
   height: 56px;
   color: #fff;
@@ -40160,6 +40479,27 @@ Array [
 
 .c9:after {
   content: '資料';
+  bottom: 8px;
+  position: absolute;
+  font-size: 1.2rem;
+  opacity: 1;
+}
+
+.c11 {
+  height: 56px;
+  color: #fff;
+  position: relative;
+  box-sizing: border-box;
+  width: inherit;
+  opacity: 0.8;
+}
+
+.c11 svg {
+  margin-bottom: 18px;
+}
+
+.c11:after {
+  content: 'その他';
   bottom: 8px;
   position: absolute;
   font-size: 1.2rem;
@@ -40259,6 +40599,14 @@ Array [
 }
 
 @media screen and (min-width:768px) {
+
+}
+
+@media screen and (min-width:768px) {
+
+}
+
+@media screen and (min-width:768px) {
   .c2 {
     -webkit-box-flex: 0;
     -webkit-flex-grow: 0;
@@ -40266,6 +40614,10 @@ Array [
     flex-grow: 0;
     height: 64px;
   }
+}
+
+@media screen and (min-width:768px) {
+
 }
 
 @media screen and (min-width:768px) {
@@ -40277,6 +40629,14 @@ Array [
     width: 64px;
     padding-top: 64px;
   }
+}
+
+@media (min-width:500px) {
+
+}
+
+@media (min-width:800px) {
+
 }
 
 <nav
@@ -40479,8 +40839,8 @@ Array [
   -ms-transform: scale(0);
   transform: scale(0);
   opacity: 0.75;
-  -webkit-animation: fHRFlR 1000ms;
-  animation: fHRFlR 1000ms;
+  -webkit-animation: hctBKm 1000ms;
+  animation: hctBKm 1000ms;
 }
 
 .c4 {
@@ -40552,6 +40912,26 @@ Array [
   .c6 {
     line-height: 64px;
   }
+}
+
+@media screen and (min-width:768px) {
+
+}
+
+@media screen and (min-width:768px) {
+
+}
+
+@media screen and (min-width:768px) {
+
+}
+
+@media (min-width:500px) {
+
+}
+
+@media (min-width:800px) {
+
 }
 
 <header
@@ -40702,11 +41082,27 @@ Array [
 }
 
 @media screen and (min-width:768px) {
+
+}
+
+@media screen and (min-width:768px) {
+
+}
+
+@media screen and (min-width:768px) {
+
+}
+
+@media screen and (min-width:768px) {
   .c0 {
     padding-top: 64px;
     padding-bottom: 0;
     padding-left: 56px;
   }
+}
+
+@media screen and (min-width:768px) {
+
 }
 
 @media (min-width:500px) {
@@ -41153,8 +41549,29 @@ Array [
   -ms-transform: scale(0);
   transform: scale(0);
   opacity: 0.75;
-  -webkit-animation: fHRFlR 1000ms;
-  animation: fHRFlR 1000ms;
+  -webkit-animation: hctBKm 1000ms;
+  animation: hctBKm 1000ms;
+}
+
+.c5 {
+  height: 56px;
+  color: #fff;
+  position: relative;
+  box-sizing: border-box;
+  width: inherit;
+  opacity: 1;
+}
+
+.c5 svg {
+  margin-bottom: 18px;
+}
+
+.c5:after {
+  content: '練習';
+  bottom: 8px;
+  position: absolute;
+  font-size: 1.2rem;
+  opacity: 1;
 }
 
 .c7 {
@@ -41214,27 +41631,6 @@ Array [
 
 .c11:after {
   content: 'その他';
-  bottom: 8px;
-  position: absolute;
-  font-size: 1.2rem;
-  opacity: 1;
-}
-
-.c5 {
-  height: 56px;
-  color: #fff;
-  position: relative;
-  box-sizing: border-box;
-  width: inherit;
-  opacity: 1;
-}
-
-.c5 svg {
-  margin-bottom: 18px;
-}
-
-.c5:after {
-  content: '練習';
   bottom: 8px;
   position: absolute;
   font-size: 1.2rem;
@@ -41334,6 +41730,14 @@ Array [
 }
 
 @media screen and (min-width:768px) {
+
+}
+
+@media screen and (min-width:768px) {
+
+}
+
+@media screen and (min-width:768px) {
   .c2 {
     -webkit-box-flex: 0;
     -webkit-flex-grow: 0;
@@ -41341,6 +41745,10 @@ Array [
     flex-grow: 0;
     height: 64px;
   }
+}
+
+@media screen and (min-width:768px) {
+
 }
 
 @media screen and (min-width:768px) {
@@ -41352,6 +41760,14 @@ Array [
     width: 64px;
     padding-top: 64px;
   }
+}
+
+@media (min-width:500px) {
+
+}
+
+@media (min-width:800px) {
+
 }
 
 <nav
@@ -41554,8 +41970,8 @@ Array [
   -ms-transform: scale(0);
   transform: scale(0);
   opacity: 0.75;
-  -webkit-animation: fHRFlR 1000ms;
-  animation: fHRFlR 1000ms;
+  -webkit-animation: hctBKm 1000ms;
+  animation: hctBKm 1000ms;
 }
 
 .c4 {
@@ -41627,6 +42043,14 @@ Array [
   .c6 {
     line-height: 64px;
   }
+}
+
+@media screen and (min-width:768px) {
+
+}
+
+@media screen and (min-width:768px) {
+
 }
 
 <header
@@ -41715,6 +42139,14 @@ Array [
 }
 
 @media screen and (min-width:768px) {
+
+}
+
+@media screen and (min-width:768px) {
+
+}
+
+@media screen and (min-width:768px) {
   .c0 {
     padding-top: 64px;
     padding-bottom: 0;
@@ -41772,8 +42204,8 @@ Array [
   -ms-transform: scale(0);
   transform: scale(0);
   opacity: 0.75;
-  -webkit-animation: fHRFlR 1000ms;
-  animation: fHRFlR 1000ms;
+  -webkit-animation: hctBKm 1000ms;
+  animation: hctBKm 1000ms;
 }
 
 .c4 {
@@ -41845,6 +42277,22 @@ Array [
   .c6 {
     line-height: 64px;
   }
+}
+
+@media screen and (min-width:768px) {
+
+}
+
+@media (min-width:500px) {
+
+}
+
+@media (min-width:800px) {
+
+}
+
+@media screen and (min-width:768px) {
+
 }
 
 <header
@@ -41994,6 +42442,14 @@ Array [
 }
 
 @media screen and (min-width:768px) {
+
+}
+
+@media screen and (min-width:768px) {
+
+}
+
+@media screen and (min-width:768px) {
   .c0 {
     padding-top: 64px;
     padding-bottom: 0;
@@ -42045,7 +42501,7 @@ Array [
         className="c4"
       >
         <div
-          className="c5"
+          className="sc-fzXfPI c5"
         >
           <div
             className="makeStyles-root makeStyles-root c6"
@@ -42059,7 +42515,7 @@ Array [
           </span>
         </div>
         <div
-          className="c7"
+          className="sc-fzXfPI c7"
         >
           <div
             className="makeStyles-root makeStyles-root c6"
@@ -42182,6 +42638,10 @@ Array [
   }
 }
 
+@media screen and (min-width:768px) {
+
+}
+
 <header
     className="c0 c1"
   >
@@ -42196,6 +42656,10 @@ Array [
   padding-bottom: 0;
   text-align: center;
   min-height: 100vh;
+}
+
+@media screen and (min-width:768px) {
+
 }
 
 @media screen and (min-width:768px) {
@@ -42231,8 +42695,8 @@ Array [
   -ms-transform: scale(0);
   transform: scale(0);
   opacity: 0.75;
-  -webkit-animation: fHRFlR 1000ms;
-  animation: fHRFlR 1000ms;
+  -webkit-animation: hctBKm 1000ms;
+  animation: hctBKm 1000ms;
 }
 
 .c4 {
@@ -42306,6 +42770,18 @@ Array [
   }
 }
 
+@media screen and (min-width:768px) {
+
+}
+
+@media screen and (min-width:768px) {
+
+}
+
+@media screen and (min-width:768px) {
+
+}
+
 <header
     className="c0 c1"
   >
@@ -42350,11 +42826,27 @@ Array [
 }
 
 @media screen and (min-width:768px) {
+
+}
+
+@media screen and (min-width:768px) {
+
+}
+
+@media screen and (min-width:768px) {
+
+}
+
+@media screen and (min-width:768px) {
   .c0 {
     padding-top: 64px;
     padding-bottom: 0;
     padding-left: 56px;
   }
+}
+
+@media screen and (min-width:768px) {
+
 }
 
 <main
@@ -42377,8 +42869,8 @@ Array [
   -ms-transform: scale(0);
   transform: scale(0);
   opacity: 0.75;
-  -webkit-animation: fHRFlR 1000ms;
-  animation: fHRFlR 1000ms;
+  -webkit-animation: hctBKm 1000ms;
+  animation: hctBKm 1000ms;
 }
 
 .c5 {
@@ -42558,6 +43050,14 @@ Array [
 }
 
 @media screen and (min-width:768px) {
+
+}
+
+@media screen and (min-width:768px) {
+
+}
+
+@media screen and (min-width:768px) {
   .c2 {
     -webkit-box-flex: 0;
     -webkit-flex-grow: 0;
@@ -42565,6 +43065,10 @@ Array [
     flex-grow: 0;
     height: 64px;
   }
+}
+
+@media screen and (min-width:768px) {
+
 }
 
 @media screen and (min-width:768px) {
@@ -42796,6 +43300,18 @@ Array [
   }
 }
 
+@media screen and (min-width:768px) {
+
+}
+
+@media screen and (min-width:768px) {
+
+}
+
+@media screen and (min-width:768px) {
+
+}
+
 <header
     className="c0 c1"
   >
@@ -42813,11 +43329,23 @@ Array [
 }
 
 @media screen and (min-width:768px) {
+
+}
+
+@media screen and (min-width:768px) {
+
+}
+
+@media screen and (min-width:768px) {
   .c0 {
     padding-top: 64px;
     padding-bottom: 0;
     padding-left: 56px;
   }
+}
+
+@media screen and (min-width:768px) {
+
 }
 
 <main
@@ -42840,8 +43368,8 @@ Array [
   -ms-transform: scale(0);
   transform: scale(0);
   opacity: 0.75;
-  -webkit-animation: fHRFlR 1000ms;
-  animation: fHRFlR 1000ms;
+  -webkit-animation: hctBKm 1000ms;
+  animation: hctBKm 1000ms;
 }
 
 .c5 {
@@ -43021,6 +43549,10 @@ Array [
 }
 
 @media screen and (min-width:768px) {
+
+}
+
+@media screen and (min-width:768px) {
   .c2 {
     -webkit-box-flex: 0;
     -webkit-flex-grow: 0;
@@ -43028,6 +43560,10 @@ Array [
     flex-grow: 0;
     height: 64px;
   }
+}
+
+@media screen and (min-width:768px) {
+
 }
 
 @media screen and (min-width:768px) {
@@ -43241,8 +43777,8 @@ Array [
   -ms-transform: scale(0);
   transform: scale(0);
   opacity: 0.75;
-  -webkit-animation: fHRFlR 1000ms;
-  animation: fHRFlR 1000ms;
+  -webkit-animation: hctBKm 1000ms;
+  animation: hctBKm 1000ms;
 }
 
 .c5 {
@@ -43316,6 +43852,18 @@ Array [
   }
 }
 
+@media screen and (min-width:768px) {
+
+}
+
+@media screen and (min-width:768px) {
+
+}
+
+@media screen and (min-width:768px) {
+
+}
+
 <header
     className="c0 c1"
   >
@@ -43360,11 +43908,27 @@ Array [
 }
 
 @media screen and (min-width:768px) {
+
+}
+
+@media screen and (min-width:768px) {
+
+}
+
+@media screen and (min-width:768px) {
+
+}
+
+@media screen and (min-width:768px) {
   .c0 {
     padding-top: 64px;
     padding-bottom: 0;
     padding-left: 56px;
   }
+}
+
+@media screen and (min-width:768px) {
+
 }
 
 <main
@@ -43387,8 +43951,8 @@ Array [
   -ms-transform: scale(0);
   transform: scale(0);
   opacity: 0.75;
-  -webkit-animation: fHRFlR 1000ms;
-  animation: fHRFlR 1000ms;
+  -webkit-animation: hctBKm 1000ms;
+  animation: hctBKm 1000ms;
 }
 
 .c5 {
@@ -43568,6 +44132,14 @@ Array [
 }
 
 @media screen and (min-width:768px) {
+
+}
+
+@media screen and (min-width:768px) {
+
+}
+
+@media screen and (min-width:768px) {
   .c2 {
     -webkit-box-flex: 0;
     -webkit-flex-grow: 0;
@@ -43575,6 +44147,10 @@ Array [
     flex-grow: 0;
     height: 64px;
   }
+}
+
+@media screen and (min-width:768px) {
+
 }
 
 @media screen and (min-width:768px) {
@@ -43834,6 +44410,14 @@ Array [
   }
 }
 
+@media screen and (min-width:768px) {
+
+}
+
+@media screen and (min-width:768px) {
+
+}
+
 <header
     className="c0 c1"
   >
@@ -43870,6 +44454,10 @@ Array [
   box-sizing: border-box;
   width: 100%;
   min-height: calc(100vh - 56px);
+}
+
+@media screen and (min-width:768px) {
+
 }
 
 @media screen and (min-width:768px) {
@@ -43942,6 +44530,26 @@ Array [
   }
 }
 
+@media screen and (min-width:768px) {
+
+}
+
+@media screen and (min-width:768px) {
+
+}
+
+@media screen and (min-width:768px) {
+
+}
+
+@media (min-width:500px) {
+
+}
+
+@media (min-width:800px) {
+
+}
+
 <header
     className="c0 c1"
   >
@@ -44012,11 +44620,23 @@ Array [
 }
 
 @media screen and (min-width:768px) {
+
+}
+
+@media screen and (min-width:768px) {
+
+}
+
+@media screen and (min-width:768px) {
   .c0 {
     padding-top: 64px;
     padding-bottom: 0;
     padding-left: 56px;
   }
+}
+
+@media screen and (min-width:768px) {
+
 }
 
 @media (min-width:500px) {
@@ -44084,8 +44704,8 @@ Array [
   -ms-transform: scale(0);
   transform: scale(0);
   opacity: 0.75;
-  -webkit-animation: fHRFlR 1000ms;
-  animation: fHRFlR 1000ms;
+  -webkit-animation: hctBKm 1000ms;
+  animation: hctBKm 1000ms;
 }
 
 .c5 {
@@ -44265,6 +44885,10 @@ Array [
 }
 
 @media screen and (min-width:768px) {
+
+}
+
+@media screen and (min-width:768px) {
   .c2 {
     -webkit-box-flex: 0;
     -webkit-flex-grow: 0;
@@ -44272,6 +44896,10 @@ Array [
     flex-grow: 0;
     height: 64px;
   }
+}
+
+@media screen and (min-width:768px) {
+
 }
 
 @media screen and (min-width:768px) {
@@ -44283,6 +44911,14 @@ Array [
     width: 64px;
     padding-top: 64px;
   }
+}
+
+@media (min-width:500px) {
+
+}
+
+@media (min-width:800px) {
+
 }
 
 <nav
@@ -44503,6 +45139,26 @@ Array [
   }
 }
 
+@media screen and (min-width:768px) {
+
+}
+
+@media screen and (min-width:768px) {
+
+}
+
+@media screen and (min-width:768px) {
+
+}
+
+@media (min-width:500px) {
+
+}
+
+@media (min-width:800px) {
+
+}
+
 <header
     className="c0 c1"
   >
@@ -44570,11 +45226,23 @@ Array [
 }
 
 @media screen and (min-width:768px) {
+
+}
+
+@media screen and (min-width:768px) {
+
+}
+
+@media screen and (min-width:768px) {
   .c0 {
     padding-top: 64px;
     padding-bottom: 0;
     padding-left: 56px;
   }
+}
+
+@media screen and (min-width:768px) {
+
 }
 
 @media (min-width:500px) {
@@ -44643,8 +45311,8 @@ Array [
   -ms-transform: scale(0);
   transform: scale(0);
   opacity: 0.75;
-  -webkit-animation: fHRFlR 1000ms;
-  animation: fHRFlR 1000ms;
+  -webkit-animation: hctBKm 1000ms;
+  animation: hctBKm 1000ms;
 }
 
 .c5 {
@@ -44824,6 +45492,10 @@ Array [
 }
 
 @media screen and (min-width:768px) {
+
+}
+
+@media screen and (min-width:768px) {
   .c2 {
     -webkit-box-flex: 0;
     -webkit-flex-grow: 0;
@@ -44831,6 +45503,10 @@ Array [
     flex-grow: 0;
     height: 64px;
   }
+}
+
+@media screen and (min-width:768px) {
+
 }
 
 @media screen and (min-width:768px) {
@@ -44842,6 +45518,14 @@ Array [
     width: 64px;
     padding-top: 64px;
   }
+}
+
+@media (min-width:500px) {
+
+}
+
+@media (min-width:800px) {
+
 }
 
 <nav
