@@ -4,6 +4,7 @@ import styled from '@src/styles/styled-components';
 import TripleContentsPageTemplate from '@src/components/templates/TripleContentsPageTemplate';
 import MainMenuList from '@src/components/organisms/MainMenuList';
 import SmallMaterial from '@src/components/organisms/SmallMaterial';
+import Chihaya from '@src/components/organisms/Chihaya';
 import ReadingContent from '@src/components/molecules/ReadingContent';
 import Paragraph from '@src/components/atoms/Paragraph';
 import Txt from '@src/components/atoms/Txt';
@@ -52,10 +53,16 @@ const StyledMaterial = styled(SmallMaterial)`
   color: ${({ theme }) => theme.fontColor.link};
 `;
 
+const ChihayaWrapper = styled.p`
+  display: flex;
+  justify-content: center;
+  margin-bottom: ${({ theme }) => theme.spacingByPx(1)};
+`;
+
 export const IndexPagePresenter = ({ karutas }: PresenterProps) => (
   <TripleContentsPageTemplate
     title={`百人一首 - 簡単に暗記 -`}
-    keywords={[`百人一首`, `小倉百人一首`, `歌`, `一覧`, `意味`, `歌番号`, `暗記`, `練習`]}
+    keywords={[`百人一首`, `小倉百人一首`, `ちはやふる`, `歌`, `一覧`, `意味`, `歌番号`, `暗記`, `練習`]}
     top={
       <ReadingContent title={`百人一首 簡単に暗記について`}>
         <Paragraph size={`s`}>
@@ -79,6 +86,28 @@ export const IndexPagePresenter = ({ karutas }: PresenterProps) => (
             <br />
             現代では詠み札と取り札に別れたかるたとしての知名度が高く、散らし取り、坊主めくりなどといった遊戯や競技かるたのように札取りを競い合うスポーツもあり、幅広く親しまれています。
             百首覚えたあとは色々な遊び方を探してみてはいかがでしょうか。
+          </Paragraph>
+        </ReadingContent>
+        <ReadingContent title={`ちはやふる基金の紹介`}>
+          <ChihayaWrapper>
+            <Chihaya />
+          </ChihayaWrapper>
+          <Paragraph size={`s`}>
+            <a href="https://chihayafund.com/" target="_blank" rel="noopener noreferrer">
+              ちはやふる基金
+            </a>
+            は、競技かるたの支援や百人一首の振興を目的として、
+            <a href="https://be-love.jp/c/chihaya.html" target="_blank" rel="noopener noreferrer">
+              ちはやふる
+            </a>
+            の作者の
+            <a href="https://twitter.com/yuyu2000_0908" target="_blank" rel="noopener noreferrer">
+              末次先生
+            </a>
+            が発起人となり設立された団体です。競技かるた界隈は競技人口の増加で盛り上がりを続ける一方、選手の育成支援や大会運営においてさまざまな負担も増加しているようです。この基金はそういった課題を解消するために設立されています。
+            <br />
+            <br />
+            このサイトは中の人がちはやふるにはまったことがきっかけで作ったサイトです。微力ながら恩返しの意味も込めて紹介させていただきます。
           </Paragraph>
         </ReadingContent>
         <ReadingContent title={`百人一首の用語について`}>
@@ -125,7 +154,11 @@ export const IndexPagePresenter = ({ karutas }: PresenterProps) => (
             <br />
             自陣の札を取る、または敵陣の札を取って自陣の札を敵陣に送る、という勝負を繰り返して自陣を先に空にしたほうが勝者となります。
             <br />
-            近年では競技かるたを題材とした漫画の「ちはやふる」がアニメ化や実写映画化されるなど人気が高まっています。
+            近年では競技かるたを題材とした漫画の「
+            <a href="https://be-love.jp/c/chihaya.html" target="_blank" rel="noopener noreferrer">
+              ちはやふる
+            </a>
+            」がアニメ化や実写映画化されるなど人気が高まっています。
           </Paragraph>
         </ReadingContent>
         <ReadingContent title={`百人一首 歌一覧`}>

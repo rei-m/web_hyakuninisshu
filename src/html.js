@@ -1,5 +1,5 @@
-import React from "react"
-import PropTypes from "prop-types"
+import React from 'react';
+import PropTypes from 'prop-types';
 
 export default class HTML extends React.Component {
   render() {
@@ -8,10 +8,7 @@ export default class HTML extends React.Component {
         <head>
           <meta charSet="utf-8" />
           <meta httpEquiv="x-ua-compatible" content="ie=edge" />
-          <meta
-            name="viewport"
-            content="width=device-width, initial-scale=1, shrink-to-fit=no"
-          />
+          <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
           <meta name="google-site-verification" content="nfztyFdR3vIkwPrEtbbyQV0zYuc4jK2tzG_SQ6jKMbg" />
           <link rel="apple-touch-icon" href="icons/icon-48x48.png" sizes="48x48" />
           <link rel="apple-touch-icon" href="icons/icon-72x72.png" sizes="72x72" />
@@ -25,18 +22,14 @@ export default class HTML extends React.Component {
         </head>
         <body {...this.props.bodyAttributes}>
           {this.props.preBodyComponents}
-          <div
-            key={`body`}
-            id="___gatsby"
-            dangerouslySetInnerHTML={{ __html: this.props.body }}
-          />
+          <div key={`body`} id="___gatsby" dangerouslySetInnerHTML={{ __html: this.props.body }} />
           <div id="___gatsby_portal"></div>
           {this.props.postBodyComponents}
           <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
           <script async src="//platform.twitter.com/widgets.js" charSet="utf-8"></script>
         </body>
       </html>
-    )
+    );
   }
 }
 
@@ -47,4 +40,4 @@ HTML.propTypes = {
   preBodyComponents: PropTypes.array,
   body: PropTypes.string,
   postBodyComponents: PropTypes.array,
-}
+};

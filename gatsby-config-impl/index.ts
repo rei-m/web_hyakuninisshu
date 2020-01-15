@@ -57,4 +57,5 @@ export const plugins: GatsbyPlugin[] = [
       trackingId: `UA-46787228-6`,
     },
   },
+  `gatsby-plugin-twitter`,
 ];
