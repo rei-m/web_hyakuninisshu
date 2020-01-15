@@ -67,7 +67,7 @@ const onClickBackHandler = () => {
 const TrainingQuestionPage: React.FC<Props> = ({ data, location }) => {
   const karutas = data.allKaruta.edges.map(karutaData => JSON.parse(karutaData.node.internal.content) as Karuta);
   // TODO: 本当はちゃんと中身をチェックしたほうがいい。。。
-  const state: TrainingState | RestartState | undefined = location ? location.state : undefined;
+  const state = (location ? location.state : undefined) as TrainingState | RestartState | undefined;
   return (
     <PlayingPageTemplate
       title={`百人一首 - 練習 -`}
