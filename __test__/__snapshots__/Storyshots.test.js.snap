@@ -16670,16 +16670,32 @@ exports[`Storyshots organisms/KarutaPlayingResult all correct 1`] = `
   margin-bottom: 32px;
 }
 
-.c4 {
+.c7 {
   text-align: center;
 }
 
-.c5 {
+.c8 {
   padding: 8px;
 }
 
-.c6 {
+.c9 {
   box-shadow: 0 1px 3px rgba(0,0,0,0.26);
+}
+
+.c4 {
+  background-color: #fffff0;
+  border-radius: 4px;
+  padding: 16px 8px 8px 8px;
+  margin-bottom: 16px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.26);
+}
+
+.c5 {
+  margin-bottom: 8px;
+}
+
+.c6 {
+  color: rgb(60,62,61);
 }
 
 <div
@@ -16716,6 +16732,30 @@ exports[`Storyshots organisms/KarutaPlayingResult all correct 1`] = `
   <div
     className="c4"
   >
+    <div
+      className="c5"
+    >
+      <span
+        className="makeStyles-root makeStyles-root c6"
+      >
+        当サイトは百人一首とちはやふるを応援しています
+      </span>
+    </div>
+    <div
+      className="c5"
+    >
+      <a
+        href="https://chihayafund.com/"
+        rel="noopener noreferrer"
+        target="_blank"
+      >
+        ちはやふる基金
+      </a>
+    </div>
+  </div>
+  <div
+    className="c7"
+  >
     <a
       className="twitter-share-button"
       data-hashtags={
@@ -16733,10 +16773,10 @@ exports[`Storyshots organisms/KarutaPlayingResult all correct 1`] = `
     </a>
   </div>
   <div
-    className="c5"
+    className="c8"
   >
     <button
-      className="MuiButtonBase-root MuiButton-root MuiButton-contained c6"
+      className="MuiButtonBase-root MuiButton-root MuiButton-contained c9"
       disabled={false}
       onBlur={[Function]}
       onClick={[Function]}
@@ -16802,20 +16842,36 @@ exports[`Storyshots organisms/KarutaPlayingResult has mistake 1`] = `
   margin-bottom: 32px;
 }
 
-.c4 {
+.c7 {
   text-align: center;
 }
 
-.c5 {
+.c8 {
   padding: 8px;
 }
 
-.c7 {
+.c10 {
   box-shadow: 0 1px 3px rgba(0,0,0,0.26);
 }
 
-.c6 {
+.c9 {
   box-shadow: 0 1px 3px rgba(0,0,0,0.26);
+}
+
+.c4 {
+  background-color: #fffff0;
+  border-radius: 4px;
+  padding: 16px 8px 8px 8px;
+  margin-bottom: 16px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.26);
+}
+
+.c5 {
+  margin-bottom: 8px;
+}
+
+.c6 {
+  color: rgb(60,62,61);
 }
 
 <div
@@ -16852,6 +16908,30 @@ exports[`Storyshots organisms/KarutaPlayingResult has mistake 1`] = `
   <div
     className="c4"
   >
+    <div
+      className="c5"
+    >
+      <span
+        className="makeStyles-root makeStyles-root c6"
+      >
+        当サイトは百人一首とちはやふるを応援しています
+      </span>
+    </div>
+    <div
+      className="c5"
+    >
+      <a
+        href="https://chihayafund.com/"
+        rel="noopener noreferrer"
+        target="_blank"
+      >
+        ちはやふる基金
+      </a>
+    </div>
+  </div>
+  <div
+    className="c7"
+  >
     <a
       className="twitter-share-button"
       data-hashtags={
@@ -16869,10 +16949,10 @@ exports[`Storyshots organisms/KarutaPlayingResult has mistake 1`] = `
     </a>
   </div>
   <div
-    className="c5"
+    className="c8"
   >
     <button
-      className="MuiButtonBase-root MuiButton-root MuiButton-contained c6"
+      className="MuiButtonBase-root MuiButton-root MuiButton-contained c9"
       disabled={false}
       onBlur={[Function]}
       onClick={[Function]}
@@ -16908,10 +16988,10 @@ exports[`Storyshots organisms/KarutaPlayingResult has mistake 1`] = `
     </button>
   </div>
   <div
-    className="c5"
+    className="c8"
   >
     <button
-      className="MuiButtonBase-root MuiButton-root MuiButton-contained c7"
+      className="MuiButtonBase-root MuiButton-root MuiButton-contained c10"
       disabled={false}
       onBlur={[Function]}
       onClick={[Function]}
@@ -22762,16 +22842,32 @@ exports[`Storyshots organisms/TrainingResult default 1`] = `
   margin-bottom: 32px;
 }
 
-.c4 {
+.c7 {
   text-align: center;
 }
 
-.c5 {
+.c8 {
   padding: 8px;
 }
 
-.c6 {
+.c9 {
   box-shadow: 0 1px 3px rgba(0,0,0,0.26);
+}
+
+.c4 {
+  background-color: #fffff0;
+  border-radius: 4px;
+  padding: 16px 8px 8px 8px;
+  margin-bottom: 16px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.26);
+}
+
+.c5 {
+  margin-bottom: 8px;
+}
+
+.c6 {
+  color: rgb(60,62,61);
 }
 
 <div
@@ -22808,6 +22904,30 @@ exports[`Storyshots organisms/TrainingResult default 1`] = `
   <div
     className="c4"
   >
+    <div
+      className="c5"
+    >
+      <span
+        className="makeStyles-root makeStyles-root c6"
+      >
+        当サイトは百人一首とちはやふるを応援しています
+      </span>
+    </div>
+    <div
+      className="c5"
+    >
+      <a
+        href="https://chihayafund.com/"
+        rel="noopener noreferrer"
+        target="_blank"
+      >
+        ちはやふる基金
+      </a>
+    </div>
+  </div>
+  <div
+    className="c7"
+  >
     <a
       className="twitter-share-button"
       data-hashtags={
@@ -22825,10 +22945,10 @@ exports[`Storyshots organisms/TrainingResult default 1`] = `
     </a>
   </div>
   <div
-    className="c5"
+    className="c8"
   >
     <button
-      className="MuiButtonBase-root MuiButton-root MuiButton-contained c6"
+      className="MuiButtonBase-root MuiButton-root MuiButton-contained c9"
       disabled={false}
       onBlur={[Function]}
       onClick={[Function]}
@@ -23334,6 +23454,28 @@ Array [
             @rei_m
           </a>
           が個人で運営しています。不具合や要望等あればTwitterまでご連絡ください。 アプリのレビューで読み上げ機能が欲しいというお声をいただくのですが、使用可能ないい音源があれば搭載します。
+        </p>
+      </section>
+      <section
+        className="c2"
+      >
+        <h2
+          className="makeStyles-root makeStyles-root c3"
+        >
+          漫画のコマ画像について
+        </h2>
+        <p
+          className="makeStyles-root makeStyles-root "
+        >
+          サイト内の漫画のコマ画像は
+          <a
+            href="https://alu.jp/"
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            アル
+          </a>
+          の「コマ投稿」機能により表示しております。
         </p>
       </section>
       <section
@@ -24936,7 +25078,7 @@ Array [
   margin: 0 auto;
 }
 
-.c12 {
+.c15 {
   height: 100px;
   border: 1px solid #123;
   display: -webkit-box;
@@ -25002,19 +25144,35 @@ Array [
   margin-bottom: 32px;
 }
 
-.c8 {
+.c11 {
   text-align: center;
 }
 
-.c10 {
+.c13 {
   padding: 8px;
 }
 
-.c11 {
+.c14 {
+  box-shadow: 0 1px 3px rgba(0,0,0,0.26);
+}
+
+.c8 {
+  background-color: #fffff0;
+  border-radius: 4px;
+  padding: 16px 8px 8px 8px;
+  margin-bottom: 16px;
   box-shadow: 0 1px 3px rgba(0,0,0,0.26);
 }
 
 .c9 {
+  margin-bottom: 8px;
+}
+
+.c10 {
+  color: rgb(60,62,61);
+}
+
+.c12 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -25119,6 +25277,30 @@ Array [
         <div
           className="c8"
         >
+          <div
+            className="c9"
+          >
+            <span
+              className="makeStyles-root makeStyles-root c10"
+            >
+              当サイトは百人一首とちはやふるを応援しています
+            </span>
+          </div>
+          <div
+            className="c9"
+          >
+            <a
+              href="https://chihayafund.com/"
+              rel="noopener noreferrer"
+              target="_blank"
+            >
+              ちはやふる基金
+            </a>
+          </div>
+        </div>
+        <div
+          className="c11"
+        >
           <a
             className="twitter-share-button"
             data-hashtags={
@@ -25136,13 +25318,13 @@ Array [
           </a>
         </div>
         <div
-          className="c9"
+          className="c12"
         />
         <div
-          className="c10"
+          className="c13"
         >
           <button
-            className="MuiButtonBase-root MuiButton-root MuiButton-contained c11"
+            className="MuiButtonBase-root MuiButton-root MuiButton-contained c14"
             disabled={false}
             onBlur={[Function]}
             onClick={[Function]}
@@ -25182,7 +25364,7 @@ Array [
         className="c2"
       >
         <div
-          className="c12"
+          className="c15"
         >
           この欄は広告枠です
         </div>
@@ -42450,7 +42632,7 @@ Array [
   margin: 0 auto;
 }
 
-.c11 {
+.c14 {
   height: 100px;
   border: 1px solid #123;
   display: -webkit-box;
@@ -42516,16 +42698,32 @@ Array [
   margin-bottom: 32px;
 }
 
-.c8 {
+.c11 {
   text-align: center;
 }
 
-.c9 {
+.c12 {
   padding: 8px;
 }
 
-.c10 {
+.c13 {
   box-shadow: 0 1px 3px rgba(0,0,0,0.26);
+}
+
+.c8 {
+  background-color: #fffff0;
+  border-radius: 4px;
+  padding: 16px 8px 8px 8px;
+  margin-bottom: 16px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.26);
+}
+
+.c9 {
+  margin-bottom: 8px;
+}
+
+.c10 {
+  color: rgb(60,62,61);
 }
 
 @media screen and (min-width:768px) {
@@ -42618,6 +42816,30 @@ Array [
         <div
           className="c8"
         >
+          <div
+            className="c9"
+          >
+            <span
+              className="makeStyles-root makeStyles-root c10"
+            >
+              当サイトは百人一首とちはやふるを応援しています
+            </span>
+          </div>
+          <div
+            className="c9"
+          >
+            <a
+              href="https://chihayafund.com/"
+              rel="noopener noreferrer"
+              target="_blank"
+            >
+              ちはやふる基金
+            </a>
+          </div>
+        </div>
+        <div
+          className="c11"
+        >
           <a
             className="twitter-share-button"
             data-hashtags={
@@ -42635,10 +42857,10 @@ Array [
           </a>
         </div>
         <div
-          className="c9"
+          className="c12"
         >
           <button
-            className="MuiButtonBase-root MuiButton-root MuiButton-contained c10"
+            className="MuiButtonBase-root MuiButton-root MuiButton-contained c13"
             disabled={false}
             onBlur={[Function]}
             onClick={[Function]}
@@ -42678,7 +42900,7 @@ Array [
         className="c2"
       >
         <div
-          className="c11"
+          className="c14"
         >
           この欄は広告枠です
         </div>
