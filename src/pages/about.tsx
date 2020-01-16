@@ -60,6 +60,15 @@ const AboutPage = () => (
             アプリのレビューで読み上げ機能が欲しいというお声をいただくのですが、使用可能ないい音源があれば搭載します。
           </Paragraph>
         </ReadingContent>
+        <ReadingContent title={`漫画のコマ画像について`}>
+          <Paragraph size={`s`}>
+            サイト内の漫画のコマ画像は
+            <a href="https://alu.jp/" target="_blank" rel="noopener noreferrer">
+              アル
+            </a>
+            の「コマ投稿」機能により表示しております。
+          </Paragraph>
+        </ReadingContent>
         <ReadingContent title={`プライバシー ポリシー`}>
           <Paragraph size={`s`}>
             サイトの利用状況の把握や広告配信のためにGoogle社が提供しているサービスを利用しております。詳しくは

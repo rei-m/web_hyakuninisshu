@@ -6,6 +6,7 @@ import Ratio from '@src/components/atoms/Ratio';
 import Second from '@src/components/atoms/Second';
 import { ArrowBackButton, RefreshButton } from '@src/components/molecules/IconLabelButton';
 import TweetLinkButton from '@src/components/molecules/TweetLinkButton';
+import ChihayaComa from '@src/components/organisms/Alu/ChihayaComa';
 import { Answer } from '@src/types';
 
 export interface Props {
@@ -65,6 +66,22 @@ const StyledRefreshButton = styled(RefreshButton)`
   box-shadow: ${({ theme }) => theme.elevationShadow1x};
 `;
 
+const ComaBox = styled.div`
+  background-color: ${({ theme }) => theme.colorThin};
+  border-radius: 4px;
+  padding: 16px 8px 8px 8px;
+  margin-bottom: 16px;
+  box-shadow: ${({ theme }) => theme.elevationShadow1x};
+`;
+
+const CheerMessageBox = styled.div`
+  margin-bottom: 8px;
+`;
+
+const CheerMessage = styled(Txt)`
+  color: rgb(60, 62, 61);
+`;
+
 export const KarutaPlayingResultPresenter: React.FC<PresenterProps> = ({
   children,
   correctCount,
@@ -86,6 +103,17 @@ export const KarutaPlayingResultPresenter: React.FC<PresenterProps> = ({
       </SummaryLabel>
       <Second size={`l`} value={averageAnswerSecond} />
     </SummaryAverage>
+    <ComaBox>
+      <CheerMessageBox>
+        <CheerMessage size="sss">当サイトは百人一首とちはやふるを応援しています</CheerMessage>
+      </CheerMessageBox>
+      <CheerMessageBox>
+        <a href="https://chihayafund.com/" target="_blank" rel="noopener noreferrer">
+          ちはやふる基金
+        </a>
+      </CheerMessageBox>
+      <ChihayaComa />
+    </ComaBox>
     <ShareButtonsWrapper>
       <TweetLinkButton text={`百人一首で ${totalCount}問中 ${correctCount}問 正解しました！`} hashTag={`百人一首`} />
     </ShareButtonsWrapper>
