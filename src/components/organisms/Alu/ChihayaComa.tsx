@@ -17,12 +17,12 @@ const ChihayaComa = () => {
           __html: `
 .alu-embed-iframe-${data.id} {
   width: ${data.width * THRESHOLD}px;
-  height: ${data.height * THRESHOLD + 50}px;
+  height: ${data.height * THRESHOLD}px;
 }
 @media screen and (max-width: ${480 * THRESHOLD}px) {
   .alu-embed-iframe-${data.id} {
     width: ${data.spWidth * THRESHOLD}px;
-    height: ${data.spHeight * THRESHOLD + 50}px;
+    height: ${data.spHeight * THRESHOLD}px;
   }
 }
 `,
