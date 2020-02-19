@@ -1,6 +1,7 @@
 import React from 'react';
-import styled from '@src/styles/styled-components';
+import makeStyles from '@material-ui/core/styles/makeStyles';
 import Txt, { Props as TxtProps } from '@src/components/atoms/Txt';
+import { ThemeInterface } from '@src/styles/theme';
 
 export type Props = TxtProps;
 
@@ -9,12 +10,17 @@ const toLineHeight = (size: string) => {
   return `${value + 0.1}rem`;
 };
 
-const Container = styled(Txt)(({ size = 'm', theme }) => ({
-  display: 'inline-block',
-  width: theme.fontSize[size],
-  lineHeight: toLineHeight(theme.fontSize[size]),
+const useStyles = makeStyles<ThemeInterface, Pick<TxtProps, 'size'>>(theme => ({
+  root: {
+    display: 'inline-block',
+    width: ({ size = 'm' }) => theme.fontSize[size],
+    lineHeight: ({ size = 'm' }) => toLineHeight(theme.fontSize[size]),
+  },
 }));
 
-const VerticalTxt: React.FC<Props> = props => <Container {...props} />;
+const VerticalTxt: React.FC<Props> = props => {
+  const classes = useStyles(props);
+  return <Txt {...props} className={classes.root} />;
+};
 
 export default VerticalTxt;
