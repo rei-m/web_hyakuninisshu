@@ -1,4 +1,5 @@
 import React from 'react';
+import clsx from 'clsx';
 import makeStyles from '@material-ui/core/styles/makeStyles';
 import Txt, { Props as TxtProps } from '@src/components/atoms/Txt';
 import { ThemeInterface } from '@src/styles/theme';
@@ -20,7 +21,7 @@ const useStyles = makeStyles<ThemeInterface, Pick<TxtProps, 'size'>>(theme => ({
 
 const VerticalTxt: React.FC<Props> = props => {
   const classes = useStyles(props);
-  return <Txt {...props} className={classes.root} />;
+  return <Txt {...{ ...props, className: clsx(classes.root, props.className) }} />;
 };
 
 export default VerticalTxt;

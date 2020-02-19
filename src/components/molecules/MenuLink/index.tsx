@@ -7,13 +7,13 @@ import Txt from '@src/components/atoms/Txt';
 import Paragraph from '@src/components/atoms/Paragraph';
 import { withRipple } from '@src/enhancers/withRipple';
 
-export interface Props {
+export type Props = {
   to: string;
   icon: React.ReactElement<SvgIconProps>;
   name: string;
   description: string;
   className?: string;
-}
+};
 
 const LinkWithRipple = withRipple<GatsbyLinkProps<{}>>(Link);
 

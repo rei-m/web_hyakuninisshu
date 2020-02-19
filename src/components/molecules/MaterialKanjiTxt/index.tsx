@@ -1,5 +1,5 @@
 import React from 'react';
-import styled from '@src/styles/styled-components';
+import makeStyles from '@material-ui/core/styles/makeStyles';
 import Paragraph, { Props as ParagraphProps } from '@src/components/atoms/Paragraph';
 import { Karuta } from '@src/types';
 
@@ -8,16 +8,18 @@ export type Props = {
   separate?: React.ReactNode;
 } & Pick<ParagraphProps, 'size'>;
 
-const Container = styled(Paragraph)`
-  text-align: left;
-`;
+const useStyles = makeStyles({
+  root: {
+    textAlign: 'left',
+  },
+});
 
 const MaterialKanjiTxt = ({ karuta, size, separate = <br /> }: Props) => (
-  <Container size={size}>
+  <Paragraph size={size} className={useStyles().root}>
     {`${karuta.firstKanji} ${karuta.secondKanji} ${karuta.thirdKanji}`}
     {separate}
     {`${karuta.fourthKanji} ${karuta.fifthKanji}`}
-  </Container>
+  </Paragraph>
 );
 
 export default MaterialKanjiTxt;
