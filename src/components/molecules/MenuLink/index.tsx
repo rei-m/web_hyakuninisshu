@@ -26,8 +26,9 @@ const useStyles = makeStyles<ThemeInterface>(theme => ({
     borderRadius: 16,
     boxSizing: 'border-box',
     textAlign: 'center',
-    '& :hover': {
+    '&:hover': {
       textDecoration: 'none',
+      borderRadius: 16,
       backgroundColor: '#f5f5f5',
     },
   },
