@@ -1,28 +1,26 @@
 import React from 'react';
-import styled from '@src/styles/styled-components';
 import { useTatamiImage } from '@src/hooks/staticQueries/useTatamiImage';
 
-export interface Props {
+export type Props = {
   tag?: React.ElementType;
   className?: string;
-}
+};
 
-export interface PresenterProps {
+export type PresenterProps = {
   Tag: React.ElementType;
   bgImageUrl: string;
   className?: string;
-}
+};
 
 export type ContainerProps = Props & { presenter: React.FC<PresenterProps> };
 
 export const TatamiLayoutContainer: React.FC<ContainerProps> = ({
   presenter,
   children,
-  tag = 'div',
+  tag: Tag = 'div',
   className = '',
 }) => {
   const url = useTatamiImage();
-  const Tag = styled(tag)``;
   return presenter({ Tag, className, children, bgImageUrl: url });
 };
 

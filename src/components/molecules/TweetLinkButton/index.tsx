@@ -1,15 +1,15 @@
-import React from 'react';
+import React, { useLayoutEffect, useRef } from 'react';
 
-export interface Props {
+export type Props = {
   text: string;
   hashTag?: string;
   url?: string;
-}
+};
 
 const TweetButton = ({ text, hashTag, url }: Props) => {
   // tslint:disable-next-line:no-null-keyword
-  const tweetButtonEl = React.useRef<HTMLAnchorElement>(null);
-  React.useLayoutEffect(() => {
+  const tweetButtonEl = useRef<HTMLAnchorElement>(null);
+  useLayoutEffect(() => {
     window.twttr.widgets.load(tweetButtonEl.current);
   }, []);
 
