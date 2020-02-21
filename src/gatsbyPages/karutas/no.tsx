@@ -1,21 +1,24 @@
 import React from 'react';
-import styled from '@src/styles/styled-components';
+import makeStyles from '@material-ui/core/styles/makeStyles';
 import SingleContentPageTemplate from '@src/components/templates/SingleContentPageTemplate';
 import Material from '@src/components/organisms/Material';
 import CenteredFrame from '@src/components/atoms/CenteredFrame';
 import { GeneratedPageComponentProps, Karuta } from '@src/types';
 import { MenuType } from '@src/enums';
 import { toKarutaNoString } from '@src/utils';
+import { ThemeInterface } from '@src/styles/theme';
 
-export interface PageContext {
+export type PageContext = {
   karuta: Karuta;
-}
+};
 
 export type Props = GeneratedPageComponentProps<PageContext>;
 
-const Container = styled(CenteredFrame)`
-  padding: ${({ theme }) => theme.spacingByPx(2)};
-`;
+const useStyles = makeStyles<ThemeInterface>(theme => ({
+  container: {
+    padding: theme.spacing(2),
+  },
+}));
 
 const onClickBackHandler = () => {
   window.history.back();
@@ -33,9 +36,9 @@ const KarutasNoPage = ({ pageContext }: Props) => {
       menuType={MenuType.Material}
       onClickBack={onClickBackHandler}
       content={
-        <Container tag={`div`}>
+        <CenteredFrame tag={`div`} className={useStyles().container}>
           <Material karuta={karuta} />
-        </Container>
+        </CenteredFrame>
       }
     />
   );

@@ -1,6 +1,6 @@
 import React from 'react';
 import { navigate } from 'gatsby';
-import styled from '@src/styles/styled-components';
+import makeStyles from '@material-ui/core/styles/makeStyles';
 import SingleContentPageTemplate from '@src/components/templates/SingleContentPageTemplate';
 import TrainingMenuForm from '@src/containers/organisms/TrainingMenuForm';
 import Block from '@src/components/atoms/Block';
@@ -15,12 +15,15 @@ import {
   RangeToCondition,
 } from '@src/enums';
 import { gaEvent } from '@src/utils/ga';
+import { ThemeInterface } from '@src/styles/theme';
 
-const FormContainer = styled(Block)`
-  padding: ${({ theme }) => theme.spacingByPx(2)} 0;
-  max-width: 380px;
-  margin: auto;
-`;
+const useStyles = makeStyles<ThemeInterface>(theme => ({
+  formContainer: {
+    padding: theme.spacing(2, 0),
+    maxWidth: 380,
+    margin: 'auto',
+  },
+}));
 
 const onSubmitHandler = (
   rangeFrom: RangeFromCondition,
@@ -63,9 +66,9 @@ const TrainingPage = () => (
     menuType={MenuType.Training}
     onClickBack={onClickBackHandler}
     content={
-      <FormContainer>
+      <Block className={useStyles().formContainer}>
         <TrainingMenuForm onSubmit={onSubmitHandler} />
-      </FormContainer>
+      </Block>
     }
   />
 );

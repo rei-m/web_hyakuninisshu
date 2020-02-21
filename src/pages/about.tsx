@@ -1,6 +1,6 @@
 import React from 'react';
 import { navigate } from 'gatsby';
-import styled from '@src/styles/styled-components';
+import makeStyles from '@material-ui/core/styles/makeStyles';
 import TripleContentsPageTemplate from '@src/components/templates/TripleContentsPageTemplate';
 import ReadingContent from '@src/components/molecules/ReadingContent';
 import Block from '@src/components/atoms/Block';
@@ -8,10 +8,13 @@ import Paragraph from '@src/components/atoms/Paragraph';
 import PlayStoreBanner from '@src/components/atoms/PlayStoreBanner';
 import { ROUTE_PATHS } from '@src/constants';
 import { MenuType } from '@src/enums';
+import { ThemeInterface } from '@src/styles/theme';
 
-const BannerContainer = styled(Block)`
-  text-align: center;
-`;
+const useStyles = makeStyles<ThemeInterface>(() => ({
+  bannerContainer: {
+    textAlign: 'center',
+  },
+}));
 
 const onClickBackHandler = () => {
   navigate(ROUTE_PATHS.ROOT, { replace: true });
@@ -46,9 +49,9 @@ const AboutPage = () => (
           <Paragraph size={`s`}>
             Androidのみリリースしています。こちらは一旦インストールしていただけばオフラインでも使えます。iOS版は未定ですが、要望があればがんばります。
           </Paragraph>
-          <BannerContainer>
+          <Block className={useStyles().bannerContainer}>
             <PlayStoreBanner size={200} />
-          </BannerContainer>
+          </Block>
         </ReadingContent>
         <ReadingContent title={`運営者について`}>
           <Paragraph size={`s`}>
