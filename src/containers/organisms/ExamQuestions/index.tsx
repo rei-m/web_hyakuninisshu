@@ -12,18 +12,18 @@ import { QuestionAnimCondition, QuestionState } from '@src/enums';
 import { Answer, Karuta, Question, ToriFuda } from '@src/types';
 import { toDulation } from '@src/utils/questions';
 
-export interface OwnProps {
+export type OwnProps = {
   karutas: Karuta[];
   onClickGoToResult: () => void;
-}
+};
 
-export interface ConnectedProps {
+export type ConnectedProps = {
   question?: Question;
   answer?: Answer;
   totalCount: number;
   currentPosition: number;
   questionState?: QuestionState;
-}
+};
 
 export type PresenterProps = Pick<OwnProps, 'onClickGoToResult'> &
   ConnectedProps &

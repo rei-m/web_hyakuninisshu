@@ -11,12 +11,12 @@ import { questionsOperations, questionsTypes } from '@src/state/questions';
 import { QuestionState } from '@src/enums';
 import { Answer, Question, ToriFuda } from '@src/types';
 
-export interface OwnProps {
+export type OwnProps = {
   submitTime: number;
   onClickGoToResult: () => void;
-}
+};
 
-export interface ConnectedProps {
+export type ConnectedProps = {
   lastStartedTime?: number;
   question?: Question;
   answer?: Answer;
@@ -24,7 +24,7 @@ export interface ConnectedProps {
   currentPosition: number;
   questionState?: QuestionState;
   dulation: number;
-}
+};
 
 export type PresenterProps = Pick<OwnProps, 'onClickGoToResult'> &
   ConnectedProps &

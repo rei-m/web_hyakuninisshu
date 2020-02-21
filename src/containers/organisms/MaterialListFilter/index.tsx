@@ -1,4 +1,5 @@
 import React from 'react';
+import clsx from 'clsx';
 import { useSelector, useDispatch } from 'react-redux';
 import CloseIcon from '@material-ui/icons/Close';
 import Checkbox from '@material-ui/core/Checkbox';
@@ -7,8 +8,6 @@ import ListItem from '@material-ui/core/ListItem';
 import ListSubheader from '@material-ui/core/ListSubheader';
 import ListItemText from '@material-ui/core/ListItemText';
 import makeStyles from '@material-ui/core/styles/makeStyles';
-import styled from '@src/styles/styled-components';
-import { appTheme } from '@src/styles/theme';
 import Txt from '@src/components/atoms/Txt';
 import Kimariji from '@src/components/atoms/Kimariji';
 import KarutaColor from '@src/components/atoms/KarutaColor';
@@ -16,63 +15,48 @@ import CenteredFrame from '@src/components/atoms/CenteredFrame';
 import { Color, Kimariji as KimarijiType } from '@src/types';
 import { uiOperations, uiTypes } from '@src/state/ui';
 import { GlobalState } from '@src/state';
+import { ThemeInterface } from '@src/styles/theme';
 
-export interface OwnProps {
+export type OwnProps = {
   className?: string;
-}
+};
 
-export interface ConnectedProps {
+export type ConnectedProps = {
   colors: Array<{ color: Color; checked: boolean }>;
   kimarijis: Array<{ kimariji: KimarijiType; checked: boolean }>;
-}
+};
 
-export interface DispatchProps {
+export type DispatchProps = {
   onChangeColor: (color: Color, checked: boolean) => void;
   onChangeKimariji: (kimariji: KimarijiType, checked: boolean) => void;
   onClickClose: () => void;
-}
+};
 
 export type PresenterProps = OwnProps & ConnectedProps & DispatchProps;
 
 export type ContainerProps = OwnProps & { presenter: React.FC<PresenterProps> };
 
-const Container = styled.div`
-  background-color: ${({ theme }) => theme.colorThin};
-  width: 200px;
-  box-sizing: border-box;
-`;
-
-const Header = styled.li`
-  position: relative;
-  text-align: center;
-  height: 48px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border-bottom: 1px solid #808080;
-`;
-
-const CloseIconWrapper = styled(CenteredFrame)`
-  height: 48px;
-  width: 48px;
-  cursor: pointer;
-  position: absolute;
-  top: 0;
-  right: 0;
-`;
-
-const Ul = styled.ul`
-  margin: 0;
-  padding: 0;
-`;
-
-const useStyles = makeStyles(() => ({
+const useStyles = makeStyles<ThemeInterface>(theme => ({
   root: {
+    backgroundColor: theme.colorThin,
+    width: 200,
+    boxSizing: 'border-box',
+  },
+  list: {
     width: '100%',
-    backgroundColor: appTheme.colorThin,
+    backgroundColor: theme.colorThin,
     position: 'relative',
     overflow: 'auto',
     maxHeight: '100vh',
+  },
+  listHeader: {
+    position: 'relative',
+    textAlign: 'center',
+    height: 48,
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center',
+    borderBottom: '1px solid #808080',
   },
   listSubHeader: {
     padding: 0,
@@ -83,6 +67,18 @@ const useStyles = makeStyles(() => ({
     padding: 0,
   },
   listItemText: {
+    padding: 0,
+  },
+  closeIconContainer: {
+    height: 48,
+    width: 48,
+    cursor: 'pointer',
+    position: 'absolute',
+    top: 0,
+    right: 0,
+  },
+  ul: {
+    margin: 0,
     padding: 0,
   },
 }));
@@ -101,18 +97,18 @@ export const MaterialListFilterPresenter = ({
 }: PresenterProps) => {
   const classes = useStyles();
   return (
-    <Container onClick={onClickContainerHandler} className={className}>
-      <List className={classes.root} subheader={<li />}>
-        <Header key="header">
+    <div onClick={onClickContainerHandler} className={clsx(classes.root, className)}>
+      <List className={classes.list} subheader={<li />}>
+        <li key="header" className={classes.listHeader}>
           <Txt tag={`span`} size={`s`}>
             絞り込み
           </Txt>
-          <CloseIconWrapper onClick={onClickClose}>
+          <CenteredFrame onClick={onClickClose} className={classes.closeIconContainer}>
             <CloseIcon />
-          </CloseIconWrapper>
-        </Header>
+          </CenteredFrame>
+        </li>
         <li key="section-kimariji">
-          <Ul>
+          <ul className={classes.ul}>
             <ListSubheader className={classes.listSubHeader}>
               <Txt tag={`span`} size={`s`}>
                 決まり字
@@ -133,10 +129,10 @@ export const MaterialListFilterPresenter = ({
                 <ListItemText primary={<Kimariji kimariji={kimariji} size={`s`} />} className={classes.listItemText} />
               </ListItem>
             ))}
-          </Ul>
+          </ul>
         </li>
         <li key="section-color">
-          <Ul>
+          <ul className={classes.ul}>
             <ListSubheader className={classes.listSubHeader}>
               <Txt tag={`span`} size={`s`}>
                 色
@@ -157,10 +153,10 @@ export const MaterialListFilterPresenter = ({
                 <ListItemText primary={<KarutaColor color={color} size={`s`} />} className={classes.listItemText} />
               </ListItem>
             ))}
-          </Ul>
+          </ul>
         </li>
       </List>
-    </Container>
+    </div>
   );
 };
 
