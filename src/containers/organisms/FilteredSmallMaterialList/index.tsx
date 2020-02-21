@@ -31,15 +31,14 @@ const useStyles = makeStyles<ThemeInterface>(theme => ({
     [`@media screen and (min-width:${theme.minWidthWide})`]: {
       flexDirection: 'row',
     },
-
-    '& > li': {
-      maxWidth: 380,
-      width: '100%',
-      margin: theme.spacing(1, 0),
-      boxShadow: theme.elevationShadow1x,
-      [`@media screen and (min-width:${theme.minWidthWide})`]: {
-        margin: theme.spacing(1),
-      },
+  },
+  listItem: {
+    maxWidth: 380,
+    width: '100%',
+    margin: theme.spacing(1, 0),
+    boxShadow: theme.elevationShadow1x,
+    [`@media screen and (min-width:${theme.minWidthWide})`]: {
+      margin: theme.spacing(1),
     },
   },
   link: {
@@ -66,7 +65,7 @@ export const FilteredSmallMaterialListPresenter = ({ karutas, className }: Props
     <ul className={clsx(classes.root, className)}>
       {karutas.length > 0 ? (
         karutas.map(karuta => (
-          <li key={karuta.no}>
+          <li key={karuta.no} className={classes.listItem}>
             <Link to={ROUTE_PATHS.KARUTAS_ID.replace(':id', karuta.no.toString())} className={classes.link}>
               <SmallMaterial karuta={karuta} className={classes.material} data-test={`row-${karuta.no}`} />
             </Link>

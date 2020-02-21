@@ -49,7 +49,7 @@ const useStyles = makeStyles<ThemeInterface>(theme => ({
     margin: theme.spacing(2),
   },
   arrowButton: {
-    marginTop: theme.spacing(4),
+    marginTop: theme.spacing(2),
     boxShadow: theme.elevationShadow1x,
   },
 }));

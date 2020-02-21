@@ -27,6 +27,7 @@ const onClickBackHandler = () => {
 const KarutasNoPage = ({ pageContext }: Props) => {
   const { karuta } = pageContext;
   const karutaNoString = toKarutaNoString(karuta.no);
+  const classes = useStyles();
   return (
     <SingleContentPageTemplate
       title={`百人一首 - ${karutaNoString} -`}
@@ -36,7 +37,7 @@ const KarutasNoPage = ({ pageContext }: Props) => {
       menuType={MenuType.Material}
       onClickBack={onClickBackHandler}
       content={
-        <CenteredFrame tag={`div`} className={useStyles().container}>
+        <CenteredFrame tag={`div`} className={classes.container}>
           <Material karuta={karuta} />
         </CenteredFrame>
       }

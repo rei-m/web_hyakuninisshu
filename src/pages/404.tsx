@@ -14,23 +14,26 @@ const useStyles = makeStyles<ThemeInterface>(theme => ({
   },
 }));
 
-const NotFound = () => (
-  <MessagePageTemplate>
-    <Block className={useStyles().container}>
-      <Txt size={`l`}>
-        ページが見つかりませんでした。
-        <br />
-        トップページにお戻りください。
-      </Txt>
-      <Img
-        fluid={useDogezaImage()}
-        style={{
-          marginTop: '32px',
-        }}
-        alt={`ページが見つかりませんでした`}
-      />
-    </Block>
-  </MessagePageTemplate>
-);
+const NotFound = () => {
+  const classes = useStyles();
+  return (
+    <MessagePageTemplate>
+      <Block className={classes.container}>
+        <Txt size={`l`}>
+          ページが見つかりませんでした。
+          <br />
+          トップページにお戻りください。
+        </Txt>
+        <Img
+          fluid={useDogezaImage()}
+          style={{
+            marginTop: '32px',
+          }}
+          alt={`ページが見つかりませんでした`}
+        />
+      </Block>
+    </MessagePageTemplate>
+  );
+};
 
 export default NotFound;

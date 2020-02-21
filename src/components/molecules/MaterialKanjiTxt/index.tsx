@@ -14,12 +14,15 @@ const useStyles = makeStyles({
   },
 });
 
-const MaterialKanjiTxt = ({ karuta, size, separate = <br /> }: Props) => (
-  <Paragraph size={size} className={useStyles().root}>
-    {`${karuta.firstKanji} ${karuta.secondKanji} ${karuta.thirdKanji}`}
-    {separate}
-    {`${karuta.fourthKanji} ${karuta.fifthKanji}`}
-  </Paragraph>
-);
+const MaterialKanjiTxt = ({ karuta, size, separate = <br /> }: Props) => {
+  const classes = useStyles();
+  return (
+    <Paragraph size={size} className={classes.root}>
+      {`${karuta.firstKanji} ${karuta.secondKanji} ${karuta.thirdKanji}`}
+      {separate}
+      {`${karuta.fourthKanji} ${karuta.fifthKanji}`}
+    </Paragraph>
+  );
+};
 
 export default MaterialKanjiTxt;

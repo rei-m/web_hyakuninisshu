@@ -41,23 +41,26 @@ const TripleContentsPageTemplate = ({
   bottom,
   onClickBack,
   onClickSearch,
-}: Props) => (
-  <Layout
-    title={title}
-    isDisplayNav={isDisplayNav}
-    currentMenuType={menuType}
-    onClickBack={onClickBack}
-    onClickSearch={onClickSearch}
-  >
-    <SEO title={title} keywords={keywords} description={description} />
-    <Block className={useStyles().content}>
-      {top}
-      <Ad type={`top`} />
-      {middle}
-      <Ad type={`responsive`} />
-      {bottom}
-    </Block>
-  </Layout>
-);
+}: Props) => {
+  const classes = useStyles();
+  return (
+    <Layout
+      title={title}
+      isDisplayNav={isDisplayNav}
+      currentMenuType={menuType}
+      onClickBack={onClickBack}
+      onClickSearch={onClickSearch}
+    >
+      <SEO title={title} keywords={keywords} description={description} />
+      <Block className={classes.content}>
+        {top}
+        <Ad type={`top`} />
+        {middle}
+        <Ad type={`responsive`} />
+        {bottom}
+      </Block>
+    </Layout>
+  );
+};
 
 export default TripleContentsPageTemplate;

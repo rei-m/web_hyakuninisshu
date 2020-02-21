@@ -43,26 +43,29 @@ const useStyles = makeStyles<ThemeInterface>(() => ({
   },
 }));
 
-export const ExamResultPagePresenter = ({ questionState }: PresenterProps) => (
-  <PlayingPageTemplate
-    title={`百人一首 - 腕試し結果 -`}
-    isDisplayNav={false}
-    onClickBack={onClickBackHandler}
-    content={
-      <>
-        <Ad type={`top`} />
-        {questionState === QuestionState.Finished ? (
-          <ExamResult onClickRestart={onClickRestartHandler} onClickBack={onClickBackHandler} />
-        ) : (
-          <CenteredFrame tag={`div`} className={useStyles().errorMessage}>
-            <Txt role={`error`}>不正な遷移を行いました。前の画面からやり直してください。</Txt>
-          </CenteredFrame>
-        )}
-        <Ad type={`responsive`} />
-      </>
-    }
-  />
-);
+export const ExamResultPagePresenter = ({ questionState }: PresenterProps) => {
+  const classes = useStyles();
+  return (
+    <PlayingPageTemplate
+      title={`百人一首 - 腕試し結果 -`}
+      isDisplayNav={false}
+      onClickBack={onClickBackHandler}
+      content={
+        <>
+          <Ad type={`top`} />
+          {questionState === QuestionState.Finished ? (
+            <ExamResult onClickRestart={onClickRestartHandler} onClickBack={onClickBackHandler} />
+          ) : (
+            <CenteredFrame tag={`div`} className={classes.errorMessage}>
+              <Txt role={`error`}>不正な遷移を行いました。前の画面からやり直してください。</Txt>
+            </CenteredFrame>
+          )}
+          <Ad type={`responsive`} />
+        </>
+      }
+    />
+  );
+};
 
 export const ExamResultPageContainer = ({ presenter }: ContainerProps) => {
   const { questionState } = useSelector<GlobalState, questionsTypes.State>(state => state.questions);

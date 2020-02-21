@@ -51,27 +51,30 @@ const useStyles = makeStyles<ThemeInterface>(theme => ({
 
 const onClickBackHandler = () => navigate(ROUTE_PATHS.ROOT, { replace: true });
 
-export const KarutasPagePresenter = ({ karutas, filterOpen, onClickSearch, onClickOverlay }: PresenterProps) => (
-  <SingleContentPageTemplate
-    title={`百人一首 - 資料 -`}
-    description={`百人一首の資料のページです。百人一首の暗記を練習できます。百人一首の札の画像や現代語訳も載せています。百人一首の歌の意味に触れながら楽しく覚えましょう。`}
-    keywords={[`百人一首`, `小倉百人一首`, `歌`, `一覧`, `意味`, `歌番号`, `暗記`, `練習`]}
-    pageTitle={`歌一覧`}
-    menuType={MenuType.Material}
-    onClickBack={onClickBackHandler}
-    onClickSearch={onClickSearch}
-    content={
-      <>
-        <FilteredSmallMaterialList karutas={karutas} />
-        {filterOpen && (
-          <Overlay onClick={onClickOverlay}>
-            <MaterialListFilter className={useStyles().materialListFilter} />
-          </Overlay>
-        )}
-      </>
-    }
-  />
-);
+export const KarutasPagePresenter = ({ karutas, filterOpen, onClickSearch, onClickOverlay }: PresenterProps) => {
+  const classes = useStyles();
+  return (
+    <SingleContentPageTemplate
+      title={`百人一首 - 資料 -`}
+      description={`百人一首の資料のページです。百人一首の暗記を練習できます。百人一首の札の画像や現代語訳も載せています。百人一首の歌の意味に触れながら楽しく覚えましょう。`}
+      keywords={[`百人一首`, `小倉百人一首`, `歌`, `一覧`, `意味`, `歌番号`, `暗記`, `練習`]}
+      pageTitle={`歌一覧`}
+      menuType={MenuType.Material}
+      onClickBack={onClickBackHandler}
+      onClickSearch={onClickSearch}
+      content={
+        <>
+          <FilteredSmallMaterialList karutas={karutas} />
+          {filterOpen && (
+            <Overlay onClick={onClickOverlay}>
+              <MaterialListFilter className={classes.materialListFilter} />
+            </Overlay>
+          )}
+        </>
+      }
+    />
+  );
+};
 
 export const KarutasPageContainer = ({ data, presenter }: ContainerProps) => {
   const dispatch = useDispatch();

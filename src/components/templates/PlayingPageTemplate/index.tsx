@@ -29,10 +29,13 @@ const useStyles = makeStyles<ThemeInterface>(theme => ({
   },
 }));
 
-const PlayingPageTemplate = ({ content, title, menuType, isDisplayNav = false, onClickBack }: Props) => (
-  <Layout title={title} isDisplayNav={isDisplayNav} currentMenuType={menuType} onClickBack={onClickBack}>
-    <TatamiLayout className={useStyles().content}>{content}</TatamiLayout>
-  </Layout>
-);
+const PlayingPageTemplate = ({ content, title, menuType, isDisplayNav = false, onClickBack }: Props) => {
+  const classes = useStyles();
+  return (
+    <Layout title={title} isDisplayNav={isDisplayNav} currentMenuType={menuType} onClickBack={onClickBack}>
+      <TatamiLayout className={classes.content}>{content}</TatamiLayout>
+    </Layout>
+  );
+};
 
 export default PlayingPageTemplate;
