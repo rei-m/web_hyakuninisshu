@@ -10,7 +10,7 @@
     "clsx": "^1.1.0",
     "core-js": "^3.6.4",
     "formik": "^2.1.4",
-    "gatsby": "^2.19.18",
+    "gatsby": "^2.19.19",
     "gatsby-image": "^2.2.41",
     "gatsby-plugin-google-analytics": "^2.1.35",
     "gatsby-plugin-manifest": "^2.2.41",
@@ -95,7 +95,7 @@
     "ts-jest": "^25.2.0",
     "ts-node": "^8.6.2",
     "tsconfig-paths": "^3.8.0",
-    "typescript": "^3.7.5"
+    "typescript": "^3.8.2"
   },
   "repository": {
     "type": "git",

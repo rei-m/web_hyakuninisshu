@@ -29,14 +29,14 @@ const useStyles = makeStyles<ThemeInterface, { canBack: boolean }>(theme => ({
     margin: 0,
     textAlign: 'left',
     lineHeight: theme.headerHeight,
-    '@media screen and (min-width: 768px)': {
+    [`@media screen and (min-width:${theme.minWidthWide})`]: {
       lineHeight: theme.headerHeightWide,
     },
   },
   headerItem: {
     width: theme.headerHeight,
     height: theme.headerHeight,
-    '@media screen and (min-width: 768px)': {
+    [`@media screen and (min-width:${theme.minWidthWide})`]: {
       width: theme.headerHeightWide,
       height: theme.headerHeightWide,
     },
