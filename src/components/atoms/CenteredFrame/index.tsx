@@ -1,27 +1,28 @@
 import React from 'react';
-import { ThemedStyledFunction } from 'styled-components';
-import styled from '@src/styles/styled-components';
-import { ThemeInterface } from '@src/styles/theme';
+import clsx from 'clsx';
+import makeStyles from '@material-ui/core/styles/makeStyles';
 
-export interface Props {
+export type Props = {
   tag?: React.ElementType;
   className?: string;
   onClick?: () => void;
-}
+};
 
-const CenteredFrame: React.FC<Props> = ({ tag = 'span', className = '', onClick, children }) => {
-  const Tag = React.useMemo(() => {
-    const creator: ThemedStyledFunction<React.ElementType<any>, ThemeInterface> = styled(tag);
-    return creator(props => ({
-      display: 'flex',
-      justifyContent: 'center',
-      alignItems: 'center',
-      cursor: props.onClick ? 'pointer' : '',
-    }));
-  }, []);
+const useStyles = makeStyles({
+  root: {
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+  clickable: {
+    cursor: 'pointer',
+  },
+});
 
+const CenteredFrame: React.FC<Props> = ({ tag: Tag = 'span', className = '', onClick, children }) => {
+  const classes = useStyles();
   return (
-    <Tag className={className} onClick={onClick}>
+    <Tag className={clsx(classes.root, !!onClick && classes.clickable, className)} onClick={onClick}>
       {children}
     </Tag>
   );

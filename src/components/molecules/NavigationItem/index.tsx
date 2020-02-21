@@ -1,42 +1,44 @@
 import React from 'react';
+import clsx from 'clsx';
 import { SvgIconProps } from '@material-ui/core/SvgIcon';
-import styled from '@src/styles/styled-components';
+import makeStyles from '@material-ui/core/styles/makeStyles';
 import { MenuType } from '@src/enums';
 import CenteredFrame from '@src/components/atoms/CenteredFrame';
+import { ThemeInterface } from '@src/styles/theme';
 
-export interface Props {
+export type Props = {
   menuType: MenuType;
   active?: boolean;
   className?: string;
   renderIcon: (menuType: MenuType) => React.ReactElement<SvgIconProps>;
   onClick?: () => void;
-}
+};
 
-type IconWrapperProps = Pick<Props, 'menuType' | 'active'>;
-
-const Container = styled(CenteredFrame)<IconWrapperProps>`
-  height: 56px;
-  color: #fff;
-  position: relative;
-  box-sizing: border-box;
-  width: inherit;
-  opacity: ${props => (props.active ? 1 : 0.8)};
-  svg {
-    margin-bottom: 18px;
-  }
-  &:after {
-    content: '${props => props.menuType}';
-    bottom: 8px;
-    position: absolute;
-    font-size: 1.2rem;
-    opacity: 1;
-  }
-`;
+const useStyles = makeStyles<ThemeInterface, Pick<Props, 'active' | 'menuType'>>(theme => ({
+  root: {
+    height: 56,
+    color: theme.palette.common.white,
+    position: 'relative',
+    boxSizing: 'border-box',
+    width: 'inherit',
+    opacity: ({ active }) => (active ? 1 : 0.8),
+    '& svg': {
+      marginBottom: '18px',
+    },
+    '&:after': {
+      content: ({ menuType }) => `'${menuType}'`,
+      bottom: theme.spacing(1),
+      position: 'absolute',
+      fontSize: theme.fontSize.ss,
+      opacity: 1,
+    },
+  },
+}));
 
 const NavigationItem = ({ menuType, active, className = '', renderIcon, onClick }: Props) => (
-  <Container menuType={menuType} active={active} className={className} onClick={onClick}>
+  <CenteredFrame className={clsx(useStyles({ active, menuType }).root, className)} onClick={onClick}>
     {renderIcon(menuType)}
-  </Container>
+  </CenteredFrame>
 );
 
 export default NavigationItem;

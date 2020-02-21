@@ -1,49 +1,54 @@
-import React from 'react';
-import styled, { keyframes } from '@src/styles/styled-components';
+import React, { useState, useRef, useLayoutEffect } from 'react';
+import makeStyles from '@material-ui/core/styles/makeStyles';
+import { ThemeInterface } from '@src/styles/theme';
 
-const rippleAnimation = keyframes`
-  to {
-    transform: scale(2);
-    opacity: 0;
-  }
-`;
+const useStyles = makeStyles<ThemeInterface>({
+  rippleContainer: {
+    position: 'relative',
+    overflow: 'hidden !important',
+    '& .ripple-effect': {
+      position: 'absolute',
+      borderRadius: '50%',
+      userSelect: 'none',
+      pointerEvents: 'none',
+      transform: 'scale(0)',
+      opacity: 0.75,
+      animationName: '$ripple',
+      animationDuration: '1000ms',
+    },
+  },
+  '@keyframes ripple': {
+    to: {
+      transform: 'scale(2)',
+      opacity: 0,
+    },
+  },
+});
 
-const RippleContainer = styled.div`
-  position: relative !important;
-  overflow: hidden !important;
-  & .ripple-effect {
-    position: absolute;
-    border-radius: 50%;
-    user-select: none;
-    pointer-events: none;
-    transform: scale(0);
-    opacity: 0.75;
-    animation: ${rippleAnimation} 1000ms;
-  }
-`;
-
-export interface RippledComponentProps {
+export type RippledComponentProps = {
   color?: string;
   style?: React.CSSProperties;
-}
+};
 
 // このHOC中途半端なので作り直したさ
 export function withRipple<T>(WrappedComponent: React.ComponentType<T>) {
   return (props: T & RippledComponentProps) => {
     const color = props.color ? props.color : '#fff';
 
-    const [timerHolder] = React.useState<{ clearRippleTimer: number | undefined }>({ clearRippleTimer: undefined });
+    const [timerHolder] = useState<{ clearRippleTimer: number | undefined }>({ clearRippleTimer: undefined });
 
     // tslint:disable-next-line:no-null-keyword
-    const containerEl = React.useRef<HTMLDivElement>(null);
+    const containerEl = useRef<HTMLDivElement>(null);
 
-    React.useEffect(() => {
+    useLayoutEffect(() => {
       return function cleanup() {
         if (timerHolder.clearRippleTimer) {
           window.clearTimeout(timerHolder.clearRippleTimer);
         }
       };
     });
+
+    const classes = useStyles();
 
     const addRipple = (event: React.MouseEvent<HTMLDivElement>) => {
       const { width, height, left, top } = containerEl.current!.getBoundingClientRect();
@@ -76,9 +81,15 @@ export function withRipple<T>(WrappedComponent: React.ComponentType<T>) {
     };
 
     return (
-      <RippleContainer ref={containerEl} onMouseDown={addRipple} onMouseUp={clearRipple} style={props.style}>
+      <div
+        ref={containerEl}
+        onMouseDown={addRipple}
+        onMouseUp={clearRipple}
+        style={props.style}
+        className={classes.rippleContainer}
+      >
         <WrappedComponent {...props} style={{}} />
-      </RippleContainer>
+      </div>
     );
   };
 }

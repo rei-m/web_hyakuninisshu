@@ -1,39 +1,41 @@
 import React from 'react';
-import styled from '@src/styles/styled-components';
+import clsx from 'clsx';
+import makeStyles from '@material-ui/core/styles/makeStyles';
 import { Karuta } from '@src/types';
 import Block from '@src/components/atoms/Block';
 import VerticalTxt from '@src/components/atoms/VerticalTxt';
+import { ThemeInterface } from '@src/styles/theme';
 
 type Size = 's' | 'm' | 'l';
 
-export interface Props {
+export type Props = {
   karuta: Karuta;
   size?: Size;
   className?: string;
-}
+};
 
 const RATIO_L = 1.15;
 const RATIO_S = 0.875;
 
-const containerStyleMap = {
-  s: `
-  width: ${175 * RATIO_S}px;
-  height: ${230 * RATIO_S}px;
-  border-width: ${5 * RATIO_S}px;
-  `,
-  m: `
-  width: 175px;
-  height: 230px;
-  border-width: 5px;
-  `,
-  l: `
-  width: ${175 * RATIO_L}px;
-  height: ${230 * RATIO_L}px;
-  border-width: ${5 * RATIO_L}px;
-  `,
-};
+const ROOT_STYLE_MAP = {
+  s: {
+    width: `${175 * RATIO_S}px`,
+    height: `${230 * RATIO_S}px`,
+    borderWidth: `${5 * RATIO_S}px`,
+  },
+  m: {
+    width: `175px`,
+    height: `230px`,
+    borderWidth: `5px`,
+  },
+  l: {
+    width: `${230 * RATIO_S}px`,
+    height: `${230 * RATIO_L}px`,
+    borderWidth: `${5 * RATIO_L}px`,
+  },
+} as const;
 
-const phraseStyleMap = {
+const PHRASE_STYLE_MAP = {
   s: {
     paddingUnit: 5,
     marginRight: 5,
@@ -48,15 +50,7 @@ const phraseStyleMap = {
   },
 };
 
-const phraseStyle = ({ size, level }: { size: Size; level: 0 | 3 | 4 | 6 | 7 }) => {
-  const style = phraseStyleMap[size];
-  return `
-    padding-top: ${style.paddingUnit * level}px;
-    margin-right: ${style.marginRight}px;
-  `;
-};
-
-const creatorStyleMap = {
+const CREATOR_STYLE_MAP = {
   s: {
     fontSize: `${1.3 * RATIO_S}rem`,
     lineHeight: `${1.4 * RATIO_S}rem`,
@@ -74,59 +68,76 @@ const creatorStyleMap = {
   },
 };
 
-const Container = styled(Block)<{ size: Size }>`
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: ${({ theme }) => theme.colorThin};
-  border-style: solid;
-  border-color: ${({ theme }) => theme.palette.primary.dark};
-  border-radius: 10px;
-  ${({ size }) => containerStyleMap[size]}
-  font-family: 'Sawarabi Mincho';
-`;
+const useStyles = makeStyles<ThemeInterface, { size: Size }>(theme => ({
+  root: {
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center',
+    backgroundColor: theme.colorThin,
+    borderStyle: 'solid',
+    borderColor: theme.palette.primary.dark,
+    borderRadius: 10,
+    fontFamily: 'Sawarabi Mincho',
+    width: ({ size }) => ROOT_STYLE_MAP[size].width,
+    height: ({ size }) => ROOT_STYLE_MAP[size].height,
+    borderWidth: ({ size }) => ROOT_STYLE_MAP[size].borderWidth,
+  },
+  inner: {
+    display: 'flex',
+    flexDirection: 'row-reverse',
+    justifyContent: 'center',
+  },
+  firstPhrase: {},
+  secondPhrase: {
+    paddingTop: ({ size }) => `${PHRASE_STYLE_MAP[size].paddingUnit * 3}px`,
+    marginRight: ({ size }) => `${PHRASE_STYLE_MAP[size].marginRight}px`,
+  },
+  thirdPhrase: {
+    paddingTop: ({ size }) => `${PHRASE_STYLE_MAP[size].paddingUnit * 6}px`,
+    marginRight: ({ size }) => `${PHRASE_STYLE_MAP[size].marginRight}px`,
+  },
+  fourthPhrase: {
+    paddingTop: ({ size }) => `${PHRASE_STYLE_MAP[size].paddingUnit * 4}px`,
+    marginRight: ({ size }) => `${PHRASE_STYLE_MAP[size].marginRight}px`,
+  },
+  fifthPhrase: {
+    paddingTop: ({ size }) => `${PHRASE_STYLE_MAP[size].paddingUnit * 7}px`,
+    marginRight: ({ size }) => `${PHRASE_STYLE_MAP[size].marginRight}px`,
+  },
+  creator: {
+    alignSelf: 'flex-end',
+    fontSize: ({ size }) => CREATOR_STYLE_MAP[size].fontSize,
+    lineHeight: ({ size }) => CREATOR_STYLE_MAP[size].lineHeight,
+    marginRight: ({ size }) => CREATOR_STYLE_MAP[size].marginRight,
+  },
+}));
 
-const Inner = styled(Block)`
-  display: flex;
-  flex-direction: row-reverse;
-  justify-content: center;
-`;
-
-const FirstPhrase = styled(VerticalTxt)``;
-
-const SecondPhrase = styled(VerticalTxt)<{ size: Size }>`
-  ${({ size }) => phraseStyle({ size, level: 3 })}
-`;
-
-const ThirdPhrase = styled(VerticalTxt)<{ size: Size }>`
-  ${({ size }) => phraseStyle({ size, level: 6 })}
-`;
-
-const FourthPhrase = styled(VerticalTxt)<{ size: Size }>`
-  ${({ size }) => phraseStyle({ size, level: 4 })}
-`;
-
-const FifthPhrase = styled(VerticalTxt)<{ size: Size }>`
-  ${({ size }) => phraseStyle({ size, level: 7 })}
-`;
-
-const Creator = styled(VerticalTxt)`
-  align-self: flex-end;
-`;
-
-const Fuda = ({ karuta, size = 'l', className = '' }: Props) => (
-  <Container className={className} size={size}>
-    <Inner>
-      <FirstPhrase size={size}>{karuta.firstKanji}</FirstPhrase>
-      <SecondPhrase size={size}>{karuta.secondKanji}</SecondPhrase>
-      <ThirdPhrase size={size}>{karuta.thirdKanji}</ThirdPhrase>
-      <FourthPhrase size={size}>{karuta.fourthKanji}</FourthPhrase>
-      <FifthPhrase size={size}>{karuta.fifthKanji}</FifthPhrase>
-      <Creator size={size} style={creatorStyleMap[size]}>
-        {karuta.creator}
-      </Creator>
-    </Inner>
-  </Container>
-);
+const Fuda = ({ karuta, size = 'l', className = '' }: Props) => {
+  const classes = useStyles({ size });
+  return (
+    <Block className={clsx(classes.root, className)}>
+      <Block className={classes.inner}>
+        <VerticalTxt size={size} className={classes.firstPhrase}>
+          {karuta.firstKanji}
+        </VerticalTxt>
+        <VerticalTxt size={size} className={classes.secondPhrase}>
+          {karuta.secondKanji}
+        </VerticalTxt>
+        <VerticalTxt size={size} className={classes.thirdPhrase}>
+          {karuta.thirdKanji}
+        </VerticalTxt>
+        <VerticalTxt size={size} className={classes.fourthPhrase}>
+          {karuta.fourthKanji}
+        </VerticalTxt>
+        <VerticalTxt size={size} className={classes.fifthPhrase}>
+          {karuta.fifthKanji}
+        </VerticalTxt>
+        <VerticalTxt size={size} className={classes.creator}>
+          {karuta.creator}
+        </VerticalTxt>
+      </Block>
+    </Block>
+  );
+};
 
 export default Fuda;

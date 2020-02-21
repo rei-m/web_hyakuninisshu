@@ -1,14 +1,11 @@
-import React from 'react';
-import styled from '@src/styles/styled-components';
+import styled from '@material-ui/core/styles/styled';
 import CenteredFrame, { Props as CenteredFrameProps } from '../CenteredFrame';
 
 export type Props = CenteredFrameProps;
 
-const Container = styled(CenteredFrame)({
+const CircleFrame = styled(CenteredFrame)({
   border: '2px solid #000',
   borderRadius: '50%',
 });
-
-const CircleFrame: React.FC<Props> = props => <Container {...props} />;
 
 export default CircleFrame;

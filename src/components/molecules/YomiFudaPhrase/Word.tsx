@@ -2,12 +2,12 @@ import React from 'react';
 import FadeInFrame from '@src/components/atoms/FadeInFrame';
 import { SPACE } from './';
 
-export interface Props {
+export type Props = {
   text: string;
   duration: number;
   className?: string;
   onAnimationEnd: () => void;
-}
+};
 
 const Word = ({ text, duration, className = '', onAnimationEnd }: Props) =>
   text === SPACE ? (

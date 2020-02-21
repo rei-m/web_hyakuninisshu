@@ -1,35 +1,41 @@
 import React from 'react';
-import styled from '@src/styles/styled-components';
+import makeStyles from '@material-ui/core/styles/makeStyles';
 import Layout from '@src/components/templates/Layout';
 import TatamiLayout from '@src/components/molecules/TatamiLayout';
 import { MenuType } from '@src/enums';
+import { ThemeInterface } from '@src/styles/theme';
 
-export interface Props {
+export type Props = {
   title: string;
   menuType?: MenuType;
   isDisplayNav?: boolean;
   content: React.ReactElement;
   onClickBack?: () => void;
-}
+};
 
-const Container = styled(TatamiLayout)`
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  padding: ${({ theme }) => theme.spacingByPx(2)};
-  box-sizing: border-box;
-  width: 100%;
-  min-height: calc(100vh - ${({ theme }) => theme.headerHeight});
-  @media screen and (min-width: ${({ theme }) => theme.minWidthWide}) {
-    min-height: calc(100vh - ${({ theme }) => theme.headerHeightWide});
-  }
-`;
+const useStyles = makeStyles<ThemeInterface>(theme => ({
+  content: {
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center',
+    flexDirection: 'column',
+    boxSizing: 'border-box',
+    padding: theme.spacing(2),
+    width: '100%',
+    minHeight: `calc(100vh - ${theme.headerHeight})`,
+    [`@media screen and (min-width:${theme.minWidthWide})`]: {
+      minHeight: `calc(100vh - ${theme.headerHeightWide})`,
+    },
+  },
+}));
 
-const PlayingPageTemplate = ({ content, title, menuType, isDisplayNav = false, onClickBack }: Props) => (
-  <Layout title={title} isDisplayNav={isDisplayNav} currentMenuType={menuType} onClickBack={onClickBack}>
-    <Container>{content}</Container>
-  </Layout>
-);
+const PlayingPageTemplate = ({ content, title, menuType, isDisplayNav = false, onClickBack }: Props) => {
+  const classes = useStyles();
+  return (
+    <Layout title={title} isDisplayNav={isDisplayNav} currentMenuType={menuType} onClickBack={onClickBack}>
+      <TatamiLayout className={classes.content}>{content}</TatamiLayout>
+    </Layout>
+  );
+};
 
 export default PlayingPageTemplate;
