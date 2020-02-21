@@ -1,226 +1,210 @@
-import { Answer, Karuta, Question } from '@src/types';
-import {
-  ColorCondition,
-  KarutaStyleCondition,
-  KimarijiCondition,
-  QuestionAnimCondition,
-  QuestionState,
-  RangeFromCondition,
-  RangeToCondition,
-} from '@src/enums';
-import { randomizeArray } from '@src/utils';
-import { fetchTorifudas, questionsFilter, toDulation } from '@src/utils/questions';
 import * as types from './types';
 import * as constants from './constants';
+import { QuestionListService } from '@src/domain/services';
+import { Kimariji, Color, QuestionId, Question, KarutaCollection, Karuta, KarutaNo } from '@src/domain/models';
+import { KarutaRepository, QuestionRepository } from '@src/domain/repositories';
+import { IllegalStateError } from '@src/domain/errors';
 
-export const startTraining = (
-  karutas: Karuta[],
-  rangeFrom: RangeFromCondition,
-  rangeTo: RangeToCondition,
-  kimariji: KimarijiCondition,
-  color: ColorCondition,
-  kamiNoKuStyle: KarutaStyleCondition,
-  shimoNoKuStyle: KarutaStyleCondition,
-  questionAnim: QuestionAnimCondition
-): types.StartTrainingAction => {
-  const questions = new QuestionsFactory(karutas)
-    .setRange(rangeFrom, rangeTo)
-    .setKimariji(kimariji)
-    .setColor(color)
-    .setKamiNoKuStyle(kamiNoKuStyle)
-    .setShimoNoKuStyle(shimoNoKuStyle)
-    .create();
+export class ActionCreatorImpl implements types.ActionCreator {
+  constructor(
+    private _karutaRepository: KarutaRepository,
+    private _questionRepository: QuestionRepository,
+    private _questionListService: QuestionListService
+  ) {}
 
-  return {
-    meta: {
-      color,
-      kamiNoKuStyle,
-      kimariji,
-      rangeFrom,
-      rangeTo,
-      shimoNoKuStyle,
-      questionAnim,
-    },
-    payload: {
-      karutas,
-      nextState: QuestionState.InAnswer,
-      questions: randomizeArray<Question>(questions),
-      startedTime: new Date().getTime(),
-      dulation: toDulation(questionAnim),
-    },
-    type: constants.START_TRAINING_NAME,
-  };
-};
+  startTraining(
+    rangeFrom: types.RangeFromCondition,
+    rangeTo: types.RangeToCondition,
+    kimariji: types.KimarijiCondition,
+    color: types.ColorCondition,
+    kamiNoKuStyle: types.KarutaStyleCondition,
+    shimoNoKuStyle: types.KarutaStyleCondition,
+    questionAnim: types.QuestionAnimCondition
+  ): types.StartTrainingAction {
+    const range = { from: rangeFrom, to: rangeTo };
+    const kimarijiList = kimariji === null ? Kimariji.values : [kimariji];
+    const colorList = color === null ? Color.values : [color];
 
-export const startExam = (karutas: Karuta[]): types.StartExamAction => {
-  const questions = new QuestionsFactory(karutas)
-    .setRange(RangeFromCondition.One, RangeToCondition.OneHundred)
-    .setKimariji(KimarijiCondition.None)
-    .setColor(ColorCondition.None)
-    .setKamiNoKuStyle(KarutaStyleCondition.KanjiAndKana)
-    .setShimoNoKuStyle(KarutaStyleCondition.KanaOnly)
-    .create();
-
-  return {
-    payload: {
-      karutas,
-      nextState: QuestionState.InAnswer,
-      questions: randomizeArray(questions),
-      startedTime: new Date().getTime(),
-    },
-    type: constants.START_EXAM_NAME,
-  };
-};
-
-export const restartQuestions = (questions: Question[], answers: Answer[]): types.RestartQuestionsAction => {
-  // TODO: 全て回答済みでなかったらエラー
-  const finder: { [questionId: number]: Question } = questions.reduce((previous, current) => {
-    return { ...previous, [current.id]: current };
-  }, {});
-  const targets = answers
-    .filter(a => !a.correct)
-    .map(a => finder[a.questionId])
-    .map(q => ({ ...q, toriFudas: randomizeArray(q.toriFudas) }));
-
-  return {
-    payload: {
-      nextState: QuestionState.InAnswer,
-      questions: randomizeArray(targets),
-      startedTime: new Date().getTime(),
-    },
-    type: constants.RESTART_QUESTIONS_NAME,
-  };
-};
-
-export const answerQuestion = (
-  questionId: number,
-  karutaNo: number,
-  questions: Question[],
-  lastStartedTime?: number
-): types.AnswerQuestionAction => {
-  const question = questions.find(q => q.id === questionId)!;
-  // TODO: QuestionとlastStartedTimeがundefinedの場合
-  const correct = question.correctKaruta.no === karutaNo;
-  const time = new Date().getTime() - lastStartedTime!;
-  const answer = {
-    correct,
-    karutaNo,
-    questionId,
-    time,
-  };
-
-  return {
-    payload: {
-      answer,
-      nextState: QuestionState.Answered,
-    },
-    type: constants.ANSWER_QUESTION_NAME,
-  };
-};
-
-export const confirmCorrect = (_questions: Question[], _answers: Answer[]): types.ConfirmCorrectAction => ({
-  payload: {
-    nextState: QuestionState.ConfirmCorrect,
-  },
-  type: constants.CONFIRM_CORRECT_NAME,
-});
-
-export const openNextQuestion = (currentIndex: number): types.OpenNextQuestionAction => ({
-  payload: {
-    nextIndex: currentIndex + 1,
-    nextState: QuestionState.InAnswer,
-    startedTime: new Date().getTime(),
-  },
-  type: constants.OPEN_NEXT_QUESTION_NAME,
-});
-
-export const finishQuestion = (): types.FinishQuestionAction => ({
-  type: constants.FINISH_QUESTION_NAME,
-});
-
-class QuestionsFactory {
-  private karutas: Karuta[];
-  private rangeFrom: number;
-  private rangeTo: number;
-  private kimariji: number;
-  private color: string;
-  private kamiNoKuStyle: number;
-  private shimoNoKuStyle: number;
-
-  constructor(karutas: Karuta[]) {
-    this.karutas = karutas;
-    this.rangeFrom = RangeFromCondition.One;
-    this.rangeTo = RangeToCondition.OneHundred;
-    this.kimariji = KimarijiCondition.None;
-    this.color = ColorCondition.None;
-    this.kamiNoKuStyle = KarutaStyleCondition.KanjiAndKana;
-    this.shimoNoKuStyle = KarutaStyleCondition.KanaOnly;
-  }
-
-  public setRange(rangeFrom: number, rangeTo: number) {
-    this.rangeFrom = rangeFrom;
-    this.rangeTo = rangeTo;
-    return this;
-  }
-
-  public setKimariji(kimariji: number) {
-    this.kimariji = kimariji;
-    return this;
-  }
-
-  public setColor(color: string) {
-    this.color = color;
-    return this;
-  }
-
-  public setKamiNoKuStyle(kamiNoKuStyle: number) {
-    this.kamiNoKuStyle = kamiNoKuStyle;
-    return this;
-  }
-
-  public setShimoNoKuStyle(shimoNoKuStyle: number) {
-    this.shimoNoKuStyle = shimoNoKuStyle;
-    return this;
-  }
-
-  public create() {
-    const targetKarutas = questionsFilter(this.karutas)(this.rangeFrom, this.rangeTo)(this.kimariji)(this.color);
-
-    return targetKarutas.map((k, i) => {
-      const id = i + 1;
-      const correctKaruta = k;
-      const yomiFuda =
-        this.kamiNoKuStyle === 0
-          ? {
-              firstText: k.firstKanji,
-              karutaNo: k.no,
-              questionId: id,
-              secondText: k.secondKanji,
-              thirdText: k.thirdKanji,
-            }
-          : {
-              firstText: k.firstKana,
-              karutaNo: k.no,
-              questionId: id,
-              secondText: k.secondKana,
-              thirdText: k.thirdKana,
-            };
-      const toriFudas = fetchTorifudas(this.karutas, correctKaruta).map(toriFuda => {
-        return this.shimoNoKuStyle === 0
-          ? {
-              fifthText: toriFuda.fifthKanji,
-              fourthText: toriFuda.fourthKanji,
-              karutaNo: toriFuda.no,
-              questionId: id,
-            }
-          : {
-              fifthText: toriFuda.fifthKana,
-              fourthText: toriFuda.fourthKana,
-              karutaNo: toriFuda.no,
-              questionId: id,
-            };
-      });
-      return { id, correctKaruta, yomiFuda, toriFudas };
+    const allKarutaList = this._karutaRepository.findAll();
+    const targetKarutaList = KarutaCollection.select(allKarutaList, {
+      range,
+      kimarijiList,
+      colorList,
     });
+
+    const questionList = this._questionListService.initialize(targetKarutaList);
+
+    return {
+      type: constants.START_TRAINING_NAME,
+      payload: {
+        currentQuestionId: questionList[0].id,
+        totalCount: questionList.length,
+      },
+      meta: {
+        rangeFrom,
+        rangeTo,
+        kimariji,
+        color,
+        kamiNoKuStyle,
+        shimoNoKuStyle,
+        questionAnim,
+      },
+    };
+  }
+
+  restartTraining(): types.RestartTrainingAction {
+    const allQuestionList = this._questionRepository.findAll();
+    const wrongKarutaNoList = allQuestionList
+      .filter(q => q.answer?.isCorrect === false)
+      .map(q => q.correctAnswerKarutaNo);
+    const targetKarutaList = this._karutaRepository.findByNoList(wrongKarutaNoList);
+
+    const questionList = this._questionListService.initialize(targetKarutaList);
+
+    return {
+      type: constants.RESTART_TRAINING_NAME,
+      payload: {
+        currentQuestionId: questionList[0].id,
+        totalCount: questionList.length,
+      },
+    };
+  }
+
+  startExam(): types.StartExamAction {
+    const targetKarutaList = this._karutaRepository.findAll();
+    const questionList = this._questionListService.initialize(targetKarutaList);
+
+    return {
+      type: constants.START_EXAM_NAME,
+      payload: {
+        currentQuestionId: questionList[0].id,
+        totalCount: questionList.length,
+      },
+    };
+  }
+
+  startQuestion(
+    currentQuestionId: QuestionId,
+    kamiNoKuStyle: types.KarutaStyleCondition,
+    shimoNoKuStyle: types.KarutaStyleCondition,
+    startDate: Date
+  ): types.StartQuestionAction {
+    const question = this._questionRepository.findById(currentQuestionId);
+    const started = Question.start(question, startDate);
+    this._questionRepository.update(started);
+
+    const choiceKarutaList = this._karutaRepository.findByNoList(question.choiceKarutaNoList);
+    const correctKaruta = choiceKarutaList.find(karuta => karuta.no === question.correctAnswerKarutaNo)!;
+
+    const yomiFuda: types.YomiFuda = {
+      karutaNo: correctKaruta.no,
+      shoku: correctKaruta.shoku[kamiNoKuStyle],
+      niku: correctKaruta.niku[kamiNoKuStyle],
+      sanku: correctKaruta.sanku[kamiNoKuStyle],
+    };
+
+    const toriFudaList = choiceKarutaList.map(karuta => ({
+      karutaNo: karuta.no,
+      shiku: karuta.shiku[shimoNoKuStyle],
+      kekku: karuta.kekku[shimoNoKuStyle],
+    })) as [types.ToriFuda, types.ToriFuda, types.ToriFuda, types.ToriFuda];
+
+    return {
+      type: constants.START_QUESTION_NAME,
+      payload: {
+        questionId: currentQuestionId,
+        content: {
+          yomiFuda,
+          toriFudaList,
+        },
+      },
+    };
+  }
+
+  answerQuestion(
+    currentQuestionId: QuestionId,
+    toriFuda: types.ToriFuda,
+    answerDate: Date
+  ): types.AnswerQuestionAction {
+    const question = this._questionRepository.findById(currentQuestionId);
+    const answered = Question.answer(question, toriFuda.karutaNo, answerDate);
+    this._questionRepository.update(answered);
+
+    const correctKaruta = this._karutaRepository.findByNo(answered.correctAnswerKarutaNo);
+
+    return {
+      type: constants.ANSWER_QUESTION_NAME,
+      payload: {
+        isCorrect: answered.answer!.isCorrect,
+        selectedKarutaNo: toriFuda.karutaNo,
+        correctKaruta,
+      },
+    };
+  }
+
+  confirmCorrect(): types.ConfirmCorrectAction {
+    return {
+      type: constants.CONFIRM_CORRECT_NAME,
+    };
+  }
+
+  openNextQuestionAction(currentQuestionId: QuestionId): types.OpenNextQuestionAction {
+    const next = this._questionRepository.findNextById(currentQuestionId);
+    return {
+      type: constants.OPEN_NEXT_QUESTION_NAME,
+      payload: {
+        currentQuestionId: next.id,
+      },
+    };
+  }
+
+  resetQuestion(): types.ResetQuestionAction {
+    return {
+      type: constants.RESET_QUESTION_NAME,
+    };
+  }
+
+  finishQuestion(): types.FinishQuestionAction {
+    const questionList = this._questionRepository.findAll();
+    const allKarutaList = this._karutaRepository.findAll();
+
+    const totalCount = questionList.length;
+
+    let correctCount = 0;
+    let totalAnswerTime = 0;
+    const answerList: Array<{
+      questionId: QuestionId;
+      isCorrect: boolean;
+      correctKaruta: Karuta;
+    }> = [];
+
+    const finder: Map<KarutaNo, Karuta> = new Map();
+    allKarutaList.forEach(karuta => {
+      finder.set(karuta.no, karuta);
+    });
+
+    questionList.forEach(question => {
+      const answer = question.answer;
+      if (!answer) {
+        throw new IllegalStateError(`not answered`);
+      }
+      correctCount += answer.isCorrect ? 1 : 0;
+      totalAnswerTime += answer.answerTime;
+      answerList.push({
+        questionId: question.id,
+        isCorrect: answer.isCorrect,
+        correctKaruta: finder.get(question.correctAnswerKarutaNo)!,
+      });
+    });
+
+    const averageAnswerSecond = totalAnswerTime / 1000 / totalCount;
+    return {
+      type: constants.FINISH_QUESTION_NAME,
+      payload: {
+        correctCount,
+        averageAnswerSecond: Math.round(averageAnswerSecond * 100) / 100,
+        answerList,
+      },
+    };
   }
 }

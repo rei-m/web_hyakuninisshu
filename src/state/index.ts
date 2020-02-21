@@ -3,10 +3,18 @@ import thunk from 'redux-thunk';
 import { questionsReducer, questionsTypes } from '@src/state/questions';
 import { uiReducer, uiTypes } from '@src/state/ui';
 
-export interface GlobalState {
+export type GlobalState = {
   questions: questionsTypes.State;
   ui: uiTypes.State;
-}
+};
+
+export type Payload<T> = Readonly<{
+  payload: Readonly<T>;
+}>;
+
+export type Meta<T> = Readonly<{
+  meta: Readonly<T>;
+}>;
 
 export const reducer: Reducer<GlobalState> = combineReducers<GlobalState>({
   questions: questionsReducer,

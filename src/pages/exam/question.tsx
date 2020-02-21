@@ -1,9 +1,9 @@
 import React from 'react';
-import { graphql, navigate } from 'gatsby';
-import PlayingPageTemplate from '@src/components/templates/PlayingPageTemplate';
-import ExamQuestions from '@src/containers/organisms/ExamQuestions';
-import { ROUTE_PATHS } from '@src/constants';
-import { Karuta } from '@src/types';
+import { graphql } from 'gatsby';
+import { RouteComponentProps } from '@reach/router';
+import QuestionDiContainerProvider from '@src/presentation/contexts/QuestionDiContainerProvider';
+import ExamQuestionPage from '@src/presentation/components/pages/exam/question';
+import { Karuta } from '@src/domain/models';
 
 export type Props = {
   data: {
@@ -17,37 +17,18 @@ export type Props = {
       }>;
     };
   };
+} & RouteComponentProps;
+
+const ExamQuestionGatsbyPage = ({ data, navigate }: Props) => {
+  const allKarutaList = data.allKaruta.edges.map(karutaData => JSON.parse(karutaData.node.internal.content) as Karuta);
+  return (
+    <QuestionDiContainerProvider allKarutaList={allKarutaList}>
+      <ExamQuestionPage navigate={navigate} />
+    </QuestionDiContainerProvider>
+  );
 };
 
-export type PresenterProps = {
-  karutas: Karuta[];
-};
-
-const onClickGoToResultHandler = () => {
-  navigate(ROUTE_PATHS.EXAM_RESULT, {
-    replace: true,
-  });
-};
-
-const onClickBackHandler = () => {
-  navigate(ROUTE_PATHS.EXAM, { replace: true });
-};
-
-export const ExamQuestionPagePresenter = ({ karutas }: PresenterProps) => (
-  <PlayingPageTemplate
-    title={`百人一首 - 腕試し -`}
-    isDisplayNav={false}
-    onClickBack={onClickBackHandler}
-    content={<ExamQuestions karutas={karutas} onClickGoToResult={onClickGoToResultHandler} />}
-  />
-);
-
-const ExamQuestionPage = ({ data }: Props) => {
-  const karutas = data.allKaruta.edges.map(karutaData => JSON.parse(karutaData.node.internal.content) as Karuta);
-  return <ExamQuestionPagePresenter karutas={karutas} />;
-};
-
-export default ExamQuestionPage;
+export default ExamQuestionGatsbyPage;
 
 export const query = graphql`
   query {

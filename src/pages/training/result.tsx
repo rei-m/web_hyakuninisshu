@@ -1,77 +1,45 @@
 import React from 'react';
-import { useSelector } from 'react-redux';
-import { navigate } from 'gatsby';
-import makeStyles from '@material-ui/core/styles/makeStyles';
-import PlayingPageTemplate from '@src/components/templates/PlayingPageTemplate';
-import TrainingResult from '@src/containers/organisms/TrainingResult';
-import Ad from '@src/components/organisms/Ad';
-import CenteredFrame from '@src/components/atoms/CenteredFrame';
-import Txt from '@src/components/atoms/Txt';
-import { QuestionState } from '@src/enums';
-import { ROUTE_PATHS } from '@src/constants';
-import { GlobalState } from '@src/state';
-import { questionsTypes } from '@src/state/questions';
-import { ThemeInterface } from '@src/styles/theme';
+import { graphql } from 'gatsby';
+import { RouteComponentProps } from '@reach/router';
+import QuestionDiContainerProvider from '@src/presentation/contexts/QuestionDiContainerProvider';
+import TrainingResultPage from '@src/presentation/components/pages/training/result';
+import { Karuta } from '@src/domain/models';
 
-export type ConnectedProps = {
-  questionState?: QuestionState;
-};
+export type Props = {
+  data: {
+    allKaruta: {
+      edges: Array<{
+        node: {
+          internal: {
+            content: string;
+          };
+        };
+      }>;
+    };
+  };
+} & RouteComponentProps;
 
-export type PresenterProps = ConnectedProps;
-
-export type ContainerProps = {
-  presenter: React.FC<PresenterProps>;
-};
-
-const useStyles = makeStyles<ThemeInterface>(() => ({
-  errorMessage: {
-    height: 300,
-    width: '100%',
-  },
-}));
-
-const onClickRestartHandler = () => {
-  navigate(ROUTE_PATHS.TRAINING_QUESTION, {
-    state: {
-      submitTime: new Date().getTime(),
-      restart: true,
-    },
-  });
-};
-
-const onClickBackHandler = () => {
-  navigate(ROUTE_PATHS.TRAINING, { replace: true });
-};
-
-export const TrainingResultPagePresenter = ({ questionState }: PresenterProps) => {
-  const classes = useStyles();
+const TrainingResultGatsbyPage = ({ data, navigate }: Props) => {
+  const allKarutaList = data.allKaruta.edges.map(karutaData => JSON.parse(karutaData.node.internal.content) as Karuta);
   return (
-    <PlayingPageTemplate
-      title={`百人一首 - 練習結果 -`}
-      isDisplayNav={false}
-      onClickBack={onClickBackHandler}
-      content={
-        <>
-          <Ad type={`top`} />
-          {questionState === QuestionState.Finished ? (
-            <TrainingResult onClickRestart={onClickRestartHandler} onClickBack={onClickBackHandler} />
-          ) : (
-            <CenteredFrame tag={`div`} className={classes.errorMessage}>
-              <Txt role={`error`}>不正な遷移を行いました。前の画面からやり直してください。</Txt>
-            </CenteredFrame>
-          )}
-          <Ad type={`responsive`} />
-        </>
-      }
-    />
+    <QuestionDiContainerProvider allKarutaList={allKarutaList}>
+      <TrainingResultPage navigate={navigate} />
+    </QuestionDiContainerProvider>
   );
 };
 
-export const TrainingResultPageContainer = ({ presenter }: ContainerProps) => {
-  const { questionState } = useSelector<GlobalState, questionsTypes.State>(state => state.questions);
-  return presenter({ questionState });
-};
+export default TrainingResultGatsbyPage;
 
-export const TrainingResultPage = () => <TrainingResultPageContainer presenter={TrainingResultPagePresenter} />;
-
-export default TrainingResultPage;
+export const query = graphql`
+  query {
+    allKaruta(sort: { fields: [no], order: ASC }) {
+      edges {
+        node {
+          internal {
+            content
+          }
+        }
+      }
+    }
+  }
+`;

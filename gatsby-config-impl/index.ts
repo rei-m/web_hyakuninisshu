@@ -1,4 +1,4 @@
-import { SiteMetaData } from '../src/types';
+import { SiteMetaData } from '../src/presentation/types';
 import { GatsbyPlugin } from './types';
 
 export const siteMetadata: SiteMetaData = {
@@ -13,7 +13,7 @@ export const plugins: GatsbyPlugin[] = [
     resolve: `gatsby-source-filesystem`,
     options: {
       name: `images`,
-      path: `${__dirname}/../src/images`,
+      path: `${__dirname}/../src/presentation/images`,
     },
   },
   `gatsby-transformer-sharp`,
@@ -27,7 +27,7 @@ export const plugins: GatsbyPlugin[] = [
       background_color: `#8bc34a`,
       theme_color: `#8bc34a`,
       display: `minimal-ui`,
-      icon: `src/images/app-icon.png`, // This path is relative to the root of the site.
+      icon: `src/presentation/images/app-icon.png`, // This path is relative to the root of the site.
     },
   },
   // this (optional) plugin enables Progressive Web App + Offline functionality
@@ -44,7 +44,7 @@ export const plugins: GatsbyPlugin[] = [
   {
     resolve: `gatsby-plugin-typography`,
     options: {
-      pathToConfigModule: `src/styles/typography.ts`,
+      pathToConfigModule: `src/presentation/styles/typography.ts`,
     },
   },
   `gatsby-plugin-typescript`,
