@@ -1,8 +1,8 @@
 import React from 'react';
 
-export interface Props {
+export type Props = {
   size?: number;
-}
+};
 
 const PLAY_STORE_URL =
   'https://play.google.com/store/apps/details?id=me.rei_m.hyakuninisshu&hl=ja&pcampaignid=MKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1';

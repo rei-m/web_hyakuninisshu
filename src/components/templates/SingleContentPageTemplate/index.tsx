@@ -1,12 +1,13 @@
 import React from 'react';
-import styled from '@src/styles/styled-components';
+import makeStyles from '@material-ui/core/styles/makeStyles';
 import { MenuType } from '@src/enums';
 import Layout from '@src/components/templates/Layout';
 import Ad from '@src/components/organisms/Ad';
 import SEO from '@src/components/atoms/SEO';
 import Heading from '@src/components/atoms/Heading';
+import { ThemeInterface } from '@src/styles/theme';
 
-export interface Props {
+export type Props = {
   title: string;
   description?: string;
   keywords: string[];
@@ -16,18 +17,19 @@ export interface Props {
   content: React.ReactElement;
   onClickBack?: () => void;
   onClickSearch?: () => void;
-}
+};
 
-const Container = styled.section`
-  padding: ${({ theme }) => theme.spacingByPx(2)};
-  box-sizing: border-box;
-  width: 100%;
-  background-color: ${({ theme }) => theme.colorThin};
-`;
-
-const SectionTitle = styled(Heading)`
-  margin: ${({ theme }) => theme.spacingByPx(1)};
-`;
+const useStyles = makeStyles<ThemeInterface>(theme => ({
+  content: {
+    boxSizing: 'border-box',
+    padding: theme.spacing(2),
+    width: '100%',
+    backgroundColor: theme.colorThin,
+  },
+  sectionTitle: {
+    margin: theme.spacing(1),
+  },
+}));
 
 const SingleContentPageTemplate = ({
   content,
@@ -39,22 +41,27 @@ const SingleContentPageTemplate = ({
   isDisplayNav = true,
   onClickBack,
   onClickSearch,
-}: Props) => (
-  <Layout
-    title={title}
-    isDisplayNav={isDisplayNav}
-    currentMenuType={menuType}
-    onClickBack={onClickBack}
-    onClickSearch={onClickSearch}
-  >
-    <SEO title={title} keywords={keywords} description={description} />
-    <Container>
-      <SectionTitle level={2}>{pageTitle}</SectionTitle>
-      <Ad type={`top`} />
-      {content}
-      <Ad type={`responsive`} />
-    </Container>
-  </Layout>
-);
+}: Props) => {
+  const classes = useStyles();
+  return (
+    <Layout
+      title={title}
+      isDisplayNav={isDisplayNav}
+      currentMenuType={menuType}
+      onClickBack={onClickBack}
+      onClickSearch={onClickSearch}
+    >
+      <SEO title={title} keywords={keywords} description={description} />
+      <section className={classes.content}>
+        <Heading level={2} className={classes.sectionTitle}>
+          {pageTitle}
+        </Heading>
+        <Ad type={`top`} />
+        {content}
+        <Ad type={`responsive`} />
+      </section>
+    </Layout>
+  );
+};
 
 export default SingleContentPageTemplate;

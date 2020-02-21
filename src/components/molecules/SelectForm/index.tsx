@@ -4,10 +4,9 @@ import FormControl from '@material-ui/core/FormControl';
 import InputLabel from '@material-ui/core/InputLabel';
 import Select from '@material-ui/core/Select';
 import MenuItem from '@material-ui/core/MenuItem';
-import styled from '@src/styles/styled-components';
 import { ThemeInterface } from '@src/styles/theme';
 
-export interface Props {
+export type Props = {
   title: string;
   name: string;
   value: string;
@@ -15,7 +14,7 @@ export interface Props {
   error?: string;
   className?: string;
   handleChange: (e: React.ChangeEvent<{ value: unknown }>) => void;
-}
+};
 
 const useStyles = makeStyles<ThemeInterface>(theme => ({
   formControl: {
@@ -29,13 +28,12 @@ const useStyles = makeStyles<ThemeInterface>(theme => ({
     fontSize: theme.fontSize.m,
     textAlign: 'left',
   },
+  error: {
+    fontSize: theme.fontSize.ss,
+    color: '#f00',
+    margin: theme.spacing(1, 0),
+  },
 }));
-
-const Error = styled.div`
-  font-size: ${({ theme }) => theme.fontSize.ss};
-  color: #f00;
-  margin: ${({ theme }) => `${theme.spacingByPx(1)} 0`};
-`;
 
 const SelectItem = ({ title, name, value, list, error, className = '', handleChange }: Props) => {
   const classes = useStyles();
@@ -59,7 +57,7 @@ const SelectItem = ({ title, name, value, list, error, className = '', handleCha
           </MenuItem>
         ))}
       </Select>
-      {error && <Error>{error}</Error>}
+      {error && <div className={classes.error}>{error}</div>}
     </FormControl>
   );
 };

@@ -1,7 +1,7 @@
 import React from 'react';
 import { graphql, navigate } from 'gatsby';
 import { RouteComponentProps } from '@reach/router';
-import styled from '@src/styles/styled-components';
+import makeStyles from '@material-ui/core/styles/makeStyles';
 import PlayingPageTemplate from '@src/components/templates/PlayingPageTemplate';
 import TrainingQuestions from '@src/containers/organisms/TrainingQuestions';
 import ReviewQuestions from '@src/containers/organisms/ReviewQuestions';
@@ -17,6 +17,7 @@ import {
   RangeFromCondition,
   RangeToCondition,
 } from '@src/enums';
+import { ThemeInterface } from '@src/styles/theme';
 
 export type Props = {
   data: {
@@ -32,7 +33,7 @@ export type Props = {
   };
 } & RouteComponentProps<{}>;
 
-export interface TrainingState {
+export type TrainingState = {
   rangeFrom: RangeFromCondition;
   rangeTo: RangeToCondition;
   kimariji: KimarijiCondition;
@@ -42,17 +43,19 @@ export interface TrainingState {
   questionAnim: QuestionAnimCondition;
   restart: false;
   submitTime: number;
-}
+};
 
-export interface RestartState {
+export type RestartState = {
   restart: true;
   submitTime: number;
-}
+};
 
-const ErrorMessage = styled(CenteredFrame)`
-  height: 300px;
-  width: 100%;
-`;
+const useStyles = makeStyles<ThemeInterface>(() => ({
+  errorMessage: {
+    height: 300,
+    width: '100%',
+  },
+}));
 
 const onClickGoToResultHandler = () => {
   navigate(ROUTE_PATHS.TRAINING_RESULT, {
@@ -68,6 +71,7 @@ const TrainingQuestionPage: React.FC<Props> = ({ data, location }) => {
   const karutas = data.allKaruta.edges.map(karutaData => JSON.parse(karutaData.node.internal.content) as Karuta);
   // TODO: 本当はちゃんと中身をチェックしたほうがいい。。。
   const state = (location ? location.state : undefined) as TrainingState | RestartState | undefined;
+  const classes = useStyles();
   return (
     <PlayingPageTemplate
       title={`百人一首 - 練習 -`}
@@ -81,9 +85,9 @@ const TrainingQuestionPage: React.FC<Props> = ({ data, location }) => {
             <TrainingQuestions karutas={karutas} {...state} onClickGoToResult={onClickGoToResultHandler} />
           )
         ) : (
-          <ErrorMessage tag={`div`}>
+          <CenteredFrame tag={`div`} className={classes.errorMessage}>
             <Txt role={`error`}>不正な遷移を行いました。前の画面からやり直してください。</Txt>
-          </ErrorMessage>
+          </CenteredFrame>
         )
       }
     />

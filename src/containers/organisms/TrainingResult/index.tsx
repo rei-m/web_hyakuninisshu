@@ -5,14 +5,14 @@ import { GlobalState } from '@src/state';
 import { questionsTypes } from '@src/state/questions';
 import { Answer } from '@src/types';
 
-export interface OwnProps {
+export type OwnProps = {
   onClickBack: () => void;
   onClickRestart: () => void;
-}
+};
 
-export interface ConnectedProps {
+export type ConnectedProps = {
   answers: Answer[];
-}
+};
 
 export type PresenterProps = OwnProps & ConnectedProps;
 

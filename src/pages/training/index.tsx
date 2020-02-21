@@ -1,6 +1,6 @@
 import React from 'react';
 import { navigate } from 'gatsby';
-import styled from '@src/styles/styled-components';
+import makeStyles from '@material-ui/core/styles/makeStyles';
 import SingleContentPageTemplate from '@src/components/templates/SingleContentPageTemplate';
 import TrainingMenuForm from '@src/containers/organisms/TrainingMenuForm';
 import Block from '@src/components/atoms/Block';
@@ -15,12 +15,15 @@ import {
   RangeToCondition,
 } from '@src/enums';
 import { gaEvent } from '@src/utils/ga';
+import { ThemeInterface } from '@src/styles/theme';
 
-const FormContainer = styled(Block)`
-  padding: ${({ theme }) => theme.spacingByPx(2)} 0;
-  max-width: 380px;
-  margin: auto;
-`;
+const useStyles = makeStyles<ThemeInterface>(theme => ({
+  formContainer: {
+    padding: theme.spacing(2, 0),
+    maxWidth: 380,
+    margin: 'auto',
+  },
+}));
 
 const onSubmitHandler = (
   rangeFrom: RangeFromCondition,
@@ -54,20 +57,23 @@ const onClickBackHandler = () => {
   navigate(ROUTE_PATHS.ROOT, { replace: true });
 };
 
-const TrainingPage = () => (
-  <SingleContentPageTemplate
-    title={`百人一首 - 練習 -`}
-    description={`百人一首の暗記を練習できます。出題条件を組み合わせて自分にあったペースで練習できます。百人一首の歌の意味に触れながら楽しく覚えましょう。`}
-    keywords={[`百人一首`, `小倉百人一首`, `歌`, `一覧`, `意味`, `歌番号`, `暗記`, `練習`]}
-    pageTitle={`出題設定`}
-    menuType={MenuType.Training}
-    onClickBack={onClickBackHandler}
-    content={
-      <FormContainer>
-        <TrainingMenuForm onSubmit={onSubmitHandler} />
-      </FormContainer>
-    }
-  />
-);
+const TrainingPage = () => {
+  const classes = useStyles();
+  return (
+    <SingleContentPageTemplate
+      title={`百人一首 - 練習 -`}
+      description={`百人一首の暗記を練習できます。出題条件を組み合わせて自分にあったペースで練習できます。百人一首の歌の意味に触れながら楽しく覚えましょう。`}
+      keywords={[`百人一首`, `小倉百人一首`, `歌`, `一覧`, `意味`, `歌番号`, `暗記`, `練習`]}
+      pageTitle={`出題設定`}
+      menuType={MenuType.Training}
+      onClickBack={onClickBackHandler}
+      content={
+        <Block className={classes.formContainer}>
+          <TrainingMenuForm onSubmit={onSubmitHandler} />
+        </Block>
+      }
+    />
+  );
+};
 
 export default TrainingPage;

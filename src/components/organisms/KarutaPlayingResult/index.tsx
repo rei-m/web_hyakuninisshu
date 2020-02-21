@@ -1,5 +1,6 @@
 import React from 'react';
-import styled from '@src/styles/styled-components';
+import clsx from 'clsx';
+import makeStyles from '@material-ui/core/styles/makeStyles';
 import Block from '@src/components/atoms/Block';
 import Txt from '@src/components/atoms/Txt';
 import Ratio from '@src/components/atoms/Ratio';
@@ -8,12 +9,13 @@ import { ArrowBackButton, RefreshButton } from '@src/components/molecules/IconLa
 import TweetLinkButton from '@src/components/molecules/TweetLinkButton';
 import ChihayaComa from '@src/components/organisms/Alu/ChihayaComa';
 import { Answer } from '@src/types';
+import { ThemeInterface } from '@src/styles/theme';
 
-export interface Props {
+export type Props = {
   answers: Answer[];
   onClickBack: () => void;
   onClickRestart: () => void;
-}
+};
 
 export type PresenterProps = Props & {
   correctCount: number;
@@ -25,62 +27,50 @@ export type ContainerProps = Props & {
   presenter: React.FC<PresenterProps>;
 };
 
-const Container = styled(Block)`
-  max-width: 380px;
-  padding: ${({ theme }) => theme.spacingByPx(2)};
-`;
-
-const SummaryContainer = styled(Block)`
-  background-color: ${({ theme }) => theme.colorThin};
-  box-sizing: border-box;
-  padding: ${({ theme }) => theme.spacingByPx(1)};
-  box-shadow: ${({ theme }) => theme.elevationShadow1x};
-  border-radius: 4px;
-`;
-
-const SummaryLabel = styled(Txt)`
-  text-align: left;
-`;
-
-const SummaryCorrectCount = styled(SummaryContainer)`
-  margin-bottom: ${({ theme }) => theme.spacingByPx(2)};
-`;
-
-const SummaryAverage = styled(SummaryContainer)`
-  margin-bottom: ${({ theme }) => theme.spacingByPx(4)};
-`;
-
-const ShareButtonsWrapper = styled(Block)`
-  text-align: center;
-`;
-
-const ButtonsWrapper = styled(Block)`
-  padding: ${({ theme }) => theme.spacingByPx(1)};
-`;
-
-const StyledArrowBackButton = styled(ArrowBackButton)`
-  box-shadow: ${({ theme }) => theme.elevationShadow1x};
-`;
-
-const StyledRefreshButton = styled(RefreshButton)`
-  box-shadow: ${({ theme }) => theme.elevationShadow1x};
-`;
-
-const ComaBox = styled.div`
-  background-color: ${({ theme }) => theme.colorThin};
-  border-radius: 4px;
-  padding: 16px 8px 8px 8px;
-  margin-bottom: 16px;
-  box-shadow: ${({ theme }) => theme.elevationShadow1x};
-`;
-
-const CheerMessageBox = styled.div`
-  margin-bottom: 8px;
-`;
-
-const CheerMessage = styled(Txt)`
-  color: rgb(60, 62, 61);
-`;
+const useStyles = makeStyles<ThemeInterface>(theme => ({
+  root: {
+    maxWidth: 380,
+    padding: theme.spacing(2),
+  },
+  summaryContainer: {
+    backgroundColor: theme.colorThin,
+    boxSizing: 'border-box',
+    padding: theme.spacing(1),
+    boxShadow: theme.elevationShadow1x,
+    borderRadius: 4,
+  },
+  summaryCorrectCount: {
+    marginBottom: theme.spacing(2),
+  },
+  summaryAverage: {
+    marginBottom: theme.spacing(4),
+  },
+  summaryLabel: {
+    textAlign: 'left',
+  },
+  shareButtonsWrapper: {
+    textAlign: 'center',
+  },
+  buttonsWrapper: {
+    padding: theme.spacing(1),
+  },
+  button: {
+    boxShadow: theme.elevationShadow1x,
+  },
+  comaContainer: {
+    backgroundColor: theme.colorThin,
+    borderRadius: 4,
+    padding: theme.spacing(2, 1, 1, 1),
+    marginBottom: theme.spacing(2),
+    boxShadow: theme.elevationShadow1x,
+  },
+  cheerMessageContainer: {
+    marginBottom: theme.spacing(1),
+  },
+  cheerMessage: {
+    color: 'rgb(60, 62, 61)',
+  },
+}));
 
 export const KarutaPlayingResultPresenter: React.FC<PresenterProps> = ({
   children,
@@ -89,49 +79,54 @@ export const KarutaPlayingResultPresenter: React.FC<PresenterProps> = ({
   averageAnswerSecond,
   onClickRestart,
   onClickBack,
-}) => (
-  <Container>
-    <SummaryCorrectCount>
-      <SummaryLabel tag={`div`} size={`ss`}>
-        正解数
-      </SummaryLabel>
-      <Ratio size={`l`} numerator={correctCount} denominator={totalCount} />
-    </SummaryCorrectCount>
-    <SummaryAverage>
-      <SummaryLabel tag={`div`} size={`ss`}>
-        平均回答時間
-      </SummaryLabel>
-      <Second size={`l`} value={averageAnswerSecond} />
-    </SummaryAverage>
-    <ComaBox>
-      <CheerMessageBox>
-        <CheerMessage size="sss">当サイトは百人一首とちはやふるを応援しています</CheerMessage>
-      </CheerMessageBox>
-      <CheerMessageBox>
-        <a href="https://chihayafund.com/" target="_blank" rel="noopener noreferrer">
-          ちはやふる基金
-        </a>
-      </CheerMessageBox>
-      <ChihayaComa />
-    </ComaBox>
-    <ShareButtonsWrapper>
-      <TweetLinkButton text={`百人一首で ${totalCount}問中 ${correctCount}問 正解しました！`} hashTag={`百人一首`} />
-    </ShareButtonsWrapper>
-    {children}
-    {correctCount !== totalCount && (
-      <ButtonsWrapper>
-        <StyledRefreshButton onClick={onClickRestart} data-test={`restart-training`}>
-          間違えた歌の練習をする
-        </StyledRefreshButton>
-      </ButtonsWrapper>
-    )}
-    <ButtonsWrapper>
-      <StyledArrowBackButton onClick={onClickBack} data-test={`back`}>
-        メニューに戻る
-      </StyledArrowBackButton>
-    </ButtonsWrapper>
-  </Container>
-);
+}) => {
+  const classes = useStyles();
+  return (
+    <Block className={classes.root}>
+      <Block className={clsx(classes.summaryContainer, classes.summaryCorrectCount)}>
+        <Txt tag={`div`} size={`ss`} className={classes.summaryLabel}>
+          正解数
+        </Txt>
+        <Ratio size={`l`} numerator={correctCount} denominator={totalCount} />
+      </Block>
+      <Block className={clsx(classes.summaryContainer, classes.summaryAverage)}>
+        <Txt tag={`div`} size={`ss`} className={classes.summaryLabel}>
+          平均回答時間
+        </Txt>
+        <Second size={`l`} value={averageAnswerSecond} />
+      </Block>
+      <Block className={classes.comaContainer}>
+        <Block className={classes.cheerMessageContainer}>
+          <Txt size="sss" className={classes.cheerMessage}>
+            当サイトは百人一首とちはやふるを応援しています
+          </Txt>
+        </Block>
+        <Block className={classes.cheerMessageContainer}>
+          <a href="https://chihayafund.com/" target="_blank" rel="noopener noreferrer">
+            ちはやふる基金
+          </a>
+        </Block>
+        <ChihayaComa />
+      </Block>
+      <Block className={classes.shareButtonsWrapper}>
+        <TweetLinkButton text={`百人一首で ${totalCount}問中 ${correctCount}問 正解しました！`} hashTag={`百人一首`} />
+      </Block>
+      {children}
+      {correctCount !== totalCount && (
+        <Block className={classes.buttonsWrapper}>
+          <RefreshButton onClick={onClickRestart} className={classes.button} data-test={`restart-training`}>
+            間違えた歌の練習をする
+          </RefreshButton>
+        </Block>
+      )}
+      <Block className={classes.buttonsWrapper}>
+        <ArrowBackButton onClick={onClickBack} className={classes.button} data-test={`back`}>
+          メニューに戻る
+        </ArrowBackButton>
+      </Block>
+    </Block>
+  );
+};
 
 export const KarutaPlayingResultContainer: React.FC<ContainerProps> = ({
   presenter,

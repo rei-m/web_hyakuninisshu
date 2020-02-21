@@ -1,23 +1,22 @@
 import React from 'react';
 import makeStyles from '@material-ui/core/styles/makeStyles';
-import styled from '@src/styles/styled-components';
 import { FontSize, ThemeInterface } from '@src/styles/theme';
 
 type Role = 'default' | 'error';
 
-export interface Props {
+export type Props = {
   tag?: React.ElementType;
   size?: FontSize;
   role?: Role;
   className?: string;
   style?: React.CSSProperties;
-}
+};
 
-export interface PresenterProps {
+export type PresenterProps = {
   className?: string;
   style?: React.CSSProperties;
   Tag: React.ElementType;
-}
+};
 
 export type ContainerProps = Props & { presenter: React.FC<PresenterProps> };
 
@@ -36,14 +35,13 @@ export const TxtPresenter: React.FC<PresenterProps> = ({ Tag, className, style, 
 
 export const TxtContainer: React.FC<ContainerProps> = ({
   presenter,
-  tag = 'span',
+  tag: Tag = 'span',
   size = 'm',
   role = 'default',
   className = '',
   style,
   children,
 }) => {
-  const Tag = React.useMemo(() => styled(tag)({}), []);
   const classes = useStyles({ size, role });
   return presenter({ Tag, className: `${classes.root} ${className}`, style, children });
 };

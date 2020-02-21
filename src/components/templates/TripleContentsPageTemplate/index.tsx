@@ -1,12 +1,13 @@
 import React from 'react';
-import styled from '@src/styles/styled-components';
+import makeStyles from '@material-ui/core/styles/makeStyles';
 import { MenuType } from '@src/enums';
 import Layout from '@src/components/templates/Layout';
 import Ad from '@src/components/organisms/Ad';
 import SEO from '@src/components/atoms/SEO';
 import Block from '@src/components/atoms/Block';
+import { ThemeInterface } from '@src/styles/theme';
 
-export interface Props {
+export type Props = {
   title: string;
   description?: string;
   keywords: string[];
@@ -17,15 +18,17 @@ export interface Props {
   bottom: React.ReactElement;
   onClickBack?: () => void;
   onClickSearch?: () => void;
-}
+};
 
-const Container = styled(Block)`
-  padding: ${({ theme }) => theme.spacingByPx(2)};
-  box-sizing: border-box;
-  max-width: 960px;
-  margin: auto;
-  background-color: ${({ theme }) => theme.colorThin};
-`;
+const useStyles = makeStyles<ThemeInterface>(theme => ({
+  content: {
+    boxSizing: 'border-box',
+    padding: theme.spacing(2),
+    maxWidth: 960,
+    margin: 'auto',
+    backgroundColor: theme.colorThin,
+  },
+}));
 
 const TripleContentsPageTemplate = ({
   title,
@@ -38,23 +41,26 @@ const TripleContentsPageTemplate = ({
   bottom,
   onClickBack,
   onClickSearch,
-}: Props) => (
-  <Layout
-    title={title}
-    isDisplayNav={isDisplayNav}
-    currentMenuType={menuType}
-    onClickBack={onClickBack}
-    onClickSearch={onClickSearch}
-  >
-    <SEO title={title} keywords={keywords} description={description} />
-    <Container>
-      {top}
-      <Ad type={`top`} />
-      {middle}
-      <Ad type={`responsive`} />
-      {bottom}
-    </Container>
-  </Layout>
-);
+}: Props) => {
+  const classes = useStyles();
+  return (
+    <Layout
+      title={title}
+      isDisplayNav={isDisplayNav}
+      currentMenuType={menuType}
+      onClickBack={onClickBack}
+      onClickSearch={onClickSearch}
+    >
+      <SEO title={title} keywords={keywords} description={description} />
+      <Block className={classes.content}>
+        {top}
+        <Ad type={`top`} />
+        {middle}
+        <Ad type={`responsive`} />
+        {bottom}
+      </Block>
+    </Layout>
+  );
+};
 
 export default TripleContentsPageTemplate;

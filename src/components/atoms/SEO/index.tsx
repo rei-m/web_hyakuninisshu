@@ -2,7 +2,7 @@ import React from 'react';
 import Helmet from 'react-helmet';
 import { useSEO } from '@src/hooks/staticQueries/useSEO';
 
-export interface Props {
+export type Props = {
   description?: string;
   lang?: string;
   meta?: Array<{
@@ -11,7 +11,8 @@ export interface Props {
   }>;
   keywords?: string[];
   title: string;
-}
+};
+
 const SEO = ({ description, lang = 'ja', meta = [], keywords = [], title }: Props) => {
   const { site, ogpImage } = useSEO();
   const checkedTitle = title || site.siteMetadata.title;

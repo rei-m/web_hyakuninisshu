@@ -1,26 +1,32 @@
 import React from 'react';
+import clsx from 'clsx';
 import { SvgIconProps } from '@material-ui/core/SvgIcon';
-import styled from '@src/styles/styled-components';
+import makeStyles from '@material-ui/core/styles/makeStyles';
 import CenteredFrame from '@src/components/atoms/CenteredFrame';
 
-export interface Props {
+export type Props = {
   className?: string;
   renderIcon: () => React.ReactElement<SvgIconProps>;
   onClick?: () => void;
-}
+};
 
-const Container = styled(CenteredFrame)`
-  height: 56px;
-  width: 56px;
-  color: #fff;
-  position: relative;
-  box-sizing: border-box;
-`;
+const useStyles = makeStyles({
+  root: {
+    height: 56,
+    width: 56,
+    color: '#fff',
+    position: 'relative',
+    boxSizing: 'border-box',
+  },
+});
 
-const HeaderItem = ({ className, renderIcon, onClick }: Props) => (
-  <Container onClick={onClick} className={className}>
-    {renderIcon()}
-  </Container>
-);
+const HeaderItem = ({ className = '', renderIcon, onClick }: Props) => {
+  const classes = useStyles();
+  return (
+    <CenteredFrame onClick={onClick} className={clsx(classes.root, className)}>
+      {renderIcon()}
+    </CenteredFrame>
+  );
+};
 
 export default HeaderItem;

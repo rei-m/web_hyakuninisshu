@@ -1,7 +1,7 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
+import makeStyles from '@material-ui/core/styles/makeStyles';
 import { withFormik, Form, FormikHandlers, FormikState } from 'formik';
-import styled from '@src/styles/styled-components';
 import SelectFromToForm from '@src/components/molecules/SelectFromToForm';
 import SelectForm from '@src/components/molecules/SelectForm';
 import { EditButton } from '@src/components/molecules/IconLabelButton';
@@ -28,8 +28,9 @@ import {
 } from '@src/utils';
 import { GlobalState } from '@src/state';
 import { questionsTypes } from '@src/state/questions';
+import { ThemeInterface } from '@src/styles/theme';
 
-export interface OwnProps {
+export type OwnProps = {
   onSubmit: (
     rangeFrom: RangeFromCondition,
     rangeTo: RangeToCondition,
@@ -39,9 +40,9 @@ export interface OwnProps {
     shimoNoKuStyle: KarutaStyleCondition,
     questionAnim: QuestionAnimCondition
   ) => void;
-}
+};
 
-export interface ConnectedProps {
+export type ConnectedProps = {
   initialRangeFrom: RangeFromCondition;
   initialRangeTo: RangeToCondition;
   initialKimariji: KimarijiCondition;
@@ -49,7 +50,7 @@ export interface ConnectedProps {
   initialKamiNoKuStyle: KarutaStyleCondition;
   initialShimoNoKuStyle: KarutaStyleCondition;
   initialQuestionAnim: QuestionAnimCondition;
-}
+};
 
 export type PresenterProps = OwnProps & ConnectedProps;
 
@@ -57,7 +58,7 @@ export type ContainerProps = OwnProps & {
   Presenter: React.ComponentType<PresenterProps>;
 };
 
-export interface FormValues {
+export type FormValues = {
   rangeFrom: string;
   rangeTo: string;
   kimariji: string;
@@ -65,26 +66,22 @@ export interface FormValues {
   kamiNoKuStyle: string;
   shimoNoKuStyle: string;
   questionAnim: string;
-}
+};
 
 export type FormViewProps = FormikState<FormValues> & FormikHandlers;
 
-const StyledForm = styled(Form)`
-  max-width: 380px;
-`;
-
-const StartTrainingButton = styled(EditButton)`
-  margin-top: ${({ theme }) => theme.spacingByPx(2)};
-  box-shadow: ${({ theme }) => theme.elevationShadow1x};
-`;
-
-const StyledSelectFromToForm = styled(SelectFromToForm)`
-  margin-bottom: ${({ theme }) => theme.spacingByPx(2)};
-`;
-
-const StyledSelectForm = styled(SelectForm)`
-  margin-bottom: ${({ theme }) => theme.spacingByPx(2)};
-`;
+const useStyles = makeStyles<ThemeInterface>(theme => ({
+  form: {
+    maxWidth: 380,
+  },
+  startTrainingButton: {
+    marginTop: theme.spacing(2),
+    boxShadow: theme.elevationShadow1x,
+  },
+  field: {
+    marginBottom: theme.spacing(2),
+  },
+}));
 
 const rangeFromConditionKeyValueList = RangeFromConditions.values.map(value => ({
   value,
@@ -116,65 +113,74 @@ const questionAnimConditionKeyValueList = QuestionAnimConditions.values.map(valu
   text: toQuestionAnimConditionString(value),
 }));
 
-export const FormView = ({ values, handleChange, handleSubmit, errors, touched }: FormViewProps) => (
-  <StyledForm>
-    <StyledSelectFromToForm
-      title={`出題範囲`}
-      from={{
-        name: `rangeFrom`,
-        value: values.rangeFrom,
-        list: rangeFromConditionKeyValueList,
-        touched: touched.rangeFrom,
-      }}
-      to={{
-        name: `rangeTo`,
-        value: values.rangeTo,
-        list: rangeToConditionKeyValueList,
-        touched: touched.rangeTo,
-      }}
-      error={errors.rangeFrom}
-      handleChange={handleChange}
-    />
-    <StyledSelectForm
-      title={`決まり字`}
-      name={`kimariji`}
-      list={kimarijiConditionKeyValueList}
-      value={values.kimariji}
-      handleChange={handleChange}
-    />
-    <StyledSelectForm
-      title={`五色`}
-      name={`color`}
-      list={colorConditionKeyValueList}
-      value={values.color}
-      handleChange={handleChange}
-    />
-    <StyledSelectForm
-      title={`上の句`}
-      name={`kamiNoKuStyle`}
-      list={karutaStyleConditionKeyValueList}
-      value={values.kamiNoKuStyle}
-      handleChange={handleChange}
-    />
-    <StyledSelectForm
-      title={`下の句`}
-      name={`shimoNoKuStyle`}
-      list={karutaStyleConditionKeyValueList}
-      value={values.shimoNoKuStyle}
-      handleChange={handleChange}
-    />
-    <StyledSelectForm
-      title={`読み札のアニメーション表示`}
-      name={`questionAnim`}
-      list={questionAnimConditionKeyValueList}
-      value={values.questionAnim}
-      handleChange={handleChange}
-    />
-    <StartTrainingButton type={`accent`} onClick={handleSubmit}>
-      練習をはじめる
-    </StartTrainingButton>
-  </StyledForm>
-);
+export const FormView = ({ values, handleChange, handleSubmit, errors, touched }: FormViewProps) => {
+  const classes = useStyles();
+  return (
+    <Form className={classes.form}>
+      <SelectFromToForm
+        title={`出題範囲`}
+        from={{
+          name: `rangeFrom`,
+          value: values.rangeFrom,
+          list: rangeFromConditionKeyValueList,
+          touched: touched.rangeFrom,
+        }}
+        to={{
+          name: `rangeTo`,
+          value: values.rangeTo,
+          list: rangeToConditionKeyValueList,
+          touched: touched.rangeTo,
+        }}
+        error={errors.rangeFrom}
+        handleChange={handleChange}
+        className={classes.field}
+      />
+      <SelectForm
+        title={`決まり字`}
+        name={`kimariji`}
+        list={kimarijiConditionKeyValueList}
+        value={values.kimariji}
+        handleChange={handleChange}
+        className={classes.field}
+      />
+      <SelectForm
+        title={`五色`}
+        name={`color`}
+        list={colorConditionKeyValueList}
+        value={values.color}
+        handleChange={handleChange}
+        className={classes.field}
+      />
+      <SelectForm
+        title={`上の句`}
+        name={`kamiNoKuStyle`}
+        list={karutaStyleConditionKeyValueList}
+        value={values.kamiNoKuStyle}
+        handleChange={handleChange}
+        className={classes.field}
+      />
+      <SelectForm
+        title={`下の句`}
+        name={`shimoNoKuStyle`}
+        list={karutaStyleConditionKeyValueList}
+        value={values.shimoNoKuStyle}
+        handleChange={handleChange}
+        className={classes.field}
+      />
+      <SelectForm
+        title={`読み札のアニメーション表示`}
+        name={`questionAnim`}
+        list={questionAnimConditionKeyValueList}
+        value={values.questionAnim}
+        handleChange={handleChange}
+        className={classes.field}
+      />
+      <EditButton type={`accent`} onClick={handleSubmit} className={classes.startTrainingButton}>
+        練習をはじめる
+      </EditButton>
+    </Form>
+  );
+};
 
 export const TrainingMenuFormPresenter = withFormik({
   handleSubmit: (values, formikBag) => {

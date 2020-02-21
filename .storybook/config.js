@@ -30,13 +30,15 @@ import AppThemeProvider from '@src/contexts/AppThemeProvider';
 // @see https://github.com/mui-org/material-ui/issues/9492#issuecomment-410443974
 import { StylesProvider } from '@material-ui/styles';
 
-const generateClassName = (rule, styleSheet) => `${styleSheet.options.classNamePrefix}-${rule.key}`;
+const generateClassName = (rule, sheet) => {
+  return `${sheet.options.classNamePrefix}-${rule.key}`;
+};
 
 addDecorator(story =>
   <AppThemeProvider>
-    <StylesProvider generateClassName={generateClassName}>
+    {/* <StylesProvider generateClassName={generateClassName}> */}
       {story()}
-    </StylesProvider>
+    {/* </StylesProvider> */}
   </AppThemeProvider>
 )
 

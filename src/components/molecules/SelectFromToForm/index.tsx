@@ -2,11 +2,10 @@ import React from 'react';
 import makeStyles from '@material-ui/core/styles/makeStyles';
 import Select from '@material-ui/core/Select';
 import MenuItem from '@material-ui/core/MenuItem';
-import styled from '@src/styles/styled-components';
-import { ThemeInterface } from '@src/styles/theme';
 import CenteredFrame from '@src/components/atoms/CenteredFrame';
+import { ThemeInterface } from '@src/styles/theme';
 
-export interface Props {
+export type Props = {
   title: string;
   from: {
     name: string;
@@ -23,7 +22,7 @@ export interface Props {
   error?: string;
   className?: string;
   handleChange: (e: React.ChangeEvent<{ value: unknown }>) => void;
-}
+};
 
 const useStyles = makeStyles<ThemeInterface>(theme => ({
   select: {
@@ -31,35 +30,31 @@ const useStyles = makeStyles<ThemeInterface>(theme => ({
     flexGrow: 1,
     textAlign: 'left',
   },
+  labelContainer: {
+    textAlign: 'left',
+  },
+  label: {
+    fontSize: '1.05rem',
+    color: '#182026',
+  },
+  separate: {
+    padding: theme.spacing(0, 2),
+  },
+  error: {
+    textAlign: 'left',
+    fontSize: theme.fontSize.ss,
+    color: '#f00',
+    margin: theme.spacing(1, 0),
+  },
 }));
-
-const LabelContainer = styled.div`
-  text-align: left;
-`;
-
-const Label = styled.label`
-  font-size: 1.05rem;
-  color: #182026;
-`;
-
-const Separate = styled.span`
-  padding: ${({ theme }) => `0 ${theme.spacingByPx(2)}`};
-`;
-
-const Error = styled.div`
-  text-align: left;
-  font-size: ${({ theme }) => theme.fontSize.ss};
-  color: #f00;
-  margin: ${({ theme }) => `${theme.spacingByPx(1)} 0`};
-`;
 
 const SelectRangeFromTo = ({ title, from, to, error, className = '', handleChange }: Props) => {
   const classes = useStyles();
   return (
     <div className={className}>
-      <LabelContainer>
-        <Label>{title}</Label>
-      </LabelContainer>
+      <div className={classes.labelContainer}>
+        <label className={classes.label}>{title}</label>
+      </div>
       <CenteredFrame tag={`div`}>
         <Select
           value={from.value}
@@ -76,7 +71,7 @@ const SelectRangeFromTo = ({ title, from, to, error, className = '', handleChang
             </MenuItem>
           ))}
         </Select>
-        <Separate>〜</Separate>
+        <span className={classes.separate}>〜</span>
         <Select
           value={to.value}
           onChange={handleChange}
@@ -93,7 +88,7 @@ const SelectRangeFromTo = ({ title, from, to, error, className = '', handleChang
           ))}
         </Select>
       </CenteredFrame>
-      {error && <Error>{error}</Error>}
+      {error && <div className={classes.error}>{error}</div>}
     </div>
   );
 };

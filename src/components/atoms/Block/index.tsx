@@ -1,20 +1,26 @@
 import React from 'react';
-import styled from '@src/styles/styled-components';
+import clsx from 'clsx';
+import makeStyles from '@material-ui/core/styles/makeStyles';
 
-export interface Props {
+export type Props = {
   className?: string;
-  style?: React.CSSProperties;
+  style?: React.CSSProperties; // TODO: いらなそう
   onClick?: () => void;
-}
+};
 
-const Container = styled.div(({ onClick }) => ({
-  cursor: onClick ? 'pointer' : '',
-}));
+const useStyles = makeStyles({
+  clickable: {
+    cursor: 'pointer',
+  },
+});
 
-const Block: React.FC<Props> = ({ children, className = '', onClick }) => (
-  <Container className={className} onClick={onClick}>
-    {children}
-  </Container>
-);
+const Block: React.FC<Props> = ({ children, className = '', onClick }) => {
+  const classes = useStyles();
+  return (
+    <div className={clsx(!!onClick && classes.clickable, className)} onClick={onClick}>
+      {children}
+    </div>
+  );
+};
 
 export default Block;

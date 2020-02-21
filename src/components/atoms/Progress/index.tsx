@@ -3,10 +3,10 @@ import makeStyles from '@material-ui/core/styles/makeStyles';
 import CircularProgress from '@material-ui/core/CircularProgress';
 import { ThemeInterface } from '@src/styles/theme';
 
-export interface Props {
+export type Props = {
   size?: number;
   color?: string;
-}
+};
 
 const useStyles = makeStyles<ThemeInterface, { color?: string }>(theme => ({
   root: {

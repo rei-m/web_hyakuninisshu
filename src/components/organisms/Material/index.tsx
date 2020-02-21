@@ -1,5 +1,5 @@
 import React from 'react';
-import styled from '@src/styles/styled-components';
+import makeStyles from '@material-ui/core/styles/makeStyles';
 import Block from '@src/components/atoms/Block';
 import Article from '@src/components/atoms/Article';
 import Txt from '@src/components/atoms/Txt';
@@ -10,70 +10,71 @@ import KarutaImage from '@src/components/molecules/KarutaImage';
 import MaterialKanjiTxt from '@src/components/molecules/MaterialKanjiTxt';
 import MaterialKanaTxt from '@src/components/molecules/MaterialKanaTxt';
 import { Karuta } from '@src/types';
+import { ThemeInterface } from '@src/styles/theme';
 
-export interface Props {
+export type Props = {
   karuta: Karuta;
-}
+};
 
-const Container = styled(Article)`
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  background-color: #fff;
-  box-sizing: border-box;
-  border: 8px solid ${({ theme }) => theme.palette.primary.main};
-  border-radius: 4px;
-  padding: ${({ theme }) => theme.spacingByPx(2)};
-  max-width: 380px;
-  box-shadow: ${({ theme }) => theme.elevationShadow1x};
-`;
+const useStyles = makeStyles<ThemeInterface>(theme => ({
+  root: {
+    display: 'flex',
+    alignItems: 'center',
+    flexDirection: 'column',
+    backgroundColor: theme.palette.common.white,
+    boxSizing: 'border-box',
+    border: `8px solid ${theme.palette.primary.main}`,
+    borderRadius: 4,
+    padding: theme.spacing(2),
+    maxWidth: 380,
+    boxShadow: theme.elevationShadow1x,
+  },
+  subTitle: {
+    textAlign: 'left',
+  },
+  karutaImage: {
+    width: 200,
+    margin: theme.spacing(1),
+  },
+  contentContainer: {
+    width: '100%',
+    paddingTop: theme.spacing(1),
+    paddingBottom: theme.spacing(1),
+  },
+  translation: {
+    textAlign: 'left',
+  },
+}));
 
-const Title = styled(Heading)``;
-
-const SubTitle = styled(Heading)`
-  text-align: left;
-`;
-
-const StyledKarutaImage = styled(KarutaImage)`
-  width: 200px;
-  margin: ${({ theme }) => theme.spacingByPx(1)};
-`;
-
-const SubContainer = styled(Block)`
-  width: 100%;
-  padding-top: ${({ theme }) => theme.spacingByPx(1)};
-  padding-bottom: ${({ theme }) => theme.spacingByPx(1)};
-`;
-
-const Translation = styled(Paragraph)`
-  text-align: left;
-`;
-
-const Creator = styled(Txt)``;
-
-const Material = ({ karuta }: Props) => (
-  <Container
-    heading={
-      <Title level={3}>
-        <KarutaNo karutaNo={karuta.no} /> / <Creator>{karuta.creator}</Creator>
-      </Title>
-    }
-  >
-    <StyledKarutaImage karutaNo={karuta.no} />
-    <SubContainer>
-      <SubTitle level={4} visualLevel={5}>
-        原文
-      </SubTitle>
-      <MaterialKanjiTxt karuta={karuta} size={`s`} />
-      <MaterialKanaTxt karuta={karuta} size={`s`} />
-    </SubContainer>
-    <SubContainer>
-      <SubTitle level={4} visualLevel={5}>
-        訳
-      </SubTitle>
-      <Translation size={`s`}>{karuta.translation}</Translation>
-    </SubContainer>
-  </Container>
-);
+const Material = ({ karuta }: Props) => {
+  const classes = useStyles();
+  return (
+    <Article
+      heading={
+        <Heading level={3}>
+          <KarutaNo karutaNo={karuta.no} /> / <Txt>{karuta.creator}</Txt>
+        </Heading>
+      }
+      className={classes.root}
+    >
+      <KarutaImage karutaNo={karuta.no} className={classes.karutaImage} />
+      <Block className={classes.contentContainer}>
+        <Heading level={4} visualLevel={5} className={classes.subTitle}>
+          原文
+        </Heading>
+        <MaterialKanjiTxt karuta={karuta} size={`s`} />
+        <MaterialKanaTxt karuta={karuta} size={`s`} />
+      </Block>
+      <Block className={classes.contentContainer}>
+        <Heading level={4} visualLevel={5} className={classes.subTitle}>
+          訳
+        </Heading>
+        <Paragraph size={`s`} className={classes.translation}>
+          {karuta.translation}
+        </Paragraph>
+      </Block>
+    </Article>
+  );
+};
 
 export default Material;

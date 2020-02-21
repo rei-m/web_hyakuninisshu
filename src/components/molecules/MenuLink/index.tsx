@@ -1,80 +1,81 @@
 import React from 'react';
+import clsx from 'clsx';
 import { GatsbyLinkProps, Link } from 'gatsby';
+import makeStyles from '@material-ui/core/styles/makeStyles';
 import { SvgIconProps } from '@material-ui/core/SvgIcon';
-import styled from '@src/styles/styled-components';
 import Block from '@src/components/atoms/Block';
 import Txt from '@src/components/atoms/Txt';
 import Paragraph from '@src/components/atoms/Paragraph';
 import { withRipple } from '@src/enhancers/withRipple';
+import { ThemeInterface } from '@src/styles/theme';
 
-export interface Props {
+export type Props = {
   to: string;
   icon: React.ReactElement<SvgIconProps>;
   name: string;
   description: string;
   className?: string;
-}
+};
 
 const LinkWithRipple = withRipple<GatsbyLinkProps<{}>>(Link);
 
-const Container = styled(Block)`
-  border: 1px solid #00000030;
-  background-color: #fff;
-  border-radius: 16px;
-  box-sizing: border-box;
-  text-align: center;
-  & :hover {
-    text-decoration: none;
-    background-color: #f5f5f5;
-  }
-`;
-
-const IconWrapper = styled.span`
-  width: 32px;
-  height: 32px;
-  border: 2px solid #f1b400;
-  border-radius: 50%;
-  color: #f1b400;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  cursor: pointer;
-  position: absolute;
-  top: ${({ theme }) => theme.spacingByPx(1)};
-  left: ${({ theme }) => theme.spacingByPx(1)};
-
-  & svg {
-    font-size: inherit;
-  }
-
-  @media screen and (min-width: ${({ theme }) => theme.minWidthWide}) {
-    width: 124px;
-    height: 124px;
-    border-width: 4px;
-    position: initial;
-    font-size: 6rem;
-    margin: 0 auto;
-  }
-`;
-
-const Title = styled(Txt)`
-  margin: ${({ theme }) => theme.spacingByPx(1)};
-  color: ${({ theme }) => theme.fontColor.link};
-  position: relative;
-  &:after {
-    content: '';
-    width: 100%;
-    border-bottom: 4px double #a9a9a9;
-    position: absolute;
-    bottom: -8px;
-    left: 0;
-  }
-`;
-
-const Explain = styled(Paragraph)`
-  margin-top: ${({ theme }) => theme.spacingByPx(3)};
-  color: ${({ theme }) => theme.fontColor.link};
-`;
+const useStyles = makeStyles<ThemeInterface>(theme => ({
+  root: {
+    border: '1px solid #00000030',
+    backgroundColor: theme.palette.common.white,
+    borderRadius: 16,
+    boxSizing: 'border-box',
+    textAlign: 'center',
+    '&:hover': {
+      textDecoration: 'none',
+      borderRadius: 16,
+      backgroundColor: '#f5f5f5',
+    },
+  },
+  iconWrapper: {
+    width: 32,
+    height: 32,
+    border: '2px solid #f1b400',
+    borderRadius: '50%',
+    color: '#f1b400',
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center',
+    cursor: 'pointer',
+    position: 'absolute',
+    top: theme.spacing(1),
+    left: theme.spacing(1),
+    zIndex: 1,
+    '& svg': {
+      fontSize: 'inherit',
+    },
+    '@media screen and (min-width: 768px)': {
+      width: 124,
+      height: 124,
+      borderWidth: 4,
+      position: 'initial',
+      fontSize: '6rem',
+      margin: '0 auto',
+    },
+  },
+  title: {
+    margin: theme.spacing(1),
+    color: theme.fontColor.link,
+    position: 'relative',
+    '&:after': {
+      content: '""',
+      width: '100%',
+      borderBottom: '4px double #a9a9a9',
+      position: 'absolute',
+      bottom: '-8px',
+      left: 0,
+    },
+  },
+  explain: {
+    marginTop: theme.spacing(3),
+    color: theme.fontColor.link,
+  },
+}));
 
 const linkStyles = {
   ':hover': {
@@ -85,16 +86,21 @@ const linkStyles = {
   padding: '16px',
 };
 
-const MenuLink = ({ to, icon, name, description, className = '' }: Props) => (
-  <Container className={className}>
-    <LinkWithRipple to={to} style={linkStyles}>
-      <IconWrapper>{icon}</IconWrapper>
-      <Title tag={`div`} size={`ll`}>
-        {name}
-      </Title>
-      <Explain size={`s`}>{description}</Explain>
-    </LinkWithRipple>
-  </Container>
-);
+const MenuLink = ({ to, icon, name, description, className = '' }: Props) => {
+  const classes = useStyles();
+  return (
+    <Block className={clsx(classes.root, className)}>
+      <LinkWithRipple to={to} style={linkStyles}>
+        <span className={classes.iconWrapper}>{icon}</span>
+        <Txt tag={`div`} size={`ll`} className={classes.title}>
+          {name}
+        </Txt>
+        <Paragraph size={`s`} className={classes.explain}>
+          {description}
+        </Paragraph>
+      </LinkWithRipple>
+    </Block>
+  );
+};
 
 export default MenuLink;

@@ -49,7 +49,6 @@ export const plugins: GatsbyPlugin[] = [
   },
   `gatsby-plugin-typescript`,
   // `gatsby-plugin-remove-trailing-slashes`,
-  `gatsby-plugin-styled-components`,
   `gatsby-plugin-no-sourcemaps`,
   {
     resolve: `gatsby-plugin-google-analytics`,

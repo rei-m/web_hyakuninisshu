@@ -1,6 +1,6 @@
 import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import styled from '@src/styles/styled-components';
+import styled from '@material-ui/core/styles/styled';
 import KarutaPlaying, { Props as KarutaPlayingProps } from '@src/components/organisms/KarutaPlaying';
 import KarutaPlayingCorrect, {
   Props as KarutaPlayingCorrectProps,
@@ -22,7 +22,7 @@ import {
 } from '@src/enums';
 import { Answer, Karuta, Question, ToriFuda } from '@src/types';
 
-export interface OwnProps {
+export type OwnProps = {
   karutas: Karuta[];
   rangeFrom: RangeFromCondition;
   rangeTo: RangeToCondition;
@@ -33,9 +33,9 @@ export interface OwnProps {
   questionAnim: QuestionAnimCondition;
   submitTime: number;
   onClickGoToResult: () => void;
-}
+};
 
-export interface ConnectedProps {
+export type ConnectedProps = {
   lastStartedTime?: number;
   question?: Question;
   answer?: Answer;
@@ -43,7 +43,7 @@ export interface ConnectedProps {
   currentPosition: number;
   questionState?: QuestionState;
   dulation: number;
-}
+};
 
 export type PresenterProps = Pick<OwnProps, 'onClickGoToResult'> &
   ConnectedProps &
@@ -54,10 +54,10 @@ export type ContainerProps = OwnProps & {
   presenter: React.FC<PresenterProps>;
 };
 
-const ErrorMessage = styled(CenteredFrame)`
-  padding: ${({ theme }) => theme.spacingByPx(2)};
-  background-color: #fff;
-`;
+const ErrorMessage = styled(CenteredFrame)(({ theme }) => ({
+  padding: theme.spacing(2),
+  backgroundColor: theme.palette.common.white,
+}));
 
 export const TrainingQuestionsPresenter = ({
   question,

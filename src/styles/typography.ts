@@ -3,7 +3,7 @@ import { theme } from './theme';
 
 const typography = new Typography({
   baseLineHeight: 1.28581,
-  bodyFontFamily: ['Raleway', 'Hiragino Kaku Gothic ProN', 'Meiryo', 'sans-serif'],
+  bodyFontFamily: ['Roboto', 'Helvetica', 'Arial', 'sans-serif'],
   bodyWeight: 400,
   bodyColor: '#182026',
   overrideStyles: (_verticalRhythm, _options) => ({

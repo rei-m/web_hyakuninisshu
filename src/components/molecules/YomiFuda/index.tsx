@@ -1,9 +1,10 @@
 import React from 'react';
-import styled from '@src/styles/styled-components';
-import { SPACING_UNIT } from '@src/styles/theme';
+import clsx from 'clsx';
+import makeStyles from '@material-ui/core/styles/makeStyles';
 import Block from '@src/components/atoms/Block';
 import YomiFudaPhrase, { SPACE } from '@src/components/molecules/YomiFudaPhrase';
 import { YomiFuda as YomiFudaType } from '@src/types';
+import { ThemeInterface, SPACING_UNIT } from '@src/styles/theme';
 
 type Size = 's' | 'm' | 'l';
 
@@ -16,15 +17,15 @@ const ratioMap = {
   l: RATIO_L,
 };
 
-export interface Props {
+export type Props = {
   yomiFuda: YomiFudaType;
   answered: boolean;
   duration: number;
   size?: Size;
   className?: string;
-}
+};
 
-export interface PresenterProps {
+export type PresenterProps = {
   firstLine: string;
   secondLine: string;
   thirdLine: string;
@@ -32,41 +33,39 @@ export interface PresenterProps {
   size?: Size;
   className?: string;
   onAnimationEnd: () => void;
-}
+};
 
 export type ContainerProps = Props & { presenter: React.FC<PresenterProps> };
 
-const Container = styled(Block)<{ size: Size }>`
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: ${({ theme }) => theme.colorThin};
-  border-style: solid;
-  border-color: ${({ theme }) => theme.palette.primary.dark};
-  border-width: ${({ size }) => `${5 * ratioMap[size]}px`};
-  border-radius: 10px;
-  width: ${({ size }) => `${120 * ratioMap[size]}px`};
-  height: ${({ size }) => `${205 * ratioMap[size]}px`};
-  font-family: 'Sawarabi Mincho';
-`;
-
-const Inner = styled(Block)`
-  display: flex;
-  flex-direction: row-reverse;
-  justify-content: center;
-`;
-
-const FirstPhrase = styled(YomiFudaPhrase)``;
-
-const SecondPhrase = styled(YomiFudaPhrase)<{ size: Size }>`
-  padding-top: ${({ size }) => `${SPACING_UNIT * 3 * ratioMap[size]}px`};
-  margin-left: ${({ size }) => `${SPACING_UNIT * ratioMap[size]}px`};
-  margin-right: ${({ size }) => `${SPACING_UNIT * ratioMap[size]}px`};
-`;
-
-const ThirdPhrase = styled(YomiFudaPhrase)<{ size: Size }>`
-  padding-top: ${({ size }) => `${SPACING_UNIT * 6 * ratioMap[size]}px`};
-`;
+const useStyles = makeStyles<ThemeInterface, Pick<Props, 'size'>>(theme => ({
+  root: {
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center',
+    backgroundColor: theme.colorThin,
+    borderStyle: 'solid',
+    borderColor: theme.palette.primary.dark,
+    borderWidth: ({ size = 'm' }) => `${5 * ratioMap[size]}px`,
+    borderRadius: 10,
+    width: ({ size = 'm' }) => `${120 * ratioMap[size]}px`,
+    height: ({ size = 'm' }) => `${205 * ratioMap[size]}px`,
+    fontFamily: '"Sawarabi Mincho"',
+  },
+  inner: {
+    display: 'flex',
+    flexDirection: 'row-reverse',
+    justifyContent: 'center',
+  },
+  first: {},
+  second: {
+    paddingTop: ({ size = 'm' }) => `${SPACING_UNIT * 3 * ratioMap[size]}px`,
+    marginLeft: ({ size = 'm' }) => `${SPACING_UNIT * ratioMap[size]}px`,
+    marginRight: ({ size = 'm' }) => `${SPACING_UNIT * ratioMap[size]}px`,
+  },
+  third: {
+    paddingTop: ({ size = 'm' }) => `${SPACING_UNIT * 6 * ratioMap[size]}px`,
+  },
+}));
 
 const adjustDisplayText = (text: string, startIndex: number, currentPosition: number) => {
   if (currentPosition < startIndex) {
@@ -93,15 +92,36 @@ export const YomiFudaPresenter = ({
   size = 'l',
   className,
   onAnimationEnd,
-}: PresenterProps) => (
-  <Container className={className} size={size}>
-    <Inner>
-      <FirstPhrase text={firstLine} duration={duration} size={size} onAnimationEnd={onAnimationEnd} />
-      <SecondPhrase text={secondLine} duration={duration} size={size} onAnimationEnd={onAnimationEnd} />
-      <ThirdPhrase text={thirdLine} duration={duration} size={size} onAnimationEnd={onAnimationEnd} />
-    </Inner>
-  </Container>
-);
+}: PresenterProps) => {
+  const classes = useStyles({ size });
+  return (
+    <Block className={clsx(classes.root, className)}>
+      <Block className={classes.inner}>
+        <YomiFudaPhrase
+          text={firstLine}
+          duration={duration}
+          size={size}
+          onAnimationEnd={onAnimationEnd}
+          className={classes.first}
+        />
+        <YomiFudaPhrase
+          text={secondLine}
+          duration={duration}
+          size={size}
+          onAnimationEnd={onAnimationEnd}
+          className={classes.second}
+        />
+        <YomiFudaPhrase
+          text={thirdLine}
+          duration={duration}
+          size={size}
+          onAnimationEnd={onAnimationEnd}
+          className={classes.third}
+        />
+      </Block>
+    </Block>
+  );
+};
 
 export const YomiFudaContainer = ({
   yomiFuda,

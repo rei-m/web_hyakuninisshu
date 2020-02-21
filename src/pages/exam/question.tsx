@@ -5,7 +5,7 @@ import ExamQuestions from '@src/containers/organisms/ExamQuestions';
 import { ROUTE_PATHS } from '@src/constants';
 import { Karuta } from '@src/types';
 
-export interface Props {
+export type Props = {
   data: {
     allKaruta: {
       edges: Array<{
@@ -17,11 +17,11 @@ export interface Props {
       }>;
     };
   };
-}
+};
 
-export interface PresenterProps {
+export type PresenterProps = {
   karutas: Karuta[];
-}
+};
 
 const onClickGoToResultHandler = () => {
   navigate(ROUTE_PATHS.EXAM_RESULT, {
