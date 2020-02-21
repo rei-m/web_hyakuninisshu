@@ -45,7 +45,7 @@ const useStyles = makeStyles<ThemeInterface>(theme => ({
     position: 'absolute',
     top: theme.spacing(1),
     left: theme.spacing(1),
-    zIndex: 10,
+    zIndex: 1,
     '& svg': {
       fontSize: 'inherit',
     },
