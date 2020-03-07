@@ -16,10 +16,10 @@ require('ts-node').register({
     target: 'es2017',
     noImplicitAny: false,
     types: [
-      'node'
+      'node',
     ]
   }
-})
+});
 
 const { resolve } = require('path');
 

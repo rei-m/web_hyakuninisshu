@@ -1,4 +1,5 @@
-import * as uiActions from '@src/state/ui/actions';
+import { ActionCreatorImpl } from './actions';
+import { ActionCreator } from './types';
 import {
   CLOSE_KARUTAS_FILTER_NAME,
   OPEN_KARUTAS_FILTER_NAME,
@@ -7,24 +8,30 @@ import {
 } from '@src/state/ui/constants';
 
 describe('UiActionCreator', () => {
+  let actionCreator: ActionCreator;
+
+  beforeEach(() => {
+    actionCreator = new ActionCreatorImpl();
+  });
+
   it('should create OpenKarutasFilterAction', () => {
-    const actualAction = uiActions.openKarutasFilter();
+    const actualAction = actionCreator.openKarutasFilter();
     expect(actualAction.type).toEqual(OPEN_KARUTAS_FILTER_NAME);
   });
 
   it('should create CloseKarutasFilterAction', () => {
-    const actualAction = uiActions.closeKarutasFilter();
+    const actualAction = actionCreator.closeKarutasFilter();
     expect(actualAction.type).toEqual(CLOSE_KARUTAS_FILTER_NAME);
   });
 
   it('should create ToggleKarutasColorAction', () => {
-    const actualAction = uiActions.toggleKarutasColor('blue', true);
+    const actualAction = actionCreator.toggleKarutasColor('blue', true);
     expect(actualAction.type).toEqual(TOGGLE_KARUTAS_COLOR_NAME);
     expect(actualAction.payload).toEqual({ color: 'blue', checked: true });
   });
 
   it('should create ToggleKarutasKimarijiAction', () => {
-    const actualAction = uiActions.toggleKarutasKimariji(1, true);
+    const actualAction = actionCreator.toggleKarutasKimariji(1, true);
     expect(actualAction.type).toEqual(TOGGLE_KARUTAS_KIMARIJI_NAME);
     expect(actualAction.payload).toEqual({ kimariji: 1, checked: true });
   });
