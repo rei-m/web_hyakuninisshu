@@ -9,8 +9,8 @@ export const MOCK_YOMIFUDA_1: questionsTypes.YomiFuda = {
 
 export const MOCK_TORIFUDA_1: questionsTypes.ToriFuda = {
   karutaNo: 1,
-  shiku: 'きりにぬれつつ',
-  kekku: 'わがころもでは',
+  shiku: 'わがころもでは',
+  kekku: 'きりにぬれつつ',
 };
 
 export const MOCK_TORIFUDA_2: questionsTypes.ToriFuda = {
