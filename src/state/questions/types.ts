@@ -100,19 +100,6 @@ export type StartQuestionAction = Action<typeof constants.START_QUESTION_NAME> &
     };
   }>;
 
-export type ResetQuestionAction = Action<typeof constants.RESET_QUESTION_NAME>;
-
-export type FinishQuestionAction = Action<typeof constants.FINISH_QUESTION_NAME> &
-  Payload<{
-    correctCount: number;
-    averageAnswerSecond: number;
-    answerList: Array<{
-      questionId: QuestionId;
-      isCorrect: boolean;
-      correctKaruta: Karuta;
-    }>;
-  }>;
-
 export type AnswerQuestionAction = Action<typeof constants.ANSWER_QUESTION_NAME> &
   Payload<{
     isCorrect: boolean;
@@ -125,6 +112,19 @@ export type ConfirmCorrectAction = Action<typeof constants.CONFIRM_CORRECT_NAME>
 export type OpenNextQuestionAction = Action<typeof constants.OPEN_NEXT_QUESTION_NAME> &
   Payload<{
     currentQuestionId: QuestionId;
+  }>;
+
+export type ResetQuestionAction = Action<typeof constants.RESET_QUESTION_NAME>;
+
+export type FinishQuestionAction = Action<typeof constants.FINISH_QUESTION_NAME> &
+  Payload<{
+    correctCount: number;
+    averageAnswerSecond: number;
+    answerList: Array<{
+      questionId: QuestionId;
+      isCorrect: boolean;
+      correctKaruta: Karuta;
+    }>;
   }>;
 
 export type Actions =
@@ -151,7 +151,7 @@ export type ActionCreator = {
    * @param questionAnim 問題の表示速度
    *
    * @returns {StartTrainingAction}
-   * @throws {Error} 指定した条件に当てはまる歌が無い場合
+   * @throws {IllegalArgumentError} 指定した条件に当てはまる歌が無い場合
    */
   startTraining: (
     rangeFrom: RangeFromCondition,
@@ -167,7 +167,7 @@ export type ActionCreator = {
    * 回答済の問題の中から間違えた問題をもとに問題を作成/保存してRestartTrainingActionを返す
    *
    * @returns {RestartTrainingAction}
-   * @throws {Error} 指定した条件に当てはまる歌が無い場合
+   * @throws {IllegalArgumentError} 指定した条件に当てはまる歌が無い場合
    */
   restartTraining: () => RestartTrainingAction;
 
@@ -175,7 +175,7 @@ export type ActionCreator = {
    * 全ての歌を対象に問題を作成/保存してStartExamActionを返す
    *
    * @returns {StartExamAction}
-   * @throws {Error} 指定した条件に当てはまる歌が無い場合
+   * @throws {IllegalArgumentError} 指定した条件に当てはまる歌が無い場合
    */
   startExam: () => StartExamAction;
 
@@ -183,7 +183,7 @@ export type ActionCreator = {
    * 問題の回答を開始してStartQuestionActionを返す
    *
    * @returns {StartQuestionAction}
-   * @throws {Error} 指定した問題がない場合
+   * @throws {NoSuchElementError} 指定した問題がない場合
    */
   startQuestion: (
     currentQuestionId: QuestionId,
@@ -196,8 +196,8 @@ export type ActionCreator = {
    * 問題の回答を判定してAnswerQuestionActionを返す
    *
    * @returns {AnswerQuestionAction}
-   * @throws {Error} 指定した問題がない場合
-   * @throws {Error} 問題の回答が開始されていない場合
+   * @throws {IllegalArgumentError} 指定した問題がない場合
+   * @throws {IllegalStateError} 問題の回答が開始されていない場合
    */
   answerQuestion: (currentQuestionId: QuestionId, toriFuda: ToriFuda, answerDate: Date) => AnswerQuestionAction;
 
@@ -212,7 +212,7 @@ export type ActionCreator = {
    * 次の問題を取得してOpenNextQuestionActionを返す
    *
    * @returns {OpenNextQuestionAction}
-   * @throws {Error} 次の問題がない場合
+   * @throws {IllegalStateError} 次の問題がない場合
    */
   openNextQuestionAction: (currentQuestionId: QuestionId) => OpenNextQuestionAction;
 

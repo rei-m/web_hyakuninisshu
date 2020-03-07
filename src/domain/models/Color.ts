@@ -1,3 +1,5 @@
+import { IllegalArgumentError } from '../errors';
+
 /**
  * 5色百人一首のかるたの色
  */
@@ -15,7 +17,7 @@ export const Color = {
     if (['blue', 'pink', 'yellow', 'green', 'orange'].includes(value)) {
       return value as Color;
     }
-    throw new Error(`IllegalArgument: value=${value}`);
+    throw new IllegalArgumentError(`value=${value}`);
   },
   values: ['blue', 'pink', 'yellow', 'green', 'orange'] as Array<Color>,
   toJPNString: (value: Color): string => COLOR_MAP[value],

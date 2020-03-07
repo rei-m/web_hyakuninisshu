@@ -1,5 +1,6 @@
 import { KarutaRepository } from '@src/domain/repositories';
 import { Karuta, KarutaNo } from '@src/domain/models';
+import { NoSuchElementError } from '@src/domain/errors';
 
 export class KarutaRepositoryImpl implements KarutaRepository {
   private keyList: ReadonlyArray<KarutaNo>;
@@ -19,7 +20,7 @@ export class KarutaRepositoryImpl implements KarutaRepository {
   findByNo(karutaNo: KarutaNo) {
     const result = this.dataSource.get(karutaNo);
     if (!result) {
-      throw new Error(`NoSuchElement: no=${karutaNo}`);
+      throw new NoSuchElementError(`no=${karutaNo}`);
     }
     return result;
   }
@@ -27,7 +28,7 @@ export class KarutaRepositoryImpl implements KarutaRepository {
     const result = karutaNoList.map(karutaNo => {
       const karuta = this.dataSource.get(karutaNo);
       if (!karuta) {
-        throw new Error(`NoSuchElement: no=${KarutaNo}`);
+        throw new NoSuchElementError(`no=${KarutaNo}`);
       }
       return karuta;
     });

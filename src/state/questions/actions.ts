@@ -189,7 +189,7 @@ export class ActionCreatorImpl implements types.ActionCreator {
         throw new IllegalStateError(`not answered`);
       }
       correctCount += answer.isCorrect ? 1 : 0;
-      totalAnswerTime += answer.answerTime;
+      totalAnswerTime += answer.answerTime - question.startTime!;
       answerList.push({
         questionId: question.id,
         isCorrect: answer.isCorrect,

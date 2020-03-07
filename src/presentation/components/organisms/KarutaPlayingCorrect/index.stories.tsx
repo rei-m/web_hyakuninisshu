@@ -2,11 +2,11 @@ import React from 'react';
 import { storiesOf } from '@storybook/react';
 import { action } from '@storybook/addon-actions';
 import KarutaPlayingCorrect, { Props } from './index';
-import { MOCK_FIRST_KARUTA } from '@helper/mocks/domain/karutas';
+import { MOCK_KARUTA_1 } from '@helper/mocks/domain/karutas';
 
 const props: Props = {
   questionId: 1,
-  karuta: MOCK_FIRST_KARUTA,
+  karuta: MOCK_KARUTA_1,
   isAllAnswered: false,
   onClickGoToNext: action('onClickGoToNext'),
   onClickGoToResult: action('onClickGoToResult'),
