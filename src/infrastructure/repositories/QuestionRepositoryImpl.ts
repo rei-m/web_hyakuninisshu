@@ -1,5 +1,6 @@
 import { QuestionRepository } from '@src/domain/repositories';
 import { Question, QuestionId } from '@src/domain/models';
+import { NoSuchElementError } from '@src/domain/errors';
 
 export class QuestionRepositoryImpl implements QuestionRepository {
   private keyList: ReadonlyArray<QuestionId> = [];
@@ -15,14 +16,14 @@ export class QuestionRepositoryImpl implements QuestionRepository {
   }
   update(question: Question) {
     if (!this.dataSource.get(question.id)) {
-      throw new Error(`NoSuchElement: id=${question.id}`);
+      throw new NoSuchElementError(`id=${question.id}`);
     }
     this.dataSource.set(question.id, question);
   }
   findById(questionId: QuestionId) {
     const result = this.dataSource.get(questionId);
     if (!result) {
-      throw new Error(`NoSuchElement: id=${questionId}`);
+      throw new NoSuchElementError(`id=${questionId}`);
     }
     return result;
   }
@@ -31,7 +32,7 @@ export class QuestionRepositoryImpl implements QuestionRepository {
     const nextIndex = currentIndex + 1;
     const result = this.dataSource.get(this.keyList[nextIndex]);
     if (!result) {
-      throw new Error(`NoSuchElement: id=${this.keyList[nextIndex]}`);
+      throw new NoSuchElementError(`id=${this.keyList[nextIndex]}`);
     }
     return result;
   }

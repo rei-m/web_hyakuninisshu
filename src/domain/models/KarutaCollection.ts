@@ -1,4 +1,5 @@
 import { Karuta, KarutaNo, Kimariji, Color } from '.';
+import { IllegalArgumentError } from '../errors';
 
 type SelectCondition = {
   range: { from: KarutaNo; to: KarutaNo };
@@ -34,10 +35,10 @@ const filter = (karutaList: Array<Karuta>) => {
 export const KarutaCollection = {
   select: (allKarutaList: Array<Karuta>, { range, kimarijiList, colorList }: SelectCondition): Array<Karuta> => {
     if (allKarutaList.length !== KarutaNo.MAX_VALUE) {
-      throw new Error(`IllegalArgument: allKarutaList.length=${allKarutaList.length}`);
+      throw new IllegalArgumentError(`allKarutaList.length=${allKarutaList.length}`);
     }
     if (range.to < range.from) {
-      throw new Error(`IllegalArgument: range=${JSON.stringify(range)}`);
+      throw new IllegalArgumentError(`IllegalArgument: range=${JSON.stringify(range)}`);
     }
     return filter(allKarutaList)(range)(kimarijiList)(colorList);
   },

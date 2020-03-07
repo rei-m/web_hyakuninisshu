@@ -8,3 +8,4 @@ class BaseError extends Error {
 
 export class IllegalArgumentError extends BaseError {}
 export class IllegalStateError extends BaseError {}
+export class NoSuchElementError extends BaseError {}
