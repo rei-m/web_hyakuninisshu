@@ -63,25 +63,6 @@ export const reducer = (state = initialState, action: types.Actions): types.Stat
           content: action.payload.content,
         },
       };
-    case constants.RESET_QUESTION_NAME:
-      return {
-        ...state,
-        state: 'waiting',
-        totalCount: 0,
-        currentPosition: 0,
-        currentQuestion: undefined,
-        result: undefined,
-      };
-    case constants.FINISH_QUESTION_NAME:
-      return {
-        ...state,
-        state: 'finished',
-        result: {
-          correctCount: action.payload.correctCount,
-          averageAnswerSecond: action.payload.averageAnswerSecond,
-          answerList: action.payload.answerList,
-        },
-      };
     case constants.ANSWER_QUESTION_NAME:
       return {
         ...state,
@@ -106,6 +87,25 @@ export const reducer = (state = initialState, action: types.Actions): types.Stat
         currentPosition: state.currentPosition + 1,
         currentQuestion: {
           questionId: action.payload.currentQuestionId,
+        },
+      };
+    case constants.RESET_QUESTION_NAME:
+      return {
+        ...state,
+        state: 'waiting',
+        totalCount: 0,
+        currentPosition: 0,
+        currentQuestion: undefined,
+        result: undefined,
+      };
+    case constants.FINISH_QUESTION_NAME:
+      return {
+        ...state,
+        state: 'finished',
+        result: {
+          correctCount: action.payload.correctCount,
+          averageAnswerSecond: action.payload.averageAnswerSecond,
+          answerList: action.payload.answerList,
         },
       };
     default:

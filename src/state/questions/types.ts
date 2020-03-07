@@ -100,19 +100,6 @@ export type StartQuestionAction = Action<typeof constants.START_QUESTION_NAME> &
     };
   }>;
 
-export type ResetQuestionAction = Action<typeof constants.RESET_QUESTION_NAME>;
-
-export type FinishQuestionAction = Action<typeof constants.FINISH_QUESTION_NAME> &
-  Payload<{
-    correctCount: number;
-    averageAnswerSecond: number;
-    answerList: Array<{
-      questionId: QuestionId;
-      isCorrect: boolean;
-      correctKaruta: Karuta;
-    }>;
-  }>;
-
 export type AnswerQuestionAction = Action<typeof constants.ANSWER_QUESTION_NAME> &
   Payload<{
     isCorrect: boolean;
@@ -125,6 +112,19 @@ export type ConfirmCorrectAction = Action<typeof constants.CONFIRM_CORRECT_NAME>
 export type OpenNextQuestionAction = Action<typeof constants.OPEN_NEXT_QUESTION_NAME> &
   Payload<{
     currentQuestionId: QuestionId;
+  }>;
+
+export type ResetQuestionAction = Action<typeof constants.RESET_QUESTION_NAME>;
+
+export type FinishQuestionAction = Action<typeof constants.FINISH_QUESTION_NAME> &
+  Payload<{
+    correctCount: number;
+    averageAnswerSecond: number;
+    answerList: Array<{
+      questionId: QuestionId;
+      isCorrect: boolean;
+      correctKaruta: Karuta;
+    }>;
   }>;
 
 export type Actions =
