@@ -1,7 +1,7 @@
 import { Question } from './Question';
 import { QuestionId } from './QuestionId';
 import { KarutaNo } from './KarutaNo';
-import { IllegalStateError } from '../errors';
+import { IllegalStateError, IllegalArgumentError } from '../errors';
 
 export const QuestionCollection = {
   aggregate: (
@@ -15,6 +15,10 @@ export const QuestionCollection = {
       correctAnswerKarutaNo: KarutaNo;
     }>;
   } => {
+    if (questionList.length === 0) {
+      throw new IllegalArgumentError(`questionList is empty`);
+    }
+
     const totalCount = questionList.length;
 
     let correctCount = 0;

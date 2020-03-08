@@ -6,7 +6,7 @@ import { IllegalArgumentError } from '../errors';
 export type KarutaImageNo = string;
 export const KarutaImageNo = {
   create: (value: string): KarutaImageNo => {
-    if ('001' <= value && value <= '100') {
+    if (value.length === 3 && '001' <= value && value <= '100') {
       return value as KarutaImageNo;
     }
     throw new IllegalArgumentError(`value=${value}`);

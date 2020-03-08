@@ -8,7 +8,6 @@ import {
   MOCK_KARUTA_3,
   MOCK_KARUTA_4,
 } from '@helper/mocks/domain/karutas';
-import { MockMethods } from '@helper/jest';
 import {
   MOCK_QUESTION_1,
   MOCK_QUESTION_1_STARTED,
@@ -17,8 +16,9 @@ import {
   MOCK_QUESTION_2_ANSWERED_WRONG,
 } from '@helper/mocks/domain/questions';
 import { MOCK_TORIFUDA_1 } from '@helper/mocks/state/questions';
+import { MockMethods } from '@helper/jest';
 
-describe('QuestionsActionCreator', () => {
+describe('state/questions/actions/ActionCreator', () => {
   let karutaRepository: KarutaRepository;
   let karutaRepositoryMethods: MockMethods<KarutaRepository>;
   let questionRepository: QuestionRepository;
@@ -50,15 +50,15 @@ describe('QuestionsActionCreator', () => {
       mockQuestionRepository,
       new InitializeQuestionListService(mockKarutaRepository, mockQuestionRepository)
     );
-    const actual = actionCreator.startTraining(1, 10, 1, 'blue', 'kana', 'kanji', 'normal');
+    const actual = actionCreator.startTraining(11, 20, 1, 'blue', 'kana', 'kanji', 'normal');
 
     const { type, payload, meta } = actual;
 
     expect(type).toEqual('START_TRAINING_NAME');
     expect(payload.currentQuestionId).not.toBeUndefined();
     expect(payload.totalCount).toEqual(10);
-    expect(meta.rangeFrom).toEqual(1);
-    expect(meta.rangeTo).toEqual(10);
+    expect(meta.rangeFrom).toEqual(11);
+    expect(meta.rangeTo).toEqual(20);
     expect(meta.kimariji).toEqual(1);
     expect(meta.color).toEqual('blue');
     expect(meta.kamiNoKuStyle).toEqual('kana');

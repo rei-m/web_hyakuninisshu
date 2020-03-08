@@ -2,7 +2,7 @@ import { uiReducer, uiTypes } from '@src/state/ui';
 import { initialState } from '@src/state/ui/reducers';
 import * as constants from '@src/state/ui/constants';
 
-describe('UiReducer', () => {
+describe('state/ui/reducers/reducer', () => {
   it('should return next state when OpenKarutasFilterAction received', () => {
     const action: uiTypes.OpenKarutasFilterAction = {
       type: constants.OPEN_KARUTAS_FILTER_NAME,

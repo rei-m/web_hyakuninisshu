@@ -5,7 +5,7 @@ const MIN_VALUE = 1;
 const MAX_VALUE = 100;
 
 /**
- * 歌の番号
+ * 歌番号
  */
 export type KarutaNo = number;
 export const KarutaNo = {
