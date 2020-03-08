@@ -52,24 +52,25 @@ export const AdProduction = ({ type, className = '' }: Props) => {
   return (
     <Block className={clsx(classes.root, className)}>
       {type === 'top' ? (
-        <>
-          <style
-            dangerouslySetInnerHTML={{
-              __html: `
-.ad_top { width: 320px; height: 100px; }
-@media(min-width: 500px) { .ad_top { width: 468px; height: 60px; } }
-@media(min-width: 800px) { .ad_top { width: 728px; height: 90px; } }
-`,
-            }}
-          />
-          <AdSense.Google
-            {...AdProperty}
-            className={`ad_top`}
-            style={{ display: 'inline-block' }}
-            format={``}
-            responsive={``}
-          />
-        </>
+        //         <>
+        //           <style
+        //             dangerouslySetInnerHTML={{
+        //               __html: `
+        // .ad_top { width: 320px; height: 100px; }
+        // @media(min-width: 500px) { .ad_top { width: 468px; height: 60px; } }
+        // @media(min-width: 800px) { .ad_top { width: 728px; height: 90px; } }
+        // `,
+        //             }}
+        //           />
+        //           <AdSense.Google
+        //             {...AdProperty}
+        //             className={`ad_top`}
+        //             style={{ display: 'inline-block' }}
+        //             format={``}
+        //             responsive={``}
+        //           />
+        //         </>
+        <AdSense.Google {...AdProperty} style={{ display: 'block' }} format={`auto`} responsive={`true`} />
       ) : (
         <AdSense.Google {...AdProperty} style={{ display: 'block' }} format={`auto`} responsive={`true`} />
       )}
