@@ -124,10 +124,19 @@ export const MOCK_KARUTA_4: Karuta = {
     '田子の浦の海岸に出てみると､雪をかぶったまっ白な富士の山が見事に見えるが、その高い峰には、今もしきりに雪がふり続けている。(あぁ、なんと素晴らしい景色なのだろう)',
 };
 
-export const MOCK_ALL_KARUTA_LIST: Array<Karuta> = [...Array(100).keys()].map(i => {
-  return {
-    ...MOCK_KARUTA_1,
-    id: String(i + 1),
-    no: i + 1,
-  };
-});
+export const MOCK_ALL_KARUTA_LIST: Array<Karuta> = [
+  { ...MOCK_KARUTA_1 },
+  { ...MOCK_KARUTA_1, id: '2', no: 2, kimariji: 2, color: 'pink' } as const,
+  { ...MOCK_KARUTA_1, id: '3', no: 3, kimariji: 3, color: 'yellow' } as const,
+  { ...MOCK_KARUTA_1, id: '4', no: 4, kimariji: 4, color: 'green' } as const,
+  { ...MOCK_KARUTA_1, id: '5', no: 5, kimariji: 5, color: 'orange' } as const,
+  { ...MOCK_KARUTA_1, id: '6', no: 6, kimariji: 6 } as const,
+].concat(
+  [...Array(94).keys()].map(i => {
+    return {
+      ...MOCK_KARUTA_1,
+      id: String(i + 7),
+      no: i + 7,
+    };
+  })
+);

@@ -7,7 +7,7 @@ import {
   TOGGLE_KARUTAS_KIMARIJI_NAME,
 } from '@src/state/ui/constants';
 
-describe('UiActionCreator', () => {
+describe('state/ui/actions/ActionCreator', () => {
   let actionCreator: ActionCreator;
 
   beforeEach(() => {

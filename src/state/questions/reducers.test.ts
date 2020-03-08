@@ -11,7 +11,7 @@ import {
 import { MOCK_KARUTA_1, MOCK_KARUTA_2 } from '@helper/mocks/domain/karutas';
 import { MOCK_QUESTION_1_ANSWERED_CORRECT, MOCK_QUESTION_2_ANSWERED_WRONG } from '@helper/mocks/domain/questions';
 
-describe('QuestionsReducer', () => {
+describe('state/questions/reducers/reducer', () => {
   it('should return next state when StartTrainingAction received', () => {
     const action: questionsTypes.StartTrainingAction = {
       type: constants.START_TRAINING_NAME,
