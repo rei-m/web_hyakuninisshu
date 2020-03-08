@@ -1,11 +1,11 @@
 const React = require("react");
 const { action } = require("@storybook/addon-actions");
-const iconImage = require("@src/images/app-icon.png");
-const correctImage = require("@src/images/check_correct.png");
-const incorrectImage = require("@src/images/check_incorrect.png");
-const dogezaImage = require("@src/images/dogeza_businessman.png");
-const karutaImage = require("@src/images/karuta_001.jpg");
-const tatamiImage  = require("@src/images/tatami_part.png");
+const iconImage = require("@src/presentation/images/app-icon.png");
+const correctImage = require("@src/presentation/images/check_correct.png");
+const incorrectImage = require("@src/presentation/images/check_incorrect.png");
+const dogezaImage = require("@src/presentation/images/dogeza_businessman.png");
+const karutaImage = require("@src/presentation/images/karuta_001.jpg");
+const tatamiImage  = require("@src/presentation/images/tatami_part.png");
 
 const linkActionHandler = action("Link:");
 const navigateActionHandler = action("NavigateTo:");

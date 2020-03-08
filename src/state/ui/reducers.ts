@@ -1,15 +1,12 @@
-import { Color, Kimariji } from '@src/types';
 import * as types from './types';
 import * as constants from './constants';
-
-const colors: Color[] = ['blue', 'pink', 'yellow', 'green', 'orange'];
-const kimarijis: Kimariji[] = [1, 2, 3, 4, 5, 6];
+import { Color, Kimariji } from '@src/domain/models';
 
 export const initialState: types.State = {
   karutasFilter: {
     open: false,
-    colors: colors.map(color => ({ color, checked: true })),
-    kimarijis: kimarijis.map(kimariji => ({ kimariji, checked: true })),
+    colors: Color.values.map(color => ({ color, checked: true })),
+    kimarijis: Kimariji.values.map(kimariji => ({ kimariji, checked: true })),
   },
 };
 

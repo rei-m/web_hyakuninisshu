@@ -1,27 +1,27 @@
 import { uiReducer, uiTypes } from '@src/state/ui';
 import { initialState } from '@src/state/ui/reducers';
-import * as uiConstants from '@src/state/ui/constants';
+import * as constants from '@src/state/ui/constants';
 
-describe('UiReducer', () => {
-  it('should be transition state that is opened karutas filter', () => {
+describe('state/ui/reducers/reducer', () => {
+  it('should return next state when OpenKarutasFilterAction received', () => {
     const action: uiTypes.OpenKarutasFilterAction = {
-      type: uiConstants.OPEN_KARUTAS_FILTER_NAME,
+      type: constants.OPEN_KARUTAS_FILTER_NAME,
     };
     const state = uiReducer(initialState, action);
     expect(state.karutasFilter.open).toBeTruthy();
   });
 
-  it('should be transition state that is closed karutas filter', () => {
+  it('should return next state when CloseKarutasFilterAction received', () => {
     const action: uiTypes.CloseKarutasFilterAction = {
-      type: uiConstants.CLOSE_KARUTAS_FILTER_NAME,
+      type: constants.CLOSE_KARUTAS_FILTER_NAME,
     };
     const state = uiReducer(initialState, action);
     expect(state.karutasFilter.open).toBeFalsy();
   });
 
-  it('should be transition state that is toggled karutas kimariji', () => {
+  it('should return next state when ToggleKarutasKimarijiAction received', () => {
     const action: uiTypes.ToggleKarutasKimarijiAction = {
-      type: uiConstants.TOGGLE_KARUTAS_KIMARIJI_NAME,
+      type: constants.TOGGLE_KARUTAS_KIMARIJI_NAME,
       payload: {
         kimariji: 1,
         checked: false,
@@ -34,9 +34,9 @@ describe('UiReducer', () => {
     });
   });
 
-  it('should be transition state that is toggled karutas color', () => {
+  it('should return next state when ToggleKarutasColorAction received', () => {
     const action: uiTypes.ToggleKarutasColorAction = {
-      type: uiConstants.TOGGLE_KARUTAS_COLOR_NAME,
+      type: constants.TOGGLE_KARUTAS_COLOR_NAME,
       payload: {
         color: 'blue',
         checked: false,

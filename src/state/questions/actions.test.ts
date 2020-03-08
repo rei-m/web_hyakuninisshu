@@ -1,277 +1,270 @@
-import { create } from '@helper/factory';
-import * as questionsAction from '@src/state/questions/actions';
+import { ActionCreatorImpl } from './actions';
+import { InitializeQuestionListService } from '@src/domain/services';
+import { KarutaRepository, QuestionRepository } from '@src/domain/repositories';
 import {
-  ANSWER_QUESTION_NAME,
-  CONFIRM_CORRECT_NAME,
-  OPEN_NEXT_QUESTION_NAME,
-  RESTART_QUESTIONS_NAME,
-  START_EXAM_NAME,
-  START_TRAINING_NAME,
-  FINISH_QUESTION_NAME,
-} from '@src/state/questions/constants';
-import { Answer, Color, Karuta, Kimariji, Question } from '@src/types';
+  MOCK_ALL_KARUTA_LIST,
+  MOCK_KARUTA_1,
+  MOCK_KARUTA_2,
+  MOCK_KARUTA_3,
+  MOCK_KARUTA_4,
+} from '@helper/mocks/domain/karutas';
 import {
-  ColorCondition,
-  KarutaStyleCondition,
-  KimarijiCondition,
-  QuestionAnimCondition,
-  QuestionState,
-  RangeFromCondition,
-  RangeToCondition,
-} from '@src/enums';
+  MOCK_QUESTION_1,
+  MOCK_QUESTION_1_STARTED,
+  MOCK_QUESTION_1_ANSWERED_CORRECT,
+  MOCK_QUESTION_2,
+  MOCK_QUESTION_2_ANSWERED_WRONG,
+} from '@helper/mocks/domain/questions';
+import { MOCK_TORIFUDA_1 } from '@helper/mocks/state/questions';
+import { MockMethods } from '@helper/jest';
 
-const setUpKarutas = () =>
-  Array.from(Array(100).keys()).map(i =>
-    create<Karuta>('karuta', {
-      color: (i < 20 ? 'blue' : 'pink') as Color,
-      id: (i + 1).toString(),
-      no: i + 1,
-      kimariji: ((i % 5) + 1) as Kimariji,
-    })
-  );
+describe('state/questions/actions/ActionCreator', () => {
+  let karutaRepository: KarutaRepository;
+  let karutaRepositoryMethods: MockMethods<KarutaRepository>;
+  let questionRepository: QuestionRepository;
+  let questionRepositoryMethods: MockMethods<QuestionRepository>;
 
-const setUpQuestions = () => [...Array(10).keys()].map(_ => create<Question>('question'));
+  beforeEach(() => {
+    karutaRepositoryMethods = {
+      findAll: jest.fn(),
+      findByNo: jest.fn(),
+      findByNoList: jest.fn(),
+    };
+    questionRepositoryMethods = {
+      initialize: jest.fn(),
+      findAll: jest.fn(),
+      findById: jest.fn(),
+      findNextById: jest.fn(),
+      update: jest.fn(),
+    };
+    karutaRepository = {} as KarutaRepository;
+    questionRepository = {} as QuestionRepository;
+  });
 
-describe('QuestionsActionCreator', () => {
   it('should create StartTrainingAction', () => {
-    const karutas = setUpKarutas();
-    const actualAction = questionsAction.startTraining(
-      karutas,
-      RangeFromCondition.One,
-      RangeToCondition.OneHundred,
-      KimarijiCondition.None,
-      ColorCondition.None,
-      KarutaStyleCondition.KanjiAndKana,
-      KarutaStyleCondition.KanaOnly,
-      QuestionAnimCondition.Normal
+    karutaRepositoryMethods.findAll.mockReturnValue(MOCK_ALL_KARUTA_LIST);
+    const mockKarutaRepository = { ...karutaRepository, ...karutaRepositoryMethods };
+    const mockQuestionRepository = { ...questionRepository, ...questionRepositoryMethods };
+    const actionCreator = new ActionCreatorImpl(
+      mockKarutaRepository,
+      mockQuestionRepository,
+      new InitializeQuestionListService(mockKarutaRepository, mockQuestionRepository)
     );
+    const actual = actionCreator.startTraining(11, 20, 1, 'blue', 'kana', 'kanji', 'normal');
 
-    const { type, payload } = actualAction;
-    const { nextState, questions, startedTime, dulation } = payload;
-    const { correctKaruta, yomiFuda, toriFudas } = questions[0];
-    expect(questions).toHaveLength(100);
-    expect(yomiFuda.firstText).toEqual(correctKaruta.firstKanji);
-    expect(yomiFuda.secondText).toEqual(correctKaruta.secondKanji);
-    expect(yomiFuda.thirdText).toEqual(correctKaruta.thirdKanji);
-    expect(toriFudas.map(f => f.fourthText)).toContain(correctKaruta.fourthKana);
-    expect(toriFudas.map(f => f.fifthText)).toContain(correctKaruta.fifthKana);
-    expect(type).toEqual(START_TRAINING_NAME);
-    expect(nextState).toEqual(QuestionState.InAnswer);
-    expect(startedTime).not.toBeUndefined();
-    expect(dulation).toEqual(0.6);
+    const { type, payload, meta } = actual;
+
+    expect(type).toEqual('START_TRAINING_NAME');
+    expect(payload.currentQuestionId).not.toBeUndefined();
+    expect(payload.totalCount).toEqual(10);
+    expect(meta.rangeFrom).toEqual(11);
+    expect(meta.rangeTo).toEqual(20);
+    expect(meta.kimariji).toEqual(1);
+    expect(meta.color).toEqual('blue');
+    expect(meta.kamiNoKuStyle).toEqual('kana');
+    expect(meta.shimoNoKuStyle).toEqual('kanji');
+    expect(meta.questionAnim).toEqual('normal');
+
+    expect(mockQuestionRepository.initialize).toHaveBeenCalled();
   });
 
-  it('should return StartTrainingAction payload filtered by range', () => {
-    const karutas = setUpKarutas();
-    const actualAction = questionsAction.startTraining(
-      karutas,
-      RangeFromCondition.TwentyOne,
-      RangeToCondition.Forty,
-      KimarijiCondition.None,
-      ColorCondition.None,
-      KarutaStyleCondition.KanjiAndKana,
-      KarutaStyleCondition.KanaOnly,
-      QuestionAnimCondition.Normal
+  it('should create RestartTrainingAction', () => {
+    karutaRepositoryMethods.findAll.mockReturnValue(MOCK_ALL_KARUTA_LIST);
+    karutaRepositoryMethods.findByNoList.mockReturnValue([MOCK_KARUTA_1]);
+    questionRepositoryMethods.findAll.mockReturnValue([
+      MOCK_QUESTION_1_ANSWERED_CORRECT,
+      MOCK_QUESTION_2_ANSWERED_WRONG,
+    ]);
+    const mockKarutaRepository = { ...karutaRepository, ...karutaRepositoryMethods };
+    const mockQuestionRepository = { ...questionRepository, ...questionRepositoryMethods };
+    const actionCreator = new ActionCreatorImpl(
+      mockKarutaRepository,
+      mockQuestionRepository,
+      new InitializeQuestionListService(mockKarutaRepository, mockQuestionRepository)
     );
+    const actual = actionCreator.restartTraining();
 
-    const { payload } = actualAction;
-    const { questions, startedTime } = payload;
-    const karutaNos = questions.map(q => q.correctKaruta.no);
-    expect(questions).toHaveLength(20);
-    expect(karutaNos).toContain(21);
-    expect(karutaNos).toContain(40);
-    expect(startedTime).not.toBeUndefined();
-  });
+    const { type, payload } = actual;
 
-  it('should return StartTrainingAction payload filtered by kimariji', () => {
-    const karutas = setUpKarutas();
-    const actualAction = questionsAction.startTraining(
-      karutas,
-      RangeFromCondition.One,
-      RangeToCondition.OneHundred,
-      KimarijiCondition.One,
-      ColorCondition.None,
-      KarutaStyleCondition.KanjiAndKana,
-      KarutaStyleCondition.KanaOnly,
-      QuestionAnimCondition.Normal
-    );
+    expect(type).toEqual('RESTART_TRAINING_NAME');
+    expect(payload.currentQuestionId).not.toBeUndefined();
+    expect(payload.totalCount).toEqual(1);
 
-    const { payload } = actualAction;
-    const { questions, startedTime } = payload;
-    expect(questions).toHaveLength(20);
-    expect(questions.every(q => q.correctKaruta.kimariji === 1)).toBeTruthy();
-    expect(startedTime).not.toBeUndefined();
-  });
-
-  it('should return StartTrainingAction payload filtered by color', () => {
-    const karutas = setUpKarutas();
-    const actualAction = questionsAction.startTraining(
-      karutas,
-      RangeFromCondition.One,
-      RangeToCondition.OneHundred,
-      KimarijiCondition.None,
-      ColorCondition.Blue,
-      KarutaStyleCondition.KanjiAndKana,
-      KarutaStyleCondition.KanaOnly,
-      QuestionAnimCondition.Normal
-    );
-
-    const { payload } = actualAction;
-    const { questions, startedTime } = payload;
-    expect(questions).toHaveLength(20);
-    expect(questions.every(q => q.correctKaruta.color === 'blue')).toBeTruthy();
-    expect(startedTime).not.toBeUndefined();
-  });
-
-  it('should return StartTrainingAction payload switched by karuta style', () => {
-    const karutas = setUpKarutas();
-    const actualAction = questionsAction.startTraining(
-      karutas,
-      RangeFromCondition.One,
-      RangeToCondition.OneHundred,
-      KimarijiCondition.None,
-      ColorCondition.None,
-      KarutaStyleCondition.KanaOnly,
-      KarutaStyleCondition.KanjiAndKana,
-      QuestionAnimCondition.Normal
-    );
-
-    const { payload } = actualAction;
-    const { questions } = payload;
-    const { correctKaruta, yomiFuda, toriFudas } = questions[0];
-    expect(yomiFuda.firstText).toEqual(correctKaruta.firstKana);
-    expect(yomiFuda.secondText).toEqual(correctKaruta.secondKana);
-    expect(yomiFuda.thirdText).toEqual(correctKaruta.thirdKana);
-    expect(toriFudas.map(f => f.fourthText)).toContain(correctKaruta.fourthKanji);
-    expect(toriFudas.map(f => f.fifthText)).toContain(correctKaruta.fifthKanji);
+    expect(mockKarutaRepository.findByNoList).toHaveBeenCalledWith([
+      MOCK_QUESTION_2_ANSWERED_WRONG.correctAnswerKarutaNo,
+    ]);
+    expect(mockQuestionRepository.initialize).toHaveBeenCalled();
   });
 
   it('should create StartExamAction', () => {
-    const karutas = setUpKarutas();
-    const actualAction = questionsAction.startExam(karutas);
+    karutaRepositoryMethods.findAll.mockReturnValue(MOCK_ALL_KARUTA_LIST);
+    const mockKarutaRepository = { ...karutaRepository, ...karutaRepositoryMethods };
+    const mockQuestionRepository = { ...questionRepository, ...questionRepositoryMethods };
+    const actionCreator = new ActionCreatorImpl(
+      mockKarutaRepository,
+      mockQuestionRepository,
+      new InitializeQuestionListService(mockKarutaRepository, mockQuestionRepository)
+    );
+    const actual = actionCreator.startExam();
 
-    const { type, payload } = actualAction;
-    const { nextState, questions, startedTime } = payload;
-    const { correctKaruta, yomiFuda, toriFudas } = questions[0];
-    expect(questions).toHaveLength(100);
-    expect(yomiFuda.firstText).toEqual(correctKaruta.firstKanji);
-    expect(yomiFuda.secondText).toEqual(correctKaruta.secondKanji);
-    expect(yomiFuda.thirdText).toEqual(correctKaruta.thirdKanji);
-    expect(toriFudas.map(f => f.fourthText)).toContain(correctKaruta.fourthKana);
-    expect(toriFudas.map(f => f.fifthText)).toContain(correctKaruta.fifthKana);
-    expect(type).toEqual(START_EXAM_NAME);
-    expect(nextState).toEqual(QuestionState.InAnswer);
-    expect(startedTime).not.toBeUndefined();
+    const { type, payload } = actual;
+
+    expect(type).toEqual('START_EXAM_NAME');
+    expect(payload.currentQuestionId).not.toBeUndefined();
+    expect(payload.totalCount).toEqual(100);
+
+    expect(mockQuestionRepository.initialize).toHaveBeenCalled();
   });
 
-  it('should create RestartQuestionsAction', () => {
-    const answeredQuestions = setUpQuestions();
-    const answers = answeredQuestions.map(q => {
-      return create<Answer>('answer', {
-        correct: q.id % 2 === 0,
-        questionId: q.id,
-      });
-    });
-    const actualAction = questionsAction.restartQuestions(answeredQuestions, answers);
+  it('should create StartQuestionAction', () => {
+    karutaRepositoryMethods.findByNoList.mockReturnValue([MOCK_KARUTA_1, MOCK_KARUTA_2, MOCK_KARUTA_3, MOCK_KARUTA_4]);
+    questionRepositoryMethods.findById.mockReturnValue(MOCK_QUESTION_1);
+    const mockKarutaRepository = { ...karutaRepository, ...karutaRepositoryMethods };
+    const mockQuestionRepository = { ...questionRepository, ...questionRepositoryMethods };
+    const actionCreator = new ActionCreatorImpl(
+      mockKarutaRepository,
+      mockQuestionRepository,
+      new InitializeQuestionListService(mockKarutaRepository, mockQuestionRepository)
+    );
+    const startDate = new Date();
+    const actual = actionCreator.startQuestion(MOCK_QUESTION_1.id, 'kanji', 'kana', startDate);
 
-    const { type, payload } = actualAction;
-    const { nextState, questions, startedTime } = payload;
-    expect(type).toEqual(RESTART_QUESTIONS_NAME);
-    expect(nextState).toEqual(QuestionState.InAnswer);
-    const newQuestionIds = questions.map(q => q.id);
-    expect(questions).toHaveLength(5);
-    expect(newQuestionIds).toContain(1);
-    expect(newQuestionIds).toContain(3);
-    expect(newQuestionIds).toContain(5);
-    expect(newQuestionIds).toContain(7);
-    expect(newQuestionIds).toContain(9);
-    expect(startedTime).not.toBeUndefined();
+    const { type, payload } = actual;
+
+    expect(type).toEqual('START_QUESTION_NAME');
+    expect(payload.questionId).toEqual(MOCK_QUESTION_1.id);
+    expect(payload.content.yomiFuda).toEqual({
+      karutaNo: MOCK_KARUTA_1.no,
+      shoku: MOCK_KARUTA_1.shoku.kanji,
+      niku: MOCK_KARUTA_1.niku.kanji,
+      sanku: MOCK_KARUTA_1.sanku.kanji,
+    });
+    expect(payload.content.toriFudaList).toEqual([
+      {
+        karutaNo: MOCK_KARUTA_1.no,
+        shiku: MOCK_KARUTA_1.shiku.kana,
+        kekku: MOCK_KARUTA_1.kekku.kana,
+      },
+      {
+        karutaNo: MOCK_KARUTA_2.no,
+        shiku: MOCK_KARUTA_2.shiku.kana,
+        kekku: MOCK_KARUTA_2.kekku.kana,
+      },
+      {
+        karutaNo: MOCK_KARUTA_3.no,
+        shiku: MOCK_KARUTA_3.shiku.kana,
+        kekku: MOCK_KARUTA_3.kekku.kana,
+      },
+      {
+        karutaNo: MOCK_KARUTA_4.no,
+        shiku: MOCK_KARUTA_4.shiku.kana,
+        kekku: MOCK_KARUTA_4.kekku.kana,
+      },
+    ]);
+
+    expect(mockKarutaRepository.findByNoList).toHaveBeenCalledWith(MOCK_QUESTION_1.choiceKarutaNoList);
+    expect(mockQuestionRepository.update).toHaveBeenCalled();
   });
 
-  describe('AnswerQuestionAction', () => {
-    let question: Question;
+  it('should create AnswerQuestionAction', () => {
+    karutaRepositoryMethods.findByNo.mockReturnValue(MOCK_KARUTA_1);
+    questionRepositoryMethods.findById.mockReturnValue(MOCK_QUESTION_1_STARTED);
+    const mockKarutaRepository = { ...karutaRepository, ...karutaRepositoryMethods };
+    const mockQuestionRepository = { ...questionRepository, ...questionRepositoryMethods };
+    const actionCreator = new ActionCreatorImpl(
+      mockKarutaRepository,
+      mockQuestionRepository,
+      new InitializeQuestionListService(mockKarutaRepository, mockQuestionRepository)
+    );
+    const answerDate = new Date();
+    const actual = actionCreator.answerQuestion(MOCK_QUESTION_1_STARTED.id, MOCK_TORIFUDA_1, answerDate);
 
-    beforeEach(() => {
-      question = create<Question>('question', {
-        correctKaruta: create<Karuta>('karuta', {
-          id: '1',
-          no: 1,
-        }),
-        id: 1,
-      });
-    });
+    const { type, payload } = actual;
 
-    it('should create correct', () => {
-      const actualAction = questionsAction.answerQuestion(1, 1, [question]);
-      const { type, payload } = actualAction;
-      const { answer, nextState } = payload;
+    expect(type).toEqual('ANSWER_QUESTION_NAME');
+    expect(payload.isCorrect).toBeTruthy();
+    expect(payload.selectedKarutaNo).toEqual(MOCK_TORIFUDA_1.karutaNo);
+    expect(payload.correctKaruta).toEqual(MOCK_KARUTA_1);
 
-      expect(answer.correct).toBeTruthy();
-      expect(answer.questionId).toEqual(1);
-      expect(answer.karutaNo).toEqual(1);
-      expect(answer.time).not.toBeUndefined();
-      expect(type).toEqual(ANSWER_QUESTION_NAME);
-      expect(nextState).toEqual(QuestionState.Answered);
-    });
-
-    it('should create wrong', () => {
-      const actualAction = questionsAction.answerQuestion(1, 2, [question]);
-      const { type, payload } = actualAction;
-      const { answer, nextState } = payload;
-
-      expect(answer.correct).toBeFalsy();
-      expect(answer.questionId).toEqual(1);
-      expect(answer.karutaNo).toEqual(2);
-      expect(answer.time).not.toBeUndefined();
-      expect(type).toEqual(ANSWER_QUESTION_NAME);
-      expect(nextState).toEqual(QuestionState.Answered);
-    });
+    expect(mockKarutaRepository.findByNo).toHaveBeenCalledWith(MOCK_QUESTION_1_STARTED.correctAnswerKarutaNo);
+    expect(mockQuestionRepository.update).toHaveBeenCalled();
   });
 
   it('should create ConfirmCorrectAction', () => {
-    const question1 = create<Question>('question', {
-      correctKaruta: create<Karuta>('karuta', {
-        id: '1',
-        no: 1,
-      }),
-      id: 1,
-    });
-    const question2 = create<Question>('question', {
-      correctKaruta: create<Karuta>('karuta', {
-        id: '2',
-        no: 2,
-      }),
-      id: 2,
-    });
+    const actionCreator = new ActionCreatorImpl(
+      karutaRepository,
+      questionRepository,
+      new InitializeQuestionListService(karutaRepository, questionRepository)
+    );
+    const actual = actionCreator.confirmCorrect();
 
-    const answer = create<Answer>('answer', {
-      correct: true,
-      karutaNo: 1,
-      questionId: 1,
-    });
+    const { type } = actual;
 
-    const actualAction = questionsAction.confirmCorrect([question1, question2], [answer]);
-    const { type, payload } = actualAction;
-    const { nextState } = payload;
-    expect(type).toEqual(CONFIRM_CORRECT_NAME);
-    expect(nextState).toEqual(QuestionState.ConfirmCorrect);
+    expect(type).toEqual('CONFIRM_CORRECT_NAME');
   });
 
   it('should create OpenNextQuestionAction', () => {
-    const actualAction = questionsAction.openNextQuestion(0);
+    questionRepositoryMethods.findNextById.mockReturnValue(MOCK_QUESTION_2);
+    const mockQuestionRepository = { ...questionRepository, ...questionRepositoryMethods };
+    const actionCreator = new ActionCreatorImpl(
+      karutaRepository,
+      mockQuestionRepository,
+      new InitializeQuestionListService(karutaRepository, mockQuestionRepository)
+    );
+    const actual = actionCreator.openNextQuestionAction(MOCK_QUESTION_1.id);
 
-    const { type, payload } = actualAction;
-    const { nextIndex, nextState, startedTime } = payload;
-    expect(type).toEqual(OPEN_NEXT_QUESTION_NAME);
-    expect(nextIndex).toEqual(1);
-    expect(nextState).toEqual(QuestionState.InAnswer);
-    expect(startedTime).not.toBeUndefined();
+    const { type, payload } = actual;
+
+    expect(type).toEqual('OPEN_NEXT_QUESTION_NAME');
+    expect(payload.currentQuestionId).toEqual(MOCK_QUESTION_2.id);
+    expect(mockQuestionRepository.findNextById).toHaveBeenCalledWith(MOCK_QUESTION_1.id);
+  });
+
+  it('should create ResetQuestionAction', () => {
+    const actionCreator = new ActionCreatorImpl(
+      karutaRepository,
+      questionRepository,
+      new InitializeQuestionListService(karutaRepository, questionRepository)
+    );
+    const actual = actionCreator.resetQuestion();
+
+    const { type } = actual;
+
+    expect(type).toEqual('RESET_QUESTION_NAME');
   });
 
   it('should create FinishQuestionAction', () => {
-    const actualAction = questionsAction.finishQuestion();
+    karutaRepositoryMethods.findAll.mockReturnValue([MOCK_KARUTA_1, MOCK_KARUTA_2, MOCK_KARUTA_3, MOCK_KARUTA_4]);
+    questionRepositoryMethods.findAll.mockReturnValue([
+      MOCK_QUESTION_1_ANSWERED_CORRECT,
+      MOCK_QUESTION_2_ANSWERED_WRONG,
+    ]);
+    const mockKarutaRepository = { ...karutaRepository, ...karutaRepositoryMethods };
+    const mockQuestionRepository = { ...questionRepository, ...questionRepositoryMethods };
+    const actionCreator = new ActionCreatorImpl(
+      mockKarutaRepository,
+      mockQuestionRepository,
+      new InitializeQuestionListService(mockKarutaRepository, mockQuestionRepository)
+    );
 
-    const { type } = actualAction;
-    expect(type).toEqual(FINISH_QUESTION_NAME);
+    const actual = actionCreator.finishQuestion();
+
+    const { type, payload } = actual;
+
+    expect(type).toEqual('FINISH_QUESTION_NAME');
+    expect(payload.correctCount).toEqual(1);
+    expect(payload.averageAnswerSecond).toEqual(1.5);
+    expect(payload.answerList).toEqual([
+      {
+        questionId: MOCK_QUESTION_1_ANSWERED_CORRECT.id,
+        isCorrect: true,
+        correctKaruta: MOCK_KARUTA_1,
+      },
+      {
+        questionId: MOCK_QUESTION_2_ANSWERED_WRONG.id,
+        isCorrect: false,
+        correctKaruta: MOCK_KARUTA_2,
+      },
+    ]);
   });
 });

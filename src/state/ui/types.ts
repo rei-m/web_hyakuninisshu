@@ -1,42 +1,28 @@
 import { Action } from 'redux';
-import { Color, Kimariji } from '@src/types';
 import * as constants from './constants';
+import { Color, Kimariji } from '@src/domain/models';
+import { Payload } from '..';
 
-export type OPEN_KARUTAS_FILTER_TYPE = typeof constants.OPEN_KARUTAS_FILTER_NAME;
+export type KarutasFilter = Readonly<{
+  colors: Array<{ color: Color; checked: boolean }>;
+  kimarijis: Array<{ kimariji: Kimariji; checked: boolean }>;
+}>;
 
-export type CLOSE_KARUTAS_FILTER_TYPE = typeof constants.CLOSE_KARUTAS_FILTER_NAME;
+export type OpenKarutasFilterAction = Action<typeof constants.OPEN_KARUTAS_FILTER_NAME>;
 
-export type TOGGLE_KARUTAS_COLOR_TYPE = typeof constants.TOGGLE_KARUTAS_COLOR_NAME;
+export type CloseKarutasFilterAction = Action<typeof constants.CLOSE_KARUTAS_FILTER_NAME>;
 
-export type TOGGLE_KARUTAS_KIMARIJI_TYPE = typeof constants.TOGGLE_KARUTAS_KIMARIJI_NAME;
+export type ToggleKarutasColorAction = Action<typeof constants.TOGGLE_KARUTAS_COLOR_NAME> &
+  Payload<{
+    color: Color;
+    checked: boolean;
+  }>;
 
-export interface OpenKarutasFilterAction extends Action {
-  readonly type: OPEN_KARUTAS_FILTER_TYPE;
-}
-
-export interface CloseKarutasFilterAction extends Action {
-  readonly type: CLOSE_KARUTAS_FILTER_TYPE;
-}
-
-export interface OKarutasFilterAction extends Action {
-  readonly type: OPEN_KARUTAS_FILTER_TYPE;
-}
-
-export interface ToggleKarutasColorAction extends Action {
-  readonly type: TOGGLE_KARUTAS_COLOR_TYPE;
-  readonly payload: {
-    readonly color: Color;
-    readonly checked: boolean;
-  };
-}
-
-export interface ToggleKarutasKimarijiAction extends Action {
-  readonly type: TOGGLE_KARUTAS_KIMARIJI_TYPE;
-  readonly payload: {
-    readonly kimariji: Kimariji;
-    readonly checked: boolean;
-  };
-}
+export type ToggleKarutasKimarijiAction = Action<typeof constants.TOGGLE_KARUTAS_KIMARIJI_NAME> &
+  Payload<{
+    kimariji: Kimariji;
+    checked: boolean;
+  }>;
 
 export type Actions =
   | OpenKarutasFilterAction
@@ -44,11 +30,42 @@ export type Actions =
   | ToggleKarutasColorAction
   | ToggleKarutasKimarijiAction;
 
-export interface KarutasFilter {
-  readonly colors: Array<{ color: Color; checked: boolean }>;
-  readonly kimarijis: Array<{ kimariji: Kimariji; checked: boolean }>;
-}
+export type ActionCreator = {
+  /**
+   * OpenKarutasFilterActionを返す
+   *
+   * @returns {OpenKarutasFilterAction}
+   */
+  openKarutasFilter: () => OpenKarutasFilterAction;
 
-export interface State {
-  readonly karutasFilter: KarutasFilter & { readonly open: boolean };
-}
+  /**
+   * CloseKarutasFilterActionを返す
+   *
+   * @returns {CloseKarutasFilterAction}
+   */
+  closeKarutasFilter: () => CloseKarutasFilterAction;
+
+  /**
+   * ToggleKarutasColorActionを返す
+   *
+   * @param color 歌の色
+   * @param checked 表示する/しない
+   *
+   * @returns {ToggleKarutasColorAction}
+   */
+  toggleKarutasColor: (color: Color, checked: boolean) => ToggleKarutasColorAction;
+
+  /**
+   * ToggleKarutasKimarijiActionを返す
+   *
+   * @param kimariji 歌の決まり字
+   * @param checked 表示する/しない
+   *
+   * @returns {ToggleKarutasKimarijiAction}
+   */
+  toggleKarutasKimariji: (kimariji: Kimariji, checked: boolean) => ToggleKarutasKimarijiAction;
+};
+
+export type State = Readonly<{
+  karutasFilter: KarutasFilter & { open: boolean };
+}>;

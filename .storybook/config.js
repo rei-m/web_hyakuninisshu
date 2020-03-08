@@ -21,10 +21,10 @@ window.twttr = {
   }
 }
 
-import typography from '@src/styles/typography';
+import typography from '@src/presentation/styles/typography';
 typography.injectStyles()
 
-import AppThemeProvider from '@src/contexts/AppThemeProvider';
+import AppThemeProvider from '@src/presentation/contexts/AppThemeProvider';
 
 // MUIが生成するClassNameの差分をなくす対応
 // @see https://github.com/mui-org/material-ui/issues/9492#issuecomment-410443974

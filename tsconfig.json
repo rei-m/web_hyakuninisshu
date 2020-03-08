@@ -3,8 +3,8 @@
     "./src/**/*",
     "./helper/**/*",
     "./@types/**/*.ts",
-    "./gatsby-node-config/**/*",
-    "./gatsby-config-config/**/*",
+    "./gatsby-node-impl/**/*",
+    "./gatsby-config-impl/**/*",
   ],
   "compilerOptions": {
     /* Basic Options */

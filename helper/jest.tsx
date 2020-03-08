@@ -4,6 +4,8 @@ import axios, { AxiosInstance } from 'axios';
 import { StaticQuery } from 'gatsby';
 import { GlobalState } from '@src/state';
 
+export type MockMethods<T> = { [K in keyof T]: jest.Mock };
+
 export const mockAppStoreCreateor = (axiosInstance: AxiosInstance = axios) => {
   return configureStore<GlobalState>([thunk.withExtraArgument({ axios: axiosInstance })]);
 };
