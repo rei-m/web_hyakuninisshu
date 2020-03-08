@@ -34,14 +34,14 @@ describe('domain/models/Question', () => {
       const startTime = new Date(2020, 2, 6, 23, 20, 30).getTime();
       const answerDate = new Date(2020, 2, 6, 23, 20, 40);
       const actual = Question.answer({ ...MOCK_QUESTION_1_STARTED, startTime }, 1, answerDate);
-      expect(actual.answer).toEqual({ isCorrect: true, answerTime: 10000 });
+      expect(actual.answer).toEqual({ isCorrect: true, answerMilliSec: 10000 });
     });
 
     it('should answer Question when wrong', () => {
       const startTime = new Date(2020, 2, 6, 23, 20, 30).getTime();
       const answerDate = new Date(2020, 2, 6, 23, 20, 40);
       const actual = Question.answer({ ...MOCK_QUESTION_1_STARTED, startTime }, 2, answerDate);
-      expect(actual.answer).toEqual({ isCorrect: false, answerTime: 10000 });
+      expect(actual.answer).toEqual({ isCorrect: false, answerMilliSec: 10000 });
     });
 
     it('should throw error when question is not started', () => {

@@ -26,7 +26,7 @@ export const MOCK_QUESTION_1_ANSWERED_CORRECT: Question = {
   startTime: 1583595557624,
   answer: {
     isCorrect: true,
-    answerTime: 1583595559624,
+    answerMilliSec: 2000,
   },
 };
 
@@ -37,6 +37,6 @@ export const MOCK_QUESTION_2_ANSWERED_WRONG: Question = {
   startTime: 1583595689123,
   answer: {
     isCorrect: false,
-    answerTime: 1583595690123,
+    answerMilliSec: 1000,
   },
 };
