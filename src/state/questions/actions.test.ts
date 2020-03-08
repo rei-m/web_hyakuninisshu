@@ -1,5 +1,5 @@
 import { ActionCreatorImpl } from './actions';
-import { QuestionListService } from '@src/domain/services';
+import { InitializeQuestionListService } from '@src/domain/services';
 import { KarutaRepository, QuestionRepository } from '@src/domain/repositories';
 import {
   MOCK_ALL_KARUTA_LIST,
@@ -48,7 +48,7 @@ describe('QuestionsActionCreator', () => {
     const actionCreator = new ActionCreatorImpl(
       mockKarutaRepository,
       mockQuestionRepository,
-      new QuestionListService(mockKarutaRepository, mockQuestionRepository)
+      new InitializeQuestionListService(mockKarutaRepository, mockQuestionRepository)
     );
     const actual = actionCreator.startTraining(1, 10, 1, 'blue', 'kana', 'kanji', 'normal');
 
@@ -80,7 +80,7 @@ describe('QuestionsActionCreator', () => {
     const actionCreator = new ActionCreatorImpl(
       mockKarutaRepository,
       mockQuestionRepository,
-      new QuestionListService(mockKarutaRepository, mockQuestionRepository)
+      new InitializeQuestionListService(mockKarutaRepository, mockQuestionRepository)
     );
     const actual = actionCreator.restartTraining();
 
@@ -103,7 +103,7 @@ describe('QuestionsActionCreator', () => {
     const actionCreator = new ActionCreatorImpl(
       mockKarutaRepository,
       mockQuestionRepository,
-      new QuestionListService(mockKarutaRepository, mockQuestionRepository)
+      new InitializeQuestionListService(mockKarutaRepository, mockQuestionRepository)
     );
     const actual = actionCreator.startExam();
 
@@ -124,7 +124,7 @@ describe('QuestionsActionCreator', () => {
     const actionCreator = new ActionCreatorImpl(
       mockKarutaRepository,
       mockQuestionRepository,
-      new QuestionListService(mockKarutaRepository, mockQuestionRepository)
+      new InitializeQuestionListService(mockKarutaRepository, mockQuestionRepository)
     );
     const startDate = new Date();
     const actual = actionCreator.startQuestion(MOCK_QUESTION_1.id, 'kanji', 'kana', startDate);
@@ -174,7 +174,7 @@ describe('QuestionsActionCreator', () => {
     const actionCreator = new ActionCreatorImpl(
       mockKarutaRepository,
       mockQuestionRepository,
-      new QuestionListService(mockKarutaRepository, mockQuestionRepository)
+      new InitializeQuestionListService(mockKarutaRepository, mockQuestionRepository)
     );
     const answerDate = new Date();
     const actual = actionCreator.answerQuestion(MOCK_QUESTION_1_STARTED.id, MOCK_TORIFUDA_1, answerDate);
@@ -194,7 +194,7 @@ describe('QuestionsActionCreator', () => {
     const actionCreator = new ActionCreatorImpl(
       karutaRepository,
       questionRepository,
-      new QuestionListService(karutaRepository, questionRepository)
+      new InitializeQuestionListService(karutaRepository, questionRepository)
     );
     const actual = actionCreator.confirmCorrect();
 
@@ -209,7 +209,7 @@ describe('QuestionsActionCreator', () => {
     const actionCreator = new ActionCreatorImpl(
       karutaRepository,
       mockQuestionRepository,
-      new QuestionListService(karutaRepository, mockQuestionRepository)
+      new InitializeQuestionListService(karutaRepository, mockQuestionRepository)
     );
     const actual = actionCreator.openNextQuestionAction(MOCK_QUESTION_1.id);
 
@@ -224,7 +224,7 @@ describe('QuestionsActionCreator', () => {
     const actionCreator = new ActionCreatorImpl(
       karutaRepository,
       questionRepository,
-      new QuestionListService(karutaRepository, questionRepository)
+      new InitializeQuestionListService(karutaRepository, questionRepository)
     );
     const actual = actionCreator.resetQuestion();
 
@@ -244,7 +244,7 @@ describe('QuestionsActionCreator', () => {
     const actionCreator = new ActionCreatorImpl(
       mockKarutaRepository,
       mockQuestionRepository,
-      new QuestionListService(mockKarutaRepository, mockQuestionRepository)
+      new InitializeQuestionListService(mockKarutaRepository, mockQuestionRepository)
     );
 
     const actual = actionCreator.finishQuestion();
