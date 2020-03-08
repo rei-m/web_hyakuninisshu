@@ -3,16 +3,10 @@ import { Question, QuestionId, KarutaNo, Karuta } from '../models';
 import { getRandomInt, randomizeArray } from '../utils/array';
 import { IllegalArgumentError } from '../errors';
 
-export class QuestionListService {
-  constructor(karutaRepository: KarutaRepository, questionRepository: QuestionRepository) {
-    this._karutaRepository = karutaRepository;
-    this._questionRepository = questionRepository;
-  }
+export class InitializeQuestionListService {
+  constructor(private _karutaRepository: KarutaRepository, private _questionRepository: QuestionRepository) {}
 
-  private _karutaRepository: KarutaRepository;
-  private _questionRepository: QuestionRepository;
-
-  public initialize(targetKarutaList: Array<Karuta>): Array<Question> {
+  public execute(targetKarutaList: Array<Karuta>): Array<Question> {
     if (targetKarutaList.length === 0) {
       throw new IllegalArgumentError('targetKarutaList is empty');
     }

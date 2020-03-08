@@ -1,15 +1,23 @@
 import * as types from './types';
 import * as constants from './constants';
-import { QuestionListService } from '@src/domain/services';
-import { Kimariji, Color, QuestionId, Question, KarutaCollection, Karuta, KarutaNo } from '@src/domain/models';
+import { InitializeQuestionListService } from '@src/domain/services';
+import {
+  Kimariji,
+  Color,
+  QuestionId,
+  Question,
+  QuestionCollection,
+  KarutaCollection,
+  Karuta,
+  KarutaNo,
+} from '@src/domain/models';
 import { KarutaRepository, QuestionRepository } from '@src/domain/repositories';
-import { IllegalStateError } from '@src/domain/errors';
 
 export class ActionCreatorImpl implements types.ActionCreator {
   constructor(
     private _karutaRepository: KarutaRepository,
     private _questionRepository: QuestionRepository,
-    private _questionListService: QuestionListService
+    private _initializeQuestionListService: InitializeQuestionListService
   ) {}
 
   startTraining(
@@ -32,7 +40,7 @@ export class ActionCreatorImpl implements types.ActionCreator {
       colorList,
     });
 
-    const questionList = this._questionListService.initialize(targetKarutaList);
+    const questionList = this._initializeQuestionListService.execute(targetKarutaList);
 
     return {
       type: constants.START_TRAINING_NAME,
@@ -59,7 +67,7 @@ export class ActionCreatorImpl implements types.ActionCreator {
       .map(q => q.correctAnswerKarutaNo);
     const targetKarutaList = this._karutaRepository.findByNoList(wrongKarutaNoList);
 
-    const questionList = this._questionListService.initialize(targetKarutaList);
+    const questionList = this._initializeQuestionListService.execute(targetKarutaList);
 
     return {
       type: constants.RESTART_TRAINING_NAME,
@@ -72,7 +80,7 @@ export class ActionCreatorImpl implements types.ActionCreator {
 
   startExam(): types.StartExamAction {
     const targetKarutaList = this._karutaRepository.findAll();
-    const questionList = this._questionListService.initialize(targetKarutaList);
+    const questionList = this._initializeQuestionListService.execute(targetKarutaList);
 
     return {
       type: constants.START_EXAM_NAME,
@@ -168,42 +176,23 @@ export class ActionCreatorImpl implements types.ActionCreator {
     const questionList = this._questionRepository.findAll();
     const allKarutaList = this._karutaRepository.findAll();
 
-    const totalCount = questionList.length;
-
-    let correctCount = 0;
-    let totalAnswerTime = 0;
-    const answerList: Array<{
-      questionId: QuestionId;
-      isCorrect: boolean;
-      correctKaruta: Karuta;
-    }> = [];
+    const aggregateResult = QuestionCollection.aggregate(questionList);
 
     const finder: Map<KarutaNo, Karuta> = new Map();
     allKarutaList.forEach(karuta => {
       finder.set(karuta.no, karuta);
     });
 
-    questionList.forEach(question => {
-      const answer = question.answer;
-      if (!answer) {
-        throw new IllegalStateError(`not answered`);
-      }
-      correctCount += answer.isCorrect ? 1 : 0;
-      totalAnswerTime += answer.answerTime - question.startTime!;
-      answerList.push({
-        questionId: question.id,
-        isCorrect: answer.isCorrect,
-        correctKaruta: finder.get(question.correctAnswerKarutaNo)!,
-      });
-    });
-
-    const averageAnswerSecond = totalAnswerTime / 1000 / totalCount;
     return {
       type: constants.FINISH_QUESTION_NAME,
       payload: {
-        correctCount,
-        averageAnswerSecond: Math.round(averageAnswerSecond * 100) / 100,
-        answerList,
+        correctCount: aggregateResult.correctCount,
+        averageAnswerSecond: aggregateResult.averageAnswerSecond,
+        answerList: aggregateResult.answerList.map(answer => ({
+          questionId: answer.questionId,
+          isCorrect: answer.isCorrect,
+          correctKaruta: finder.get(answer.correctAnswerKarutaNo)!,
+        })),
       },
     };
   }

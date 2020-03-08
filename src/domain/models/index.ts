@@ -8,6 +8,7 @@ import { Kimariji } from './Kimariji';
 import { Ku } from './Ku';
 
 import { Question } from './Question';
+import { QuestionCollection } from './QuestionCollection';
 import { QuestionId } from './QuestionId';
 import { Answer } from './Answer';
 
@@ -21,6 +22,7 @@ export {
   Kimariji,
   Ku,
   Question,
+  QuestionCollection,
   QuestionId,
   Answer,
 };
