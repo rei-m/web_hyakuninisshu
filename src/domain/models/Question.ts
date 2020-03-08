@@ -47,7 +47,7 @@ export const Question = {
     }
     const answer: Answer = {
       isCorrect: question.correctAnswerKarutaNo === selectedKarutaNo,
-      answerTime: answerDate.getTime() - question.startTime,
+      answerMilliSec: answerDate.getTime() - question.startTime,
     };
     return {
       ...question,

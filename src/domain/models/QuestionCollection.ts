@@ -18,11 +18,10 @@ export const QuestionCollection = {
     if (questionList.length === 0) {
       throw new IllegalArgumentError(`questionList is empty`);
     }
-
     const totalCount = questionList.length;
 
     let correctCount = 0;
-    let totalAnswerTime = 0;
+    let totalAnswerMilliSec = 0;
     const answerList: Array<{
       questionId: QuestionId;
       isCorrect: boolean;
@@ -35,7 +34,7 @@ export const QuestionCollection = {
         throw new IllegalStateError(`not answered`);
       }
       correctCount += answer.isCorrect ? 1 : 0;
-      totalAnswerTime += answer.answerTime - question.startTime!;
+      totalAnswerMilliSec += answer.answerMilliSec;
       answerList.push({
         questionId: question.id,
         isCorrect: answer.isCorrect,
@@ -43,7 +42,7 @@ export const QuestionCollection = {
       });
     });
 
-    const averageAnswerSecond = totalAnswerTime / 1000 / totalCount;
+    const averageAnswerSecond = totalAnswerMilliSec / 1000 / totalCount;
 
     return {
       correctCount,

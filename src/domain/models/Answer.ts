@@ -3,5 +3,5 @@
  */
 export type Answer = Readonly<{
   isCorrect: boolean; // 正解かどうか
-  answerTime: number; // 回答した時間（epoc秒）
+  answerMilliSec: number; // 回答にかかった時間(millisec)
 }>;
