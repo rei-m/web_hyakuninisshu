@@ -10,14 +10,14 @@ import Overlay from '@src/presentation/components/atoms/Overlay';
 import { ThemeInterface } from '@src/presentation/styles/theme';
 import { useDiContainer } from '@src/presentation/hooks/useDiContainer';
 import { GlobalState } from '@src/state';
-import { Karuta } from '@src/domain/models';
+import { KarutaCollection } from '@src/domain/models';
 
 export type Props = {
-  karutaList: Array<Karuta>;
+  karutaCollection: KarutaCollection;
 } & Pick<RouteComponentProps, 'navigate'>;
 
 export type PresenterProps = {
-  karutaList: Array<Karuta>;
+  karutaCollection: KarutaCollection;
   filterOpen: boolean;
   onClickSearch: () => void;
   onClickOverlay: () => void;
@@ -35,7 +35,13 @@ const useStyles = makeStyles<ThemeInterface>(theme => ({
   },
 }));
 
-export const Presenter = ({ karutaList, filterOpen, onClickSearch, onClickOverlay, onClickBack }: PresenterProps) => {
+export const Presenter = ({
+  karutaCollection,
+  filterOpen,
+  onClickSearch,
+  onClickOverlay,
+  onClickBack,
+}: PresenterProps) => {
   const classes = useStyles();
   return (
     <SingleContentPageTemplate
@@ -48,7 +54,7 @@ export const Presenter = ({ karutaList, filterOpen, onClickSearch, onClickOverla
       onClickSearch={onClickSearch}
       content={
         <>
-          <FilteredSmallMaterialList karutas={karutaList} />
+          <FilteredSmallMaterialList karutaCollection={karutaCollection} />
           {filterOpen && (
             <Overlay onClick={onClickOverlay}>
               <MaterialListFilter className={classes.materialListFilter} />
@@ -60,7 +66,7 @@ export const Presenter = ({ karutaList, filterOpen, onClickSearch, onClickOverla
   );
 };
 
-export const Container = ({ karutaList, navigate, presenter }: ContainerProps) => {
+export const Container = ({ karutaCollection, navigate, presenter }: ContainerProps) => {
   const dispatch = useDispatch();
   const { uiActionCreator } = useDiContainer();
   const filterOpen = useSelector<GlobalState, boolean>(
@@ -83,7 +89,7 @@ export const Container = ({ karutaList, navigate, presenter }: ContainerProps) =
   }, [navigate]);
 
   return presenter({
-    karutaList,
+    karutaCollection,
     filterOpen,
     onClickSearch: handleClickSearch,
     onClickOverlay: handleClickOverlay,

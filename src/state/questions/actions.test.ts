@@ -1,8 +1,8 @@
 import { ActionCreatorImpl } from './actions';
-import { InitializeQuestionListService } from '@src/domain/services';
+import { CreateQuestionListService } from '@src/domain/services';
 import { KarutaRepository, QuestionRepository } from '@src/domain/repositories';
 import {
-  MOCK_ALL_KARUTA_LIST,
+  MOCK_KARUTA_COLLECTION,
   MOCK_KARUTA_1,
   MOCK_KARUTA_2,
   MOCK_KARUTA_3,
@@ -42,13 +42,13 @@ describe('state/questions/actions/ActionCreator', () => {
   });
 
   it('should create StartTrainingAction', () => {
-    karutaRepositoryMethods.findAll.mockReturnValue(MOCK_ALL_KARUTA_LIST);
+    karutaRepositoryMethods.findAll.mockReturnValue(MOCK_KARUTA_COLLECTION);
     const mockKarutaRepository = { ...karutaRepository, ...karutaRepositoryMethods };
     const mockQuestionRepository = { ...questionRepository, ...questionRepositoryMethods };
     const actionCreator = new ActionCreatorImpl(
       mockKarutaRepository,
       mockQuestionRepository,
-      new InitializeQuestionListService(mockKarutaRepository, mockQuestionRepository)
+      new CreateQuestionListService()
     );
     const actual = actionCreator.startTraining(11, 20, 1, 'blue', 'kana', 'kanji', 'normal');
 
@@ -69,7 +69,7 @@ describe('state/questions/actions/ActionCreator', () => {
   });
 
   it('should create RestartTrainingAction', () => {
-    karutaRepositoryMethods.findAll.mockReturnValue(MOCK_ALL_KARUTA_LIST);
+    karutaRepositoryMethods.findAll.mockReturnValue(MOCK_KARUTA_COLLECTION);
     karutaRepositoryMethods.findByNoList.mockReturnValue([MOCK_KARUTA_1]);
     questionRepositoryMethods.findAll.mockReturnValue([
       MOCK_QUESTION_1_ANSWERED_CORRECT,
@@ -80,7 +80,7 @@ describe('state/questions/actions/ActionCreator', () => {
     const actionCreator = new ActionCreatorImpl(
       mockKarutaRepository,
       mockQuestionRepository,
-      new InitializeQuestionListService(mockKarutaRepository, mockQuestionRepository)
+      new CreateQuestionListService()
     );
     const actual = actionCreator.restartTraining();
 
@@ -97,13 +97,13 @@ describe('state/questions/actions/ActionCreator', () => {
   });
 
   it('should create StartExamAction', () => {
-    karutaRepositoryMethods.findAll.mockReturnValue(MOCK_ALL_KARUTA_LIST);
+    karutaRepositoryMethods.findAll.mockReturnValue(MOCK_KARUTA_COLLECTION);
     const mockKarutaRepository = { ...karutaRepository, ...karutaRepositoryMethods };
     const mockQuestionRepository = { ...questionRepository, ...questionRepositoryMethods };
     const actionCreator = new ActionCreatorImpl(
       mockKarutaRepository,
       mockQuestionRepository,
-      new InitializeQuestionListService(mockKarutaRepository, mockQuestionRepository)
+      new CreateQuestionListService()
     );
     const actual = actionCreator.startExam();
 
@@ -124,7 +124,7 @@ describe('state/questions/actions/ActionCreator', () => {
     const actionCreator = new ActionCreatorImpl(
       mockKarutaRepository,
       mockQuestionRepository,
-      new InitializeQuestionListService(mockKarutaRepository, mockQuestionRepository)
+      new CreateQuestionListService()
     );
     const startDate = new Date();
     const actual = actionCreator.startQuestion(MOCK_QUESTION_1.id, 'kanji', 'kana', startDate);
@@ -174,7 +174,7 @@ describe('state/questions/actions/ActionCreator', () => {
     const actionCreator = new ActionCreatorImpl(
       mockKarutaRepository,
       mockQuestionRepository,
-      new InitializeQuestionListService(mockKarutaRepository, mockQuestionRepository)
+      new CreateQuestionListService()
     );
     const answerDate = new Date();
     const actual = actionCreator.answerQuestion(MOCK_QUESTION_1_STARTED.id, MOCK_TORIFUDA_1, answerDate);
@@ -191,11 +191,7 @@ describe('state/questions/actions/ActionCreator', () => {
   });
 
   it('should create ConfirmCorrectAction', () => {
-    const actionCreator = new ActionCreatorImpl(
-      karutaRepository,
-      questionRepository,
-      new InitializeQuestionListService(karutaRepository, questionRepository)
-    );
+    const actionCreator = new ActionCreatorImpl(karutaRepository, questionRepository, new CreateQuestionListService());
     const actual = actionCreator.confirmCorrect();
 
     const { type } = actual;
@@ -209,7 +205,7 @@ describe('state/questions/actions/ActionCreator', () => {
     const actionCreator = new ActionCreatorImpl(
       karutaRepository,
       mockQuestionRepository,
-      new InitializeQuestionListService(karutaRepository, mockQuestionRepository)
+      new CreateQuestionListService()
     );
     const actual = actionCreator.openNextQuestionAction(MOCK_QUESTION_1.id);
 
@@ -221,11 +217,7 @@ describe('state/questions/actions/ActionCreator', () => {
   });
 
   it('should create ResetQuestionAction', () => {
-    const actionCreator = new ActionCreatorImpl(
-      karutaRepository,
-      questionRepository,
-      new InitializeQuestionListService(karutaRepository, questionRepository)
-    );
+    const actionCreator = new ActionCreatorImpl(karutaRepository, questionRepository, new CreateQuestionListService());
     const actual = actionCreator.resetQuestion();
 
     const { type } = actual;
@@ -234,7 +226,7 @@ describe('state/questions/actions/ActionCreator', () => {
   });
 
   it('should create FinishQuestionAction', () => {
-    karutaRepositoryMethods.findAll.mockReturnValue([MOCK_KARUTA_1, MOCK_KARUTA_2, MOCK_KARUTA_3, MOCK_KARUTA_4]);
+    karutaRepositoryMethods.findAll.mockReturnValue(MOCK_KARUTA_COLLECTION);
     questionRepositoryMethods.findAll.mockReturnValue([
       MOCK_QUESTION_1_ANSWERED_CORRECT,
       MOCK_QUESTION_2_ANSWERED_WRONG,
@@ -244,7 +236,7 @@ describe('state/questions/actions/ActionCreator', () => {
     const actionCreator = new ActionCreatorImpl(
       mockKarutaRepository,
       mockQuestionRepository,
-      new InitializeQuestionListService(mockKarutaRepository, mockQuestionRepository)
+      new CreateQuestionListService()
     );
 
     const actual = actionCreator.finishQuestion();
@@ -258,12 +250,12 @@ describe('state/questions/actions/ActionCreator', () => {
       {
         questionId: MOCK_QUESTION_1_ANSWERED_CORRECT.id,
         isCorrect: true,
-        correctKaruta: MOCK_KARUTA_1,
+        correctKaruta: MOCK_KARUTA_COLLECTION.karutaList[0],
       },
       {
         questionId: MOCK_QUESTION_2_ANSWERED_WRONG.id,
         isCorrect: false,
-        correctKaruta: MOCK_KARUTA_2,
+        correctKaruta: MOCK_KARUTA_COLLECTION.karutaList[1],
       },
     ]);
   });

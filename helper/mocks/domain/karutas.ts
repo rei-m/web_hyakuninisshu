@@ -1,4 +1,4 @@
-import { Karuta } from '@src/domain/models';
+import { Karuta, KarutaCollection } from '@src/domain/models';
 
 export const MOCK_KARUTA_1: Karuta = {
   id: '1',
@@ -140,3 +140,7 @@ export const MOCK_ALL_KARUTA_LIST: Array<Karuta> = [
     };
   })
 );
+
+export const MOCK_KARUTA_COLLECTION: KarutaCollection = {
+  karutaList: MOCK_ALL_KARUTA_LIST,
+};

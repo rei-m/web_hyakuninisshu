@@ -1,6 +1,6 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
 import IndexPage from './index';
-import { MOCK_ALL_KARUTA_LIST } from '@helper/mocks/domain/karutas';
+import { MOCK_KARUTA_COLLECTION } from '@helper/mocks/domain/karutas';
 
-storiesOf('pages/index', module).add('default', () => <IndexPage karutaList={MOCK_ALL_KARUTA_LIST} />);
+storiesOf('pages/index', module).add('default', () => <IndexPage karutaCollection={MOCK_KARUTA_COLLECTION} />);
