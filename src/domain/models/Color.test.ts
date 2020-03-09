@@ -1,19 +1,6 @@
 import { Color } from './Color';
 
 describe('domain/models/Color', () => {
-  describe('factory', () => {
-    it('should create Color', () => {
-      const actual = Color.create('blue');
-      expect(actual).toEqual('blue');
-    });
-
-    it('should throw error when invalid arg', () => {
-      expect(() => {
-        Color.create('hoge');
-      }).toThrow();
-    });
-  });
-
   describe('values', () => {
     it('should return all color', () => {
       const actual = Color.values;

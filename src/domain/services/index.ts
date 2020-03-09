@@ -1,3 +1,3 @@
-import { InitializeQuestionListService } from './InitializeQuestionListService';
+import { CreateQuestionListService } from './CreateQuestionListService';
 
-export { InitializeQuestionListService };
+export { CreateQuestionListService };

@@ -1,24 +1,17 @@
-import { IllegalArgumentError } from '../errors';
-
-/**
- * 5色百人一首のかるたの色
- */
-export type Color = 'blue' | 'pink' | 'yellow' | 'green' | 'orange';
+const COLOR_LIST = ['blue', 'pink', 'yellow', 'green', 'orange'] as const;
 const COLOR_MAP = {
   blue: '青色',
   pink: '桃色',
   yellow: '黄色',
   green: '緑色',
   orange: '橙色',
-};
+} as const;
 
+/**
+ * 5色百人一首のかるたの色
+ */
+export type Color = typeof COLOR_LIST[number];
 export const Color = {
-  create: (value: string): Color => {
-    if (['blue', 'pink', 'yellow', 'green', 'orange'].includes(value)) {
-      return value as Color;
-    }
-    throw new IllegalArgumentError(`value=${value}`);
-  },
-  values: ['blue', 'pink', 'yellow', 'green', 'orange'] as Array<Color>,
+  values: COLOR_LIST,
   toJPNString: (value: Color): string => COLOR_MAP[value],
 };

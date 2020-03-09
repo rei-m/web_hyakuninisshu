@@ -1,6 +1,6 @@
 import * as types from './types';
 import * as constants from './constants';
-import { InitializeQuestionListService } from '@src/domain/services';
+import { CreateQuestionListService } from '@src/domain/services';
 import {
   Kimariji,
   Color,
@@ -17,7 +17,7 @@ export class ActionCreatorImpl implements types.ActionCreator {
   constructor(
     private _karutaRepository: KarutaRepository,
     private _questionRepository: QuestionRepository,
-    private _initializeQuestionListService: InitializeQuestionListService
+    private _createQuestionListService: CreateQuestionListService
   ) {}
 
   startTraining(
@@ -33,14 +33,15 @@ export class ActionCreatorImpl implements types.ActionCreator {
     const kimarijiList = kimariji === null ? Kimariji.values : [kimariji];
     const colorList = color === null ? Color.values : [color];
 
-    const allKarutaList = this._karutaRepository.findAll();
-    const targetKarutaList = KarutaCollection.select(allKarutaList, {
+    const karutaCollection = this._karutaRepository.findAll();
+    const targetKarutaList = KarutaCollection.select(karutaCollection, {
       range,
       kimarijiList,
       colorList,
     });
 
-    const questionList = this._initializeQuestionListService.execute(targetKarutaList);
+    const questionList = this._createQuestionListService.execute(karutaCollection, targetKarutaList);
+    this._questionRepository.initialize(questionList);
 
     return {
       type: constants.START_TRAINING_NAME,
@@ -61,13 +62,16 @@ export class ActionCreatorImpl implements types.ActionCreator {
   }
 
   restartTraining(): types.RestartTrainingAction {
+    const karutaCollection = this._karutaRepository.findAll();
+
     const allQuestionList = this._questionRepository.findAll();
     const wrongKarutaNoList = allQuestionList
       .filter(q => q.answer?.isCorrect === false)
       .map(q => q.correctAnswerKarutaNo);
     const targetKarutaList = this._karutaRepository.findByNoList(wrongKarutaNoList);
 
-    const questionList = this._initializeQuestionListService.execute(targetKarutaList);
+    const questionList = this._createQuestionListService.execute(karutaCollection, targetKarutaList);
+    this._questionRepository.initialize(questionList);
 
     return {
       type: constants.RESTART_TRAINING_NAME,
@@ -79,8 +83,9 @@ export class ActionCreatorImpl implements types.ActionCreator {
   }
 
   startExam(): types.StartExamAction {
-    const targetKarutaList = this._karutaRepository.findAll();
-    const questionList = this._initializeQuestionListService.execute(targetKarutaList);
+    const karutaCollection = this._karutaRepository.findAll();
+    const questionList = this._createQuestionListService.execute(karutaCollection, karutaCollection.karutaList);
+    this._questionRepository.initialize(questionList);
 
     return {
       type: constants.START_EXAM_NAME,
@@ -174,12 +179,12 @@ export class ActionCreatorImpl implements types.ActionCreator {
 
   finishQuestion(): types.FinishQuestionAction {
     const questionList = this._questionRepository.findAll();
-    const allKarutaList = this._karutaRepository.findAll();
+    const karutaCollection = this._karutaRepository.findAll();
 
     const aggregateResult = QuestionCollection.aggregate(questionList);
 
     const finder: Map<KarutaNo, Karuta> = new Map();
-    allKarutaList.forEach(karuta => {
+    karutaCollection.karutaList.forEach(karuta => {
       finder.set(karuta.no, karuta);
     });
 

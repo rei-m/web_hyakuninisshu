@@ -5,11 +5,11 @@ import { IllegalStateError, IllegalArgumentError } from '../errors';
 
 export const QuestionCollection = {
   aggregate: (
-    questionList: Array<Question>
+    questionList: ReadonlyArray<Question>
   ): {
     correctCount: number;
     averageAnswerSecond: number;
-    answerList: Array<{
+    answerList: ReadonlyArray<{
       questionId: QuestionId;
       isCorrect: boolean;
       correctAnswerKarutaNo: KarutaNo;

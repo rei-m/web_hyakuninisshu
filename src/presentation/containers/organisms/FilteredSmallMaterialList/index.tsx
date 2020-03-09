@@ -10,15 +10,20 @@ import CenteredFrame from '@src/presentation/components/atoms/CenteredFrame';
 import { ThemeInterface } from '@src/presentation/styles/theme';
 import { GlobalState } from '@src/state';
 import { uiTypes, uiSelectors } from '@src/state/ui';
-import { Karuta } from '@src/domain/models';
+import { KarutaCollection, Karuta } from '@src/domain/models';
 
 export type Props = {
-  karutas: Array<Karuta>;
+  karutaCollection: KarutaCollection;
+  className?: string;
+};
+
+export type PresenterProps = {
+  karutas: ReadonlyArray<Karuta>;
   className?: string;
 };
 
 export type ContainerProps = Props & {
-  presenter: (props: Props) => React.ReactElement;
+  presenter: (props: PresenterProps) => React.ReactElement;
 };
 
 const useStyles = makeStyles<ThemeInterface>(theme => ({
@@ -59,7 +64,7 @@ const useStyles = makeStyles<ThemeInterface>(theme => ({
   },
 }));
 
-export const FilteredSmallMaterialListPresenter = ({ karutas, className }: Props) => {
+export const FilteredSmallMaterialListPresenter = ({ karutas, className }: PresenterProps) => {
   const classes = useStyles();
   return (
     <ul className={clsx(classes.root, className)}>
@@ -82,9 +87,9 @@ export const FilteredSmallMaterialListPresenter = ({ karutas, className }: Props
   );
 };
 
-export const FilteredSmallMaterialListContainer = ({ presenter, karutas, className = '' }: ContainerProps) => {
+export const FilteredSmallMaterialListContainer = ({ presenter, karutaCollection, className = '' }: ContainerProps) => {
   const { karutasFilter } = useSelector<GlobalState, uiTypes.State>(state => state.ui);
-  const filteredKarutas = uiSelectors.filterKarutas(karutas, karutasFilter);
+  const filteredKarutas = uiSelectors.filterKarutas(karutaCollection, karutasFilter);
   return presenter({ karutas: filteredKarutas, className });
 };
 
