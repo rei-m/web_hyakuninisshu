@@ -1,7 +1,6 @@
-import React from 'react';
+import React, { useLayoutEffect } from 'react';
 import clsx from 'clsx';
 import makeStyles from '@material-ui/core/styles/makeStyles';
-import AdSense from 'react-adsense';
 import Block from '@src/presentation/components/atoms/Block';
 import { ThemeInterface } from '@src/presentation/styles/theme';
 
@@ -48,31 +47,47 @@ const AdProperty = {
 };
 
 export const AdProduction = ({ type, className = '' }: Props) => {
+  useLayoutEffect(() => {
+    if (window) (window.adsbygoogle = window.adsbygoogle || []).push({});
+  }, []);
+
   const classes = useStyles();
+
   return (
     <Block className={clsx(classes.root, className)}>
       {type === 'top' ? (
-        //         <>
-        //           <style
-        //             dangerouslySetInnerHTML={{
-        //               __html: `
-        // .ad_top { width: 320px; height: 100px; }
-        // @media(min-width: 500px) { .ad_top { width: 468px; height: 60px; } }
-        // @media(min-width: 800px) { .ad_top { width: 728px; height: 90px; } }
-        // `,
-        //             }}
-        //           />
-        //           <AdSense.Google
-        //             {...AdProperty}
-        //             className={`ad_top`}
-        //             style={{ display: 'inline-block' }}
-        //             format={``}
-        //             responsive={``}
-        //           />
-        //         </>
-        <AdSense.Google {...AdProperty} style={{ display: 'block' }} format={`auto`} responsive={`true`} />
+        <>
+          <style
+            dangerouslySetInnerHTML={{
+              __html: `
+        .ad_top { width: 320px; height: 100px; }
+        @media(min-width: 500px) { .ad_top { width: 468px; height: 60px; } }
+        @media(min-width: 800px) { .ad_top { width: 728px; height: 90px; } }
+        `,
+            }}
+          />
+          <ins
+            className={`ad_top adsbygoogle`}
+            style={{ display: 'inline-block' }}
+            data-ad-client={AdProperty.client}
+            data-ad-slot={AdProperty.slot}
+            data-ad-layout=""
+            data-ad-layout-key=""
+            data-ad-format="auto"
+            data-full-width-responsive={'false'}
+          ></ins>
+        </>
       ) : (
-        <AdSense.Google {...AdProperty} style={{ display: 'block' }} format={`auto`} responsive={`true`} />
+        <ins
+          className={`adsbygoogle`}
+          style={{ display: 'block' }}
+          data-ad-client={AdProperty.client}
+          data-ad-slot={AdProperty.slot}
+          data-ad-layout=""
+          data-ad-layout-key=""
+          data-ad-format="auto"
+          data-full-width-responsive={'true'}
+        ></ins>
       )}
     </Block>
   );
