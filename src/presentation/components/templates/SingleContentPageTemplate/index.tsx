@@ -56,7 +56,7 @@ const SingleContentPageTemplate = ({
         <Heading level={2} className={classes.sectionTitle}>
           {pageTitle}
         </Heading>
-        <Ad type={`top`} />
+        <Ad type={`responsive`} />
         {content}
         <Ad type={`responsive`} />
       </section>

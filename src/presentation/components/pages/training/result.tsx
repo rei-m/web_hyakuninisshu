@@ -43,7 +43,7 @@ export const Presenter = ({ state, result, totalCount, onClickRestart, onClickBa
       onClickBack={onClickBack}
       content={
         <>
-          <Ad type={`top`} />
+          <Ad type={`responsive`} />
           {state === 'finished' && !!result ? (
             <KarutaPlayingResult
               totalCount={totalCount}
