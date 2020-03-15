@@ -10,10 +10,10 @@ import ReadingContent from '@src/presentation/components/molecules/ReadingConten
 import Paragraph from '@src/presentation/components/atoms/Paragraph';
 import Txt from '@src/presentation/components/atoms/Txt';
 import { ThemeInterface } from '@src/presentation/styles/theme';
-import { Karuta } from '@src/domain/models';
+import { KarutaCollection } from '@src/domain/models';
 
 export type Props = {
-  karutaList: Array<Karuta>;
+  karutaCollection: KarutaCollection;
 };
 
 const useStyles = makeStyles<ThemeInterface>(theme => ({
@@ -41,7 +41,7 @@ const useStyles = makeStyles<ThemeInterface>(theme => ({
   },
 }));
 
-const IndexPage = ({ karutaList }: Props) => {
+const IndexPage = ({ karutaCollection }: Props) => {
   const classes = useStyles();
   return (
     <TripleContentsPageTemplate
@@ -147,7 +147,7 @@ const IndexPage = ({ karutaList }: Props) => {
           </ReadingContent>
           <ReadingContent title={`百人一首 歌一覧`}>
             <ul className={classes.karutaList}>
-              {karutaList.map(karuta => (
+              {karutaCollection.karutaList.map(karuta => (
                 <li key={karuta.no}>
                   <Link to={paths.karutasShow(karuta.no)}>
                     <SmallMaterial karuta={karuta} separate={` `} image={false} className={classes.material} />

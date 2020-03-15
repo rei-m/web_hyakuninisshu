@@ -54,7 +54,7 @@ const TripleContentsPageTemplate = ({
       <SEO title={title} keywords={keywords} description={description} />
       <Block className={classes.content}>
         {top}
-        <Ad type={`top`} />
+        <Ad type={`responsive`} />
         {middle}
         <Ad type={`responsive`} />
         {bottom}

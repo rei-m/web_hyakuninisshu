@@ -74,7 +74,7 @@ export const Presenter = ({
       onClickBack={onClickBack}
       content={
         <>
-          <Ad type={`top`} />
+          <Ad type={`responsive`} />
           {state === 'finished' && !!result ? (
             <>
               <KarutaPlayingResult

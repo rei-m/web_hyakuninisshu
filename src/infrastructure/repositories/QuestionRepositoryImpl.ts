@@ -6,7 +6,7 @@ export class QuestionRepositoryImpl implements QuestionRepository {
   private keyList: ReadonlyArray<QuestionId> = [];
   private dataSource: Map<QuestionId, Question> = new Map();
 
-  initialize(questionList: Array<Question>) {
+  initialize(questionList: ReadonlyArray<Question>) {
     this.keyList = questionList.map(q => q.id);
     const source = new Map();
     questionList.forEach(q => {
