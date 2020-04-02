@@ -56,7 +56,7 @@ const TripleContentsPageTemplate = ({
         {top}
         <Ad type={`responsive`} />
         {middle}
-        <Ad type={`responsive`} />
+        {/* <Ad type={`responsive`} /> */}
         {bottom}
       </Block>
     </Layout>
