@@ -46,7 +46,7 @@ const IndexPage = ({ karutaCollection }: Props) => {
   return (
     <TripleContentsPageTemplate
       title={`百人一首 - 簡単に暗記 -`}
-      keywords={[`百人一首`, `小倉百人一首`, `ちはやふる`, `歌`, `一覧`, `意味`, `歌番号`, `暗記`, `練習`]}
+      keywords={[`百人一首`, `小倉百人一首`, `ちはやふる`, `暗記`, `練習`]}
       top={
         <ReadingContent title={`百人一首 簡単に暗記について`}>
           <Paragraph size={`s`}>

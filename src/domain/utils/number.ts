@@ -1,5 +1,10 @@
 const NUMS = ['一', '二', '三', '四', '五', '六', '七', '八', '九'];
 
+/**
+ * 1 から 100までの数字を漢数字に変換する
+ *
+ * @param num 変換対象の数字
+ */
 export const toChineseChar = (num: number): string => {
   if (num === 100) {
     return '百';

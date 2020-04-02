@@ -58,7 +58,7 @@ const SingleContentPageTemplate = ({
         </Heading>
         <Ad type={`responsive`} />
         {content}
-        <Ad type={`responsive`} />
+        {/* <Ad type={`responsive`} /> */}
       </section>
     </Layout>
   );

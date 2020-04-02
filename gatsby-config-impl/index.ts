@@ -3,7 +3,7 @@ import { GatsbyPlugin } from './types';
 
 export const siteMetadata: SiteMetaData = {
   title: `百人一首 - 簡単に暗記 -`,
-  description: `百人一首の暗記を練習できます。百人一首の札の画像や現代語訳も載せています。百人一首の歌の意味に触れながら楽しく覚えましょう。`,
+  description: `百人一首の暗記を簡単に練習できます。百人一首の札の画像や現代語訳も載せていますので、百人一首の歌の意味に触れながら楽しく覚えましょう。`,
   author: `@rei-m`,
 };
 
