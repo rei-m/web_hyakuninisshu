@@ -16,7 +16,7 @@ export type Props = {
   onClickSearch?: () => void;
 };
 
-const useStyles = makeStyles<ThemeInterface, { canBack: boolean }>(theme => ({
+const useStyles = makeStyles<ThemeInterface, { canBack: boolean }>((theme) => ({
   root: {
     boxShadow: theme.elevationShadowHeader,
     backgroundColor: theme.palette.primary.main,

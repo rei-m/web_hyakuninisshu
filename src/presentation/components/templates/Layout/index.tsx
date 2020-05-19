@@ -13,7 +13,7 @@ export type Props = {
   onClickSearch?: () => void;
 };
 
-const useStyles = makeStyles<ThemeInterface, Pick<Props, 'isDisplayNav'>>(theme => ({
+const useStyles = makeStyles<ThemeInterface, Pick<Props, 'isDisplayNav'>>((theme) => ({
   root: {
     paddingTop: theme.headerHeight,
     paddingBottom: ({ isDisplayNav }) => (isDisplayNav ? theme.bottomNavHeight : 0),

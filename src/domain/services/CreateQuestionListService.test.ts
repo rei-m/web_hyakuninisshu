@@ -5,7 +5,7 @@ describe('domain/services/CreateQuestionListService', () => {
   it('should create questionList', () => {
     const service = new CreateQuestionListService();
     const actual = service.execute(MOCK_KARUTA_COLLECTION, [MOCK_KARUTA_1, MOCK_KARUTA_2, MOCK_KARUTA_3]);
-    const correctKarutaNoList = actual.map(q => q.correctAnswerKarutaNo);
+    const correctKarutaNoList = actual.map((q) => q.correctAnswerKarutaNo);
 
     expect(actual.length).toEqual(3);
     expect(correctKarutaNoList).toContain(MOCK_KARUTA_1.no);

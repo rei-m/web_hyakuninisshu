@@ -22,7 +22,7 @@ export type Props = {
   handleChange: (event: React.ChangeEvent<{ name?: string; value: unknown }>, child: React.ReactNode) => void;
 };
 
-const useStyles = makeStyles<ThemeInterface>(theme => ({
+const useStyles = makeStyles<ThemeInterface>((theme) => ({
   select: {
     fontSize: theme.fontSize.m,
     flexGrow: 1,

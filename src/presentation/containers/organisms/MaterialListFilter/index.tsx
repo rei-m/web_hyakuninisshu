@@ -37,7 +37,7 @@ export type PresenterProps = OwnProps & ConnectedProps & DispatchProps;
 
 export type ContainerProps = OwnProps & { presenter: React.FC<PresenterProps> };
 
-const useStyles = makeStyles<ThemeInterface>(theme => ({
+const useStyles = makeStyles<ThemeInterface>((theme) => ({
   root: {
     backgroundColor: theme.colorThin,
     width: 200,
@@ -164,7 +164,7 @@ export const MaterialListFilterPresenter = ({
 export const MaterialListFilterContainer = ({ presenter, className = '' }: ContainerProps) => {
   const dispatch = useDispatch();
   const { uiActionCreator } = useDiContainer();
-  const { karutasFilter } = useSelector<GlobalState, uiTypes.State>(state => state.ui);
+  const { karutasFilter } = useSelector<GlobalState, uiTypes.State>((state) => state.ui);
   const handleChangeColor = (color: Color, checked: boolean) => {
     dispatch(uiActionCreator.toggleKarutasColor(color, checked));
   };

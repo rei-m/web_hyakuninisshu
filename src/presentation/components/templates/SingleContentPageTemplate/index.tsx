@@ -19,7 +19,7 @@ export type Props = {
   onClickSearch?: () => void;
 };
 
-const useStyles = makeStyles<ThemeInterface>(theme => ({
+const useStyles = makeStyles<ThemeInterface>((theme) => ({
   content: {
     boxSizing: 'border-box',
     padding: theme.spacing(2),

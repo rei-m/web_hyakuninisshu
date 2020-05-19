@@ -8,9 +8,9 @@ export type Props = {
   color?: string;
 };
 
-const useStyles = makeStyles<ThemeInterface, { color?: string }>(theme => ({
+const useStyles = makeStyles<ThemeInterface, { color?: string }>((theme) => ({
   root: {
-    color: props => (props.color ? props.color : theme.palette.primary.dark),
+    color: (props) => (props.color ? props.color : theme.palette.primary.dark),
   },
 }));
 

@@ -35,7 +35,7 @@ export type ContainerProps = Props & {
   presenter: React.ComponentType<PresenterProps>;
 };
 
-const useStyles = makeStyles<ThemeInterface>(theme => ({
+const useStyles = makeStyles<ThemeInterface>((theme) => ({
   form: {
     maxWidth: 380,
   },
@@ -48,32 +48,32 @@ const useStyles = makeStyles<ThemeInterface>(theme => ({
   },
 }));
 
-const RANGE_FROM_KEY_VALUE_LIST = questionsTypes.RangeFromCondition.values.map(value => ({
+const RANGE_FROM_KEY_VALUE_LIST = questionsTypes.RangeFromCondition.values.map((value) => ({
   value: String(value),
   text: KarutaNo.toJPNString(value),
 }));
 
-const RANGE_TO_KEY_VALUE_LIST = questionsTypes.RangeToCondition.values.map(value => ({
+const RANGE_TO_KEY_VALUE_LIST = questionsTypes.RangeToCondition.values.map((value) => ({
   value: String(value),
   text: KarutaNo.toJPNString(value),
 }));
 
-const KIMARIJI_KEY_VALUE_LIST = questionsTypes.KimarijiCondition.values.map(value => ({
+const KIMARIJI_KEY_VALUE_LIST = questionsTypes.KimarijiCondition.values.map((value) => ({
   value: value === null ? 'none' : String(value),
   text: value === null ? '指定しない' : Kimariji.toJPNString(value),
 }));
 
-const COLOR_KEY_VALUE_LIST = questionsTypes.ColorCondition.values.map(value => ({
+const COLOR_KEY_VALUE_LIST = questionsTypes.ColorCondition.values.map((value) => ({
   value: value === null ? 'none' : value,
   text: value === null ? '指定しない' : Color.toJPNString(value),
 }));
 
-const KARUTA_STYLE_KEY_VALUE_LIST = questionsTypes.KarutaStyleCondition.values.map(value => ({
+const KARUTA_STYLE_KEY_VALUE_LIST = questionsTypes.KarutaStyleCondition.values.map((value) => ({
   value,
   text: value === 'kana' ? 'すべて仮名で表示' : '漢字と仮名で表示',
 }));
 
-const QUESTION_ANIM_KEY_VALUE_LIST = questionsTypes.QuestionAnimCondition.values.map(value => ({
+const QUESTION_ANIM_KEY_VALUE_LIST = questionsTypes.QuestionAnimCondition.values.map((value) => ({
   value,
   text: value === 'none' ? 'なし' : value === 'slow' ? 'おそめ' : value === 'normal' ? 'ふつう' : 'はやめ',
 }));
@@ -147,7 +147,7 @@ export const TrainingMenuFormPresenter = ({ values, errors, onChangeRange, onCha
 };
 
 export const TrainingMenuFormContainer = ({ onSubmit, presenter: Presenter }: ContainerProps) => {
-  const { trainingCondition } = useSelector<GlobalState, questionsTypes.State>(state => state.questions);
+  const { trainingCondition } = useSelector<GlobalState, questionsTypes.State>((state) => state.questions);
   const { values, errors, setters } = useForm(trainingCondition);
 
   const handleChangeRange = useCallback(

@@ -26,7 +26,7 @@ export type Props = {
   onClick: (toriFuda: questionsTypes.ToriFuda) => void;
 };
 
-const useStyles = makeStyles<ThemeInterface, Pick<Props, 'size' | 'thin'>>(theme => ({
+const useStyles = makeStyles<ThemeInterface, Pick<Props, 'size' | 'thin'>>((theme) => ({
   root: {
     display: 'flex',
     justifyContent: 'center',
@@ -54,10 +54,12 @@ const useStyles = makeStyles<ThemeInterface, Pick<Props, 'size' | 'thin'>>(theme
   },
 }));
 
-const Root: React.FC<Pick<Props, 'size' | 'thin' | 'className'> & {
-  children?: React.ReactNode;
-  onClick: () => void;
-}> = ({ size, thin, className = '', children, onClick }) => {
+const Root: React.FC<
+  Pick<Props, 'size' | 'thin' | 'className'> & {
+    children?: React.ReactNode;
+    onClick: () => void;
+  }
+> = ({ size, thin, className = '', children, onClick }) => {
   const classes = useStyles({ size, thin });
   return (
     <Block onClick={onClick} className={clsx(classes.root, className)}>

@@ -14,5 +14,5 @@ const props: PresenterProps = {
 };
 
 storiesOf('pages/karutas', module)
-  .addDecorator(story => reduxStoreDecorator(story))
+  .addDecorator((story) => reduxStoreDecorator(story))
   .add('default', () => <Presenter {...props} />);

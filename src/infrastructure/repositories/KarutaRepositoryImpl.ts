@@ -9,7 +9,7 @@ export class KarutaRepositoryImpl implements KarutaRepository {
   constructor(karutaList: ReadonlyArray<Karuta>) {
     const keyList: Array<KarutaNo> = [];
     const dataSource: Map<KarutaNo, Karuta> = new Map();
-    karutaList.forEach(karuta => {
+    karutaList.forEach((karuta) => {
       keyList.push(karuta.no);
       dataSource.set(karuta.no, karuta);
     });
@@ -25,7 +25,7 @@ export class KarutaRepositoryImpl implements KarutaRepository {
     return result;
   }
   findByNoList(karutaNoList: ReadonlyArray<KarutaNo>) {
-    const result = karutaNoList.map(karutaNo => {
+    const result = karutaNoList.map((karutaNo) => {
       const karuta = this.dataSource.get(karutaNo);
       if (!karuta) {
         throw new NoSuchElementError(`no=${KarutaNo}`);
@@ -37,7 +37,7 @@ export class KarutaRepositoryImpl implements KarutaRepository {
   }
 
   findAll() {
-    const karutaList = this.keyList.map(key => this.dataSource.get(key)!);
+    const karutaList = this.keyList.map((key) => this.dataSource.get(key)!);
     return {
       karutaList,
     };
