@@ -28,7 +28,7 @@ export const QuestionCollection = {
       correctAnswerKarutaNo: KarutaNo;
     }> = [];
 
-    questionList.forEach(question => {
+    questionList.forEach((question) => {
       const answer = question.answer;
       if (!answer) {
         throw new IllegalStateError(`not answered`);

@@ -1,5 +1,5 @@
 import React from 'react';
-import Helmet from 'react-helmet';
+import { Helmet } from 'react-helmet';
 import { useSEO } from '@src/presentation/hooks/static-queries/useSEO';
 
 export type Props = {

@@ -30,6 +30,6 @@ export const TatamiLayoutPresenter: React.FC<PresenterProps> = ({ Tag, className
   </Tag>
 );
 
-const TatamiLayout: React.FC<Props> = props => <TatamiLayoutContainer presenter={TatamiLayoutPresenter} {...props} />;
+const TatamiLayout: React.FC<Props> = (props) => <TatamiLayoutContainer presenter={TatamiLayoutPresenter} {...props} />;
 
 export default TatamiLayout;

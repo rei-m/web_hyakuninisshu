@@ -12,7 +12,7 @@ export type Props = {
   onClose: () => void;
 } & Pick<DialogProps, 'PaperProps'>;
 
-const useStyles = makeStyles(_theme => ({
+const useStyles = makeStyles((_theme) => ({
   closeButton: {
     position: 'absolute',
     right: 0,

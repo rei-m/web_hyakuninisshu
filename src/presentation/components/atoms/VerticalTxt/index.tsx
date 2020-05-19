@@ -11,7 +11,7 @@ const toLineHeight = (size: string) => {
   return `${value + 0.1}rem`;
 };
 
-const useStyles = makeStyles<ThemeInterface, Pick<TxtProps, 'size'>>(theme => ({
+const useStyles = makeStyles<ThemeInterface, Pick<TxtProps, 'size'>>((theme) => ({
   root: {
     display: 'inline-block',
     width: ({ size = 'm' }) => theme.fontSize[size],
@@ -19,7 +19,7 @@ const useStyles = makeStyles<ThemeInterface, Pick<TxtProps, 'size'>>(theme => ({
   },
 }));
 
-const VerticalTxt: React.FC<Props> = props => {
+const VerticalTxt: React.FC<Props> = (props) => {
   const classes = useStyles(props);
   return <Txt {...{ ...props, className: clsx(classes.root, props.className) }} />;
 };

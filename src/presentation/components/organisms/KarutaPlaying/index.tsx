@@ -25,7 +25,7 @@ export type Props = {
   onClickResult: () => void;
 };
 
-const useStyles = makeStyles<ThemeInterface>(theme => ({
+const useStyles = makeStyles<ThemeInterface>((theme) => ({
   root: {
     display: 'flex',
     justifyContent: 'center',
@@ -100,7 +100,7 @@ const KarutaPlaying = ({
         <YomiFuda yomiFuda={yomiFuda} answered={!!answer} duration={duration} className={classes.yomiFuda} />
       </Block>
       <Block className={classes.toriFudaContainer}>
-        {toriFudaList.map(toriFuda => (
+        {toriFudaList.map((toriFuda) => (
           <ToriFuda
             key={toriFuda.karutaNo}
             toriFuda={toriFuda}

@@ -6,7 +6,7 @@ import { Karuta } from '@src/domain/models';
 import { KarutaJsonResponse } from '@src/infrastructure/responses/KarutaJsonResponse';
 
 const KARUTA_JSON_URL =
-  'https://raw.githubusercontent.com/rei-m/android_hyakuninisshu/develop/infrastructure/src/main/assets/karuta_list.json';
+  'https://raw.githubusercontent.com/rei-m/android_hyakuninisshu/develop/infrastructure/src/main/assets/karuta_list_v_2.json';
 
 export const createPages: GatsbyCreatePages<{ karuta: Karuta }> = async ({ graphql, actions }) => {
   const { createPage } = actions;
@@ -24,7 +24,7 @@ export const createPages: GatsbyCreatePages<{ karuta: Karuta }> = async ({ graph
     }
   `);
 
-  (result.data.allKaruta.edges as Array<any>).map(data => {
+  (result.data.allKaruta.edges as Array<any>).map((data) => {
     const karuta = JSON.parse(data.node.internal.content) as Karuta;
     const context: PageContext = {
       karuta,
@@ -43,7 +43,7 @@ export const sourceNodes: GatsbySourceNodes<Karuta> = async ({ actions, createNo
   const response = await axios.get<KarutaJsonResponse>(KARUTA_JSON_URL);
   if (response.status === 200) {
     const json = response.data;
-    json.karuta_list.forEach(kr => {
+    json.karuta_list.forEach((kr) => {
       const id = createNodeId(`karuta-${kr.id}`);
       const karuta: Karuta = {
         id,

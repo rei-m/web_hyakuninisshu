@@ -561,10 +561,9 @@ exports[`Storyshots molecules/HeaderItem default 1`] = `
   onClick={[Function]}
 >
   <svg
-    aria-hidden="true"
+    aria-hidden={true}
     className="MuiSvgIcon-root"
     focusable="false"
-    role="presentation"
     style={
       Object {
         "color": "#f00",
@@ -601,10 +600,9 @@ exports[`Storyshots molecules/IconLabelButton with type normal 1`] = `
     className="MuiButton-label"
   >
     <svg
-      aria-hidden="true"
+      aria-hidden={true}
       className="MuiSvgIcon-root makeStyles-default-297 makeStyles-default-299"
       focusable="false"
-      role="presentation"
       viewBox="0 0 24 24"
     >
       <path
@@ -638,10 +636,9 @@ exports[`Storyshots molecules/IconLabelButton with type primary 1`] = `
     className="MuiButton-label"
   >
     <svg
-      aria-hidden="true"
+      aria-hidden={true}
       className="MuiSvgIcon-root makeStyles-accent-343 makeStyles-accent-345"
       focusable="false"
-      role="presentation"
       viewBox="0 0 24 24"
     >
       <path
@@ -821,10 +818,9 @@ exports[`Storyshots molecules/MenuLink default 1`] = `
         className="makeStyles-iconWrapper-427"
       >
         <svg
-          aria-hidden="true"
+          aria-hidden={true}
           className="MuiSvgIcon-root"
           focusable="false"
-          role="presentation"
           viewBox="0 0 24 24"
         >
           <path
@@ -853,10 +849,9 @@ exports[`Storyshots molecules/NavigationItem default 1`] = `
   onClick={[Function]}
 >
   <svg
-    aria-hidden="true"
+    aria-hidden={true}
     className="MuiSvgIcon-root"
     focusable="false"
-    role="presentation"
     style={
       Object {
         "color": "#f00",
@@ -896,6 +891,8 @@ exports[`Storyshots molecules/QuestionJudgement with correct 1`] = `
         className=" gatsby-image-wrapper"
         style={
           Object {
+            "maxHeight": null,
+            "maxWidth": null,
             "overflow": "hidden",
             "position": "relative",
             "width": "80%",
@@ -976,6 +973,8 @@ exports[`Storyshots molecules/QuestionJudgement with incorrect 1`] = `
         className=" gatsby-image-wrapper"
         style={
           Object {
+            "maxHeight": null,
+            "maxWidth": null,
             "overflow": "hidden",
             "position": "relative",
             "width": "80%",
@@ -1061,7 +1060,7 @@ exports[`Storyshots molecules/SelectForm default 1`] = `
   >
     <div
       aria-haspopup="listbox"
-      aria-labelledby=" mui-component-select-item"
+      aria-labelledby="mui-component-select-item"
       className="MuiSelect-root MuiSelect-select MuiSelect-selectMenu MuiInputBase-input MuiInput-input"
       id="mui-component-select-item"
       onBlur={[Function]}
@@ -1081,10 +1080,9 @@ exports[`Storyshots molecules/SelectForm default 1`] = `
       value="1"
     />
     <svg
-      aria-hidden="true"
+      aria-hidden={true}
       className="MuiSvgIcon-root MuiSelect-icon"
       focusable="false"
-      role="presentation"
       viewBox="0 0 24 24"
     >
       <path
@@ -1117,7 +1115,7 @@ exports[`Storyshots molecules/SelectFromToForm default 1`] = `
     >
       <div
         aria-haspopup="listbox"
-        aria-labelledby=" mui-component-select-ふろむ"
+        aria-labelledby="mui-component-select-ふろむ"
         className="MuiSelect-root MuiSelect-select MuiSelect-selectMenu MuiInputBase-input MuiInput-input"
         id="mui-component-select-ふろむ"
         onBlur={[Function]}
@@ -1137,10 +1135,9 @@ exports[`Storyshots molecules/SelectFromToForm default 1`] = `
         value="1"
       />
       <svg
-        aria-hidden="true"
+        aria-hidden={true}
         className="MuiSvgIcon-root MuiSelect-icon"
         focusable="false"
-        role="presentation"
         viewBox="0 0 24 24"
       >
         <path
@@ -1159,7 +1156,7 @@ exports[`Storyshots molecules/SelectFromToForm default 1`] = `
     >
       <div
         aria-haspopup="listbox"
-        aria-labelledby=" mui-component-select-とぅー"
+        aria-labelledby="mui-component-select-とぅー"
         className="MuiSelect-root MuiSelect-select MuiSelect-selectMenu MuiInputBase-input MuiInput-input"
         id="mui-component-select-とぅー"
         onBlur={[Function]}
@@ -1179,10 +1176,9 @@ exports[`Storyshots molecules/SelectFromToForm default 1`] = `
         value="1"
       />
       <svg
-        aria-hidden="true"
+        aria-hidden={true}
         className="MuiSvgIcon-root MuiSelect-icon"
         focusable="false"
-        role="presentation"
         viewBox="0 0 24 24"
       >
         <path
@@ -1216,7 +1212,7 @@ exports[`Storyshots molecules/SelectFromToForm with error 1`] = `
     >
       <div
         aria-haspopup="listbox"
-        aria-labelledby=" mui-component-select-ふろむ"
+        aria-labelledby="mui-component-select-ふろむ"
         className="MuiSelect-root MuiSelect-select MuiSelect-selectMenu MuiInputBase-input MuiInput-input"
         id="mui-component-select-ふろむ"
         onBlur={[Function]}
@@ -1236,10 +1232,9 @@ exports[`Storyshots molecules/SelectFromToForm with error 1`] = `
         value="1"
       />
       <svg
-        aria-hidden="true"
+        aria-hidden={true}
         className="MuiSvgIcon-root MuiSelect-icon"
         focusable="false"
-        role="presentation"
         viewBox="0 0 24 24"
       >
         <path
@@ -1258,7 +1253,7 @@ exports[`Storyshots molecules/SelectFromToForm with error 1`] = `
     >
       <div
         aria-haspopup="listbox"
-        aria-labelledby=" mui-component-select-とぅー"
+        aria-labelledby="mui-component-select-とぅー"
         className="MuiSelect-root MuiSelect-select MuiSelect-selectMenu MuiInputBase-input MuiInput-input"
         id="mui-component-select-とぅー"
         onBlur={[Function]}
@@ -1278,10 +1273,9 @@ exports[`Storyshots molecules/SelectFromToForm with error 1`] = `
         value="1"
       />
       <svg
-        aria-hidden="true"
+        aria-hidden={true}
         className="MuiSvgIcon-root MuiSelect-icon"
         focusable="false"
-        role="presentation"
         viewBox="0 0 24 24"
       >
         <path
@@ -2409,6 +2403,8 @@ exports[`Storyshots organisms/FilteredSmallMaterialList default 1`] = `
             className="makeStyles-karutaImage-3220 gatsby-image-wrapper"
             style={
               Object {
+                "maxHeight": null,
+                "maxWidth": null,
                 "overflow": "hidden",
                 "position": "relative",
               }
@@ -2502,6 +2498,8 @@ exports[`Storyshots organisms/FilteredSmallMaterialList default 1`] = `
             className="makeStyles-karutaImage-3220 gatsby-image-wrapper"
             style={
               Object {
+                "maxHeight": null,
+                "maxWidth": null,
                 "overflow": "hidden",
                 "position": "relative",
               }
@@ -2595,6 +2593,8 @@ exports[`Storyshots organisms/FilteredSmallMaterialList default 1`] = `
             className="makeStyles-karutaImage-3220 gatsby-image-wrapper"
             style={
               Object {
+                "maxHeight": null,
+                "maxWidth": null,
                 "overflow": "hidden",
                 "position": "relative",
               }
@@ -2688,6 +2688,8 @@ exports[`Storyshots organisms/FilteredSmallMaterialList default 1`] = `
             className="makeStyles-karutaImage-3220 gatsby-image-wrapper"
             style={
               Object {
+                "maxHeight": null,
+                "maxWidth": null,
                 "overflow": "hidden",
                 "position": "relative",
               }
@@ -2781,6 +2783,8 @@ exports[`Storyshots organisms/FilteredSmallMaterialList default 1`] = `
             className="makeStyles-karutaImage-3220 gatsby-image-wrapper"
             style={
               Object {
+                "maxHeight": null,
+                "maxWidth": null,
                 "overflow": "hidden",
                 "position": "relative",
               }
@@ -2874,6 +2878,8 @@ exports[`Storyshots organisms/FilteredSmallMaterialList default 1`] = `
             className="makeStyles-karutaImage-3220 gatsby-image-wrapper"
             style={
               Object {
+                "maxHeight": null,
+                "maxWidth": null,
                 "overflow": "hidden",
                 "position": "relative",
               }
@@ -2967,6 +2973,8 @@ exports[`Storyshots organisms/FilteredSmallMaterialList default 1`] = `
             className="makeStyles-karutaImage-3220 gatsby-image-wrapper"
             style={
               Object {
+                "maxHeight": null,
+                "maxWidth": null,
                 "overflow": "hidden",
                 "position": "relative",
               }
@@ -3060,6 +3068,8 @@ exports[`Storyshots organisms/FilteredSmallMaterialList default 1`] = `
             className="makeStyles-karutaImage-3220 gatsby-image-wrapper"
             style={
               Object {
+                "maxHeight": null,
+                "maxWidth": null,
                 "overflow": "hidden",
                 "position": "relative",
               }
@@ -3153,6 +3163,8 @@ exports[`Storyshots organisms/FilteredSmallMaterialList default 1`] = `
             className="makeStyles-karutaImage-3220 gatsby-image-wrapper"
             style={
               Object {
+                "maxHeight": null,
+                "maxWidth": null,
                 "overflow": "hidden",
                 "position": "relative",
               }
@@ -3246,6 +3258,8 @@ exports[`Storyshots organisms/FilteredSmallMaterialList default 1`] = `
             className="makeStyles-karutaImage-3220 gatsby-image-wrapper"
             style={
               Object {
+                "maxHeight": null,
+                "maxWidth": null,
                 "overflow": "hidden",
                 "position": "relative",
               }
@@ -3339,6 +3353,8 @@ exports[`Storyshots organisms/FilteredSmallMaterialList default 1`] = `
             className="makeStyles-karutaImage-3220 gatsby-image-wrapper"
             style={
               Object {
+                "maxHeight": null,
+                "maxWidth": null,
                 "overflow": "hidden",
                 "position": "relative",
               }
@@ -3432,6 +3448,8 @@ exports[`Storyshots organisms/FilteredSmallMaterialList default 1`] = `
             className="makeStyles-karutaImage-3220 gatsby-image-wrapper"
             style={
               Object {
+                "maxHeight": null,
+                "maxWidth": null,
                 "overflow": "hidden",
                 "position": "relative",
               }
@@ -3525,6 +3543,8 @@ exports[`Storyshots organisms/FilteredSmallMaterialList default 1`] = `
             className="makeStyles-karutaImage-3220 gatsby-image-wrapper"
             style={
               Object {
+                "maxHeight": null,
+                "maxWidth": null,
                 "overflow": "hidden",
                 "position": "relative",
               }
@@ -3618,6 +3638,8 @@ exports[`Storyshots organisms/FilteredSmallMaterialList default 1`] = `
             className="makeStyles-karutaImage-3220 gatsby-image-wrapper"
             style={
               Object {
+                "maxHeight": null,
+                "maxWidth": null,
                 "overflow": "hidden",
                 "position": "relative",
               }
@@ -3711,6 +3733,8 @@ exports[`Storyshots organisms/FilteredSmallMaterialList default 1`] = `
             className="makeStyles-karutaImage-3220 gatsby-image-wrapper"
             style={
               Object {
+                "maxHeight": null,
+                "maxWidth": null,
                 "overflow": "hidden",
                 "position": "relative",
               }
@@ -3804,6 +3828,8 @@ exports[`Storyshots organisms/FilteredSmallMaterialList default 1`] = `
             className="makeStyles-karutaImage-3220 gatsby-image-wrapper"
             style={
               Object {
+                "maxHeight": null,
+                "maxWidth": null,
                 "overflow": "hidden",
                 "position": "relative",
               }
@@ -3897,6 +3923,8 @@ exports[`Storyshots organisms/FilteredSmallMaterialList default 1`] = `
             className="makeStyles-karutaImage-3220 gatsby-image-wrapper"
             style={
               Object {
+                "maxHeight": null,
+                "maxWidth": null,
                 "overflow": "hidden",
                 "position": "relative",
               }
@@ -3990,6 +4018,8 @@ exports[`Storyshots organisms/FilteredSmallMaterialList default 1`] = `
             className="makeStyles-karutaImage-3220 gatsby-image-wrapper"
             style={
               Object {
+                "maxHeight": null,
+                "maxWidth": null,
                 "overflow": "hidden",
                 "position": "relative",
               }
@@ -4083,6 +4113,8 @@ exports[`Storyshots organisms/FilteredSmallMaterialList default 1`] = `
             className="makeStyles-karutaImage-3220 gatsby-image-wrapper"
             style={
               Object {
+                "maxHeight": null,
+                "maxWidth": null,
                 "overflow": "hidden",
                 "position": "relative",
               }
@@ -4176,6 +4208,8 @@ exports[`Storyshots organisms/FilteredSmallMaterialList default 1`] = `
             className="makeStyles-karutaImage-3220 gatsby-image-wrapper"
             style={
               Object {
+                "maxHeight": null,
+                "maxWidth": null,
                 "overflow": "hidden",
                 "position": "relative",
               }
@@ -4269,6 +4303,8 @@ exports[`Storyshots organisms/FilteredSmallMaterialList default 1`] = `
             className="makeStyles-karutaImage-3220 gatsby-image-wrapper"
             style={
               Object {
+                "maxHeight": null,
+                "maxWidth": null,
                 "overflow": "hidden",
                 "position": "relative",
               }
@@ -4362,6 +4398,8 @@ exports[`Storyshots organisms/FilteredSmallMaterialList default 1`] = `
             className="makeStyles-karutaImage-3220 gatsby-image-wrapper"
             style={
               Object {
+                "maxHeight": null,
+                "maxWidth": null,
                 "overflow": "hidden",
                 "position": "relative",
               }
@@ -4455,6 +4493,8 @@ exports[`Storyshots organisms/FilteredSmallMaterialList default 1`] = `
             className="makeStyles-karutaImage-3220 gatsby-image-wrapper"
             style={
               Object {
+                "maxHeight": null,
+                "maxWidth": null,
                 "overflow": "hidden",
                 "position": "relative",
               }
@@ -4548,6 +4588,8 @@ exports[`Storyshots organisms/FilteredSmallMaterialList default 1`] = `
             className="makeStyles-karutaImage-3220 gatsby-image-wrapper"
             style={
               Object {
+                "maxHeight": null,
+                "maxWidth": null,
                 "overflow": "hidden",
                 "position": "relative",
               }
@@ -4641,6 +4683,8 @@ exports[`Storyshots organisms/FilteredSmallMaterialList default 1`] = `
             className="makeStyles-karutaImage-3220 gatsby-image-wrapper"
             style={
               Object {
+                "maxHeight": null,
+                "maxWidth": null,
                 "overflow": "hidden",
                 "position": "relative",
               }
@@ -4734,6 +4778,8 @@ exports[`Storyshots organisms/FilteredSmallMaterialList default 1`] = `
             className="makeStyles-karutaImage-3220 gatsby-image-wrapper"
             style={
               Object {
+                "maxHeight": null,
+                "maxWidth": null,
                 "overflow": "hidden",
                 "position": "relative",
               }
@@ -4827,6 +4873,8 @@ exports[`Storyshots organisms/FilteredSmallMaterialList default 1`] = `
             className="makeStyles-karutaImage-3220 gatsby-image-wrapper"
             style={
               Object {
+                "maxHeight": null,
+                "maxWidth": null,
                 "overflow": "hidden",
                 "position": "relative",
               }
@@ -4920,6 +4968,8 @@ exports[`Storyshots organisms/FilteredSmallMaterialList default 1`] = `
             className="makeStyles-karutaImage-3220 gatsby-image-wrapper"
             style={
               Object {
+                "maxHeight": null,
+                "maxWidth": null,
                 "overflow": "hidden",
                 "position": "relative",
               }
@@ -5013,6 +5063,8 @@ exports[`Storyshots organisms/FilteredSmallMaterialList default 1`] = `
             className="makeStyles-karutaImage-3220 gatsby-image-wrapper"
             style={
               Object {
+                "maxHeight": null,
+                "maxWidth": null,
                 "overflow": "hidden",
                 "position": "relative",
               }
@@ -5106,6 +5158,8 @@ exports[`Storyshots organisms/FilteredSmallMaterialList default 1`] = `
             className="makeStyles-karutaImage-3220 gatsby-image-wrapper"
             style={
               Object {
+                "maxHeight": null,
+                "maxWidth": null,
                 "overflow": "hidden",
                 "position": "relative",
               }
@@ -5199,6 +5253,8 @@ exports[`Storyshots organisms/FilteredSmallMaterialList default 1`] = `
             className="makeStyles-karutaImage-3220 gatsby-image-wrapper"
             style={
               Object {
+                "maxHeight": null,
+                "maxWidth": null,
                 "overflow": "hidden",
                 "position": "relative",
               }
@@ -5292,6 +5348,8 @@ exports[`Storyshots organisms/FilteredSmallMaterialList default 1`] = `
             className="makeStyles-karutaImage-3220 gatsby-image-wrapper"
             style={
               Object {
+                "maxHeight": null,
+                "maxWidth": null,
                 "overflow": "hidden",
                 "position": "relative",
               }
@@ -5385,6 +5443,8 @@ exports[`Storyshots organisms/FilteredSmallMaterialList default 1`] = `
             className="makeStyles-karutaImage-3220 gatsby-image-wrapper"
             style={
               Object {
+                "maxHeight": null,
+                "maxWidth": null,
                 "overflow": "hidden",
                 "position": "relative",
               }
@@ -5478,6 +5538,8 @@ exports[`Storyshots organisms/FilteredSmallMaterialList default 1`] = `
             className="makeStyles-karutaImage-3220 gatsby-image-wrapper"
             style={
               Object {
+                "maxHeight": null,
+                "maxWidth": null,
                 "overflow": "hidden",
                 "position": "relative",
               }
@@ -5571,6 +5633,8 @@ exports[`Storyshots organisms/FilteredSmallMaterialList default 1`] = `
             className="makeStyles-karutaImage-3220 gatsby-image-wrapper"
             style={
               Object {
+                "maxHeight": null,
+                "maxWidth": null,
                 "overflow": "hidden",
                 "position": "relative",
               }
@@ -5664,6 +5728,8 @@ exports[`Storyshots organisms/FilteredSmallMaterialList default 1`] = `
             className="makeStyles-karutaImage-3220 gatsby-image-wrapper"
             style={
               Object {
+                "maxHeight": null,
+                "maxWidth": null,
                 "overflow": "hidden",
                 "position": "relative",
               }
@@ -5757,6 +5823,8 @@ exports[`Storyshots organisms/FilteredSmallMaterialList default 1`] = `
             className="makeStyles-karutaImage-3220 gatsby-image-wrapper"
             style={
               Object {
+                "maxHeight": null,
+                "maxWidth": null,
                 "overflow": "hidden",
                 "position": "relative",
               }
@@ -5850,6 +5918,8 @@ exports[`Storyshots organisms/FilteredSmallMaterialList default 1`] = `
             className="makeStyles-karutaImage-3220 gatsby-image-wrapper"
             style={
               Object {
+                "maxHeight": null,
+                "maxWidth": null,
                 "overflow": "hidden",
                 "position": "relative",
               }
@@ -5943,6 +6013,8 @@ exports[`Storyshots organisms/FilteredSmallMaterialList default 1`] = `
             className="makeStyles-karutaImage-3220 gatsby-image-wrapper"
             style={
               Object {
+                "maxHeight": null,
+                "maxWidth": null,
                 "overflow": "hidden",
                 "position": "relative",
               }
@@ -6036,6 +6108,8 @@ exports[`Storyshots organisms/FilteredSmallMaterialList default 1`] = `
             className="makeStyles-karutaImage-3220 gatsby-image-wrapper"
             style={
               Object {
+                "maxHeight": null,
+                "maxWidth": null,
                 "overflow": "hidden",
                 "position": "relative",
               }
@@ -6129,6 +6203,8 @@ exports[`Storyshots organisms/FilteredSmallMaterialList default 1`] = `
             className="makeStyles-karutaImage-3220 gatsby-image-wrapper"
             style={
               Object {
+                "maxHeight": null,
+                "maxWidth": null,
                 "overflow": "hidden",
                 "position": "relative",
               }
@@ -6222,6 +6298,8 @@ exports[`Storyshots organisms/FilteredSmallMaterialList default 1`] = `
             className="makeStyles-karutaImage-3220 gatsby-image-wrapper"
             style={
               Object {
+                "maxHeight": null,
+                "maxWidth": null,
                 "overflow": "hidden",
                 "position": "relative",
               }
@@ -6315,6 +6393,8 @@ exports[`Storyshots organisms/FilteredSmallMaterialList default 1`] = `
             className="makeStyles-karutaImage-3220 gatsby-image-wrapper"
             style={
               Object {
+                "maxHeight": null,
+                "maxWidth": null,
                 "overflow": "hidden",
                 "position": "relative",
               }
@@ -6408,6 +6488,8 @@ exports[`Storyshots organisms/FilteredSmallMaterialList default 1`] = `
             className="makeStyles-karutaImage-3220 gatsby-image-wrapper"
             style={
               Object {
+                "maxHeight": null,
+                "maxWidth": null,
                 "overflow": "hidden",
                 "position": "relative",
               }
@@ -6501,6 +6583,8 @@ exports[`Storyshots organisms/FilteredSmallMaterialList default 1`] = `
             className="makeStyles-karutaImage-3220 gatsby-image-wrapper"
             style={
               Object {
+                "maxHeight": null,
+                "maxWidth": null,
                 "overflow": "hidden",
                 "position": "relative",
               }
@@ -6594,6 +6678,8 @@ exports[`Storyshots organisms/FilteredSmallMaterialList default 1`] = `
             className="makeStyles-karutaImage-3220 gatsby-image-wrapper"
             style={
               Object {
+                "maxHeight": null,
+                "maxWidth": null,
                 "overflow": "hidden",
                 "position": "relative",
               }
@@ -6687,6 +6773,8 @@ exports[`Storyshots organisms/FilteredSmallMaterialList default 1`] = `
             className="makeStyles-karutaImage-3220 gatsby-image-wrapper"
             style={
               Object {
+                "maxHeight": null,
+                "maxWidth": null,
                 "overflow": "hidden",
                 "position": "relative",
               }
@@ -6780,6 +6868,8 @@ exports[`Storyshots organisms/FilteredSmallMaterialList default 1`] = `
             className="makeStyles-karutaImage-3220 gatsby-image-wrapper"
             style={
               Object {
+                "maxHeight": null,
+                "maxWidth": null,
                 "overflow": "hidden",
                 "position": "relative",
               }
@@ -6873,6 +6963,8 @@ exports[`Storyshots organisms/FilteredSmallMaterialList default 1`] = `
             className="makeStyles-karutaImage-3220 gatsby-image-wrapper"
             style={
               Object {
+                "maxHeight": null,
+                "maxWidth": null,
                 "overflow": "hidden",
                 "position": "relative",
               }
@@ -6966,6 +7058,8 @@ exports[`Storyshots organisms/FilteredSmallMaterialList default 1`] = `
             className="makeStyles-karutaImage-3220 gatsby-image-wrapper"
             style={
               Object {
+                "maxHeight": null,
+                "maxWidth": null,
                 "overflow": "hidden",
                 "position": "relative",
               }
@@ -7059,6 +7153,8 @@ exports[`Storyshots organisms/FilteredSmallMaterialList default 1`] = `
             className="makeStyles-karutaImage-3220 gatsby-image-wrapper"
             style={
               Object {
+                "maxHeight": null,
+                "maxWidth": null,
                 "overflow": "hidden",
                 "position": "relative",
               }
@@ -7152,6 +7248,8 @@ exports[`Storyshots organisms/FilteredSmallMaterialList default 1`] = `
             className="makeStyles-karutaImage-3220 gatsby-image-wrapper"
             style={
               Object {
+                "maxHeight": null,
+                "maxWidth": null,
                 "overflow": "hidden",
                 "position": "relative",
               }
@@ -7245,6 +7343,8 @@ exports[`Storyshots organisms/FilteredSmallMaterialList default 1`] = `
             className="makeStyles-karutaImage-3220 gatsby-image-wrapper"
             style={
               Object {
+                "maxHeight": null,
+                "maxWidth": null,
                 "overflow": "hidden",
                 "position": "relative",
               }
@@ -7338,6 +7438,8 @@ exports[`Storyshots organisms/FilteredSmallMaterialList default 1`] = `
             className="makeStyles-karutaImage-3220 gatsby-image-wrapper"
             style={
               Object {
+                "maxHeight": null,
+                "maxWidth": null,
                 "overflow": "hidden",
                 "position": "relative",
               }
@@ -7431,6 +7533,8 @@ exports[`Storyshots organisms/FilteredSmallMaterialList default 1`] = `
             className="makeStyles-karutaImage-3220 gatsby-image-wrapper"
             style={
               Object {
+                "maxHeight": null,
+                "maxWidth": null,
                 "overflow": "hidden",
                 "position": "relative",
               }
@@ -7524,6 +7628,8 @@ exports[`Storyshots organisms/FilteredSmallMaterialList default 1`] = `
             className="makeStyles-karutaImage-3220 gatsby-image-wrapper"
             style={
               Object {
+                "maxHeight": null,
+                "maxWidth": null,
                 "overflow": "hidden",
                 "position": "relative",
               }
@@ -7617,6 +7723,8 @@ exports[`Storyshots organisms/FilteredSmallMaterialList default 1`] = `
             className="makeStyles-karutaImage-3220 gatsby-image-wrapper"
             style={
               Object {
+                "maxHeight": null,
+                "maxWidth": null,
                 "overflow": "hidden",
                 "position": "relative",
               }
@@ -7710,6 +7818,8 @@ exports[`Storyshots organisms/FilteredSmallMaterialList default 1`] = `
             className="makeStyles-karutaImage-3220 gatsby-image-wrapper"
             style={
               Object {
+                "maxHeight": null,
+                "maxWidth": null,
                 "overflow": "hidden",
                 "position": "relative",
               }
@@ -7803,6 +7913,8 @@ exports[`Storyshots organisms/FilteredSmallMaterialList default 1`] = `
             className="makeStyles-karutaImage-3220 gatsby-image-wrapper"
             style={
               Object {
+                "maxHeight": null,
+                "maxWidth": null,
                 "overflow": "hidden",
                 "position": "relative",
               }
@@ -7896,6 +8008,8 @@ exports[`Storyshots organisms/FilteredSmallMaterialList default 1`] = `
             className="makeStyles-karutaImage-3220 gatsby-image-wrapper"
             style={
               Object {
+                "maxHeight": null,
+                "maxWidth": null,
                 "overflow": "hidden",
                 "position": "relative",
               }
@@ -7989,6 +8103,8 @@ exports[`Storyshots organisms/FilteredSmallMaterialList default 1`] = `
             className="makeStyles-karutaImage-3220 gatsby-image-wrapper"
             style={
               Object {
+                "maxHeight": null,
+                "maxWidth": null,
                 "overflow": "hidden",
                 "position": "relative",
               }
@@ -8082,6 +8198,8 @@ exports[`Storyshots organisms/FilteredSmallMaterialList default 1`] = `
             className="makeStyles-karutaImage-3220 gatsby-image-wrapper"
             style={
               Object {
+                "maxHeight": null,
+                "maxWidth": null,
                 "overflow": "hidden",
                 "position": "relative",
               }
@@ -8175,6 +8293,8 @@ exports[`Storyshots organisms/FilteredSmallMaterialList default 1`] = `
             className="makeStyles-karutaImage-3220 gatsby-image-wrapper"
             style={
               Object {
+                "maxHeight": null,
+                "maxWidth": null,
                 "overflow": "hidden",
                 "position": "relative",
               }
@@ -8268,6 +8388,8 @@ exports[`Storyshots organisms/FilteredSmallMaterialList default 1`] = `
             className="makeStyles-karutaImage-3220 gatsby-image-wrapper"
             style={
               Object {
+                "maxHeight": null,
+                "maxWidth": null,
                 "overflow": "hidden",
                 "position": "relative",
               }
@@ -8361,6 +8483,8 @@ exports[`Storyshots organisms/FilteredSmallMaterialList default 1`] = `
             className="makeStyles-karutaImage-3220 gatsby-image-wrapper"
             style={
               Object {
+                "maxHeight": null,
+                "maxWidth": null,
                 "overflow": "hidden",
                 "position": "relative",
               }
@@ -8454,6 +8578,8 @@ exports[`Storyshots organisms/FilteredSmallMaterialList default 1`] = `
             className="makeStyles-karutaImage-3220 gatsby-image-wrapper"
             style={
               Object {
+                "maxHeight": null,
+                "maxWidth": null,
                 "overflow": "hidden",
                 "position": "relative",
               }
@@ -8547,6 +8673,8 @@ exports[`Storyshots organisms/FilteredSmallMaterialList default 1`] = `
             className="makeStyles-karutaImage-3220 gatsby-image-wrapper"
             style={
               Object {
+                "maxHeight": null,
+                "maxWidth": null,
                 "overflow": "hidden",
                 "position": "relative",
               }
@@ -8640,6 +8768,8 @@ exports[`Storyshots organisms/FilteredSmallMaterialList default 1`] = `
             className="makeStyles-karutaImage-3220 gatsby-image-wrapper"
             style={
               Object {
+                "maxHeight": null,
+                "maxWidth": null,
                 "overflow": "hidden",
                 "position": "relative",
               }
@@ -8733,6 +8863,8 @@ exports[`Storyshots organisms/FilteredSmallMaterialList default 1`] = `
             className="makeStyles-karutaImage-3220 gatsby-image-wrapper"
             style={
               Object {
+                "maxHeight": null,
+                "maxWidth": null,
                 "overflow": "hidden",
                 "position": "relative",
               }
@@ -8826,6 +8958,8 @@ exports[`Storyshots organisms/FilteredSmallMaterialList default 1`] = `
             className="makeStyles-karutaImage-3220 gatsby-image-wrapper"
             style={
               Object {
+                "maxHeight": null,
+                "maxWidth": null,
                 "overflow": "hidden",
                 "position": "relative",
               }
@@ -8919,6 +9053,8 @@ exports[`Storyshots organisms/FilteredSmallMaterialList default 1`] = `
             className="makeStyles-karutaImage-3220 gatsby-image-wrapper"
             style={
               Object {
+                "maxHeight": null,
+                "maxWidth": null,
                 "overflow": "hidden",
                 "position": "relative",
               }
@@ -9012,6 +9148,8 @@ exports[`Storyshots organisms/FilteredSmallMaterialList default 1`] = `
             className="makeStyles-karutaImage-3220 gatsby-image-wrapper"
             style={
               Object {
+                "maxHeight": null,
+                "maxWidth": null,
                 "overflow": "hidden",
                 "position": "relative",
               }
@@ -9105,6 +9243,8 @@ exports[`Storyshots organisms/FilteredSmallMaterialList default 1`] = `
             className="makeStyles-karutaImage-3220 gatsby-image-wrapper"
             style={
               Object {
+                "maxHeight": null,
+                "maxWidth": null,
                 "overflow": "hidden",
                 "position": "relative",
               }
@@ -9198,6 +9338,8 @@ exports[`Storyshots organisms/FilteredSmallMaterialList default 1`] = `
             className="makeStyles-karutaImage-3220 gatsby-image-wrapper"
             style={
               Object {
+                "maxHeight": null,
+                "maxWidth": null,
                 "overflow": "hidden",
                 "position": "relative",
               }
@@ -9291,6 +9433,8 @@ exports[`Storyshots organisms/FilteredSmallMaterialList default 1`] = `
             className="makeStyles-karutaImage-3220 gatsby-image-wrapper"
             style={
               Object {
+                "maxHeight": null,
+                "maxWidth": null,
                 "overflow": "hidden",
                 "position": "relative",
               }
@@ -9384,6 +9528,8 @@ exports[`Storyshots organisms/FilteredSmallMaterialList default 1`] = `
             className="makeStyles-karutaImage-3220 gatsby-image-wrapper"
             style={
               Object {
+                "maxHeight": null,
+                "maxWidth": null,
                 "overflow": "hidden",
                 "position": "relative",
               }
@@ -9477,6 +9623,8 @@ exports[`Storyshots organisms/FilteredSmallMaterialList default 1`] = `
             className="makeStyles-karutaImage-3220 gatsby-image-wrapper"
             style={
               Object {
+                "maxHeight": null,
+                "maxWidth": null,
                 "overflow": "hidden",
                 "position": "relative",
               }
@@ -9570,6 +9718,8 @@ exports[`Storyshots organisms/FilteredSmallMaterialList default 1`] = `
             className="makeStyles-karutaImage-3220 gatsby-image-wrapper"
             style={
               Object {
+                "maxHeight": null,
+                "maxWidth": null,
                 "overflow": "hidden",
                 "position": "relative",
               }
@@ -9663,6 +9813,8 @@ exports[`Storyshots organisms/FilteredSmallMaterialList default 1`] = `
             className="makeStyles-karutaImage-3220 gatsby-image-wrapper"
             style={
               Object {
+                "maxHeight": null,
+                "maxWidth": null,
                 "overflow": "hidden",
                 "position": "relative",
               }
@@ -9756,6 +9908,8 @@ exports[`Storyshots organisms/FilteredSmallMaterialList default 1`] = `
             className="makeStyles-karutaImage-3220 gatsby-image-wrapper"
             style={
               Object {
+                "maxHeight": null,
+                "maxWidth": null,
                 "overflow": "hidden",
                 "position": "relative",
               }
@@ -9849,6 +10003,8 @@ exports[`Storyshots organisms/FilteredSmallMaterialList default 1`] = `
             className="makeStyles-karutaImage-3220 gatsby-image-wrapper"
             style={
               Object {
+                "maxHeight": null,
+                "maxWidth": null,
                 "overflow": "hidden",
                 "position": "relative",
               }
@@ -9942,6 +10098,8 @@ exports[`Storyshots organisms/FilteredSmallMaterialList default 1`] = `
             className="makeStyles-karutaImage-3220 gatsby-image-wrapper"
             style={
               Object {
+                "maxHeight": null,
+                "maxWidth": null,
                 "overflow": "hidden",
                 "position": "relative",
               }
@@ -10035,6 +10193,8 @@ exports[`Storyshots organisms/FilteredSmallMaterialList default 1`] = `
             className="makeStyles-karutaImage-3220 gatsby-image-wrapper"
             style={
               Object {
+                "maxHeight": null,
+                "maxWidth": null,
                 "overflow": "hidden",
                 "position": "relative",
               }
@@ -10128,6 +10288,8 @@ exports[`Storyshots organisms/FilteredSmallMaterialList default 1`] = `
             className="makeStyles-karutaImage-3220 gatsby-image-wrapper"
             style={
               Object {
+                "maxHeight": null,
+                "maxWidth": null,
                 "overflow": "hidden",
                 "position": "relative",
               }
@@ -10221,6 +10383,8 @@ exports[`Storyshots organisms/FilteredSmallMaterialList default 1`] = `
             className="makeStyles-karutaImage-3220 gatsby-image-wrapper"
             style={
               Object {
+                "maxHeight": null,
+                "maxWidth": null,
                 "overflow": "hidden",
                 "position": "relative",
               }
@@ -10314,6 +10478,8 @@ exports[`Storyshots organisms/FilteredSmallMaterialList default 1`] = `
             className="makeStyles-karutaImage-3220 gatsby-image-wrapper"
             style={
               Object {
+                "maxHeight": null,
+                "maxWidth": null,
                 "overflow": "hidden",
                 "position": "relative",
               }
@@ -10407,6 +10573,8 @@ exports[`Storyshots organisms/FilteredSmallMaterialList default 1`] = `
             className="makeStyles-karutaImage-3220 gatsby-image-wrapper"
             style={
               Object {
+                "maxHeight": null,
+                "maxWidth": null,
                 "overflow": "hidden",
                 "position": "relative",
               }
@@ -10500,6 +10668,8 @@ exports[`Storyshots organisms/FilteredSmallMaterialList default 1`] = `
             className="makeStyles-karutaImage-3220 gatsby-image-wrapper"
             style={
               Object {
+                "maxHeight": null,
+                "maxWidth": null,
                 "overflow": "hidden",
                 "position": "relative",
               }
@@ -10593,6 +10763,8 @@ exports[`Storyshots organisms/FilteredSmallMaterialList default 1`] = `
             className="makeStyles-karutaImage-3220 gatsby-image-wrapper"
             style={
               Object {
+                "maxHeight": null,
+                "maxWidth": null,
                 "overflow": "hidden",
                 "position": "relative",
               }
@@ -10686,6 +10858,8 @@ exports[`Storyshots organisms/FilteredSmallMaterialList default 1`] = `
             className="makeStyles-karutaImage-3220 gatsby-image-wrapper"
             style={
               Object {
+                "maxHeight": null,
+                "maxWidth": null,
                 "overflow": "hidden",
                 "position": "relative",
               }
@@ -10779,6 +10953,8 @@ exports[`Storyshots organisms/FilteredSmallMaterialList default 1`] = `
             className="makeStyles-karutaImage-3220 gatsby-image-wrapper"
             style={
               Object {
+                "maxHeight": null,
+                "maxWidth": null,
                 "overflow": "hidden",
                 "position": "relative",
               }
@@ -10872,6 +11048,8 @@ exports[`Storyshots organisms/FilteredSmallMaterialList default 1`] = `
             className="makeStyles-karutaImage-3220 gatsby-image-wrapper"
             style={
               Object {
+                "maxHeight": null,
+                "maxWidth": null,
                 "overflow": "hidden",
                 "position": "relative",
               }
@@ -10965,6 +11143,8 @@ exports[`Storyshots organisms/FilteredSmallMaterialList default 1`] = `
             className="makeStyles-karutaImage-3220 gatsby-image-wrapper"
             style={
               Object {
+                "maxHeight": null,
+                "maxWidth": null,
                 "overflow": "hidden",
                 "position": "relative",
               }
@@ -11058,6 +11238,8 @@ exports[`Storyshots organisms/FilteredSmallMaterialList default 1`] = `
             className="makeStyles-karutaImage-3220 gatsby-image-wrapper"
             style={
               Object {
+                "maxHeight": null,
+                "maxWidth": null,
                 "overflow": "hidden",
                 "position": "relative",
               }
@@ -11151,6 +11333,8 @@ exports[`Storyshots organisms/FilteredSmallMaterialList default 1`] = `
             className="makeStyles-karutaImage-3220 gatsby-image-wrapper"
             style={
               Object {
+                "maxHeight": null,
+                "maxWidth": null,
                 "overflow": "hidden",
                 "position": "relative",
               }
@@ -11244,6 +11428,8 @@ exports[`Storyshots organisms/FilteredSmallMaterialList default 1`] = `
             className="makeStyles-karutaImage-3220 gatsby-image-wrapper"
             style={
               Object {
+                "maxHeight": null,
+                "maxWidth": null,
                 "overflow": "hidden",
                 "position": "relative",
               }
@@ -11337,6 +11523,8 @@ exports[`Storyshots organisms/FilteredSmallMaterialList default 1`] = `
             className="makeStyles-karutaImage-3220 gatsby-image-wrapper"
             style={
               Object {
+                "maxHeight": null,
+                "maxWidth": null,
                 "overflow": "hidden",
                 "position": "relative",
               }
@@ -11430,6 +11618,8 @@ exports[`Storyshots organisms/FilteredSmallMaterialList default 1`] = `
             className="makeStyles-karutaImage-3220 gatsby-image-wrapper"
             style={
               Object {
+                "maxHeight": null,
+                "maxWidth": null,
                 "overflow": "hidden",
                 "position": "relative",
               }
@@ -11523,6 +11713,8 @@ exports[`Storyshots organisms/FilteredSmallMaterialList default 1`] = `
             className="makeStyles-karutaImage-3220 gatsby-image-wrapper"
             style={
               Object {
+                "maxHeight": null,
+                "maxWidth": null,
                 "overflow": "hidden",
                 "position": "relative",
               }
@@ -11616,6 +11808,8 @@ exports[`Storyshots organisms/FilteredSmallMaterialList default 1`] = `
             className="makeStyles-karutaImage-3220 gatsby-image-wrapper"
             style={
               Object {
+                "maxHeight": null,
+                "maxWidth": null,
                 "overflow": "hidden",
                 "position": "relative",
               }
@@ -11732,10 +11926,9 @@ exports[`Storyshots organisms/Header with back button 1`] = `
       onClick={[Function]}
     >
       <svg
-        aria-hidden="true"
+        aria-hidden={true}
         className="MuiSvgIcon-root"
         focusable="false"
-        role="presentation"
         style={
           Object {
             "fontSize": "2.4rem",
@@ -11776,10 +11969,9 @@ exports[`Storyshots organisms/Header with search button 1`] = `
       onClick={[Function]}
     >
       <svg
-        aria-hidden="true"
+        aria-hidden={true}
         className="MuiSvgIcon-root"
         focusable="false"
-        role="presentation"
         style={
           Object {
             "fontSize": "2.4rem",
@@ -11994,6 +12186,8 @@ exports[`Storyshots organisms/KarutaPlaying answered 1`] = `
       className="makeStyles-correctImage-991 gatsby-image-wrapper"
       style={
         Object {
+          "maxHeight": null,
+          "maxWidth": null,
           "overflow": "hidden",
           "position": "relative",
         }
@@ -12347,10 +12541,9 @@ exports[`Storyshots organisms/KarutaPlayingCorrect all answered 1`] = `
       className="MuiButton-label"
     >
       <svg
-        aria-hidden="true"
+        aria-hidden={true}
         className="MuiSvgIcon-root makeStyles-default-1215 makeStyles-default-1217"
         focusable="false"
-        role="presentation"
         viewBox="0 0 24 24"
       >
         <path
@@ -12470,10 +12663,9 @@ exports[`Storyshots organisms/KarutaPlayingCorrect in answer 1`] = `
       className="MuiButton-label"
     >
       <svg
-        aria-hidden="true"
+        aria-hidden={true}
         className="MuiSvgIcon-root makeStyles-default-1118 makeStyles-default-1120"
         focusable="false"
-        role="presentation"
         viewBox="0 0 24 24"
       >
         <path
@@ -12586,10 +12778,9 @@ exports[`Storyshots organisms/KarutaPlayingResult all correct 1`] = `
         className="MuiButton-label"
       >
         <svg
-          aria-hidden="true"
+          aria-hidden={true}
           className="MuiSvgIcon-root makeStyles-default-1262 makeStyles-default-1264"
           focusable="false"
-          role="presentation"
           viewBox="0 0 24 24"
         >
           <path
@@ -12703,10 +12894,9 @@ exports[`Storyshots organisms/KarutaPlayingResult has mistake 1`] = `
         className="MuiButton-label"
       >
         <svg
-          aria-hidden="true"
+          aria-hidden={true}
           className="MuiSvgIcon-root makeStyles-default-1325 makeStyles-default-1327"
           focusable="false"
-          role="presentation"
           viewBox="0 0 24 24"
         >
           <path
@@ -12742,10 +12932,9 @@ exports[`Storyshots organisms/KarutaPlayingResult has mistake 1`] = `
         className="MuiButton-label"
       >
         <svg
-          aria-hidden="true"
+          aria-hidden={true}
           className="MuiSvgIcon-root makeStyles-default-1325 makeStyles-default-1370"
           focusable="false"
-          role="presentation"
           viewBox="0 0 24 24"
         >
           <path
@@ -12790,10 +12979,9 @@ exports[`Storyshots organisms/MainMenuList default 1`] = `
           className="makeStyles-iconWrapper-1376"
         >
           <svg
-            aria-hidden="true"
+            aria-hidden={true}
             className="MuiSvgIcon-root"
             focusable="false"
-            role="presentation"
             viewBox="0 0 24 24"
           >
             <path
@@ -12841,10 +13029,9 @@ exports[`Storyshots organisms/MainMenuList default 1`] = `
           className="makeStyles-iconWrapper-1376"
         >
           <svg
-            aria-hidden="true"
+            aria-hidden={true}
             className="MuiSvgIcon-root"
             focusable="false"
-            role="presentation"
             viewBox="0 0 24 24"
           >
             <path
@@ -12892,10 +13079,9 @@ exports[`Storyshots organisms/MainMenuList default 1`] = `
           className="makeStyles-iconWrapper-1376"
         >
           <svg
-            aria-hidden="true"
+            aria-hidden={true}
             className="MuiSvgIcon-root"
             focusable="false"
-            role="presentation"
             viewBox="0 0 24 24"
           >
             <path
@@ -12942,6 +13128,8 @@ exports[`Storyshots organisms/Material default 1`] = `
     className="makeStyles-karutaImage-1399 gatsby-image-wrapper"
     style={
       Object {
+        "maxHeight": null,
+        "maxWidth": null,
         "overflow": "hidden",
         "position": "relative",
       }
@@ -13058,10 +13246,9 @@ exports[`Storyshots organisms/MaterialListFilter default 1`] = `
         onClick={[Function]}
       >
         <svg
-          aria-hidden="true"
+          aria-hidden={true}
           className="MuiSvgIcon-root"
           focusable="false"
-          role="presentation"
           viewBox="0 0 24 24"
         >
           <path
@@ -13127,10 +13314,9 @@ exports[`Storyshots organisms/MaterialListFilter default 1`] = `
                 type="checkbox"
               />
               <svg
-                aria-hidden="true"
+                aria-hidden={true}
                 className="MuiSvgIcon-root"
                 focusable="false"
-                role="presentation"
                 viewBox="0 0 24 24"
               >
                 <path
@@ -13143,7 +13329,7 @@ exports[`Storyshots organisms/MaterialListFilter default 1`] = `
             className="MuiListItemText-root makeStyles-listItemText-3539 MuiListItemText-dense"
           >
             <span
-              className="MuiTypography-root MuiListItemText-primary MuiTypography-body2"
+              className="MuiTypography-root MuiListItemText-primary MuiTypography-body2 MuiTypography-displayBlock"
             >
               <span
                 className="makeStyles-root-3546 makeStyles-root-3635 "
@@ -13197,10 +13383,9 @@ exports[`Storyshots organisms/MaterialListFilter default 1`] = `
                 type="checkbox"
               />
               <svg
-                aria-hidden="true"
+                aria-hidden={true}
                 className="MuiSvgIcon-root"
                 focusable="false"
-                role="presentation"
                 viewBox="0 0 24 24"
               >
                 <path
@@ -13213,7 +13398,7 @@ exports[`Storyshots organisms/MaterialListFilter default 1`] = `
             className="MuiListItemText-root makeStyles-listItemText-3539 MuiListItemText-dense"
           >
             <span
-              className="MuiTypography-root MuiListItemText-primary MuiTypography-body2"
+              className="MuiTypography-root MuiListItemText-primary MuiTypography-body2 MuiTypography-displayBlock"
             >
               <span
                 className="makeStyles-root-3546 makeStyles-root-3636 "
@@ -13267,10 +13452,9 @@ exports[`Storyshots organisms/MaterialListFilter default 1`] = `
                 type="checkbox"
               />
               <svg
-                aria-hidden="true"
+                aria-hidden={true}
                 className="MuiSvgIcon-root"
                 focusable="false"
-                role="presentation"
                 viewBox="0 0 24 24"
               >
                 <path
@@ -13283,7 +13467,7 @@ exports[`Storyshots organisms/MaterialListFilter default 1`] = `
             className="MuiListItemText-root makeStyles-listItemText-3539 MuiListItemText-dense"
           >
             <span
-              className="MuiTypography-root MuiListItemText-primary MuiTypography-body2"
+              className="MuiTypography-root MuiListItemText-primary MuiTypography-body2 MuiTypography-displayBlock"
             >
               <span
                 className="makeStyles-root-3546 makeStyles-root-3637 "
@@ -13337,10 +13521,9 @@ exports[`Storyshots organisms/MaterialListFilter default 1`] = `
                 type="checkbox"
               />
               <svg
-                aria-hidden="true"
+                aria-hidden={true}
                 className="MuiSvgIcon-root"
                 focusable="false"
-                role="presentation"
                 viewBox="0 0 24 24"
               >
                 <path
@@ -13353,7 +13536,7 @@ exports[`Storyshots organisms/MaterialListFilter default 1`] = `
             className="MuiListItemText-root makeStyles-listItemText-3539 MuiListItemText-dense"
           >
             <span
-              className="MuiTypography-root MuiListItemText-primary MuiTypography-body2"
+              className="MuiTypography-root MuiListItemText-primary MuiTypography-body2 MuiTypography-displayBlock"
             >
               <span
                 className="makeStyles-root-3546 makeStyles-root-3638 "
@@ -13407,10 +13590,9 @@ exports[`Storyshots organisms/MaterialListFilter default 1`] = `
                 type="checkbox"
               />
               <svg
-                aria-hidden="true"
+                aria-hidden={true}
                 className="MuiSvgIcon-root"
                 focusable="false"
-                role="presentation"
                 viewBox="0 0 24 24"
               >
                 <path
@@ -13423,7 +13605,7 @@ exports[`Storyshots organisms/MaterialListFilter default 1`] = `
             className="MuiListItemText-root makeStyles-listItemText-3539 MuiListItemText-dense"
           >
             <span
-              className="MuiTypography-root MuiListItemText-primary MuiTypography-body2"
+              className="MuiTypography-root MuiListItemText-primary MuiTypography-body2 MuiTypography-displayBlock"
             >
               <span
                 className="makeStyles-root-3546 makeStyles-root-3639 "
@@ -13477,10 +13659,9 @@ exports[`Storyshots organisms/MaterialListFilter default 1`] = `
                 type="checkbox"
               />
               <svg
-                aria-hidden="true"
+                aria-hidden={true}
                 className="MuiSvgIcon-root"
                 focusable="false"
-                role="presentation"
                 viewBox="0 0 24 24"
               >
                 <path
@@ -13493,7 +13674,7 @@ exports[`Storyshots organisms/MaterialListFilter default 1`] = `
             className="MuiListItemText-root makeStyles-listItemText-3539 MuiListItemText-dense"
           >
             <span
-              className="MuiTypography-root MuiListItemText-primary MuiTypography-body2"
+              className="MuiTypography-root MuiListItemText-primary MuiTypography-body2 MuiTypography-displayBlock"
             >
               <span
                 className="makeStyles-root-3546 makeStyles-root-3640 "
@@ -13562,10 +13743,9 @@ exports[`Storyshots organisms/MaterialListFilter default 1`] = `
                 type="checkbox"
               />
               <svg
-                aria-hidden="true"
+                aria-hidden={true}
                 className="MuiSvgIcon-root"
                 focusable="false"
-                role="presentation"
                 viewBox="0 0 24 24"
               >
                 <path
@@ -13578,7 +13758,7 @@ exports[`Storyshots organisms/MaterialListFilter default 1`] = `
             className="MuiListItemText-root makeStyles-listItemText-3539 MuiListItemText-dense"
           >
             <span
-              className="MuiTypography-root MuiListItemText-primary MuiTypography-body2"
+              className="MuiTypography-root MuiListItemText-primary MuiTypography-body2 MuiTypography-displayBlock"
             >
               <span
                 className="makeStyles-root-3546 makeStyles-root-3642 "
@@ -13632,10 +13812,9 @@ exports[`Storyshots organisms/MaterialListFilter default 1`] = `
                 type="checkbox"
               />
               <svg
-                aria-hidden="true"
+                aria-hidden={true}
                 className="MuiSvgIcon-root"
                 focusable="false"
-                role="presentation"
                 viewBox="0 0 24 24"
               >
                 <path
@@ -13648,7 +13827,7 @@ exports[`Storyshots organisms/MaterialListFilter default 1`] = `
             className="MuiListItemText-root makeStyles-listItemText-3539 MuiListItemText-dense"
           >
             <span
-              className="MuiTypography-root MuiListItemText-primary MuiTypography-body2"
+              className="MuiTypography-root MuiListItemText-primary MuiTypography-body2 MuiTypography-displayBlock"
             >
               <span
                 className="makeStyles-root-3546 makeStyles-root-3643 "
@@ -13702,10 +13881,9 @@ exports[`Storyshots organisms/MaterialListFilter default 1`] = `
                 type="checkbox"
               />
               <svg
-                aria-hidden="true"
+                aria-hidden={true}
                 className="MuiSvgIcon-root"
                 focusable="false"
-                role="presentation"
                 viewBox="0 0 24 24"
               >
                 <path
@@ -13718,7 +13896,7 @@ exports[`Storyshots organisms/MaterialListFilter default 1`] = `
             className="MuiListItemText-root makeStyles-listItemText-3539 MuiListItemText-dense"
           >
             <span
-              className="MuiTypography-root MuiListItemText-primary MuiTypography-body2"
+              className="MuiTypography-root MuiListItemText-primary MuiTypography-body2 MuiTypography-displayBlock"
             >
               <span
                 className="makeStyles-root-3546 makeStyles-root-3644 "
@@ -13772,10 +13950,9 @@ exports[`Storyshots organisms/MaterialListFilter default 1`] = `
                 type="checkbox"
               />
               <svg
-                aria-hidden="true"
+                aria-hidden={true}
                 className="MuiSvgIcon-root"
                 focusable="false"
-                role="presentation"
                 viewBox="0 0 24 24"
               >
                 <path
@@ -13788,7 +13965,7 @@ exports[`Storyshots organisms/MaterialListFilter default 1`] = `
             className="MuiListItemText-root makeStyles-listItemText-3539 MuiListItemText-dense"
           >
             <span
-              className="MuiTypography-root MuiListItemText-primary MuiTypography-body2"
+              className="MuiTypography-root MuiListItemText-primary MuiTypography-body2 MuiTypography-displayBlock"
             >
               <span
                 className="makeStyles-root-3546 makeStyles-root-3645 "
@@ -13842,10 +14019,9 @@ exports[`Storyshots organisms/MaterialListFilter default 1`] = `
                 type="checkbox"
               />
               <svg
-                aria-hidden="true"
+                aria-hidden={true}
                 className="MuiSvgIcon-root"
                 focusable="false"
-                role="presentation"
                 viewBox="0 0 24 24"
               >
                 <path
@@ -13858,7 +14034,7 @@ exports[`Storyshots organisms/MaterialListFilter default 1`] = `
             className="MuiListItemText-root makeStyles-listItemText-3539 MuiListItemText-dense"
           >
             <span
-              className="MuiTypography-root MuiListItemText-primary MuiTypography-body2"
+              className="MuiTypography-root MuiListItemText-primary MuiTypography-body2 MuiTypography-displayBlock"
             >
               <span
                 className="makeStyles-root-3546 makeStyles-root-3646 "
@@ -13901,10 +14077,9 @@ exports[`Storyshots organisms/Navigation default 1`] = `
           className="makeStyles-root-1423 makeStyles-root-1421 makeStyles-root-1422"
         >
           <svg
-            aria-hidden="true"
+            aria-hidden={true}
             className="MuiSvgIcon-root"
             focusable="false"
-            role="presentation"
             style={
               Object {
                 "fontSize": "2.4rem",
@@ -13943,10 +14118,9 @@ exports[`Storyshots organisms/Navigation default 1`] = `
           className="makeStyles-root-1423 makeStyles-root-1421 makeStyles-root-1434"
         >
           <svg
-            aria-hidden="true"
+            aria-hidden={true}
             className="MuiSvgIcon-root"
             focusable="false"
-            role="presentation"
             style={
               Object {
                 "fontSize": "2.4rem",
@@ -13985,10 +14159,9 @@ exports[`Storyshots organisms/Navigation default 1`] = `
           className="makeStyles-root-1423 makeStyles-root-1421 makeStyles-root-1435"
         >
           <svg
-            aria-hidden="true"
+            aria-hidden={true}
             className="MuiSvgIcon-root"
             focusable="false"
-            role="presentation"
             style={
               Object {
                 "fontSize": "2.4rem",
@@ -14027,10 +14200,9 @@ exports[`Storyshots organisms/Navigation default 1`] = `
           className="makeStyles-root-1423 makeStyles-root-1421 makeStyles-root-1436"
         >
           <svg
-            aria-hidden="true"
+            aria-hidden={true}
             className="MuiSvgIcon-root"
             focusable="false"
-            role="presentation"
             style={
               Object {
                 "fontSize": "2.4rem",
@@ -14067,6 +14239,8 @@ exports[`Storyshots organisms/SmallMaterial default 1`] = `
       className="makeStyles-karutaImage-1440 gatsby-image-wrapper"
       style={
         Object {
+          "maxHeight": null,
+          "maxWidth": null,
           "overflow": "hidden",
           "position": "relative",
         }
@@ -14182,6 +14356,8 @@ exports[`Storyshots organisms/SmallMaterial separate space 1`] = `
       className="makeStyles-karutaImage-1451 gatsby-image-wrapper"
       style={
         Object {
+          "maxHeight": null,
+          "maxWidth": null,
           "overflow": "hidden",
           "position": "relative",
         }
@@ -14276,7 +14452,7 @@ exports[`Storyshots organisms/TrainingMenuForm default 1`] = `
       >
         <div
           aria-haspopup="listbox"
-          aria-labelledby=" mui-component-select-rangeFrom"
+          aria-labelledby="mui-component-select-rangeFrom"
           className="MuiSelect-root MuiSelect-select MuiSelect-selectMenu MuiInputBase-input MuiInput-input"
           id="mui-component-select-rangeFrom"
           onBlur={[Function]}
@@ -14296,10 +14472,9 @@ exports[`Storyshots organisms/TrainingMenuForm default 1`] = `
           value="1"
         />
         <svg
-          aria-hidden="true"
+          aria-hidden={true}
           className="MuiSvgIcon-root MuiSelect-icon"
           focusable="false"
-          role="presentation"
           viewBox="0 0 24 24"
         >
           <path
@@ -14318,7 +14493,7 @@ exports[`Storyshots organisms/TrainingMenuForm default 1`] = `
       >
         <div
           aria-haspopup="listbox"
-          aria-labelledby=" mui-component-select-rangeTo"
+          aria-labelledby="mui-component-select-rangeTo"
           className="MuiSelect-root MuiSelect-select MuiSelect-selectMenu MuiInputBase-input MuiInput-input"
           id="mui-component-select-rangeTo"
           onBlur={[Function]}
@@ -14338,10 +14513,9 @@ exports[`Storyshots organisms/TrainingMenuForm default 1`] = `
           value="100"
         />
         <svg
-          aria-hidden="true"
+          aria-hidden={true}
           className="MuiSvgIcon-root MuiSelect-icon"
           focusable="false"
-          role="presentation"
           viewBox="0 0 24 24"
         >
           <path
@@ -14367,7 +14541,7 @@ exports[`Storyshots organisms/TrainingMenuForm default 1`] = `
     >
       <div
         aria-haspopup="listbox"
-        aria-labelledby=" mui-component-select-kimariji"
+        aria-labelledby="mui-component-select-kimariji"
         className="MuiSelect-root MuiSelect-select MuiSelect-selectMenu MuiInputBase-input MuiInput-input"
         id="mui-component-select-kimariji"
         onBlur={[Function]}
@@ -14387,10 +14561,9 @@ exports[`Storyshots organisms/TrainingMenuForm default 1`] = `
         value="none"
       />
       <svg
-        aria-hidden="true"
+        aria-hidden={true}
         className="MuiSvgIcon-root MuiSelect-icon"
         focusable="false"
-        role="presentation"
         viewBox="0 0 24 24"
       >
         <path
@@ -14415,7 +14588,7 @@ exports[`Storyshots organisms/TrainingMenuForm default 1`] = `
     >
       <div
         aria-haspopup="listbox"
-        aria-labelledby=" mui-component-select-color"
+        aria-labelledby="mui-component-select-color"
         className="MuiSelect-root MuiSelect-select MuiSelect-selectMenu MuiInputBase-input MuiInput-input"
         id="mui-component-select-color"
         onBlur={[Function]}
@@ -14435,10 +14608,9 @@ exports[`Storyshots organisms/TrainingMenuForm default 1`] = `
         value="none"
       />
       <svg
-        aria-hidden="true"
+        aria-hidden={true}
         className="MuiSvgIcon-root MuiSelect-icon"
         focusable="false"
-        role="presentation"
         viewBox="0 0 24 24"
       >
         <path
@@ -14463,7 +14635,7 @@ exports[`Storyshots organisms/TrainingMenuForm default 1`] = `
     >
       <div
         aria-haspopup="listbox"
-        aria-labelledby=" mui-component-select-kamiNoKuStyle"
+        aria-labelledby="mui-component-select-kamiNoKuStyle"
         className="MuiSelect-root MuiSelect-select MuiSelect-selectMenu MuiInputBase-input MuiInput-input"
         id="mui-component-select-kamiNoKuStyle"
         onBlur={[Function]}
@@ -14483,10 +14655,9 @@ exports[`Storyshots organisms/TrainingMenuForm default 1`] = `
         value="kanji"
       />
       <svg
-        aria-hidden="true"
+        aria-hidden={true}
         className="MuiSvgIcon-root MuiSelect-icon"
         focusable="false"
-        role="presentation"
         viewBox="0 0 24 24"
       >
         <path
@@ -14511,7 +14682,7 @@ exports[`Storyshots organisms/TrainingMenuForm default 1`] = `
     >
       <div
         aria-haspopup="listbox"
-        aria-labelledby=" mui-component-select-shimoNoKuStyle"
+        aria-labelledby="mui-component-select-shimoNoKuStyle"
         className="MuiSelect-root MuiSelect-select MuiSelect-selectMenu MuiInputBase-input MuiInput-input"
         id="mui-component-select-shimoNoKuStyle"
         onBlur={[Function]}
@@ -14531,10 +14702,9 @@ exports[`Storyshots organisms/TrainingMenuForm default 1`] = `
         value="kana"
       />
       <svg
-        aria-hidden="true"
+        aria-hidden={true}
         className="MuiSvgIcon-root MuiSelect-icon"
         focusable="false"
-        role="presentation"
         viewBox="0 0 24 24"
       >
         <path
@@ -14559,7 +14729,7 @@ exports[`Storyshots organisms/TrainingMenuForm default 1`] = `
     >
       <div
         aria-haspopup="listbox"
-        aria-labelledby=" mui-component-select-questionAnim"
+        aria-labelledby="mui-component-select-questionAnim"
         className="MuiSelect-root MuiSelect-select MuiSelect-selectMenu MuiInputBase-input MuiInput-input"
         id="mui-component-select-questionAnim"
         onBlur={[Function]}
@@ -14579,10 +14749,9 @@ exports[`Storyshots organisms/TrainingMenuForm default 1`] = `
         value="normal"
       />
       <svg
-        aria-hidden="true"
+        aria-hidden={true}
         className="MuiSvgIcon-root MuiSelect-icon"
         focusable="false"
-        role="presentation"
         viewBox="0 0 24 24"
       >
         <path
@@ -14613,10 +14782,9 @@ exports[`Storyshots organisms/TrainingMenuForm default 1`] = `
       className="MuiButton-label"
     >
       <svg
-        aria-hidden="true"
+        aria-hidden={true}
         className="MuiSvgIcon-root makeStyles-accent-3741 makeStyles-accent-3743"
         focusable="false"
-        role="presentation"
         viewBox="0 0 24 24"
       >
         <path
@@ -14648,6 +14816,8 @@ exports[`Storyshots pages/404 default 1`] = `
       style={
         Object {
           "marginTop": "32px",
+          "maxHeight": null,
+          "maxWidth": null,
           "overflow": "hidden",
           "position": "relative",
         }
@@ -14715,6 +14885,8 @@ exports[`Storyshots pages/500 default 1`] = `
     style={
       Object {
         "marginTop": "32px",
+        "maxHeight": null,
+        "maxWidth": null,
         "overflow": "hidden",
         "position": "relative",
         "width": 200,
@@ -14783,10 +14955,9 @@ Array [
         onClick={[Function]}
       >
         <svg
-          aria-hidden="true"
+          aria-hidden={true}
           className="MuiSvgIcon-root"
           focusable="false"
-          role="presentation"
           style={
             Object {
               "fontSize": "2.4rem",
@@ -14982,10 +15153,9 @@ Array [
             className="makeStyles-root-1492 makeStyles-root-1527 makeStyles-root-1528"
           >
             <svg
-              aria-hidden="true"
+              aria-hidden={true}
               className="MuiSvgIcon-root"
               focusable="false"
-              role="presentation"
               style={
                 Object {
                   "fontSize": "2.4rem",
@@ -15024,10 +15194,9 @@ Array [
             className="makeStyles-root-1492 makeStyles-root-1527 makeStyles-root-1529"
           >
             <svg
-              aria-hidden="true"
+              aria-hidden={true}
               className="MuiSvgIcon-root"
               focusable="false"
-              role="presentation"
               style={
                 Object {
                   "fontSize": "2.4rem",
@@ -15066,10 +15235,9 @@ Array [
             className="makeStyles-root-1492 makeStyles-root-1527 makeStyles-root-1530"
           >
             <svg
-              aria-hidden="true"
+              aria-hidden={true}
               className="MuiSvgIcon-root"
               focusable="false"
-              role="presentation"
               style={
                 Object {
                   "fontSize": "2.4rem",
@@ -15108,10 +15276,9 @@ Array [
             className="makeStyles-root-1492 makeStyles-root-1527 makeStyles-root-1531"
           >
             <svg
-              aria-hidden="true"
+              aria-hidden={true}
               className="MuiSvgIcon-root"
               focusable="false"
-              role="presentation"
               style={
                 Object {
                   "fontSize": "2.4rem",
@@ -15147,10 +15314,9 @@ Array [
         onClick={[Function]}
       >
         <svg
-          aria-hidden="true"
+          aria-hidden={true}
           className="MuiSvgIcon-root"
           focusable="false"
-          role="presentation"
           style={
             Object {
               "fontSize": "2.4rem",
@@ -15219,10 +15385,9 @@ Array [
           className="MuiButton-label"
         >
           <svg
-            aria-hidden="true"
+            aria-hidden={true}
             className="MuiSvgIcon-root makeStyles-accent-1568 makeStyles-accent-1570"
             focusable="false"
-            role="presentation"
             viewBox="0 0 24 24"
           >
             <path
@@ -15269,10 +15434,9 @@ Array [
             className="makeStyles-root-1547 makeStyles-root-1605 makeStyles-root-1606"
           >
             <svg
-              aria-hidden="true"
+              aria-hidden={true}
               className="MuiSvgIcon-root"
               focusable="false"
-              role="presentation"
               style={
                 Object {
                   "fontSize": "2.4rem",
@@ -15311,10 +15475,9 @@ Array [
             className="makeStyles-root-1547 makeStyles-root-1605 makeStyles-root-1607"
           >
             <svg
-              aria-hidden="true"
+              aria-hidden={true}
               className="MuiSvgIcon-root"
               focusable="false"
-              role="presentation"
               style={
                 Object {
                   "fontSize": "2.4rem",
@@ -15353,10 +15516,9 @@ Array [
             className="makeStyles-root-1547 makeStyles-root-1605 makeStyles-root-1608"
           >
             <svg
-              aria-hidden="true"
+              aria-hidden={true}
               className="MuiSvgIcon-root"
               focusable="false"
-              role="presentation"
               style={
                 Object {
                   "fontSize": "2.4rem",
@@ -15395,10 +15557,9 @@ Array [
             className="makeStyles-root-1547 makeStyles-root-1605 makeStyles-root-1609"
           >
             <svg
-              aria-hidden="true"
+              aria-hidden={true}
               className="MuiSvgIcon-root"
               focusable="false"
-              role="presentation"
               style={
                 Object {
                   "fontSize": "2.4rem",
@@ -15434,10 +15595,9 @@ Array [
         onClick={[Function]}
       >
         <svg
-          aria-hidden="true"
+          aria-hidden={true}
           className="MuiSvgIcon-root"
           focusable="false"
-          role="presentation"
           style={
             Object {
               "fontSize": "2.4rem",
@@ -15678,10 +15838,9 @@ Array [
         onClick={[Function]}
       >
         <svg
-          aria-hidden="true"
+          aria-hidden={true}
           className="MuiSvgIcon-root"
           focusable="false"
-          role="presentation"
           style={
             Object {
               "fontSize": "2.4rem",
@@ -15814,6 +15973,8 @@ Array [
                 className=" gatsby-image-wrapper"
                 style={
                   Object {
+                    "maxHeight": null,
+                    "maxWidth": null,
                     "overflow": "hidden",
                     "position": "relative",
                     "width": "80%",
@@ -15882,6 +16043,8 @@ Array [
                 className=" gatsby-image-wrapper"
                 style={
                   Object {
+                    "maxHeight": null,
+                    "maxWidth": null,
                     "overflow": "hidden",
                     "position": "relative",
                     "width": "80%",
@@ -15950,6 +16113,8 @@ Array [
                 className=" gatsby-image-wrapper"
                 style={
                   Object {
+                    "maxHeight": null,
+                    "maxWidth": null,
                     "overflow": "hidden",
                     "position": "relative",
                     "width": "80%",
@@ -16018,6 +16183,8 @@ Array [
                 className=" gatsby-image-wrapper"
                 style={
                   Object {
+                    "maxHeight": null,
+                    "maxWidth": null,
                     "overflow": "hidden",
                     "position": "relative",
                     "width": "80%",
@@ -16086,6 +16253,8 @@ Array [
                 className=" gatsby-image-wrapper"
                 style={
                   Object {
+                    "maxHeight": null,
+                    "maxWidth": null,
                     "overflow": "hidden",
                     "position": "relative",
                     "width": "80%",
@@ -16154,6 +16323,8 @@ Array [
                 className=" gatsby-image-wrapper"
                 style={
                   Object {
+                    "maxHeight": null,
+                    "maxWidth": null,
                     "overflow": "hidden",
                     "position": "relative",
                     "width": "80%",
@@ -16222,6 +16393,8 @@ Array [
                 className=" gatsby-image-wrapper"
                 style={
                   Object {
+                    "maxHeight": null,
+                    "maxWidth": null,
                     "overflow": "hidden",
                     "position": "relative",
                     "width": "80%",
@@ -16290,6 +16463,8 @@ Array [
                 className=" gatsby-image-wrapper"
                 style={
                   Object {
+                    "maxHeight": null,
+                    "maxWidth": null,
                     "overflow": "hidden",
                     "position": "relative",
                     "width": "80%",
@@ -16358,6 +16533,8 @@ Array [
                 className=" gatsby-image-wrapper"
                 style={
                   Object {
+                    "maxHeight": null,
+                    "maxWidth": null,
                     "overflow": "hidden",
                     "position": "relative",
                     "width": "80%",
@@ -16426,6 +16603,8 @@ Array [
                 className=" gatsby-image-wrapper"
                 style={
                   Object {
+                    "maxHeight": null,
+                    "maxWidth": null,
                     "overflow": "hidden",
                     "position": "relative",
                     "width": "80%",
@@ -16494,6 +16673,8 @@ Array [
                 className=" gatsby-image-wrapper"
                 style={
                   Object {
+                    "maxHeight": null,
+                    "maxWidth": null,
                     "overflow": "hidden",
                     "position": "relative",
                     "width": "80%",
@@ -16562,6 +16743,8 @@ Array [
                 className=" gatsby-image-wrapper"
                 style={
                   Object {
+                    "maxHeight": null,
+                    "maxWidth": null,
                     "overflow": "hidden",
                     "position": "relative",
                     "width": "80%",
@@ -16630,6 +16813,8 @@ Array [
                 className=" gatsby-image-wrapper"
                 style={
                   Object {
+                    "maxHeight": null,
+                    "maxWidth": null,
                     "overflow": "hidden",
                     "position": "relative",
                     "width": "80%",
@@ -16698,6 +16883,8 @@ Array [
                 className=" gatsby-image-wrapper"
                 style={
                   Object {
+                    "maxHeight": null,
+                    "maxWidth": null,
                     "overflow": "hidden",
                     "position": "relative",
                     "width": "80%",
@@ -16766,6 +16953,8 @@ Array [
                 className=" gatsby-image-wrapper"
                 style={
                   Object {
+                    "maxHeight": null,
+                    "maxWidth": null,
                     "overflow": "hidden",
                     "position": "relative",
                     "width": "80%",
@@ -16834,6 +17023,8 @@ Array [
                 className=" gatsby-image-wrapper"
                 style={
                   Object {
+                    "maxHeight": null,
+                    "maxWidth": null,
                     "overflow": "hidden",
                     "position": "relative",
                     "width": "80%",
@@ -16902,6 +17093,8 @@ Array [
                 className=" gatsby-image-wrapper"
                 style={
                   Object {
+                    "maxHeight": null,
+                    "maxWidth": null,
                     "overflow": "hidden",
                     "position": "relative",
                     "width": "80%",
@@ -16970,6 +17163,8 @@ Array [
                 className=" gatsby-image-wrapper"
                 style={
                   Object {
+                    "maxHeight": null,
+                    "maxWidth": null,
                     "overflow": "hidden",
                     "position": "relative",
                     "width": "80%",
@@ -17038,6 +17233,8 @@ Array [
                 className=" gatsby-image-wrapper"
                 style={
                   Object {
+                    "maxHeight": null,
+                    "maxWidth": null,
                     "overflow": "hidden",
                     "position": "relative",
                     "width": "80%",
@@ -17106,6 +17303,8 @@ Array [
                 className=" gatsby-image-wrapper"
                 style={
                   Object {
+                    "maxHeight": null,
+                    "maxWidth": null,
                     "overflow": "hidden",
                     "position": "relative",
                     "width": "80%",
@@ -17174,6 +17373,8 @@ Array [
                 className=" gatsby-image-wrapper"
                 style={
                   Object {
+                    "maxHeight": null,
+                    "maxWidth": null,
                     "overflow": "hidden",
                     "position": "relative",
                     "width": "80%",
@@ -17242,6 +17443,8 @@ Array [
                 className=" gatsby-image-wrapper"
                 style={
                   Object {
+                    "maxHeight": null,
+                    "maxWidth": null,
                     "overflow": "hidden",
                     "position": "relative",
                     "width": "80%",
@@ -17310,6 +17513,8 @@ Array [
                 className=" gatsby-image-wrapper"
                 style={
                   Object {
+                    "maxHeight": null,
+                    "maxWidth": null,
                     "overflow": "hidden",
                     "position": "relative",
                     "width": "80%",
@@ -17378,6 +17583,8 @@ Array [
                 className=" gatsby-image-wrapper"
                 style={
                   Object {
+                    "maxHeight": null,
+                    "maxWidth": null,
                     "overflow": "hidden",
                     "position": "relative",
                     "width": "80%",
@@ -17446,6 +17653,8 @@ Array [
                 className=" gatsby-image-wrapper"
                 style={
                   Object {
+                    "maxHeight": null,
+                    "maxWidth": null,
                     "overflow": "hidden",
                     "position": "relative",
                     "width": "80%",
@@ -17514,6 +17723,8 @@ Array [
                 className=" gatsby-image-wrapper"
                 style={
                   Object {
+                    "maxHeight": null,
+                    "maxWidth": null,
                     "overflow": "hidden",
                     "position": "relative",
                     "width": "80%",
@@ -17582,6 +17793,8 @@ Array [
                 className=" gatsby-image-wrapper"
                 style={
                   Object {
+                    "maxHeight": null,
+                    "maxWidth": null,
                     "overflow": "hidden",
                     "position": "relative",
                     "width": "80%",
@@ -17650,6 +17863,8 @@ Array [
                 className=" gatsby-image-wrapper"
                 style={
                   Object {
+                    "maxHeight": null,
+                    "maxWidth": null,
                     "overflow": "hidden",
                     "position": "relative",
                     "width": "80%",
@@ -17718,6 +17933,8 @@ Array [
                 className=" gatsby-image-wrapper"
                 style={
                   Object {
+                    "maxHeight": null,
+                    "maxWidth": null,
                     "overflow": "hidden",
                     "position": "relative",
                     "width": "80%",
@@ -17786,6 +18003,8 @@ Array [
                 className=" gatsby-image-wrapper"
                 style={
                   Object {
+                    "maxHeight": null,
+                    "maxWidth": null,
                     "overflow": "hidden",
                     "position": "relative",
                     "width": "80%",
@@ -17854,6 +18073,8 @@ Array [
                 className=" gatsby-image-wrapper"
                 style={
                   Object {
+                    "maxHeight": null,
+                    "maxWidth": null,
                     "overflow": "hidden",
                     "position": "relative",
                     "width": "80%",
@@ -17922,6 +18143,8 @@ Array [
                 className=" gatsby-image-wrapper"
                 style={
                   Object {
+                    "maxHeight": null,
+                    "maxWidth": null,
                     "overflow": "hidden",
                     "position": "relative",
                     "width": "80%",
@@ -17990,6 +18213,8 @@ Array [
                 className=" gatsby-image-wrapper"
                 style={
                   Object {
+                    "maxHeight": null,
+                    "maxWidth": null,
                     "overflow": "hidden",
                     "position": "relative",
                     "width": "80%",
@@ -18058,6 +18283,8 @@ Array [
                 className=" gatsby-image-wrapper"
                 style={
                   Object {
+                    "maxHeight": null,
+                    "maxWidth": null,
                     "overflow": "hidden",
                     "position": "relative",
                     "width": "80%",
@@ -18126,6 +18353,8 @@ Array [
                 className=" gatsby-image-wrapper"
                 style={
                   Object {
+                    "maxHeight": null,
+                    "maxWidth": null,
                     "overflow": "hidden",
                     "position": "relative",
                     "width": "80%",
@@ -18194,6 +18423,8 @@ Array [
                 className=" gatsby-image-wrapper"
                 style={
                   Object {
+                    "maxHeight": null,
+                    "maxWidth": null,
                     "overflow": "hidden",
                     "position": "relative",
                     "width": "80%",
@@ -18262,6 +18493,8 @@ Array [
                 className=" gatsby-image-wrapper"
                 style={
                   Object {
+                    "maxHeight": null,
+                    "maxWidth": null,
                     "overflow": "hidden",
                     "position": "relative",
                     "width": "80%",
@@ -18330,6 +18563,8 @@ Array [
                 className=" gatsby-image-wrapper"
                 style={
                   Object {
+                    "maxHeight": null,
+                    "maxWidth": null,
                     "overflow": "hidden",
                     "position": "relative",
                     "width": "80%",
@@ -18398,6 +18633,8 @@ Array [
                 className=" gatsby-image-wrapper"
                 style={
                   Object {
+                    "maxHeight": null,
+                    "maxWidth": null,
                     "overflow": "hidden",
                     "position": "relative",
                     "width": "80%",
@@ -18466,6 +18703,8 @@ Array [
                 className=" gatsby-image-wrapper"
                 style={
                   Object {
+                    "maxHeight": null,
+                    "maxWidth": null,
                     "overflow": "hidden",
                     "position": "relative",
                     "width": "80%",
@@ -18534,6 +18773,8 @@ Array [
                 className=" gatsby-image-wrapper"
                 style={
                   Object {
+                    "maxHeight": null,
+                    "maxWidth": null,
                     "overflow": "hidden",
                     "position": "relative",
                     "width": "80%",
@@ -18602,6 +18843,8 @@ Array [
                 className=" gatsby-image-wrapper"
                 style={
                   Object {
+                    "maxHeight": null,
+                    "maxWidth": null,
                     "overflow": "hidden",
                     "position": "relative",
                     "width": "80%",
@@ -18670,6 +18913,8 @@ Array [
                 className=" gatsby-image-wrapper"
                 style={
                   Object {
+                    "maxHeight": null,
+                    "maxWidth": null,
                     "overflow": "hidden",
                     "position": "relative",
                     "width": "80%",
@@ -18738,6 +18983,8 @@ Array [
                 className=" gatsby-image-wrapper"
                 style={
                   Object {
+                    "maxHeight": null,
+                    "maxWidth": null,
                     "overflow": "hidden",
                     "position": "relative",
                     "width": "80%",
@@ -18806,6 +19053,8 @@ Array [
                 className=" gatsby-image-wrapper"
                 style={
                   Object {
+                    "maxHeight": null,
+                    "maxWidth": null,
                     "overflow": "hidden",
                     "position": "relative",
                     "width": "80%",
@@ -18874,6 +19123,8 @@ Array [
                 className=" gatsby-image-wrapper"
                 style={
                   Object {
+                    "maxHeight": null,
+                    "maxWidth": null,
                     "overflow": "hidden",
                     "position": "relative",
                     "width": "80%",
@@ -18942,6 +19193,8 @@ Array [
                 className=" gatsby-image-wrapper"
                 style={
                   Object {
+                    "maxHeight": null,
+                    "maxWidth": null,
                     "overflow": "hidden",
                     "position": "relative",
                     "width": "80%",
@@ -19010,6 +19263,8 @@ Array [
                 className=" gatsby-image-wrapper"
                 style={
                   Object {
+                    "maxHeight": null,
+                    "maxWidth": null,
                     "overflow": "hidden",
                     "position": "relative",
                     "width": "80%",
@@ -19078,6 +19333,8 @@ Array [
                 className=" gatsby-image-wrapper"
                 style={
                   Object {
+                    "maxHeight": null,
+                    "maxWidth": null,
                     "overflow": "hidden",
                     "position": "relative",
                     "width": "80%",
@@ -19146,6 +19403,8 @@ Array [
                 className=" gatsby-image-wrapper"
                 style={
                   Object {
+                    "maxHeight": null,
+                    "maxWidth": null,
                     "overflow": "hidden",
                     "position": "relative",
                     "width": "80%",
@@ -19214,6 +19473,8 @@ Array [
                 className=" gatsby-image-wrapper"
                 style={
                   Object {
+                    "maxHeight": null,
+                    "maxWidth": null,
                     "overflow": "hidden",
                     "position": "relative",
                     "width": "80%",
@@ -19282,6 +19543,8 @@ Array [
                 className=" gatsby-image-wrapper"
                 style={
                   Object {
+                    "maxHeight": null,
+                    "maxWidth": null,
                     "overflow": "hidden",
                     "position": "relative",
                     "width": "80%",
@@ -19350,6 +19613,8 @@ Array [
                 className=" gatsby-image-wrapper"
                 style={
                   Object {
+                    "maxHeight": null,
+                    "maxWidth": null,
                     "overflow": "hidden",
                     "position": "relative",
                     "width": "80%",
@@ -19418,6 +19683,8 @@ Array [
                 className=" gatsby-image-wrapper"
                 style={
                   Object {
+                    "maxHeight": null,
+                    "maxWidth": null,
                     "overflow": "hidden",
                     "position": "relative",
                     "width": "80%",
@@ -19486,6 +19753,8 @@ Array [
                 className=" gatsby-image-wrapper"
                 style={
                   Object {
+                    "maxHeight": null,
+                    "maxWidth": null,
                     "overflow": "hidden",
                     "position": "relative",
                     "width": "80%",
@@ -19554,6 +19823,8 @@ Array [
                 className=" gatsby-image-wrapper"
                 style={
                   Object {
+                    "maxHeight": null,
+                    "maxWidth": null,
                     "overflow": "hidden",
                     "position": "relative",
                     "width": "80%",
@@ -19622,6 +19893,8 @@ Array [
                 className=" gatsby-image-wrapper"
                 style={
                   Object {
+                    "maxHeight": null,
+                    "maxWidth": null,
                     "overflow": "hidden",
                     "position": "relative",
                     "width": "80%",
@@ -19690,6 +19963,8 @@ Array [
                 className=" gatsby-image-wrapper"
                 style={
                   Object {
+                    "maxHeight": null,
+                    "maxWidth": null,
                     "overflow": "hidden",
                     "position": "relative",
                     "width": "80%",
@@ -19758,6 +20033,8 @@ Array [
                 className=" gatsby-image-wrapper"
                 style={
                   Object {
+                    "maxHeight": null,
+                    "maxWidth": null,
                     "overflow": "hidden",
                     "position": "relative",
                     "width": "80%",
@@ -19826,6 +20103,8 @@ Array [
                 className=" gatsby-image-wrapper"
                 style={
                   Object {
+                    "maxHeight": null,
+                    "maxWidth": null,
                     "overflow": "hidden",
                     "position": "relative",
                     "width": "80%",
@@ -19894,6 +20173,8 @@ Array [
                 className=" gatsby-image-wrapper"
                 style={
                   Object {
+                    "maxHeight": null,
+                    "maxWidth": null,
                     "overflow": "hidden",
                     "position": "relative",
                     "width": "80%",
@@ -19962,6 +20243,8 @@ Array [
                 className=" gatsby-image-wrapper"
                 style={
                   Object {
+                    "maxHeight": null,
+                    "maxWidth": null,
                     "overflow": "hidden",
                     "position": "relative",
                     "width": "80%",
@@ -20030,6 +20313,8 @@ Array [
                 className=" gatsby-image-wrapper"
                 style={
                   Object {
+                    "maxHeight": null,
+                    "maxWidth": null,
                     "overflow": "hidden",
                     "position": "relative",
                     "width": "80%",
@@ -20098,6 +20383,8 @@ Array [
                 className=" gatsby-image-wrapper"
                 style={
                   Object {
+                    "maxHeight": null,
+                    "maxWidth": null,
                     "overflow": "hidden",
                     "position": "relative",
                     "width": "80%",
@@ -20166,6 +20453,8 @@ Array [
                 className=" gatsby-image-wrapper"
                 style={
                   Object {
+                    "maxHeight": null,
+                    "maxWidth": null,
                     "overflow": "hidden",
                     "position": "relative",
                     "width": "80%",
@@ -20234,6 +20523,8 @@ Array [
                 className=" gatsby-image-wrapper"
                 style={
                   Object {
+                    "maxHeight": null,
+                    "maxWidth": null,
                     "overflow": "hidden",
                     "position": "relative",
                     "width": "80%",
@@ -20302,6 +20593,8 @@ Array [
                 className=" gatsby-image-wrapper"
                 style={
                   Object {
+                    "maxHeight": null,
+                    "maxWidth": null,
                     "overflow": "hidden",
                     "position": "relative",
                     "width": "80%",
@@ -20370,6 +20663,8 @@ Array [
                 className=" gatsby-image-wrapper"
                 style={
                   Object {
+                    "maxHeight": null,
+                    "maxWidth": null,
                     "overflow": "hidden",
                     "position": "relative",
                     "width": "80%",
@@ -20438,6 +20733,8 @@ Array [
                 className=" gatsby-image-wrapper"
                 style={
                   Object {
+                    "maxHeight": null,
+                    "maxWidth": null,
                     "overflow": "hidden",
                     "position": "relative",
                     "width": "80%",
@@ -20506,6 +20803,8 @@ Array [
                 className=" gatsby-image-wrapper"
                 style={
                   Object {
+                    "maxHeight": null,
+                    "maxWidth": null,
                     "overflow": "hidden",
                     "position": "relative",
                     "width": "80%",
@@ -20574,6 +20873,8 @@ Array [
                 className=" gatsby-image-wrapper"
                 style={
                   Object {
+                    "maxHeight": null,
+                    "maxWidth": null,
                     "overflow": "hidden",
                     "position": "relative",
                     "width": "80%",
@@ -20642,6 +20943,8 @@ Array [
                 className=" gatsby-image-wrapper"
                 style={
                   Object {
+                    "maxHeight": null,
+                    "maxWidth": null,
                     "overflow": "hidden",
                     "position": "relative",
                     "width": "80%",
@@ -20710,6 +21013,8 @@ Array [
                 className=" gatsby-image-wrapper"
                 style={
                   Object {
+                    "maxHeight": null,
+                    "maxWidth": null,
                     "overflow": "hidden",
                     "position": "relative",
                     "width": "80%",
@@ -20778,6 +21083,8 @@ Array [
                 className=" gatsby-image-wrapper"
                 style={
                   Object {
+                    "maxHeight": null,
+                    "maxWidth": null,
                     "overflow": "hidden",
                     "position": "relative",
                     "width": "80%",
@@ -20846,6 +21153,8 @@ Array [
                 className=" gatsby-image-wrapper"
                 style={
                   Object {
+                    "maxHeight": null,
+                    "maxWidth": null,
                     "overflow": "hidden",
                     "position": "relative",
                     "width": "80%",
@@ -20914,6 +21223,8 @@ Array [
                 className=" gatsby-image-wrapper"
                 style={
                   Object {
+                    "maxHeight": null,
+                    "maxWidth": null,
                     "overflow": "hidden",
                     "position": "relative",
                     "width": "80%",
@@ -20982,6 +21293,8 @@ Array [
                 className=" gatsby-image-wrapper"
                 style={
                   Object {
+                    "maxHeight": null,
+                    "maxWidth": null,
                     "overflow": "hidden",
                     "position": "relative",
                     "width": "80%",
@@ -21050,6 +21363,8 @@ Array [
                 className=" gatsby-image-wrapper"
                 style={
                   Object {
+                    "maxHeight": null,
+                    "maxWidth": null,
                     "overflow": "hidden",
                     "position": "relative",
                     "width": "80%",
@@ -21118,6 +21433,8 @@ Array [
                 className=" gatsby-image-wrapper"
                 style={
                   Object {
+                    "maxHeight": null,
+                    "maxWidth": null,
                     "overflow": "hidden",
                     "position": "relative",
                     "width": "80%",
@@ -21186,6 +21503,8 @@ Array [
                 className=" gatsby-image-wrapper"
                 style={
                   Object {
+                    "maxHeight": null,
+                    "maxWidth": null,
                     "overflow": "hidden",
                     "position": "relative",
                     "width": "80%",
@@ -21254,6 +21573,8 @@ Array [
                 className=" gatsby-image-wrapper"
                 style={
                   Object {
+                    "maxHeight": null,
+                    "maxWidth": null,
                     "overflow": "hidden",
                     "position": "relative",
                     "width": "80%",
@@ -21322,6 +21643,8 @@ Array [
                 className=" gatsby-image-wrapper"
                 style={
                   Object {
+                    "maxHeight": null,
+                    "maxWidth": null,
                     "overflow": "hidden",
                     "position": "relative",
                     "width": "80%",
@@ -21390,6 +21713,8 @@ Array [
                 className=" gatsby-image-wrapper"
                 style={
                   Object {
+                    "maxHeight": null,
+                    "maxWidth": null,
                     "overflow": "hidden",
                     "position": "relative",
                     "width": "80%",
@@ -21458,6 +21783,8 @@ Array [
                 className=" gatsby-image-wrapper"
                 style={
                   Object {
+                    "maxHeight": null,
+                    "maxWidth": null,
                     "overflow": "hidden",
                     "position": "relative",
                     "width": "80%",
@@ -21526,6 +21853,8 @@ Array [
                 className=" gatsby-image-wrapper"
                 style={
                   Object {
+                    "maxHeight": null,
+                    "maxWidth": null,
                     "overflow": "hidden",
                     "position": "relative",
                     "width": "80%",
@@ -21594,6 +21923,8 @@ Array [
                 className=" gatsby-image-wrapper"
                 style={
                   Object {
+                    "maxHeight": null,
+                    "maxWidth": null,
                     "overflow": "hidden",
                     "position": "relative",
                     "width": "80%",
@@ -21662,6 +21993,8 @@ Array [
                 className=" gatsby-image-wrapper"
                 style={
                   Object {
+                    "maxHeight": null,
+                    "maxWidth": null,
                     "overflow": "hidden",
                     "position": "relative",
                     "width": "80%",
@@ -21730,6 +22063,8 @@ Array [
                 className=" gatsby-image-wrapper"
                 style={
                   Object {
+                    "maxHeight": null,
+                    "maxWidth": null,
                     "overflow": "hidden",
                     "position": "relative",
                     "width": "80%",
@@ -21798,6 +22133,8 @@ Array [
                 className=" gatsby-image-wrapper"
                 style={
                   Object {
+                    "maxHeight": null,
+                    "maxWidth": null,
                     "overflow": "hidden",
                     "position": "relative",
                     "width": "80%",
@@ -21866,6 +22203,8 @@ Array [
                 className=" gatsby-image-wrapper"
                 style={
                   Object {
+                    "maxHeight": null,
+                    "maxWidth": null,
                     "overflow": "hidden",
                     "position": "relative",
                     "width": "80%",
@@ -21934,6 +22273,8 @@ Array [
                 className=" gatsby-image-wrapper"
                 style={
                   Object {
+                    "maxHeight": null,
+                    "maxWidth": null,
                     "overflow": "hidden",
                     "position": "relative",
                     "width": "80%",
@@ -22002,6 +22343,8 @@ Array [
                 className=" gatsby-image-wrapper"
                 style={
                   Object {
+                    "maxHeight": null,
+                    "maxWidth": null,
                     "overflow": "hidden",
                     "position": "relative",
                     "width": "80%",
@@ -22070,6 +22413,8 @@ Array [
                 className=" gatsby-image-wrapper"
                 style={
                   Object {
+                    "maxHeight": null,
+                    "maxWidth": null,
                     "overflow": "hidden",
                     "position": "relative",
                     "width": "80%",
@@ -22138,6 +22483,8 @@ Array [
                 className=" gatsby-image-wrapper"
                 style={
                   Object {
+                    "maxHeight": null,
+                    "maxWidth": null,
                     "overflow": "hidden",
                     "position": "relative",
                     "width": "80%",
@@ -22206,6 +22553,8 @@ Array [
                 className=" gatsby-image-wrapper"
                 style={
                   Object {
+                    "maxHeight": null,
+                    "maxWidth": null,
                     "overflow": "hidden",
                     "position": "relative",
                     "width": "80%",
@@ -22274,6 +22623,8 @@ Array [
                 className=" gatsby-image-wrapper"
                 style={
                   Object {
+                    "maxHeight": null,
+                    "maxWidth": null,
                     "overflow": "hidden",
                     "position": "relative",
                     "width": "80%",
@@ -22342,6 +22693,8 @@ Array [
                 className=" gatsby-image-wrapper"
                 style={
                   Object {
+                    "maxHeight": null,
+                    "maxWidth": null,
                     "overflow": "hidden",
                     "position": "relative",
                     "width": "80%",
@@ -22410,6 +22763,8 @@ Array [
                 className=" gatsby-image-wrapper"
                 style={
                   Object {
+                    "maxHeight": null,
+                    "maxWidth": null,
                     "overflow": "hidden",
                     "position": "relative",
                     "width": "80%",
@@ -22478,6 +22833,8 @@ Array [
                 className=" gatsby-image-wrapper"
                 style={
                   Object {
+                    "maxHeight": null,
+                    "maxWidth": null,
                     "overflow": "hidden",
                     "position": "relative",
                     "width": "80%",
@@ -22546,6 +22903,8 @@ Array [
                 className=" gatsby-image-wrapper"
                 style={
                   Object {
+                    "maxHeight": null,
+                    "maxWidth": null,
                     "overflow": "hidden",
                     "position": "relative",
                     "width": "80%",
@@ -22624,10 +22983,9 @@ Array [
               className="MuiButton-label"
             >
               <svg
-                aria-hidden="true"
+                aria-hidden={true}
                 className="MuiSvgIcon-root makeStyles-default-1851 makeStyles-default-1853"
                 focusable="false"
-                role="presentation"
                 viewBox="0 0 24 24"
               >
                 <path
@@ -22663,10 +23021,9 @@ Array [
               className="MuiButton-label"
             >
               <svg
-                aria-hidden="true"
+                aria-hidden={true}
                 className="MuiSvgIcon-root makeStyles-default-1851 makeStyles-default-1887"
                 focusable="false"
-                role="presentation"
                 viewBox="0 0 24 24"
               >
                 <path
@@ -22775,10 +23132,9 @@ Array [
                   className="makeStyles-iconWrapper-1934"
                 >
                   <svg
-                    aria-hidden="true"
+                    aria-hidden={true}
                     className="MuiSvgIcon-root"
                     focusable="false"
-                    role="presentation"
                     viewBox="0 0 24 24"
                   >
                     <path
@@ -22826,10 +23182,9 @@ Array [
                   className="makeStyles-iconWrapper-1934"
                 >
                   <svg
-                    aria-hidden="true"
+                    aria-hidden={true}
                     className="MuiSvgIcon-root"
                     focusable="false"
-                    role="presentation"
                     viewBox="0 0 24 24"
                   >
                     <path
@@ -22877,10 +23232,9 @@ Array [
                   className="makeStyles-iconWrapper-1934"
                 >
                   <svg
-                    aria-hidden="true"
+                    aria-hidden={true}
                     className="MuiSvgIcon-root"
                     focusable="false"
-                    role="presentation"
                     viewBox="0 0 24 24"
                   >
                     <path
@@ -26437,10 +26791,9 @@ Array [
             className="makeStyles-root-2278 makeStyles-root-2276 makeStyles-root-2277"
           >
             <svg
-              aria-hidden="true"
+              aria-hidden={true}
               className="MuiSvgIcon-root"
               focusable="false"
-              role="presentation"
               style={
                 Object {
                   "fontSize": "2.4rem",
@@ -26479,10 +26832,9 @@ Array [
             className="makeStyles-root-2278 makeStyles-root-2276 makeStyles-root-2280"
           >
             <svg
-              aria-hidden="true"
+              aria-hidden={true}
               className="MuiSvgIcon-root"
               focusable="false"
-              role="presentation"
               style={
                 Object {
                   "fontSize": "2.4rem",
@@ -26521,10 +26873,9 @@ Array [
             className="makeStyles-root-2278 makeStyles-root-2276 makeStyles-root-2281"
           >
             <svg
-              aria-hidden="true"
+              aria-hidden={true}
               className="MuiSvgIcon-root"
               focusable="false"
-              role="presentation"
               style={
                 Object {
                   "fontSize": "2.4rem",
@@ -26563,10 +26914,9 @@ Array [
             className="makeStyles-root-2278 makeStyles-root-2276 makeStyles-root-2282"
           >
             <svg
-              aria-hidden="true"
+              aria-hidden={true}
               className="MuiSvgIcon-root"
               focusable="false"
-              role="presentation"
               style={
                 Object {
                   "fontSize": "2.4rem",
@@ -26602,10 +26952,9 @@ Array [
         onClick={[Function]}
       >
         <svg
-          aria-hidden="true"
+          aria-hidden={true}
           className="MuiSvgIcon-root"
           focusable="false"
-          role="presentation"
           style={
             Object {
               "fontSize": "2.4rem",
@@ -26634,10 +26983,9 @@ Array [
         onClick={[Function]}
       >
         <svg
-          aria-hidden="true"
+          aria-hidden={true}
           className="MuiSvgIcon-root"
           focusable="false"
-          role="presentation"
           style={
             Object {
               "fontSize": "2.4rem",
@@ -26699,6 +27047,8 @@ Array [
                   className="makeStyles-karutaImage-2323 gatsby-image-wrapper"
                   style={
                     Object {
+                      "maxHeight": null,
+                      "maxWidth": null,
                       "overflow": "hidden",
                       "position": "relative",
                     }
@@ -26792,6 +27142,8 @@ Array [
                   className="makeStyles-karutaImage-2323 gatsby-image-wrapper"
                   style={
                     Object {
+                      "maxHeight": null,
+                      "maxWidth": null,
                       "overflow": "hidden",
                       "position": "relative",
                     }
@@ -26885,6 +27237,8 @@ Array [
                   className="makeStyles-karutaImage-2323 gatsby-image-wrapper"
                   style={
                     Object {
+                      "maxHeight": null,
+                      "maxWidth": null,
                       "overflow": "hidden",
                       "position": "relative",
                     }
@@ -26978,6 +27332,8 @@ Array [
                   className="makeStyles-karutaImage-2323 gatsby-image-wrapper"
                   style={
                     Object {
+                      "maxHeight": null,
+                      "maxWidth": null,
                       "overflow": "hidden",
                       "position": "relative",
                     }
@@ -27071,6 +27427,8 @@ Array [
                   className="makeStyles-karutaImage-2323 gatsby-image-wrapper"
                   style={
                     Object {
+                      "maxHeight": null,
+                      "maxWidth": null,
                       "overflow": "hidden",
                       "position": "relative",
                     }
@@ -27164,6 +27522,8 @@ Array [
                   className="makeStyles-karutaImage-2323 gatsby-image-wrapper"
                   style={
                     Object {
+                      "maxHeight": null,
+                      "maxWidth": null,
                       "overflow": "hidden",
                       "position": "relative",
                     }
@@ -27257,6 +27617,8 @@ Array [
                   className="makeStyles-karutaImage-2323 gatsby-image-wrapper"
                   style={
                     Object {
+                      "maxHeight": null,
+                      "maxWidth": null,
                       "overflow": "hidden",
                       "position": "relative",
                     }
@@ -27350,6 +27712,8 @@ Array [
                   className="makeStyles-karutaImage-2323 gatsby-image-wrapper"
                   style={
                     Object {
+                      "maxHeight": null,
+                      "maxWidth": null,
                       "overflow": "hidden",
                       "position": "relative",
                     }
@@ -27443,6 +27807,8 @@ Array [
                   className="makeStyles-karutaImage-2323 gatsby-image-wrapper"
                   style={
                     Object {
+                      "maxHeight": null,
+                      "maxWidth": null,
                       "overflow": "hidden",
                       "position": "relative",
                     }
@@ -27536,6 +27902,8 @@ Array [
                   className="makeStyles-karutaImage-2323 gatsby-image-wrapper"
                   style={
                     Object {
+                      "maxHeight": null,
+                      "maxWidth": null,
                       "overflow": "hidden",
                       "position": "relative",
                     }
@@ -27629,6 +27997,8 @@ Array [
                   className="makeStyles-karutaImage-2323 gatsby-image-wrapper"
                   style={
                     Object {
+                      "maxHeight": null,
+                      "maxWidth": null,
                       "overflow": "hidden",
                       "position": "relative",
                     }
@@ -27722,6 +28092,8 @@ Array [
                   className="makeStyles-karutaImage-2323 gatsby-image-wrapper"
                   style={
                     Object {
+                      "maxHeight": null,
+                      "maxWidth": null,
                       "overflow": "hidden",
                       "position": "relative",
                     }
@@ -27815,6 +28187,8 @@ Array [
                   className="makeStyles-karutaImage-2323 gatsby-image-wrapper"
                   style={
                     Object {
+                      "maxHeight": null,
+                      "maxWidth": null,
                       "overflow": "hidden",
                       "position": "relative",
                     }
@@ -27908,6 +28282,8 @@ Array [
                   className="makeStyles-karutaImage-2323 gatsby-image-wrapper"
                   style={
                     Object {
+                      "maxHeight": null,
+                      "maxWidth": null,
                       "overflow": "hidden",
                       "position": "relative",
                     }
@@ -28001,6 +28377,8 @@ Array [
                   className="makeStyles-karutaImage-2323 gatsby-image-wrapper"
                   style={
                     Object {
+                      "maxHeight": null,
+                      "maxWidth": null,
                       "overflow": "hidden",
                       "position": "relative",
                     }
@@ -28094,6 +28472,8 @@ Array [
                   className="makeStyles-karutaImage-2323 gatsby-image-wrapper"
                   style={
                     Object {
+                      "maxHeight": null,
+                      "maxWidth": null,
                       "overflow": "hidden",
                       "position": "relative",
                     }
@@ -28187,6 +28567,8 @@ Array [
                   className="makeStyles-karutaImage-2323 gatsby-image-wrapper"
                   style={
                     Object {
+                      "maxHeight": null,
+                      "maxWidth": null,
                       "overflow": "hidden",
                       "position": "relative",
                     }
@@ -28280,6 +28662,8 @@ Array [
                   className="makeStyles-karutaImage-2323 gatsby-image-wrapper"
                   style={
                     Object {
+                      "maxHeight": null,
+                      "maxWidth": null,
                       "overflow": "hidden",
                       "position": "relative",
                     }
@@ -28373,6 +28757,8 @@ Array [
                   className="makeStyles-karutaImage-2323 gatsby-image-wrapper"
                   style={
                     Object {
+                      "maxHeight": null,
+                      "maxWidth": null,
                       "overflow": "hidden",
                       "position": "relative",
                     }
@@ -28466,6 +28852,8 @@ Array [
                   className="makeStyles-karutaImage-2323 gatsby-image-wrapper"
                   style={
                     Object {
+                      "maxHeight": null,
+                      "maxWidth": null,
                       "overflow": "hidden",
                       "position": "relative",
                     }
@@ -28559,6 +28947,8 @@ Array [
                   className="makeStyles-karutaImage-2323 gatsby-image-wrapper"
                   style={
                     Object {
+                      "maxHeight": null,
+                      "maxWidth": null,
                       "overflow": "hidden",
                       "position": "relative",
                     }
@@ -28652,6 +29042,8 @@ Array [
                   className="makeStyles-karutaImage-2323 gatsby-image-wrapper"
                   style={
                     Object {
+                      "maxHeight": null,
+                      "maxWidth": null,
                       "overflow": "hidden",
                       "position": "relative",
                     }
@@ -28745,6 +29137,8 @@ Array [
                   className="makeStyles-karutaImage-2323 gatsby-image-wrapper"
                   style={
                     Object {
+                      "maxHeight": null,
+                      "maxWidth": null,
                       "overflow": "hidden",
                       "position": "relative",
                     }
@@ -28838,6 +29232,8 @@ Array [
                   className="makeStyles-karutaImage-2323 gatsby-image-wrapper"
                   style={
                     Object {
+                      "maxHeight": null,
+                      "maxWidth": null,
                       "overflow": "hidden",
                       "position": "relative",
                     }
@@ -28931,6 +29327,8 @@ Array [
                   className="makeStyles-karutaImage-2323 gatsby-image-wrapper"
                   style={
                     Object {
+                      "maxHeight": null,
+                      "maxWidth": null,
                       "overflow": "hidden",
                       "position": "relative",
                     }
@@ -29024,6 +29422,8 @@ Array [
                   className="makeStyles-karutaImage-2323 gatsby-image-wrapper"
                   style={
                     Object {
+                      "maxHeight": null,
+                      "maxWidth": null,
                       "overflow": "hidden",
                       "position": "relative",
                     }
@@ -29117,6 +29517,8 @@ Array [
                   className="makeStyles-karutaImage-2323 gatsby-image-wrapper"
                   style={
                     Object {
+                      "maxHeight": null,
+                      "maxWidth": null,
                       "overflow": "hidden",
                       "position": "relative",
                     }
@@ -29210,6 +29612,8 @@ Array [
                   className="makeStyles-karutaImage-2323 gatsby-image-wrapper"
                   style={
                     Object {
+                      "maxHeight": null,
+                      "maxWidth": null,
                       "overflow": "hidden",
                       "position": "relative",
                     }
@@ -29303,6 +29707,8 @@ Array [
                   className="makeStyles-karutaImage-2323 gatsby-image-wrapper"
                   style={
                     Object {
+                      "maxHeight": null,
+                      "maxWidth": null,
                       "overflow": "hidden",
                       "position": "relative",
                     }
@@ -29396,6 +29802,8 @@ Array [
                   className="makeStyles-karutaImage-2323 gatsby-image-wrapper"
                   style={
                     Object {
+                      "maxHeight": null,
+                      "maxWidth": null,
                       "overflow": "hidden",
                       "position": "relative",
                     }
@@ -29489,6 +29897,8 @@ Array [
                   className="makeStyles-karutaImage-2323 gatsby-image-wrapper"
                   style={
                     Object {
+                      "maxHeight": null,
+                      "maxWidth": null,
                       "overflow": "hidden",
                       "position": "relative",
                     }
@@ -29582,6 +29992,8 @@ Array [
                   className="makeStyles-karutaImage-2323 gatsby-image-wrapper"
                   style={
                     Object {
+                      "maxHeight": null,
+                      "maxWidth": null,
                       "overflow": "hidden",
                       "position": "relative",
                     }
@@ -29675,6 +30087,8 @@ Array [
                   className="makeStyles-karutaImage-2323 gatsby-image-wrapper"
                   style={
                     Object {
+                      "maxHeight": null,
+                      "maxWidth": null,
                       "overflow": "hidden",
                       "position": "relative",
                     }
@@ -29768,6 +30182,8 @@ Array [
                   className="makeStyles-karutaImage-2323 gatsby-image-wrapper"
                   style={
                     Object {
+                      "maxHeight": null,
+                      "maxWidth": null,
                       "overflow": "hidden",
                       "position": "relative",
                     }
@@ -29861,6 +30277,8 @@ Array [
                   className="makeStyles-karutaImage-2323 gatsby-image-wrapper"
                   style={
                     Object {
+                      "maxHeight": null,
+                      "maxWidth": null,
                       "overflow": "hidden",
                       "position": "relative",
                     }
@@ -29954,6 +30372,8 @@ Array [
                   className="makeStyles-karutaImage-2323 gatsby-image-wrapper"
                   style={
                     Object {
+                      "maxHeight": null,
+                      "maxWidth": null,
                       "overflow": "hidden",
                       "position": "relative",
                     }
@@ -30047,6 +30467,8 @@ Array [
                   className="makeStyles-karutaImage-2323 gatsby-image-wrapper"
                   style={
                     Object {
+                      "maxHeight": null,
+                      "maxWidth": null,
                       "overflow": "hidden",
                       "position": "relative",
                     }
@@ -30140,6 +30562,8 @@ Array [
                   className="makeStyles-karutaImage-2323 gatsby-image-wrapper"
                   style={
                     Object {
+                      "maxHeight": null,
+                      "maxWidth": null,
                       "overflow": "hidden",
                       "position": "relative",
                     }
@@ -30233,6 +30657,8 @@ Array [
                   className="makeStyles-karutaImage-2323 gatsby-image-wrapper"
                   style={
                     Object {
+                      "maxHeight": null,
+                      "maxWidth": null,
                       "overflow": "hidden",
                       "position": "relative",
                     }
@@ -30326,6 +30752,8 @@ Array [
                   className="makeStyles-karutaImage-2323 gatsby-image-wrapper"
                   style={
                     Object {
+                      "maxHeight": null,
+                      "maxWidth": null,
                       "overflow": "hidden",
                       "position": "relative",
                     }
@@ -30419,6 +30847,8 @@ Array [
                   className="makeStyles-karutaImage-2323 gatsby-image-wrapper"
                   style={
                     Object {
+                      "maxHeight": null,
+                      "maxWidth": null,
                       "overflow": "hidden",
                       "position": "relative",
                     }
@@ -30512,6 +30942,8 @@ Array [
                   className="makeStyles-karutaImage-2323 gatsby-image-wrapper"
                   style={
                     Object {
+                      "maxHeight": null,
+                      "maxWidth": null,
                       "overflow": "hidden",
                       "position": "relative",
                     }
@@ -30605,6 +31037,8 @@ Array [
                   className="makeStyles-karutaImage-2323 gatsby-image-wrapper"
                   style={
                     Object {
+                      "maxHeight": null,
+                      "maxWidth": null,
                       "overflow": "hidden",
                       "position": "relative",
                     }
@@ -30698,6 +31132,8 @@ Array [
                   className="makeStyles-karutaImage-2323 gatsby-image-wrapper"
                   style={
                     Object {
+                      "maxHeight": null,
+                      "maxWidth": null,
                       "overflow": "hidden",
                       "position": "relative",
                     }
@@ -30791,6 +31227,8 @@ Array [
                   className="makeStyles-karutaImage-2323 gatsby-image-wrapper"
                   style={
                     Object {
+                      "maxHeight": null,
+                      "maxWidth": null,
                       "overflow": "hidden",
                       "position": "relative",
                     }
@@ -30884,6 +31322,8 @@ Array [
                   className="makeStyles-karutaImage-2323 gatsby-image-wrapper"
                   style={
                     Object {
+                      "maxHeight": null,
+                      "maxWidth": null,
                       "overflow": "hidden",
                       "position": "relative",
                     }
@@ -30977,6 +31417,8 @@ Array [
                   className="makeStyles-karutaImage-2323 gatsby-image-wrapper"
                   style={
                     Object {
+                      "maxHeight": null,
+                      "maxWidth": null,
                       "overflow": "hidden",
                       "position": "relative",
                     }
@@ -31070,6 +31512,8 @@ Array [
                   className="makeStyles-karutaImage-2323 gatsby-image-wrapper"
                   style={
                     Object {
+                      "maxHeight": null,
+                      "maxWidth": null,
                       "overflow": "hidden",
                       "position": "relative",
                     }
@@ -31163,6 +31607,8 @@ Array [
                   className="makeStyles-karutaImage-2323 gatsby-image-wrapper"
                   style={
                     Object {
+                      "maxHeight": null,
+                      "maxWidth": null,
                       "overflow": "hidden",
                       "position": "relative",
                     }
@@ -31256,6 +31702,8 @@ Array [
                   className="makeStyles-karutaImage-2323 gatsby-image-wrapper"
                   style={
                     Object {
+                      "maxHeight": null,
+                      "maxWidth": null,
                       "overflow": "hidden",
                       "position": "relative",
                     }
@@ -31349,6 +31797,8 @@ Array [
                   className="makeStyles-karutaImage-2323 gatsby-image-wrapper"
                   style={
                     Object {
+                      "maxHeight": null,
+                      "maxWidth": null,
                       "overflow": "hidden",
                       "position": "relative",
                     }
@@ -31442,6 +31892,8 @@ Array [
                   className="makeStyles-karutaImage-2323 gatsby-image-wrapper"
                   style={
                     Object {
+                      "maxHeight": null,
+                      "maxWidth": null,
                       "overflow": "hidden",
                       "position": "relative",
                     }
@@ -31535,6 +31987,8 @@ Array [
                   className="makeStyles-karutaImage-2323 gatsby-image-wrapper"
                   style={
                     Object {
+                      "maxHeight": null,
+                      "maxWidth": null,
                       "overflow": "hidden",
                       "position": "relative",
                     }
@@ -31628,6 +32082,8 @@ Array [
                   className="makeStyles-karutaImage-2323 gatsby-image-wrapper"
                   style={
                     Object {
+                      "maxHeight": null,
+                      "maxWidth": null,
                       "overflow": "hidden",
                       "position": "relative",
                     }
@@ -31721,6 +32177,8 @@ Array [
                   className="makeStyles-karutaImage-2323 gatsby-image-wrapper"
                   style={
                     Object {
+                      "maxHeight": null,
+                      "maxWidth": null,
                       "overflow": "hidden",
                       "position": "relative",
                     }
@@ -31814,6 +32272,8 @@ Array [
                   className="makeStyles-karutaImage-2323 gatsby-image-wrapper"
                   style={
                     Object {
+                      "maxHeight": null,
+                      "maxWidth": null,
                       "overflow": "hidden",
                       "position": "relative",
                     }
@@ -31907,6 +32367,8 @@ Array [
                   className="makeStyles-karutaImage-2323 gatsby-image-wrapper"
                   style={
                     Object {
+                      "maxHeight": null,
+                      "maxWidth": null,
                       "overflow": "hidden",
                       "position": "relative",
                     }
@@ -32000,6 +32462,8 @@ Array [
                   className="makeStyles-karutaImage-2323 gatsby-image-wrapper"
                   style={
                     Object {
+                      "maxHeight": null,
+                      "maxWidth": null,
                       "overflow": "hidden",
                       "position": "relative",
                     }
@@ -32093,6 +32557,8 @@ Array [
                   className="makeStyles-karutaImage-2323 gatsby-image-wrapper"
                   style={
                     Object {
+                      "maxHeight": null,
+                      "maxWidth": null,
                       "overflow": "hidden",
                       "position": "relative",
                     }
@@ -32186,6 +32652,8 @@ Array [
                   className="makeStyles-karutaImage-2323 gatsby-image-wrapper"
                   style={
                     Object {
+                      "maxHeight": null,
+                      "maxWidth": null,
                       "overflow": "hidden",
                       "position": "relative",
                     }
@@ -32279,6 +32747,8 @@ Array [
                   className="makeStyles-karutaImage-2323 gatsby-image-wrapper"
                   style={
                     Object {
+                      "maxHeight": null,
+                      "maxWidth": null,
                       "overflow": "hidden",
                       "position": "relative",
                     }
@@ -32372,6 +32842,8 @@ Array [
                   className="makeStyles-karutaImage-2323 gatsby-image-wrapper"
                   style={
                     Object {
+                      "maxHeight": null,
+                      "maxWidth": null,
                       "overflow": "hidden",
                       "position": "relative",
                     }
@@ -32465,6 +32937,8 @@ Array [
                   className="makeStyles-karutaImage-2323 gatsby-image-wrapper"
                   style={
                     Object {
+                      "maxHeight": null,
+                      "maxWidth": null,
                       "overflow": "hidden",
                       "position": "relative",
                     }
@@ -32558,6 +33032,8 @@ Array [
                   className="makeStyles-karutaImage-2323 gatsby-image-wrapper"
                   style={
                     Object {
+                      "maxHeight": null,
+                      "maxWidth": null,
                       "overflow": "hidden",
                       "position": "relative",
                     }
@@ -32651,6 +33127,8 @@ Array [
                   className="makeStyles-karutaImage-2323 gatsby-image-wrapper"
                   style={
                     Object {
+                      "maxHeight": null,
+                      "maxWidth": null,
                       "overflow": "hidden",
                       "position": "relative",
                     }
@@ -32744,6 +33222,8 @@ Array [
                   className="makeStyles-karutaImage-2323 gatsby-image-wrapper"
                   style={
                     Object {
+                      "maxHeight": null,
+                      "maxWidth": null,
                       "overflow": "hidden",
                       "position": "relative",
                     }
@@ -32837,6 +33317,8 @@ Array [
                   className="makeStyles-karutaImage-2323 gatsby-image-wrapper"
                   style={
                     Object {
+                      "maxHeight": null,
+                      "maxWidth": null,
                       "overflow": "hidden",
                       "position": "relative",
                     }
@@ -32930,6 +33412,8 @@ Array [
                   className="makeStyles-karutaImage-2323 gatsby-image-wrapper"
                   style={
                     Object {
+                      "maxHeight": null,
+                      "maxWidth": null,
                       "overflow": "hidden",
                       "position": "relative",
                     }
@@ -33023,6 +33507,8 @@ Array [
                   className="makeStyles-karutaImage-2323 gatsby-image-wrapper"
                   style={
                     Object {
+                      "maxHeight": null,
+                      "maxWidth": null,
                       "overflow": "hidden",
                       "position": "relative",
                     }
@@ -33116,6 +33602,8 @@ Array [
                   className="makeStyles-karutaImage-2323 gatsby-image-wrapper"
                   style={
                     Object {
+                      "maxHeight": null,
+                      "maxWidth": null,
                       "overflow": "hidden",
                       "position": "relative",
                     }
@@ -33209,6 +33697,8 @@ Array [
                   className="makeStyles-karutaImage-2323 gatsby-image-wrapper"
                   style={
                     Object {
+                      "maxHeight": null,
+                      "maxWidth": null,
                       "overflow": "hidden",
                       "position": "relative",
                     }
@@ -33302,6 +33792,8 @@ Array [
                   className="makeStyles-karutaImage-2323 gatsby-image-wrapper"
                   style={
                     Object {
+                      "maxHeight": null,
+                      "maxWidth": null,
                       "overflow": "hidden",
                       "position": "relative",
                     }
@@ -33395,6 +33887,8 @@ Array [
                   className="makeStyles-karutaImage-2323 gatsby-image-wrapper"
                   style={
                     Object {
+                      "maxHeight": null,
+                      "maxWidth": null,
                       "overflow": "hidden",
                       "position": "relative",
                     }
@@ -33488,6 +33982,8 @@ Array [
                   className="makeStyles-karutaImage-2323 gatsby-image-wrapper"
                   style={
                     Object {
+                      "maxHeight": null,
+                      "maxWidth": null,
                       "overflow": "hidden",
                       "position": "relative",
                     }
@@ -33581,6 +34077,8 @@ Array [
                   className="makeStyles-karutaImage-2323 gatsby-image-wrapper"
                   style={
                     Object {
+                      "maxHeight": null,
+                      "maxWidth": null,
                       "overflow": "hidden",
                       "position": "relative",
                     }
@@ -33674,6 +34172,8 @@ Array [
                   className="makeStyles-karutaImage-2323 gatsby-image-wrapper"
                   style={
                     Object {
+                      "maxHeight": null,
+                      "maxWidth": null,
                       "overflow": "hidden",
                       "position": "relative",
                     }
@@ -33767,6 +34267,8 @@ Array [
                   className="makeStyles-karutaImage-2323 gatsby-image-wrapper"
                   style={
                     Object {
+                      "maxHeight": null,
+                      "maxWidth": null,
                       "overflow": "hidden",
                       "position": "relative",
                     }
@@ -33860,6 +34362,8 @@ Array [
                   className="makeStyles-karutaImage-2323 gatsby-image-wrapper"
                   style={
                     Object {
+                      "maxHeight": null,
+                      "maxWidth": null,
                       "overflow": "hidden",
                       "position": "relative",
                     }
@@ -33953,6 +34457,8 @@ Array [
                   className="makeStyles-karutaImage-2323 gatsby-image-wrapper"
                   style={
                     Object {
+                      "maxHeight": null,
+                      "maxWidth": null,
                       "overflow": "hidden",
                       "position": "relative",
                     }
@@ -34046,6 +34552,8 @@ Array [
                   className="makeStyles-karutaImage-2323 gatsby-image-wrapper"
                   style={
                     Object {
+                      "maxHeight": null,
+                      "maxWidth": null,
                       "overflow": "hidden",
                       "position": "relative",
                     }
@@ -34139,6 +34647,8 @@ Array [
                   className="makeStyles-karutaImage-2323 gatsby-image-wrapper"
                   style={
                     Object {
+                      "maxHeight": null,
+                      "maxWidth": null,
                       "overflow": "hidden",
                       "position": "relative",
                     }
@@ -34232,6 +34742,8 @@ Array [
                   className="makeStyles-karutaImage-2323 gatsby-image-wrapper"
                   style={
                     Object {
+                      "maxHeight": null,
+                      "maxWidth": null,
                       "overflow": "hidden",
                       "position": "relative",
                     }
@@ -34325,6 +34837,8 @@ Array [
                   className="makeStyles-karutaImage-2323 gatsby-image-wrapper"
                   style={
                     Object {
+                      "maxHeight": null,
+                      "maxWidth": null,
                       "overflow": "hidden",
                       "position": "relative",
                     }
@@ -34418,6 +34932,8 @@ Array [
                   className="makeStyles-karutaImage-2323 gatsby-image-wrapper"
                   style={
                     Object {
+                      "maxHeight": null,
+                      "maxWidth": null,
                       "overflow": "hidden",
                       "position": "relative",
                     }
@@ -34511,6 +35027,8 @@ Array [
                   className="makeStyles-karutaImage-2323 gatsby-image-wrapper"
                   style={
                     Object {
+                      "maxHeight": null,
+                      "maxWidth": null,
                       "overflow": "hidden",
                       "position": "relative",
                     }
@@ -34604,6 +35122,8 @@ Array [
                   className="makeStyles-karutaImage-2323 gatsby-image-wrapper"
                   style={
                     Object {
+                      "maxHeight": null,
+                      "maxWidth": null,
                       "overflow": "hidden",
                       "position": "relative",
                     }
@@ -34697,6 +35217,8 @@ Array [
                   className="makeStyles-karutaImage-2323 gatsby-image-wrapper"
                   style={
                     Object {
+                      "maxHeight": null,
+                      "maxWidth": null,
                       "overflow": "hidden",
                       "position": "relative",
                     }
@@ -34790,6 +35312,8 @@ Array [
                   className="makeStyles-karutaImage-2323 gatsby-image-wrapper"
                   style={
                     Object {
+                      "maxHeight": null,
+                      "maxWidth": null,
                       "overflow": "hidden",
                       "position": "relative",
                     }
@@ -34883,6 +35407,8 @@ Array [
                   className="makeStyles-karutaImage-2323 gatsby-image-wrapper"
                   style={
                     Object {
+                      "maxHeight": null,
+                      "maxWidth": null,
                       "overflow": "hidden",
                       "position": "relative",
                     }
@@ -34976,6 +35502,8 @@ Array [
                   className="makeStyles-karutaImage-2323 gatsby-image-wrapper"
                   style={
                     Object {
+                      "maxHeight": null,
+                      "maxWidth": null,
                       "overflow": "hidden",
                       "position": "relative",
                     }
@@ -35069,6 +35597,8 @@ Array [
                   className="makeStyles-karutaImage-2323 gatsby-image-wrapper"
                   style={
                     Object {
+                      "maxHeight": null,
+                      "maxWidth": null,
                       "overflow": "hidden",
                       "position": "relative",
                     }
@@ -35162,6 +35692,8 @@ Array [
                   className="makeStyles-karutaImage-2323 gatsby-image-wrapper"
                   style={
                     Object {
+                      "maxHeight": null,
+                      "maxWidth": null,
                       "overflow": "hidden",
                       "position": "relative",
                     }
@@ -35255,6 +35787,8 @@ Array [
                   className="makeStyles-karutaImage-2323 gatsby-image-wrapper"
                   style={
                     Object {
+                      "maxHeight": null,
+                      "maxWidth": null,
                       "overflow": "hidden",
                       "position": "relative",
                     }
@@ -35348,6 +35882,8 @@ Array [
                   className="makeStyles-karutaImage-2323 gatsby-image-wrapper"
                   style={
                     Object {
+                      "maxHeight": null,
+                      "maxWidth": null,
                       "overflow": "hidden",
                       "position": "relative",
                     }
@@ -35441,6 +35977,8 @@ Array [
                   className="makeStyles-karutaImage-2323 gatsby-image-wrapper"
                   style={
                     Object {
+                      "maxHeight": null,
+                      "maxWidth": null,
                       "overflow": "hidden",
                       "position": "relative",
                     }
@@ -35534,6 +36072,8 @@ Array [
                   className="makeStyles-karutaImage-2323 gatsby-image-wrapper"
                   style={
                     Object {
+                      "maxHeight": null,
+                      "maxWidth": null,
                       "overflow": "hidden",
                       "position": "relative",
                     }
@@ -35627,6 +36167,8 @@ Array [
                   className="makeStyles-karutaImage-2323 gatsby-image-wrapper"
                   style={
                     Object {
+                      "maxHeight": null,
+                      "maxWidth": null,
                       "overflow": "hidden",
                       "position": "relative",
                     }
@@ -35720,6 +36262,8 @@ Array [
                   className="makeStyles-karutaImage-2323 gatsby-image-wrapper"
                   style={
                     Object {
+                      "maxHeight": null,
+                      "maxWidth": null,
                       "overflow": "hidden",
                       "position": "relative",
                     }
@@ -35813,6 +36357,8 @@ Array [
                   className="makeStyles-karutaImage-2323 gatsby-image-wrapper"
                   style={
                     Object {
+                      "maxHeight": null,
+                      "maxWidth": null,
                       "overflow": "hidden",
                       "position": "relative",
                     }
@@ -35906,6 +36452,8 @@ Array [
                   className="makeStyles-karutaImage-2323 gatsby-image-wrapper"
                   style={
                     Object {
+                      "maxHeight": null,
+                      "maxWidth": null,
                       "overflow": "hidden",
                       "position": "relative",
                     }
@@ -36013,10 +36561,9 @@ Array [
             className="makeStyles-root-2297 makeStyles-root-2629 makeStyles-root-2630"
           >
             <svg
-              aria-hidden="true"
+              aria-hidden={true}
               className="MuiSvgIcon-root"
               focusable="false"
-              role="presentation"
               style={
                 Object {
                   "fontSize": "2.4rem",
@@ -36055,10 +36602,9 @@ Array [
             className="makeStyles-root-2297 makeStyles-root-2629 makeStyles-root-2631"
           >
             <svg
-              aria-hidden="true"
+              aria-hidden={true}
               className="MuiSvgIcon-root"
               focusable="false"
-              role="presentation"
               style={
                 Object {
                   "fontSize": "2.4rem",
@@ -36097,10 +36643,9 @@ Array [
             className="makeStyles-root-2297 makeStyles-root-2629 makeStyles-root-2632"
           >
             <svg
-              aria-hidden="true"
+              aria-hidden={true}
               className="MuiSvgIcon-root"
               focusable="false"
-              role="presentation"
               style={
                 Object {
                   "fontSize": "2.4rem",
@@ -36139,10 +36684,9 @@ Array [
             className="makeStyles-root-2297 makeStyles-root-2629 makeStyles-root-2633"
           >
             <svg
-              aria-hidden="true"
+              aria-hidden={true}
               className="MuiSvgIcon-root"
               focusable="false"
-              role="presentation"
               style={
                 Object {
                   "fontSize": "2.4rem",
@@ -36178,10 +36722,9 @@ Array [
         onClick={[Function]}
       >
         <svg
-          aria-hidden="true"
+          aria-hidden={true}
           className="MuiSvgIcon-root"
           focusable="false"
-          role="presentation"
           style={
             Object {
               "fontSize": "2.4rem",
@@ -36246,6 +36789,8 @@ Array [
             className="makeStyles-karutaImage-2668 gatsby-image-wrapper"
             style={
               Object {
+                "maxHeight": null,
+                "maxWidth": null,
                 "overflow": "hidden",
                 "position": "relative",
               }
@@ -36376,10 +36921,9 @@ Array [
             className="makeStyles-root-2648 makeStyles-root-2686 makeStyles-root-2687"
           >
             <svg
-              aria-hidden="true"
+              aria-hidden={true}
               className="MuiSvgIcon-root"
               focusable="false"
-              role="presentation"
               style={
                 Object {
                   "fontSize": "2.4rem",
@@ -36418,10 +36962,9 @@ Array [
             className="makeStyles-root-2648 makeStyles-root-2686 makeStyles-root-2688"
           >
             <svg
-              aria-hidden="true"
+              aria-hidden={true}
               className="MuiSvgIcon-root"
               focusable="false"
-              role="presentation"
               style={
                 Object {
                   "fontSize": "2.4rem",
@@ -36460,10 +37003,9 @@ Array [
             className="makeStyles-root-2648 makeStyles-root-2686 makeStyles-root-2689"
           >
             <svg
-              aria-hidden="true"
+              aria-hidden={true}
               className="MuiSvgIcon-root"
               focusable="false"
-              role="presentation"
               style={
                 Object {
                   "fontSize": "2.4rem",
@@ -36502,10 +37044,9 @@ Array [
             className="makeStyles-root-2648 makeStyles-root-2686 makeStyles-root-2690"
           >
             <svg
-              aria-hidden="true"
+              aria-hidden={true}
               className="MuiSvgIcon-root"
               focusable="false"
-              role="presentation"
               style={
                 Object {
                   "fontSize": "2.4rem",
@@ -36541,10 +37082,9 @@ Array [
         onClick={[Function]}
       >
         <svg
-          aria-hidden="true"
+          aria-hidden={true}
           className="MuiSvgIcon-root"
           focusable="false"
-          role="presentation"
           style={
             Object {
               "fontSize": "2.4rem",
@@ -36611,7 +37151,7 @@ Array [
               >
                 <div
                   aria-haspopup="listbox"
-                  aria-labelledby=" mui-component-select-rangeFrom"
+                  aria-labelledby="mui-component-select-rangeFrom"
                   className="MuiSelect-root MuiSelect-select MuiSelect-selectMenu MuiInputBase-input MuiInput-input"
                   id="mui-component-select-rangeFrom"
                   onBlur={[Function]}
@@ -36631,10 +37171,9 @@ Array [
                   value="1"
                 />
                 <svg
-                  aria-hidden="true"
+                  aria-hidden={true}
                   className="MuiSvgIcon-root MuiSelect-icon"
                   focusable="false"
-                  role="presentation"
                   viewBox="0 0 24 24"
                 >
                   <path
@@ -36653,7 +37192,7 @@ Array [
               >
                 <div
                   aria-haspopup="listbox"
-                  aria-labelledby=" mui-component-select-rangeTo"
+                  aria-labelledby="mui-component-select-rangeTo"
                   className="MuiSelect-root MuiSelect-select MuiSelect-selectMenu MuiInputBase-input MuiInput-input"
                   id="mui-component-select-rangeTo"
                   onBlur={[Function]}
@@ -36673,10 +37212,9 @@ Array [
                   value="100"
                 />
                 <svg
-                  aria-hidden="true"
+                  aria-hidden={true}
                   className="MuiSvgIcon-root MuiSelect-icon"
                   focusable="false"
-                  role="presentation"
                   viewBox="0 0 24 24"
                 >
                   <path
@@ -36702,7 +37240,7 @@ Array [
             >
               <div
                 aria-haspopup="listbox"
-                aria-labelledby=" mui-component-select-kimariji"
+                aria-labelledby="mui-component-select-kimariji"
                 className="MuiSelect-root MuiSelect-select MuiSelect-selectMenu MuiInputBase-input MuiInput-input"
                 id="mui-component-select-kimariji"
                 onBlur={[Function]}
@@ -36722,10 +37260,9 @@ Array [
                 value="none"
               />
               <svg
-                aria-hidden="true"
+                aria-hidden={true}
                 className="MuiSvgIcon-root MuiSelect-icon"
                 focusable="false"
-                role="presentation"
                 viewBox="0 0 24 24"
               >
                 <path
@@ -36750,7 +37287,7 @@ Array [
             >
               <div
                 aria-haspopup="listbox"
-                aria-labelledby=" mui-component-select-color"
+                aria-labelledby="mui-component-select-color"
                 className="MuiSelect-root MuiSelect-select MuiSelect-selectMenu MuiInputBase-input MuiInput-input"
                 id="mui-component-select-color"
                 onBlur={[Function]}
@@ -36770,10 +37307,9 @@ Array [
                 value="none"
               />
               <svg
-                aria-hidden="true"
+                aria-hidden={true}
                 className="MuiSvgIcon-root MuiSelect-icon"
                 focusable="false"
-                role="presentation"
                 viewBox="0 0 24 24"
               >
                 <path
@@ -36798,7 +37334,7 @@ Array [
             >
               <div
                 aria-haspopup="listbox"
-                aria-labelledby=" mui-component-select-kamiNoKuStyle"
+                aria-labelledby="mui-component-select-kamiNoKuStyle"
                 className="MuiSelect-root MuiSelect-select MuiSelect-selectMenu MuiInputBase-input MuiInput-input"
                 id="mui-component-select-kamiNoKuStyle"
                 onBlur={[Function]}
@@ -36818,10 +37354,9 @@ Array [
                 value="kanji"
               />
               <svg
-                aria-hidden="true"
+                aria-hidden={true}
                 className="MuiSvgIcon-root MuiSelect-icon"
                 focusable="false"
-                role="presentation"
                 viewBox="0 0 24 24"
               >
                 <path
@@ -36846,7 +37381,7 @@ Array [
             >
               <div
                 aria-haspopup="listbox"
-                aria-labelledby=" mui-component-select-shimoNoKuStyle"
+                aria-labelledby="mui-component-select-shimoNoKuStyle"
                 className="MuiSelect-root MuiSelect-select MuiSelect-selectMenu MuiInputBase-input MuiInput-input"
                 id="mui-component-select-shimoNoKuStyle"
                 onBlur={[Function]}
@@ -36866,10 +37401,9 @@ Array [
                 value="kana"
               />
               <svg
-                aria-hidden="true"
+                aria-hidden={true}
                 className="MuiSvgIcon-root MuiSelect-icon"
                 focusable="false"
-                role="presentation"
                 viewBox="0 0 24 24"
               >
                 <path
@@ -36894,7 +37428,7 @@ Array [
             >
               <div
                 aria-haspopup="listbox"
-                aria-labelledby=" mui-component-select-questionAnim"
+                aria-labelledby="mui-component-select-questionAnim"
                 className="MuiSelect-root MuiSelect-select MuiSelect-selectMenu MuiInputBase-input MuiInput-input"
                 id="mui-component-select-questionAnim"
                 onBlur={[Function]}
@@ -36914,10 +37448,9 @@ Array [
                 value="normal"
               />
               <svg
-                aria-hidden="true"
+                aria-hidden={true}
                 className="MuiSvgIcon-root MuiSelect-icon"
                 focusable="false"
-                role="presentation"
                 viewBox="0 0 24 24"
               >
                 <path
@@ -36948,10 +37481,9 @@ Array [
               className="MuiButton-label"
             >
               <svg
-                aria-hidden="true"
+                aria-hidden={true}
                 className="MuiSvgIcon-root makeStyles-accent-2808 makeStyles-accent-2810"
                 focusable="false"
-                role="presentation"
                 viewBox="0 0 24 24"
               >
                 <path
@@ -37000,10 +37532,9 @@ Array [
             className="makeStyles-root-2707 makeStyles-root-2845 makeStyles-root-2846"
           >
             <svg
-              aria-hidden="true"
+              aria-hidden={true}
               className="MuiSvgIcon-root"
               focusable="false"
-              role="presentation"
               style={
                 Object {
                   "fontSize": "2.4rem",
@@ -37042,10 +37573,9 @@ Array [
             className="makeStyles-root-2707 makeStyles-root-2845 makeStyles-root-2847"
           >
             <svg
-              aria-hidden="true"
+              aria-hidden={true}
               className="MuiSvgIcon-root"
               focusable="false"
-              role="presentation"
               style={
                 Object {
                   "fontSize": "2.4rem",
@@ -37084,10 +37614,9 @@ Array [
             className="makeStyles-root-2707 makeStyles-root-2845 makeStyles-root-2848"
           >
             <svg
-              aria-hidden="true"
+              aria-hidden={true}
               className="MuiSvgIcon-root"
               focusable="false"
-              role="presentation"
               style={
                 Object {
                   "fontSize": "2.4rem",
@@ -37126,10 +37655,9 @@ Array [
             className="makeStyles-root-2707 makeStyles-root-2845 makeStyles-root-2849"
           >
             <svg
-              aria-hidden="true"
+              aria-hidden={true}
               className="MuiSvgIcon-root"
               focusable="false"
-              role="presentation"
               style={
                 Object {
                   "fontSize": "2.4rem",
@@ -37165,10 +37693,9 @@ Array [
         onClick={[Function]}
       >
         <svg
-          aria-hidden="true"
+          aria-hidden={true}
           className="MuiSvgIcon-root"
           focusable="false"
-          role="presentation"
           style={
             Object {
               "fontSize": "2.4rem",
@@ -37409,10 +37936,9 @@ Array [
         onClick={[Function]}
       >
         <svg
-          aria-hidden="true"
+          aria-hidden={true}
           className="MuiSvgIcon-root"
           focusable="false"
-          role="presentation"
           style={
             Object {
               "fontSize": "2.4rem",
@@ -37551,10 +38077,9 @@ Array [
               className="MuiButton-label"
             >
               <svg
-                aria-hidden="true"
+                aria-hidden={true}
                 className="MuiSvgIcon-root makeStyles-default-2987 makeStyles-default-2989"
                 focusable="false"
-                role="presentation"
                 viewBox="0 0 24 24"
               >
                 <path
@@ -37590,10 +38115,9 @@ Array [
               className="MuiButton-label"
             >
               <svg
-                aria-hidden="true"
+                aria-hidden={true}
                 className="MuiSvgIcon-root makeStyles-default-2987 makeStyles-default-3023"
                 focusable="false"
-                role="presentation"
                 viewBox="0 0 24 24"
               >
                 <path
@@ -37651,10 +38175,9 @@ Array [
         onClick={[Function]}
       >
         <svg
-          aria-hidden="true"
+          aria-hidden={true}
           className="MuiSvgIcon-root"
           focusable="false"
-          role="presentation"
           style={
             Object {
               "fontSize": "2.4rem",
@@ -37703,10 +38226,9 @@ Array [
             className="makeStyles-root-3076 makeStyles-root-3091 makeStyles-root-3092"
           >
             <svg
-              aria-hidden="true"
+              aria-hidden={true}
               className="MuiSvgIcon-root"
               focusable="false"
-              role="presentation"
               style={
                 Object {
                   "fontSize": "2.4rem",
@@ -37745,10 +38267,9 @@ Array [
             className="makeStyles-root-3076 makeStyles-root-3091 makeStyles-root-3093"
           >
             <svg
-              aria-hidden="true"
+              aria-hidden={true}
               className="MuiSvgIcon-root"
               focusable="false"
-              role="presentation"
               style={
                 Object {
                   "fontSize": "2.4rem",
@@ -37787,10 +38308,9 @@ Array [
             className="makeStyles-root-3076 makeStyles-root-3091 makeStyles-root-3094"
           >
             <svg
-              aria-hidden="true"
+              aria-hidden={true}
               className="MuiSvgIcon-root"
               focusable="false"
-              role="presentation"
               style={
                 Object {
                   "fontSize": "2.4rem",
@@ -37829,10 +38349,9 @@ Array [
             className="makeStyles-root-3076 makeStyles-root-3091 makeStyles-root-3095"
           >
             <svg
-              aria-hidden="true"
+              aria-hidden={true}
               className="MuiSvgIcon-root"
               focusable="false"
-              role="presentation"
               style={
                 Object {
                   "fontSize": "2.4rem",
@@ -37893,10 +38412,9 @@ Array [
             className="makeStyles-root-3051 makeStyles-root-3049 makeStyles-root-3050"
           >
             <svg
-              aria-hidden="true"
+              aria-hidden={true}
               className="MuiSvgIcon-root"
               focusable="false"
-              role="presentation"
               style={
                 Object {
                   "fontSize": "2.4rem",
@@ -37935,10 +38453,9 @@ Array [
             className="makeStyles-root-3051 makeStyles-root-3049 makeStyles-root-3062"
           >
             <svg
-              aria-hidden="true"
+              aria-hidden={true}
               className="MuiSvgIcon-root"
               focusable="false"
-              role="presentation"
               style={
                 Object {
                   "fontSize": "2.4rem",
@@ -37977,10 +38494,9 @@ Array [
             className="makeStyles-root-3051 makeStyles-root-3049 makeStyles-root-3063"
           >
             <svg
-              aria-hidden="true"
+              aria-hidden={true}
               className="MuiSvgIcon-root"
               focusable="false"
-              role="presentation"
               style={
                 Object {
                   "fontSize": "2.4rem",
@@ -38019,10 +38535,9 @@ Array [
             className="makeStyles-root-3051 makeStyles-root-3049 makeStyles-root-3064"
           >
             <svg
-              aria-hidden="true"
+              aria-hidden={true}
               className="MuiSvgIcon-root"
               focusable="false"
-              role="presentation"
               style={
                 Object {
                   "fontSize": "2.4rem",
@@ -38063,10 +38578,9 @@ Array [
         onClick={[Function]}
       >
         <svg
-          aria-hidden="true"
+          aria-hidden={true}
           className="MuiSvgIcon-root"
           focusable="false"
-          role="presentation"
           style={
             Object {
               "fontSize": "2.4rem",
@@ -38110,10 +38624,9 @@ Array [
             className="makeStyles-root-3109 makeStyles-root-3122 makeStyles-root-3123"
           >
             <svg
-              aria-hidden="true"
+              aria-hidden={true}
               className="MuiSvgIcon-root"
               focusable="false"
-              role="presentation"
               style={
                 Object {
                   "fontSize": "2.4rem",
@@ -38152,10 +38665,9 @@ Array [
             className="makeStyles-root-3109 makeStyles-root-3122 makeStyles-root-3124"
           >
             <svg
-              aria-hidden="true"
+              aria-hidden={true}
               className="MuiSvgIcon-root"
               focusable="false"
-              role="presentation"
               style={
                 Object {
                   "fontSize": "2.4rem",
@@ -38194,10 +38706,9 @@ Array [
             className="makeStyles-root-3109 makeStyles-root-3122 makeStyles-root-3125"
           >
             <svg
-              aria-hidden="true"
+              aria-hidden={true}
               className="MuiSvgIcon-root"
               focusable="false"
-              role="presentation"
               style={
                 Object {
                   "fontSize": "2.4rem",
@@ -38236,10 +38747,9 @@ Array [
             className="makeStyles-root-3109 makeStyles-root-3122 makeStyles-root-3126"
           >
             <svg
-              aria-hidden="true"
+              aria-hidden={true}
               className="MuiSvgIcon-root"
               focusable="false"
-              role="presentation"
               style={
                 Object {
                   "fontSize": "2.4rem",
@@ -38369,10 +38879,9 @@ Array [
             className="makeStyles-root-3163 makeStyles-root-3161 makeStyles-root-3162"
           >
             <svg
-              aria-hidden="true"
+              aria-hidden={true}
               className="MuiSvgIcon-root"
               focusable="false"
-              role="presentation"
               style={
                 Object {
                   "fontSize": "2.4rem",
@@ -38411,10 +38920,9 @@ Array [
             className="makeStyles-root-3163 makeStyles-root-3161 makeStyles-root-3174"
           >
             <svg
-              aria-hidden="true"
+              aria-hidden={true}
               className="MuiSvgIcon-root"
               focusable="false"
-              role="presentation"
               style={
                 Object {
                   "fontSize": "2.4rem",
@@ -38453,10 +38961,9 @@ Array [
             className="makeStyles-root-3163 makeStyles-root-3161 makeStyles-root-3175"
           >
             <svg
-              aria-hidden="true"
+              aria-hidden={true}
               className="MuiSvgIcon-root"
               focusable="false"
-              role="presentation"
               style={
                 Object {
                   "fontSize": "2.4rem",
@@ -38495,10 +39002,9 @@ Array [
             className="makeStyles-root-3163 makeStyles-root-3161 makeStyles-root-3176"
           >
             <svg
-              aria-hidden="true"
+              aria-hidden={true}
               className="MuiSvgIcon-root"
               focusable="false"
-              role="presentation"
               style={
                 Object {
                   "fontSize": "2.4rem",
@@ -38591,10 +39097,9 @@ Array [
             className="makeStyles-root-3198 makeStyles-root-3196 makeStyles-root-3197"
           >
             <svg
-              aria-hidden="true"
+              aria-hidden={true}
               className="MuiSvgIcon-root"
               focusable="false"
-              role="presentation"
               style={
                 Object {
                   "fontSize": "2.4rem",
@@ -38633,10 +39138,9 @@ Array [
             className="makeStyles-root-3198 makeStyles-root-3196 makeStyles-root-3209"
           >
             <svg
-              aria-hidden="true"
+              aria-hidden={true}
               className="MuiSvgIcon-root"
               focusable="false"
-              role="presentation"
               style={
                 Object {
                   "fontSize": "2.4rem",
@@ -38675,10 +39179,9 @@ Array [
             className="makeStyles-root-3198 makeStyles-root-3196 makeStyles-root-3210"
           >
             <svg
-              aria-hidden="true"
+              aria-hidden={true}
               className="MuiSvgIcon-root"
               focusable="false"
-              role="presentation"
               style={
                 Object {
                   "fontSize": "2.4rem",
@@ -38717,10 +39220,9 @@ Array [
             className="makeStyles-root-3198 makeStyles-root-3196 makeStyles-root-3211"
           >
             <svg
-              aria-hidden="true"
+              aria-hidden={true}
               className="MuiSvgIcon-root"
               focusable="false"
-              role="presentation"
               style={
                 Object {
                   "fontSize": "2.4rem",

@@ -26,7 +26,7 @@ export type PresenterProps = {
 
 export type ContainerProps = Props & { presenter: React.FC<PresenterProps> };
 
-const useStyles = makeStyles<ThemeInterface>(theme => ({
+const useStyles = makeStyles<ThemeInterface>((theme) => ({
   materialListFilter: {
     right: 0,
     top: 0,
@@ -70,7 +70,7 @@ export const Container = ({ karutaCollection, navigate, presenter }: ContainerPr
   const dispatch = useDispatch();
   const { uiActionCreator } = useDiContainer();
   const filterOpen = useSelector<GlobalState, boolean>(
-    state => state.ui.karutasFilter.open,
+    (state) => state.ui.karutasFilter.open,
     (left, right) => left === right
   );
 

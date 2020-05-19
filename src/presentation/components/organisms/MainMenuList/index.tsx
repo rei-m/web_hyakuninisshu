@@ -6,7 +6,7 @@ import Block from '@src/presentation/components/atoms/Block';
 import { ExamIcon, MaterialIcon, TrainingIcon } from '@src/presentation/components/atoms/MenuIcon';
 import { ThemeInterface } from '@src/presentation/styles/theme';
 
-const useStyles = makeStyles<ThemeInterface>(theme => ({
+const useStyles = makeStyles<ThemeInterface>((theme) => ({
   root: {
     display: 'flex',
     flexDirection: 'column',

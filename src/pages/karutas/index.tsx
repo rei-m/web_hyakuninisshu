@@ -18,7 +18,7 @@ export type OwnProps = {
 };
 
 const KarutasGatsbyPage = ({ data }: OwnProps) => {
-  const karutaList = data.allKaruta.edges.map(karutaData => JSON.parse(karutaData.node.internal.content) as Karuta);
+  const karutaList = data.allKaruta.edges.map((karutaData) => JSON.parse(karutaData.node.internal.content) as Karuta);
   return <KarutasPage karutaCollection={{ karutaList }} />;
 };
 

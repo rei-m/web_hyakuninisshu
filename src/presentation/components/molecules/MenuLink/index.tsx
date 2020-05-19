@@ -19,7 +19,7 @@ export type Props = {
 
 const LinkWithRipple = withRipple<GatsbyLinkProps<{}>>(Link);
 
-const useStyles = makeStyles<ThemeInterface>(theme => ({
+const useStyles = makeStyles<ThemeInterface>((theme) => ({
   root: {
     border: '1px solid #00000030',
     backgroundColor: theme.palette.common.white,

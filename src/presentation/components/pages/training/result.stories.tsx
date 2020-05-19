@@ -43,7 +43,7 @@ const correctAnswerList: Array<{
   questionId: QuestionId;
   isCorrect: boolean;
   correctKaruta: Karuta;
-}> = MOCK_ALL_KARUTA_LIST.slice(0, 75).map(k => ({
+}> = MOCK_ALL_KARUTA_LIST.slice(0, 75).map((k) => ({
   questionId: k.no,
   isCorrect: true,
   correctKaruta: k,
@@ -53,7 +53,7 @@ const wrongAnswerList: Array<{
   questionId: QuestionId;
   isCorrect: boolean;
   correctKaruta: Karuta;
-}> = MOCK_ALL_KARUTA_LIST.slice(75, 100).map(k => ({
+}> = MOCK_ALL_KARUTA_LIST.slice(75, 100).map((k) => ({
   questionId: k.no,
   isCorrect: true,
   correctKaruta: k,
@@ -72,6 +72,6 @@ const props: PresenterProps = {
 };
 
 storiesOf('pages/training/result', module)
-  .addDecorator(story => reduxStoreDecorator(story))
-  .addDecorator(story => questionDiContainerContextDecorator(story, value))
+  .addDecorator((story) => reduxStoreDecorator(story))
+  .addDecorator((story) => questionDiContainerContextDecorator(story, value))
   .add('default', () => <Presenter {...props} />);

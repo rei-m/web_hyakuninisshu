@@ -7,9 +7,9 @@ export class QuestionRepositoryImpl implements QuestionRepository {
   private dataSource: Map<QuestionId, Question> = new Map();
 
   initialize(questionList: ReadonlyArray<Question>) {
-    this.keyList = questionList.map(q => q.id);
+    this.keyList = questionList.map((q) => q.id);
     const source = new Map();
-    questionList.forEach(q => {
+    questionList.forEach((q) => {
       source.set(q.id, q);
     });
     this.dataSource = source;
@@ -28,7 +28,7 @@ export class QuestionRepositoryImpl implements QuestionRepository {
     return result;
   }
   findNextById(questionId: QuestionId) {
-    const currentIndex = this.keyList.findIndex(key => key === questionId);
+    const currentIndex = this.keyList.findIndex((key) => key === questionId);
     const nextIndex = currentIndex + 1;
     const result = this.dataSource.get(this.keyList[nextIndex]);
     if (!result) {
@@ -37,6 +37,6 @@ export class QuestionRepositoryImpl implements QuestionRepository {
     return result;
   }
   findAll() {
-    return this.keyList.map(key => this.dataSource.get(key)!);
+    return this.keyList.map((key) => this.dataSource.get(key)!);
   }
 }

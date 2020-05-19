@@ -32,7 +32,7 @@ type PickedState = Pick<questionsTypes.State, 'state' | 'currentQuestion' | 'tot
 
 const KarutaPlayingContainer = ({ kamiNoKuStyle, shimoNoKuStyle, questionAnim, resultUrl }: Props) => {
   const { state, currentQuestion, totalCount, currentPosition } = useSelector<GlobalState, PickedState>(
-    state => state.questions
+    (state) => state.questions
   );
 
   const { questionsActionCreator } = useQuestionDiContainer();

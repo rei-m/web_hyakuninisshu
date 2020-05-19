@@ -16,15 +16,15 @@ export interface Props {
   onClick?: () => void;
 }
 
-const useStyles = makeStyles<ThemeInterface, { iconSize?: string }>(theme => ({
+const useStyles = makeStyles<ThemeInterface, { iconSize?: string }>((theme) => ({
   default: {
     marginRight: theme.spacing(1),
     color: '#5c7080',
-    fontSize: props => props.iconSize,
+    fontSize: (props) => props.iconSize,
   },
   accent: {
     marginRight: theme.spacing(1),
-    fontSize: props => props.iconSize,
+    fontSize: (props) => props.iconSize,
   },
 }));
 
@@ -42,14 +42,14 @@ const IconLabelButton: React.FC<Props> = ({
   </Button>
 );
 
-export const EditButton: React.FC<Omit<Props, 'renderIcon'>> = props => (
+export const EditButton: React.FC<Omit<Props, 'renderIcon'>> = (props) => (
   <IconLabelButton
     renderIcon={({ iconSize }) => <EditIcon className={useStyles({ iconSize })[props.type ? props.type : 'default']} />}
     {...props}
   />
 );
 
-export const ArrowForwardButton: React.FC<Omit<Props, 'renderIcon'>> = props => (
+export const ArrowForwardButton: React.FC<Omit<Props, 'renderIcon'>> = (props) => (
   <IconLabelButton
     renderIcon={({ iconSize }) => (
       <ArrowForwardIcon className={useStyles({ iconSize })[props.type ? props.type : 'default']} />
@@ -58,7 +58,7 @@ export const ArrowForwardButton: React.FC<Omit<Props, 'renderIcon'>> = props => 
   />
 );
 
-export const ArrowBackButton: React.FC<Omit<Props, 'renderIcon'>> = props => (
+export const ArrowBackButton: React.FC<Omit<Props, 'renderIcon'>> = (props) => (
   <IconLabelButton
     renderIcon={({ iconSize }) => (
       <ArrowBackIcon className={useStyles({ iconSize })[props.type ? props.type : 'default']} />
@@ -67,7 +67,7 @@ export const ArrowBackButton: React.FC<Omit<Props, 'renderIcon'>> = props => (
   />
 );
 
-export const RefreshButton: React.FC<Omit<Props, 'renderIcon'>> = props => (
+export const RefreshButton: React.FC<Omit<Props, 'renderIcon'>> = (props) => (
   <IconLabelButton
     renderIcon={({ iconSize }) => (
       <RefreshIcon className={useStyles({ iconSize })[props.type ? props.type : 'default']} />

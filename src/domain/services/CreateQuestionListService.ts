@@ -15,10 +15,10 @@ export class CreateQuestionListService {
       const correctAnswerKarutaNo: KarutaNo = karuta.no;
 
       const exceptedAllKarutaNoList = [...karutaCollection.karutaList]
-        .filter(karuta => karuta.no !== correctAnswerKarutaNo)
-        .map(karuta => karuta.no);
+        .filter((karuta) => karuta.no !== correctAnswerKarutaNo)
+        .map((karuta) => karuta.no);
 
-      const wrongKarutaNoList = Array.from({ length: 3 }).map(_ => {
+      const wrongKarutaNoList = Array.from({ length: 3 }).map((_) => {
         const noIndex = getRandomInt(0, exceptedAllKarutaNoList.length - 1);
         const [karutaNo] = exceptedAllKarutaNoList.splice(noIndex, 1);
         return karutaNo;

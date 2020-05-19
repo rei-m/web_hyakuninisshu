@@ -37,7 +37,7 @@ export type PresenterProps = {
 
 export type ContainerProps = Props & { presenter: React.FC<PresenterProps> };
 
-const useStyles = makeStyles<ThemeInterface, Pick<Props, 'size'>>(theme => ({
+const useStyles = makeStyles<ThemeInterface, Pick<Props, 'size'>>((theme) => ({
   root: {
     display: 'flex',
     justifyContent: 'center',
@@ -70,7 +70,7 @@ const useStyles = makeStyles<ThemeInterface, Pick<Props, 'size'>>(theme => ({
 const adjustDisplayText = (text: string, startIndex: number, currentPosition: number) => {
   if (currentPosition < startIndex) {
     return Array.from(Array(text.length).keys())
-      .map(_ => SPACE)
+      .map((_) => SPACE)
       .join('');
   }
   const line = currentPosition > startIndex ? text.substr(0, currentPosition - startIndex) : '';
@@ -78,7 +78,7 @@ const adjustDisplayText = (text: string, startIndex: number, currentPosition: nu
   const linePad =
     mod > 0
       ? Array.from(Array(mod).keys())
-          .map(_ => SPACE)
+          .map((_) => SPACE)
           .join('')
       : '';
   return line + linePad;

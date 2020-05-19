@@ -132,7 +132,7 @@ export const MOCK_ALL_KARUTA_LIST: Array<Karuta> = [
   { ...MOCK_KARUTA_1, id: '5', no: 5, kimariji: 5, color: 'orange' } as const,
   { ...MOCK_KARUTA_1, id: '6', no: 6, kimariji: 6 } as const,
 ].concat(
-  [...Array(94).keys()].map(i => {
+  [...Array(94).keys()].map((i) => {
     return {
       ...MOCK_KARUTA_1,
       id: String(i + 7),

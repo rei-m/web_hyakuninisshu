@@ -20,7 +20,9 @@ export type Props = {
 } & RouteComponentProps;
 
 const ExamResultGatsbyPage = ({ data, navigate }: Props) => {
-  const allKarutaList = data.allKaruta.edges.map(karutaData => JSON.parse(karutaData.node.internal.content) as Karuta);
+  const allKarutaList = data.allKaruta.edges.map(
+    (karutaData) => JSON.parse(karutaData.node.internal.content) as Karuta
+  );
   return (
     <QuestionDiContainerProvider allKarutaList={allKarutaList}>
       <ExamResultPage navigate={navigate} />

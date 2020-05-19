@@ -67,7 +67,7 @@ export const Presenter = ({ state, result, totalCount, onClickRestart, onClickBa
 };
 
 const Container = ({ presenter, navigate }: ContainerProps) => {
-  const { state, result, totalCount } = useSelector<GlobalState, PickedState>(state => state.questions);
+  const { state, result, totalCount } = useSelector<GlobalState, PickedState>((state) => state.questions);
   const dispatch = useDispatch();
   const { questionsActionCreator } = useQuestionDiContainer();
 

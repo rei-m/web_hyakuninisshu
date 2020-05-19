@@ -13,7 +13,7 @@ export type Props = {
   onClickBack?: () => void;
 };
 
-const useStyles = makeStyles<ThemeInterface>(theme => ({
+const useStyles = makeStyles<ThemeInterface>((theme) => ({
   content: {
     display: 'flex',
     justifyContent: 'center',

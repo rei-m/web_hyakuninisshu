@@ -12,12 +12,12 @@ const filterByRange = (karutaList: ReadonlyArray<Karuta>, range: { from: KarutaN
 
 const filterByKimariji = (karutaList: ReadonlyArray<Karuta>, kimarijiList: ReadonlyArray<Kimariji>) => {
   const kimarijiSet = new Set<Kimariji>(kimarijiList);
-  return karutaList.filter(k => kimarijiSet.has(k.kimariji));
+  return karutaList.filter((k) => kimarijiSet.has(k.kimariji));
 };
 
 const filterByColor = (karutaList: ReadonlyArray<Karuta>, colorList: ReadonlyArray<Color>) => {
   const colorSet = new Set<Color>(colorList);
-  return karutaList.filter(k => colorSet.has(k.color));
+  return karutaList.filter((k) => colorSet.has(k.color));
 };
 
 const filter = (karutaList: ReadonlyArray<Karuta>) => {

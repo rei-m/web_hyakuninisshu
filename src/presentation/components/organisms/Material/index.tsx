@@ -16,7 +16,7 @@ export type Props = {
   karuta: Karuta;
 };
 
-const useStyles = makeStyles<ThemeInterface>(theme => ({
+const useStyles = makeStyles<ThemeInterface>((theme) => ({
   root: {
     display: 'flex',
     alignItems: 'center',
