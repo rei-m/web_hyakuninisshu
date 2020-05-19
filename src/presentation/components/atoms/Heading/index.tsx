@@ -21,7 +21,7 @@ export type PresenterProps = {
 
 export type ContainerProps = Props & { presenter: React.FC<PresenterProps> };
 
-const useStyles = makeStyles<ThemeInterface, { size: FontSize }>(theme => ({
+const useStyles = makeStyles<ThemeInterface, { size: FontSize }>((theme) => ({
   root: {
     fontWeight: 700,
     margin: 0,
@@ -47,6 +47,6 @@ export const HeadingContainer: React.FC<ContainerProps> = ({
   return presenter({ Tag, className: `${classes.root} ${className}`, children });
 };
 
-const Heading: React.FC<Props> = props => <HeadingContainer presenter={HeadingPresenter} {...props} />;
+const Heading: React.FC<Props> = (props) => <HeadingContainer presenter={HeadingPresenter} {...props} />;
 
 export default Heading;

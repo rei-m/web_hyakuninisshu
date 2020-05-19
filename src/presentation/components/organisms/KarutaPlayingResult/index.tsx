@@ -18,7 +18,7 @@ export type Props = {
   onClickRestart: () => void;
 };
 
-const useStyles = makeStyles<ThemeInterface>(theme => ({
+const useStyles = makeStyles<ThemeInterface>((theme) => ({
   root: {
     maxWidth: 380,
     padding: theme.spacing(2),

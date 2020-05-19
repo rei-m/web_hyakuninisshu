@@ -16,7 +16,7 @@ export type Props = {
   handleChange: (event: React.ChangeEvent<{ name?: string; value: unknown }>, child: React.ReactNode) => void;
 };
 
-const useStyles = makeStyles<ThemeInterface>(theme => ({
+const useStyles = makeStyles<ThemeInterface>((theme) => ({
   formControl: {
     display: 'flex',
   },
@@ -51,7 +51,7 @@ const SelectItem = ({ title, name, value, list, error, className = '', handleCha
         }}
         className={classes.select}
       >
-        {list.map(item => (
+        {list.map((item) => (
           <MenuItem value={item.value} className={classes.select} key={`select_item_${item.value}`}>
             {item.text}
           </MenuItem>

@@ -17,7 +17,7 @@ export type Props = {
   onClick?: (karutaNo: number) => void;
 };
 
-const useStyles = makeStyles<ThemeInterface>(theme => ({
+const useStyles = makeStyles<ThemeInterface>((theme) => ({
   root: {
     display: 'flex',
     alignItems: 'center',

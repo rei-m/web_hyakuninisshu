@@ -16,7 +16,7 @@ export type Props = {
   karutaCollection: KarutaCollection;
 };
 
-const useStyles = makeStyles<ThemeInterface>(theme => ({
+const useStyles = makeStyles<ThemeInterface>((theme) => ({
   karutaList: {
     padding: 0,
     margin: 0,
@@ -147,7 +147,7 @@ const IndexPage = ({ karutaCollection }: Props) => {
           </ReadingContent>
           <ReadingContent title={`百人一首 歌一覧`}>
             <ul className={classes.karutaList}>
-              {karutaCollection.karutaList.map(karuta => (
+              {karutaCollection.karutaList.map((karuta) => (
                 <li key={karuta.no}>
                   <Link to={paths.karutasShow(karuta.no)}>
                     <SmallMaterial karuta={karuta} separate={` `} image={false} className={classes.material} />

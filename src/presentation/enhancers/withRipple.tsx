@@ -76,7 +76,7 @@ export function withRipple<T>(WrappedComponent: React.ComponentType<T>) {
         const ripples = containerEl.current!.getElementsByClassName('ripple-effect');
         Array.from(Array(ripples.length).keys())
           .reverse()
-          .forEach(i => containerEl.current!.removeChild(ripples.item(i)!));
+          .forEach((i) => containerEl.current!.removeChild(ripples.item(i)!));
       }, 1000);
     };
 

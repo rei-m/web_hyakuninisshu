@@ -66,8 +66,8 @@ export class ActionCreatorImpl implements types.ActionCreator {
 
     const allQuestionList = this._questionRepository.findAll();
     const wrongKarutaNoList = allQuestionList
-      .filter(q => q.answer?.isCorrect === false)
-      .map(q => q.correctAnswerKarutaNo);
+      .filter((q) => q.answer?.isCorrect === false)
+      .map((q) => q.correctAnswerKarutaNo);
     const targetKarutaList = this._karutaRepository.findByNoList(wrongKarutaNoList);
 
     const questionList = this._createQuestionListService.execute(karutaCollection, targetKarutaList);
@@ -107,7 +107,7 @@ export class ActionCreatorImpl implements types.ActionCreator {
     this._questionRepository.update(started);
 
     const choiceKarutaList = this._karutaRepository.findByNoList(question.choiceKarutaNoList);
-    const correctKaruta = choiceKarutaList.find(karuta => karuta.no === question.correctAnswerKarutaNo)!;
+    const correctKaruta = choiceKarutaList.find((karuta) => karuta.no === question.correctAnswerKarutaNo)!;
 
     const yomiFuda: types.YomiFuda = {
       karutaNo: correctKaruta.no,
@@ -116,7 +116,7 @@ export class ActionCreatorImpl implements types.ActionCreator {
       sanku: correctKaruta.sanku[kamiNoKuStyle],
     };
 
-    const toriFudaList = choiceKarutaList.map(karuta => ({
+    const toriFudaList = choiceKarutaList.map((karuta) => ({
       karutaNo: karuta.no,
       shiku: karuta.shiku[shimoNoKuStyle],
       kekku: karuta.kekku[shimoNoKuStyle],
@@ -184,7 +184,7 @@ export class ActionCreatorImpl implements types.ActionCreator {
     const aggregateResult = QuestionCollection.aggregate(questionList);
 
     const finder: Map<KarutaNo, Karuta> = new Map();
-    karutaCollection.karutaList.forEach(karuta => {
+    karutaCollection.karutaList.forEach((karuta) => {
       finder.set(karuta.no, karuta);
     });
 
@@ -193,7 +193,7 @@ export class ActionCreatorImpl implements types.ActionCreator {
       payload: {
         correctCount: aggregateResult.correctCount,
         averageAnswerSecond: aggregateResult.averageAnswerSecond,
-        answerList: aggregateResult.answerList.map(answer => ({
+        answerList: aggregateResult.answerList.map((answer) => ({
           questionId: answer.questionId,
           isCorrect: answer.isCorrect,
           correctKaruta: finder.get(answer.correctAnswerKarutaNo)!,

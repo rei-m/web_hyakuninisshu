@@ -8,7 +8,7 @@ export type Props = {
   title: string;
 };
 
-const useStyles = makeStyles<ThemeInterface>(theme => ({
+const useStyles = makeStyles<ThemeInterface>((theme) => ({
   root: {
     padding: theme.spacing(2, 0),
     textAlign: 'left',

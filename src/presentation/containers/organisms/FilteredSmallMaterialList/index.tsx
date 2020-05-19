@@ -26,7 +26,7 @@ export type ContainerProps = Props & {
   presenter: (props: PresenterProps) => React.ReactElement;
 };
 
-const useStyles = makeStyles<ThemeInterface>(theme => ({
+const useStyles = makeStyles<ThemeInterface>((theme) => ({
   root: {
     display: 'flex',
     justifyContent: 'center',
@@ -69,7 +69,7 @@ export const FilteredSmallMaterialListPresenter = ({ karutas, className }: Prese
   return (
     <ul className={clsx(classes.root, className)}>
       {karutas.length > 0 ? (
-        karutas.map(karuta => (
+        karutas.map((karuta) => (
           <li key={karuta.no} className={classes.listItem}>
             <Link to={paths.karutasShow(karuta.no)} className={classes.link}>
               <SmallMaterial karuta={karuta} className={classes.material} data-test={`row-${karuta.no}`} />
@@ -88,7 +88,7 @@ export const FilteredSmallMaterialListPresenter = ({ karutas, className }: Prese
 };
 
 export const FilteredSmallMaterialListContainer = ({ presenter, karutaCollection, className = '' }: ContainerProps) => {
-  const { karutasFilter } = useSelector<GlobalState, uiTypes.State>(state => state.ui);
+  const { karutasFilter } = useSelector<GlobalState, uiTypes.State>((state) => state.ui);
   const filteredKarutas = uiSelectors.filterKarutas(karutaCollection, karutasFilter);
   return presenter({ karutas: filteredKarutas, className });
 };

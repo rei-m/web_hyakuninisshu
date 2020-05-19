@@ -18,7 +18,7 @@ export type Props = {
 };
 
 const IndexGatsbyPage = ({ data }: Props) => {
-  const karutaList = data.allKaruta.edges.map(karutaData => JSON.parse(karutaData.node.internal.content) as Karuta);
+  const karutaList = data.allKaruta.edges.map((karutaData) => JSON.parse(karutaData.node.internal.content) as Karuta);
   return <IndexPage karutaCollection={{ karutaList }} />;
 };
 

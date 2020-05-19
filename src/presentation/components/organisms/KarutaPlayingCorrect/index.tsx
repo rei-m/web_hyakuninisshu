@@ -20,7 +20,7 @@ export type Props = {
   onClickGoToResult: () => void;
 };
 
-const useStyles = makeStyles<ThemeInterface>(theme => ({
+const useStyles = makeStyles<ThemeInterface>((theme) => ({
   header: {
     position: 'relative',
     margin: 'auto',

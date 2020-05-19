@@ -7,7 +7,7 @@ import Txt from '@src/presentation/components/atoms/Txt';
 import { useDogezaImage } from '@src/presentation/hooks/static-queries/useDogezaImage';
 import { ThemeInterface } from '@src/presentation/styles/theme';
 
-const useStyles = makeStyles<ThemeInterface>(theme => ({
+const useStyles = makeStyles<ThemeInterface>((theme) => ({
   container: {
     margin: '128px 0',
     padding: theme.spacing(2),

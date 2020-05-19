@@ -5,8 +5,8 @@ import { Color, Kimariji } from '@src/domain/models';
 export const initialState: types.State = {
   karutasFilter: {
     open: false,
-    colors: Color.values.map(color => ({ color, checked: true })),
-    kimarijis: Kimariji.values.map(kimariji => ({ kimariji, checked: true })),
+    colors: Color.values.map((color) => ({ color, checked: true })),
+    kimarijis: Kimariji.values.map((kimariji) => ({ kimariji, checked: true })),
   },
 };
 
@@ -30,7 +30,7 @@ export const reducer = (state: types.State = initialState, action: types.Actions
       return {
         karutasFilter: {
           ...state.karutasFilter,
-          colors: state.karutasFilter.colors.map(color => {
+          colors: state.karutasFilter.colors.map((color) => {
             return color.color === action.payload.color ? action.payload : color;
           }),
         },
@@ -39,7 +39,7 @@ export const reducer = (state: types.State = initialState, action: types.Actions
       return {
         karutasFilter: {
           ...state.karutasFilter,
-          kimarijis: state.karutasFilter.kimarijis.map(kimariji => {
+          kimarijis: state.karutasFilter.kimarijis.map((kimariji) => {
             return kimariji.kimariji === action.payload.kimariji ? action.payload : kimariji;
           }),
         },

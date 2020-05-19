@@ -17,7 +17,7 @@ type PickedState = {
 
 const TrainingQuestionPage = ({ navigate }: Props) => {
   const { kamiNoKuStyle, shimoNoKuStyle, questionAnim } = useSelector<GlobalState, PickedState>(
-    state => state.questions.trainingCondition,
+    (state) => state.questions.trainingCondition,
     (left, right) => {
       return (
         left.kamiNoKuStyle === right.kamiNoKuStyle &&

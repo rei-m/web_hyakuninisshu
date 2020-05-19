@@ -15,7 +15,7 @@ import { GlobalState } from '@src/state';
 
 export type Props = Pick<RouteComponentProps, 'navigate'>;
 
-const useStyles = makeStyles<ThemeInterface>(theme => ({
+const useStyles = makeStyles<ThemeInterface>((theme) => ({
   formContainer: {
     padding: theme.spacing(2, 0),
     maxWidth: 380,
@@ -35,7 +35,7 @@ const TrainingPage = ({ navigate }: Props) => {
   const { questionsActionCreator } = useQuestionDiContainer();
   const dispatch = useDispatch();
   const pickedState = useSelector<GlobalState, PickedState>(
-    state => ({ state: state.questions.state }),
+    (state) => ({ state: state.questions.state }),
     (left, right) => left.state === right.state
   );
 

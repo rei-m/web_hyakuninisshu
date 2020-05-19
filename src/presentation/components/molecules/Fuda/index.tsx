@@ -68,7 +68,7 @@ const CREATOR_STYLE_MAP = {
   },
 };
 
-const useStyles = makeStyles<ThemeInterface, { size: Size }>(theme => ({
+const useStyles = makeStyles<ThemeInterface, { size: Size }>((theme) => ({
   root: {
     display: 'flex',
     justifyContent: 'center',

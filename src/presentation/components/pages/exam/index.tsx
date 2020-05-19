@@ -22,7 +22,7 @@ export type ContainerProps = {
   presenter: (props: PresenterProps) => React.ReactElement;
 } & Props;
 
-const useStyles = makeStyles<ThemeInterface>(theme => ({
+const useStyles = makeStyles<ThemeInterface>((theme) => ({
   explain: {
     padding: theme.spacing(4, 2),
   },
@@ -65,7 +65,7 @@ export const Container = ({ navigate, presenter }: ContainerProps) => {
   const { questionsActionCreator } = useQuestionDiContainer();
   const dispatch = useDispatch();
   const pickedState = useSelector<GlobalState, PickedState>(
-    state => ({ state: state.questions.state }),
+    (state) => ({ state: state.questions.state }),
     (left, right) => left.state === right.state
   );
 
