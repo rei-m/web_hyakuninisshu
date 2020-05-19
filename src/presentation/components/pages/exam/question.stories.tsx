@@ -59,6 +59,6 @@ const value: Value = {
 };
 
 storiesOf('pages/exam/question', module)
-  .addDecorator(story => reduxStoreDecorator(story, store))
-  .addDecorator(story => questionDiContainerContextDecorator(story, value))
+  .addDecorator((story) => reduxStoreDecorator(story, store))
+  .addDecorator((story) => questionDiContainerContextDecorator(story, value))
   .add('default', () => <ExamQuestionPage />);

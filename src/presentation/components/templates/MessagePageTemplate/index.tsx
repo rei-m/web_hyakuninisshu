@@ -3,7 +3,7 @@ import makeStyles from '@material-ui/core/styles/makeStyles';
 import Block from '@src/presentation/components/atoms/Block';
 import { ThemeInterface } from '@src/presentation/styles/theme';
 
-const useStyles = makeStyles<ThemeInterface>(theme => ({
+const useStyles = makeStyles<ThemeInterface>((theme) => ({
   root: {
     display: 'flex',
     justifyContent: 'center',

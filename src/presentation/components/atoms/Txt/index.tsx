@@ -18,7 +18,7 @@ export type PresenterProps = {
 
 export type ContainerProps = Props & { presenter: React.FC<PresenterProps> };
 
-const useStyles = makeStyles<ThemeInterface, { size: FontSize; role: Role }>(theme => ({
+const useStyles = makeStyles<ThemeInterface, { size: FontSize; role: Role }>((theme) => ({
   root: {
     fontSize: ({ size }) => theme.fontSize[size],
     color: ({ role }) => theme.fontColor[role],
@@ -41,6 +41,6 @@ export const TxtContainer: React.FC<ContainerProps> = ({
   return presenter({ Tag, className: `${classes.root} ${className}`, children });
 };
 
-const Txt: React.FC<Props> = props => <TxtContainer presenter={TxtPresenter} {...props} />;
+const Txt: React.FC<Props> = (props) => <TxtContainer presenter={TxtPresenter} {...props} />;
 
 export default Txt;

@@ -12,7 +12,7 @@ const rootStyleMap: { [key: string]: string | number } = {
 };
 
 const rootStyle = Object.keys(rootStyleMap)
-  .map(key => `${key}: ${rootStyleMap[key]}`)
+  .map((key) => `${key}: ${rootStyleMap[key]}`)
   .join(';');
 
 export const useReactPortal = (portalElementId?: string) => {

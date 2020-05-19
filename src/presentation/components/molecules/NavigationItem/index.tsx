@@ -22,7 +22,7 @@ const MENU_TYPE_MAP = {
   other: 'その他',
 } as const;
 
-const useStyles = makeStyles<ThemeInterface, Pick<Props, 'active' | 'menuType'>>(theme => ({
+const useStyles = makeStyles<ThemeInterface, Pick<Props, 'active' | 'menuType'>>((theme) => ({
   root: {
     height: 56,
     color: theme.palette.common.white,

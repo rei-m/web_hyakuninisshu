@@ -10,7 +10,7 @@ export type Props = {
   karuta: Karuta;
 };
 
-const useStyles = makeStyles<ThemeInterface>(theme => ({
+const useStyles = makeStyles<ThemeInterface>((theme) => ({
   container: {
     padding: theme.spacing(2),
   },

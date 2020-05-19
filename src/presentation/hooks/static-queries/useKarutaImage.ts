@@ -35,7 +35,7 @@ export const useKarutaImage = (karutaNo: number) => {
   );
   const karutaImageNo = `00${karutaNo}`.slice(-3);
   const fileName = `karuta_${karutaImageNo}`;
-  const resource = result.karutaImages.edges.find(i => i.node.name.indexOf(fileName) > -1);
+  const resource = result.karutaImages.edges.find((i) => i.node.name.indexOf(fileName) > -1);
 
   if (!resource) {
     return undefined;

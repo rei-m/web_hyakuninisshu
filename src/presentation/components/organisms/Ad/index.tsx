@@ -9,7 +9,7 @@ export type Props = {
   className?: string;
 };
 
-const useStyles = makeStyles<ThemeInterface>(theme => ({
+const useStyles = makeStyles<ThemeInterface>((theme) => ({
   root: {
     textAlign: 'center',
     width: '100%',

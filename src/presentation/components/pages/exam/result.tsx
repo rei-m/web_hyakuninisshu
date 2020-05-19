@@ -33,7 +33,7 @@ export type ContainerProps = {
   presenter: (props: PresenterProps) => React.ReactElement;
 } & Props;
 
-const useStyles = makeStyles<ThemeInterface>(theme => ({
+const useStyles = makeStyles<ThemeInterface>((theme) => ({
   content: {
     display: 'flex',
     flexWrap: 'wrap',
@@ -85,7 +85,7 @@ export const Presenter = ({
                 onClickBack={onClickBack}
               >
                 <Block className={classes.content}>
-                  {result.answerList.map(answer => (
+                  {result.answerList.map((answer) => (
                     <QuestionJudgement
                       key={answer.questionId}
                       karuta={answer.correctKaruta}
@@ -122,7 +122,7 @@ export const Presenter = ({
 };
 
 export const Container = ({ presenter, navigate }: ContainerProps) => {
-  const { state, result, totalCount } = useSelector<GlobalState, PickedState>(state => state.questions);
+  const { state, result, totalCount } = useSelector<GlobalState, PickedState>((state) => state.questions);
   const dispatch = useDispatch();
   const { questionsActionCreator } = useQuestionDiContainer();
 
