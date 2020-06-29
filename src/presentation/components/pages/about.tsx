@@ -51,7 +51,7 @@ const AboutPage = ({ navigate }: Props) => {
         <>
           <ReadingContent title={`アプリ版について`}>
             <Paragraph size={`s`}>
-              Androidのみリリースしています。こちらは一旦インストールしていただけばオフラインでも使えます。iOS版は未定ですが、要望があればがんばります。
+              Androidのみリリースしていて、読み上げ形式のアプリも用意しています。こちらは一旦インストールしていただけばオフラインでも使えます。iOS版は未定ですが、要望があればがんばります。
             </Paragraph>
             <Block className={classes.bannerContainer}>
               <PlayStoreBanner size={200} />

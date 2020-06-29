@@ -9,6 +9,7 @@ import Chihaya from '@src/presentation/components/organisms/Chihaya';
 import ReadingContent from '@src/presentation/components/molecules/ReadingContent';
 import Paragraph from '@src/presentation/components/atoms/Paragraph';
 import Txt from '@src/presentation/components/atoms/Txt';
+import PlayStoreBanner from '@src/presentation/components/atoms/PlayStoreBanner';
 import { ThemeInterface } from '@src/presentation/styles/theme';
 import { KarutaCollection } from '@src/domain/models';
 
@@ -39,6 +40,9 @@ const useStyles = makeStyles<ThemeInterface>((theme) => ({
     justifyContent: 'center',
     marginBottom: theme.spacing(1),
   },
+  bannerWrapper: {
+    textAlign: 'center',
+  },
 }));
 
 const IndexPage = ({ karutaCollection }: Props) => {
@@ -46,7 +50,7 @@ const IndexPage = ({ karutaCollection }: Props) => {
   return (
     <TripleContentsPageTemplate
       title={`百人一首 - 簡単に暗記 -`}
-      keywords={[`百人一首`, `小倉百人一首`, `ちはやふる`, `暗記`, `練習`]}
+      keywords={[`百人一首`, `小倉百人一首`, `かるた`, `競技かるた`, `ちはやふる`, `暗記`, `練習`]}
       top={
         <ReadingContent title={`百人一首 簡単に暗記について`}>
           <Paragraph size={`s`}>
@@ -55,12 +59,22 @@ const IndexPage = ({ karutaCollection }: Props) => {
         </ReadingContent>
       }
       middle={
-        <ReadingContent title={`メニュー`}>
-          <Paragraph size={`s`}>
-            百人一首の練習は詠み札に対応する下の句を四択の中から選ぶクイズ形式となっています。繰り返し練習して百人一首のスタートに立ちましょう。
-          </Paragraph>
-          <MainMenuList />
-        </ReadingContent>
+        <>
+          <ReadingContent title={`メニュー`}>
+            <Paragraph size={`s`}>
+              百人一首の練習は読み札に対応する下の句を四択の中から選ぶクイズ形式となっています。繰り返し練習して百人一首のスタートに立ちましょう。
+            </Paragraph>
+            <MainMenuList />
+          </ReadingContent>
+          <ReadingContent title={`アプリ版`}>
+            <Paragraph size={`s`}>
+              よりサクサク使えるアプリ版を用意しています。百人一首の読み上げ形式も対応していますので、自身のついた方におすすめです。
+            </Paragraph>
+            <div className={classes.bannerWrapper}>
+              <PlayStoreBanner size={200} />
+            </div>
+          </ReadingContent>
+        </>
       }
       bottom={
         <>
