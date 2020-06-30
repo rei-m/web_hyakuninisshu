@@ -11,9 +11,11 @@ import { ThemeInterface } from '@src/presentation/styles/theme';
 
 export type Props = Pick<RouteComponentProps, 'navigate'>;
 
-const useStyles = makeStyles<ThemeInterface>(() => ({
+const useStyles = makeStyles<ThemeInterface>((theme) => ({
   bannerContainer: {
-    textAlign: 'center',
+    paddingTop: theme.spacing(4),
+    display: 'flex',
+    justifyContent: 'center',
   },
 }));
 
@@ -54,7 +56,8 @@ const AboutPage = ({ navigate }: Props) => {
               Androidのみリリースしていて、読み上げ形式のアプリも用意しています。こちらは一旦インストールしていただけばオフラインでも使えます。iOS版は未定ですが、要望があればがんばります。
             </Paragraph>
             <Block className={classes.bannerContainer}>
-              <PlayStoreBanner size={200} />
+              <PlayStoreBanner type="normal" />
+              <PlayStoreBanner type="reader" />
             </Block>
           </ReadingContent>
           <ReadingContent title={`運営者について`}>

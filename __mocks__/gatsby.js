@@ -6,6 +6,8 @@ const incorrectImage = require("@src/presentation/images/check_incorrect.png");
 const dogezaImage = require("@src/presentation/images/dogeza_businessman.png");
 const karutaImage = require("@src/presentation/images/karuta_001.jpg");
 const tatamiImage  = require("@src/presentation/images/tatami_part.png");
+const appIconImage  = require("@src/presentation/images/android_app_icon.png");
+const appIconReaderImage  = require("@src/presentation/images/android_app_reader_icon.png");
 
 const linkActionHandler = action("Link:");
 const navigateActionHandler = action("NavigateTo:");
@@ -80,6 +82,30 @@ module.exports = {
       return {
         tatamiImage: {
           publicURL: tatamiImage,
+        },
+      };
+    }
+    if (query.indexOf("query PlayStoreImageQuery1") > -1) {
+      return {
+        storeImage1: {
+          childImageSharp: {
+            fluid: {
+              aspectRatio: 0.7228915662650602,
+              srcSet: "",
+              sizes: "(max-width: 200px) 200px, 200px",
+              src: appIconImage,
+            },
+          },
+        },
+        storeImage2: {
+          childImageSharp: {
+            fluid: {
+              aspectRatio: 0.7228915662650602,
+              srcSet: "",
+              sizes: "(max-width: 200px) 200px, 200px",
+              src: appIconReaderImage,
+            },
+          },
         },
       };
     }
