@@ -41,7 +41,9 @@ const useStyles = makeStyles<ThemeInterface>((theme) => ({
     marginBottom: theme.spacing(1),
   },
   bannerWrapper: {
-    textAlign: 'center',
+    paddingTop: theme.spacing(4),
+    display: 'flex',
+    justifyContent: 'center',
   },
 }));
 
@@ -68,10 +70,11 @@ const IndexPage = ({ karutaCollection }: Props) => {
           </ReadingContent>
           <ReadingContent title={`アプリ版`}>
             <Paragraph size={`s`}>
-              よりサクサク使えるアプリ版を用意しています。百人一首の読み上げ形式も対応していますので、自身のついた方におすすめです。
+              よりサクサク使えるアプリ版を用意しています。百人一首の読み上げ形式も対応していますので、自信のついた方におすすめです。
             </Paragraph>
             <div className={classes.bannerWrapper}>
-              <PlayStoreBanner size={200} />
+              <PlayStoreBanner type="normal" />
+              <PlayStoreBanner type="reader" />
             </div>
           </ReadingContent>
         </>
