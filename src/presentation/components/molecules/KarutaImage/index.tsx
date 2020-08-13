@@ -9,8 +9,12 @@ export type Props = {
   style?: React.CSSProperties;
 };
 
-const KarutaImage: React.FC<Props> = ({ karutaNo, className = '', style }) => (
-  <Img fluid={useKarutaImage(karutaNo)} className={className} style={style} alt={KarutaNo.toJPNString(karutaNo)} />
-);
+const KarutaImage: React.FC<Props> = ({ karutaNo, className = '', style }) => {
+  const fluid = useKarutaImage(karutaNo);
+  if (!fluid) {
+    return <></>;
+  }
+  return <Img fluid={fluid} className={className} style={style} alt={KarutaNo.toJPNString(karutaNo)} />;
+};
 
 export default React.memo(KarutaImage, (prevProps, nextProps) => prevProps.karutaNo === nextProps.karutaNo);
