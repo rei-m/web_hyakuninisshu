@@ -1,6 +1,6 @@
 import React, { useLayoutEffect, useState } from 'react';
+import { navigate } from 'gatsby';
 import { useSelector, useDispatch } from 'react-redux';
-import { RouteComponentProps } from '@reach/router';
 import makeStyles from '@material-ui/core/styles/makeStyles';
 import { paths } from '@src/presentation/routes';
 import SingleContentPageTemplate from '@src/presentation/components/templates/SingleContentPageTemplate';
@@ -13,7 +13,7 @@ import { questionsTypes } from '@src/state/questions';
 import { useQuestionDiContainer } from '@src/presentation/hooks/useQuestionDiContainer';
 import { GlobalState } from '@src/state';
 
-export type Props = Pick<RouteComponentProps, 'navigate'>;
+export type Props = {};
 
 const useStyles = makeStyles<ThemeInterface>((theme) => ({
   formContainer: {
@@ -31,7 +31,7 @@ const useStyles = makeStyles<ThemeInterface>((theme) => ({
 
 type PickedState = Pick<questionsTypes.State, 'state'>;
 
-const TrainingPage = ({ navigate }: Props) => {
+const TrainingPage = (_: Props) => {
   const { questionsActionCreator } = useQuestionDiContainer();
   const dispatch = useDispatch();
   const pickedState = useSelector<GlobalState, PickedState>(

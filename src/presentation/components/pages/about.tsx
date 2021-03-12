@@ -1,5 +1,5 @@
 import React from 'react';
-import { RouteComponentProps } from '@reach/router';
+import { navigate } from 'gatsby';
 import makeStyles from '@material-ui/core/styles/makeStyles';
 import { paths } from '@src/presentation/routes';
 import TripleContentsPageTemplate from '@src/presentation/components/templates/TripleContentsPageTemplate';
@@ -9,7 +9,7 @@ import Paragraph from '@src/presentation/components/atoms/Paragraph';
 import PlayStoreBanner from '@src/presentation/components/atoms/PlayStoreBanner';
 import { ThemeInterface } from '@src/presentation/styles/theme';
 
-export type Props = Pick<RouteComponentProps, 'navigate'>;
+export type Props = {};
 
 const useStyles = makeStyles<ThemeInterface>((theme) => ({
   bannerContainer: {
@@ -19,7 +19,7 @@ const useStyles = makeStyles<ThemeInterface>((theme) => ({
   },
 }));
 
-const AboutPage = ({ navigate }: Props) => {
+const AboutPage = (_: Props) => {
   const handleClickBack = () => {
     if (navigate) {
       navigate(paths.root(), { replace: true });

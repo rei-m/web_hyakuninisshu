@@ -1,12 +1,12 @@
 import React, { useCallback } from 'react';
-import { RouteComponentProps } from '@reach/router';
+import { navigate } from 'gatsby';
 import { paths } from '@src/presentation/routes';
 import PlayingPageTemplate from '@src/presentation/components/templates/PlayingPageTemplate';
 import KarutaPlayingContainer from '@src/presentation/containers/organisms/KarutaPlayingContainer';
 
-export type Props = Pick<RouteComponentProps, 'navigate'>;
+export type Props = {};
 
-const ExamQuestionPage = ({ navigate }: Props) => {
+const ExamQuestionPage = (_: Props) => {
   const handleClickBack = useCallback(() => {
     if (navigate) {
       navigate(paths.exam(), { replace: true });
