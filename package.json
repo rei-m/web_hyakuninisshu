@@ -38,6 +38,7 @@
     "build": "gatsby build",
     "develop": "gatsby develop",
     "start": "npm run develop",
+    "clean": "gatsby clean",
     "test": "jest",
     "test-update": "jest --updateSnapshot",
     "test-cov": "node --max_old_space_size=2048 $(npm bin)/jest --maxWorkers=2 --coverage",
