@@ -893,10 +893,7 @@ exports[`Storyshots molecules/QuestionJudgement with correct 1`] = `
           }
         />
         <picture>
-          <source
-            sizes="(max-width: 300px) 100vw, 200px"
-            srcSet=""
-          />
+          
           <img
             alt=""
             loading="lazy"
@@ -975,10 +972,7 @@ exports[`Storyshots molecules/QuestionJudgement with incorrect 1`] = `
           }
         />
         <picture>
-          <source
-            sizes="(max-width: 300px) 100vw, 200px"
-            srcSet=""
-          />
+          
           <img
             alt=""
             loading="lazy"
@@ -2420,10 +2414,7 @@ exports[`Storyshots organisms/FilteredSmallMaterialList default 1`] = `
               }
             />
             <picture>
-              <source
-                sizes="(max-width: 200px) 100vw, 200px"
-                srcSet=""
-              />
+              
               <img
                 alt="一番"
                 loading="lazy"
@@ -2515,10 +2506,7 @@ exports[`Storyshots organisms/FilteredSmallMaterialList default 1`] = `
               }
             />
             <picture>
-              <source
-                sizes="(max-width: 200px) 100vw, 200px"
-                srcSet=""
-              />
+              
               <img
                 alt="二番"
                 loading="lazy"
@@ -2610,10 +2598,7 @@ exports[`Storyshots organisms/FilteredSmallMaterialList default 1`] = `
               }
             />
             <picture>
-              <source
-                sizes="(max-width: 200px) 100vw, 200px"
-                srcSet=""
-              />
+              
               <img
                 alt="三番"
                 loading="lazy"
@@ -2705,10 +2690,7 @@ exports[`Storyshots organisms/FilteredSmallMaterialList default 1`] = `
               }
             />
             <picture>
-              <source
-                sizes="(max-width: 200px) 100vw, 200px"
-                srcSet=""
-              />
+              
               <img
                 alt="四番"
                 loading="lazy"
@@ -2800,10 +2782,7 @@ exports[`Storyshots organisms/FilteredSmallMaterialList default 1`] = `
               }
             />
             <picture>
-              <source
-                sizes="(max-width: 200px) 100vw, 200px"
-                srcSet=""
-              />
+              
               <img
                 alt="五番"
                 loading="lazy"
@@ -2895,10 +2874,7 @@ exports[`Storyshots organisms/FilteredSmallMaterialList default 1`] = `
               }
             />
             <picture>
-              <source
-                sizes="(max-width: 200px) 100vw, 200px"
-                srcSet=""
-              />
+              
               <img
                 alt="六番"
                 loading="lazy"
@@ -2990,10 +2966,7 @@ exports[`Storyshots organisms/FilteredSmallMaterialList default 1`] = `
               }
             />
             <picture>
-              <source
-                sizes="(max-width: 200px) 100vw, 200px"
-                srcSet=""
-              />
+              
               <img
                 alt="七番"
                 loading="lazy"
@@ -3085,10 +3058,7 @@ exports[`Storyshots organisms/FilteredSmallMaterialList default 1`] = `
               }
             />
             <picture>
-              <source
-                sizes="(max-width: 200px) 100vw, 200px"
-                srcSet=""
-              />
+              
               <img
                 alt="八番"
                 loading="lazy"
@@ -3180,10 +3150,7 @@ exports[`Storyshots organisms/FilteredSmallMaterialList default 1`] = `
               }
             />
             <picture>
-              <source
-                sizes="(max-width: 200px) 100vw, 200px"
-                srcSet=""
-              />
+              
               <img
                 alt="九番"
                 loading="lazy"
@@ -3275,10 +3242,7 @@ exports[`Storyshots organisms/FilteredSmallMaterialList default 1`] = `
               }
             />
             <picture>
-              <source
-                sizes="(max-width: 200px) 100vw, 200px"
-                srcSet=""
-              />
+              
               <img
                 alt="十番"
                 loading="lazy"
@@ -3370,10 +3334,7 @@ exports[`Storyshots organisms/FilteredSmallMaterialList default 1`] = `
               }
             />
             <picture>
-              <source
-                sizes="(max-width: 200px) 100vw, 200px"
-                srcSet=""
-              />
+              
               <img
                 alt="十一番"
                 loading="lazy"
@@ -3465,10 +3426,7 @@ exports[`Storyshots organisms/FilteredSmallMaterialList default 1`] = `
               }
             />
             <picture>
-              <source
-                sizes="(max-width: 200px) 100vw, 200px"
-                srcSet=""
-              />
+              
               <img
                 alt="十二番"
                 loading="lazy"
@@ -3560,10 +3518,7 @@ exports[`Storyshots organisms/FilteredSmallMaterialList default 1`] = `
               }
             />
             <picture>
-              <source
-                sizes="(max-width: 200px) 100vw, 200px"
-                srcSet=""
-              />
+              
               <img
                 alt="十三番"
                 loading="lazy"
@@ -3655,10 +3610,7 @@ exports[`Storyshots organisms/FilteredSmallMaterialList default 1`] = `
               }
             />
             <picture>
-              <source
-                sizes="(max-width: 200px) 100vw, 200px"
-                srcSet=""
-              />
+              
               <img
                 alt="十四番"
                 loading="lazy"
@@ -3750,10 +3702,7 @@ exports[`Storyshots organisms/FilteredSmallMaterialList default 1`] = `
               }
             />
             <picture>
-              <source
-                sizes="(max-width: 200px) 100vw, 200px"
-                srcSet=""
-              />
+              
               <img
                 alt="十五番"
                 loading="lazy"
@@ -3845,10 +3794,7 @@ exports[`Storyshots organisms/FilteredSmallMaterialList default 1`] = `
               }
             />
             <picture>
-              <source
-                sizes="(max-width: 200px) 100vw, 200px"
-                srcSet=""
-              />
+              
               <img
                 alt="十六番"
                 loading="lazy"
@@ -3940,10 +3886,7 @@ exports[`Storyshots organisms/FilteredSmallMaterialList default 1`] = `
               }
             />
             <picture>
-              <source
-                sizes="(max-width: 200px) 100vw, 200px"
-                srcSet=""
-              />
+              
               <img
                 alt="十七番"
                 loading="lazy"
@@ -4035,10 +3978,7 @@ exports[`Storyshots organisms/FilteredSmallMaterialList default 1`] = `
               }
             />
             <picture>
-              <source
-                sizes="(max-width: 200px) 100vw, 200px"
-                srcSet=""
-              />
+              
               <img
                 alt="十八番"
                 loading="lazy"
@@ -4130,10 +4070,7 @@ exports[`Storyshots organisms/FilteredSmallMaterialList default 1`] = `
               }
             />
             <picture>
-              <source
-                sizes="(max-width: 200px) 100vw, 200px"
-                srcSet=""
-              />
+              
               <img
                 alt="十九番"
                 loading="lazy"
@@ -4225,10 +4162,7 @@ exports[`Storyshots organisms/FilteredSmallMaterialList default 1`] = `
               }
             />
             <picture>
-              <source
-                sizes="(max-width: 200px) 100vw, 200px"
-                srcSet=""
-              />
+              
               <img
                 alt="二十番"
                 loading="lazy"
@@ -4320,10 +4254,7 @@ exports[`Storyshots organisms/FilteredSmallMaterialList default 1`] = `
               }
             />
             <picture>
-              <source
-                sizes="(max-width: 200px) 100vw, 200px"
-                srcSet=""
-              />
+              
               <img
                 alt="二十一番"
                 loading="lazy"
@@ -4415,10 +4346,7 @@ exports[`Storyshots organisms/FilteredSmallMaterialList default 1`] = `
               }
             />
             <picture>
-              <source
-                sizes="(max-width: 200px) 100vw, 200px"
-                srcSet=""
-              />
+              
               <img
                 alt="二十二番"
                 loading="lazy"
@@ -4510,10 +4438,7 @@ exports[`Storyshots organisms/FilteredSmallMaterialList default 1`] = `
               }
             />
             <picture>
-              <source
-                sizes="(max-width: 200px) 100vw, 200px"
-                srcSet=""
-              />
+              
               <img
                 alt="二十三番"
                 loading="lazy"
@@ -4605,10 +4530,7 @@ exports[`Storyshots organisms/FilteredSmallMaterialList default 1`] = `
               }
             />
             <picture>
-              <source
-                sizes="(max-width: 200px) 100vw, 200px"
-                srcSet=""
-              />
+              
               <img
                 alt="二十四番"
                 loading="lazy"
@@ -4700,10 +4622,7 @@ exports[`Storyshots organisms/FilteredSmallMaterialList default 1`] = `
               }
             />
             <picture>
-              <source
-                sizes="(max-width: 200px) 100vw, 200px"
-                srcSet=""
-              />
+              
               <img
                 alt="二十五番"
                 loading="lazy"
@@ -4795,10 +4714,7 @@ exports[`Storyshots organisms/FilteredSmallMaterialList default 1`] = `
               }
             />
             <picture>
-              <source
-                sizes="(max-width: 200px) 100vw, 200px"
-                srcSet=""
-              />
+              
               <img
                 alt="二十六番"
                 loading="lazy"
@@ -4890,10 +4806,7 @@ exports[`Storyshots organisms/FilteredSmallMaterialList default 1`] = `
               }
             />
             <picture>
-              <source
-                sizes="(max-width: 200px) 100vw, 200px"
-                srcSet=""
-              />
+              
               <img
                 alt="二十七番"
                 loading="lazy"
@@ -4985,10 +4898,7 @@ exports[`Storyshots organisms/FilteredSmallMaterialList default 1`] = `
               }
             />
             <picture>
-              <source
-                sizes="(max-width: 200px) 100vw, 200px"
-                srcSet=""
-              />
+              
               <img
                 alt="二十八番"
                 loading="lazy"
@@ -5080,10 +4990,7 @@ exports[`Storyshots organisms/FilteredSmallMaterialList default 1`] = `
               }
             />
             <picture>
-              <source
-                sizes="(max-width: 200px) 100vw, 200px"
-                srcSet=""
-              />
+              
               <img
                 alt="二十九番"
                 loading="lazy"
@@ -5175,10 +5082,7 @@ exports[`Storyshots organisms/FilteredSmallMaterialList default 1`] = `
               }
             />
             <picture>
-              <source
-                sizes="(max-width: 200px) 100vw, 200px"
-                srcSet=""
-              />
+              
               <img
                 alt="三十番"
                 loading="lazy"
@@ -5270,10 +5174,7 @@ exports[`Storyshots organisms/FilteredSmallMaterialList default 1`] = `
               }
             />
             <picture>
-              <source
-                sizes="(max-width: 200px) 100vw, 200px"
-                srcSet=""
-              />
+              
               <img
                 alt="三十一番"
                 loading="lazy"
@@ -5365,10 +5266,7 @@ exports[`Storyshots organisms/FilteredSmallMaterialList default 1`] = `
               }
             />
             <picture>
-              <source
-                sizes="(max-width: 200px) 100vw, 200px"
-                srcSet=""
-              />
+              
               <img
                 alt="三十二番"
                 loading="lazy"
@@ -5460,10 +5358,7 @@ exports[`Storyshots organisms/FilteredSmallMaterialList default 1`] = `
               }
             />
             <picture>
-              <source
-                sizes="(max-width: 200px) 100vw, 200px"
-                srcSet=""
-              />
+              
               <img
                 alt="三十三番"
                 loading="lazy"
@@ -5555,10 +5450,7 @@ exports[`Storyshots organisms/FilteredSmallMaterialList default 1`] = `
               }
             />
             <picture>
-              <source
-                sizes="(max-width: 200px) 100vw, 200px"
-                srcSet=""
-              />
+              
               <img
                 alt="三十四番"
                 loading="lazy"
@@ -5650,10 +5542,7 @@ exports[`Storyshots organisms/FilteredSmallMaterialList default 1`] = `
               }
             />
             <picture>
-              <source
-                sizes="(max-width: 200px) 100vw, 200px"
-                srcSet=""
-              />
+              
               <img
                 alt="三十五番"
                 loading="lazy"
@@ -5745,10 +5634,7 @@ exports[`Storyshots organisms/FilteredSmallMaterialList default 1`] = `
               }
             />
             <picture>
-              <source
-                sizes="(max-width: 200px) 100vw, 200px"
-                srcSet=""
-              />
+              
               <img
                 alt="三十六番"
                 loading="lazy"
@@ -5840,10 +5726,7 @@ exports[`Storyshots organisms/FilteredSmallMaterialList default 1`] = `
               }
             />
             <picture>
-              <source
-                sizes="(max-width: 200px) 100vw, 200px"
-                srcSet=""
-              />
+              
               <img
                 alt="三十七番"
                 loading="lazy"
@@ -5935,10 +5818,7 @@ exports[`Storyshots organisms/FilteredSmallMaterialList default 1`] = `
               }
             />
             <picture>
-              <source
-                sizes="(max-width: 200px) 100vw, 200px"
-                srcSet=""
-              />
+              
               <img
                 alt="三十八番"
                 loading="lazy"
@@ -6030,10 +5910,7 @@ exports[`Storyshots organisms/FilteredSmallMaterialList default 1`] = `
               }
             />
             <picture>
-              <source
-                sizes="(max-width: 200px) 100vw, 200px"
-                srcSet=""
-              />
+              
               <img
                 alt="三十九番"
                 loading="lazy"
@@ -6125,10 +6002,7 @@ exports[`Storyshots organisms/FilteredSmallMaterialList default 1`] = `
               }
             />
             <picture>
-              <source
-                sizes="(max-width: 200px) 100vw, 200px"
-                srcSet=""
-              />
+              
               <img
                 alt="四十番"
                 loading="lazy"
@@ -6220,10 +6094,7 @@ exports[`Storyshots organisms/FilteredSmallMaterialList default 1`] = `
               }
             />
             <picture>
-              <source
-                sizes="(max-width: 200px) 100vw, 200px"
-                srcSet=""
-              />
+              
               <img
                 alt="四十一番"
                 loading="lazy"
@@ -6315,10 +6186,7 @@ exports[`Storyshots organisms/FilteredSmallMaterialList default 1`] = `
               }
             />
             <picture>
-              <source
-                sizes="(max-width: 200px) 100vw, 200px"
-                srcSet=""
-              />
+              
               <img
                 alt="四十二番"
                 loading="lazy"
@@ -6410,10 +6278,7 @@ exports[`Storyshots organisms/FilteredSmallMaterialList default 1`] = `
               }
             />
             <picture>
-              <source
-                sizes="(max-width: 200px) 100vw, 200px"
-                srcSet=""
-              />
+              
               <img
                 alt="四十三番"
                 loading="lazy"
@@ -6505,10 +6370,7 @@ exports[`Storyshots organisms/FilteredSmallMaterialList default 1`] = `
               }
             />
             <picture>
-              <source
-                sizes="(max-width: 200px) 100vw, 200px"
-                srcSet=""
-              />
+              
               <img
                 alt="四十四番"
                 loading="lazy"
@@ -6600,10 +6462,7 @@ exports[`Storyshots organisms/FilteredSmallMaterialList default 1`] = `
               }
             />
             <picture>
-              <source
-                sizes="(max-width: 200px) 100vw, 200px"
-                srcSet=""
-              />
+              
               <img
                 alt="四十五番"
                 loading="lazy"
@@ -6695,10 +6554,7 @@ exports[`Storyshots organisms/FilteredSmallMaterialList default 1`] = `
               }
             />
             <picture>
-              <source
-                sizes="(max-width: 200px) 100vw, 200px"
-                srcSet=""
-              />
+              
               <img
                 alt="四十六番"
                 loading="lazy"
@@ -6790,10 +6646,7 @@ exports[`Storyshots organisms/FilteredSmallMaterialList default 1`] = `
               }
             />
             <picture>
-              <source
-                sizes="(max-width: 200px) 100vw, 200px"
-                srcSet=""
-              />
+              
               <img
                 alt="四十七番"
                 loading="lazy"
@@ -6885,10 +6738,7 @@ exports[`Storyshots organisms/FilteredSmallMaterialList default 1`] = `
               }
             />
             <picture>
-              <source
-                sizes="(max-width: 200px) 100vw, 200px"
-                srcSet=""
-              />
+              
               <img
                 alt="四十八番"
                 loading="lazy"
@@ -6980,10 +6830,7 @@ exports[`Storyshots organisms/FilteredSmallMaterialList default 1`] = `
               }
             />
             <picture>
-              <source
-                sizes="(max-width: 200px) 100vw, 200px"
-                srcSet=""
-              />
+              
               <img
                 alt="四十九番"
                 loading="lazy"
@@ -7075,10 +6922,7 @@ exports[`Storyshots organisms/FilteredSmallMaterialList default 1`] = `
               }
             />
             <picture>
-              <source
-                sizes="(max-width: 200px) 100vw, 200px"
-                srcSet=""
-              />
+              
               <img
                 alt="五十番"
                 loading="lazy"
@@ -7170,10 +7014,7 @@ exports[`Storyshots organisms/FilteredSmallMaterialList default 1`] = `
               }
             />
             <picture>
-              <source
-                sizes="(max-width: 200px) 100vw, 200px"
-                srcSet=""
-              />
+              
               <img
                 alt="五十一番"
                 loading="lazy"
@@ -7265,10 +7106,7 @@ exports[`Storyshots organisms/FilteredSmallMaterialList default 1`] = `
               }
             />
             <picture>
-              <source
-                sizes="(max-width: 200px) 100vw, 200px"
-                srcSet=""
-              />
+              
               <img
                 alt="五十二番"
                 loading="lazy"
@@ -7360,10 +7198,7 @@ exports[`Storyshots organisms/FilteredSmallMaterialList default 1`] = `
               }
             />
             <picture>
-              <source
-                sizes="(max-width: 200px) 100vw, 200px"
-                srcSet=""
-              />
+              
               <img
                 alt="五十三番"
                 loading="lazy"
@@ -7455,10 +7290,7 @@ exports[`Storyshots organisms/FilteredSmallMaterialList default 1`] = `
               }
             />
             <picture>
-              <source
-                sizes="(max-width: 200px) 100vw, 200px"
-                srcSet=""
-              />
+              
               <img
                 alt="五十四番"
                 loading="lazy"
@@ -7550,10 +7382,7 @@ exports[`Storyshots organisms/FilteredSmallMaterialList default 1`] = `
               }
             />
             <picture>
-              <source
-                sizes="(max-width: 200px) 100vw, 200px"
-                srcSet=""
-              />
+              
               <img
                 alt="五十五番"
                 loading="lazy"
@@ -7645,10 +7474,7 @@ exports[`Storyshots organisms/FilteredSmallMaterialList default 1`] = `
               }
             />
             <picture>
-              <source
-                sizes="(max-width: 200px) 100vw, 200px"
-                srcSet=""
-              />
+              
               <img
                 alt="五十六番"
                 loading="lazy"
@@ -7740,10 +7566,7 @@ exports[`Storyshots organisms/FilteredSmallMaterialList default 1`] = `
               }
             />
             <picture>
-              <source
-                sizes="(max-width: 200px) 100vw, 200px"
-                srcSet=""
-              />
+              
               <img
                 alt="五十七番"
                 loading="lazy"
@@ -7835,10 +7658,7 @@ exports[`Storyshots organisms/FilteredSmallMaterialList default 1`] = `
               }
             />
             <picture>
-              <source
-                sizes="(max-width: 200px) 100vw, 200px"
-                srcSet=""
-              />
+              
               <img
                 alt="五十八番"
                 loading="lazy"
@@ -7930,10 +7750,7 @@ exports[`Storyshots organisms/FilteredSmallMaterialList default 1`] = `
               }
             />
             <picture>
-              <source
-                sizes="(max-width: 200px) 100vw, 200px"
-                srcSet=""
-              />
+              
               <img
                 alt="五十九番"
                 loading="lazy"
@@ -8025,10 +7842,7 @@ exports[`Storyshots organisms/FilteredSmallMaterialList default 1`] = `
               }
             />
             <picture>
-              <source
-                sizes="(max-width: 200px) 100vw, 200px"
-                srcSet=""
-              />
+              
               <img
                 alt="六十番"
                 loading="lazy"
@@ -8120,10 +7934,7 @@ exports[`Storyshots organisms/FilteredSmallMaterialList default 1`] = `
               }
             />
             <picture>
-              <source
-                sizes="(max-width: 200px) 100vw, 200px"
-                srcSet=""
-              />
+              
               <img
                 alt="六十一番"
                 loading="lazy"
@@ -8215,10 +8026,7 @@ exports[`Storyshots organisms/FilteredSmallMaterialList default 1`] = `
               }
             />
             <picture>
-              <source
-                sizes="(max-width: 200px) 100vw, 200px"
-                srcSet=""
-              />
+              
               <img
                 alt="六十二番"
                 loading="lazy"
@@ -8310,10 +8118,7 @@ exports[`Storyshots organisms/FilteredSmallMaterialList default 1`] = `
               }
             />
             <picture>
-              <source
-                sizes="(max-width: 200px) 100vw, 200px"
-                srcSet=""
-              />
+              
               <img
                 alt="六十三番"
                 loading="lazy"
@@ -8405,10 +8210,7 @@ exports[`Storyshots organisms/FilteredSmallMaterialList default 1`] = `
               }
             />
             <picture>
-              <source
-                sizes="(max-width: 200px) 100vw, 200px"
-                srcSet=""
-              />
+              
               <img
                 alt="六十四番"
                 loading="lazy"
@@ -8500,10 +8302,7 @@ exports[`Storyshots organisms/FilteredSmallMaterialList default 1`] = `
               }
             />
             <picture>
-              <source
-                sizes="(max-width: 200px) 100vw, 200px"
-                srcSet=""
-              />
+              
               <img
                 alt="六十五番"
                 loading="lazy"
@@ -8595,10 +8394,7 @@ exports[`Storyshots organisms/FilteredSmallMaterialList default 1`] = `
               }
             />
             <picture>
-              <source
-                sizes="(max-width: 200px) 100vw, 200px"
-                srcSet=""
-              />
+              
               <img
                 alt="六十六番"
                 loading="lazy"
@@ -8690,10 +8486,7 @@ exports[`Storyshots organisms/FilteredSmallMaterialList default 1`] = `
               }
             />
             <picture>
-              <source
-                sizes="(max-width: 200px) 100vw, 200px"
-                srcSet=""
-              />
+              
               <img
                 alt="六十七番"
                 loading="lazy"
@@ -8785,10 +8578,7 @@ exports[`Storyshots organisms/FilteredSmallMaterialList default 1`] = `
               }
             />
             <picture>
-              <source
-                sizes="(max-width: 200px) 100vw, 200px"
-                srcSet=""
-              />
+              
               <img
                 alt="六十八番"
                 loading="lazy"
@@ -8880,10 +8670,7 @@ exports[`Storyshots organisms/FilteredSmallMaterialList default 1`] = `
               }
             />
             <picture>
-              <source
-                sizes="(max-width: 200px) 100vw, 200px"
-                srcSet=""
-              />
+              
               <img
                 alt="六十九番"
                 loading="lazy"
@@ -8975,10 +8762,7 @@ exports[`Storyshots organisms/FilteredSmallMaterialList default 1`] = `
               }
             />
             <picture>
-              <source
-                sizes="(max-width: 200px) 100vw, 200px"
-                srcSet=""
-              />
+              
               <img
                 alt="七十番"
                 loading="lazy"
@@ -9070,10 +8854,7 @@ exports[`Storyshots organisms/FilteredSmallMaterialList default 1`] = `
               }
             />
             <picture>
-              <source
-                sizes="(max-width: 200px) 100vw, 200px"
-                srcSet=""
-              />
+              
               <img
                 alt="七十一番"
                 loading="lazy"
@@ -9165,10 +8946,7 @@ exports[`Storyshots organisms/FilteredSmallMaterialList default 1`] = `
               }
             />
             <picture>
-              <source
-                sizes="(max-width: 200px) 100vw, 200px"
-                srcSet=""
-              />
+              
               <img
                 alt="七十二番"
                 loading="lazy"
@@ -9260,10 +9038,7 @@ exports[`Storyshots organisms/FilteredSmallMaterialList default 1`] = `
               }
             />
             <picture>
-              <source
-                sizes="(max-width: 200px) 100vw, 200px"
-                srcSet=""
-              />
+              
               <img
                 alt="七十三番"
                 loading="lazy"
@@ -9355,10 +9130,7 @@ exports[`Storyshots organisms/FilteredSmallMaterialList default 1`] = `
               }
             />
             <picture>
-              <source
-                sizes="(max-width: 200px) 100vw, 200px"
-                srcSet=""
-              />
+              
               <img
                 alt="七十四番"
                 loading="lazy"
@@ -9450,10 +9222,7 @@ exports[`Storyshots organisms/FilteredSmallMaterialList default 1`] = `
               }
             />
             <picture>
-              <source
-                sizes="(max-width: 200px) 100vw, 200px"
-                srcSet=""
-              />
+              
               <img
                 alt="七十五番"
                 loading="lazy"
@@ -9545,10 +9314,7 @@ exports[`Storyshots organisms/FilteredSmallMaterialList default 1`] = `
               }
             />
             <picture>
-              <source
-                sizes="(max-width: 200px) 100vw, 200px"
-                srcSet=""
-              />
+              
               <img
                 alt="七十六番"
                 loading="lazy"
@@ -9640,10 +9406,7 @@ exports[`Storyshots organisms/FilteredSmallMaterialList default 1`] = `
               }
             />
             <picture>
-              <source
-                sizes="(max-width: 200px) 100vw, 200px"
-                srcSet=""
-              />
+              
               <img
                 alt="七十七番"
                 loading="lazy"
@@ -9735,10 +9498,7 @@ exports[`Storyshots organisms/FilteredSmallMaterialList default 1`] = `
               }
             />
             <picture>
-              <source
-                sizes="(max-width: 200px) 100vw, 200px"
-                srcSet=""
-              />
+              
               <img
                 alt="七十八番"
                 loading="lazy"
@@ -9830,10 +9590,7 @@ exports[`Storyshots organisms/FilteredSmallMaterialList default 1`] = `
               }
             />
             <picture>
-              <source
-                sizes="(max-width: 200px) 100vw, 200px"
-                srcSet=""
-              />
+              
               <img
                 alt="七十九番"
                 loading="lazy"
@@ -9925,10 +9682,7 @@ exports[`Storyshots organisms/FilteredSmallMaterialList default 1`] = `
               }
             />
             <picture>
-              <source
-                sizes="(max-width: 200px) 100vw, 200px"
-                srcSet=""
-              />
+              
               <img
                 alt="八十番"
                 loading="lazy"
@@ -10020,10 +9774,7 @@ exports[`Storyshots organisms/FilteredSmallMaterialList default 1`] = `
               }
             />
             <picture>
-              <source
-                sizes="(max-width: 200px) 100vw, 200px"
-                srcSet=""
-              />
+              
               <img
                 alt="八十一番"
                 loading="lazy"
@@ -10115,10 +9866,7 @@ exports[`Storyshots organisms/FilteredSmallMaterialList default 1`] = `
               }
             />
             <picture>
-              <source
-                sizes="(max-width: 200px) 100vw, 200px"
-                srcSet=""
-              />
+              
               <img
                 alt="八十二番"
                 loading="lazy"
@@ -10210,10 +9958,7 @@ exports[`Storyshots organisms/FilteredSmallMaterialList default 1`] = `
               }
             />
             <picture>
-              <source
-                sizes="(max-width: 200px) 100vw, 200px"
-                srcSet=""
-              />
+              
               <img
                 alt="八十三番"
                 loading="lazy"
@@ -10305,10 +10050,7 @@ exports[`Storyshots organisms/FilteredSmallMaterialList default 1`] = `
               }
             />
             <picture>
-              <source
-                sizes="(max-width: 200px) 100vw, 200px"
-                srcSet=""
-              />
+              
               <img
                 alt="八十四番"
                 loading="lazy"
@@ -10400,10 +10142,7 @@ exports[`Storyshots organisms/FilteredSmallMaterialList default 1`] = `
               }
             />
             <picture>
-              <source
-                sizes="(max-width: 200px) 100vw, 200px"
-                srcSet=""
-              />
+              
               <img
                 alt="八十五番"
                 loading="lazy"
@@ -10495,10 +10234,7 @@ exports[`Storyshots organisms/FilteredSmallMaterialList default 1`] = `
               }
             />
             <picture>
-              <source
-                sizes="(max-width: 200px) 100vw, 200px"
-                srcSet=""
-              />
+              
               <img
                 alt="八十六番"
                 loading="lazy"
@@ -10590,10 +10326,7 @@ exports[`Storyshots organisms/FilteredSmallMaterialList default 1`] = `
               }
             />
             <picture>
-              <source
-                sizes="(max-width: 200px) 100vw, 200px"
-                srcSet=""
-              />
+              
               <img
                 alt="八十七番"
                 loading="lazy"
@@ -10685,10 +10418,7 @@ exports[`Storyshots organisms/FilteredSmallMaterialList default 1`] = `
               }
             />
             <picture>
-              <source
-                sizes="(max-width: 200px) 100vw, 200px"
-                srcSet=""
-              />
+              
               <img
                 alt="八十八番"
                 loading="lazy"
@@ -10780,10 +10510,7 @@ exports[`Storyshots organisms/FilteredSmallMaterialList default 1`] = `
               }
             />
             <picture>
-              <source
-                sizes="(max-width: 200px) 100vw, 200px"
-                srcSet=""
-              />
+              
               <img
                 alt="八十九番"
                 loading="lazy"
@@ -10875,10 +10602,7 @@ exports[`Storyshots organisms/FilteredSmallMaterialList default 1`] = `
               }
             />
             <picture>
-              <source
-                sizes="(max-width: 200px) 100vw, 200px"
-                srcSet=""
-              />
+              
               <img
                 alt="九十番"
                 loading="lazy"
@@ -10970,10 +10694,7 @@ exports[`Storyshots organisms/FilteredSmallMaterialList default 1`] = `
               }
             />
             <picture>
-              <source
-                sizes="(max-width: 200px) 100vw, 200px"
-                srcSet=""
-              />
+              
               <img
                 alt="九十一番"
                 loading="lazy"
@@ -11065,10 +10786,7 @@ exports[`Storyshots organisms/FilteredSmallMaterialList default 1`] = `
               }
             />
             <picture>
-              <source
-                sizes="(max-width: 200px) 100vw, 200px"
-                srcSet=""
-              />
+              
               <img
                 alt="九十二番"
                 loading="lazy"
@@ -11160,10 +10878,7 @@ exports[`Storyshots organisms/FilteredSmallMaterialList default 1`] = `
               }
             />
             <picture>
-              <source
-                sizes="(max-width: 200px) 100vw, 200px"
-                srcSet=""
-              />
+              
               <img
                 alt="九十三番"
                 loading="lazy"
@@ -11255,10 +10970,7 @@ exports[`Storyshots organisms/FilteredSmallMaterialList default 1`] = `
               }
             />
             <picture>
-              <source
-                sizes="(max-width: 200px) 100vw, 200px"
-                srcSet=""
-              />
+              
               <img
                 alt="九十四番"
                 loading="lazy"
@@ -11350,10 +11062,7 @@ exports[`Storyshots organisms/FilteredSmallMaterialList default 1`] = `
               }
             />
             <picture>
-              <source
-                sizes="(max-width: 200px) 100vw, 200px"
-                srcSet=""
-              />
+              
               <img
                 alt="九十五番"
                 loading="lazy"
@@ -11445,10 +11154,7 @@ exports[`Storyshots organisms/FilteredSmallMaterialList default 1`] = `
               }
             />
             <picture>
-              <source
-                sizes="(max-width: 200px) 100vw, 200px"
-                srcSet=""
-              />
+              
               <img
                 alt="九十六番"
                 loading="lazy"
@@ -11540,10 +11246,7 @@ exports[`Storyshots organisms/FilteredSmallMaterialList default 1`] = `
               }
             />
             <picture>
-              <source
-                sizes="(max-width: 200px) 100vw, 200px"
-                srcSet=""
-              />
+              
               <img
                 alt="九十七番"
                 loading="lazy"
@@ -11635,10 +11338,7 @@ exports[`Storyshots organisms/FilteredSmallMaterialList default 1`] = `
               }
             />
             <picture>
-              <source
-                sizes="(max-width: 200px) 100vw, 200px"
-                srcSet=""
-              />
+              
               <img
                 alt="九十八番"
                 loading="lazy"
@@ -11730,10 +11430,7 @@ exports[`Storyshots organisms/FilteredSmallMaterialList default 1`] = `
               }
             />
             <picture>
-              <source
-                sizes="(max-width: 200px) 100vw, 200px"
-                srcSet=""
-              />
+              
               <img
                 alt="九十九番"
                 loading="lazy"
@@ -11825,10 +11522,7 @@ exports[`Storyshots organisms/FilteredSmallMaterialList default 1`] = `
               }
             />
             <picture>
-              <source
-                sizes="(max-width: 200px) 100vw, 200px"
-                srcSet=""
-              />
+              
               <img
                 alt="百番"
                 loading="lazy"
@@ -12203,10 +11897,7 @@ exports[`Storyshots organisms/KarutaPlaying answered 1`] = `
         }
       />
       <picture>
-        <source
-          sizes="(max-width: 300px) 100vw, 200px"
-          srcSet=""
-        />
+        
         <img
           alt=""
           loading="lazy"
@@ -13145,10 +12836,7 @@ exports[`Storyshots organisms/Material default 1`] = `
       }
     />
     <picture>
-      <source
-        sizes="(max-width: 200px) 100vw, 200px"
-        srcSet=""
-      />
+      
       <img
         alt="一番"
         loading="lazy"
@@ -14211,8 +13899,7 @@ exports[`Storyshots organisms/Navigation default 1`] = `
             viewBox="0 0 24 24"
           >
             <path
-              d="M15.95 10.78c.03-.25.05-.51.05-.78s-.02-.53-.06-.78l1.69-1.32c.15-.12.19-.34.1-.51l-1.6-2.77c-.1-.18-.31-.24-.49-.18l-1.99.8c-.42-.32-.86-.58-1.35-.78L12 2.34c-.03-.2-.2-.34-.4-.34H8.4c-.2 0-.36.14-.39.34l-.3 2.12c-.49.2-.94.47-1.35.78l-1.99-.8c-.18-.07-.39 0-.49.18l-1.6 2.77c-.1.18-.06.39.1.51l1.69 1.32c-.04.25-.07.52-.07.78s.02.53.06.78L2.37 12.1c-.15.12-.19.34-.1.51l1.6 2.77c.1.18.31.24.49.18l1.99-.8c.42.32.86.58 1.35.78l.3 2.12c.04.2.2.34.4.34h3.2c.2 0 .37-.14.39-.34l.3-2.12c.49-.2.94-.47 1.35-.78l1.99.8c.18.07.39 0 .49-.18l1.6-2.77c.1-.18.06-.39-.1-.51l-1.67-1.32zM10 13c-1.65 0-3-1.35-3-3s1.35-3 3-3 3 1.35 3 3-1.35 3-3 3z"
-              transform="scale(1.2, 1.2)"
+              d="M19.14 12.94c.04-.3.06-.61.06-.94 0-.32-.02-.64-.07-.94l2.03-1.58c.18-.14.23-.41.12-.61l-1.92-3.32c-.12-.22-.37-.29-.59-.22l-2.39.96c-.5-.38-1.03-.7-1.62-.94l-.36-2.54c-.04-.24-.24-.41-.48-.41h-3.84c-.24 0-.43.17-.47.41l-.36 2.54c-.59.24-1.13.57-1.62.94l-2.39-.96c-.22-.08-.47 0-.59.22L2.74 8.87c-.12.21-.08.47.12.61l2.03 1.58c-.05.3-.09.63-.09.94s.02.64.07.94l-2.03 1.58c-.18.14-.23.41-.12.61l1.92 3.32c.12.22.37.29.59.22l2.39-.96c.5.38 1.03.7 1.62.94l.36 2.54c.05.24.24.41.48.41h3.84c.24 0 .44-.17.47-.41l.36-2.54c.59-.24 1.13-.56 1.62-.94l2.39.96c.22.08.47 0 .59-.22l1.92-3.32c.12-.22.07-.47-.12-.61l-2.01-1.58zM12 15.6c-1.98 0-3.6-1.62-3.6-3.6s1.62-3.6 3.6-3.6 3.6 1.62 3.6 3.6-1.62 3.6-3.6 3.6z"
             />
           </svg>
         </span>
@@ -14256,10 +13943,7 @@ exports[`Storyshots organisms/SmallMaterial default 1`] = `
         }
       />
       <picture>
-        <source
-          sizes="(max-width: 200px) 100vw, 200px"
-          srcSet=""
-        />
+        
         <img
           alt="一番"
           loading="lazy"
@@ -14373,10 +14057,7 @@ exports[`Storyshots organisms/SmallMaterial separate space 1`] = `
         }
       />
       <picture>
-        <source
-          sizes="(max-width: 200px) 100vw, 200px"
-          srcSet=""
-        />
+        
         <img
           alt="一番"
           loading="lazy"
@@ -14859,10 +14540,7 @@ exports[`Storyshots pages/404 default 1`] = `
         }
       />
       <picture>
-        <source
-          sizes="(max-width: 200px) 200px, 200px"
-          srcSet=""
-        />
+        
         <img
           alt="ページが見つかりませんでした"
           loading="lazy"
@@ -14929,10 +14607,7 @@ exports[`Storyshots pages/500 default 1`] = `
       }
     />
     <picture>
-      <source
-        sizes="(max-width: 200px) 200px, 200px"
-        srcSet=""
-      />
+      
       <img
         alt="エラーが起きました"
         loading="lazy"
@@ -15089,10 +14764,7 @@ Array [
                 }
               />
               <picture>
-                <source
-                  sizes="(max-width: 200px) 200px, 200px"
-                  srcSet=""
-                />
+                
                 <img
                   alt="百人一首 簡単に暗記"
                   loading="lazy"
@@ -15160,10 +14832,7 @@ Array [
                 }
               />
               <picture>
-                <source
-                  sizes="(max-width: 200px) 200px, 200px"
-                  srcSet=""
-                />
+                
                 <img
                   alt="百人一首 簡単に暗記"
                   loading="lazy"
@@ -15433,8 +15102,7 @@ Array [
               viewBox="0 0 24 24"
             >
               <path
-                d="M15.95 10.78c.03-.25.05-.51.05-.78s-.02-.53-.06-.78l1.69-1.32c.15-.12.19-.34.1-.51l-1.6-2.77c-.1-.18-.31-.24-.49-.18l-1.99.8c-.42-.32-.86-.58-1.35-.78L12 2.34c-.03-.2-.2-.34-.4-.34H8.4c-.2 0-.36.14-.39.34l-.3 2.12c-.49.2-.94.47-1.35.78l-1.99-.8c-.18-.07-.39 0-.49.18l-1.6 2.77c-.1.18-.06.39.1.51l1.69 1.32c-.04.25-.07.52-.07.78s.02.53.06.78L2.37 12.1c-.15.12-.19.34-.1.51l1.6 2.77c.1.18.31.24.49.18l1.99-.8c.42.32.86.58 1.35.78l.3 2.12c.04.2.2.34.4.34h3.2c.2 0 .37-.14.39-.34l.3-2.12c.49-.2.94-.47 1.35-.78l1.99.8c.18.07.39 0 .49-.18l1.6-2.77c.1-.18.06-.39-.1-.51l-1.67-1.32zM10 13c-1.65 0-3-1.35-3-3s1.35-3 3-3 3 1.35 3 3-1.35 3-3 3z"
-                transform="scale(1.2, 1.2)"
+                d="M19.14 12.94c.04-.3.06-.61.06-.94 0-.32-.02-.64-.07-.94l2.03-1.58c.18-.14.23-.41.12-.61l-1.92-3.32c-.12-.22-.37-.29-.59-.22l-2.39.96c-.5-.38-1.03-.7-1.62-.94l-.36-2.54c-.04-.24-.24-.41-.48-.41h-3.84c-.24 0-.43.17-.47.41l-.36 2.54c-.59.24-1.13.57-1.62.94l-2.39-.96c-.22-.08-.47 0-.59.22L2.74 8.87c-.12.21-.08.47.12.61l2.03 1.58c-.05.3-.09.63-.09.94s.02.64.07.94l-2.03 1.58c-.18.14-.23.41-.12.61l1.92 3.32c.12.22.37.29.59.22l2.39-.96c.5.38 1.03.7 1.62.94l.36 2.54c.05.24.24.41.48.41h3.84c.24 0 .44-.17.47-.41l.36-2.54c.59-.24 1.13-.56 1.62-.94l2.39.96c.22.08.47 0 .59-.22l1.92-3.32c.12-.22.07-.47-.12-.61l-2.01-1.58zM12 15.6c-1.98 0-3.6-1.62-3.6-3.6s1.62-3.6 3.6-3.6 3.6 1.62 3.6 3.6-1.62 3.6-3.6 3.6z"
               />
             </svg>
           </span>
@@ -15705,8 +15373,7 @@ Array [
               viewBox="0 0 24 24"
             >
               <path
-                d="M15.95 10.78c.03-.25.05-.51.05-.78s-.02-.53-.06-.78l1.69-1.32c.15-.12.19-.34.1-.51l-1.6-2.77c-.1-.18-.31-.24-.49-.18l-1.99.8c-.42-.32-.86-.58-1.35-.78L12 2.34c-.03-.2-.2-.34-.4-.34H8.4c-.2 0-.36.14-.39.34l-.3 2.12c-.49.2-.94.47-1.35.78l-1.99-.8c-.18-.07-.39 0-.49.18l-1.6 2.77c-.1.18-.06.39.1.51l1.69 1.32c-.04.25-.07.52-.07.78s.02.53.06.78L2.37 12.1c-.15.12-.19.34-.1.51l1.6 2.77c.1.18.31.24.49.18l1.99-.8c.42.32.86.58 1.35.78l.3 2.12c.04.2.2.34.4.34h3.2c.2 0 .37-.14.39-.34l.3-2.12c.49-.2.94-.47 1.35-.78l1.99.8c.18.07.39 0 .49-.18l1.6-2.77c.1-.18.06-.39-.1-.51l-1.67-1.32zM10 13c-1.65 0-3-1.35-3-3s1.35-3 3-3 3 1.35 3 3-1.35 3-3 3z"
-                transform="scale(1.2, 1.2)"
+                d="M19.14 12.94c.04-.3.06-.61.06-.94 0-.32-.02-.64-.07-.94l2.03-1.58c.18-.14.23-.41.12-.61l-1.92-3.32c-.12-.22-.37-.29-.59-.22l-2.39.96c-.5-.38-1.03-.7-1.62-.94l-.36-2.54c-.04-.24-.24-.41-.48-.41h-3.84c-.24 0-.43.17-.47.41l-.36 2.54c-.59.24-1.13.57-1.62.94l-2.39-.96c-.22-.08-.47 0-.59.22L2.74 8.87c-.12.21-.08.47.12.61l2.03 1.58c-.05.3-.09.63-.09.94s.02.64.07.94l-2.03 1.58c-.18.14-.23.41-.12.61l1.92 3.32c.12.22.37.29.59.22l2.39-.96c.5.38 1.03.7 1.62.94l.36 2.54c.05.24.24.41.48.41h3.84c.24 0 .44-.17.47-.41l.36-2.54c.59-.24 1.13-.56 1.62-.94l2.39.96c.22.08.47 0 .59-.22l1.92-3.32c.12-.22.07-.47-.12-.61l-2.01-1.58zM12 15.6c-1.98 0-3.6-1.62-3.6-3.6s1.62-3.6 3.6-3.6 3.6 1.62 3.6 3.6-1.62 3.6-3.6 3.6z"
               />
             </svg>
           </span>
@@ -16128,10 +15795,7 @@ Array [
                   }
                 />
                 <picture>
-                  <source
-                    sizes="(max-width: 300px) 100vw, 200px"
-                    srcSet=""
-                  />
+                  
                   <img
                     alt=""
                     loading="lazy"
@@ -16198,10 +15862,7 @@ Array [
                   }
                 />
                 <picture>
-                  <source
-                    sizes="(max-width: 300px) 100vw, 200px"
-                    srcSet=""
-                  />
+                  
                   <img
                     alt=""
                     loading="lazy"
@@ -16268,10 +15929,7 @@ Array [
                   }
                 />
                 <picture>
-                  <source
-                    sizes="(max-width: 300px) 100vw, 200px"
-                    srcSet=""
-                  />
+                  
                   <img
                     alt=""
                     loading="lazy"
@@ -16338,10 +15996,7 @@ Array [
                   }
                 />
                 <picture>
-                  <source
-                    sizes="(max-width: 300px) 100vw, 200px"
-                    srcSet=""
-                  />
+                  
                   <img
                     alt=""
                     loading="lazy"
@@ -16408,10 +16063,7 @@ Array [
                   }
                 />
                 <picture>
-                  <source
-                    sizes="(max-width: 300px) 100vw, 200px"
-                    srcSet=""
-                  />
+                  
                   <img
                     alt=""
                     loading="lazy"
@@ -16478,10 +16130,7 @@ Array [
                   }
                 />
                 <picture>
-                  <source
-                    sizes="(max-width: 300px) 100vw, 200px"
-                    srcSet=""
-                  />
+                  
                   <img
                     alt=""
                     loading="lazy"
@@ -16548,10 +16197,7 @@ Array [
                   }
                 />
                 <picture>
-                  <source
-                    sizes="(max-width: 300px) 100vw, 200px"
-                    srcSet=""
-                  />
+                  
                   <img
                     alt=""
                     loading="lazy"
@@ -16618,10 +16264,7 @@ Array [
                   }
                 />
                 <picture>
-                  <source
-                    sizes="(max-width: 300px) 100vw, 200px"
-                    srcSet=""
-                  />
+                  
                   <img
                     alt=""
                     loading="lazy"
@@ -16688,10 +16331,7 @@ Array [
                   }
                 />
                 <picture>
-                  <source
-                    sizes="(max-width: 300px) 100vw, 200px"
-                    srcSet=""
-                  />
+                  
                   <img
                     alt=""
                     loading="lazy"
@@ -16758,10 +16398,7 @@ Array [
                   }
                 />
                 <picture>
-                  <source
-                    sizes="(max-width: 300px) 100vw, 200px"
-                    srcSet=""
-                  />
+                  
                   <img
                     alt=""
                     loading="lazy"
@@ -16828,10 +16465,7 @@ Array [
                   }
                 />
                 <picture>
-                  <source
-                    sizes="(max-width: 300px) 100vw, 200px"
-                    srcSet=""
-                  />
+                  
                   <img
                     alt=""
                     loading="lazy"
@@ -16898,10 +16532,7 @@ Array [
                   }
                 />
                 <picture>
-                  <source
-                    sizes="(max-width: 300px) 100vw, 200px"
-                    srcSet=""
-                  />
+                  
                   <img
                     alt=""
                     loading="lazy"
@@ -16968,10 +16599,7 @@ Array [
                   }
                 />
                 <picture>
-                  <source
-                    sizes="(max-width: 300px) 100vw, 200px"
-                    srcSet=""
-                  />
+                  
                   <img
                     alt=""
                     loading="lazy"
@@ -17038,10 +16666,7 @@ Array [
                   }
                 />
                 <picture>
-                  <source
-                    sizes="(max-width: 300px) 100vw, 200px"
-                    srcSet=""
-                  />
+                  
                   <img
                     alt=""
                     loading="lazy"
@@ -17108,10 +16733,7 @@ Array [
                   }
                 />
                 <picture>
-                  <source
-                    sizes="(max-width: 300px) 100vw, 200px"
-                    srcSet=""
-                  />
+                  
                   <img
                     alt=""
                     loading="lazy"
@@ -17178,10 +16800,7 @@ Array [
                   }
                 />
                 <picture>
-                  <source
-                    sizes="(max-width: 300px) 100vw, 200px"
-                    srcSet=""
-                  />
+                  
                   <img
                     alt=""
                     loading="lazy"
@@ -17248,10 +16867,7 @@ Array [
                   }
                 />
                 <picture>
-                  <source
-                    sizes="(max-width: 300px) 100vw, 200px"
-                    srcSet=""
-                  />
+                  
                   <img
                     alt=""
                     loading="lazy"
@@ -17318,10 +16934,7 @@ Array [
                   }
                 />
                 <picture>
-                  <source
-                    sizes="(max-width: 300px) 100vw, 200px"
-                    srcSet=""
-                  />
+                  
                   <img
                     alt=""
                     loading="lazy"
@@ -17388,10 +17001,7 @@ Array [
                   }
                 />
                 <picture>
-                  <source
-                    sizes="(max-width: 300px) 100vw, 200px"
-                    srcSet=""
-                  />
+                  
                   <img
                     alt=""
                     loading="lazy"
@@ -17458,10 +17068,7 @@ Array [
                   }
                 />
                 <picture>
-                  <source
-                    sizes="(max-width: 300px) 100vw, 200px"
-                    srcSet=""
-                  />
+                  
                   <img
                     alt=""
                     loading="lazy"
@@ -17528,10 +17135,7 @@ Array [
                   }
                 />
                 <picture>
-                  <source
-                    sizes="(max-width: 300px) 100vw, 200px"
-                    srcSet=""
-                  />
+                  
                   <img
                     alt=""
                     loading="lazy"
@@ -17598,10 +17202,7 @@ Array [
                   }
                 />
                 <picture>
-                  <source
-                    sizes="(max-width: 300px) 100vw, 200px"
-                    srcSet=""
-                  />
+                  
                   <img
                     alt=""
                     loading="lazy"
@@ -17668,10 +17269,7 @@ Array [
                   }
                 />
                 <picture>
-                  <source
-                    sizes="(max-width: 300px) 100vw, 200px"
-                    srcSet=""
-                  />
+                  
                   <img
                     alt=""
                     loading="lazy"
@@ -17738,10 +17336,7 @@ Array [
                   }
                 />
                 <picture>
-                  <source
-                    sizes="(max-width: 300px) 100vw, 200px"
-                    srcSet=""
-                  />
+                  
                   <img
                     alt=""
                     loading="lazy"
@@ -17808,10 +17403,7 @@ Array [
                   }
                 />
                 <picture>
-                  <source
-                    sizes="(max-width: 300px) 100vw, 200px"
-                    srcSet=""
-                  />
+                  
                   <img
                     alt=""
                     loading="lazy"
@@ -17878,10 +17470,7 @@ Array [
                   }
                 />
                 <picture>
-                  <source
-                    sizes="(max-width: 300px) 100vw, 200px"
-                    srcSet=""
-                  />
+                  
                   <img
                     alt=""
                     loading="lazy"
@@ -17948,10 +17537,7 @@ Array [
                   }
                 />
                 <picture>
-                  <source
-                    sizes="(max-width: 300px) 100vw, 200px"
-                    srcSet=""
-                  />
+                  
                   <img
                     alt=""
                     loading="lazy"
@@ -18018,10 +17604,7 @@ Array [
                   }
                 />
                 <picture>
-                  <source
-                    sizes="(max-width: 300px) 100vw, 200px"
-                    srcSet=""
-                  />
+                  
                   <img
                     alt=""
                     loading="lazy"
@@ -18088,10 +17671,7 @@ Array [
                   }
                 />
                 <picture>
-                  <source
-                    sizes="(max-width: 300px) 100vw, 200px"
-                    srcSet=""
-                  />
+                  
                   <img
                     alt=""
                     loading="lazy"
@@ -18158,10 +17738,7 @@ Array [
                   }
                 />
                 <picture>
-                  <source
-                    sizes="(max-width: 300px) 100vw, 200px"
-                    srcSet=""
-                  />
+                  
                   <img
                     alt=""
                     loading="lazy"
@@ -18228,10 +17805,7 @@ Array [
                   }
                 />
                 <picture>
-                  <source
-                    sizes="(max-width: 300px) 100vw, 200px"
-                    srcSet=""
-                  />
+                  
                   <img
                     alt=""
                     loading="lazy"
@@ -18298,10 +17872,7 @@ Array [
                   }
                 />
                 <picture>
-                  <source
-                    sizes="(max-width: 300px) 100vw, 200px"
-                    srcSet=""
-                  />
+                  
                   <img
                     alt=""
                     loading="lazy"
@@ -18368,10 +17939,7 @@ Array [
                   }
                 />
                 <picture>
-                  <source
-                    sizes="(max-width: 300px) 100vw, 200px"
-                    srcSet=""
-                  />
+                  
                   <img
                     alt=""
                     loading="lazy"
@@ -18438,10 +18006,7 @@ Array [
                   }
                 />
                 <picture>
-                  <source
-                    sizes="(max-width: 300px) 100vw, 200px"
-                    srcSet=""
-                  />
+                  
                   <img
                     alt=""
                     loading="lazy"
@@ -18508,10 +18073,7 @@ Array [
                   }
                 />
                 <picture>
-                  <source
-                    sizes="(max-width: 300px) 100vw, 200px"
-                    srcSet=""
-                  />
+                  
                   <img
                     alt=""
                     loading="lazy"
@@ -18578,10 +18140,7 @@ Array [
                   }
                 />
                 <picture>
-                  <source
-                    sizes="(max-width: 300px) 100vw, 200px"
-                    srcSet=""
-                  />
+                  
                   <img
                     alt=""
                     loading="lazy"
@@ -18648,10 +18207,7 @@ Array [
                   }
                 />
                 <picture>
-                  <source
-                    sizes="(max-width: 300px) 100vw, 200px"
-                    srcSet=""
-                  />
+                  
                   <img
                     alt=""
                     loading="lazy"
@@ -18718,10 +18274,7 @@ Array [
                   }
                 />
                 <picture>
-                  <source
-                    sizes="(max-width: 300px) 100vw, 200px"
-                    srcSet=""
-                  />
+                  
                   <img
                     alt=""
                     loading="lazy"
@@ -18788,10 +18341,7 @@ Array [
                   }
                 />
                 <picture>
-                  <source
-                    sizes="(max-width: 300px) 100vw, 200px"
-                    srcSet=""
-                  />
+                  
                   <img
                     alt=""
                     loading="lazy"
@@ -18858,10 +18408,7 @@ Array [
                   }
                 />
                 <picture>
-                  <source
-                    sizes="(max-width: 300px) 100vw, 200px"
-                    srcSet=""
-                  />
+                  
                   <img
                     alt=""
                     loading="lazy"
@@ -18928,10 +18475,7 @@ Array [
                   }
                 />
                 <picture>
-                  <source
-                    sizes="(max-width: 300px) 100vw, 200px"
-                    srcSet=""
-                  />
+                  
                   <img
                     alt=""
                     loading="lazy"
@@ -18998,10 +18542,7 @@ Array [
                   }
                 />
                 <picture>
-                  <source
-                    sizes="(max-width: 300px) 100vw, 200px"
-                    srcSet=""
-                  />
+                  
                   <img
                     alt=""
                     loading="lazy"
@@ -19068,10 +18609,7 @@ Array [
                   }
                 />
                 <picture>
-                  <source
-                    sizes="(max-width: 300px) 100vw, 200px"
-                    srcSet=""
-                  />
+                  
                   <img
                     alt=""
                     loading="lazy"
@@ -19138,10 +18676,7 @@ Array [
                   }
                 />
                 <picture>
-                  <source
-                    sizes="(max-width: 300px) 100vw, 200px"
-                    srcSet=""
-                  />
+                  
                   <img
                     alt=""
                     loading="lazy"
@@ -19208,10 +18743,7 @@ Array [
                   }
                 />
                 <picture>
-                  <source
-                    sizes="(max-width: 300px) 100vw, 200px"
-                    srcSet=""
-                  />
+                  
                   <img
                     alt=""
                     loading="lazy"
@@ -19278,10 +18810,7 @@ Array [
                   }
                 />
                 <picture>
-                  <source
-                    sizes="(max-width: 300px) 100vw, 200px"
-                    srcSet=""
-                  />
+                  
                   <img
                     alt=""
                     loading="lazy"
@@ -19348,10 +18877,7 @@ Array [
                   }
                 />
                 <picture>
-                  <source
-                    sizes="(max-width: 300px) 100vw, 200px"
-                    srcSet=""
-                  />
+                  
                   <img
                     alt=""
                     loading="lazy"
@@ -19418,10 +18944,7 @@ Array [
                   }
                 />
                 <picture>
-                  <source
-                    sizes="(max-width: 300px) 100vw, 200px"
-                    srcSet=""
-                  />
+                  
                   <img
                     alt=""
                     loading="lazy"
@@ -19488,10 +19011,7 @@ Array [
                   }
                 />
                 <picture>
-                  <source
-                    sizes="(max-width: 300px) 100vw, 200px"
-                    srcSet=""
-                  />
+                  
                   <img
                     alt=""
                     loading="lazy"
@@ -19558,10 +19078,7 @@ Array [
                   }
                 />
                 <picture>
-                  <source
-                    sizes="(max-width: 300px) 100vw, 200px"
-                    srcSet=""
-                  />
+                  
                   <img
                     alt=""
                     loading="lazy"
@@ -19628,10 +19145,7 @@ Array [
                   }
                 />
                 <picture>
-                  <source
-                    sizes="(max-width: 300px) 100vw, 200px"
-                    srcSet=""
-                  />
+                  
                   <img
                     alt=""
                     loading="lazy"
@@ -19698,10 +19212,7 @@ Array [
                   }
                 />
                 <picture>
-                  <source
-                    sizes="(max-width: 300px) 100vw, 200px"
-                    srcSet=""
-                  />
+                  
                   <img
                     alt=""
                     loading="lazy"
@@ -19768,10 +19279,7 @@ Array [
                   }
                 />
                 <picture>
-                  <source
-                    sizes="(max-width: 300px) 100vw, 200px"
-                    srcSet=""
-                  />
+                  
                   <img
                     alt=""
                     loading="lazy"
@@ -19838,10 +19346,7 @@ Array [
                   }
                 />
                 <picture>
-                  <source
-                    sizes="(max-width: 300px) 100vw, 200px"
-                    srcSet=""
-                  />
+                  
                   <img
                     alt=""
                     loading="lazy"
@@ -19908,10 +19413,7 @@ Array [
                   }
                 />
                 <picture>
-                  <source
-                    sizes="(max-width: 300px) 100vw, 200px"
-                    srcSet=""
-                  />
+                  
                   <img
                     alt=""
                     loading="lazy"
@@ -19978,10 +19480,7 @@ Array [
                   }
                 />
                 <picture>
-                  <source
-                    sizes="(max-width: 300px) 100vw, 200px"
-                    srcSet=""
-                  />
+                  
                   <img
                     alt=""
                     loading="lazy"
@@ -20048,10 +19547,7 @@ Array [
                   }
                 />
                 <picture>
-                  <source
-                    sizes="(max-width: 300px) 100vw, 200px"
-                    srcSet=""
-                  />
+                  
                   <img
                     alt=""
                     loading="lazy"
@@ -20118,10 +19614,7 @@ Array [
                   }
                 />
                 <picture>
-                  <source
-                    sizes="(max-width: 300px) 100vw, 200px"
-                    srcSet=""
-                  />
+                  
                   <img
                     alt=""
                     loading="lazy"
@@ -20188,10 +19681,7 @@ Array [
                   }
                 />
                 <picture>
-                  <source
-                    sizes="(max-width: 300px) 100vw, 200px"
-                    srcSet=""
-                  />
+                  
                   <img
                     alt=""
                     loading="lazy"
@@ -20258,10 +19748,7 @@ Array [
                   }
                 />
                 <picture>
-                  <source
-                    sizes="(max-width: 300px) 100vw, 200px"
-                    srcSet=""
-                  />
+                  
                   <img
                     alt=""
                     loading="lazy"
@@ -20328,10 +19815,7 @@ Array [
                   }
                 />
                 <picture>
-                  <source
-                    sizes="(max-width: 300px) 100vw, 200px"
-                    srcSet=""
-                  />
+                  
                   <img
                     alt=""
                     loading="lazy"
@@ -20398,10 +19882,7 @@ Array [
                   }
                 />
                 <picture>
-                  <source
-                    sizes="(max-width: 300px) 100vw, 200px"
-                    srcSet=""
-                  />
+                  
                   <img
                     alt=""
                     loading="lazy"
@@ -20468,10 +19949,7 @@ Array [
                   }
                 />
                 <picture>
-                  <source
-                    sizes="(max-width: 300px) 100vw, 200px"
-                    srcSet=""
-                  />
+                  
                   <img
                     alt=""
                     loading="lazy"
@@ -20538,10 +20016,7 @@ Array [
                   }
                 />
                 <picture>
-                  <source
-                    sizes="(max-width: 300px) 100vw, 200px"
-                    srcSet=""
-                  />
+                  
                   <img
                     alt=""
                     loading="lazy"
@@ -20608,10 +20083,7 @@ Array [
                   }
                 />
                 <picture>
-                  <source
-                    sizes="(max-width: 300px) 100vw, 200px"
-                    srcSet=""
-                  />
+                  
                   <img
                     alt=""
                     loading="lazy"
@@ -20678,10 +20150,7 @@ Array [
                   }
                 />
                 <picture>
-                  <source
-                    sizes="(max-width: 300px) 100vw, 200px"
-                    srcSet=""
-                  />
+                  
                   <img
                     alt=""
                     loading="lazy"
@@ -20748,10 +20217,7 @@ Array [
                   }
                 />
                 <picture>
-                  <source
-                    sizes="(max-width: 300px) 100vw, 200px"
-                    srcSet=""
-                  />
+                  
                   <img
                     alt=""
                     loading="lazy"
@@ -20818,10 +20284,7 @@ Array [
                   }
                 />
                 <picture>
-                  <source
-                    sizes="(max-width: 300px) 100vw, 200px"
-                    srcSet=""
-                  />
+                  
                   <img
                     alt=""
                     loading="lazy"
@@ -20888,10 +20351,7 @@ Array [
                   }
                 />
                 <picture>
-                  <source
-                    sizes="(max-width: 300px) 100vw, 200px"
-                    srcSet=""
-                  />
+                  
                   <img
                     alt=""
                     loading="lazy"
@@ -20958,10 +20418,7 @@ Array [
                   }
                 />
                 <picture>
-                  <source
-                    sizes="(max-width: 300px) 100vw, 200px"
-                    srcSet=""
-                  />
+                  
                   <img
                     alt=""
                     loading="lazy"
@@ -21028,10 +20485,7 @@ Array [
                   }
                 />
                 <picture>
-                  <source
-                    sizes="(max-width: 300px) 100vw, 200px"
-                    srcSet=""
-                  />
+                  
                   <img
                     alt=""
                     loading="lazy"
@@ -21098,10 +20552,7 @@ Array [
                   }
                 />
                 <picture>
-                  <source
-                    sizes="(max-width: 300px) 100vw, 200px"
-                    srcSet=""
-                  />
+                  
                   <img
                     alt=""
                     loading="lazy"
@@ -21168,10 +20619,7 @@ Array [
                   }
                 />
                 <picture>
-                  <source
-                    sizes="(max-width: 300px) 100vw, 200px"
-                    srcSet=""
-                  />
+                  
                   <img
                     alt=""
                     loading="lazy"
@@ -21238,10 +20686,7 @@ Array [
                   }
                 />
                 <picture>
-                  <source
-                    sizes="(max-width: 300px) 100vw, 200px"
-                    srcSet=""
-                  />
+                  
                   <img
                     alt=""
                     loading="lazy"
@@ -21308,10 +20753,7 @@ Array [
                   }
                 />
                 <picture>
-                  <source
-                    sizes="(max-width: 300px) 100vw, 200px"
-                    srcSet=""
-                  />
+                  
                   <img
                     alt=""
                     loading="lazy"
@@ -21378,10 +20820,7 @@ Array [
                   }
                 />
                 <picture>
-                  <source
-                    sizes="(max-width: 300px) 100vw, 200px"
-                    srcSet=""
-                  />
+                  
                   <img
                     alt=""
                     loading="lazy"
@@ -21448,10 +20887,7 @@ Array [
                   }
                 />
                 <picture>
-                  <source
-                    sizes="(max-width: 300px) 100vw, 200px"
-                    srcSet=""
-                  />
+                  
                   <img
                     alt=""
                     loading="lazy"
@@ -21518,10 +20954,7 @@ Array [
                   }
                 />
                 <picture>
-                  <source
-                    sizes="(max-width: 300px) 100vw, 200px"
-                    srcSet=""
-                  />
+                  
                   <img
                     alt=""
                     loading="lazy"
@@ -21588,10 +21021,7 @@ Array [
                   }
                 />
                 <picture>
-                  <source
-                    sizes="(max-width: 300px) 100vw, 200px"
-                    srcSet=""
-                  />
+                  
                   <img
                     alt=""
                     loading="lazy"
@@ -21658,10 +21088,7 @@ Array [
                   }
                 />
                 <picture>
-                  <source
-                    sizes="(max-width: 300px) 100vw, 200px"
-                    srcSet=""
-                  />
+                  
                   <img
                     alt=""
                     loading="lazy"
@@ -21728,10 +21155,7 @@ Array [
                   }
                 />
                 <picture>
-                  <source
-                    sizes="(max-width: 300px) 100vw, 200px"
-                    srcSet=""
-                  />
+                  
                   <img
                     alt=""
                     loading="lazy"
@@ -21798,10 +21222,7 @@ Array [
                   }
                 />
                 <picture>
-                  <source
-                    sizes="(max-width: 300px) 100vw, 200px"
-                    srcSet=""
-                  />
+                  
                   <img
                     alt=""
                     loading="lazy"
@@ -21868,10 +21289,7 @@ Array [
                   }
                 />
                 <picture>
-                  <source
-                    sizes="(max-width: 300px) 100vw, 200px"
-                    srcSet=""
-                  />
+                  
                   <img
                     alt=""
                     loading="lazy"
@@ -21938,10 +21356,7 @@ Array [
                   }
                 />
                 <picture>
-                  <source
-                    sizes="(max-width: 300px) 100vw, 200px"
-                    srcSet=""
-                  />
+                  
                   <img
                     alt=""
                     loading="lazy"
@@ -22008,10 +21423,7 @@ Array [
                   }
                 />
                 <picture>
-                  <source
-                    sizes="(max-width: 300px) 100vw, 200px"
-                    srcSet=""
-                  />
+                  
                   <img
                     alt=""
                     loading="lazy"
@@ -22078,10 +21490,7 @@ Array [
                   }
                 />
                 <picture>
-                  <source
-                    sizes="(max-width: 300px) 100vw, 200px"
-                    srcSet=""
-                  />
+                  
                   <img
                     alt=""
                     loading="lazy"
@@ -22148,10 +21557,7 @@ Array [
                   }
                 />
                 <picture>
-                  <source
-                    sizes="(max-width: 300px) 100vw, 200px"
-                    srcSet=""
-                  />
+                  
                   <img
                     alt=""
                     loading="lazy"
@@ -22218,10 +21624,7 @@ Array [
                   }
                 />
                 <picture>
-                  <source
-                    sizes="(max-width: 300px) 100vw, 200px"
-                    srcSet=""
-                  />
+                  
                   <img
                     alt=""
                     loading="lazy"
@@ -22288,10 +21691,7 @@ Array [
                   }
                 />
                 <picture>
-                  <source
-                    sizes="(max-width: 300px) 100vw, 200px"
-                    srcSet=""
-                  />
+                  
                   <img
                     alt=""
                     loading="lazy"
@@ -22358,10 +21758,7 @@ Array [
                   }
                 />
                 <picture>
-                  <source
-                    sizes="(max-width: 300px) 100vw, 200px"
-                    srcSet=""
-                  />
+                  
                   <img
                     alt=""
                     loading="lazy"
@@ -22428,10 +21825,7 @@ Array [
                   }
                 />
                 <picture>
-                  <source
-                    sizes="(max-width: 300px) 100vw, 200px"
-                    srcSet=""
-                  />
+                  
                   <img
                     alt=""
                     loading="lazy"
@@ -22498,10 +21892,7 @@ Array [
                   }
                 />
                 <picture>
-                  <source
-                    sizes="(max-width: 300px) 100vw, 200px"
-                    srcSet=""
-                  />
+                  
                   <img
                     alt=""
                     loading="lazy"
@@ -22568,10 +21959,7 @@ Array [
                   }
                 />
                 <picture>
-                  <source
-                    sizes="(max-width: 300px) 100vw, 200px"
-                    srcSet=""
-                  />
+                  
                   <img
                     alt=""
                     loading="lazy"
@@ -22638,10 +22026,7 @@ Array [
                   }
                 />
                 <picture>
-                  <source
-                    sizes="(max-width: 300px) 100vw, 200px"
-                    srcSet=""
-                  />
+                  
                   <img
                     alt=""
                     loading="lazy"
@@ -22708,10 +22093,7 @@ Array [
                   }
                 />
                 <picture>
-                  <source
-                    sizes="(max-width: 300px) 100vw, 200px"
-                    srcSet=""
-                  />
+                  
                   <img
                     alt=""
                     loading="lazy"
@@ -22778,10 +22160,7 @@ Array [
                   }
                 />
                 <picture>
-                  <source
-                    sizes="(max-width: 300px) 100vw, 200px"
-                    srcSet=""
-                  />
+                  
                   <img
                     alt=""
                     loading="lazy"
@@ -22848,10 +22227,7 @@ Array [
                   }
                 />
                 <picture>
-                  <source
-                    sizes="(max-width: 300px) 100vw, 200px"
-                    srcSet=""
-                  />
+                  
                   <img
                     alt=""
                     loading="lazy"
@@ -22918,10 +22294,7 @@ Array [
                   }
                 />
                 <picture>
-                  <source
-                    sizes="(max-width: 300px) 100vw, 200px"
-                    srcSet=""
-                  />
+                  
                   <img
                     alt=""
                     loading="lazy"
@@ -22988,10 +22361,7 @@ Array [
                   }
                 />
                 <picture>
-                  <source
-                    sizes="(max-width: 300px) 100vw, 200px"
-                    srcSet=""
-                  />
+                  
                   <img
                     alt=""
                     loading="lazy"
@@ -23058,10 +22428,7 @@ Array [
                   }
                 />
                 <picture>
-                  <source
-                    sizes="(max-width: 300px) 100vw, 200px"
-                    srcSet=""
-                  />
+                  
                   <img
                     alt=""
                     loading="lazy"
@@ -23131,6 +22498,9 @@ Array [
               </svg>
               間違えた歌の練習をする
             </span>
+            <span
+              className="MuiTouchRipple-root"
+            />
           </button>
         </div>
         <div
@@ -23169,6 +22539,9 @@ Array [
               </svg>
               メニューに戻る
             </span>
+            <span
+              className="MuiTouchRipple-root"
+            />
           </button>
         </div>
       </div>
@@ -23437,10 +22810,7 @@ Array [
                 }
               />
               <picture>
-                <source
-                  sizes="(max-width: 200px) 200px, 200px"
-                  srcSet=""
-                />
+                
                 <img
                   alt="百人一首 簡単に暗記"
                   loading="lazy"
@@ -23508,10 +22878,7 @@ Array [
                 }
               />
               <picture>
-                <source
-                  sizes="(max-width: 200px) 200px, 200px"
-                  srcSet=""
-                />
+                
                 <img
                   alt="百人一首 簡単に暗記"
                   loading="lazy"
@@ -27213,8 +26580,7 @@ Array [
               viewBox="0 0 24 24"
             >
               <path
-                d="M15.95 10.78c.03-.25.05-.51.05-.78s-.02-.53-.06-.78l1.69-1.32c.15-.12.19-.34.1-.51l-1.6-2.77c-.1-.18-.31-.24-.49-.18l-1.99.8c-.42-.32-.86-.58-1.35-.78L12 2.34c-.03-.2-.2-.34-.4-.34H8.4c-.2 0-.36.14-.39.34l-.3 2.12c-.49.2-.94.47-1.35.78l-1.99-.8c-.18-.07-.39 0-.49.18l-1.6 2.77c-.1.18-.06.39.1.51l1.69 1.32c-.04.25-.07.52-.07.78s.02.53.06.78L2.37 12.1c-.15.12-.19.34-.1.51l1.6 2.77c.1.18.31.24.49.18l1.99-.8c.42.32.86.58 1.35.78l.3 2.12c.04.2.2.34.4.34h3.2c.2 0 .37-.14.39-.34l.3-2.12c.49-.2.94-.47 1.35-.78l1.99.8c.18.07.39 0 .49-.18l1.6-2.77c.1-.18.06-.39-.1-.51l-1.67-1.32zM10 13c-1.65 0-3-1.35-3-3s1.35-3 3-3 3 1.35 3 3-1.35 3-3 3z"
-                transform="scale(1.2, 1.2)"
+                d="M19.14 12.94c.04-.3.06-.61.06-.94 0-.32-.02-.64-.07-.94l2.03-1.58c.18-.14.23-.41.12-.61l-1.92-3.32c-.12-.22-.37-.29-.59-.22l-2.39.96c-.5-.38-1.03-.7-1.62-.94l-.36-2.54c-.04-.24-.24-.41-.48-.41h-3.84c-.24 0-.43.17-.47.41l-.36 2.54c-.59.24-1.13.57-1.62.94l-2.39-.96c-.22-.08-.47 0-.59.22L2.74 8.87c-.12.21-.08.47.12.61l2.03 1.58c-.05.3-.09.63-.09.94s.02.64.07.94l-2.03 1.58c-.18.14-.23.41-.12.61l1.92 3.32c.12.22.37.29.59.22l2.39-.96c.5.38 1.03.7 1.62.94l.36 2.54c.05.24.24.41.48.41h3.84c.24 0 .44-.17.47-.41l.36-2.54c.59-.24 1.13-.56 1.62-.94l2.39.96c.22.08.47 0 .59-.22l1.92-3.32c.12-.22.07-.47-.12-.61l-2.01-1.58zM12 15.6c-1.98 0-3.6-1.62-3.6-3.6s1.62-3.6 3.6-3.6 3.6 1.62 3.6 3.6-1.62 3.6-3.6 3.6z"
               />
             </svg>
           </span>
@@ -27352,10 +26718,7 @@ Array [
                     }
                   />
                   <picture>
-                    <source
-                      sizes="(max-width: 200px) 100vw, 200px"
-                      srcSet=""
-                    />
+                    
                     <img
                       alt="一番"
                       loading="lazy"
@@ -27447,10 +26810,7 @@ Array [
                     }
                   />
                   <picture>
-                    <source
-                      sizes="(max-width: 200px) 100vw, 200px"
-                      srcSet=""
-                    />
+                    
                     <img
                       alt="二番"
                       loading="lazy"
@@ -27542,10 +26902,7 @@ Array [
                     }
                   />
                   <picture>
-                    <source
-                      sizes="(max-width: 200px) 100vw, 200px"
-                      srcSet=""
-                    />
+                    
                     <img
                       alt="三番"
                       loading="lazy"
@@ -27637,10 +26994,7 @@ Array [
                     }
                   />
                   <picture>
-                    <source
-                      sizes="(max-width: 200px) 100vw, 200px"
-                      srcSet=""
-                    />
+                    
                     <img
                       alt="四番"
                       loading="lazy"
@@ -27732,10 +27086,7 @@ Array [
                     }
                   />
                   <picture>
-                    <source
-                      sizes="(max-width: 200px) 100vw, 200px"
-                      srcSet=""
-                    />
+                    
                     <img
                       alt="五番"
                       loading="lazy"
@@ -27827,10 +27178,7 @@ Array [
                     }
                   />
                   <picture>
-                    <source
-                      sizes="(max-width: 200px) 100vw, 200px"
-                      srcSet=""
-                    />
+                    
                     <img
                       alt="六番"
                       loading="lazy"
@@ -27922,10 +27270,7 @@ Array [
                     }
                   />
                   <picture>
-                    <source
-                      sizes="(max-width: 200px) 100vw, 200px"
-                      srcSet=""
-                    />
+                    
                     <img
                       alt="七番"
                       loading="lazy"
@@ -28017,10 +27362,7 @@ Array [
                     }
                   />
                   <picture>
-                    <source
-                      sizes="(max-width: 200px) 100vw, 200px"
-                      srcSet=""
-                    />
+                    
                     <img
                       alt="八番"
                       loading="lazy"
@@ -28112,10 +27454,7 @@ Array [
                     }
                   />
                   <picture>
-                    <source
-                      sizes="(max-width: 200px) 100vw, 200px"
-                      srcSet=""
-                    />
+                    
                     <img
                       alt="九番"
                       loading="lazy"
@@ -28207,10 +27546,7 @@ Array [
                     }
                   />
                   <picture>
-                    <source
-                      sizes="(max-width: 200px) 100vw, 200px"
-                      srcSet=""
-                    />
+                    
                     <img
                       alt="十番"
                       loading="lazy"
@@ -28302,10 +27638,7 @@ Array [
                     }
                   />
                   <picture>
-                    <source
-                      sizes="(max-width: 200px) 100vw, 200px"
-                      srcSet=""
-                    />
+                    
                     <img
                       alt="十一番"
                       loading="lazy"
@@ -28397,10 +27730,7 @@ Array [
                     }
                   />
                   <picture>
-                    <source
-                      sizes="(max-width: 200px) 100vw, 200px"
-                      srcSet=""
-                    />
+                    
                     <img
                       alt="十二番"
                       loading="lazy"
@@ -28492,10 +27822,7 @@ Array [
                     }
                   />
                   <picture>
-                    <source
-                      sizes="(max-width: 200px) 100vw, 200px"
-                      srcSet=""
-                    />
+                    
                     <img
                       alt="十三番"
                       loading="lazy"
@@ -28587,10 +27914,7 @@ Array [
                     }
                   />
                   <picture>
-                    <source
-                      sizes="(max-width: 200px) 100vw, 200px"
-                      srcSet=""
-                    />
+                    
                     <img
                       alt="十四番"
                       loading="lazy"
@@ -28682,10 +28006,7 @@ Array [
                     }
                   />
                   <picture>
-                    <source
-                      sizes="(max-width: 200px) 100vw, 200px"
-                      srcSet=""
-                    />
+                    
                     <img
                       alt="十五番"
                       loading="lazy"
@@ -28777,10 +28098,7 @@ Array [
                     }
                   />
                   <picture>
-                    <source
-                      sizes="(max-width: 200px) 100vw, 200px"
-                      srcSet=""
-                    />
+                    
                     <img
                       alt="十六番"
                       loading="lazy"
@@ -28872,10 +28190,7 @@ Array [
                     }
                   />
                   <picture>
-                    <source
-                      sizes="(max-width: 200px) 100vw, 200px"
-                      srcSet=""
-                    />
+                    
                     <img
                       alt="十七番"
                       loading="lazy"
@@ -28967,10 +28282,7 @@ Array [
                     }
                   />
                   <picture>
-                    <source
-                      sizes="(max-width: 200px) 100vw, 200px"
-                      srcSet=""
-                    />
+                    
                     <img
                       alt="十八番"
                       loading="lazy"
@@ -29062,10 +28374,7 @@ Array [
                     }
                   />
                   <picture>
-                    <source
-                      sizes="(max-width: 200px) 100vw, 200px"
-                      srcSet=""
-                    />
+                    
                     <img
                       alt="十九番"
                       loading="lazy"
@@ -29157,10 +28466,7 @@ Array [
                     }
                   />
                   <picture>
-                    <source
-                      sizes="(max-width: 200px) 100vw, 200px"
-                      srcSet=""
-                    />
+                    
                     <img
                       alt="二十番"
                       loading="lazy"
@@ -29252,10 +28558,7 @@ Array [
                     }
                   />
                   <picture>
-                    <source
-                      sizes="(max-width: 200px) 100vw, 200px"
-                      srcSet=""
-                    />
+                    
                     <img
                       alt="二十一番"
                       loading="lazy"
@@ -29347,10 +28650,7 @@ Array [
                     }
                   />
                   <picture>
-                    <source
-                      sizes="(max-width: 200px) 100vw, 200px"
-                      srcSet=""
-                    />
+                    
                     <img
                       alt="二十二番"
                       loading="lazy"
@@ -29442,10 +28742,7 @@ Array [
                     }
                   />
                   <picture>
-                    <source
-                      sizes="(max-width: 200px) 100vw, 200px"
-                      srcSet=""
-                    />
+                    
                     <img
                       alt="二十三番"
                       loading="lazy"
@@ -29537,10 +28834,7 @@ Array [
                     }
                   />
                   <picture>
-                    <source
-                      sizes="(max-width: 200px) 100vw, 200px"
-                      srcSet=""
-                    />
+                    
                     <img
                       alt="二十四番"
                       loading="lazy"
@@ -29632,10 +28926,7 @@ Array [
                     }
                   />
                   <picture>
-                    <source
-                      sizes="(max-width: 200px) 100vw, 200px"
-                      srcSet=""
-                    />
+                    
                     <img
                       alt="二十五番"
                       loading="lazy"
@@ -29727,10 +29018,7 @@ Array [
                     }
                   />
                   <picture>
-                    <source
-                      sizes="(max-width: 200px) 100vw, 200px"
-                      srcSet=""
-                    />
+                    
                     <img
                       alt="二十六番"
                       loading="lazy"
@@ -29822,10 +29110,7 @@ Array [
                     }
                   />
                   <picture>
-                    <source
-                      sizes="(max-width: 200px) 100vw, 200px"
-                      srcSet=""
-                    />
+                    
                     <img
                       alt="二十七番"
                       loading="lazy"
@@ -29917,10 +29202,7 @@ Array [
                     }
                   />
                   <picture>
-                    <source
-                      sizes="(max-width: 200px) 100vw, 200px"
-                      srcSet=""
-                    />
+                    
                     <img
                       alt="二十八番"
                       loading="lazy"
@@ -30012,10 +29294,7 @@ Array [
                     }
                   />
                   <picture>
-                    <source
-                      sizes="(max-width: 200px) 100vw, 200px"
-                      srcSet=""
-                    />
+                    
                     <img
                       alt="二十九番"
                       loading="lazy"
@@ -30107,10 +29386,7 @@ Array [
                     }
                   />
                   <picture>
-                    <source
-                      sizes="(max-width: 200px) 100vw, 200px"
-                      srcSet=""
-                    />
+                    
                     <img
                       alt="三十番"
                       loading="lazy"
@@ -30202,10 +29478,7 @@ Array [
                     }
                   />
                   <picture>
-                    <source
-                      sizes="(max-width: 200px) 100vw, 200px"
-                      srcSet=""
-                    />
+                    
                     <img
                       alt="三十一番"
                       loading="lazy"
@@ -30297,10 +29570,7 @@ Array [
                     }
                   />
                   <picture>
-                    <source
-                      sizes="(max-width: 200px) 100vw, 200px"
-                      srcSet=""
-                    />
+                    
                     <img
                       alt="三十二番"
                       loading="lazy"
@@ -30392,10 +29662,7 @@ Array [
                     }
                   />
                   <picture>
-                    <source
-                      sizes="(max-width: 200px) 100vw, 200px"
-                      srcSet=""
-                    />
+                    
                     <img
                       alt="三十三番"
                       loading="lazy"
@@ -30487,10 +29754,7 @@ Array [
                     }
                   />
                   <picture>
-                    <source
-                      sizes="(max-width: 200px) 100vw, 200px"
-                      srcSet=""
-                    />
+                    
                     <img
                       alt="三十四番"
                       loading="lazy"
@@ -30582,10 +29846,7 @@ Array [
                     }
                   />
                   <picture>
-                    <source
-                      sizes="(max-width: 200px) 100vw, 200px"
-                      srcSet=""
-                    />
+                    
                     <img
                       alt="三十五番"
                       loading="lazy"
@@ -30677,10 +29938,7 @@ Array [
                     }
                   />
                   <picture>
-                    <source
-                      sizes="(max-width: 200px) 100vw, 200px"
-                      srcSet=""
-                    />
+                    
                     <img
                       alt="三十六番"
                       loading="lazy"
@@ -30772,10 +30030,7 @@ Array [
                     }
                   />
                   <picture>
-                    <source
-                      sizes="(max-width: 200px) 100vw, 200px"
-                      srcSet=""
-                    />
+                    
                     <img
                       alt="三十七番"
                       loading="lazy"
@@ -30867,10 +30122,7 @@ Array [
                     }
                   />
                   <picture>
-                    <source
-                      sizes="(max-width: 200px) 100vw, 200px"
-                      srcSet=""
-                    />
+                    
                     <img
                       alt="三十八番"
                       loading="lazy"
@@ -30962,10 +30214,7 @@ Array [
                     }
                   />
                   <picture>
-                    <source
-                      sizes="(max-width: 200px) 100vw, 200px"
-                      srcSet=""
-                    />
+                    
                     <img
                       alt="三十九番"
                       loading="lazy"
@@ -31057,10 +30306,7 @@ Array [
                     }
                   />
                   <picture>
-                    <source
-                      sizes="(max-width: 200px) 100vw, 200px"
-                      srcSet=""
-                    />
+                    
                     <img
                       alt="四十番"
                       loading="lazy"
@@ -31152,10 +30398,7 @@ Array [
                     }
                   />
                   <picture>
-                    <source
-                      sizes="(max-width: 200px) 100vw, 200px"
-                      srcSet=""
-                    />
+                    
                     <img
                       alt="四十一番"
                       loading="lazy"
@@ -31247,10 +30490,7 @@ Array [
                     }
                   />
                   <picture>
-                    <source
-                      sizes="(max-width: 200px) 100vw, 200px"
-                      srcSet=""
-                    />
+                    
                     <img
                       alt="四十二番"
                       loading="lazy"
@@ -31342,10 +30582,7 @@ Array [
                     }
                   />
                   <picture>
-                    <source
-                      sizes="(max-width: 200px) 100vw, 200px"
-                      srcSet=""
-                    />
+                    
                     <img
                       alt="四十三番"
                       loading="lazy"
@@ -31437,10 +30674,7 @@ Array [
                     }
                   />
                   <picture>
-                    <source
-                      sizes="(max-width: 200px) 100vw, 200px"
-                      srcSet=""
-                    />
+                    
                     <img
                       alt="四十四番"
                       loading="lazy"
@@ -31532,10 +30766,7 @@ Array [
                     }
                   />
                   <picture>
-                    <source
-                      sizes="(max-width: 200px) 100vw, 200px"
-                      srcSet=""
-                    />
+                    
                     <img
                       alt="四十五番"
                       loading="lazy"
@@ -31627,10 +30858,7 @@ Array [
                     }
                   />
                   <picture>
-                    <source
-                      sizes="(max-width: 200px) 100vw, 200px"
-                      srcSet=""
-                    />
+                    
                     <img
                       alt="四十六番"
                       loading="lazy"
@@ -31722,10 +30950,7 @@ Array [
                     }
                   />
                   <picture>
-                    <source
-                      sizes="(max-width: 200px) 100vw, 200px"
-                      srcSet=""
-                    />
+                    
                     <img
                       alt="四十七番"
                       loading="lazy"
@@ -31817,10 +31042,7 @@ Array [
                     }
                   />
                   <picture>
-                    <source
-                      sizes="(max-width: 200px) 100vw, 200px"
-                      srcSet=""
-                    />
+                    
                     <img
                       alt="四十八番"
                       loading="lazy"
@@ -31912,10 +31134,7 @@ Array [
                     }
                   />
                   <picture>
-                    <source
-                      sizes="(max-width: 200px) 100vw, 200px"
-                      srcSet=""
-                    />
+                    
                     <img
                       alt="四十九番"
                       loading="lazy"
@@ -32007,10 +31226,7 @@ Array [
                     }
                   />
                   <picture>
-                    <source
-                      sizes="(max-width: 200px) 100vw, 200px"
-                      srcSet=""
-                    />
+                    
                     <img
                       alt="五十番"
                       loading="lazy"
@@ -32102,10 +31318,7 @@ Array [
                     }
                   />
                   <picture>
-                    <source
-                      sizes="(max-width: 200px) 100vw, 200px"
-                      srcSet=""
-                    />
+                    
                     <img
                       alt="五十一番"
                       loading="lazy"
@@ -32197,10 +31410,7 @@ Array [
                     }
                   />
                   <picture>
-                    <source
-                      sizes="(max-width: 200px) 100vw, 200px"
-                      srcSet=""
-                    />
+                    
                     <img
                       alt="五十二番"
                       loading="lazy"
@@ -32292,10 +31502,7 @@ Array [
                     }
                   />
                   <picture>
-                    <source
-                      sizes="(max-width: 200px) 100vw, 200px"
-                      srcSet=""
-                    />
+                    
                     <img
                       alt="五十三番"
                       loading="lazy"
@@ -32387,10 +31594,7 @@ Array [
                     }
                   />
                   <picture>
-                    <source
-                      sizes="(max-width: 200px) 100vw, 200px"
-                      srcSet=""
-                    />
+                    
                     <img
                       alt="五十四番"
                       loading="lazy"
@@ -32482,10 +31686,7 @@ Array [
                     }
                   />
                   <picture>
-                    <source
-                      sizes="(max-width: 200px) 100vw, 200px"
-                      srcSet=""
-                    />
+                    
                     <img
                       alt="五十五番"
                       loading="lazy"
@@ -32577,10 +31778,7 @@ Array [
                     }
                   />
                   <picture>
-                    <source
-                      sizes="(max-width: 200px) 100vw, 200px"
-                      srcSet=""
-                    />
+                    
                     <img
                       alt="五十六番"
                       loading="lazy"
@@ -32672,10 +31870,7 @@ Array [
                     }
                   />
                   <picture>
-                    <source
-                      sizes="(max-width: 200px) 100vw, 200px"
-                      srcSet=""
-                    />
+                    
                     <img
                       alt="五十七番"
                       loading="lazy"
@@ -32767,10 +31962,7 @@ Array [
                     }
                   />
                   <picture>
-                    <source
-                      sizes="(max-width: 200px) 100vw, 200px"
-                      srcSet=""
-                    />
+                    
                     <img
                       alt="五十八番"
                       loading="lazy"
@@ -32862,10 +32054,7 @@ Array [
                     }
                   />
                   <picture>
-                    <source
-                      sizes="(max-width: 200px) 100vw, 200px"
-                      srcSet=""
-                    />
+                    
                     <img
                       alt="五十九番"
                       loading="lazy"
@@ -32957,10 +32146,7 @@ Array [
                     }
                   />
                   <picture>
-                    <source
-                      sizes="(max-width: 200px) 100vw, 200px"
-                      srcSet=""
-                    />
+                    
                     <img
                       alt="六十番"
                       loading="lazy"
@@ -33052,10 +32238,7 @@ Array [
                     }
                   />
                   <picture>
-                    <source
-                      sizes="(max-width: 200px) 100vw, 200px"
-                      srcSet=""
-                    />
+                    
                     <img
                       alt="六十一番"
                       loading="lazy"
@@ -33147,10 +32330,7 @@ Array [
                     }
                   />
                   <picture>
-                    <source
-                      sizes="(max-width: 200px) 100vw, 200px"
-                      srcSet=""
-                    />
+                    
                     <img
                       alt="六十二番"
                       loading="lazy"
@@ -33242,10 +32422,7 @@ Array [
                     }
                   />
                   <picture>
-                    <source
-                      sizes="(max-width: 200px) 100vw, 200px"
-                      srcSet=""
-                    />
+                    
                     <img
                       alt="六十三番"
                       loading="lazy"
@@ -33337,10 +32514,7 @@ Array [
                     }
                   />
                   <picture>
-                    <source
-                      sizes="(max-width: 200px) 100vw, 200px"
-                      srcSet=""
-                    />
+                    
                     <img
                       alt="六十四番"
                       loading="lazy"
@@ -33432,10 +32606,7 @@ Array [
                     }
                   />
                   <picture>
-                    <source
-                      sizes="(max-width: 200px) 100vw, 200px"
-                      srcSet=""
-                    />
+                    
                     <img
                       alt="六十五番"
                       loading="lazy"
@@ -33527,10 +32698,7 @@ Array [
                     }
                   />
                   <picture>
-                    <source
-                      sizes="(max-width: 200px) 100vw, 200px"
-                      srcSet=""
-                    />
+                    
                     <img
                       alt="六十六番"
                       loading="lazy"
@@ -33622,10 +32790,7 @@ Array [
                     }
                   />
                   <picture>
-                    <source
-                      sizes="(max-width: 200px) 100vw, 200px"
-                      srcSet=""
-                    />
+                    
                     <img
                       alt="六十七番"
                       loading="lazy"
@@ -33717,10 +32882,7 @@ Array [
                     }
                   />
                   <picture>
-                    <source
-                      sizes="(max-width: 200px) 100vw, 200px"
-                      srcSet=""
-                    />
+                    
                     <img
                       alt="六十八番"
                       loading="lazy"
@@ -33812,10 +32974,7 @@ Array [
                     }
                   />
                   <picture>
-                    <source
-                      sizes="(max-width: 200px) 100vw, 200px"
-                      srcSet=""
-                    />
+                    
                     <img
                       alt="六十九番"
                       loading="lazy"
@@ -33907,10 +33066,7 @@ Array [
                     }
                   />
                   <picture>
-                    <source
-                      sizes="(max-width: 200px) 100vw, 200px"
-                      srcSet=""
-                    />
+                    
                     <img
                       alt="七十番"
                       loading="lazy"
@@ -34002,10 +33158,7 @@ Array [
                     }
                   />
                   <picture>
-                    <source
-                      sizes="(max-width: 200px) 100vw, 200px"
-                      srcSet=""
-                    />
+                    
                     <img
                       alt="七十一番"
                       loading="lazy"
@@ -34097,10 +33250,7 @@ Array [
                     }
                   />
                   <picture>
-                    <source
-                      sizes="(max-width: 200px) 100vw, 200px"
-                      srcSet=""
-                    />
+                    
                     <img
                       alt="七十二番"
                       loading="lazy"
@@ -34192,10 +33342,7 @@ Array [
                     }
                   />
                   <picture>
-                    <source
-                      sizes="(max-width: 200px) 100vw, 200px"
-                      srcSet=""
-                    />
+                    
                     <img
                       alt="七十三番"
                       loading="lazy"
@@ -34287,10 +33434,7 @@ Array [
                     }
                   />
                   <picture>
-                    <source
-                      sizes="(max-width: 200px) 100vw, 200px"
-                      srcSet=""
-                    />
+                    
                     <img
                       alt="七十四番"
                       loading="lazy"
@@ -34382,10 +33526,7 @@ Array [
                     }
                   />
                   <picture>
-                    <source
-                      sizes="(max-width: 200px) 100vw, 200px"
-                      srcSet=""
-                    />
+                    
                     <img
                       alt="七十五番"
                       loading="lazy"
@@ -34477,10 +33618,7 @@ Array [
                     }
                   />
                   <picture>
-                    <source
-                      sizes="(max-width: 200px) 100vw, 200px"
-                      srcSet=""
-                    />
+                    
                     <img
                       alt="七十六番"
                       loading="lazy"
@@ -34572,10 +33710,7 @@ Array [
                     }
                   />
                   <picture>
-                    <source
-                      sizes="(max-width: 200px) 100vw, 200px"
-                      srcSet=""
-                    />
+                    
                     <img
                       alt="七十七番"
                       loading="lazy"
@@ -34667,10 +33802,7 @@ Array [
                     }
                   />
                   <picture>
-                    <source
-                      sizes="(max-width: 200px) 100vw, 200px"
-                      srcSet=""
-                    />
+                    
                     <img
                       alt="七十八番"
                       loading="lazy"
@@ -34762,10 +33894,7 @@ Array [
                     }
                   />
                   <picture>
-                    <source
-                      sizes="(max-width: 200px) 100vw, 200px"
-                      srcSet=""
-                    />
+                    
                     <img
                       alt="七十九番"
                       loading="lazy"
@@ -34857,10 +33986,7 @@ Array [
                     }
                   />
                   <picture>
-                    <source
-                      sizes="(max-width: 200px) 100vw, 200px"
-                      srcSet=""
-                    />
+                    
                     <img
                       alt="八十番"
                       loading="lazy"
@@ -34952,10 +34078,7 @@ Array [
                     }
                   />
                   <picture>
-                    <source
-                      sizes="(max-width: 200px) 100vw, 200px"
-                      srcSet=""
-                    />
+                    
                     <img
                       alt="八十一番"
                       loading="lazy"
@@ -35047,10 +34170,7 @@ Array [
                     }
                   />
                   <picture>
-                    <source
-                      sizes="(max-width: 200px) 100vw, 200px"
-                      srcSet=""
-                    />
+                    
                     <img
                       alt="八十二番"
                       loading="lazy"
@@ -35142,10 +34262,7 @@ Array [
                     }
                   />
                   <picture>
-                    <source
-                      sizes="(max-width: 200px) 100vw, 200px"
-                      srcSet=""
-                    />
+                    
                     <img
                       alt="八十三番"
                       loading="lazy"
@@ -35237,10 +34354,7 @@ Array [
                     }
                   />
                   <picture>
-                    <source
-                      sizes="(max-width: 200px) 100vw, 200px"
-                      srcSet=""
-                    />
+                    
                     <img
                       alt="八十四番"
                       loading="lazy"
@@ -35332,10 +34446,7 @@ Array [
                     }
                   />
                   <picture>
-                    <source
-                      sizes="(max-width: 200px) 100vw, 200px"
-                      srcSet=""
-                    />
+                    
                     <img
                       alt="八十五番"
                       loading="lazy"
@@ -35427,10 +34538,7 @@ Array [
                     }
                   />
                   <picture>
-                    <source
-                      sizes="(max-width: 200px) 100vw, 200px"
-                      srcSet=""
-                    />
+                    
                     <img
                       alt="八十六番"
                       loading="lazy"
@@ -35522,10 +34630,7 @@ Array [
                     }
                   />
                   <picture>
-                    <source
-                      sizes="(max-width: 200px) 100vw, 200px"
-                      srcSet=""
-                    />
+                    
                     <img
                       alt="八十七番"
                       loading="lazy"
@@ -35617,10 +34722,7 @@ Array [
                     }
                   />
                   <picture>
-                    <source
-                      sizes="(max-width: 200px) 100vw, 200px"
-                      srcSet=""
-                    />
+                    
                     <img
                       alt="八十八番"
                       loading="lazy"
@@ -35712,10 +34814,7 @@ Array [
                     }
                   />
                   <picture>
-                    <source
-                      sizes="(max-width: 200px) 100vw, 200px"
-                      srcSet=""
-                    />
+                    
                     <img
                       alt="八十九番"
                       loading="lazy"
@@ -35807,10 +34906,7 @@ Array [
                     }
                   />
                   <picture>
-                    <source
-                      sizes="(max-width: 200px) 100vw, 200px"
-                      srcSet=""
-                    />
+                    
                     <img
                       alt="九十番"
                       loading="lazy"
@@ -35902,10 +34998,7 @@ Array [
                     }
                   />
                   <picture>
-                    <source
-                      sizes="(max-width: 200px) 100vw, 200px"
-                      srcSet=""
-                    />
+                    
                     <img
                       alt="九十一番"
                       loading="lazy"
@@ -35997,10 +35090,7 @@ Array [
                     }
                   />
                   <picture>
-                    <source
-                      sizes="(max-width: 200px) 100vw, 200px"
-                      srcSet=""
-                    />
+                    
                     <img
                       alt="九十二番"
                       loading="lazy"
@@ -36092,10 +35182,7 @@ Array [
                     }
                   />
                   <picture>
-                    <source
-                      sizes="(max-width: 200px) 100vw, 200px"
-                      srcSet=""
-                    />
+                    
                     <img
                       alt="九十三番"
                       loading="lazy"
@@ -36187,10 +35274,7 @@ Array [
                     }
                   />
                   <picture>
-                    <source
-                      sizes="(max-width: 200px) 100vw, 200px"
-                      srcSet=""
-                    />
+                    
                     <img
                       alt="九十四番"
                       loading="lazy"
@@ -36282,10 +35366,7 @@ Array [
                     }
                   />
                   <picture>
-                    <source
-                      sizes="(max-width: 200px) 100vw, 200px"
-                      srcSet=""
-                    />
+                    
                     <img
                       alt="九十五番"
                       loading="lazy"
@@ -36377,10 +35458,7 @@ Array [
                     }
                   />
                   <picture>
-                    <source
-                      sizes="(max-width: 200px) 100vw, 200px"
-                      srcSet=""
-                    />
+                    
                     <img
                       alt="九十六番"
                       loading="lazy"
@@ -36472,10 +35550,7 @@ Array [
                     }
                   />
                   <picture>
-                    <source
-                      sizes="(max-width: 200px) 100vw, 200px"
-                      srcSet=""
-                    />
+                    
                     <img
                       alt="九十七番"
                       loading="lazy"
@@ -36567,10 +35642,7 @@ Array [
                     }
                   />
                   <picture>
-                    <source
-                      sizes="(max-width: 200px) 100vw, 200px"
-                      srcSet=""
-                    />
+                    
                     <img
                       alt="九十八番"
                       loading="lazy"
@@ -36662,10 +35734,7 @@ Array [
                     }
                   />
                   <picture>
-                    <source
-                      sizes="(max-width: 200px) 100vw, 200px"
-                      srcSet=""
-                    />
+                    
                     <img
                       alt="九十九番"
                       loading="lazy"
@@ -36757,10 +35826,7 @@ Array [
                     }
                   />
                   <picture>
-                    <source
-                      sizes="(max-width: 200px) 100vw, 200px"
-                      srcSet=""
-                    />
+                    
                     <img
                       alt="百番"
                       loading="lazy"
@@ -36974,8 +36040,7 @@ Array [
               viewBox="0 0 24 24"
             >
               <path
-                d="M15.95 10.78c.03-.25.05-.51.05-.78s-.02-.53-.06-.78l1.69-1.32c.15-.12.19-.34.1-.51l-1.6-2.77c-.1-.18-.31-.24-.49-.18l-1.99.8c-.42-.32-.86-.58-1.35-.78L12 2.34c-.03-.2-.2-.34-.4-.34H8.4c-.2 0-.36.14-.39.34l-.3 2.12c-.49.2-.94.47-1.35.78l-1.99-.8c-.18-.07-.39 0-.49.18l-1.6 2.77c-.1.18-.06.39.1.51l1.69 1.32c-.04.25-.07.52-.07.78s.02.53.06.78L2.37 12.1c-.15.12-.19.34-.1.51l1.6 2.77c.1.18.31.24.49.18l1.99-.8c.42.32.86.58 1.35.78l.3 2.12c.04.2.2.34.4.34h3.2c.2 0 .37-.14.39-.34l.3-2.12c.49-.2.94-.47 1.35-.78l1.99.8c.18.07.39 0 .49-.18l1.6-2.77c.1-.18.06-.39-.1-.51l-1.67-1.32zM10 13c-1.65 0-3-1.35-3-3s1.35-3 3-3 3 1.35 3 3-1.35 3-3 3z"
-                transform="scale(1.2, 1.2)"
+                d="M19.14 12.94c.04-.3.06-.61.06-.94 0-.32-.02-.64-.07-.94l2.03-1.58c.18-.14.23-.41.12-.61l-1.92-3.32c-.12-.22-.37-.29-.59-.22l-2.39.96c-.5-.38-1.03-.7-1.62-.94l-.36-2.54c-.04-.24-.24-.41-.48-.41h-3.84c-.24 0-.43.17-.47.41l-.36 2.54c-.59.24-1.13.57-1.62.94l-2.39-.96c-.22-.08-.47 0-.59.22L2.74 8.87c-.12.21-.08.47.12.61l2.03 1.58c-.05.3-.09.63-.09.94s.02.64.07.94l-2.03 1.58c-.18.14-.23.41-.12.61l1.92 3.32c.12.22.37.29.59.22l2.39-.96c.5.38 1.03.7 1.62.94l.36 2.54c.05.24.24.41.48.41h3.84c.24 0 .44-.17.47-.41l.36-2.54c.59-.24 1.13-.56 1.62-.94l2.39.96c.22.08.47 0 .59-.22l1.92-3.32c.12-.22.07-.47-.12-.61l-2.01-1.58zM12 15.6c-1.98 0-3.6-1.62-3.6-3.6s1.62-3.6 3.6-3.6 3.6 1.62 3.6 3.6-1.62 3.6-3.6 3.6z"
               />
             </svg>
           </span>
@@ -37085,10 +36150,7 @@ Array [
               }
             />
             <picture>
-              <source
-                sizes="(max-width: 200px) 100vw, 200px"
-                srcSet=""
-              />
+              
               <img
                 alt="一番"
                 loading="lazy"
@@ -37325,8 +36387,7 @@ Array [
               viewBox="0 0 24 24"
             >
               <path
-                d="M15.95 10.78c.03-.25.05-.51.05-.78s-.02-.53-.06-.78l1.69-1.32c.15-.12.19-.34.1-.51l-1.6-2.77c-.1-.18-.31-.24-.49-.18l-1.99.8c-.42-.32-.86-.58-1.35-.78L12 2.34c-.03-.2-.2-.34-.4-.34H8.4c-.2 0-.36.14-.39.34l-.3 2.12c-.49.2-.94.47-1.35.78l-1.99-.8c-.18-.07-.39 0-.49.18l-1.6 2.77c-.1.18-.06.39.1.51l1.69 1.32c-.04.25-.07.52-.07.78s.02.53.06.78L2.37 12.1c-.15.12-.19.34-.1.51l1.6 2.77c.1.18.31.24.49.18l1.99-.8c.42.32.86.58 1.35.78l.3 2.12c.04.2.2.34.4.34h3.2c.2 0 .37-.14.39-.34l.3-2.12c.49-.2.94-.47 1.35-.78l1.99.8c.18.07.39 0 .49-.18l1.6-2.77c.1-.18.06-.39-.1-.51l-1.67-1.32zM10 13c-1.65 0-3-1.35-3-3s1.35-3 3-3 3 1.35 3 3-1.35 3-3 3z"
-                transform="scale(1.2, 1.2)"
+                d="M19.14 12.94c.04-.3.06-.61.06-.94 0-.32-.02-.64-.07-.94l2.03-1.58c.18-.14.23-.41.12-.61l-1.92-3.32c-.12-.22-.37-.29-.59-.22l-2.39.96c-.5-.38-1.03-.7-1.62-.94l-.36-2.54c-.04-.24-.24-.41-.48-.41h-3.84c-.24 0-.43.17-.47.41l-.36 2.54c-.59.24-1.13.57-1.62.94l-2.39-.96c-.22-.08-.47 0-.59.22L2.74 8.87c-.12.21-.08.47.12.61l2.03 1.58c-.05.3-.09.63-.09.94s.02.64.07.94l-2.03 1.58c-.18.14-.23.41-.12.61l1.92 3.32c.12.22.37.29.59.22l2.39-.96c.5.38 1.03.7 1.62.94l.36 2.54c.05.24.24.41.48.41h3.84c.24 0 .44-.17.47-.41l.36-2.54c.59-.24 1.13-.56 1.62-.94l2.39.96c.22.08.47 0 .59-.22l1.92-3.32c.12-.22.07-.47-.12-.61l-2.01-1.58zM12 15.6c-1.98 0-3.6-1.62-3.6-3.6s1.62-3.6 3.6-3.6 3.6 1.62 3.6 3.6-1.62 3.6-3.6 3.6z"
               />
             </svg>
           </span>
@@ -37953,8 +37014,7 @@ Array [
               viewBox="0 0 24 24"
             >
               <path
-                d="M15.95 10.78c.03-.25.05-.51.05-.78s-.02-.53-.06-.78l1.69-1.32c.15-.12.19-.34.1-.51l-1.6-2.77c-.1-.18-.31-.24-.49-.18l-1.99.8c-.42-.32-.86-.58-1.35-.78L12 2.34c-.03-.2-.2-.34-.4-.34H8.4c-.2 0-.36.14-.39.34l-.3 2.12c-.49.2-.94.47-1.35.78l-1.99-.8c-.18-.07-.39 0-.49.18l-1.6 2.77c-.1.18-.06.39.1.51l1.69 1.32c-.04.25-.07.52-.07.78s.02.53.06.78L2.37 12.1c-.15.12-.19.34-.1.51l1.6 2.77c.1.18.31.24.49.18l1.99-.8c.42.32.86.58 1.35.78l.3 2.12c.04.2.2.34.4.34h3.2c.2 0 .37-.14.39-.34l.3-2.12c.49-.2.94-.47 1.35-.78l1.99.8c.18.07.39 0 .49-.18l1.6-2.77c.1-.18.06-.39-.1-.51l-1.67-1.32zM10 13c-1.65 0-3-1.35-3-3s1.35-3 3-3 3 1.35 3 3-1.35 3-3 3z"
-                transform="scale(1.2, 1.2)"
+                d="M19.14 12.94c.04-.3.06-.61.06-.94 0-.32-.02-.64-.07-.94l2.03-1.58c.18-.14.23-.41.12-.61l-1.92-3.32c-.12-.22-.37-.29-.59-.22l-2.39.96c-.5-.38-1.03-.7-1.62-.94l-.36-2.54c-.04-.24-.24-.41-.48-.41h-3.84c-.24 0-.43.17-.47.41l-.36 2.54c-.59.24-1.13.57-1.62.94l-2.39-.96c-.22-.08-.47 0-.59.22L2.74 8.87c-.12.21-.08.47.12.61l2.03 1.58c-.05.3-.09.63-.09.94s.02.64.07.94l-2.03 1.58c-.18.14-.23.41-.12.61l1.92 3.32c.12.22.37.29.59.22l2.39-.96c.5.38 1.03.7 1.62.94l.36 2.54c.05.24.24.41.48.41h3.84c.24 0 .44-.17.47-.41l.36-2.54c.59-.24 1.13-.56 1.62-.94l2.39.96c.22.08.47 0 .59-.22l1.92-3.32c.12-.22.07-.47-.12-.61l-2.01-1.58zM12 15.6c-1.98 0-3.6-1.62-3.6-3.6s1.62-3.6 3.6-3.6 3.6 1.62 3.6 3.6-1.62 3.6-3.6 3.6z"
               />
             </svg>
           </span>
@@ -38647,8 +37707,7 @@ Array [
               viewBox="0 0 24 24"
             >
               <path
-                d="M15.95 10.78c.03-.25.05-.51.05-.78s-.02-.53-.06-.78l1.69-1.32c.15-.12.19-.34.1-.51l-1.6-2.77c-.1-.18-.31-.24-.49-.18l-1.99.8c-.42-.32-.86-.58-1.35-.78L12 2.34c-.03-.2-.2-.34-.4-.34H8.4c-.2 0-.36.14-.39.34l-.3 2.12c-.49.2-.94.47-1.35.78l-1.99-.8c-.18-.07-.39 0-.49.18l-1.6 2.77c-.1.18-.06.39.1.51l1.69 1.32c-.04.25-.07.52-.07.78s.02.53.06.78L2.37 12.1c-.15.12-.19.34-.1.51l1.6 2.77c.1.18.31.24.49.18l1.99-.8c.42.32.86.58 1.35.78l.3 2.12c.04.2.2.34.4.34h3.2c.2 0 .37-.14.39-.34l.3-2.12c.49-.2.94-.47 1.35-.78l1.99.8c.18.07.39 0 .49-.18l1.6-2.77c.1-.18.06-.39-.1-.51l-1.67-1.32zM10 13c-1.65 0-3-1.35-3-3s1.35-3 3-3 3 1.35 3 3-1.35 3-3 3z"
-                transform="scale(1.2, 1.2)"
+                d="M19.14 12.94c.04-.3.06-.61.06-.94 0-.32-.02-.64-.07-.94l2.03-1.58c.18-.14.23-.41.12-.61l-1.92-3.32c-.12-.22-.37-.29-.59-.22l-2.39.96c-.5-.38-1.03-.7-1.62-.94l-.36-2.54c-.04-.24-.24-.41-.48-.41h-3.84c-.24 0-.43.17-.47.41l-.36 2.54c-.59.24-1.13.57-1.62.94l-2.39-.96c-.22-.08-.47 0-.59.22L2.74 8.87c-.12.21-.08.47.12.61l2.03 1.58c-.05.3-.09.63-.09.94s.02.64.07.94l-2.03 1.58c-.18.14-.23.41-.12.61l1.92 3.32c.12.22.37.29.59.22l2.39-.96c.5.38 1.03.7 1.62.94l.36 2.54c.05.24.24.41.48.41h3.84c.24 0 .44-.17.47-.41l.36-2.54c.59-.24 1.13-.56 1.62-.94l2.39.96c.22.08.47 0 .59-.22l1.92-3.32c.12-.22.07-.47-.12-.61l-2.01-1.58zM12 15.6c-1.98 0-3.6-1.62-3.6-3.6s1.62-3.6 3.6-3.6 3.6 1.62 3.6 3.6-1.62 3.6-3.6 3.6z"
               />
             </svg>
           </span>
@@ -38833,8 +37892,7 @@ Array [
               viewBox="0 0 24 24"
             >
               <path
-                d="M15.95 10.78c.03-.25.05-.51.05-.78s-.02-.53-.06-.78l1.69-1.32c.15-.12.19-.34.1-.51l-1.6-2.77c-.1-.18-.31-.24-.49-.18l-1.99.8c-.42-.32-.86-.58-1.35-.78L12 2.34c-.03-.2-.2-.34-.4-.34H8.4c-.2 0-.36.14-.39.34l-.3 2.12c-.49.2-.94.47-1.35.78l-1.99-.8c-.18-.07-.39 0-.49.18l-1.6 2.77c-.1.18-.06.39.1.51l1.69 1.32c-.04.25-.07.52-.07.78s.02.53.06.78L2.37 12.1c-.15.12-.19.34-.1.51l1.6 2.77c.1.18.31.24.49.18l1.99-.8c.42.32.86.58 1.35.78l.3 2.12c.04.2.2.34.4.34h3.2c.2 0 .37-.14.39-.34l.3-2.12c.49-.2.94-.47 1.35-.78l1.99.8c.18.07.39 0 .49-.18l1.6-2.77c.1-.18.06-.39-.1-.51l-1.67-1.32zM10 13c-1.65 0-3-1.35-3-3s1.35-3 3-3 3 1.35 3 3-1.35 3-3 3z"
-                transform="scale(1.2, 1.2)"
+                d="M19.14 12.94c.04-.3.06-.61.06-.94 0-.32-.02-.64-.07-.94l2.03-1.58c.18-.14.23-.41.12-.61l-1.92-3.32c-.12-.22-.37-.29-.59-.22l-2.39.96c-.5-.38-1.03-.7-1.62-.94l-.36-2.54c-.04-.24-.24-.41-.48-.41h-3.84c-.24 0-.43.17-.47.41l-.36 2.54c-.59.24-1.13.57-1.62.94l-2.39-.96c-.22-.08-.47 0-.59.22L2.74 8.87c-.12.21-.08.47.12.61l2.03 1.58c-.05.3-.09.63-.09.94s.02.64.07.94l-2.03 1.58c-.18.14-.23.41-.12.61l1.92 3.32c.12.22.37.29.59.22l2.39-.96c.5.38 1.03.7 1.62.94l.36 2.54c.05.24.24.41.48.41h3.84c.24 0 .44-.17.47-.41l.36-2.54c.59-.24 1.13-.56 1.62-.94l2.39.96c.22.08.47 0 .59-.22l1.92-3.32c.12-.22.07-.47-.12-.61l-2.01-1.58zM12 15.6c-1.98 0-3.6-1.62-3.6-3.6s1.62-3.6 3.6-3.6 3.6 1.62 3.6 3.6-1.62 3.6-3.6 3.6z"
               />
             </svg>
           </span>
@@ -39045,8 +38103,7 @@ Array [
               viewBox="0 0 24 24"
             >
               <path
-                d="M15.95 10.78c.03-.25.05-.51.05-.78s-.02-.53-.06-.78l1.69-1.32c.15-.12.19-.34.1-.51l-1.6-2.77c-.1-.18-.31-.24-.49-.18l-1.99.8c-.42-.32-.86-.58-1.35-.78L12 2.34c-.03-.2-.2-.34-.4-.34H8.4c-.2 0-.36.14-.39.34l-.3 2.12c-.49.2-.94.47-1.35.78l-1.99-.8c-.18-.07-.39 0-.49.18l-1.6 2.77c-.1.18-.06.39.1.51l1.69 1.32c-.04.25-.07.52-.07.78s.02.53.06.78L2.37 12.1c-.15.12-.19.34-.1.51l1.6 2.77c.1.18.31.24.49.18l1.99-.8c.42.32.86.58 1.35.78l.3 2.12c.04.2.2.34.4.34h3.2c.2 0 .37-.14.39-.34l.3-2.12c.49-.2.94-.47 1.35-.78l1.99.8c.18.07.39 0 .49-.18l1.6-2.77c.1-.18.06-.39-.1-.51l-1.67-1.32zM10 13c-1.65 0-3-1.35-3-3s1.35-3 3-3 3 1.35 3 3-1.35 3-3 3z"
-                transform="scale(1.2, 1.2)"
+                d="M19.14 12.94c.04-.3.06-.61.06-.94 0-.32-.02-.64-.07-.94l2.03-1.58c.18-.14.23-.41.12-.61l-1.92-3.32c-.12-.22-.37-.29-.59-.22l-2.39.96c-.5-.38-1.03-.7-1.62-.94l-.36-2.54c-.04-.24-.24-.41-.48-.41h-3.84c-.24 0-.43.17-.47.41l-.36 2.54c-.59.24-1.13.57-1.62.94l-2.39-.96c-.22-.08-.47 0-.59.22L2.74 8.87c-.12.21-.08.47.12.61l2.03 1.58c-.05.3-.09.63-.09.94s.02.64.07.94l-2.03 1.58c-.18.14-.23.41-.12.61l1.92 3.32c.12.22.37.29.59.22l2.39-.96c.5.38 1.03.7 1.62.94l.36 2.54c.05.24.24.41.48.41h3.84c.24 0 .44-.17.47-.41l.36-2.54c.59-.24 1.13-.56 1.62-.94l2.39.96c.22.08.47 0 .59-.22l1.92-3.32c.12-.22.07-.47-.12-.61l-2.01-1.58zM12 15.6c-1.98 0-3.6-1.62-3.6-3.6s1.62-3.6 3.6-3.6 3.6 1.62 3.6 3.6-1.62 3.6-3.6 3.6z"
               />
             </svg>
           </span>
@@ -39291,8 +38348,7 @@ Array [
               viewBox="0 0 24 24"
             >
               <path
-                d="M15.95 10.78c.03-.25.05-.51.05-.78s-.02-.53-.06-.78l1.69-1.32c.15-.12.19-.34.1-.51l-1.6-2.77c-.1-.18-.31-.24-.49-.18l-1.99.8c-.42-.32-.86-.58-1.35-.78L12 2.34c-.03-.2-.2-.34-.4-.34H8.4c-.2 0-.36.14-.39.34l-.3 2.12c-.49.2-.94.47-1.35.78l-1.99-.8c-.18-.07-.39 0-.49.18l-1.6 2.77c-.1.18-.06.39.1.51l1.69 1.32c-.04.25-.07.52-.07.78s.02.53.06.78L2.37 12.1c-.15.12-.19.34-.1.51l1.6 2.77c.1.18.31.24.49.18l1.99-.8c.42.32.86.58 1.35.78l.3 2.12c.04.2.2.34.4.34h3.2c.2 0 .37-.14.39-.34l.3-2.12c.49-.2.94-.47 1.35-.78l1.99.8c.18.07.39 0 .49-.18l1.6-2.77c.1-.18.06-.39-.1-.51l-1.67-1.32zM10 13c-1.65 0-3-1.35-3-3s1.35-3 3-3 3 1.35 3 3-1.35 3-3 3z"
-                transform="scale(1.2, 1.2)"
+                d="M19.14 12.94c.04-.3.06-.61.06-.94 0-.32-.02-.64-.07-.94l2.03-1.58c.18-.14.23-.41.12-.61l-1.92-3.32c-.12-.22-.37-.29-.59-.22l-2.39.96c-.5-.38-1.03-.7-1.62-.94l-.36-2.54c-.04-.24-.24-.41-.48-.41h-3.84c-.24 0-.43.17-.47.41l-.36 2.54c-.59.24-1.13.57-1.62.94l-2.39-.96c-.22-.08-.47 0-.59.22L2.74 8.87c-.12.21-.08.47.12.61l2.03 1.58c-.05.3-.09.63-.09.94s.02.64.07.94l-2.03 1.58c-.18.14-.23.41-.12.61l1.92 3.32c.12.22.37.29.59.22l2.39-.96c.5.38 1.03.7 1.62.94l.36 2.54c.05.24.24.41.48.41h3.84c.24 0 .44-.17.47-.41l.36-2.54c.59-.24 1.13-.56 1.62-.94l2.39.96c.22.08.47 0 .59-.22l1.92-3.32c.12-.22.07-.47-.12-.61l-2.01-1.58zM12 15.6c-1.98 0-3.6-1.62-3.6-3.6s1.62-3.6 3.6-3.6 3.6 1.62 3.6 3.6-1.62 3.6-3.6 3.6z"
               />
             </svg>
           </span>
@@ -39500,8 +38556,7 @@ Array [
               viewBox="0 0 24 24"
             >
               <path
-                d="M15.95 10.78c.03-.25.05-.51.05-.78s-.02-.53-.06-.78l1.69-1.32c.15-.12.19-.34.1-.51l-1.6-2.77c-.1-.18-.31-.24-.49-.18l-1.99.8c-.42-.32-.86-.58-1.35-.78L12 2.34c-.03-.2-.2-.34-.4-.34H8.4c-.2 0-.36.14-.39.34l-.3 2.12c-.49.2-.94.47-1.35.78l-1.99-.8c-.18-.07-.39 0-.49.18l-1.6 2.77c-.1.18-.06.39.1.51l1.69 1.32c-.04.25-.07.52-.07.78s.02.53.06.78L2.37 12.1c-.15.12-.19.34-.1.51l1.6 2.77c.1.18.31.24.49.18l1.99-.8c.42.32.86.58 1.35.78l.3 2.12c.04.2.2.34.4.34h3.2c.2 0 .37-.14.39-.34l.3-2.12c.49-.2.94-.47 1.35-.78l1.99.8c.18.07.39 0 .49-.18l1.6-2.77c.1-.18.06-.39-.1-.51l-1.67-1.32zM10 13c-1.65 0-3-1.35-3-3s1.35-3 3-3 3 1.35 3 3-1.35 3-3 3z"
-                transform="scale(1.2, 1.2)"
+                d="M19.14 12.94c.04-.3.06-.61.06-.94 0-.32-.02-.64-.07-.94l2.03-1.58c.18-.14.23-.41.12-.61l-1.92-3.32c-.12-.22-.37-.29-.59-.22l-2.39.96c-.5-.38-1.03-.7-1.62-.94l-.36-2.54c-.04-.24-.24-.41-.48-.41h-3.84c-.24 0-.43.17-.47.41l-.36 2.54c-.59.24-1.13.57-1.62.94l-2.39-.96c-.22-.08-.47 0-.59.22L2.74 8.87c-.12.21-.08.47.12.61l2.03 1.58c-.05.3-.09.63-.09.94s.02.64.07.94l-2.03 1.58c-.18.14-.23.41-.12.61l1.92 3.32c.12.22.37.29.59.22l2.39-.96c.5.38 1.03.7 1.62.94l.36 2.54c.05.24.24.41.48.41h3.84c.24 0 .44-.17.47-.41l.36-2.54c.59-.24 1.13-.56 1.62-.94l2.39.96c.22.08.47 0 .59-.22l1.92-3.32c.12-.22.07-.47-.12-.61l-2.01-1.58zM12 15.6c-1.98 0-3.6-1.62-3.6-3.6s1.62-3.6 3.6-3.6 3.6 1.62 3.6 3.6-1.62 3.6-3.6 3.6z"
               />
             </svg>
           </span>
