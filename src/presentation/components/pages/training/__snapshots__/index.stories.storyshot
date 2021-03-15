@@ -3,15 +3,15 @@
 exports[`Storyshots pages/training default 1`] = `
 Array [
   <header
-    className="makeStyles-root-1947 makeStyles-root-1950 makeStyles-header-1944"
+    className="makeStyles-root-1948 makeStyles-root-1951 makeStyles-header-1945"
   >
     <div
-      className="makeStyles-rippleContainer-1951"
+      className="makeStyles-rippleContainer-1952"
       onMouseDown={[Function]}
       onMouseUp={[Function]}
     >
       <span
-        className="makeStyles-root-1954 makeStyles-clickable-1955 makeStyles-root-1953 makeStyles-headerItem-1949"
+        className="makeStyles-root-1955 makeStyles-clickable-1956 makeStyles-root-1954 makeStyles-headerItem-1950"
         onClick={[Function]}
       >
         <svg
@@ -32,54 +32,54 @@ Array [
       </span>
     </div>
     <h1
-      className="makeStyles-root-1956 makeStyles-root-1957 makeStyles-title-1948"
+      className="makeStyles-root-1957 makeStyles-root-1958 makeStyles-title-1949"
     >
       百人一首 - 練習 -
     </h1>
   </header>,
   <main
-    className="makeStyles-root-1943 makeStyles-root-1946"
+    className="makeStyles-root-1944 makeStyles-root-1947"
   >
     <section
-      className="makeStyles-content-1941"
+      className="makeStyles-content-1942"
     >
       <h2
-        className="makeStyles-root-1956 makeStyles-root-1958 makeStyles-sectionTitle-1942"
+        className="makeStyles-root-1957 makeStyles-root-1959 makeStyles-sectionTitle-1943"
       >
         出題設定
       </h2>
       <div
-        className="makeStyles-root-1959"
+        className="makeStyles-root-1960"
       >
         <div
-          className="makeStyles-dummyResponsive-1961"
+          className="makeStyles-dummyResponsive-1962"
         >
           この欄は広告枠です
         </div>
       </div>
       <div
-        className="makeStyles-formContainer-1938"
+        className="makeStyles-formContainer-1939"
       >
         <form
-          className="makeStyles-form-1963"
+          className="makeStyles-form-1964"
         >
           <div
-            className="makeStyles-field-1965"
+            className="makeStyles-field-1966"
           >
             <div
-              className="makeStyles-labelContainer-1967"
+              className="makeStyles-labelContainer-1968"
             >
               <label
-                className="makeStyles-label-1968"
+                className="makeStyles-label-1969"
               >
                 出題範囲
               </label>
             </div>
             <div
-              className="makeStyles-root-1954"
+              className="makeStyles-root-1955"
             >
               <div
-                className="MuiInputBase-root MuiInput-root MuiInput-underline makeStyles-select-1966"
+                className="MuiInputBase-root MuiInput-root MuiInput-underline makeStyles-select-1967"
                 onClick={[Function]}
               >
                 <div
@@ -118,12 +118,12 @@ Array [
                 </svg>
               </div>
               <span
-                className="makeStyles-separate-1969"
+                className="makeStyles-separate-1970"
               >
                 〜
               </span>
               <div
-                className="MuiInputBase-root MuiInput-root MuiInput-underline makeStyles-select-1966"
+                className="MuiInputBase-root MuiInput-root MuiInput-underline makeStyles-select-1967"
                 onClick={[Function]}
               >
                 <div
@@ -164,17 +164,17 @@ Array [
             </div>
           </div>
           <div
-            className="MuiFormControl-root makeStyles-formControl-1971 makeStyles-field-1965"
+            className="MuiFormControl-root makeStyles-formControl-1972 makeStyles-field-1966"
           >
             <label
-              className="MuiFormLabel-root MuiInputLabel-root makeStyles-label-1972 MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiFormLabel-filled"
+              className="MuiFormLabel-root MuiInputLabel-root makeStyles-label-1973 MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiFormLabel-filled"
               data-shrink={true}
               htmlFor="id-kimariji"
             >
               決まり字
             </label>
             <div
-              className="MuiInputBase-root MuiInput-root MuiInput-underline makeStyles-select-1973 MuiInputBase-formControl MuiInput-formControl"
+              className="MuiInputBase-root MuiInput-root MuiInput-underline makeStyles-select-1974 MuiInputBase-formControl MuiInput-formControl"
               onClick={[Function]}
             >
               <div
@@ -215,17 +215,17 @@ Array [
             </div>
           </div>
           <div
-            className="MuiFormControl-root makeStyles-formControl-1971 makeStyles-field-1965"
+            className="MuiFormControl-root makeStyles-formControl-1972 makeStyles-field-1966"
           >
             <label
-              className="MuiFormLabel-root MuiInputLabel-root makeStyles-label-1972 MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiFormLabel-filled"
+              className="MuiFormLabel-root MuiInputLabel-root makeStyles-label-1973 MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiFormLabel-filled"
               data-shrink={true}
               htmlFor="id-color"
             >
               五色
             </label>
             <div
-              className="MuiInputBase-root MuiInput-root MuiInput-underline makeStyles-select-1973 MuiInputBase-formControl MuiInput-formControl"
+              className="MuiInputBase-root MuiInput-root MuiInput-underline makeStyles-select-1974 MuiInputBase-formControl MuiInput-formControl"
               onClick={[Function]}
             >
               <div
@@ -266,17 +266,17 @@ Array [
             </div>
           </div>
           <div
-            className="MuiFormControl-root makeStyles-formControl-1971 makeStyles-field-1965"
+            className="MuiFormControl-root makeStyles-formControl-1972 makeStyles-field-1966"
           >
             <label
-              className="MuiFormLabel-root MuiInputLabel-root makeStyles-label-1972 MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiFormLabel-filled"
+              className="MuiFormLabel-root MuiInputLabel-root makeStyles-label-1973 MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiFormLabel-filled"
               data-shrink={true}
               htmlFor="id-kamiNoKuStyle"
             >
               上の句
             </label>
             <div
-              className="MuiInputBase-root MuiInput-root MuiInput-underline makeStyles-select-1973 MuiInputBase-formControl MuiInput-formControl"
+              className="MuiInputBase-root MuiInput-root MuiInput-underline makeStyles-select-1974 MuiInputBase-formControl MuiInput-formControl"
               onClick={[Function]}
             >
               <div
@@ -317,17 +317,17 @@ Array [
             </div>
           </div>
           <div
-            className="MuiFormControl-root makeStyles-formControl-1971 makeStyles-field-1965"
+            className="MuiFormControl-root makeStyles-formControl-1972 makeStyles-field-1966"
           >
             <label
-              className="MuiFormLabel-root MuiInputLabel-root makeStyles-label-1972 MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiFormLabel-filled"
+              className="MuiFormLabel-root MuiInputLabel-root makeStyles-label-1973 MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiFormLabel-filled"
               data-shrink={true}
               htmlFor="id-shimoNoKuStyle"
             >
               下の句
             </label>
             <div
-              className="MuiInputBase-root MuiInput-root MuiInput-underline makeStyles-select-1973 MuiInputBase-formControl MuiInput-formControl"
+              className="MuiInputBase-root MuiInput-root MuiInput-underline makeStyles-select-1974 MuiInputBase-formControl MuiInput-formControl"
               onClick={[Function]}
             >
               <div
@@ -368,17 +368,17 @@ Array [
             </div>
           </div>
           <div
-            className="MuiFormControl-root makeStyles-formControl-1971 makeStyles-field-1965"
+            className="MuiFormControl-root makeStyles-formControl-1972 makeStyles-field-1966"
           >
             <label
-              className="MuiFormLabel-root MuiInputLabel-root makeStyles-label-1972 MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiFormLabel-filled"
+              className="MuiFormLabel-root MuiInputLabel-root makeStyles-label-1973 MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiFormLabel-filled"
               data-shrink={true}
               htmlFor="id-questionAnim"
             >
               読み札のアニメーション表示
             </label>
             <div
-              className="MuiInputBase-root MuiInput-root MuiInput-underline makeStyles-select-1973 MuiInputBase-formControl MuiInput-formControl"
+              className="MuiInputBase-root MuiInput-root MuiInput-underline makeStyles-select-1974 MuiInputBase-formControl MuiInput-formControl"
               onClick={[Function]}
             >
               <div
@@ -419,7 +419,7 @@ Array [
             </div>
           </div>
           <button
-            className="MuiButtonBase-root MuiButton-root MuiButton-contained makeStyles-startTrainingButton-1964 MuiButton-containedSecondary"
+            className="MuiButtonBase-root MuiButton-root MuiButton-contained makeStyles-startTrainingButton-1965 MuiButton-containedSecondary"
             disabled={false}
             onBlur={[Function]}
             onClick={[Function]}
@@ -441,7 +441,7 @@ Array [
             >
               <svg
                 aria-hidden={true}
-                className="MuiSvgIcon-root makeStyles-accent-1976 makeStyles-accent-1978"
+                className="MuiSvgIcon-root makeStyles-accent-1977 makeStyles-accent-1979"
                 focusable="false"
                 viewBox="0 0 24 24"
               >
@@ -457,13 +457,13 @@ Array [
     </section>
   </main>,
   <nav
-    className="makeStyles-root-1979 makeStyles-nav-1945"
+    className="makeStyles-root-1980 makeStyles-nav-1946"
   >
     <span
-      className="makeStyles-itemWrapper-1980"
+      className="makeStyles-itemWrapper-1981"
     >
       <div
-        className="makeStyles-rippleContainer-1951"
+        className="makeStyles-rippleContainer-1952"
         onMouseDown={[Function]}
         onMouseUp={[Function]}
         style={
@@ -479,7 +479,7 @@ Array [
           style={Object {}}
         >
           <span
-            className="makeStyles-root-1954 makeStyles-root-1981 makeStyles-root-1982"
+            className="makeStyles-root-1955 makeStyles-root-1982 makeStyles-root-1983"
           >
             <svg
               aria-hidden={true}
@@ -501,10 +501,10 @@ Array [
       </div>
     </span>
     <span
-      className="makeStyles-itemWrapper-1980"
+      className="makeStyles-itemWrapper-1981"
     >
       <div
-        className="makeStyles-rippleContainer-1951"
+        className="makeStyles-rippleContainer-1952"
         onMouseDown={[Function]}
         onMouseUp={[Function]}
         style={
@@ -520,7 +520,7 @@ Array [
           style={Object {}}
         >
           <span
-            className="makeStyles-root-1954 makeStyles-root-1981 makeStyles-root-1983"
+            className="makeStyles-root-1955 makeStyles-root-1982 makeStyles-root-1984"
           >
             <svg
               aria-hidden={true}
@@ -542,10 +542,10 @@ Array [
       </div>
     </span>
     <span
-      className="makeStyles-itemWrapper-1980"
+      className="makeStyles-itemWrapper-1981"
     >
       <div
-        className="makeStyles-rippleContainer-1951"
+        className="makeStyles-rippleContainer-1952"
         onMouseDown={[Function]}
         onMouseUp={[Function]}
         style={
@@ -561,7 +561,7 @@ Array [
           style={Object {}}
         >
           <span
-            className="makeStyles-root-1954 makeStyles-root-1981 makeStyles-root-1984"
+            className="makeStyles-root-1955 makeStyles-root-1982 makeStyles-root-1985"
           >
             <svg
               aria-hidden={true}
@@ -583,10 +583,10 @@ Array [
       </div>
     </span>
     <span
-      className="makeStyles-itemWrapper-1980"
+      className="makeStyles-itemWrapper-1981"
     >
       <div
-        className="makeStyles-rippleContainer-1951"
+        className="makeStyles-rippleContainer-1952"
         onMouseDown={[Function]}
         onMouseUp={[Function]}
         style={
@@ -602,7 +602,7 @@ Array [
           style={Object {}}
         >
           <span
-            className="makeStyles-root-1954 makeStyles-root-1981 makeStyles-root-1985"
+            className="makeStyles-root-1955 makeStyles-root-1982 makeStyles-root-1986"
           >
             <svg
               aria-hidden={true}

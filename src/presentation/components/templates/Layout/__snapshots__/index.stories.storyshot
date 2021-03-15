@@ -3,16 +3,16 @@
 exports[`Storyshots templates/Layout default 1`] = `
 Array [
   <header
-    className="makeStyles-root-2115 makeStyles-root-2118 makeStyles-header-2112"
+    className="makeStyles-root-2116 makeStyles-root-2119 makeStyles-header-2113"
   >
     <h1
-      className="makeStyles-root-2119 makeStyles-root-2120 makeStyles-title-2116"
+      className="makeStyles-root-2120 makeStyles-root-2121 makeStyles-title-2117"
     >
       れいあうと
     </h1>
   </header>,
   <main
-    className="makeStyles-root-2111 makeStyles-root-2114"
+    className="makeStyles-root-2112 makeStyles-root-2115"
   />,
 ]
 `;
@@ -20,15 +20,15 @@ Array [
 exports[`Storyshots templates/Layout with back button 1`] = `
 Array [
   <header
-    className="makeStyles-root-2146 makeStyles-root-2149 makeStyles-header-2143"
+    className="makeStyles-root-2147 makeStyles-root-2150 makeStyles-header-2144"
   >
     <div
-      className="makeStyles-rippleContainer-2150"
+      className="makeStyles-rippleContainer-2151"
       onMouseDown={[Function]}
       onMouseUp={[Function]}
     >
       <span
-        className="makeStyles-root-2153 makeStyles-clickable-2154 makeStyles-root-2152 makeStyles-headerItem-2148"
+        className="makeStyles-root-2154 makeStyles-clickable-2155 makeStyles-root-2153 makeStyles-headerItem-2149"
         onClick={[Function]}
       >
         <svg
@@ -49,22 +49,22 @@ Array [
       </span>
     </div>
     <h1
-      className="makeStyles-root-2155 makeStyles-root-2156 makeStyles-title-2147"
+      className="makeStyles-root-2156 makeStyles-root-2157 makeStyles-title-2148"
     >
       れいあうと
     </h1>
   </header>,
   <main
-    className="makeStyles-root-2142 makeStyles-root-2145"
+    className="makeStyles-root-2143 makeStyles-root-2146"
   />,
   <nav
-    className="makeStyles-root-2157 makeStyles-nav-2144"
+    className="makeStyles-root-2158 makeStyles-nav-2145"
   >
     <span
-      className="makeStyles-itemWrapper-2158"
+      className="makeStyles-itemWrapper-2159"
     >
       <div
-        className="makeStyles-rippleContainer-2150"
+        className="makeStyles-rippleContainer-2151"
         onMouseDown={[Function]}
         onMouseUp={[Function]}
         style={
@@ -80,7 +80,7 @@ Array [
           style={Object {}}
         >
           <span
-            className="makeStyles-root-2153 makeStyles-root-2159 makeStyles-root-2160"
+            className="makeStyles-root-2154 makeStyles-root-2160 makeStyles-root-2161"
           >
             <svg
               aria-hidden={true}
@@ -102,10 +102,10 @@ Array [
       </div>
     </span>
     <span
-      className="makeStyles-itemWrapper-2158"
+      className="makeStyles-itemWrapper-2159"
     >
       <div
-        className="makeStyles-rippleContainer-2150"
+        className="makeStyles-rippleContainer-2151"
         onMouseDown={[Function]}
         onMouseUp={[Function]}
         style={
@@ -121,7 +121,7 @@ Array [
           style={Object {}}
         >
           <span
-            className="makeStyles-root-2153 makeStyles-root-2159 makeStyles-root-2161"
+            className="makeStyles-root-2154 makeStyles-root-2160 makeStyles-root-2162"
           >
             <svg
               aria-hidden={true}
@@ -143,10 +143,10 @@ Array [
       </div>
     </span>
     <span
-      className="makeStyles-itemWrapper-2158"
+      className="makeStyles-itemWrapper-2159"
     >
       <div
-        className="makeStyles-rippleContainer-2150"
+        className="makeStyles-rippleContainer-2151"
         onMouseDown={[Function]}
         onMouseUp={[Function]}
         style={
@@ -162,7 +162,7 @@ Array [
           style={Object {}}
         >
           <span
-            className="makeStyles-root-2153 makeStyles-root-2159 makeStyles-root-2162"
+            className="makeStyles-root-2154 makeStyles-root-2160 makeStyles-root-2163"
           >
             <svg
               aria-hidden={true}
@@ -184,10 +184,10 @@ Array [
       </div>
     </span>
     <span
-      className="makeStyles-itemWrapper-2158"
+      className="makeStyles-itemWrapper-2159"
     >
       <div
-        className="makeStyles-rippleContainer-2150"
+        className="makeStyles-rippleContainer-2151"
         onMouseDown={[Function]}
         onMouseUp={[Function]}
         style={
@@ -203,7 +203,7 @@ Array [
           style={Object {}}
         >
           <span
-            className="makeStyles-root-2153 makeStyles-root-2159 makeStyles-root-2163"
+            className="makeStyles-root-2154 makeStyles-root-2160 makeStyles-root-2164"
           >
             <svg
               aria-hidden={true}
@@ -231,25 +231,25 @@ Array [
 exports[`Storyshots templates/Layout with navigation 1`] = `
 Array [
   <header
-    className="makeStyles-root-2125 makeStyles-root-2128 makeStyles-header-2122"
+    className="makeStyles-root-2126 makeStyles-root-2129 makeStyles-header-2123"
   >
     <h1
-      className="makeStyles-root-2129 makeStyles-root-2130 makeStyles-title-2126"
+      className="makeStyles-root-2130 makeStyles-root-2131 makeStyles-title-2127"
     >
       れいあうと
     </h1>
   </header>,
   <main
-    className="makeStyles-root-2121 makeStyles-root-2124"
+    className="makeStyles-root-2122 makeStyles-root-2125"
   />,
   <nav
-    className="makeStyles-root-2131 makeStyles-nav-2123"
+    className="makeStyles-root-2132 makeStyles-nav-2124"
   >
     <span
-      className="makeStyles-itemWrapper-2132"
+      className="makeStyles-itemWrapper-2133"
     >
       <div
-        className="makeStyles-rippleContainer-2133"
+        className="makeStyles-rippleContainer-2134"
         onMouseDown={[Function]}
         onMouseUp={[Function]}
         style={
@@ -265,7 +265,7 @@ Array [
           style={Object {}}
         >
           <span
-            className="makeStyles-root-2137 makeStyles-root-2135 makeStyles-root-2136"
+            className="makeStyles-root-2138 makeStyles-root-2136 makeStyles-root-2137"
           >
             <svg
               aria-hidden={true}
@@ -287,10 +287,10 @@ Array [
       </div>
     </span>
     <span
-      className="makeStyles-itemWrapper-2132"
+      className="makeStyles-itemWrapper-2133"
     >
       <div
-        className="makeStyles-rippleContainer-2133"
+        className="makeStyles-rippleContainer-2134"
         onMouseDown={[Function]}
         onMouseUp={[Function]}
         style={
@@ -306,7 +306,7 @@ Array [
           style={Object {}}
         >
           <span
-            className="makeStyles-root-2137 makeStyles-root-2135 makeStyles-root-2139"
+            className="makeStyles-root-2138 makeStyles-root-2136 makeStyles-root-2140"
           >
             <svg
               aria-hidden={true}
@@ -328,10 +328,10 @@ Array [
       </div>
     </span>
     <span
-      className="makeStyles-itemWrapper-2132"
+      className="makeStyles-itemWrapper-2133"
     >
       <div
-        className="makeStyles-rippleContainer-2133"
+        className="makeStyles-rippleContainer-2134"
         onMouseDown={[Function]}
         onMouseUp={[Function]}
         style={
@@ -347,7 +347,7 @@ Array [
           style={Object {}}
         >
           <span
-            className="makeStyles-root-2137 makeStyles-root-2135 makeStyles-root-2140"
+            className="makeStyles-root-2138 makeStyles-root-2136 makeStyles-root-2141"
           >
             <svg
               aria-hidden={true}
@@ -369,10 +369,10 @@ Array [
       </div>
     </span>
     <span
-      className="makeStyles-itemWrapper-2132"
+      className="makeStyles-itemWrapper-2133"
     >
       <div
-        className="makeStyles-rippleContainer-2133"
+        className="makeStyles-rippleContainer-2134"
         onMouseDown={[Function]}
         onMouseUp={[Function]}
         style={
@@ -388,7 +388,7 @@ Array [
           style={Object {}}
         >
           <span
-            className="makeStyles-root-2137 makeStyles-root-2135 makeStyles-root-2141"
+            className="makeStyles-root-2138 makeStyles-root-2136 makeStyles-root-2142"
           >
             <svg
               aria-hidden={true}
@@ -416,20 +416,20 @@ Array [
 exports[`Storyshots templates/Layout with search button 1`] = `
 Array [
   <header
-    className="makeStyles-root-2168 makeStyles-root-2171 makeStyles-header-2165"
+    className="makeStyles-root-2169 makeStyles-root-2172 makeStyles-header-2166"
   >
     <h1
-      className="makeStyles-root-2172 makeStyles-root-2173 makeStyles-title-2169"
+      className="makeStyles-root-2173 makeStyles-root-2174 makeStyles-title-2170"
     >
       れいあうと
     </h1>
     <div
-      className="makeStyles-rippleContainer-2174"
+      className="makeStyles-rippleContainer-2175"
       onMouseDown={[Function]}
       onMouseUp={[Function]}
     >
       <span
-        className="makeStyles-root-2177 makeStyles-clickable-2178 makeStyles-root-2176 makeStyles-headerItem-2170"
+        className="makeStyles-root-2178 makeStyles-clickable-2179 makeStyles-root-2177 makeStyles-headerItem-2171"
         onClick={[Function]}
       >
         <svg
@@ -451,16 +451,16 @@ Array [
     </div>
   </header>,
   <main
-    className="makeStyles-root-2164 makeStyles-root-2167"
+    className="makeStyles-root-2165 makeStyles-root-2168"
   />,
   <nav
-    className="makeStyles-root-2179 makeStyles-nav-2166"
+    className="makeStyles-root-2180 makeStyles-nav-2167"
   >
     <span
-      className="makeStyles-itemWrapper-2180"
+      className="makeStyles-itemWrapper-2181"
     >
       <div
-        className="makeStyles-rippleContainer-2174"
+        className="makeStyles-rippleContainer-2175"
         onMouseDown={[Function]}
         onMouseUp={[Function]}
         style={
@@ -476,7 +476,7 @@ Array [
           style={Object {}}
         >
           <span
-            className="makeStyles-root-2177 makeStyles-root-2181 makeStyles-root-2182"
+            className="makeStyles-root-2178 makeStyles-root-2182 makeStyles-root-2183"
           >
             <svg
               aria-hidden={true}
@@ -498,10 +498,10 @@ Array [
       </div>
     </span>
     <span
-      className="makeStyles-itemWrapper-2180"
+      className="makeStyles-itemWrapper-2181"
     >
       <div
-        className="makeStyles-rippleContainer-2174"
+        className="makeStyles-rippleContainer-2175"
         onMouseDown={[Function]}
         onMouseUp={[Function]}
         style={
@@ -517,7 +517,7 @@ Array [
           style={Object {}}
         >
           <span
-            className="makeStyles-root-2177 makeStyles-root-2181 makeStyles-root-2183"
+            className="makeStyles-root-2178 makeStyles-root-2182 makeStyles-root-2184"
           >
             <svg
               aria-hidden={true}
@@ -539,10 +539,10 @@ Array [
       </div>
     </span>
     <span
-      className="makeStyles-itemWrapper-2180"
+      className="makeStyles-itemWrapper-2181"
     >
       <div
-        className="makeStyles-rippleContainer-2174"
+        className="makeStyles-rippleContainer-2175"
         onMouseDown={[Function]}
         onMouseUp={[Function]}
         style={
@@ -558,7 +558,7 @@ Array [
           style={Object {}}
         >
           <span
-            className="makeStyles-root-2177 makeStyles-root-2181 makeStyles-root-2184"
+            className="makeStyles-root-2178 makeStyles-root-2182 makeStyles-root-2185"
           >
             <svg
               aria-hidden={true}
@@ -580,10 +580,10 @@ Array [
       </div>
     </span>
     <span
-      className="makeStyles-itemWrapper-2180"
+      className="makeStyles-itemWrapper-2181"
     >
       <div
-        className="makeStyles-rippleContainer-2174"
+        className="makeStyles-rippleContainer-2175"
         onMouseDown={[Function]}
         onMouseUp={[Function]}
         style={
@@ -599,7 +599,7 @@ Array [
           style={Object {}}
         >
           <span
-            className="makeStyles-root-2177 makeStyles-root-2181 makeStyles-root-2185"
+            className="makeStyles-root-2178 makeStyles-root-2182 makeStyles-root-2186"
           >
             <svg
               aria-hidden={true}

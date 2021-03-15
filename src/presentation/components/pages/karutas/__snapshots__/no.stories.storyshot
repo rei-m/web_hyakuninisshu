@@ -3,15 +3,15 @@
 exports[`Storyshots pages/karutas/no default 1`] = `
 Array [
   <header
-    className="makeStyles-root-1897 makeStyles-root-1900 makeStyles-header-1894"
+    className="makeStyles-root-1898 makeStyles-root-1901 makeStyles-header-1895"
   >
     <div
-      className="makeStyles-rippleContainer-1901"
+      className="makeStyles-rippleContainer-1902"
       onMouseDown={[Function]}
       onMouseUp={[Function]}
     >
       <span
-        className="makeStyles-root-1904 makeStyles-clickable-1905 makeStyles-root-1903 makeStyles-headerItem-1899"
+        className="makeStyles-root-1905 makeStyles-clickable-1906 makeStyles-root-1904 makeStyles-headerItem-1900"
         onClick={[Function]}
       >
         <svg
@@ -32,54 +32,54 @@ Array [
       </span>
     </div>
     <h1
-      className="makeStyles-root-1906 makeStyles-root-1907 makeStyles-title-1898"
+      className="makeStyles-root-1907 makeStyles-root-1908 makeStyles-title-1899"
     >
       百人一首 - 一番 -
     </h1>
   </header>,
   <main
-    className="makeStyles-root-1893 makeStyles-root-1896"
+    className="makeStyles-root-1894 makeStyles-root-1897"
   >
     <section
-      className="makeStyles-content-1891"
+      className="makeStyles-content-1892"
     >
       <h2
-        className="makeStyles-root-1906 makeStyles-root-1908 makeStyles-sectionTitle-1892"
+        className="makeStyles-root-1907 makeStyles-root-1909 makeStyles-sectionTitle-1893"
       >
         一番
       </h2>
       <div
-        className="makeStyles-root-1909"
+        className="makeStyles-root-1910"
       >
         <div
-          className="makeStyles-dummyResponsive-1911"
+          className="makeStyles-dummyResponsive-1912"
         >
           この欄は広告枠です
         </div>
       </div>
       <div
-        className="makeStyles-root-1904 makeStyles-container-1890"
+        className="makeStyles-root-1905 makeStyles-container-1891"
       >
         <article
-          className="makeStyles-root-1913"
+          className="makeStyles-root-1914"
         >
           <h3
-            className="makeStyles-root-1906 makeStyles-root-1919 "
+            className="makeStyles-root-1907 makeStyles-root-1920 "
           >
             <span
-              className="makeStyles-root-1920 makeStyles-root-1921 "
+              className="makeStyles-root-1921 makeStyles-root-1922 "
             >
               一番
             </span>
              / 
             <span
-              className="makeStyles-root-1920 makeStyles-root-1922 "
+              className="makeStyles-root-1921 makeStyles-root-1923 "
             >
               天智天皇
             </span>
           </h3>
           <div
-            className="gatsby-image-wrapper gatsby-image-wrapper-constrained makeStyles-karutaImage-1915"
+            className="gatsby-image-wrapper gatsby-image-wrapper-constrained makeStyles-karutaImage-1916"
             data-gatsby-image-wrapper=""
             style={
               Object {
@@ -189,25 +189,25 @@ Array [
             />
           </div>
           <div
-            className="makeStyles-contentContainer-1916"
+            className="makeStyles-contentContainer-1917"
           >
             <h4
-              className="makeStyles-root-1906 makeStyles-root-1923 makeStyles-subTitle-1914"
+              className="makeStyles-root-1907 makeStyles-root-1924 makeStyles-subTitle-1915"
             >
               原文
             </h4>
             <p
-              className="makeStyles-root-1920 makeStyles-root-1925 makeStyles-root-1924"
+              className="makeStyles-root-1921 makeStyles-root-1926 makeStyles-root-1925"
             >
               秋の田の かりほの庵の 苫をあらみ
               <br />
               わが衣手は 露にぬれつつ
             </p>
             <p
-              className="makeStyles-root-1920 makeStyles-root-1928 makeStyles-root-1926"
+              className="makeStyles-root-1921 makeStyles-root-1929 makeStyles-root-1927"
             >
               <span
-                className="makeStyles-kimariji-1927"
+                className="makeStyles-kimariji-1928"
               >
                 あ
               </span>
@@ -217,15 +217,15 @@ Array [
             </p>
           </div>
           <div
-            className="makeStyles-contentContainer-1916"
+            className="makeStyles-contentContainer-1917"
           >
             <h4
-              className="makeStyles-root-1906 makeStyles-root-1929 makeStyles-subTitle-1914"
+              className="makeStyles-root-1907 makeStyles-root-1930 makeStyles-subTitle-1915"
             >
               訳
             </h4>
             <p
-              className="makeStyles-root-1920 makeStyles-root-1930 makeStyles-translation-1917"
+              className="makeStyles-root-1921 makeStyles-root-1931 makeStyles-translation-1918"
             >
               秋の田の側につくった仮小屋に泊まってみると、屋根をふいた苫の目があらいので、その隙間から忍びこむ冷たい夜露が、私の着物の袖をすっかりと濡らしてしまっているなぁ。
             </p>
@@ -235,13 +235,13 @@ Array [
     </section>
   </main>,
   <nav
-    className="makeStyles-root-1931 makeStyles-nav-1895"
+    className="makeStyles-root-1932 makeStyles-nav-1896"
   >
     <span
-      className="makeStyles-itemWrapper-1932"
+      className="makeStyles-itemWrapper-1933"
     >
       <div
-        className="makeStyles-rippleContainer-1901"
+        className="makeStyles-rippleContainer-1902"
         onMouseDown={[Function]}
         onMouseUp={[Function]}
         style={
@@ -257,7 +257,7 @@ Array [
           style={Object {}}
         >
           <span
-            className="makeStyles-root-1904 makeStyles-root-1933 makeStyles-root-1934"
+            className="makeStyles-root-1905 makeStyles-root-1934 makeStyles-root-1935"
           >
             <svg
               aria-hidden={true}
@@ -279,10 +279,10 @@ Array [
       </div>
     </span>
     <span
-      className="makeStyles-itemWrapper-1932"
+      className="makeStyles-itemWrapper-1933"
     >
       <div
-        className="makeStyles-rippleContainer-1901"
+        className="makeStyles-rippleContainer-1902"
         onMouseDown={[Function]}
         onMouseUp={[Function]}
         style={
@@ -298,7 +298,7 @@ Array [
           style={Object {}}
         >
           <span
-            className="makeStyles-root-1904 makeStyles-root-1933 makeStyles-root-1935"
+            className="makeStyles-root-1905 makeStyles-root-1934 makeStyles-root-1936"
           >
             <svg
               aria-hidden={true}
@@ -320,10 +320,10 @@ Array [
       </div>
     </span>
     <span
-      className="makeStyles-itemWrapper-1932"
+      className="makeStyles-itemWrapper-1933"
     >
       <div
-        className="makeStyles-rippleContainer-1901"
+        className="makeStyles-rippleContainer-1902"
         onMouseDown={[Function]}
         onMouseUp={[Function]}
         style={
@@ -339,7 +339,7 @@ Array [
           style={Object {}}
         >
           <span
-            className="makeStyles-root-1904 makeStyles-root-1933 makeStyles-root-1936"
+            className="makeStyles-root-1905 makeStyles-root-1934 makeStyles-root-1937"
           >
             <svg
               aria-hidden={true}
@@ -361,10 +361,10 @@ Array [
       </div>
     </span>
     <span
-      className="makeStyles-itemWrapper-1932"
+      className="makeStyles-itemWrapper-1933"
     >
       <div
-        className="makeStyles-rippleContainer-1901"
+        className="makeStyles-rippleContainer-1902"
         onMouseDown={[Function]}
         onMouseUp={[Function]}
         style={
@@ -380,7 +380,7 @@ Array [
           style={Object {}}
         >
           <span
-            className="makeStyles-root-1904 makeStyles-root-1933 makeStyles-root-1937"
+            className="makeStyles-root-1905 makeStyles-root-1934 makeStyles-root-1938"
           >
             <svg
               aria-hidden={true}

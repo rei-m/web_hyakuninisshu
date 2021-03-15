@@ -8,9 +8,26 @@ const karutaImage = require("@src/presentation/images/karuta_001.jpg");
 const tatamiImage  = require("@src/presentation/images/tatami_part.png");
 const appIconImage  = require("@src/presentation/images/android_app_icon.png");
 const appIconReaderImage  = require("@src/presentation/images/android_app_reader_icon.png");
+const appStoreBannerImage  = require("@src/presentation/images/app_store_banner.png");
 
 const linkActionHandler = action("Link:");
 const navigateActionHandler = action("NavigateTo:");
+
+const createMockGatsbyImageData = (src, sizes) => ({
+  childImageSharp: {
+    gatsbyImageData: {
+      layout: "constrained",
+      backgroundColor: "#a8d878",
+      images: {
+        fallback: {
+          src,
+          srcSet: "",
+          sizes,
+        }
+      },
+    },
+  },
+});
 
 module.exports = {
   graphql: (args) => args,
@@ -42,55 +59,13 @@ module.exports = {
     }
     if (query.indexOf("query CorrectImageQuery") > -1) {
       return {
-        correctImage: {
-          childImageSharp: {
-            gatsbyImageData: {
-              layout: "constrained",
-              backgroundColor: "#a8d878",
-              images: {
-                fallback: {
-                  src: correctImage,
-                  srcSet: "",
-                  sizes: "(max-width: 300px) 100vw, 200px",
-                }
-              },
-            },
-          },
-        },
-        incorrectImage: {
-          childImageSharp: {
-            gatsbyImageData: {
-              layout: "constrained",
-              backgroundColor: "#a8d878",
-              images: {
-                fallback: {
-                  src: incorrectImage,
-                  srcSet: "",
-                  sizes: "(max-width: 300px) 100vw, 200px",
-                }
-              },
-            },
-          },
-        },
+        correctImage: createMockGatsbyImageData(correctImage, "(max-width: 300px) 100vw, 200px"),
+        incorrectImage: createMockGatsbyImageData(incorrectImage, "(max-width: 300px) 100vw, 200px"),
       };
     }
     if (query.indexOf("query DogezaImageQuery") > -1) {
       return {
-        dogezaImage: {
-          childImageSharp: {
-            gatsbyImageData: {
-              layout: "constrained",
-              backgroundColor: "#a8d878",
-              images: {
-                fallback: {
-                  src: dogezaImage,
-                  srcSet: "",
-                  sizes: "(max-width: 200px) 200px, 200px",
-                }
-              },
-            },
-          },
-        },
+        dogezaImage: createMockGatsbyImageData(dogezaImage, "(max-width: 200px) 200px, 200px"),
       };
     }
     if (query.indexOf("query TatamiImageQuery") > -1) {
@@ -102,35 +77,16 @@ module.exports = {
     }
     if (query.indexOf("query PlayStoreImageQuery1") > -1) {
       return {
-        storeImage1: {
-          childImageSharp: {
-            gatsbyImageData: {
-              layout: "constrained",
-              backgroundColor: "#a8d878",
-              images: {
-                fallback: {
-                  src: appIconImage,
-                  srcSet: "",
-                  sizes: "(max-width: 200px) 200px, 200px",
-                }
-              },
-            },
-          },
-        },
-        storeImage2: {
-          childImageSharp: {
-            gatsbyImageData: {
-              layout: "constrained",
-              backgroundColor: "#a8d878",
-              images: {
-                fallback: {
-                  src: appIconReaderImage,
-                  srcSet: "",
-                  sizes: "(max-width: 200px) 200px, 200px",
-                }
-              },
-            },
-          },
+        storeImage1: createMockGatsbyImageData(appIconImage, "(max-width: 200px) 200px, 200px"),
+        storeImage2: createMockGatsbyImageData(appIconReaderImage, "(max-width: 200px) 200px, 200px"),
+      };
+    }
+    if (query.indexOf("query AppStoreImageQuery1") > -1) {
+      return {
+        storeImage1: createMockGatsbyImageData(appIconImage, "(max-width: 200px) 200px, 200px"),
+        storeImage2: createMockGatsbyImageData(appIconReaderImage, "(max-width: 200px) 200px, 200px"),
+        appBannerImage: {
+          publicURL: appStoreBannerImage,
         },
       };
     }
@@ -139,21 +95,9 @@ module.exports = {
         karutaImages: {
           edges: Array.from(Array(100).keys()).map(i => ({
             node: {
-              childImageSharp: {
-                gatsbyImageData: {
-                  layout: "constrained",
-                  backgroundColor: "#a8d878",
-                  images: {
-                    fallback: {
-                      src: appIconReaderImage,
-                      srcSet: "",
-                      sizes: "(max-width: 200px) 100vw, 200px",
-                    }
-                  },
-                }
-              },
+              ...createMockGatsbyImageData(karutaImage, "(max-width: 200px) 100vw, 200px"),
               name: `karuta_${("00" + (i + 1)).slice(-3)}`
-            }
+            },
           }))
         }
       };

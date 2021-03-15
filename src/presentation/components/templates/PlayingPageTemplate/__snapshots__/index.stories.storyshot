@@ -3,19 +3,19 @@
 exports[`Storyshots templates/PlayingPageTemplate default 1`] = `
 Array [
   <header
-    className="makeStyles-root-2193 makeStyles-root-2196 makeStyles-header-2190"
+    className="makeStyles-root-2194 makeStyles-root-2197 makeStyles-header-2191"
   >
     <h1
-      className="makeStyles-root-2197 makeStyles-root-2198 makeStyles-title-2194"
+      className="makeStyles-root-2198 makeStyles-root-2199 makeStyles-title-2195"
     >
       PlayingPageTemplate
     </h1>
   </header>,
   <main
-    className="makeStyles-root-2189 makeStyles-root-2192"
+    className="makeStyles-root-2190 makeStyles-root-2193"
   >
     <div
-      className="makeStyles-content-2188"
+      className="makeStyles-content-2189"
       style={
         Object {
           "backgroundImage": "url(test-file-stub)",

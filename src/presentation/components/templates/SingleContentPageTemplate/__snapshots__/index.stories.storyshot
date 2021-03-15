@@ -3,30 +3,30 @@
 exports[`Storyshots templates/SingleContentPageTemplate default 1`] = `
 Array [
   <header
-    className="makeStyles-root-2205 makeStyles-root-2208 makeStyles-header-2202"
+    className="makeStyles-root-2206 makeStyles-root-2209 makeStyles-header-2203"
   >
     <h1
-      className="makeStyles-root-2209 makeStyles-root-2210 makeStyles-title-2206"
+      className="makeStyles-root-2210 makeStyles-root-2211 makeStyles-title-2207"
     >
       SingleContentPageTemplate
     </h1>
   </header>,
   <main
-    className="makeStyles-root-2201 makeStyles-root-2204"
+    className="makeStyles-root-2202 makeStyles-root-2205"
   >
     <section
-      className="makeStyles-content-2199"
+      className="makeStyles-content-2200"
     >
       <h2
-        className="makeStyles-root-2209 makeStyles-root-2211 makeStyles-sectionTitle-2200"
+        className="makeStyles-root-2210 makeStyles-root-2212 makeStyles-sectionTitle-2201"
       >
         コンテンツが1つのページ
       </h2>
       <div
-        className="makeStyles-root-2212"
+        className="makeStyles-root-2213"
       >
         <div
-          className="makeStyles-dummyResponsive-2214"
+          className="makeStyles-dummyResponsive-2215"
         >
           この欄は広告枠です
         </div>
@@ -37,13 +37,13 @@ Array [
     </section>
   </main>,
   <nav
-    className="makeStyles-root-2216 makeStyles-nav-2203"
+    className="makeStyles-root-2217 makeStyles-nav-2204"
   >
     <span
-      className="makeStyles-itemWrapper-2217"
+      className="makeStyles-itemWrapper-2218"
     >
       <div
-        className="makeStyles-rippleContainer-2218"
+        className="makeStyles-rippleContainer-2219"
         onMouseDown={[Function]}
         onMouseUp={[Function]}
         style={
@@ -59,7 +59,7 @@ Array [
           style={Object {}}
         >
           <span
-            className="makeStyles-root-2222 makeStyles-root-2220 makeStyles-root-2221"
+            className="makeStyles-root-2223 makeStyles-root-2221 makeStyles-root-2222"
           >
             <svg
               aria-hidden={true}
@@ -81,10 +81,10 @@ Array [
       </div>
     </span>
     <span
-      className="makeStyles-itemWrapper-2217"
+      className="makeStyles-itemWrapper-2218"
     >
       <div
-        className="makeStyles-rippleContainer-2218"
+        className="makeStyles-rippleContainer-2219"
         onMouseDown={[Function]}
         onMouseUp={[Function]}
         style={
@@ -100,7 +100,7 @@ Array [
           style={Object {}}
         >
           <span
-            className="makeStyles-root-2222 makeStyles-root-2220 makeStyles-root-2224"
+            className="makeStyles-root-2223 makeStyles-root-2221 makeStyles-root-2225"
           >
             <svg
               aria-hidden={true}
@@ -122,10 +122,10 @@ Array [
       </div>
     </span>
     <span
-      className="makeStyles-itemWrapper-2217"
+      className="makeStyles-itemWrapper-2218"
     >
       <div
-        className="makeStyles-rippleContainer-2218"
+        className="makeStyles-rippleContainer-2219"
         onMouseDown={[Function]}
         onMouseUp={[Function]}
         style={
@@ -141,7 +141,7 @@ Array [
           style={Object {}}
         >
           <span
-            className="makeStyles-root-2222 makeStyles-root-2220 makeStyles-root-2225"
+            className="makeStyles-root-2223 makeStyles-root-2221 makeStyles-root-2226"
           >
             <svg
               aria-hidden={true}
@@ -163,10 +163,10 @@ Array [
       </div>
     </span>
     <span
-      className="makeStyles-itemWrapper-2217"
+      className="makeStyles-itemWrapper-2218"
     >
       <div
-        className="makeStyles-rippleContainer-2218"
+        className="makeStyles-rippleContainer-2219"
         onMouseDown={[Function]}
         onMouseUp={[Function]}
         style={
@@ -182,7 +182,7 @@ Array [
           style={Object {}}
         >
           <span
-            className="makeStyles-root-2222 makeStyles-root-2220 makeStyles-root-2226"
+            className="makeStyles-root-2223 makeStyles-root-2221 makeStyles-root-2227"
           >
             <svg
               aria-hidden={true}

@@ -19,12 +19,13 @@ export interface QueryData {
       gatsbyImageData: IGatsbyImageData;
     };
   };
+  appBannerImage: {
+    publicURL: string;
+  };
 }
-const PLAY_STORE_URL = {
-  normal:
-    'https://play.google.com/store/apps/details?id=me.rei_m.hyakuninisshu&pcampaignid=pcampaignidMKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1',
-  reader:
-    'https://play.google.com/store/apps/details?id=net.hyakuninanki.reader&pcampaignid=pcampaignidMKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1',
+const APP_STORE_URL = {
+  normal: 'https://apple.co/3rTcFqq',
+  reader: 'https://apple.co/3rTcFqq',
 } as const;
 
 const useStyles = makeStyles<ThemeInterface>(() => ({
@@ -37,10 +38,10 @@ const useStyles = makeStyles<ThemeInterface>(() => ({
   },
 }));
 
-const PlayStoreBanner = ({ type = 'normal' }: Props) => {
+const AppStoreBanner = ({ type = 'normal' }: Props) => {
   const result: QueryData = useStaticQuery(
     graphql`
-      query PlayStoreImageQuery1 {
+      query AppStoreImageQuery1 {
         storeImage1: file(relativePath: { eq: "android_app_icon.png" }) {
           childImageSharp {
             gatsbyImageData(width: 120)
@@ -51,12 +52,15 @@ const PlayStoreBanner = ({ type = 'normal' }: Props) => {
             gatsbyImageData(width: 120)
           }
         }
+        appBannerImage: file(relativePath: { eq: "app_store_banner.svg" }) {
+          publicURL
+        }
       }
     `
   );
   const classes = useStyles();
   return (
-    <a href={PLAY_STORE_URL[type]} target="_blank" rel="noreferrer" className={classes.root}>
+    <a href={APP_STORE_URL[type]} target="_blank" rel="noreferrer" className={classes.root}>
       <GatsbyImage
         image={
           type === 'normal'
@@ -67,12 +71,12 @@ const PlayStoreBanner = ({ type = 'normal' }: Props) => {
         alt="百人一首 簡単に暗記"
       />
       <img
-        alt={`Google Play で手に入れよう`}
-        src={`https://play.google.com/intl/ja/badges/static/images/badges/ja_badge_web_generic.png`}
-        style={{ width: 140 }}
+        alt={`App Storeからダウンロード`}
+        src={result.appBannerImage.publicURL}
+        style={{ width: 120, marginTop: 8 }}
       />
     </a>
   );
 };
 
-export default PlayStoreBanner;
+export default AppStoreBanner;

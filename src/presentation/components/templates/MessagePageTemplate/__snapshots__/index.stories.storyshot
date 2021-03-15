@@ -2,7 +2,7 @@
 
 exports[`Storyshots templates/MessagePageTemplate default 1`] = `
 <div
-  className="makeStyles-root-2186"
+  className="makeStyles-root-2187"
 >
   Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore odio corporis modi incidunt sed temporibus qui cum veritatis animi, praesentium culpa quaerat vero dolores aut ratione eos error distinctio nulla.
 </div>
