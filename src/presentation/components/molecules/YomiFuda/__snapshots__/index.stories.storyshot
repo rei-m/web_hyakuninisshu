@@ -21,54 +21,138 @@ exports[`Storyshots molecules/YomiFuda with anim 1`] = `
       >
         秋
       </span>
-      <span>
+      <span
+        style={
+          Object {
+            "display": "inline-block",
+          }
+        }
+      >
         　
       </span>
-      <span>
+      <span
+        style={
+          Object {
+            "display": "inline-block",
+          }
+        }
+      >
         　
       </span>
-      <span>
+      <span
+        style={
+          Object {
+            "display": "inline-block",
+          }
+        }
+      >
         　
       </span>
     </span>
     <span
       className="makeStyles-root-390 makeStyles-root-395 makeStyles-root-388 makeStyles-root-394 makeStyles-second-382 makeStyles-second-385"
     >
-      <span>
+      <span
+        style={
+          Object {
+            "display": "inline-block",
+          }
+        }
+      >
         　
       </span>
-      <span>
+      <span
+        style={
+          Object {
+            "display": "inline-block",
+          }
+        }
+      >
         　
       </span>
-      <span>
+      <span
+        style={
+          Object {
+            "display": "inline-block",
+          }
+        }
+      >
         　
       </span>
-      <span>
+      <span
+        style={
+          Object {
+            "display": "inline-block",
+          }
+        }
+      >
         　
       </span>
-      <span>
+      <span
+        style={
+          Object {
+            "display": "inline-block",
+          }
+        }
+      >
         　
       </span>
-      <span>
+      <span
+        style={
+          Object {
+            "display": "inline-block",
+          }
+        }
+      >
         　
       </span>
     </span>
     <span
       className="makeStyles-root-390 makeStyles-root-397 makeStyles-root-388 makeStyles-root-396 makeStyles-third-383 makeStyles-third-386"
     >
-      <span>
+      <span
+        style={
+          Object {
+            "display": "inline-block",
+          }
+        }
+      >
         　
       </span>
-      <span>
+      <span
+        style={
+          Object {
+            "display": "inline-block",
+          }
+        }
+      >
         　
       </span>
-      <span>
+      <span
+        style={
+          Object {
+            "display": "inline-block",
+          }
+        }
+      >
         　
       </span>
-      <span>
+      <span
+        style={
+          Object {
+            "display": "inline-block",
+          }
+        }
+      >
         　
       </span>
-      <span>
+      <span
+        style={
+          Object {
+            "display": "inline-block",
+          }
+        }
+      >
         　
       </span>
     </span>

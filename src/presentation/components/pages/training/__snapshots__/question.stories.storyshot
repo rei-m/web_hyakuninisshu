@@ -79,54 +79,138 @@ Array [
                 >
                   秋
                 </span>
-                <span>
+                <span
+                  style={
+                    Object {
+                      "display": "inline-block",
+                    }
+                  }
+                >
                   　
                 </span>
-                <span>
+                <span
+                  style={
+                    Object {
+                      "display": "inline-block",
+                    }
+                  }
+                >
                   　
                 </span>
-                <span>
+                <span
+                  style={
+                    Object {
+                      "display": "inline-block",
+                    }
+                  }
+                >
                   　
                 </span>
               </span>
               <span
                 className="makeStyles-root-2012 makeStyles-root-2028 makeStyles-root-2022 makeStyles-root-2027 makeStyles-second-2017 makeStyles-second-2020"
               >
-                <span>
+                <span
+                  style={
+                    Object {
+                      "display": "inline-block",
+                    }
+                  }
+                >
                   　
                 </span>
-                <span>
+                <span
+                  style={
+                    Object {
+                      "display": "inline-block",
+                    }
+                  }
+                >
                   　
                 </span>
-                <span>
+                <span
+                  style={
+                    Object {
+                      "display": "inline-block",
+                    }
+                  }
+                >
                   　
                 </span>
-                <span>
+                <span
+                  style={
+                    Object {
+                      "display": "inline-block",
+                    }
+                  }
+                >
                   　
                 </span>
-                <span>
+                <span
+                  style={
+                    Object {
+                      "display": "inline-block",
+                    }
+                  }
+                >
                   　
                 </span>
-                <span>
+                <span
+                  style={
+                    Object {
+                      "display": "inline-block",
+                    }
+                  }
+                >
                   　
                 </span>
               </span>
               <span
                 className="makeStyles-root-2012 makeStyles-root-2030 makeStyles-root-2022 makeStyles-root-2029 makeStyles-third-2018 makeStyles-third-2021"
               >
-                <span>
+                <span
+                  style={
+                    Object {
+                      "display": "inline-block",
+                    }
+                  }
+                >
                   　
                 </span>
-                <span>
+                <span
+                  style={
+                    Object {
+                      "display": "inline-block",
+                    }
+                  }
+                >
                   　
                 </span>
-                <span>
+                <span
+                  style={
+                    Object {
+                      "display": "inline-block",
+                    }
+                  }
+                >
                   　
                 </span>
-                <span>
+                <span
+                  style={
+                    Object {
+                      "display": "inline-block",
+                    }
+                  }
+                >
                   　
                 </span>
-                <span>
+                <span
+                  style={
+                    Object {
+                      "display": "inline-block",
+                    }
+                  }
+                >
                   　
                 </span>
               </span>

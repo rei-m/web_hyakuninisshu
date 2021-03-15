@@ -11,7 +11,7 @@ export type Props = {
 
 const Word = ({ text, duration, className = '', onAnimationEnd }: Props) =>
   text === SPACE ? (
-    <span>{text}</span>
+    <span style={{ display: 'inline-block' }}>{SPACE}</span>
   ) : (
     <FadeInFrame duration={duration} onAnimationEnd={onAnimationEnd} className={className}>
       {text}

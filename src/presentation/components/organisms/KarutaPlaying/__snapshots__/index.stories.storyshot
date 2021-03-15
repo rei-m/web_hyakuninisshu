@@ -32,54 +32,138 @@ exports[`Storyshots organisms/KarutaPlaying answered 1`] = `
           >
             秋
           </span>
-          <span>
+          <span
+            style={
+              Object {
+                "display": "inline-block",
+              }
+            }
+          >
             　
           </span>
-          <span>
+          <span
+            style={
+              Object {
+                "display": "inline-block",
+              }
+            }
+          >
             　
           </span>
-          <span>
+          <span
+            style={
+              Object {
+                "display": "inline-block",
+              }
+            }
+          >
             　
           </span>
         </span>
         <span
           className="makeStyles-root-589 makeStyles-root-605 makeStyles-root-599 makeStyles-root-604 makeStyles-second-594 makeStyles-second-597"
         >
-          <span>
+          <span
+            style={
+              Object {
+                "display": "inline-block",
+              }
+            }
+          >
             　
           </span>
-          <span>
+          <span
+            style={
+              Object {
+                "display": "inline-block",
+              }
+            }
+          >
             　
           </span>
-          <span>
+          <span
+            style={
+              Object {
+                "display": "inline-block",
+              }
+            }
+          >
             　
           </span>
-          <span>
+          <span
+            style={
+              Object {
+                "display": "inline-block",
+              }
+            }
+          >
             　
           </span>
-          <span>
+          <span
+            style={
+              Object {
+                "display": "inline-block",
+              }
+            }
+          >
             　
           </span>
-          <span>
+          <span
+            style={
+              Object {
+                "display": "inline-block",
+              }
+            }
+          >
             　
           </span>
         </span>
         <span
           className="makeStyles-root-589 makeStyles-root-607 makeStyles-root-599 makeStyles-root-606 makeStyles-third-595 makeStyles-third-598"
         >
-          <span>
+          <span
+            style={
+              Object {
+                "display": "inline-block",
+              }
+            }
+          >
             　
           </span>
-          <span>
+          <span
+            style={
+              Object {
+                "display": "inline-block",
+              }
+            }
+          >
             　
           </span>
-          <span>
+          <span
+            style={
+              Object {
+                "display": "inline-block",
+              }
+            }
+          >
             　
           </span>
-          <span>
+          <span
+            style={
+              Object {
+                "display": "inline-block",
+              }
+            }
+          >
             　
           </span>
-          <span>
+          <span
+            style={
+              Object {
+                "display": "inline-block",
+              }
+            }
+          >
             　
           </span>
         </span>
@@ -340,54 +424,138 @@ exports[`Storyshots organisms/KarutaPlaying in answer 1`] = `
           >
             秋
           </span>
-          <span>
+          <span
+            style={
+              Object {
+                "display": "inline-block",
+              }
+            }
+          >
             　
           </span>
-          <span>
+          <span
+            style={
+              Object {
+                "display": "inline-block",
+              }
+            }
+          >
             　
           </span>
-          <span>
+          <span
+            style={
+              Object {
+                "display": "inline-block",
+              }
+            }
+          >
             　
           </span>
         </span>
         <span
           className="makeStyles-root-523 makeStyles-root-539 makeStyles-root-533 makeStyles-root-538 makeStyles-second-528 makeStyles-second-531"
         >
-          <span>
+          <span
+            style={
+              Object {
+                "display": "inline-block",
+              }
+            }
+          >
             　
           </span>
-          <span>
+          <span
+            style={
+              Object {
+                "display": "inline-block",
+              }
+            }
+          >
             　
           </span>
-          <span>
+          <span
+            style={
+              Object {
+                "display": "inline-block",
+              }
+            }
+          >
             　
           </span>
-          <span>
+          <span
+            style={
+              Object {
+                "display": "inline-block",
+              }
+            }
+          >
             　
           </span>
-          <span>
+          <span
+            style={
+              Object {
+                "display": "inline-block",
+              }
+            }
+          >
             　
           </span>
-          <span>
+          <span
+            style={
+              Object {
+                "display": "inline-block",
+              }
+            }
+          >
             　
           </span>
         </span>
         <span
           className="makeStyles-root-523 makeStyles-root-541 makeStyles-root-533 makeStyles-root-540 makeStyles-third-529 makeStyles-third-532"
         >
-          <span>
+          <span
+            style={
+              Object {
+                "display": "inline-block",
+              }
+            }
+          >
             　
           </span>
-          <span>
+          <span
+            style={
+              Object {
+                "display": "inline-block",
+              }
+            }
+          >
             　
           </span>
-          <span>
+          <span
+            style={
+              Object {
+                "display": "inline-block",
+              }
+            }
+          >
             　
           </span>
-          <span>
+          <span
+            style={
+              Object {
+                "display": "inline-block",
+              }
+            }
+          >
             　
           </span>
-          <span>
+          <span
+            style={
+              Object {
+                "display": "inline-block",
+              }
+            }
+          >
             　
           </span>
         </span>
