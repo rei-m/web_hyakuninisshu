@@ -1,5 +1,5 @@
 import React, { useCallback } from 'react';
-import { RouteComponentProps } from '@reach/router';
+import { navigate } from 'gatsby';
 import { useDispatch, useSelector } from 'react-redux';
 import makeStyles from '@material-ui/core/styles/makeStyles';
 import { paths } from '@src/presentation/routes';
@@ -14,7 +14,7 @@ import { KarutaCollection } from '@src/domain/models';
 
 export type Props = {
   karutaCollection: KarutaCollection;
-} & Pick<RouteComponentProps, 'navigate'>;
+};
 
 export type PresenterProps = {
   karutaCollection: KarutaCollection;
@@ -66,7 +66,7 @@ export const Presenter = ({
   );
 };
 
-export const Container = ({ karutaCollection, navigate, presenter }: ContainerProps) => {
+export const Container = ({ karutaCollection, presenter }: ContainerProps) => {
   const dispatch = useDispatch();
   const { uiActionCreator } = useDiContainer();
   const filterOpen = useSelector<GlobalState, boolean>(

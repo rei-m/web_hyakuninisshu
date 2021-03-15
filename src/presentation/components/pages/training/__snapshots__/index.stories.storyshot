@@ -1,0 +1,628 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Storyshots pages/training default 1`] = `
+Array [
+  <header
+    className="makeStyles-root-1948 makeStyles-root-1951 makeStyles-header-1945"
+  >
+    <div
+      className="makeStyles-rippleContainer-1952"
+      onMouseDown={[Function]}
+      onMouseUp={[Function]}
+    >
+      <span
+        className="makeStyles-root-1955 makeStyles-clickable-1956 makeStyles-root-1954 makeStyles-headerItem-1950"
+        onClick={[Function]}
+      >
+        <svg
+          aria-hidden={true}
+          className="MuiSvgIcon-root"
+          focusable="false"
+          style={
+            Object {
+              "fontSize": "2.4rem",
+            }
+          }
+          viewBox="0 0 24 24"
+        >
+          <path
+            d="M20 11H7.83l5.59-5.59L12 4l-8 8 8 8 1.41-1.41L7.83 13H20v-2z"
+          />
+        </svg>
+      </span>
+    </div>
+    <h1
+      className="makeStyles-root-1957 makeStyles-root-1958 makeStyles-title-1949"
+    >
+      百人一首 - 練習 -
+    </h1>
+  </header>,
+  <main
+    className="makeStyles-root-1944 makeStyles-root-1947"
+  >
+    <section
+      className="makeStyles-content-1942"
+    >
+      <h2
+        className="makeStyles-root-1957 makeStyles-root-1959 makeStyles-sectionTitle-1943"
+      >
+        出題設定
+      </h2>
+      <div
+        className="makeStyles-root-1960"
+      >
+        <div
+          className="makeStyles-dummyResponsive-1962"
+        >
+          この欄は広告枠です
+        </div>
+      </div>
+      <div
+        className="makeStyles-formContainer-1939"
+      >
+        <form
+          className="makeStyles-form-1964"
+        >
+          <div
+            className="makeStyles-field-1966"
+          >
+            <div
+              className="makeStyles-labelContainer-1968"
+            >
+              <label
+                className="makeStyles-label-1969"
+              >
+                出題範囲
+              </label>
+            </div>
+            <div
+              className="makeStyles-root-1955"
+            >
+              <div
+                className="MuiInputBase-root MuiInput-root MuiInput-underline makeStyles-select-1967"
+                onClick={[Function]}
+              >
+                <div
+                  aria-haspopup="listbox"
+                  aria-labelledby="mui-component-select-rangeFrom"
+                  className="MuiSelect-root MuiSelect-select MuiSelect-selectMenu MuiInputBase-input MuiInput-input"
+                  id="mui-component-select-rangeFrom"
+                  onBlur={[Function]}
+                  onFocus={[Function]}
+                  onKeyDown={[Function]}
+                  onMouseDown={[Function]}
+                  role="button"
+                  tabIndex={0}
+                >
+                  一番
+                </div>
+                <input
+                  aria-hidden={true}
+                  className="MuiSelect-nativeInput"
+                  id="id-rangeFrom"
+                  name="rangeFrom"
+                  onAnimationStart={[Function]}
+                  onChange={[Function]}
+                  tabIndex={-1}
+                  value="1"
+                />
+                <svg
+                  aria-hidden={true}
+                  className="MuiSvgIcon-root MuiSelect-icon"
+                  focusable="false"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    d="M7 10l5 5 5-5z"
+                  />
+                </svg>
+              </div>
+              <span
+                className="makeStyles-separate-1970"
+              >
+                〜
+              </span>
+              <div
+                className="MuiInputBase-root MuiInput-root MuiInput-underline makeStyles-select-1967"
+                onClick={[Function]}
+              >
+                <div
+                  aria-haspopup="listbox"
+                  aria-labelledby="mui-component-select-rangeTo"
+                  className="MuiSelect-root MuiSelect-select MuiSelect-selectMenu MuiInputBase-input MuiInput-input"
+                  id="mui-component-select-rangeTo"
+                  onBlur={[Function]}
+                  onFocus={[Function]}
+                  onKeyDown={[Function]}
+                  onMouseDown={[Function]}
+                  role="button"
+                  tabIndex={0}
+                >
+                  百番
+                </div>
+                <input
+                  aria-hidden={true}
+                  className="MuiSelect-nativeInput"
+                  id="id-rangeTo"
+                  name="rangeTo"
+                  onAnimationStart={[Function]}
+                  onChange={[Function]}
+                  tabIndex={-1}
+                  value="100"
+                />
+                <svg
+                  aria-hidden={true}
+                  className="MuiSvgIcon-root MuiSelect-icon"
+                  focusable="false"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    d="M7 10l5 5 5-5z"
+                  />
+                </svg>
+              </div>
+            </div>
+          </div>
+          <div
+            className="MuiFormControl-root makeStyles-formControl-1972 makeStyles-field-1966"
+          >
+            <label
+              className="MuiFormLabel-root MuiInputLabel-root makeStyles-label-1973 MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiFormLabel-filled"
+              data-shrink={true}
+              htmlFor="id-kimariji"
+            >
+              決まり字
+            </label>
+            <div
+              className="MuiInputBase-root MuiInput-root MuiInput-underline makeStyles-select-1974 MuiInputBase-formControl MuiInput-formControl"
+              onClick={[Function]}
+            >
+              <div
+                aria-haspopup="listbox"
+                aria-labelledby="mui-component-select-kimariji"
+                className="MuiSelect-root MuiSelect-select MuiSelect-selectMenu MuiInputBase-input MuiInput-input"
+                id="mui-component-select-kimariji"
+                onBlur={[Function]}
+                onFocus={[Function]}
+                onKeyDown={[Function]}
+                onMouseDown={[Function]}
+                role="button"
+                tabIndex={0}
+              >
+                指定しない
+              </div>
+              <input
+                aria-hidden={true}
+                className="MuiSelect-nativeInput"
+                id="id-kimariji"
+                name="kimariji"
+                onAnimationStart={[Function]}
+                onChange={[Function]}
+                required={false}
+                tabIndex={-1}
+                value="none"
+              />
+              <svg
+                aria-hidden={true}
+                className="MuiSvgIcon-root MuiSelect-icon"
+                focusable="false"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M7 10l5 5 5-5z"
+                />
+              </svg>
+            </div>
+          </div>
+          <div
+            className="MuiFormControl-root makeStyles-formControl-1972 makeStyles-field-1966"
+          >
+            <label
+              className="MuiFormLabel-root MuiInputLabel-root makeStyles-label-1973 MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiFormLabel-filled"
+              data-shrink={true}
+              htmlFor="id-color"
+            >
+              五色
+            </label>
+            <div
+              className="MuiInputBase-root MuiInput-root MuiInput-underline makeStyles-select-1974 MuiInputBase-formControl MuiInput-formControl"
+              onClick={[Function]}
+            >
+              <div
+                aria-haspopup="listbox"
+                aria-labelledby="mui-component-select-color"
+                className="MuiSelect-root MuiSelect-select MuiSelect-selectMenu MuiInputBase-input MuiInput-input"
+                id="mui-component-select-color"
+                onBlur={[Function]}
+                onFocus={[Function]}
+                onKeyDown={[Function]}
+                onMouseDown={[Function]}
+                role="button"
+                tabIndex={0}
+              >
+                指定しない
+              </div>
+              <input
+                aria-hidden={true}
+                className="MuiSelect-nativeInput"
+                id="id-color"
+                name="color"
+                onAnimationStart={[Function]}
+                onChange={[Function]}
+                required={false}
+                tabIndex={-1}
+                value="none"
+              />
+              <svg
+                aria-hidden={true}
+                className="MuiSvgIcon-root MuiSelect-icon"
+                focusable="false"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M7 10l5 5 5-5z"
+                />
+              </svg>
+            </div>
+          </div>
+          <div
+            className="MuiFormControl-root makeStyles-formControl-1972 makeStyles-field-1966"
+          >
+            <label
+              className="MuiFormLabel-root MuiInputLabel-root makeStyles-label-1973 MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiFormLabel-filled"
+              data-shrink={true}
+              htmlFor="id-kamiNoKuStyle"
+            >
+              上の句
+            </label>
+            <div
+              className="MuiInputBase-root MuiInput-root MuiInput-underline makeStyles-select-1974 MuiInputBase-formControl MuiInput-formControl"
+              onClick={[Function]}
+            >
+              <div
+                aria-haspopup="listbox"
+                aria-labelledby="mui-component-select-kamiNoKuStyle"
+                className="MuiSelect-root MuiSelect-select MuiSelect-selectMenu MuiInputBase-input MuiInput-input"
+                id="mui-component-select-kamiNoKuStyle"
+                onBlur={[Function]}
+                onFocus={[Function]}
+                onKeyDown={[Function]}
+                onMouseDown={[Function]}
+                role="button"
+                tabIndex={0}
+              >
+                漢字と仮名で表示
+              </div>
+              <input
+                aria-hidden={true}
+                className="MuiSelect-nativeInput"
+                id="id-kamiNoKuStyle"
+                name="kamiNoKuStyle"
+                onAnimationStart={[Function]}
+                onChange={[Function]}
+                required={false}
+                tabIndex={-1}
+                value="kanji"
+              />
+              <svg
+                aria-hidden={true}
+                className="MuiSvgIcon-root MuiSelect-icon"
+                focusable="false"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M7 10l5 5 5-5z"
+                />
+              </svg>
+            </div>
+          </div>
+          <div
+            className="MuiFormControl-root makeStyles-formControl-1972 makeStyles-field-1966"
+          >
+            <label
+              className="MuiFormLabel-root MuiInputLabel-root makeStyles-label-1973 MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiFormLabel-filled"
+              data-shrink={true}
+              htmlFor="id-shimoNoKuStyle"
+            >
+              下の句
+            </label>
+            <div
+              className="MuiInputBase-root MuiInput-root MuiInput-underline makeStyles-select-1974 MuiInputBase-formControl MuiInput-formControl"
+              onClick={[Function]}
+            >
+              <div
+                aria-haspopup="listbox"
+                aria-labelledby="mui-component-select-shimoNoKuStyle"
+                className="MuiSelect-root MuiSelect-select MuiSelect-selectMenu MuiInputBase-input MuiInput-input"
+                id="mui-component-select-shimoNoKuStyle"
+                onBlur={[Function]}
+                onFocus={[Function]}
+                onKeyDown={[Function]}
+                onMouseDown={[Function]}
+                role="button"
+                tabIndex={0}
+              >
+                すべて仮名で表示
+              </div>
+              <input
+                aria-hidden={true}
+                className="MuiSelect-nativeInput"
+                id="id-shimoNoKuStyle"
+                name="shimoNoKuStyle"
+                onAnimationStart={[Function]}
+                onChange={[Function]}
+                required={false}
+                tabIndex={-1}
+                value="kana"
+              />
+              <svg
+                aria-hidden={true}
+                className="MuiSvgIcon-root MuiSelect-icon"
+                focusable="false"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M7 10l5 5 5-5z"
+                />
+              </svg>
+            </div>
+          </div>
+          <div
+            className="MuiFormControl-root makeStyles-formControl-1972 makeStyles-field-1966"
+          >
+            <label
+              className="MuiFormLabel-root MuiInputLabel-root makeStyles-label-1973 MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiFormLabel-filled"
+              data-shrink={true}
+              htmlFor="id-questionAnim"
+            >
+              読み札のアニメーション表示
+            </label>
+            <div
+              className="MuiInputBase-root MuiInput-root MuiInput-underline makeStyles-select-1974 MuiInputBase-formControl MuiInput-formControl"
+              onClick={[Function]}
+            >
+              <div
+                aria-haspopup="listbox"
+                aria-labelledby="mui-component-select-questionAnim"
+                className="MuiSelect-root MuiSelect-select MuiSelect-selectMenu MuiInputBase-input MuiInput-input"
+                id="mui-component-select-questionAnim"
+                onBlur={[Function]}
+                onFocus={[Function]}
+                onKeyDown={[Function]}
+                onMouseDown={[Function]}
+                role="button"
+                tabIndex={0}
+              >
+                ふつう
+              </div>
+              <input
+                aria-hidden={true}
+                className="MuiSelect-nativeInput"
+                id="id-questionAnim"
+                name="questionAnim"
+                onAnimationStart={[Function]}
+                onChange={[Function]}
+                required={false}
+                tabIndex={-1}
+                value="normal"
+              />
+              <svg
+                aria-hidden={true}
+                className="MuiSvgIcon-root MuiSelect-icon"
+                focusable="false"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M7 10l5 5 5-5z"
+                />
+              </svg>
+            </div>
+          </div>
+          <button
+            className="MuiButtonBase-root MuiButton-root MuiButton-contained makeStyles-startTrainingButton-1965 MuiButton-containedSecondary"
+            disabled={false}
+            onBlur={[Function]}
+            onClick={[Function]}
+            onDragLeave={[Function]}
+            onFocus={[Function]}
+            onKeyDown={[Function]}
+            onKeyUp={[Function]}
+            onMouseDown={[Function]}
+            onMouseLeave={[Function]}
+            onMouseUp={[Function]}
+            onTouchEnd={[Function]}
+            onTouchMove={[Function]}
+            onTouchStart={[Function]}
+            tabIndex={0}
+            type="button"
+          >
+            <span
+              className="MuiButton-label"
+            >
+              <svg
+                aria-hidden={true}
+                className="MuiSvgIcon-root makeStyles-accent-1977 makeStyles-accent-1979"
+                focusable="false"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M3 17.25V21h3.75L17.81 9.94l-3.75-3.75L3 17.25zM20.71 7.04c.39-.39.39-1.02 0-1.41l-2.34-2.34a.9959.9959 0 00-1.41 0l-1.83 1.83 3.75 3.75 1.83-1.83z"
+                />
+              </svg>
+              練習をはじめる
+            </span>
+          </button>
+        </form>
+      </div>
+    </section>
+  </main>,
+  <nav
+    className="makeStyles-root-1980 makeStyles-nav-1946"
+  >
+    <span
+      className="makeStyles-itemWrapper-1981"
+    >
+      <div
+        className="makeStyles-rippleContainer-1952"
+        onMouseDown={[Function]}
+        onMouseUp={[Function]}
+        style={
+          Object {
+            "height": "100%",
+            "width": "100%",
+          }
+        }
+      >
+        <a
+          href="/training/"
+          onClick={[Function]}
+          style={Object {}}
+        >
+          <span
+            className="makeStyles-root-1955 makeStyles-root-1982 makeStyles-root-1983"
+          >
+            <svg
+              aria-hidden={true}
+              className="MuiSvgIcon-root"
+              focusable="false"
+              style={
+                Object {
+                  "fontSize": "2.4rem",
+                }
+              }
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M3 17.25V21h3.75L17.81 9.94l-3.75-3.75L3 17.25zM20.71 7.04c.39-.39.39-1.02 0-1.41l-2.34-2.34a.9959.9959 0 00-1.41 0l-1.83 1.83 3.75 3.75 1.83-1.83z"
+              />
+            </svg>
+          </span>
+        </a>
+      </div>
+    </span>
+    <span
+      className="makeStyles-itemWrapper-1981"
+    >
+      <div
+        className="makeStyles-rippleContainer-1952"
+        onMouseDown={[Function]}
+        onMouseUp={[Function]}
+        style={
+          Object {
+            "height": "100%",
+            "width": "100%",
+          }
+        }
+      >
+        <a
+          href="/exam/"
+          onClick={[Function]}
+          style={Object {}}
+        >
+          <span
+            className="makeStyles-root-1955 makeStyles-root-1982 makeStyles-root-1984"
+          >
+            <svg
+              aria-hidden={true}
+              className="MuiSvgIcon-root"
+              focusable="false"
+              style={
+                Object {
+                  "fontSize": "2.4rem",
+                }
+              }
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M22 10l-6-6H4c-1.1 0-2 .9-2 2v12.01c0 1.1.9 1.99 2 1.99l16-.01c1.1 0 2-.89 2-1.99v-8zm-7-4.5l5.5 5.5H15V5.5z"
+              />
+            </svg>
+          </span>
+        </a>
+      </div>
+    </span>
+    <span
+      className="makeStyles-itemWrapper-1981"
+    >
+      <div
+        className="makeStyles-rippleContainer-1952"
+        onMouseDown={[Function]}
+        onMouseUp={[Function]}
+        style={
+          Object {
+            "height": "100%",
+            "width": "100%",
+          }
+        }
+      >
+        <a
+          href="/karutas/"
+          onClick={[Function]}
+          style={Object {}}
+        >
+          <span
+            className="makeStyles-root-1955 makeStyles-root-1982 makeStyles-root-1985"
+          >
+            <svg
+              aria-hidden={true}
+              className="MuiSvgIcon-root"
+              focusable="false"
+              style={
+                Object {
+                  "fontSize": "2.4rem",
+                }
+              }
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M4 6H2v14c0 1.1.9 2 2 2h14v-2H4V6zm16-4H8c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm-1 9H9V9h10v2zm-4 4H9v-2h6v2zm4-8H9V5h10v2z"
+              />
+            </svg>
+          </span>
+        </a>
+      </div>
+    </span>
+    <span
+      className="makeStyles-itemWrapper-1981"
+    >
+      <div
+        className="makeStyles-rippleContainer-1952"
+        onMouseDown={[Function]}
+        onMouseUp={[Function]}
+        style={
+          Object {
+            "height": "100%",
+            "width": "100%",
+          }
+        }
+      >
+        <a
+          href="/about/"
+          onClick={[Function]}
+          style={Object {}}
+        >
+          <span
+            className="makeStyles-root-1955 makeStyles-root-1982 makeStyles-root-1986"
+          >
+            <svg
+              aria-hidden={true}
+              className="MuiSvgIcon-root"
+              focusable="false"
+              style={
+                Object {
+                  "fontSize": "2.4rem",
+                }
+              }
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M19.14 12.94c.04-.3.06-.61.06-.94 0-.32-.02-.64-.07-.94l2.03-1.58c.18-.14.23-.41.12-.61l-1.92-3.32c-.12-.22-.37-.29-.59-.22l-2.39.96c-.5-.38-1.03-.7-1.62-.94l-.36-2.54c-.04-.24-.24-.41-.48-.41h-3.84c-.24 0-.43.17-.47.41l-.36 2.54c-.59.24-1.13.57-1.62.94l-2.39-.96c-.22-.08-.47 0-.59.22L2.74 8.87c-.12.21-.08.47.12.61l2.03 1.58c-.05.3-.09.63-.09.94s.02.64.07.94l-2.03 1.58c-.18.14-.23.41-.12.61l1.92 3.32c.12.22.37.29.59.22l2.39-.96c.5.38 1.03.7 1.62.94l.36 2.54c.05.24.24.41.48.41h3.84c.24 0 .44-.17.47-.41l.36-2.54c.59-.24 1.13-.56 1.62-.94l2.39.96c.22.08.47 0 .59-.22l1.92-3.32c.12-.22.07-.47-.12-.61l-2.01-1.58zM12 15.6c-1.98 0-3.6-1.62-3.6-3.6s1.62-3.6 3.6-3.6 3.6 1.62 3.6 3.6-1.62 3.6-3.6 3.6z"
+              />
+            </svg>
+          </span>
+        </a>
+      </div>
+    </span>
+  </nav>,
+]
+`;

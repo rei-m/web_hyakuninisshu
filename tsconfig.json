@@ -2,6 +2,7 @@
   "include": [
     "./src/**/*",
     "./helper/**/*",
+    "./__test__/**/*.ts",
     "./@types/**/*.ts",
     "./gatsby-node-impl/**/*",
     "./gatsby-config-impl/**/*",

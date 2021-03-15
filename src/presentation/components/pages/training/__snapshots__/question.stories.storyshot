@@ -1,0 +1,328 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Storyshots pages/training/question default 1`] = `
+Array [
+  <header
+    className="makeStyles-root-1992 makeStyles-root-1995 makeStyles-header-1989"
+  >
+    <div
+      className="makeStyles-rippleContainer-1996"
+      onMouseDown={[Function]}
+      onMouseUp={[Function]}
+    >
+      <span
+        className="makeStyles-root-1999 makeStyles-clickable-2000 makeStyles-root-1998 makeStyles-headerItem-1994"
+        onClick={[Function]}
+      >
+        <svg
+          aria-hidden={true}
+          className="MuiSvgIcon-root"
+          focusable="false"
+          style={
+            Object {
+              "fontSize": "2.4rem",
+            }
+          }
+          viewBox="0 0 24 24"
+        >
+          <path
+            d="M20 11H7.83l5.59-5.59L12 4l-8 8 8 8 1.41-1.41L7.83 13H20v-2z"
+          />
+        </svg>
+      </span>
+    </div>
+    <h1
+      className="makeStyles-root-2001 makeStyles-root-2002 makeStyles-title-1993"
+    >
+      百人一首 - 練習 -
+    </h1>
+  </header>,
+  <main
+    className="makeStyles-root-1988 makeStyles-root-1991"
+  >
+    <div
+      className="makeStyles-content-1987"
+      style={
+        Object {
+          "backgroundImage": "url(test-file-stub)",
+        }
+      }
+    >
+      <div
+        className="makeStyles-root-2004"
+      >
+        <div
+          className="makeStyles-yomiFudaContainer-2005"
+        >
+          <span
+            className="makeStyles-root-2013 makeStyles-root-2014 makeStyles-position-2009"
+          >
+            1 / 100
+          </span>
+          <div
+            className="makeStyles-root-2015 makeStyles-root-2020 makeStyles-yomiFuda-2007"
+          >
+            <div
+              className="makeStyles-inner-2016"
+            >
+              <span
+                className="makeStyles-root-2013 makeStyles-root-2025 makeStyles-root-2023 makeStyles-root-2024 makeStyles-first-2017"
+              >
+                <span
+                  className="makeStyles-root-2026"
+                  onAnimationEnd={[Function]}
+                  style={
+                    Object {
+                      "animationDuration": "0.6s",
+                    }
+                  }
+                >
+                  秋
+                </span>
+                <span
+                  style={
+                    Object {
+                      "display": "inline-block",
+                    }
+                  }
+                >
+                  　
+                </span>
+                <span
+                  style={
+                    Object {
+                      "display": "inline-block",
+                    }
+                  }
+                >
+                  　
+                </span>
+                <span
+                  style={
+                    Object {
+                      "display": "inline-block",
+                    }
+                  }
+                >
+                  　
+                </span>
+              </span>
+              <span
+                className="makeStyles-root-2013 makeStyles-root-2029 makeStyles-root-2023 makeStyles-root-2028 makeStyles-second-2018 makeStyles-second-2021"
+              >
+                <span
+                  style={
+                    Object {
+                      "display": "inline-block",
+                    }
+                  }
+                >
+                  　
+                </span>
+                <span
+                  style={
+                    Object {
+                      "display": "inline-block",
+                    }
+                  }
+                >
+                  　
+                </span>
+                <span
+                  style={
+                    Object {
+                      "display": "inline-block",
+                    }
+                  }
+                >
+                  　
+                </span>
+                <span
+                  style={
+                    Object {
+                      "display": "inline-block",
+                    }
+                  }
+                >
+                  　
+                </span>
+                <span
+                  style={
+                    Object {
+                      "display": "inline-block",
+                    }
+                  }
+                >
+                  　
+                </span>
+                <span
+                  style={
+                    Object {
+                      "display": "inline-block",
+                    }
+                  }
+                >
+                  　
+                </span>
+              </span>
+              <span
+                className="makeStyles-root-2013 makeStyles-root-2031 makeStyles-root-2023 makeStyles-root-2030 makeStyles-third-2019 makeStyles-third-2022"
+              >
+                <span
+                  style={
+                    Object {
+                      "display": "inline-block",
+                    }
+                  }
+                >
+                  　
+                </span>
+                <span
+                  style={
+                    Object {
+                      "display": "inline-block",
+                    }
+                  }
+                >
+                  　
+                </span>
+                <span
+                  style={
+                    Object {
+                      "display": "inline-block",
+                    }
+                  }
+                >
+                  　
+                </span>
+                <span
+                  style={
+                    Object {
+                      "display": "inline-block",
+                    }
+                  }
+                >
+                  　
+                </span>
+                <span
+                  style={
+                    Object {
+                      "display": "inline-block",
+                    }
+                  }
+                >
+                  　
+                </span>
+              </span>
+            </div>
+          </div>
+        </div>
+        <div
+          className="makeStyles-toriFudaContainer-2006"
+        >
+          <div
+            className="makeStyles-rippleContainer-1996"
+            onMouseDown={[Function]}
+            onMouseUp={[Function]}
+          >
+            <div
+              className="makeStyles-clickable-2012 makeStyles-root-2032 makeStyles-root-2038 makeStyles-toriFuda-2008"
+              onClick={[Function]}
+            >
+              <div
+                className="makeStyles-inner-2033"
+              >
+                <span
+                  className="makeStyles-root-2013 makeStyles-root-2041 makeStyles-root-2023 makeStyles-root-2040 makeStyles-fourh-2034"
+                >
+                  わがころもでは
+                </span>
+                <span
+                  className="makeStyles-root-2013 makeStyles-root-2043 makeStyles-root-2023 makeStyles-root-2042 makeStyles-fifth-2035 makeStyles-fifth-2037"
+                >
+                  きりにぬれつつ
+                </span>
+              </div>
+            </div>
+          </div>
+          <div
+            className="makeStyles-rippleContainer-1996"
+            onMouseDown={[Function]}
+            onMouseUp={[Function]}
+          >
+            <div
+              className="makeStyles-clickable-2012 makeStyles-root-2032 makeStyles-root-2046 makeStyles-toriFuda-2008"
+              onClick={[Function]}
+            >
+              <div
+                className="makeStyles-inner-2033"
+              >
+                <span
+                  className="makeStyles-root-2013 makeStyles-root-2049 makeStyles-root-2023 makeStyles-root-2048 makeStyles-fourh-2034"
+                >
+                  ころもほすてふ
+                </span>
+                <span
+                  className="makeStyles-root-2013 makeStyles-root-2051 makeStyles-root-2023 makeStyles-root-2050 makeStyles-fifth-2035 makeStyles-fifth-2045"
+                >
+                  あまのかぐやま
+                </span>
+              </div>
+            </div>
+          </div>
+          <div
+            className="makeStyles-rippleContainer-1996"
+            onMouseDown={[Function]}
+            onMouseUp={[Function]}
+          >
+            <div
+              className="makeStyles-clickable-2012 makeStyles-root-2032 makeStyles-root-2054 makeStyles-toriFuda-2008"
+              onClick={[Function]}
+            >
+              <div
+                className="makeStyles-inner-2033"
+              >
+                <span
+                  className="makeStyles-root-2013 makeStyles-root-2057 makeStyles-root-2023 makeStyles-root-2056 makeStyles-fourh-2034"
+                >
+                  ながながしよを
+                </span>
+                <span
+                  className="makeStyles-root-2013 makeStyles-root-2059 makeStyles-root-2023 makeStyles-root-2058 makeStyles-fifth-2035 makeStyles-fifth-2053"
+                >
+                  ひとりかもねむ
+                </span>
+              </div>
+            </div>
+          </div>
+          <div
+            className="makeStyles-rippleContainer-1996"
+            onMouseDown={[Function]}
+            onMouseUp={[Function]}
+          >
+            <div
+              className="makeStyles-clickable-2012 makeStyles-root-2032 makeStyles-root-2062 makeStyles-toriFuda-2008"
+              onClick={[Function]}
+            >
+              <div
+                className="makeStyles-inner-2033"
+              >
+                <span
+                  className="makeStyles-root-2013 makeStyles-root-2065 makeStyles-root-2023 makeStyles-root-2064 makeStyles-fourh-2034"
+                >
+                  ふじのたかねに
+                </span>
+                <span
+                  className="makeStyles-root-2013 makeStyles-root-2067 makeStyles-root-2023 makeStyles-root-2066 makeStyles-fifth-2035 makeStyles-fifth-2061"
+                >
+                  ゆきはふりつつ
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>,
+]
+`;

@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Storyshots atoms/FadeInFrame default 1`] = `
+<span
+  className="makeStyles-root-10"
+  onAnimationEnd={[Function]}
+  style={
+    Object {
+      "animationDuration": "5s",
+    }
+  }
+>
+  コンテンツ
+</span>
+`;

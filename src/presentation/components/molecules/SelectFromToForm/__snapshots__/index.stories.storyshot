@@ -1,0 +1,212 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Storyshots molecules/SelectFromToForm default 1`] = `
+<div
+  className=""
+>
+  <div
+    className="makeStyles-labelContainer-281"
+  >
+    <label
+      className="makeStyles-label-282"
+    >
+      あいてむ
+    </label>
+  </div>
+  <div
+    className="makeStyles-root-285"
+  >
+    <div
+      className="MuiInputBase-root MuiInput-root MuiInput-underline makeStyles-select-280"
+      onClick={[Function]}
+    >
+      <div
+        aria-haspopup="listbox"
+        aria-labelledby="mui-component-select-ふろむ"
+        className="MuiSelect-root MuiSelect-select MuiSelect-selectMenu MuiInputBase-input MuiInput-input"
+        id="mui-component-select-ふろむ"
+        onBlur={[Function]}
+        onFocus={[Function]}
+        onKeyDown={[Function]}
+        onMouseDown={[Function]}
+        role="button"
+        tabIndex={0}
+      >
+        いちばん
+      </div>
+      <input
+        aria-hidden={true}
+        className="MuiSelect-nativeInput"
+        id="id-ふろむ"
+        name="ふろむ"
+        onAnimationStart={[Function]}
+        onChange={[Function]}
+        tabIndex={-1}
+        value="1"
+      />
+      <svg
+        aria-hidden={true}
+        className="MuiSvgIcon-root MuiSelect-icon"
+        focusable="false"
+        viewBox="0 0 24 24"
+      >
+        <path
+          d="M7 10l5 5 5-5z"
+        />
+      </svg>
+    </div>
+    <span
+      className="makeStyles-separate-283"
+    >
+      〜
+    </span>
+    <div
+      className="MuiInputBase-root MuiInput-root MuiInput-underline makeStyles-select-280"
+      onClick={[Function]}
+    >
+      <div
+        aria-haspopup="listbox"
+        aria-labelledby="mui-component-select-とぅー"
+        className="MuiSelect-root MuiSelect-select MuiSelect-selectMenu MuiInputBase-input MuiInput-input"
+        id="mui-component-select-とぅー"
+        onBlur={[Function]}
+        onFocus={[Function]}
+        onKeyDown={[Function]}
+        onMouseDown={[Function]}
+        role="button"
+        tabIndex={0}
+      >
+        いちばん
+      </div>
+      <input
+        aria-hidden={true}
+        className="MuiSelect-nativeInput"
+        id="id-とぅー"
+        name="とぅー"
+        onAnimationStart={[Function]}
+        onChange={[Function]}
+        tabIndex={-1}
+        value="1"
+      />
+      <svg
+        aria-hidden={true}
+        className="MuiSvgIcon-root MuiSelect-icon"
+        focusable="false"
+        viewBox="0 0 24 24"
+      >
+        <path
+          d="M7 10l5 5 5-5z"
+        />
+      </svg>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots molecules/SelectFromToForm with error 1`] = `
+<div
+  className=""
+>
+  <div
+    className="makeStyles-labelContainer-288"
+  >
+    <label
+      className="makeStyles-label-289"
+    >
+      あいてむ
+    </label>
+  </div>
+  <div
+    className="makeStyles-root-292"
+  >
+    <div
+      className="MuiInputBase-root MuiInput-root MuiInput-underline makeStyles-select-287"
+      onClick={[Function]}
+    >
+      <div
+        aria-haspopup="listbox"
+        aria-labelledby="mui-component-select-ふろむ"
+        className="MuiSelect-root MuiSelect-select MuiSelect-selectMenu MuiInputBase-input MuiInput-input"
+        id="mui-component-select-ふろむ"
+        onBlur={[Function]}
+        onFocus={[Function]}
+        onKeyDown={[Function]}
+        onMouseDown={[Function]}
+        role="button"
+        tabIndex={0}
+      >
+        いちばん
+      </div>
+      <input
+        aria-hidden={true}
+        className="MuiSelect-nativeInput"
+        id="id-ふろむ"
+        name="ふろむ"
+        onAnimationStart={[Function]}
+        onChange={[Function]}
+        tabIndex={-1}
+        value="1"
+      />
+      <svg
+        aria-hidden={true}
+        className="MuiSvgIcon-root MuiSelect-icon"
+        focusable="false"
+        viewBox="0 0 24 24"
+      >
+        <path
+          d="M7 10l5 5 5-5z"
+        />
+      </svg>
+    </div>
+    <span
+      className="makeStyles-separate-290"
+    >
+      〜
+    </span>
+    <div
+      className="MuiInputBase-root MuiInput-root MuiInput-underline makeStyles-select-287"
+      onClick={[Function]}
+    >
+      <div
+        aria-haspopup="listbox"
+        aria-labelledby="mui-component-select-とぅー"
+        className="MuiSelect-root MuiSelect-select MuiSelect-selectMenu MuiInputBase-input MuiInput-input"
+        id="mui-component-select-とぅー"
+        onBlur={[Function]}
+        onFocus={[Function]}
+        onKeyDown={[Function]}
+        onMouseDown={[Function]}
+        role="button"
+        tabIndex={0}
+      >
+        いちばん
+      </div>
+      <input
+        aria-hidden={true}
+        className="MuiSelect-nativeInput"
+        id="id-とぅー"
+        name="とぅー"
+        onAnimationStart={[Function]}
+        onChange={[Function]}
+        tabIndex={-1}
+        value="1"
+      />
+      <svg
+        aria-hidden={true}
+        className="MuiSvgIcon-root MuiSelect-icon"
+        focusable="false"
+        viewBox="0 0 24 24"
+      >
+        <path
+          d="M7 10l5 5 5-5z"
+        />
+      </svg>
+    </div>
+  </div>
+  <div
+    className="makeStyles-error-291"
+  >
+    間違ってます
+  </div>
+</div>
+`;

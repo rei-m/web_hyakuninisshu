@@ -1,0 +1,141 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Storyshots molecules/ToriFuda default 1`] = `
+<div
+  className="makeStyles-rippleContainer-300"
+  onMouseDown={[Function]}
+  onMouseUp={[Function]}
+>
+  <div
+    className="makeStyles-clickable-304 makeStyles-root-294 makeStyles-root-302"
+    onClick={[Function]}
+  >
+    <div
+      className="makeStyles-inner-295"
+    >
+      <span
+        className="makeStyles-root-307 makeStyles-root-308 makeStyles-root-305 makeStyles-root-306 makeStyles-fourh-296"
+      >
+        わがころもでは
+      </span>
+      <span
+        className="makeStyles-root-307 makeStyles-root-310 makeStyles-root-305 makeStyles-root-309 makeStyles-fifth-297 makeStyles-fifth-299"
+      >
+        きりにぬれつつ
+      </span>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots molecules/ToriFuda with size l 1`] = `
+<div
+  className="makeStyles-rippleContainer-368"
+  onMouseDown={[Function]}
+  onMouseUp={[Function]}
+>
+  <div
+    className="makeStyles-clickable-372 makeStyles-root-362 makeStyles-root-370"
+    onClick={[Function]}
+  >
+    <div
+      className="makeStyles-inner-363"
+    >
+      <span
+        className="makeStyles-root-375 makeStyles-root-376 makeStyles-root-373 makeStyles-root-374 makeStyles-fourh-364"
+      >
+        わがころもでは
+      </span>
+      <span
+        className="makeStyles-root-375 makeStyles-root-378 makeStyles-root-373 makeStyles-root-377 makeStyles-fifth-365 makeStyles-fifth-367"
+      >
+        きりにぬれつつ
+      </span>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots molecules/ToriFuda with size m 1`] = `
+<div
+  className="makeStyles-rippleContainer-351"
+  onMouseDown={[Function]}
+  onMouseUp={[Function]}
+>
+  <div
+    className="makeStyles-clickable-355 makeStyles-root-345 makeStyles-root-353"
+    onClick={[Function]}
+  >
+    <div
+      className="makeStyles-inner-346"
+    >
+      <span
+        className="makeStyles-root-358 makeStyles-root-359 makeStyles-root-356 makeStyles-root-357 makeStyles-fourh-347"
+      >
+        わがころもでは
+      </span>
+      <span
+        className="makeStyles-root-358 makeStyles-root-361 makeStyles-root-356 makeStyles-root-360 makeStyles-fifth-348 makeStyles-fifth-350"
+      >
+        きりにぬれつつ
+      </span>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots molecules/ToriFuda with size s 1`] = `
+<div
+  className="makeStyles-rippleContainer-334"
+  onMouseDown={[Function]}
+  onMouseUp={[Function]}
+>
+  <div
+    className="makeStyles-clickable-338 makeStyles-root-328 makeStyles-root-336"
+    onClick={[Function]}
+  >
+    <div
+      className="makeStyles-inner-329"
+    >
+      <span
+        className="makeStyles-root-341 makeStyles-root-342 makeStyles-root-339 makeStyles-root-340 makeStyles-fourh-330"
+      >
+        わがころもでは
+      </span>
+      <span
+        className="makeStyles-root-341 makeStyles-root-344 makeStyles-root-339 makeStyles-root-343 makeStyles-fifth-331 makeStyles-fifth-333"
+      >
+        きりにぬれつつ
+      </span>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots molecules/ToriFuda with thin style 1`] = `
+<div
+  className="makeStyles-rippleContainer-317"
+  onMouseDown={[Function]}
+  onMouseUp={[Function]}
+>
+  <div
+    className="makeStyles-clickable-321 makeStyles-root-311 makeStyles-root-319"
+    onClick={[Function]}
+  >
+    <div
+      className="makeStyles-inner-312"
+    >
+      <span
+        className="makeStyles-root-324 makeStyles-root-325 makeStyles-root-322 makeStyles-root-323 makeStyles-fourh-313"
+      >
+        わがころもでは
+      </span>
+      <span
+        className="makeStyles-root-324 makeStyles-root-327 makeStyles-root-322 makeStyles-root-326 makeStyles-fifth-314 makeStyles-fifth-316"
+      >
+        きりにぬれつつ
+      </span>
+    </div>
+  </div>
+</div>
+`;

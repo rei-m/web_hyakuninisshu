@@ -1,6 +1,5 @@
 import React from 'react';
 import { graphql } from 'gatsby';
-import { RouteComponentProps } from '@reach/router';
 import QuestionDiContainerProvider from '@src/presentation/contexts/QuestionDiContainerProvider';
 import ExamPage from '@src/presentation/components/pages/exam';
 import { Karuta } from '@src/domain/models';
@@ -17,15 +16,15 @@ export type Props = {
       }>;
     };
   };
-} & RouteComponentProps;
+};
 
-const ExamGatsbyPage = ({ data, navigate }: Props) => {
+const ExamGatsbyPage = ({ data }: Props) => {
   const allKarutaList = data.allKaruta.edges.map(
     (karutaData) => JSON.parse(karutaData.node.internal.content) as Karuta
   );
   return (
     <QuestionDiContainerProvider allKarutaList={allKarutaList}>
-      <ExamPage navigate={navigate} />
+      <ExamPage />
     </QuestionDiContainerProvider>
   );
 };

@@ -9,6 +9,7 @@ import Chihaya from '@src/presentation/components/organisms/Chihaya';
 import ReadingContent from '@src/presentation/components/molecules/ReadingContent';
 import Paragraph from '@src/presentation/components/atoms/Paragraph';
 import Txt from '@src/presentation/components/atoms/Txt';
+import AppStoreBanner from '@src/presentation/components/atoms/AppStoreBanner';
 import PlayStoreBanner from '@src/presentation/components/atoms/PlayStoreBanner';
 import { ThemeInterface } from '@src/presentation/styles/theme';
 import { KarutaCollection } from '@src/domain/models';
@@ -44,6 +45,7 @@ const useStyles = makeStyles<ThemeInterface>((theme) => ({
     paddingTop: theme.spacing(4),
     display: 'flex',
     justifyContent: 'center',
+    flexWrap: 'wrap',
   },
 }));
 
@@ -73,6 +75,7 @@ const IndexPage = ({ karutaCollection }: Props) => {
               よりサクサク使えるアプリ版を用意しています。百人一首の読み上げ形式も対応していますので、自信のついた方におすすめです。
             </Paragraph>
             <div className={classes.bannerWrapper}>
+              <AppStoreBanner type="normal" />
               <PlayStoreBanner type="normal" />
               <PlayStoreBanner type="reader" />
             </div>

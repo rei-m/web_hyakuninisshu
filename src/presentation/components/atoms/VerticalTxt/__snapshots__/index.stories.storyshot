@@ -1,0 +1,49 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Storyshots atoms/VerticalTxt with size L 1`] = `
+<span
+  className="makeStyles-root-79 makeStyles-root-80 makeStyles-root-77 makeStyles-root-78"
+>
+  テキストを表示
+</span>
+`;
+
+exports[`Storyshots atoms/VerticalTxt with size M 1`] = `
+<span
+  className="makeStyles-root-75 makeStyles-root-76 makeStyles-root-73 makeStyles-root-74"
+>
+  テキストを表示
+</span>
+`;
+
+exports[`Storyshots atoms/VerticalTxt with size S 1`] = `
+<span
+  className="makeStyles-root-71 makeStyles-root-72 makeStyles-root-69 makeStyles-root-70"
+>
+  テキストを表示
+</span>
+`;
+
+exports[`Storyshots atoms/VerticalTxt with size SS 1`] = `
+<span
+  className="makeStyles-root-67 makeStyles-root-68 makeStyles-root-65 makeStyles-root-66"
+>
+  テキストを表示
+</span>
+`;
+
+exports[`Storyshots atoms/VerticalTxt with size SSS 1`] = `
+<span
+  className="makeStyles-root-63 makeStyles-root-64 makeStyles-root-61 makeStyles-root-62"
+>
+  テキストを表示
+</span>
+`;
+
+exports[`Storyshots atoms/VerticalTxt with size default 1`] = `
+<span
+  className="makeStyles-root-59 makeStyles-root-60 makeStyles-root-57 makeStyles-root-58"
+>
+  テキストを表示
+</span>
+`;

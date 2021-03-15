@@ -1,13 +1,13 @@
 import React, { useCallback } from 'react';
+import { navigate } from 'gatsby';
 import { useSelector } from 'react-redux';
-import { RouteComponentProps } from '@reach/router';
 import { paths } from '@src/presentation/routes';
 import PlayingPageTemplate from '@src/presentation/components/templates/PlayingPageTemplate';
 import KarutaPlayingContainer from '@src/presentation/containers/organisms/KarutaPlayingContainer';
 import { GlobalState } from '@src/state';
 import { questionsTypes } from '@src/state/questions';
 
-export type Props = Pick<RouteComponentProps, 'navigate'>;
+export type Props = {};
 
 type PickedState = {
   kamiNoKuStyle: questionsTypes.KarutaStyleCondition;
@@ -15,7 +15,7 @@ type PickedState = {
   questionAnim: questionsTypes.QuestionAnimCondition;
 };
 
-const TrainingQuestionPage = ({ navigate }: Props) => {
+const TrainingQuestionPage = (_: Props) => {
   const { kamiNoKuStyle, shimoNoKuStyle, questionAnim } = useSelector<GlobalState, PickedState>(
     (state) => state.questions.trainingCondition,
     (left, right) => {

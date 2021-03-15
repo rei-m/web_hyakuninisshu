@@ -6,13 +6,11 @@ export const useDogezaImage = () => {
       query DogezaImageQuery {
         dogezaImage: file(relativePath: { eq: "dogeza_businessman.png" }) {
           childImageSharp {
-            fluid(maxWidth: 200) {
-              ...GatsbyImageSharpFluid
-            }
+            gatsbyImageData(width: 200)
           }
         }
       }
     `
   );
-  return dogezaImage.childImageSharp.fluid;
+  return dogezaImage.childImageSharp.gatsbyImageData;
 };
