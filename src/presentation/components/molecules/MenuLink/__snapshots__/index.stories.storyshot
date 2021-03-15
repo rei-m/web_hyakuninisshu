@@ -1,0 +1,54 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Storyshots molecules/MenuLink default 1`] = `
+<div
+  className="makeStyles-root-247"
+>
+  <div
+    className="makeStyles-rippleContainer-252"
+    onMouseDown={[Function]}
+    onMouseUp={[Function]}
+    style={
+      Object {
+        ":hover": Object {
+          "textDecoration": "none",
+        },
+        "display": "inline-block",
+        "height": "100%",
+        "padding": "16px",
+      }
+    }
+  >
+    <a
+      href="/"
+      onClick={[Function]}
+      style={Object {}}
+    >
+      <span
+        className="makeStyles-iconWrapper-248"
+      >
+        <svg
+          aria-hidden={true}
+          className="MuiSvgIcon-root"
+          focusable="false"
+          viewBox="0 0 24 24"
+        >
+          <path
+            d="M3 17.25V21h3.75L17.81 9.94l-3.75-3.75L3 17.25zM20.71 7.04c.39-.39.39-1.02 0-1.41l-2.34-2.34a.9959.9959 0 00-1.41 0l-1.83 1.83 3.75 3.75 1.83-1.83z"
+          />
+        </svg>
+      </span>
+      <div
+        className="makeStyles-root-254 makeStyles-root-255 makeStyles-title-249"
+      >
+        練習
+      </div>
+      <p
+        className="makeStyles-root-254 makeStyles-root-256 makeStyles-explain-250"
+      >
+        練習できるよ
+      </p>
+    </a>
+  </div>
+</div>
+`;

@@ -1,0 +1,502 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Storyshots organisms/KarutaPlaying answered 1`] = `
+<div
+  className="makeStyles-root-580"
+>
+  <div
+    className="makeStyles-yomiFudaContainer-581"
+  >
+    <span
+      className="makeStyles-root-589 makeStyles-root-590 makeStyles-position-585"
+    >
+      1 / 10
+    </span>
+    <div
+      className="makeStyles-root-591 makeStyles-root-596 makeStyles-yomiFuda-583"
+    >
+      <div
+        className="makeStyles-inner-592"
+      >
+        <span
+          className="makeStyles-root-589 makeStyles-root-601 makeStyles-root-599 makeStyles-root-600 makeStyles-first-593"
+        >
+          <span
+            className="makeStyles-root-602"
+            onAnimationEnd={[Function]}
+            style={
+              Object {
+                "animationDuration": "0s",
+              }
+            }
+          >
+            秋
+          </span>
+          <span>
+            　
+          </span>
+          <span>
+            　
+          </span>
+          <span>
+            　
+          </span>
+        </span>
+        <span
+          className="makeStyles-root-589 makeStyles-root-605 makeStyles-root-599 makeStyles-root-604 makeStyles-second-594 makeStyles-second-597"
+        >
+          <span>
+            　
+          </span>
+          <span>
+            　
+          </span>
+          <span>
+            　
+          </span>
+          <span>
+            　
+          </span>
+          <span>
+            　
+          </span>
+          <span>
+            　
+          </span>
+        </span>
+        <span
+          className="makeStyles-root-589 makeStyles-root-607 makeStyles-root-599 makeStyles-root-606 makeStyles-third-595 makeStyles-third-598"
+        >
+          <span>
+            　
+          </span>
+          <span>
+            　
+          </span>
+          <span>
+            　
+          </span>
+          <span>
+            　
+          </span>
+          <span>
+            　
+          </span>
+        </span>
+      </div>
+    </div>
+  </div>
+  <div
+    className="makeStyles-toriFudaContainer-582"
+  >
+    <div
+      className="makeStyles-rippleContainer-614"
+      onMouseDown={[Function]}
+      onMouseUp={[Function]}
+    >
+      <div
+        className="makeStyles-clickable-588 makeStyles-root-608 makeStyles-root-616 makeStyles-toriFuda-584"
+        onClick={[Function]}
+      >
+        <div
+          className="makeStyles-inner-609"
+        >
+          <span
+            className="makeStyles-root-589 makeStyles-root-619 makeStyles-root-599 makeStyles-root-618 makeStyles-fourh-610"
+          >
+            わがころもでは
+          </span>
+          <span
+            className="makeStyles-root-589 makeStyles-root-621 makeStyles-root-599 makeStyles-root-620 makeStyles-fifth-611 makeStyles-fifth-613"
+          >
+            きりにぬれつつ
+          </span>
+        </div>
+      </div>
+    </div>
+    <div
+      className="makeStyles-rippleContainer-614"
+      onMouseDown={[Function]}
+      onMouseUp={[Function]}
+    >
+      <div
+        className="makeStyles-clickable-588 makeStyles-root-608 makeStyles-root-624 makeStyles-toriFuda-584"
+        onClick={[Function]}
+      >
+        <div
+          className="makeStyles-inner-609"
+        >
+          <span
+            className="makeStyles-root-589 makeStyles-root-627 makeStyles-root-599 makeStyles-root-626 makeStyles-fourh-610"
+          >
+            ころもほすてふ
+          </span>
+          <span
+            className="makeStyles-root-589 makeStyles-root-629 makeStyles-root-599 makeStyles-root-628 makeStyles-fifth-611 makeStyles-fifth-623"
+          >
+            あまのかぐやま
+          </span>
+        </div>
+      </div>
+    </div>
+    <div
+      className="makeStyles-rippleContainer-614"
+      onMouseDown={[Function]}
+      onMouseUp={[Function]}
+    >
+      <div
+        className="makeStyles-clickable-588 makeStyles-root-608 makeStyles-root-632 makeStyles-toriFuda-584"
+        onClick={[Function]}
+      >
+        <div
+          className="makeStyles-inner-609"
+        >
+          <span
+            className="makeStyles-root-589 makeStyles-root-635 makeStyles-root-599 makeStyles-root-634 makeStyles-fourh-610"
+          >
+            ながながしよを
+          </span>
+          <span
+            className="makeStyles-root-589 makeStyles-root-637 makeStyles-root-599 makeStyles-root-636 makeStyles-fifth-611 makeStyles-fifth-631"
+          >
+            ひとりかもねむ
+          </span>
+        </div>
+      </div>
+    </div>
+    <div
+      className="makeStyles-rippleContainer-614"
+      onMouseDown={[Function]}
+      onMouseUp={[Function]}
+    >
+      <div
+        className="makeStyles-clickable-588 makeStyles-root-608 makeStyles-root-640 makeStyles-toriFuda-584"
+        onClick={[Function]}
+      >
+        <div
+          className="makeStyles-inner-609"
+        >
+          <span
+            className="makeStyles-root-589 makeStyles-root-643 makeStyles-root-599 makeStyles-root-642 makeStyles-fourh-610"
+          >
+            ふじのたかねに
+          </span>
+          <span
+            className="makeStyles-root-589 makeStyles-root-645 makeStyles-root-599 makeStyles-root-644 makeStyles-fifth-611 makeStyles-fifth-639"
+          >
+            ゆきはふりつつ
+          </span>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div
+    className="makeStyles-clickable-588 makeStyles-correctImageContainer-586"
+    onClick={[Function]}
+  >
+    <div
+      className="gatsby-image-wrapper gatsby-image-wrapper-constrained makeStyles-correctImage-587"
+      data-gatsby-image-wrapper=""
+      style={
+        Object {
+          "backgroundColor": undefined,
+          "display": "inline-block",
+          "overflow": "hidden",
+          "position": "relative",
+        }
+      }
+    >
+      <div
+        style={
+          Object {
+            "display": "block",
+            "maxWidth": undefined,
+          }
+        }
+      >
+        <img
+          alt=""
+          aria-hidden="true"
+          role="presentation"
+          src="data:image/svg+xml;charset=utf-8,%3Csvg height='undefined' width='undefined' xmlns='http://www.w3.org/2000/svg' version='1.1'%3E%3C/svg%3E"
+          style={
+            Object {
+              "display": "block",
+              "maxWidth": "100%",
+              "position": "static",
+            }
+          }
+        />
+      </div>
+      <div
+        aria-hidden={true}
+        data-placeholder-image=""
+        style={
+          Object {
+            "height": "100%",
+            "left": 0,
+            "position": "absolute",
+            "top": 0,
+            "width": "100%",
+          }
+        }
+      />
+      <img
+        alt="正解"
+        data-gatsby-image-ssr=""
+        data-main-image=""
+        data-src="test-file-stub"
+        decoding="async"
+        loading="lazy"
+        onLoad={[Function]}
+        sizes="(max-width: 300px) 100vw, 200px"
+        style={
+          Object {
+            "backgroundColor": undefined,
+            "height": "100%",
+            "left": 0,
+            "objectFit": undefined,
+            "objectPosition": undefined,
+            "opacity": 0,
+            "position": "absolute",
+            "top": 0,
+            "transform": "translateZ(0)",
+            "transition": "opacity 250ms linear",
+            "width": "100%",
+            "willChange": "opacity",
+          }
+        }
+      />
+      <noscript>
+        <img
+          alt="正解"
+          data-gatsby-image-ssr=""
+          data-main-image=""
+          decoding="async"
+          loading="lazy"
+          onLoad={[Function]}
+          sizes="(max-width: 300px) 100vw, 200px"
+          src="test-file-stub"
+          style={
+            Object {
+              "backgroundColor": undefined,
+              "height": "100%",
+              "left": 0,
+              "objectFit": undefined,
+              "objectPosition": undefined,
+              "opacity": 0,
+              "position": "absolute",
+              "top": 0,
+              "transform": "translateZ(0)",
+              "transition": "opacity 250ms linear",
+              "width": "100%",
+              "willChange": "opacity",
+            }
+          }
+        />
+      </noscript>
+      <script
+        dangerouslySetInnerHTML={
+          Object {
+            "__html": "const t=\\"undefined\\"!=typeof HTMLImageElement&&\\"loading\\"in HTMLImageElement.prototype;if(t){const t=document.querySelectorAll(\\"img[data-main-image]\\");for(let e of t)e.dataset.src&&(e.setAttribute(\\"src\\",e.dataset.src),e.removeAttribute(\\"data-src\\")),e.dataset.srcset&&(e.setAttribute(\\"srcset\\",e.dataset.srcset),e.removeAttribute(\\"data-srcset\\")),e.complete&&(e.style.opacity=1)}",
+          }
+        }
+        type="module"
+      />
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots organisms/KarutaPlaying in answer 1`] = `
+<div
+  className="makeStyles-root-514"
+>
+  <div
+    className="makeStyles-yomiFudaContainer-515"
+  >
+    <span
+      className="makeStyles-root-523 makeStyles-root-524 makeStyles-position-519"
+    >
+      1 / 10
+    </span>
+    <div
+      className="makeStyles-root-525 makeStyles-root-530 makeStyles-yomiFuda-517"
+    >
+      <div
+        className="makeStyles-inner-526"
+      >
+        <span
+          className="makeStyles-root-523 makeStyles-root-535 makeStyles-root-533 makeStyles-root-534 makeStyles-first-527"
+        >
+          <span
+            className="makeStyles-root-536"
+            onAnimationEnd={[Function]}
+            style={
+              Object {
+                "animationDuration": "1s",
+              }
+            }
+          >
+            秋
+          </span>
+          <span>
+            　
+          </span>
+          <span>
+            　
+          </span>
+          <span>
+            　
+          </span>
+        </span>
+        <span
+          className="makeStyles-root-523 makeStyles-root-539 makeStyles-root-533 makeStyles-root-538 makeStyles-second-528 makeStyles-second-531"
+        >
+          <span>
+            　
+          </span>
+          <span>
+            　
+          </span>
+          <span>
+            　
+          </span>
+          <span>
+            　
+          </span>
+          <span>
+            　
+          </span>
+          <span>
+            　
+          </span>
+        </span>
+        <span
+          className="makeStyles-root-523 makeStyles-root-541 makeStyles-root-533 makeStyles-root-540 makeStyles-third-529 makeStyles-third-532"
+        >
+          <span>
+            　
+          </span>
+          <span>
+            　
+          </span>
+          <span>
+            　
+          </span>
+          <span>
+            　
+          </span>
+          <span>
+            　
+          </span>
+        </span>
+      </div>
+    </div>
+  </div>
+  <div
+    className="makeStyles-toriFudaContainer-516"
+  >
+    <div
+      className="makeStyles-rippleContainer-548"
+      onMouseDown={[Function]}
+      onMouseUp={[Function]}
+    >
+      <div
+        className="makeStyles-clickable-522 makeStyles-root-542 makeStyles-root-550 makeStyles-toriFuda-518"
+        onClick={[Function]}
+      >
+        <div
+          className="makeStyles-inner-543"
+        >
+          <span
+            className="makeStyles-root-523 makeStyles-root-553 makeStyles-root-533 makeStyles-root-552 makeStyles-fourh-544"
+          >
+            わがころもでは
+          </span>
+          <span
+            className="makeStyles-root-523 makeStyles-root-555 makeStyles-root-533 makeStyles-root-554 makeStyles-fifth-545 makeStyles-fifth-547"
+          >
+            きりにぬれつつ
+          </span>
+        </div>
+      </div>
+    </div>
+    <div
+      className="makeStyles-rippleContainer-548"
+      onMouseDown={[Function]}
+      onMouseUp={[Function]}
+    >
+      <div
+        className="makeStyles-clickable-522 makeStyles-root-542 makeStyles-root-558 makeStyles-toriFuda-518"
+        onClick={[Function]}
+      >
+        <div
+          className="makeStyles-inner-543"
+        >
+          <span
+            className="makeStyles-root-523 makeStyles-root-561 makeStyles-root-533 makeStyles-root-560 makeStyles-fourh-544"
+          >
+            ころもほすてふ
+          </span>
+          <span
+            className="makeStyles-root-523 makeStyles-root-563 makeStyles-root-533 makeStyles-root-562 makeStyles-fifth-545 makeStyles-fifth-557"
+          >
+            あまのかぐやま
+          </span>
+        </div>
+      </div>
+    </div>
+    <div
+      className="makeStyles-rippleContainer-548"
+      onMouseDown={[Function]}
+      onMouseUp={[Function]}
+    >
+      <div
+        className="makeStyles-clickable-522 makeStyles-root-542 makeStyles-root-566 makeStyles-toriFuda-518"
+        onClick={[Function]}
+      >
+        <div
+          className="makeStyles-inner-543"
+        >
+          <span
+            className="makeStyles-root-523 makeStyles-root-569 makeStyles-root-533 makeStyles-root-568 makeStyles-fourh-544"
+          >
+            ながながしよを
+          </span>
+          <span
+            className="makeStyles-root-523 makeStyles-root-571 makeStyles-root-533 makeStyles-root-570 makeStyles-fifth-545 makeStyles-fifth-565"
+          >
+            ひとりかもねむ
+          </span>
+        </div>
+      </div>
+    </div>
+    <div
+      className="makeStyles-rippleContainer-548"
+      onMouseDown={[Function]}
+      onMouseUp={[Function]}
+    >
+      <div
+        className="makeStyles-clickable-522 makeStyles-root-542 makeStyles-root-574 makeStyles-toriFuda-518"
+        onClick={[Function]}
+      >
+        <div
+          className="makeStyles-inner-543"
+        >
+          <span
+            className="makeStyles-root-523 makeStyles-root-577 makeStyles-root-533 makeStyles-root-576 makeStyles-fourh-544"
+          >
+            ふじのたかねに
+          </span>
+          <span
+            className="makeStyles-root-523 makeStyles-root-579 makeStyles-root-533 makeStyles-root-578 makeStyles-fifth-545 makeStyles-fifth-573"
+          >
+            ゆきはふりつつ
+          </span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;

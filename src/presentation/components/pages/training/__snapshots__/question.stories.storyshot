@@ -1,0 +1,244 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Storyshots pages/training/question default 1`] = `
+Array [
+  <header
+    className="makeStyles-root-1991 makeStyles-root-1994 makeStyles-header-1988"
+  >
+    <div
+      className="makeStyles-rippleContainer-1995"
+      onMouseDown={[Function]}
+      onMouseUp={[Function]}
+    >
+      <span
+        className="makeStyles-root-1998 makeStyles-clickable-1999 makeStyles-root-1997 makeStyles-headerItem-1993"
+        onClick={[Function]}
+      >
+        <svg
+          aria-hidden={true}
+          className="MuiSvgIcon-root"
+          focusable="false"
+          style={
+            Object {
+              "fontSize": "2.4rem",
+            }
+          }
+          viewBox="0 0 24 24"
+        >
+          <path
+            d="M20 11H7.83l5.59-5.59L12 4l-8 8 8 8 1.41-1.41L7.83 13H20v-2z"
+          />
+        </svg>
+      </span>
+    </div>
+    <h1
+      className="makeStyles-root-2000 makeStyles-root-2001 makeStyles-title-1992"
+    >
+      百人一首 - 練習 -
+    </h1>
+  </header>,
+  <main
+    className="makeStyles-root-1987 makeStyles-root-1990"
+  >
+    <div
+      className="makeStyles-content-1986"
+      style={
+        Object {
+          "backgroundImage": "url(test-file-stub)",
+        }
+      }
+    >
+      <div
+        className="makeStyles-root-2003"
+      >
+        <div
+          className="makeStyles-yomiFudaContainer-2004"
+        >
+          <span
+            className="makeStyles-root-2012 makeStyles-root-2013 makeStyles-position-2008"
+          >
+            1 / 100
+          </span>
+          <div
+            className="makeStyles-root-2014 makeStyles-root-2019 makeStyles-yomiFuda-2006"
+          >
+            <div
+              className="makeStyles-inner-2015"
+            >
+              <span
+                className="makeStyles-root-2012 makeStyles-root-2024 makeStyles-root-2022 makeStyles-root-2023 makeStyles-first-2016"
+              >
+                <span
+                  className="makeStyles-root-2025"
+                  onAnimationEnd={[Function]}
+                  style={
+                    Object {
+                      "animationDuration": "0.6s",
+                    }
+                  }
+                >
+                  秋
+                </span>
+                <span>
+                  　
+                </span>
+                <span>
+                  　
+                </span>
+                <span>
+                  　
+                </span>
+              </span>
+              <span
+                className="makeStyles-root-2012 makeStyles-root-2028 makeStyles-root-2022 makeStyles-root-2027 makeStyles-second-2017 makeStyles-second-2020"
+              >
+                <span>
+                  　
+                </span>
+                <span>
+                  　
+                </span>
+                <span>
+                  　
+                </span>
+                <span>
+                  　
+                </span>
+                <span>
+                  　
+                </span>
+                <span>
+                  　
+                </span>
+              </span>
+              <span
+                className="makeStyles-root-2012 makeStyles-root-2030 makeStyles-root-2022 makeStyles-root-2029 makeStyles-third-2018 makeStyles-third-2021"
+              >
+                <span>
+                  　
+                </span>
+                <span>
+                  　
+                </span>
+                <span>
+                  　
+                </span>
+                <span>
+                  　
+                </span>
+                <span>
+                  　
+                </span>
+              </span>
+            </div>
+          </div>
+        </div>
+        <div
+          className="makeStyles-toriFudaContainer-2005"
+        >
+          <div
+            className="makeStyles-rippleContainer-1995"
+            onMouseDown={[Function]}
+            onMouseUp={[Function]}
+          >
+            <div
+              className="makeStyles-clickable-2011 makeStyles-root-2031 makeStyles-root-2037 makeStyles-toriFuda-2007"
+              onClick={[Function]}
+            >
+              <div
+                className="makeStyles-inner-2032"
+              >
+                <span
+                  className="makeStyles-root-2012 makeStyles-root-2040 makeStyles-root-2022 makeStyles-root-2039 makeStyles-fourh-2033"
+                >
+                  わがころもでは
+                </span>
+                <span
+                  className="makeStyles-root-2012 makeStyles-root-2042 makeStyles-root-2022 makeStyles-root-2041 makeStyles-fifth-2034 makeStyles-fifth-2036"
+                >
+                  きりにぬれつつ
+                </span>
+              </div>
+            </div>
+          </div>
+          <div
+            className="makeStyles-rippleContainer-1995"
+            onMouseDown={[Function]}
+            onMouseUp={[Function]}
+          >
+            <div
+              className="makeStyles-clickable-2011 makeStyles-root-2031 makeStyles-root-2045 makeStyles-toriFuda-2007"
+              onClick={[Function]}
+            >
+              <div
+                className="makeStyles-inner-2032"
+              >
+                <span
+                  className="makeStyles-root-2012 makeStyles-root-2048 makeStyles-root-2022 makeStyles-root-2047 makeStyles-fourh-2033"
+                >
+                  ころもほすてふ
+                </span>
+                <span
+                  className="makeStyles-root-2012 makeStyles-root-2050 makeStyles-root-2022 makeStyles-root-2049 makeStyles-fifth-2034 makeStyles-fifth-2044"
+                >
+                  あまのかぐやま
+                </span>
+              </div>
+            </div>
+          </div>
+          <div
+            className="makeStyles-rippleContainer-1995"
+            onMouseDown={[Function]}
+            onMouseUp={[Function]}
+          >
+            <div
+              className="makeStyles-clickable-2011 makeStyles-root-2031 makeStyles-root-2053 makeStyles-toriFuda-2007"
+              onClick={[Function]}
+            >
+              <div
+                className="makeStyles-inner-2032"
+              >
+                <span
+                  className="makeStyles-root-2012 makeStyles-root-2056 makeStyles-root-2022 makeStyles-root-2055 makeStyles-fourh-2033"
+                >
+                  ながながしよを
+                </span>
+                <span
+                  className="makeStyles-root-2012 makeStyles-root-2058 makeStyles-root-2022 makeStyles-root-2057 makeStyles-fifth-2034 makeStyles-fifth-2052"
+                >
+                  ひとりかもねむ
+                </span>
+              </div>
+            </div>
+          </div>
+          <div
+            className="makeStyles-rippleContainer-1995"
+            onMouseDown={[Function]}
+            onMouseUp={[Function]}
+          >
+            <div
+              className="makeStyles-clickable-2011 makeStyles-root-2031 makeStyles-root-2061 makeStyles-toriFuda-2007"
+              onClick={[Function]}
+            >
+              <div
+                className="makeStyles-inner-2032"
+              >
+                <span
+                  className="makeStyles-root-2012 makeStyles-root-2064 makeStyles-root-2022 makeStyles-root-2063 makeStyles-fourh-2033"
+                >
+                  ふじのたかねに
+                </span>
+                <span
+                  className="makeStyles-root-2012 makeStyles-root-2066 makeStyles-root-2022 makeStyles-root-2065 makeStyles-fifth-2034 makeStyles-fifth-2060"
+                >
+                  ゆきはふりつつ
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>,
+]
+`;

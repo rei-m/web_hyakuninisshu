@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Storyshots atoms/Article default 1`] = `
+<article
+  className="makeStyles-clickable-1"
+  onClick={[Function]}
+>
+  <h2
+    className="makeStyles-root-2 makeStyles-root-3 "
+  >
+    title
+  </h2>
+  Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil, sint excepturi eaque commodi natus architecto! Et odit, itaque qui provident, a ipsum optio maxime obcaecati molestiae sequi quod ad quam?
+</article>
+`;

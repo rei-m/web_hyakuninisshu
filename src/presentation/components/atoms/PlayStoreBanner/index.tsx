@@ -1,7 +1,7 @@
 import React from 'react';
 import makeStyles from '@material-ui/core/styles/makeStyles';
 import { graphql, useStaticQuery } from 'gatsby';
-import Img, { FluidObject } from 'gatsby-image';
+import { GatsbyImage, IGatsbyImageData } from 'gatsby-plugin-image';
 import { ThemeInterface } from '@src/presentation/styles/theme';
 
 export type Props = {
@@ -11,12 +11,12 @@ export type Props = {
 export interface QueryData {
   storeImage1: {
     childImageSharp: {
-      fluid: FluidObject;
+      gatsbyImageData: IGatsbyImageData;
     };
   };
   storeImage2: {
     childImageSharp: {
-      fluid: FluidObject;
+      gatsbyImageData: IGatsbyImageData;
     };
   };
 }
@@ -43,16 +43,12 @@ const PlayStoreBanner = ({ type = 'normal' }: Props) => {
       query PlayStoreImageQuery1 {
         storeImage1: file(relativePath: { eq: "android_app_icon.png" }) {
           childImageSharp {
-            fluid(maxWidth: 120) {
-              ...GatsbyImageSharpFluid
-            }
+            gatsbyImageData(width: 120)
           }
         }
         storeImage2: file(relativePath: { eq: "android_app_reader_icon.png" }) {
           childImageSharp {
-            fluid(maxWidth: 120) {
-              ...GatsbyImageSharpFluid
-            }
+            gatsbyImageData(width: 120)
           }
         }
       }
@@ -61,8 +57,12 @@ const PlayStoreBanner = ({ type = 'normal' }: Props) => {
   const classes = useStyles();
   return (
     <a href={PLAY_STORE_URL[type]} className={classes.root}>
-      <Img
-        fluid={type === 'normal' ? result.storeImage1.childImageSharp.fluid : result.storeImage2.childImageSharp.fluid}
+      <GatsbyImage
+        image={
+          type === 'normal'
+            ? result.storeImage1.childImageSharp.gatsbyImageData
+            : result.storeImage2.childImageSharp.gatsbyImageData
+        }
         style={{ width: 100, borderRadius: 16 }}
         alt="百人一首 簡単に暗記"
       />

@@ -44,21 +44,31 @@ module.exports = {
       return {
         correctImage: {
           childImageSharp: {
-            fluid: {
-              aspectRatio: 0.7228915662650602,
-              srcSet: "",
-              sizes: "(max-width: 300px) 100vw, 200px",
-              src: correctImage,
+            gatsbyImageData: {
+              layout: "constrained",
+              backgroundColor: "#a8d878",
+              images: {
+                fallback: {
+                  src: correctImage,
+                  srcSet: "",
+                  sizes: "(max-width: 300px) 100vw, 200px",
+                }
+              },
             },
           },
         },
         incorrectImage: {
           childImageSharp: {
-            fluid: {
-              aspectRatio: 0.7228915662650602,
-              srcSet: "",
-              sizes: "(max-width: 300px) 100vw, 200px",
-              src: incorrectImage,
+            gatsbyImageData: {
+              layout: "constrained",
+              backgroundColor: "#a8d878",
+              images: {
+                fallback: {
+                  src: incorrectImage,
+                  srcSet: "",
+                  sizes: "(max-width: 300px) 100vw, 200px",
+                }
+              },
             },
           },
         },
@@ -68,11 +78,16 @@ module.exports = {
       return {
         dogezaImage: {
           childImageSharp: {
-            fluid: {
-              aspectRatio: 0.7228915662650602,
-              srcSet: "",
-              sizes: "(max-width: 200px) 200px, 200px",
-              src: dogezaImage,
+            gatsbyImageData: {
+              layout: "constrained",
+              backgroundColor: "#a8d878",
+              images: {
+                fallback: {
+                  src: dogezaImage,
+                  srcSet: "",
+                  sizes: "(max-width: 200px) 200px, 200px",
+                }
+              },
             },
           },
         },
@@ -89,21 +104,31 @@ module.exports = {
       return {
         storeImage1: {
           childImageSharp: {
-            fluid: {
-              aspectRatio: 0.7228915662650602,
-              srcSet: "",
-              sizes: "(max-width: 200px) 200px, 200px",
-              src: appIconImage,
+            gatsbyImageData: {
+              layout: "constrained",
+              backgroundColor: "#a8d878",
+              images: {
+                fallback: {
+                  src: appIconImage,
+                  srcSet: "",
+                  sizes: "(max-width: 200px) 200px, 200px",
+                }
+              },
             },
           },
         },
         storeImage2: {
           childImageSharp: {
-            fluid: {
-              aspectRatio: 0.7228915662650602,
-              srcSet: "",
-              sizes: "(max-width: 200px) 200px, 200px",
-              src: appIconReaderImage,
+            gatsbyImageData: {
+              layout: "constrained",
+              backgroundColor: "#a8d878",
+              images: {
+                fallback: {
+                  src: appIconReaderImage,
+                  srcSet: "",
+                  sizes: "(max-width: 200px) 200px, 200px",
+                }
+              },
             },
           },
         },
@@ -115,11 +140,16 @@ module.exports = {
           edges: Array.from(Array(100).keys()).map(i => ({
             node: {
               childImageSharp: {
-                fluid: {
-                  aspectRatio: 0.7228915662650602,
-                  srcSet: "",
-                  sizes: "(max-width: 200px) 100vw, 200px",
-                  src: karutaImage,
+                gatsbyImageData: {
+                  layout: "constrained",
+                  backgroundColor: "#a8d878",
+                  images: {
+                    fallback: {
+                      src: appIconReaderImage,
+                      srcSet: "",
+                      sizes: "(max-width: 200px) 100vw, 200px",
+                    }
+                  },
                 }
               },
               name: `karuta_${("00" + (i + 1)).slice(-3)}`

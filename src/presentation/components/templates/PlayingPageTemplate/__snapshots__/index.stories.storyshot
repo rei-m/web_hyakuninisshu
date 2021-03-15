@@ -1,0 +1,31 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Storyshots templates/PlayingPageTemplate default 1`] = `
+Array [
+  <header
+    className="makeStyles-root-2193 makeStyles-root-2196 makeStyles-header-2190"
+  >
+    <h1
+      className="makeStyles-root-2197 makeStyles-root-2198 makeStyles-title-2194"
+    >
+      PlayingPageTemplate
+    </h1>
+  </header>,
+  <main
+    className="makeStyles-root-2189 makeStyles-root-2192"
+  >
+    <div
+      className="makeStyles-content-2188"
+      style={
+        Object {
+          "backgroundImage": "url(test-file-stub)",
+        }
+      }
+    >
+      <span>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore odio corporis modi incidunt sed temporibus qui cum veritatis animi, praesentium culpa quaerat vero dolores aut ratione eos error distinctio nulla.
+      </span>
+    </div>
+  </main>,
+]
+`;

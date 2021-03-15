@@ -1,6 +1,6 @@
 import React, { useCallback } from 'react';
 import makeStyles from '@material-ui/core/styles/makeStyles';
-import Img from 'gatsby-image';
+import { GatsbyImage } from 'gatsby-plugin-image';
 import YomiFuda from '@src/presentation/components/molecules/YomiFuda';
 import ToriFuda from '@src/presentation/components/molecules/ToriFuda';
 import Block from '@src/presentation/components/atoms/Block';
@@ -113,8 +113,9 @@ const KarutaPlaying = ({
       </Block>
       {answer && (
         <Block onClick={onClickResult} className={classes.correctImageContainer} data-test="result">
-          <Img
-            fluid={correctImages.find((_, i) => (i === 0 && answer.isCorrect) || (i === 1 && !answer.isCorrect))}
+          <GatsbyImage
+            image={answer.isCorrect ? correctImages[0] : correctImages[1]}
+            alt={answer.isCorrect ? '正解' : '不正解'}
             className={classes.correctImage}
           />
         </Block>

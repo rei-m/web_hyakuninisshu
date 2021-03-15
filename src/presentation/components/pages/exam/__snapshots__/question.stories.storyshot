@@ -1,0 +1,244 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Storyshots pages/exam/question default 1`] = `
+Array [
+  <header
+    className="makeStyles-root-950 makeStyles-root-953 makeStyles-header-947"
+  >
+    <div
+      className="makeStyles-rippleContainer-954"
+      onMouseDown={[Function]}
+      onMouseUp={[Function]}
+    >
+      <span
+        className="makeStyles-root-957 makeStyles-clickable-958 makeStyles-root-956 makeStyles-headerItem-952"
+        onClick={[Function]}
+      >
+        <svg
+          aria-hidden={true}
+          className="MuiSvgIcon-root"
+          focusable="false"
+          style={
+            Object {
+              "fontSize": "2.4rem",
+            }
+          }
+          viewBox="0 0 24 24"
+        >
+          <path
+            d="M20 11H7.83l5.59-5.59L12 4l-8 8 8 8 1.41-1.41L7.83 13H20v-2z"
+          />
+        </svg>
+      </span>
+    </div>
+    <h1
+      className="makeStyles-root-959 makeStyles-root-960 makeStyles-title-951"
+    >
+      百人一首 - 腕試し -
+    </h1>
+  </header>,
+  <main
+    className="makeStyles-root-946 makeStyles-root-949"
+  >
+    <div
+      className="makeStyles-content-945"
+      style={
+        Object {
+          "backgroundImage": "url(test-file-stub)",
+        }
+      }
+    >
+      <div
+        className="makeStyles-root-962"
+      >
+        <div
+          className="makeStyles-yomiFudaContainer-963"
+        >
+          <span
+            className="makeStyles-root-971 makeStyles-root-972 makeStyles-position-967"
+          >
+            1 / 100
+          </span>
+          <div
+            className="makeStyles-root-973 makeStyles-root-978 makeStyles-yomiFuda-965"
+          >
+            <div
+              className="makeStyles-inner-974"
+            >
+              <span
+                className="makeStyles-root-971 makeStyles-root-983 makeStyles-root-981 makeStyles-root-982 makeStyles-first-975"
+              >
+                <span
+                  className="makeStyles-root-984"
+                  onAnimationEnd={[Function]}
+                  style={
+                    Object {
+                      "animationDuration": "0.6s",
+                    }
+                  }
+                >
+                  秋
+                </span>
+                <span>
+                  　
+                </span>
+                <span>
+                  　
+                </span>
+                <span>
+                  　
+                </span>
+              </span>
+              <span
+                className="makeStyles-root-971 makeStyles-root-987 makeStyles-root-981 makeStyles-root-986 makeStyles-second-976 makeStyles-second-979"
+              >
+                <span>
+                  　
+                </span>
+                <span>
+                  　
+                </span>
+                <span>
+                  　
+                </span>
+                <span>
+                  　
+                </span>
+                <span>
+                  　
+                </span>
+                <span>
+                  　
+                </span>
+              </span>
+              <span
+                className="makeStyles-root-971 makeStyles-root-989 makeStyles-root-981 makeStyles-root-988 makeStyles-third-977 makeStyles-third-980"
+              >
+                <span>
+                  　
+                </span>
+                <span>
+                  　
+                </span>
+                <span>
+                  　
+                </span>
+                <span>
+                  　
+                </span>
+                <span>
+                  　
+                </span>
+              </span>
+            </div>
+          </div>
+        </div>
+        <div
+          className="makeStyles-toriFudaContainer-964"
+        >
+          <div
+            className="makeStyles-rippleContainer-954"
+            onMouseDown={[Function]}
+            onMouseUp={[Function]}
+          >
+            <div
+              className="makeStyles-clickable-970 makeStyles-root-990 makeStyles-root-996 makeStyles-toriFuda-966"
+              onClick={[Function]}
+            >
+              <div
+                className="makeStyles-inner-991"
+              >
+                <span
+                  className="makeStyles-root-971 makeStyles-root-999 makeStyles-root-981 makeStyles-root-998 makeStyles-fourh-992"
+                >
+                  わがころもでは
+                </span>
+                <span
+                  className="makeStyles-root-971 makeStyles-root-1001 makeStyles-root-981 makeStyles-root-1000 makeStyles-fifth-993 makeStyles-fifth-995"
+                >
+                  きりにぬれつつ
+                </span>
+              </div>
+            </div>
+          </div>
+          <div
+            className="makeStyles-rippleContainer-954"
+            onMouseDown={[Function]}
+            onMouseUp={[Function]}
+          >
+            <div
+              className="makeStyles-clickable-970 makeStyles-root-990 makeStyles-root-1004 makeStyles-toriFuda-966"
+              onClick={[Function]}
+            >
+              <div
+                className="makeStyles-inner-991"
+              >
+                <span
+                  className="makeStyles-root-971 makeStyles-root-1007 makeStyles-root-981 makeStyles-root-1006 makeStyles-fourh-992"
+                >
+                  ころもほすてふ
+                </span>
+                <span
+                  className="makeStyles-root-971 makeStyles-root-1009 makeStyles-root-981 makeStyles-root-1008 makeStyles-fifth-993 makeStyles-fifth-1003"
+                >
+                  あまのかぐやま
+                </span>
+              </div>
+            </div>
+          </div>
+          <div
+            className="makeStyles-rippleContainer-954"
+            onMouseDown={[Function]}
+            onMouseUp={[Function]}
+          >
+            <div
+              className="makeStyles-clickable-970 makeStyles-root-990 makeStyles-root-1012 makeStyles-toriFuda-966"
+              onClick={[Function]}
+            >
+              <div
+                className="makeStyles-inner-991"
+              >
+                <span
+                  className="makeStyles-root-971 makeStyles-root-1015 makeStyles-root-981 makeStyles-root-1014 makeStyles-fourh-992"
+                >
+                  ながながしよを
+                </span>
+                <span
+                  className="makeStyles-root-971 makeStyles-root-1017 makeStyles-root-981 makeStyles-root-1016 makeStyles-fifth-993 makeStyles-fifth-1011"
+                >
+                  ひとりかもねむ
+                </span>
+              </div>
+            </div>
+          </div>
+          <div
+            className="makeStyles-rippleContainer-954"
+            onMouseDown={[Function]}
+            onMouseUp={[Function]}
+          >
+            <div
+              className="makeStyles-clickable-970 makeStyles-root-990 makeStyles-root-1020 makeStyles-toriFuda-966"
+              onClick={[Function]}
+            >
+              <div
+                className="makeStyles-inner-991"
+              >
+                <span
+                  className="makeStyles-root-971 makeStyles-root-1023 makeStyles-root-981 makeStyles-root-1022 makeStyles-fourh-992"
+                >
+                  ふじのたかねに
+                </span>
+                <span
+                  className="makeStyles-root-971 makeStyles-root-1025 makeStyles-root-981 makeStyles-root-1024 makeStyles-fifth-993 makeStyles-fifth-1019"
+                >
+                  ゆきはふりつつ
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>,
+]
+`;

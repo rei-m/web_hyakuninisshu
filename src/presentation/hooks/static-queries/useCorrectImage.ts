@@ -1,39 +1,35 @@
-import { FluidObject } from 'gatsby-image';
+import { IGatsbyImageData } from 'gatsby-plugin-image';
 import { graphql, useStaticQuery } from 'gatsby';
 
 export interface QueryData {
   correctImage: {
     childImageSharp: {
-      fluid: FluidObject;
+      gatsbyImageData: IGatsbyImageData;
     };
   };
   incorrectImage: {
     childImageSharp: {
-      fluid: FluidObject;
+      gatsbyImageData: IGatsbyImageData;
     };
   };
 }
 
-export const useCorrectImage = () => {
+export const useCorrectImage = (): [IGatsbyImageData, IGatsbyImageData] => {
   const { correctImage, incorrectImage } = useStaticQuery(
     graphql`
       query CorrectImageQuery {
         correctImage: file(relativePath: { eq: "check_correct.png" }) {
           childImageSharp {
-            fluid(maxWidth: 300) {
-              ...GatsbyImageSharpFluid
-            }
+            gatsbyImageData(width: 300)
           }
         }
         incorrectImage: file(relativePath: { eq: "check_incorrect.png" }) {
           childImageSharp {
-            fluid(maxWidth: 300) {
-              ...GatsbyImageSharpFluid
-            }
+            gatsbyImageData(width: 300)
           }
         }
       }
     `
   );
-  return [correctImage.childImageSharp.fluid, incorrectImage.childImageSharp.fluid];
+  return [correctImage.childImageSharp.gatsbyImageData, incorrectImage.childImageSharp.gatsbyImageData];
 };
