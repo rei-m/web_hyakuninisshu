@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Storyshots atoms/CenteredFrame default 1`] = `
+<span
+  className="makeStyles-root-5"
+>
+  コンテンツ
+</span>
+`;

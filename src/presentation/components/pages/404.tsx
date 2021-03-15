@@ -1,5 +1,5 @@
 import React from 'react';
-import Img from 'gatsby-image';
+import { GatsbyImage } from 'gatsby-plugin-image';
 import makeStyles from '@material-ui/core/styles/makeStyles';
 import MessagePageTemplate from '@src/presentation/components/templates/MessagePageTemplate';
 import Block from '@src/presentation/components/atoms/Block';
@@ -24,8 +24,8 @@ const NotFoundPage = () => {
           <br />
           トップページにお戻りください。
         </Txt>
-        <Img
-          fluid={useDogezaImage()}
+        <GatsbyImage
+          image={useDogezaImage()}
           style={{
             marginTop: '32px',
           }}

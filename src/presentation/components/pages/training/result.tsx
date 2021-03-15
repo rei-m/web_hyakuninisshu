@@ -1,5 +1,6 @@
 import React, { useCallback } from 'react';
-import { Redirect, RouteComponentProps } from '@reach/router';
+import { navigate } from 'gatsby';
+import { Redirect } from '@reach/router';
 import { useSelector, useDispatch } from 'react-redux';
 import makeStyles from '@material-ui/core/styles/makeStyles';
 import { paths } from '@src/presentation/routes';
@@ -13,7 +14,7 @@ import { questionsTypes } from '@src/state/questions';
 import { ThemeInterface } from '@src/presentation/styles/theme';
 import { useQuestionDiContainer } from '@src/presentation/hooks/useQuestionDiContainer';
 
-export type Props = Pick<RouteComponentProps, 'navigate'>;
+export type Props = {};
 
 export type PresenterProps = Pick<questionsTypes.State, 'state' | 'result'> & {
   totalCount: number;
@@ -66,7 +67,7 @@ export const Presenter = ({ state, result, totalCount, onClickRestart, onClickBa
   );
 };
 
-const Container = ({ presenter, navigate }: ContainerProps) => {
+const Container = ({ presenter }: ContainerProps) => {
   const { state, result, totalCount } = useSelector<GlobalState, PickedState>((state) => state.questions);
   const dispatch = useDispatch();
   const { questionsActionCreator } = useQuestionDiContainer();

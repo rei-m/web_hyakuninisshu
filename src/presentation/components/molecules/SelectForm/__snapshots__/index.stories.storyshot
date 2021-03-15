@@ -1,0 +1,55 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Storyshots molecules/SelectForm default 1`] = `
+<div
+  className="MuiFormControl-root makeStyles-formControl-276 "
+>
+  <label
+    className="MuiFormLabel-root MuiInputLabel-root makeStyles-label-277 MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiFormLabel-filled"
+    data-shrink={true}
+    htmlFor="id-item"
+  >
+    あいてむ
+  </label>
+  <div
+    className="MuiInputBase-root MuiInput-root MuiInput-underline makeStyles-select-278 MuiInputBase-formControl MuiInput-formControl"
+    onClick={[Function]}
+  >
+    <div
+      aria-haspopup="listbox"
+      aria-labelledby="mui-component-select-item"
+      className="MuiSelect-root MuiSelect-select MuiSelect-selectMenu MuiInputBase-input MuiInput-input"
+      id="mui-component-select-item"
+      onBlur={[Function]}
+      onFocus={[Function]}
+      onKeyDown={[Function]}
+      onMouseDown={[Function]}
+      role="button"
+      tabIndex={0}
+    >
+      いちばん
+    </div>
+    <input
+      aria-hidden={true}
+      className="MuiSelect-nativeInput"
+      id="id-item"
+      name="item"
+      onAnimationStart={[Function]}
+      onChange={[Function]}
+      required={false}
+      tabIndex={-1}
+      value="1"
+    />
+    <svg
+      aria-hidden={true}
+      className="MuiSvgIcon-root MuiSelect-icon"
+      focusable="false"
+      viewBox="0 0 24 24"
+    >
+      <path
+        d="M7 10l5 5 5-5z"
+      />
+    </svg>
+  </div>
+</div>
+`;

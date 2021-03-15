@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Storyshots atoms/Ratio default 1`] = `
+<span
+  className="makeStyles-root-36 makeStyles-root-37 "
+>
+  50 / 100
+</span>
+`;

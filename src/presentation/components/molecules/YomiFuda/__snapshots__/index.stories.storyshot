@@ -1,0 +1,913 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Storyshots molecules/YomiFuda with anim 1`] = `
+<div
+  className="makeStyles-root-379 makeStyles-root-384"
+>
+  <div
+    className="makeStyles-inner-380"
+  >
+    <span
+      className="makeStyles-root-390 makeStyles-root-391 makeStyles-root-388 makeStyles-root-389 makeStyles-first-381"
+    >
+      <span
+        className="makeStyles-root-392"
+        onAnimationEnd={[Function]}
+        style={
+          Object {
+            "animationDuration": "1s",
+          }
+        }
+      >
+        秋
+      </span>
+      <span
+        style={
+          Object {
+            "display": "inline-block",
+          }
+        }
+      >
+        　
+      </span>
+      <span
+        style={
+          Object {
+            "display": "inline-block",
+          }
+        }
+      >
+        　
+      </span>
+      <span
+        style={
+          Object {
+            "display": "inline-block",
+          }
+        }
+      >
+        　
+      </span>
+    </span>
+    <span
+      className="makeStyles-root-390 makeStyles-root-395 makeStyles-root-388 makeStyles-root-394 makeStyles-second-382 makeStyles-second-385"
+    >
+      <span
+        style={
+          Object {
+            "display": "inline-block",
+          }
+        }
+      >
+        　
+      </span>
+      <span
+        style={
+          Object {
+            "display": "inline-block",
+          }
+        }
+      >
+        　
+      </span>
+      <span
+        style={
+          Object {
+            "display": "inline-block",
+          }
+        }
+      >
+        　
+      </span>
+      <span
+        style={
+          Object {
+            "display": "inline-block",
+          }
+        }
+      >
+        　
+      </span>
+      <span
+        style={
+          Object {
+            "display": "inline-block",
+          }
+        }
+      >
+        　
+      </span>
+      <span
+        style={
+          Object {
+            "display": "inline-block",
+          }
+        }
+      >
+        　
+      </span>
+    </span>
+    <span
+      className="makeStyles-root-390 makeStyles-root-397 makeStyles-root-388 makeStyles-root-396 makeStyles-third-383 makeStyles-third-386"
+    >
+      <span
+        style={
+          Object {
+            "display": "inline-block",
+          }
+        }
+      >
+        　
+      </span>
+      <span
+        style={
+          Object {
+            "display": "inline-block",
+          }
+        }
+      >
+        　
+      </span>
+      <span
+        style={
+          Object {
+            "display": "inline-block",
+          }
+        }
+      >
+        　
+      </span>
+      <span
+        style={
+          Object {
+            "display": "inline-block",
+          }
+        }
+      >
+        　
+      </span>
+      <span
+        style={
+          Object {
+            "display": "inline-block",
+          }
+        }
+      >
+        　
+      </span>
+    </span>
+  </div>
+</div>
+`;
+
+exports[`Storyshots molecules/YomiFuda with size l 1`] = `
+<div
+  className="makeStyles-root-455 makeStyles-root-460"
+>
+  <div
+    className="makeStyles-inner-456"
+  >
+    <span
+      className="makeStyles-root-466 makeStyles-root-467 makeStyles-root-464 makeStyles-root-465 makeStyles-first-457"
+    >
+      <span
+        className="makeStyles-root-468"
+        onAnimationEnd={[Function]}
+        style={
+          Object {
+            "animationDuration": "0s",
+          }
+        }
+      >
+        秋
+      </span>
+      <span
+        className="makeStyles-root-468"
+        onAnimationEnd={[Function]}
+        style={
+          Object {
+            "animationDuration": "0s",
+          }
+        }
+      >
+        の
+      </span>
+      <span
+        className="makeStyles-root-468"
+        onAnimationEnd={[Function]}
+        style={
+          Object {
+            "animationDuration": "0s",
+          }
+        }
+      >
+        田
+      </span>
+      <span
+        className="makeStyles-root-468"
+        onAnimationEnd={[Function]}
+        style={
+          Object {
+            "animationDuration": "0s",
+          }
+        }
+      >
+        の
+      </span>
+    </span>
+    <span
+      className="makeStyles-root-466 makeStyles-root-471 makeStyles-root-464 makeStyles-root-470 makeStyles-second-458 makeStyles-second-461"
+    >
+      <span
+        className="makeStyles-root-468"
+        onAnimationEnd={[Function]}
+        style={
+          Object {
+            "animationDuration": "0s",
+          }
+        }
+      >
+        か
+      </span>
+      <span
+        className="makeStyles-root-468"
+        onAnimationEnd={[Function]}
+        style={
+          Object {
+            "animationDuration": "0s",
+          }
+        }
+      >
+        り
+      </span>
+      <span
+        className="makeStyles-root-468"
+        onAnimationEnd={[Function]}
+        style={
+          Object {
+            "animationDuration": "0s",
+          }
+        }
+      >
+        ほ
+      </span>
+      <span
+        className="makeStyles-root-468"
+        onAnimationEnd={[Function]}
+        style={
+          Object {
+            "animationDuration": "0s",
+          }
+        }
+      >
+        の
+      </span>
+      <span
+        className="makeStyles-root-468"
+        onAnimationEnd={[Function]}
+        style={
+          Object {
+            "animationDuration": "0s",
+          }
+        }
+      >
+        庵
+      </span>
+      <span
+        className="makeStyles-root-468"
+        onAnimationEnd={[Function]}
+        style={
+          Object {
+            "animationDuration": "0s",
+          }
+        }
+      >
+        の
+      </span>
+    </span>
+    <span
+      className="makeStyles-root-466 makeStyles-root-473 makeStyles-root-464 makeStyles-root-472 makeStyles-third-459 makeStyles-third-462"
+    >
+      <span
+        className="makeStyles-root-468"
+        onAnimationEnd={[Function]}
+        style={
+          Object {
+            "animationDuration": "0s",
+          }
+        }
+      >
+        苫
+      </span>
+      <span
+        className="makeStyles-root-468"
+        onAnimationEnd={[Function]}
+        style={
+          Object {
+            "animationDuration": "0s",
+          }
+        }
+      >
+        を
+      </span>
+      <span
+        className="makeStyles-root-468"
+        onAnimationEnd={[Function]}
+        style={
+          Object {
+            "animationDuration": "0s",
+          }
+        }
+      >
+        あ
+      </span>
+      <span
+        className="makeStyles-root-468"
+        onAnimationEnd={[Function]}
+        style={
+          Object {
+            "animationDuration": "0s",
+          }
+        }
+      >
+        ら
+      </span>
+      <span
+        className="makeStyles-root-468"
+        onAnimationEnd={[Function]}
+        style={
+          Object {
+            "animationDuration": "0s",
+          }
+        }
+      >
+        み
+      </span>
+    </span>
+  </div>
+</div>
+`;
+
+exports[`Storyshots molecules/YomiFuda with size m 1`] = `
+<div
+  className="makeStyles-root-436 makeStyles-root-441"
+>
+  <div
+    className="makeStyles-inner-437"
+  >
+    <span
+      className="makeStyles-root-447 makeStyles-root-448 makeStyles-root-445 makeStyles-root-446 makeStyles-first-438"
+    >
+      <span
+        className="makeStyles-root-449"
+        onAnimationEnd={[Function]}
+        style={
+          Object {
+            "animationDuration": "0s",
+          }
+        }
+      >
+        秋
+      </span>
+      <span
+        className="makeStyles-root-449"
+        onAnimationEnd={[Function]}
+        style={
+          Object {
+            "animationDuration": "0s",
+          }
+        }
+      >
+        の
+      </span>
+      <span
+        className="makeStyles-root-449"
+        onAnimationEnd={[Function]}
+        style={
+          Object {
+            "animationDuration": "0s",
+          }
+        }
+      >
+        田
+      </span>
+      <span
+        className="makeStyles-root-449"
+        onAnimationEnd={[Function]}
+        style={
+          Object {
+            "animationDuration": "0s",
+          }
+        }
+      >
+        の
+      </span>
+    </span>
+    <span
+      className="makeStyles-root-447 makeStyles-root-452 makeStyles-root-445 makeStyles-root-451 makeStyles-second-439 makeStyles-second-442"
+    >
+      <span
+        className="makeStyles-root-449"
+        onAnimationEnd={[Function]}
+        style={
+          Object {
+            "animationDuration": "0s",
+          }
+        }
+      >
+        か
+      </span>
+      <span
+        className="makeStyles-root-449"
+        onAnimationEnd={[Function]}
+        style={
+          Object {
+            "animationDuration": "0s",
+          }
+        }
+      >
+        り
+      </span>
+      <span
+        className="makeStyles-root-449"
+        onAnimationEnd={[Function]}
+        style={
+          Object {
+            "animationDuration": "0s",
+          }
+        }
+      >
+        ほ
+      </span>
+      <span
+        className="makeStyles-root-449"
+        onAnimationEnd={[Function]}
+        style={
+          Object {
+            "animationDuration": "0s",
+          }
+        }
+      >
+        の
+      </span>
+      <span
+        className="makeStyles-root-449"
+        onAnimationEnd={[Function]}
+        style={
+          Object {
+            "animationDuration": "0s",
+          }
+        }
+      >
+        庵
+      </span>
+      <span
+        className="makeStyles-root-449"
+        onAnimationEnd={[Function]}
+        style={
+          Object {
+            "animationDuration": "0s",
+          }
+        }
+      >
+        の
+      </span>
+    </span>
+    <span
+      className="makeStyles-root-447 makeStyles-root-454 makeStyles-root-445 makeStyles-root-453 makeStyles-third-440 makeStyles-third-443"
+    >
+      <span
+        className="makeStyles-root-449"
+        onAnimationEnd={[Function]}
+        style={
+          Object {
+            "animationDuration": "0s",
+          }
+        }
+      >
+        苫
+      </span>
+      <span
+        className="makeStyles-root-449"
+        onAnimationEnd={[Function]}
+        style={
+          Object {
+            "animationDuration": "0s",
+          }
+        }
+      >
+        を
+      </span>
+      <span
+        className="makeStyles-root-449"
+        onAnimationEnd={[Function]}
+        style={
+          Object {
+            "animationDuration": "0s",
+          }
+        }
+      >
+        あ
+      </span>
+      <span
+        className="makeStyles-root-449"
+        onAnimationEnd={[Function]}
+        style={
+          Object {
+            "animationDuration": "0s",
+          }
+        }
+      >
+        ら
+      </span>
+      <span
+        className="makeStyles-root-449"
+        onAnimationEnd={[Function]}
+        style={
+          Object {
+            "animationDuration": "0s",
+          }
+        }
+      >
+        み
+      </span>
+    </span>
+  </div>
+</div>
+`;
+
+exports[`Storyshots molecules/YomiFuda with size s 1`] = `
+<div
+  className="makeStyles-root-417 makeStyles-root-422"
+>
+  <div
+    className="makeStyles-inner-418"
+  >
+    <span
+      className="makeStyles-root-428 makeStyles-root-429 makeStyles-root-426 makeStyles-root-427 makeStyles-first-419"
+    >
+      <span
+        className="makeStyles-root-430"
+        onAnimationEnd={[Function]}
+        style={
+          Object {
+            "animationDuration": "0s",
+          }
+        }
+      >
+        秋
+      </span>
+      <span
+        className="makeStyles-root-430"
+        onAnimationEnd={[Function]}
+        style={
+          Object {
+            "animationDuration": "0s",
+          }
+        }
+      >
+        の
+      </span>
+      <span
+        className="makeStyles-root-430"
+        onAnimationEnd={[Function]}
+        style={
+          Object {
+            "animationDuration": "0s",
+          }
+        }
+      >
+        田
+      </span>
+      <span
+        className="makeStyles-root-430"
+        onAnimationEnd={[Function]}
+        style={
+          Object {
+            "animationDuration": "0s",
+          }
+        }
+      >
+        の
+      </span>
+    </span>
+    <span
+      className="makeStyles-root-428 makeStyles-root-433 makeStyles-root-426 makeStyles-root-432 makeStyles-second-420 makeStyles-second-423"
+    >
+      <span
+        className="makeStyles-root-430"
+        onAnimationEnd={[Function]}
+        style={
+          Object {
+            "animationDuration": "0s",
+          }
+        }
+      >
+        か
+      </span>
+      <span
+        className="makeStyles-root-430"
+        onAnimationEnd={[Function]}
+        style={
+          Object {
+            "animationDuration": "0s",
+          }
+        }
+      >
+        り
+      </span>
+      <span
+        className="makeStyles-root-430"
+        onAnimationEnd={[Function]}
+        style={
+          Object {
+            "animationDuration": "0s",
+          }
+        }
+      >
+        ほ
+      </span>
+      <span
+        className="makeStyles-root-430"
+        onAnimationEnd={[Function]}
+        style={
+          Object {
+            "animationDuration": "0s",
+          }
+        }
+      >
+        の
+      </span>
+      <span
+        className="makeStyles-root-430"
+        onAnimationEnd={[Function]}
+        style={
+          Object {
+            "animationDuration": "0s",
+          }
+        }
+      >
+        庵
+      </span>
+      <span
+        className="makeStyles-root-430"
+        onAnimationEnd={[Function]}
+        style={
+          Object {
+            "animationDuration": "0s",
+          }
+        }
+      >
+        の
+      </span>
+    </span>
+    <span
+      className="makeStyles-root-428 makeStyles-root-435 makeStyles-root-426 makeStyles-root-434 makeStyles-third-421 makeStyles-third-424"
+    >
+      <span
+        className="makeStyles-root-430"
+        onAnimationEnd={[Function]}
+        style={
+          Object {
+            "animationDuration": "0s",
+          }
+        }
+      >
+        苫
+      </span>
+      <span
+        className="makeStyles-root-430"
+        onAnimationEnd={[Function]}
+        style={
+          Object {
+            "animationDuration": "0s",
+          }
+        }
+      >
+        を
+      </span>
+      <span
+        className="makeStyles-root-430"
+        onAnimationEnd={[Function]}
+        style={
+          Object {
+            "animationDuration": "0s",
+          }
+        }
+      >
+        あ
+      </span>
+      <span
+        className="makeStyles-root-430"
+        onAnimationEnd={[Function]}
+        style={
+          Object {
+            "animationDuration": "0s",
+          }
+        }
+      >
+        ら
+      </span>
+      <span
+        className="makeStyles-root-430"
+        onAnimationEnd={[Function]}
+        style={
+          Object {
+            "animationDuration": "0s",
+          }
+        }
+      >
+        み
+      </span>
+    </span>
+  </div>
+</div>
+`;
+
+exports[`Storyshots molecules/YomiFuda without anim 1`] = `
+<div
+  className="makeStyles-root-398 makeStyles-root-403"
+>
+  <div
+    className="makeStyles-inner-399"
+  >
+    <span
+      className="makeStyles-root-409 makeStyles-root-410 makeStyles-root-407 makeStyles-root-408 makeStyles-first-400"
+    >
+      <span
+        className="makeStyles-root-411"
+        onAnimationEnd={[Function]}
+        style={
+          Object {
+            "animationDuration": "0s",
+          }
+        }
+      >
+        秋
+      </span>
+      <span
+        className="makeStyles-root-411"
+        onAnimationEnd={[Function]}
+        style={
+          Object {
+            "animationDuration": "0s",
+          }
+        }
+      >
+        の
+      </span>
+      <span
+        className="makeStyles-root-411"
+        onAnimationEnd={[Function]}
+        style={
+          Object {
+            "animationDuration": "0s",
+          }
+        }
+      >
+        田
+      </span>
+      <span
+        className="makeStyles-root-411"
+        onAnimationEnd={[Function]}
+        style={
+          Object {
+            "animationDuration": "0s",
+          }
+        }
+      >
+        の
+      </span>
+    </span>
+    <span
+      className="makeStyles-root-409 makeStyles-root-414 makeStyles-root-407 makeStyles-root-413 makeStyles-second-401 makeStyles-second-404"
+    >
+      <span
+        className="makeStyles-root-411"
+        onAnimationEnd={[Function]}
+        style={
+          Object {
+            "animationDuration": "0s",
+          }
+        }
+      >
+        か
+      </span>
+      <span
+        className="makeStyles-root-411"
+        onAnimationEnd={[Function]}
+        style={
+          Object {
+            "animationDuration": "0s",
+          }
+        }
+      >
+        り
+      </span>
+      <span
+        className="makeStyles-root-411"
+        onAnimationEnd={[Function]}
+        style={
+          Object {
+            "animationDuration": "0s",
+          }
+        }
+      >
+        ほ
+      </span>
+      <span
+        className="makeStyles-root-411"
+        onAnimationEnd={[Function]}
+        style={
+          Object {
+            "animationDuration": "0s",
+          }
+        }
+      >
+        の
+      </span>
+      <span
+        className="makeStyles-root-411"
+        onAnimationEnd={[Function]}
+        style={
+          Object {
+            "animationDuration": "0s",
+          }
+        }
+      >
+        庵
+      </span>
+      <span
+        className="makeStyles-root-411"
+        onAnimationEnd={[Function]}
+        style={
+          Object {
+            "animationDuration": "0s",
+          }
+        }
+      >
+        の
+      </span>
+    </span>
+    <span
+      className="makeStyles-root-409 makeStyles-root-416 makeStyles-root-407 makeStyles-root-415 makeStyles-third-402 makeStyles-third-405"
+    >
+      <span
+        className="makeStyles-root-411"
+        onAnimationEnd={[Function]}
+        style={
+          Object {
+            "animationDuration": "0s",
+          }
+        }
+      >
+        苫
+      </span>
+      <span
+        className="makeStyles-root-411"
+        onAnimationEnd={[Function]}
+        style={
+          Object {
+            "animationDuration": "0s",
+          }
+        }
+      >
+        を
+      </span>
+      <span
+        className="makeStyles-root-411"
+        onAnimationEnd={[Function]}
+        style={
+          Object {
+            "animationDuration": "0s",
+          }
+        }
+      >
+        あ
+      </span>
+      <span
+        className="makeStyles-root-411"
+        onAnimationEnd={[Function]}
+        style={
+          Object {
+            "animationDuration": "0s",
+          }
+        }
+      >
+        ら
+      </span>
+      <span
+        className="makeStyles-root-411"
+        onAnimationEnd={[Function]}
+        style={
+          Object {
+            "animationDuration": "0s",
+          }
+        }
+      >
+        み
+      </span>
+    </span>
+  </div>
+</div>
+`;

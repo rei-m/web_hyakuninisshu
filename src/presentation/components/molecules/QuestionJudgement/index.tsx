@@ -1,6 +1,6 @@
 import React, { useCallback } from 'react';
 import clsx from 'clsx';
-import Img from 'gatsby-image';
+import { GatsbyImage } from 'gatsby-plugin-image';
 import makeStyles from '@material-ui/core/styles/makeStyles';
 import Block from '@src/presentation/components/atoms/Block';
 import KarutaNo from '@src/presentation/components/atoms/KarutaNo';
@@ -49,7 +49,11 @@ const QuestionJudgement = ({ karuta, correct, className, onClick }: Props) => {
     <Block onClick={handleOnClick} className={clsx(classes.root, className)}>
       <KarutaNo karutaNo={karuta.no} size={`ss`} />
       <Block className={classes.imageBox}>
-        <Img fluid={correct ? correctImage : incorrectImage} style={{ width: '80%' }} />
+        <GatsbyImage
+          image={correct ? correctImage : incorrectImage}
+          alt={correct ? '正解' : '不正解'}
+          style={{ width: '80%' }}
+        />
       </Block>
     </Block>
   );

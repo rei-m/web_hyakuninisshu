@@ -1,5 +1,5 @@
 import React from 'react';
-import Img from 'gatsby-image';
+import { GatsbyImage } from 'gatsby-plugin-image';
 import MessagePageTemplate from '@src/presentation/components/templates/MessagePageTemplate';
 import Txt from '@src/presentation/components/atoms/Txt';
 import { useDogezaImage } from '@src/presentation/hooks/static-queries/useDogezaImage';
@@ -15,8 +15,8 @@ const UnhandledErrorPage = ({ error }: Props) => {
   return (
     <MessagePageTemplate>
       <Txt size={`l`}>{error instanceof AppError ? error.message : UNKNOWN_MESSAGE}</Txt>
-      <Img
-        fluid={useDogezaImage()}
+      <GatsbyImage
+        image={useDogezaImage()}
         style={{
           width: 200,
           marginTop: '32px',

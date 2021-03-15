@@ -1,5 +1,5 @@
 import React, { useLayoutEffect } from 'react';
-import { RouteComponentProps } from '@reach/router';
+import { navigate } from 'gatsby';
 import { useDispatch, useSelector } from 'react-redux';
 import makeStyles from '@material-ui/core/styles/makeStyles';
 import { paths } from '@src/presentation/routes';
@@ -11,7 +11,7 @@ import { useQuestionDiContainer } from '@src/presentation/hooks/useQuestionDiCon
 import { GlobalState } from '@src/state';
 import { questionsTypes } from '@src/state/questions';
 
-export type Props = Pick<RouteComponentProps, 'navigate'>;
+export type Props = {};
 
 export type PresenterProps = {
   onClickStartExam: () => void;
@@ -61,7 +61,7 @@ export const Presenter = ({ onClickStartExam, onClickBack }: PresenterProps) => 
 
 type PickedState = Pick<questionsTypes.State, 'state'>;
 
-export const Container = ({ navigate, presenter }: ContainerProps) => {
+export const Container = ({ presenter }: ContainerProps) => {
   const { questionsActionCreator } = useQuestionDiContainer();
   const dispatch = useDispatch();
   const pickedState = useSelector<GlobalState, PickedState>(

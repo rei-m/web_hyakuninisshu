@@ -1,0 +1,10 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Storyshots atoms/Block default 1`] = `
+<div
+  className="makeStyles-clickable-4"
+  onClick={[Function]}
+>
+  Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil, sint excepturi eaque commodi natus architecto! Et odit, itaque qui provident, a ipsum optio maxime obcaecati molestiae sequi quod ad quam?
+</div>
+`;

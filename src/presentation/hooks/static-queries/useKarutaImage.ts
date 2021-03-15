@@ -1,4 +1,4 @@
-import { FluidObject } from 'gatsby-image';
+import { IGatsbyImageData } from 'gatsby-plugin-image';
 import { graphql, useStaticQuery } from 'gatsby';
 
 export interface QueryData {
@@ -6,7 +6,7 @@ export interface QueryData {
     edges: Array<{
       node: {
         childImageSharp: {
-          fluid: FluidObject;
+          gatsbyImageData: IGatsbyImageData;
         };
         name: string;
       };
@@ -22,9 +22,7 @@ export const useKarutaImage = (karutaNo: number) => {
           edges {
             node {
               childImageSharp {
-                fluid(maxWidth: 200) {
-                  ...GatsbyImageSharpFluid
-                }
+                gatsbyImageData(width: 200)
               }
               name
             }
@@ -41,5 +39,5 @@ export const useKarutaImage = (karutaNo: number) => {
     return undefined;
   }
 
-  return resource.node.childImageSharp.fluid;
+  return resource.node.childImageSharp.gatsbyImageData;
 };

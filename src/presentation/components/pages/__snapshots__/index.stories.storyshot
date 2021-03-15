@@ -1,0 +1,4282 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Storyshots pages/index default 1`] = `
+Array [
+  <header
+    className="makeStyles-root-1184 makeStyles-root-1187 makeStyles-header-1181"
+  >
+    <h1
+      className="makeStyles-root-1188 makeStyles-root-1189 makeStyles-title-1185"
+    >
+      百人一首 - 簡単に暗記 -
+    </h1>
+  </header>,
+  <main
+    className="makeStyles-root-1180 makeStyles-root-1183"
+  >
+    <div
+      className="makeStyles-content-1179"
+    >
+      <section
+        className="makeStyles-root-1191"
+      >
+        <h2
+          className="makeStyles-root-1188 makeStyles-root-1194 makeStyles-underlineHeading-1192"
+        >
+          百人一首 簡単に暗記について
+        </h2>
+        <p
+          className="makeStyles-root-1195 makeStyles-root-1196 "
+        >
+          このサイトは百人一首を手軽に暗記するためのサイトです。4択のクイズ形式で繰り返し練習することで効率よく百人一首を覚えることが出来ます。
+        </p>
+      </section>
+      <div
+        className="makeStyles-root-1197"
+      >
+        <div
+          className="makeStyles-dummyResponsive-1199"
+        >
+          この欄は広告枠です
+        </div>
+      </div>
+      <section
+        className="makeStyles-root-1191"
+      >
+        <h2
+          className="makeStyles-root-1188 makeStyles-root-1200 makeStyles-underlineHeading-1192"
+        >
+          メニュー
+        </h2>
+        <p
+          className="makeStyles-root-1195 makeStyles-root-1201 "
+        >
+          百人一首の練習は読み札に対応する下の句を四択の中から選ぶクイズ形式となっています。繰り返し練習して百人一首のスタートに立ちましょう。
+        </p>
+        <div
+          className="makeStyles-root-1202"
+        >
+          <div
+            className="makeStyles-root-1204 makeStyles-menuLink-1203"
+          >
+            <div
+              className="makeStyles-rippleContainer-1208"
+              onMouseDown={[Function]}
+              onMouseUp={[Function]}
+              style={
+                Object {
+                  ":hover": Object {
+                    "textDecoration": "none",
+                  },
+                  "display": "inline-block",
+                  "height": "100%",
+                  "padding": "16px",
+                }
+              }
+            >
+              <a
+                href="/training/"
+                onClick={[Function]}
+                style={Object {}}
+              >
+                <span
+                  className="makeStyles-iconWrapper-1205"
+                >
+                  <svg
+                    aria-hidden={true}
+                    className="MuiSvgIcon-root"
+                    focusable="false"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      d="M3 17.25V21h3.75L17.81 9.94l-3.75-3.75L3 17.25zM20.71 7.04c.39-.39.39-1.02 0-1.41l-2.34-2.34a.9959.9959 0 00-1.41 0l-1.83 1.83 3.75 3.75 1.83-1.83z"
+                    />
+                  </svg>
+                </span>
+                <div
+                  className="makeStyles-root-1195 makeStyles-root-1210 makeStyles-title-1206"
+                >
+                  練習
+                </div>
+                <p
+                  className="makeStyles-root-1195 makeStyles-root-1211 makeStyles-explain-1207"
+                >
+                  様々な条件を組み合わせて出題範囲を指定できます。ご自身の習熟度に合わせて効率よく練習できます。
+                </p>
+              </a>
+            </div>
+          </div>
+          <div
+            className="makeStyles-root-1204 makeStyles-menuLink-1203"
+          >
+            <div
+              className="makeStyles-rippleContainer-1208"
+              onMouseDown={[Function]}
+              onMouseUp={[Function]}
+              style={
+                Object {
+                  ":hover": Object {
+                    "textDecoration": "none",
+                  },
+                  "display": "inline-block",
+                  "height": "100%",
+                  "padding": "16px",
+                }
+              }
+            >
+              <a
+                href="/exam/"
+                onClick={[Function]}
+                style={Object {}}
+              >
+                <span
+                  className="makeStyles-iconWrapper-1205"
+                >
+                  <svg
+                    aria-hidden={true}
+                    className="MuiSvgIcon-root"
+                    focusable="false"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      d="M22 10l-6-6H4c-1.1 0-2 .9-2 2v12.01c0 1.1.9 1.99 2 1.99l16-.01c1.1 0 2-.89 2-1.99v-8zm-7-4.5l5.5 5.5H15V5.5z"
+                    />
+                  </svg>
+                </span>
+                <div
+                  className="makeStyles-root-1195 makeStyles-root-1212 makeStyles-title-1206"
+                >
+                  腕試し
+                </div>
+                <p
+                  className="makeStyles-root-1195 makeStyles-root-1213 makeStyles-explain-1207"
+                >
+                  自身のある方は腕試しに挑戦しましょう。百首通しでランダムに出題されます。
+                </p>
+              </a>
+            </div>
+          </div>
+          <div
+            className="makeStyles-root-1204 makeStyles-menuLink-1203"
+          >
+            <div
+              className="makeStyles-rippleContainer-1208"
+              onMouseDown={[Function]}
+              onMouseUp={[Function]}
+              style={
+                Object {
+                  ":hover": Object {
+                    "textDecoration": "none",
+                  },
+                  "display": "inline-block",
+                  "height": "100%",
+                  "padding": "16px",
+                }
+              }
+            >
+              <a
+                href="/karutas/"
+                onClick={[Function]}
+                style={Object {}}
+              >
+                <span
+                  className="makeStyles-iconWrapper-1205"
+                >
+                  <svg
+                    aria-hidden={true}
+                    className="MuiSvgIcon-root"
+                    focusable="false"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      d="M4 6H2v14c0 1.1.9 2 2 2h14v-2H4V6zm16-4H8c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm-1 9H9V9h10v2zm-4 4H9v-2h6v2zm4-8H9V5h10v2z"
+                    />
+                  </svg>
+                </span>
+                <div
+                  className="makeStyles-root-1195 makeStyles-root-1214 makeStyles-title-1206"
+                >
+                  資料
+                </div>
+                <p
+                  className="makeStyles-root-1195 makeStyles-root-1215 makeStyles-explain-1207"
+                >
+                  百人一首の詳細な情報を閲覧できます。決まり字や歌の現代語訳などを確認することができます。
+                </p>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section
+        className="makeStyles-root-1191"
+      >
+        <h2
+          className="makeStyles-root-1188 makeStyles-root-1216 makeStyles-underlineHeading-1192"
+        >
+          アプリ版
+        </h2>
+        <p
+          className="makeStyles-root-1195 makeStyles-root-1217 "
+        >
+          よりサクサク使えるアプリ版を用意しています。百人一首の読み上げ形式も対応していますので、自信のついた方におすすめです。
+        </p>
+        <div
+          className="makeStyles-bannerWrapper-1178"
+        >
+          <a
+            className="makeStyles-root-1218"
+            href="https://apple.co/3rTcFqq"
+            rel="noreferrer"
+            target="_blank"
+          >
+            <div
+              className="gatsby-image-wrapper gatsby-image-wrapper-constrained"
+              data-gatsby-image-wrapper=""
+              style={
+                Object {
+                  "backgroundColor": undefined,
+                  "borderRadius": 16,
+                  "display": "inline-block",
+                  "overflow": "hidden",
+                  "position": "relative",
+                  "width": 100,
+                }
+              }
+            >
+              <div
+                style={
+                  Object {
+                    "display": "block",
+                    "maxWidth": undefined,
+                  }
+                }
+              >
+                <img
+                  alt=""
+                  aria-hidden="true"
+                  role="presentation"
+                  src="data:image/svg+xml;charset=utf-8,%3Csvg height='undefined' width='undefined' xmlns='http://www.w3.org/2000/svg' version='1.1'%3E%3C/svg%3E"
+                  style={
+                    Object {
+                      "display": "block",
+                      "maxWidth": "100%",
+                      "position": "static",
+                    }
+                  }
+                />
+              </div>
+              <div
+                aria-hidden={true}
+                data-placeholder-image=""
+                style={
+                  Object {
+                    "height": "100%",
+                    "left": 0,
+                    "position": "absolute",
+                    "top": 0,
+                    "width": "100%",
+                  }
+                }
+              />
+              <img
+                alt="百人一首 簡単に暗記"
+                data-gatsby-image-ssr=""
+                data-main-image=""
+                data-src="test-file-stub"
+                decoding="async"
+                loading="lazy"
+                onLoad={[Function]}
+                sizes="(max-width: 200px) 200px, 200px"
+                style={
+                  Object {
+                    "backgroundColor": undefined,
+                    "height": "100%",
+                    "left": 0,
+                    "objectFit": undefined,
+                    "objectPosition": undefined,
+                    "opacity": 0,
+                    "position": "absolute",
+                    "top": 0,
+                    "transform": "translateZ(0)",
+                    "transition": "opacity 250ms linear",
+                    "width": "100%",
+                    "willChange": "opacity",
+                  }
+                }
+              />
+              <noscript>
+                <img
+                  alt="百人一首 簡単に暗記"
+                  data-gatsby-image-ssr=""
+                  data-main-image=""
+                  decoding="async"
+                  loading="lazy"
+                  onLoad={[Function]}
+                  sizes="(max-width: 200px) 200px, 200px"
+                  src="test-file-stub"
+                  style={
+                    Object {
+                      "backgroundColor": undefined,
+                      "height": "100%",
+                      "left": 0,
+                      "objectFit": undefined,
+                      "objectPosition": undefined,
+                      "opacity": 0,
+                      "position": "absolute",
+                      "top": 0,
+                      "transform": "translateZ(0)",
+                      "transition": "opacity 250ms linear",
+                      "width": "100%",
+                      "willChange": "opacity",
+                    }
+                  }
+                />
+              </noscript>
+              <script
+                dangerouslySetInnerHTML={
+                  Object {
+                    "__html": "const t=\\"undefined\\"!=typeof HTMLImageElement&&\\"loading\\"in HTMLImageElement.prototype;if(t){const t=document.querySelectorAll(\\"img[data-main-image]\\");for(let e of t)e.dataset.src&&(e.setAttribute(\\"src\\",e.dataset.src),e.removeAttribute(\\"data-src\\")),e.dataset.srcset&&(e.setAttribute(\\"srcset\\",e.dataset.srcset),e.removeAttribute(\\"data-srcset\\")),e.complete&&(e.style.opacity=1)}",
+                  }
+                }
+                type="module"
+              />
+            </div>
+            <img
+              alt="App Storeからダウンロード"
+              src="test-file-stub"
+              style={
+                Object {
+                  "marginTop": 8,
+                  "width": 120,
+                }
+              }
+            />
+          </a>
+          <a
+            className="makeStyles-root-1219"
+            href="https://play.google.com/store/apps/details?id=me.rei_m.hyakuninisshu&pcampaignid=pcampaignidMKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1"
+            rel="noreferrer"
+            target="_blank"
+          >
+            <div
+              className="gatsby-image-wrapper gatsby-image-wrapper-constrained"
+              data-gatsby-image-wrapper=""
+              style={
+                Object {
+                  "backgroundColor": undefined,
+                  "borderRadius": 16,
+                  "display": "inline-block",
+                  "overflow": "hidden",
+                  "position": "relative",
+                  "width": 100,
+                }
+              }
+            >
+              <div
+                style={
+                  Object {
+                    "display": "block",
+                    "maxWidth": undefined,
+                  }
+                }
+              >
+                <img
+                  alt=""
+                  aria-hidden="true"
+                  role="presentation"
+                  src="data:image/svg+xml;charset=utf-8,%3Csvg height='undefined' width='undefined' xmlns='http://www.w3.org/2000/svg' version='1.1'%3E%3C/svg%3E"
+                  style={
+                    Object {
+                      "display": "block",
+                      "maxWidth": "100%",
+                      "position": "static",
+                    }
+                  }
+                />
+              </div>
+              <div
+                aria-hidden={true}
+                data-placeholder-image=""
+                style={
+                  Object {
+                    "height": "100%",
+                    "left": 0,
+                    "position": "absolute",
+                    "top": 0,
+                    "width": "100%",
+                  }
+                }
+              />
+              <img
+                alt="百人一首 簡単に暗記"
+                data-gatsby-image-ssr=""
+                data-main-image=""
+                data-src="test-file-stub"
+                decoding="async"
+                loading="lazy"
+                onLoad={[Function]}
+                sizes="(max-width: 200px) 200px, 200px"
+                style={
+                  Object {
+                    "backgroundColor": undefined,
+                    "height": "100%",
+                    "left": 0,
+                    "objectFit": undefined,
+                    "objectPosition": undefined,
+                    "opacity": 0,
+                    "position": "absolute",
+                    "top": 0,
+                    "transform": "translateZ(0)",
+                    "transition": "opacity 250ms linear",
+                    "width": "100%",
+                    "willChange": "opacity",
+                  }
+                }
+              />
+              <noscript>
+                <img
+                  alt="百人一首 簡単に暗記"
+                  data-gatsby-image-ssr=""
+                  data-main-image=""
+                  decoding="async"
+                  loading="lazy"
+                  onLoad={[Function]}
+                  sizes="(max-width: 200px) 200px, 200px"
+                  src="test-file-stub"
+                  style={
+                    Object {
+                      "backgroundColor": undefined,
+                      "height": "100%",
+                      "left": 0,
+                      "objectFit": undefined,
+                      "objectPosition": undefined,
+                      "opacity": 0,
+                      "position": "absolute",
+                      "top": 0,
+                      "transform": "translateZ(0)",
+                      "transition": "opacity 250ms linear",
+                      "width": "100%",
+                      "willChange": "opacity",
+                    }
+                  }
+                />
+              </noscript>
+              <script
+                dangerouslySetInnerHTML={
+                  Object {
+                    "__html": "const t=\\"undefined\\"!=typeof HTMLImageElement&&\\"loading\\"in HTMLImageElement.prototype;if(t){const t=document.querySelectorAll(\\"img[data-main-image]\\");for(let e of t)e.dataset.src&&(e.setAttribute(\\"src\\",e.dataset.src),e.removeAttribute(\\"data-src\\")),e.dataset.srcset&&(e.setAttribute(\\"srcset\\",e.dataset.srcset),e.removeAttribute(\\"data-srcset\\")),e.complete&&(e.style.opacity=1)}",
+                  }
+                }
+                type="module"
+              />
+            </div>
+            <img
+              alt="Google Play で手に入れよう"
+              src="https://play.google.com/intl/ja/badges/static/images/badges/ja_badge_web_generic.png"
+              style={
+                Object {
+                  "width": 140,
+                }
+              }
+            />
+          </a>
+          <a
+            className="makeStyles-root-1219"
+            href="https://play.google.com/store/apps/details?id=net.hyakuninanki.reader&pcampaignid=pcampaignidMKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1"
+            rel="noreferrer"
+            target="_blank"
+          >
+            <div
+              className="gatsby-image-wrapper gatsby-image-wrapper-constrained"
+              data-gatsby-image-wrapper=""
+              style={
+                Object {
+                  "backgroundColor": undefined,
+                  "borderRadius": 16,
+                  "display": "inline-block",
+                  "overflow": "hidden",
+                  "position": "relative",
+                  "width": 100,
+                }
+              }
+            >
+              <div
+                style={
+                  Object {
+                    "display": "block",
+                    "maxWidth": undefined,
+                  }
+                }
+              >
+                <img
+                  alt=""
+                  aria-hidden="true"
+                  role="presentation"
+                  src="data:image/svg+xml;charset=utf-8,%3Csvg height='undefined' width='undefined' xmlns='http://www.w3.org/2000/svg' version='1.1'%3E%3C/svg%3E"
+                  style={
+                    Object {
+                      "display": "block",
+                      "maxWidth": "100%",
+                      "position": "static",
+                    }
+                  }
+                />
+              </div>
+              <div
+                aria-hidden={true}
+                data-placeholder-image=""
+                style={
+                  Object {
+                    "height": "100%",
+                    "left": 0,
+                    "position": "absolute",
+                    "top": 0,
+                    "width": "100%",
+                  }
+                }
+              />
+              <img
+                alt="百人一首 簡単に暗記"
+                data-gatsby-image-ssr=""
+                data-main-image=""
+                data-src="test-file-stub"
+                decoding="async"
+                loading="lazy"
+                onLoad={[Function]}
+                sizes="(max-width: 200px) 200px, 200px"
+                style={
+                  Object {
+                    "backgroundColor": undefined,
+                    "height": "100%",
+                    "left": 0,
+                    "objectFit": undefined,
+                    "objectPosition": undefined,
+                    "opacity": 0,
+                    "position": "absolute",
+                    "top": 0,
+                    "transform": "translateZ(0)",
+                    "transition": "opacity 250ms linear",
+                    "width": "100%",
+                    "willChange": "opacity",
+                  }
+                }
+              />
+              <noscript>
+                <img
+                  alt="百人一首 簡単に暗記"
+                  data-gatsby-image-ssr=""
+                  data-main-image=""
+                  decoding="async"
+                  loading="lazy"
+                  onLoad={[Function]}
+                  sizes="(max-width: 200px) 200px, 200px"
+                  src="test-file-stub"
+                  style={
+                    Object {
+                      "backgroundColor": undefined,
+                      "height": "100%",
+                      "left": 0,
+                      "objectFit": undefined,
+                      "objectPosition": undefined,
+                      "opacity": 0,
+                      "position": "absolute",
+                      "top": 0,
+                      "transform": "translateZ(0)",
+                      "transition": "opacity 250ms linear",
+                      "width": "100%",
+                      "willChange": "opacity",
+                    }
+                  }
+                />
+              </noscript>
+              <script
+                dangerouslySetInnerHTML={
+                  Object {
+                    "__html": "const t=\\"undefined\\"!=typeof HTMLImageElement&&\\"loading\\"in HTMLImageElement.prototype;if(t){const t=document.querySelectorAll(\\"img[data-main-image]\\");for(let e of t)e.dataset.src&&(e.setAttribute(\\"src\\",e.dataset.src),e.removeAttribute(\\"data-src\\")),e.dataset.srcset&&(e.setAttribute(\\"srcset\\",e.dataset.srcset),e.removeAttribute(\\"data-srcset\\")),e.complete&&(e.style.opacity=1)}",
+                  }
+                }
+                type="module"
+              />
+            </div>
+            <img
+              alt="Google Play で手に入れよう"
+              src="https://play.google.com/intl/ja/badges/static/images/badges/ja_badge_web_generic.png"
+              style={
+                Object {
+                  "width": 140,
+                }
+              }
+            />
+          </a>
+        </div>
+      </section>
+      <section
+        className="makeStyles-root-1191"
+      >
+        <h2
+          className="makeStyles-root-1188 makeStyles-root-1220 makeStyles-underlineHeading-1192"
+        >
+          百人一首とは
+        </h2>
+        <p
+          className="makeStyles-root-1195 makeStyles-root-1221 "
+        >
+          百人一首とは、100人の歌人の和歌を1人1首づつ選んだ歌集のことで、藤原定家が選んだ小倉百人一首が広く知られています。
+          <br />
+          現代では詠み札と取り札に別れたかるたとしての知名度が高く、散らし取り、坊主めくりなどといった遊戯や競技かるたのように札取りを競い合うスポーツもあり、幅広く親しまれています。 百首覚えたあとは色々な遊び方を探してみてはいかがでしょうか。
+        </p>
+      </section>
+      <section
+        className="makeStyles-root-1191"
+      >
+        <h2
+          className="makeStyles-root-1188 makeStyles-root-1222 makeStyles-underlineHeading-1192"
+        >
+          ちはやふる基金の紹介
+        </h2>
+        <div
+          className="makeStyles-chihayaWrapper-1177"
+        >
+          <blockquote
+            className="twitter-tweet"
+          >
+            <p
+              dir="ltr"
+              lang="ja"
+            >
+              「ちはやふる基金」設立のご挨拶。
+              <br />
+              <br />
+              競技かるたを題材とした漫画『ちはやふる』作者・末次由紀を発起人とし、「一般社団法人 ちはやふる基金」を設立致しました。
+              <a
+                href="https://t.co/UGsvp8QXpv"
+              >
+                https://t.co/UGsvp8QXpv
+              </a>
+              <br />
+              <br />
+              【公式サイト】
+              <a
+                href="https://t.co/OjK7tLVux3"
+              >
+                https://t.co/OjK7tLVux3
+              </a>
+              <a
+                href="https://twitter.com/hashtag/%E3%81%A1%E3%81%AF%E3%82%84%E3%81%B5%E3%82%8B%E5%9F%BA%E9%87%91?src=hash&ref_src=twsrc%5Etfw"
+              >
+                #ちはやふる基金
+              </a>
+            </p>
+            — ちはやふる基金 (@chihayafund)
+            <a
+              href="https://twitter.com/chihayafund/status/1216971294157074432?ref_src=twsrc%5Etfw"
+            >
+              January 14, 2020
+            </a>
+          </blockquote>
+        </div>
+        <p
+          className="makeStyles-root-1195 makeStyles-root-1223 "
+        >
+          <a
+            href="https://chihayafund.com/"
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            ちはやふる基金
+          </a>
+          は、競技かるたの支援や百人一首の振興を目的として、
+          <a
+            href="https://be-love.jp/c/chihaya.html"
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            ちはやふる
+          </a>
+          の作者の
+          <a
+            href="https://twitter.com/yuyu2000_0908"
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            末次先生
+          </a>
+          が発起人となり設立された団体です。競技かるた界隈は競技人口の増加で盛り上がりを続ける一方、選手の育成支援や大会運営においてさまざまな負担も増加しているようです。この基金はそういった課題を解消するために設立されています。
+          <br />
+          <br />
+          このサイトは中の人がちはやふるにはまったことがきっかけで作ったサイトです。微力ながら恩返しの意味も込めて紹介させていただきます。
+        </p>
+      </section>
+      <section
+        className="makeStyles-root-1191"
+      >
+        <h2
+          className="makeStyles-root-1188 makeStyles-root-1224 makeStyles-underlineHeading-1192"
+        >
+          百人一首の用語について
+        </h2>
+        <dl>
+          <dt>
+            <span
+              className="makeStyles-root-1195 makeStyles-root-1225 "
+            >
+              決まり字
+            </span>
+          </dt>
+          <dd>
+            <p
+              className="makeStyles-root-1195 makeStyles-root-1226 "
+            >
+              歌を上の句の最初から読んでいき、その文字が読まれたら、その歌が、どの一首なのかが決まるところの文字をいいます。
+              <br />
+              例えば「村雨の 露もまだひぬ 槇の葉に 霧たちのぼる 秋の夕ぐれ」という歌がありますが、百首のなかで「む」で始まる歌はこの歌しかないので、この歌の決まり字は一字決まりとなります。
+            </p>
+          </dd>
+          <dt>
+            <span
+              className="makeStyles-root-1195 makeStyles-root-1227 "
+            >
+              上の句
+            </span>
+          </dt>
+          <dd>
+            <p
+              className="makeStyles-root-1195 makeStyles-root-1228 "
+            >
+              歌は五七五七七の五つの句で構成されており、その前半の五七五の部分のこと。かるた遊びをする際は詠み札となります。
+            </p>
+          </dd>
+          <dt>
+            <span
+              className="makeStyles-root-1195 makeStyles-root-1229 "
+            >
+              下の句
+            </span>
+          </dt>
+          <dd>
+            <p
+              className="makeStyles-root-1195 makeStyles-root-1230 "
+            >
+              歌は五七五七七の五つの句で構成されており、その後半の七七の部分のこと。かるた遊びでは取り札となります。
+            </p>
+          </dd>
+        </dl>
+      </section>
+      <section
+        className="makeStyles-root-1191"
+      >
+        <h2
+          className="makeStyles-root-1188 makeStyles-root-1231 makeStyles-underlineHeading-1192"
+        >
+          競技かるたについて
+        </h2>
+        <p
+          className="makeStyles-root-1195 makeStyles-root-1232 "
+        >
+          小倉百人一首を用いて行う競技です。百人一首というと畳の上で穏やかに遊ぶ印象がありますが、競技かるたはハードなスポーツに近いです。
+          <br />
+          詠み上げた上の句に対応する下の句の札を取るという基本的なルールは普通のかるた遊びと共通していますが、取った枚数を競いはしません。
+          <br />
+          百首のなかから50首が選ばれ、選ばれた歌の取り札が自陣と敵陣にそれぞれ分配されます。競技かるたの試合はこの自陣の札を空にすることで勝利となります。 札は自陣の札を取ればそのまま減らし、敵陣の札を取れば敵陣の札をどけた上で自陣から敵陣に一枚札を送ります。これを送り札といいます。
+          <br />
+          50首を選んでいるので詠まれた札が自陣・敵陣に存在しない場合があります。これは空札といいます。取り札を間違えた場合や空札なのに取り札に触った場合はお手付きとなり、敵陣に札を送れます。
+          <br />
+          自陣の札を取る、または敵陣の札を取って自陣の札を敵陣に送る、という勝負を繰り返して自陣を先に空にしたほうが勝者となります。
+          <br />
+          近年では競技かるたを題材とした漫画の「
+          <a
+            href="https://be-love.jp/c/chihaya.html"
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            ちはやふる
+          </a>
+          」がアニメ化や実写映画化されるなど人気が高まっています。
+        </p>
+      </section>
+      <section
+        className="makeStyles-root-1191"
+      >
+        <h2
+          className="makeStyles-root-1188 makeStyles-root-1233 makeStyles-underlineHeading-1192"
+        >
+          百人一首 歌一覧
+        </h2>
+        <ul
+          className="makeStyles-karutaList-1175"
+        >
+          <li>
+            <a
+              href="/karutas/1/"
+              onClick={[Function]}
+            >
+              <div
+                className="makeStyles-clickable-1190 makeStyles-root-1234 makeStyles-material-1176"
+                onClick={[Function]}
+              >
+                <div
+                  className="makeStyles-textColumn-1236"
+                >
+                  <span
+                    className="makeStyles-root-1195 makeStyles-root-1239 "
+                  >
+                    一番
+                  </span>
+                  <p
+                    className="makeStyles-root-1195 makeStyles-root-1241 makeStyles-root-1240"
+                  >
+                    秋の田の かりほの庵の 苫をあらみ
+                     
+                    わが衣手は 露にぬれつつ
+                  </p>
+                  <span
+                    className="makeStyles-root-1195 makeStyles-root-1242 makeStyles-creator-1238"
+                  >
+                    天智天皇
+                  </span>
+                </div>
+              </div>
+            </a>
+          </li>
+          <li>
+            <a
+              href="/karutas/2/"
+              onClick={[Function]}
+            >
+              <div
+                className="makeStyles-clickable-1190 makeStyles-root-1234 makeStyles-material-1176"
+                onClick={[Function]}
+              >
+                <div
+                  className="makeStyles-textColumn-1236"
+                >
+                  <span
+                    className="makeStyles-root-1195 makeStyles-root-1243 "
+                  >
+                    二番
+                  </span>
+                  <p
+                    className="makeStyles-root-1195 makeStyles-root-1244 makeStyles-root-1240"
+                  >
+                    秋の田の かりほの庵の 苫をあらみ
+                     
+                    わが衣手は 露にぬれつつ
+                  </p>
+                  <span
+                    className="makeStyles-root-1195 makeStyles-root-1245 makeStyles-creator-1238"
+                  >
+                    天智天皇
+                  </span>
+                </div>
+              </div>
+            </a>
+          </li>
+          <li>
+            <a
+              href="/karutas/3/"
+              onClick={[Function]}
+            >
+              <div
+                className="makeStyles-clickable-1190 makeStyles-root-1234 makeStyles-material-1176"
+                onClick={[Function]}
+              >
+                <div
+                  className="makeStyles-textColumn-1236"
+                >
+                  <span
+                    className="makeStyles-root-1195 makeStyles-root-1246 "
+                  >
+                    三番
+                  </span>
+                  <p
+                    className="makeStyles-root-1195 makeStyles-root-1247 makeStyles-root-1240"
+                  >
+                    秋の田の かりほの庵の 苫をあらみ
+                     
+                    わが衣手は 露にぬれつつ
+                  </p>
+                  <span
+                    className="makeStyles-root-1195 makeStyles-root-1248 makeStyles-creator-1238"
+                  >
+                    天智天皇
+                  </span>
+                </div>
+              </div>
+            </a>
+          </li>
+          <li>
+            <a
+              href="/karutas/4/"
+              onClick={[Function]}
+            >
+              <div
+                className="makeStyles-clickable-1190 makeStyles-root-1234 makeStyles-material-1176"
+                onClick={[Function]}
+              >
+                <div
+                  className="makeStyles-textColumn-1236"
+                >
+                  <span
+                    className="makeStyles-root-1195 makeStyles-root-1249 "
+                  >
+                    四番
+                  </span>
+                  <p
+                    className="makeStyles-root-1195 makeStyles-root-1250 makeStyles-root-1240"
+                  >
+                    秋の田の かりほの庵の 苫をあらみ
+                     
+                    わが衣手は 露にぬれつつ
+                  </p>
+                  <span
+                    className="makeStyles-root-1195 makeStyles-root-1251 makeStyles-creator-1238"
+                  >
+                    天智天皇
+                  </span>
+                </div>
+              </div>
+            </a>
+          </li>
+          <li>
+            <a
+              href="/karutas/5/"
+              onClick={[Function]}
+            >
+              <div
+                className="makeStyles-clickable-1190 makeStyles-root-1234 makeStyles-material-1176"
+                onClick={[Function]}
+              >
+                <div
+                  className="makeStyles-textColumn-1236"
+                >
+                  <span
+                    className="makeStyles-root-1195 makeStyles-root-1252 "
+                  >
+                    五番
+                  </span>
+                  <p
+                    className="makeStyles-root-1195 makeStyles-root-1253 makeStyles-root-1240"
+                  >
+                    秋の田の かりほの庵の 苫をあらみ
+                     
+                    わが衣手は 露にぬれつつ
+                  </p>
+                  <span
+                    className="makeStyles-root-1195 makeStyles-root-1254 makeStyles-creator-1238"
+                  >
+                    天智天皇
+                  </span>
+                </div>
+              </div>
+            </a>
+          </li>
+          <li>
+            <a
+              href="/karutas/6/"
+              onClick={[Function]}
+            >
+              <div
+                className="makeStyles-clickable-1190 makeStyles-root-1234 makeStyles-material-1176"
+                onClick={[Function]}
+              >
+                <div
+                  className="makeStyles-textColumn-1236"
+                >
+                  <span
+                    className="makeStyles-root-1195 makeStyles-root-1255 "
+                  >
+                    六番
+                  </span>
+                  <p
+                    className="makeStyles-root-1195 makeStyles-root-1256 makeStyles-root-1240"
+                  >
+                    秋の田の かりほの庵の 苫をあらみ
+                     
+                    わが衣手は 露にぬれつつ
+                  </p>
+                  <span
+                    className="makeStyles-root-1195 makeStyles-root-1257 makeStyles-creator-1238"
+                  >
+                    天智天皇
+                  </span>
+                </div>
+              </div>
+            </a>
+          </li>
+          <li>
+            <a
+              href="/karutas/7/"
+              onClick={[Function]}
+            >
+              <div
+                className="makeStyles-clickable-1190 makeStyles-root-1234 makeStyles-material-1176"
+                onClick={[Function]}
+              >
+                <div
+                  className="makeStyles-textColumn-1236"
+                >
+                  <span
+                    className="makeStyles-root-1195 makeStyles-root-1258 "
+                  >
+                    七番
+                  </span>
+                  <p
+                    className="makeStyles-root-1195 makeStyles-root-1259 makeStyles-root-1240"
+                  >
+                    秋の田の かりほの庵の 苫をあらみ
+                     
+                    わが衣手は 露にぬれつつ
+                  </p>
+                  <span
+                    className="makeStyles-root-1195 makeStyles-root-1260 makeStyles-creator-1238"
+                  >
+                    天智天皇
+                  </span>
+                </div>
+              </div>
+            </a>
+          </li>
+          <li>
+            <a
+              href="/karutas/8/"
+              onClick={[Function]}
+            >
+              <div
+                className="makeStyles-clickable-1190 makeStyles-root-1234 makeStyles-material-1176"
+                onClick={[Function]}
+              >
+                <div
+                  className="makeStyles-textColumn-1236"
+                >
+                  <span
+                    className="makeStyles-root-1195 makeStyles-root-1261 "
+                  >
+                    八番
+                  </span>
+                  <p
+                    className="makeStyles-root-1195 makeStyles-root-1262 makeStyles-root-1240"
+                  >
+                    秋の田の かりほの庵の 苫をあらみ
+                     
+                    わが衣手は 露にぬれつつ
+                  </p>
+                  <span
+                    className="makeStyles-root-1195 makeStyles-root-1263 makeStyles-creator-1238"
+                  >
+                    天智天皇
+                  </span>
+                </div>
+              </div>
+            </a>
+          </li>
+          <li>
+            <a
+              href="/karutas/9/"
+              onClick={[Function]}
+            >
+              <div
+                className="makeStyles-clickable-1190 makeStyles-root-1234 makeStyles-material-1176"
+                onClick={[Function]}
+              >
+                <div
+                  className="makeStyles-textColumn-1236"
+                >
+                  <span
+                    className="makeStyles-root-1195 makeStyles-root-1264 "
+                  >
+                    九番
+                  </span>
+                  <p
+                    className="makeStyles-root-1195 makeStyles-root-1265 makeStyles-root-1240"
+                  >
+                    秋の田の かりほの庵の 苫をあらみ
+                     
+                    わが衣手は 露にぬれつつ
+                  </p>
+                  <span
+                    className="makeStyles-root-1195 makeStyles-root-1266 makeStyles-creator-1238"
+                  >
+                    天智天皇
+                  </span>
+                </div>
+              </div>
+            </a>
+          </li>
+          <li>
+            <a
+              href="/karutas/10/"
+              onClick={[Function]}
+            >
+              <div
+                className="makeStyles-clickable-1190 makeStyles-root-1234 makeStyles-material-1176"
+                onClick={[Function]}
+              >
+                <div
+                  className="makeStyles-textColumn-1236"
+                >
+                  <span
+                    className="makeStyles-root-1195 makeStyles-root-1267 "
+                  >
+                    十番
+                  </span>
+                  <p
+                    className="makeStyles-root-1195 makeStyles-root-1268 makeStyles-root-1240"
+                  >
+                    秋の田の かりほの庵の 苫をあらみ
+                     
+                    わが衣手は 露にぬれつつ
+                  </p>
+                  <span
+                    className="makeStyles-root-1195 makeStyles-root-1269 makeStyles-creator-1238"
+                  >
+                    天智天皇
+                  </span>
+                </div>
+              </div>
+            </a>
+          </li>
+          <li>
+            <a
+              href="/karutas/11/"
+              onClick={[Function]}
+            >
+              <div
+                className="makeStyles-clickable-1190 makeStyles-root-1234 makeStyles-material-1176"
+                onClick={[Function]}
+              >
+                <div
+                  className="makeStyles-textColumn-1236"
+                >
+                  <span
+                    className="makeStyles-root-1195 makeStyles-root-1270 "
+                  >
+                    十一番
+                  </span>
+                  <p
+                    className="makeStyles-root-1195 makeStyles-root-1271 makeStyles-root-1240"
+                  >
+                    秋の田の かりほの庵の 苫をあらみ
+                     
+                    わが衣手は 露にぬれつつ
+                  </p>
+                  <span
+                    className="makeStyles-root-1195 makeStyles-root-1272 makeStyles-creator-1238"
+                  >
+                    天智天皇
+                  </span>
+                </div>
+              </div>
+            </a>
+          </li>
+          <li>
+            <a
+              href="/karutas/12/"
+              onClick={[Function]}
+            >
+              <div
+                className="makeStyles-clickable-1190 makeStyles-root-1234 makeStyles-material-1176"
+                onClick={[Function]}
+              >
+                <div
+                  className="makeStyles-textColumn-1236"
+                >
+                  <span
+                    className="makeStyles-root-1195 makeStyles-root-1273 "
+                  >
+                    十二番
+                  </span>
+                  <p
+                    className="makeStyles-root-1195 makeStyles-root-1274 makeStyles-root-1240"
+                  >
+                    秋の田の かりほの庵の 苫をあらみ
+                     
+                    わが衣手は 露にぬれつつ
+                  </p>
+                  <span
+                    className="makeStyles-root-1195 makeStyles-root-1275 makeStyles-creator-1238"
+                  >
+                    天智天皇
+                  </span>
+                </div>
+              </div>
+            </a>
+          </li>
+          <li>
+            <a
+              href="/karutas/13/"
+              onClick={[Function]}
+            >
+              <div
+                className="makeStyles-clickable-1190 makeStyles-root-1234 makeStyles-material-1176"
+                onClick={[Function]}
+              >
+                <div
+                  className="makeStyles-textColumn-1236"
+                >
+                  <span
+                    className="makeStyles-root-1195 makeStyles-root-1276 "
+                  >
+                    十三番
+                  </span>
+                  <p
+                    className="makeStyles-root-1195 makeStyles-root-1277 makeStyles-root-1240"
+                  >
+                    秋の田の かりほの庵の 苫をあらみ
+                     
+                    わが衣手は 露にぬれつつ
+                  </p>
+                  <span
+                    className="makeStyles-root-1195 makeStyles-root-1278 makeStyles-creator-1238"
+                  >
+                    天智天皇
+                  </span>
+                </div>
+              </div>
+            </a>
+          </li>
+          <li>
+            <a
+              href="/karutas/14/"
+              onClick={[Function]}
+            >
+              <div
+                className="makeStyles-clickable-1190 makeStyles-root-1234 makeStyles-material-1176"
+                onClick={[Function]}
+              >
+                <div
+                  className="makeStyles-textColumn-1236"
+                >
+                  <span
+                    className="makeStyles-root-1195 makeStyles-root-1279 "
+                  >
+                    十四番
+                  </span>
+                  <p
+                    className="makeStyles-root-1195 makeStyles-root-1280 makeStyles-root-1240"
+                  >
+                    秋の田の かりほの庵の 苫をあらみ
+                     
+                    わが衣手は 露にぬれつつ
+                  </p>
+                  <span
+                    className="makeStyles-root-1195 makeStyles-root-1281 makeStyles-creator-1238"
+                  >
+                    天智天皇
+                  </span>
+                </div>
+              </div>
+            </a>
+          </li>
+          <li>
+            <a
+              href="/karutas/15/"
+              onClick={[Function]}
+            >
+              <div
+                className="makeStyles-clickable-1190 makeStyles-root-1234 makeStyles-material-1176"
+                onClick={[Function]}
+              >
+                <div
+                  className="makeStyles-textColumn-1236"
+                >
+                  <span
+                    className="makeStyles-root-1195 makeStyles-root-1282 "
+                  >
+                    十五番
+                  </span>
+                  <p
+                    className="makeStyles-root-1195 makeStyles-root-1283 makeStyles-root-1240"
+                  >
+                    秋の田の かりほの庵の 苫をあらみ
+                     
+                    わが衣手は 露にぬれつつ
+                  </p>
+                  <span
+                    className="makeStyles-root-1195 makeStyles-root-1284 makeStyles-creator-1238"
+                  >
+                    天智天皇
+                  </span>
+                </div>
+              </div>
+            </a>
+          </li>
+          <li>
+            <a
+              href="/karutas/16/"
+              onClick={[Function]}
+            >
+              <div
+                className="makeStyles-clickable-1190 makeStyles-root-1234 makeStyles-material-1176"
+                onClick={[Function]}
+              >
+                <div
+                  className="makeStyles-textColumn-1236"
+                >
+                  <span
+                    className="makeStyles-root-1195 makeStyles-root-1285 "
+                  >
+                    十六番
+                  </span>
+                  <p
+                    className="makeStyles-root-1195 makeStyles-root-1286 makeStyles-root-1240"
+                  >
+                    秋の田の かりほの庵の 苫をあらみ
+                     
+                    わが衣手は 露にぬれつつ
+                  </p>
+                  <span
+                    className="makeStyles-root-1195 makeStyles-root-1287 makeStyles-creator-1238"
+                  >
+                    天智天皇
+                  </span>
+                </div>
+              </div>
+            </a>
+          </li>
+          <li>
+            <a
+              href="/karutas/17/"
+              onClick={[Function]}
+            >
+              <div
+                className="makeStyles-clickable-1190 makeStyles-root-1234 makeStyles-material-1176"
+                onClick={[Function]}
+              >
+                <div
+                  className="makeStyles-textColumn-1236"
+                >
+                  <span
+                    className="makeStyles-root-1195 makeStyles-root-1288 "
+                  >
+                    十七番
+                  </span>
+                  <p
+                    className="makeStyles-root-1195 makeStyles-root-1289 makeStyles-root-1240"
+                  >
+                    秋の田の かりほの庵の 苫をあらみ
+                     
+                    わが衣手は 露にぬれつつ
+                  </p>
+                  <span
+                    className="makeStyles-root-1195 makeStyles-root-1290 makeStyles-creator-1238"
+                  >
+                    天智天皇
+                  </span>
+                </div>
+              </div>
+            </a>
+          </li>
+          <li>
+            <a
+              href="/karutas/18/"
+              onClick={[Function]}
+            >
+              <div
+                className="makeStyles-clickable-1190 makeStyles-root-1234 makeStyles-material-1176"
+                onClick={[Function]}
+              >
+                <div
+                  className="makeStyles-textColumn-1236"
+                >
+                  <span
+                    className="makeStyles-root-1195 makeStyles-root-1291 "
+                  >
+                    十八番
+                  </span>
+                  <p
+                    className="makeStyles-root-1195 makeStyles-root-1292 makeStyles-root-1240"
+                  >
+                    秋の田の かりほの庵の 苫をあらみ
+                     
+                    わが衣手は 露にぬれつつ
+                  </p>
+                  <span
+                    className="makeStyles-root-1195 makeStyles-root-1293 makeStyles-creator-1238"
+                  >
+                    天智天皇
+                  </span>
+                </div>
+              </div>
+            </a>
+          </li>
+          <li>
+            <a
+              href="/karutas/19/"
+              onClick={[Function]}
+            >
+              <div
+                className="makeStyles-clickable-1190 makeStyles-root-1234 makeStyles-material-1176"
+                onClick={[Function]}
+              >
+                <div
+                  className="makeStyles-textColumn-1236"
+                >
+                  <span
+                    className="makeStyles-root-1195 makeStyles-root-1294 "
+                  >
+                    十九番
+                  </span>
+                  <p
+                    className="makeStyles-root-1195 makeStyles-root-1295 makeStyles-root-1240"
+                  >
+                    秋の田の かりほの庵の 苫をあらみ
+                     
+                    わが衣手は 露にぬれつつ
+                  </p>
+                  <span
+                    className="makeStyles-root-1195 makeStyles-root-1296 makeStyles-creator-1238"
+                  >
+                    天智天皇
+                  </span>
+                </div>
+              </div>
+            </a>
+          </li>
+          <li>
+            <a
+              href="/karutas/20/"
+              onClick={[Function]}
+            >
+              <div
+                className="makeStyles-clickable-1190 makeStyles-root-1234 makeStyles-material-1176"
+                onClick={[Function]}
+              >
+                <div
+                  className="makeStyles-textColumn-1236"
+                >
+                  <span
+                    className="makeStyles-root-1195 makeStyles-root-1297 "
+                  >
+                    二十番
+                  </span>
+                  <p
+                    className="makeStyles-root-1195 makeStyles-root-1298 makeStyles-root-1240"
+                  >
+                    秋の田の かりほの庵の 苫をあらみ
+                     
+                    わが衣手は 露にぬれつつ
+                  </p>
+                  <span
+                    className="makeStyles-root-1195 makeStyles-root-1299 makeStyles-creator-1238"
+                  >
+                    天智天皇
+                  </span>
+                </div>
+              </div>
+            </a>
+          </li>
+          <li>
+            <a
+              href="/karutas/21/"
+              onClick={[Function]}
+            >
+              <div
+                className="makeStyles-clickable-1190 makeStyles-root-1234 makeStyles-material-1176"
+                onClick={[Function]}
+              >
+                <div
+                  className="makeStyles-textColumn-1236"
+                >
+                  <span
+                    className="makeStyles-root-1195 makeStyles-root-1300 "
+                  >
+                    二十一番
+                  </span>
+                  <p
+                    className="makeStyles-root-1195 makeStyles-root-1301 makeStyles-root-1240"
+                  >
+                    秋の田の かりほの庵の 苫をあらみ
+                     
+                    わが衣手は 露にぬれつつ
+                  </p>
+                  <span
+                    className="makeStyles-root-1195 makeStyles-root-1302 makeStyles-creator-1238"
+                  >
+                    天智天皇
+                  </span>
+                </div>
+              </div>
+            </a>
+          </li>
+          <li>
+            <a
+              href="/karutas/22/"
+              onClick={[Function]}
+            >
+              <div
+                className="makeStyles-clickable-1190 makeStyles-root-1234 makeStyles-material-1176"
+                onClick={[Function]}
+              >
+                <div
+                  className="makeStyles-textColumn-1236"
+                >
+                  <span
+                    className="makeStyles-root-1195 makeStyles-root-1303 "
+                  >
+                    二十二番
+                  </span>
+                  <p
+                    className="makeStyles-root-1195 makeStyles-root-1304 makeStyles-root-1240"
+                  >
+                    秋の田の かりほの庵の 苫をあらみ
+                     
+                    わが衣手は 露にぬれつつ
+                  </p>
+                  <span
+                    className="makeStyles-root-1195 makeStyles-root-1305 makeStyles-creator-1238"
+                  >
+                    天智天皇
+                  </span>
+                </div>
+              </div>
+            </a>
+          </li>
+          <li>
+            <a
+              href="/karutas/23/"
+              onClick={[Function]}
+            >
+              <div
+                className="makeStyles-clickable-1190 makeStyles-root-1234 makeStyles-material-1176"
+                onClick={[Function]}
+              >
+                <div
+                  className="makeStyles-textColumn-1236"
+                >
+                  <span
+                    className="makeStyles-root-1195 makeStyles-root-1306 "
+                  >
+                    二十三番
+                  </span>
+                  <p
+                    className="makeStyles-root-1195 makeStyles-root-1307 makeStyles-root-1240"
+                  >
+                    秋の田の かりほの庵の 苫をあらみ
+                     
+                    わが衣手は 露にぬれつつ
+                  </p>
+                  <span
+                    className="makeStyles-root-1195 makeStyles-root-1308 makeStyles-creator-1238"
+                  >
+                    天智天皇
+                  </span>
+                </div>
+              </div>
+            </a>
+          </li>
+          <li>
+            <a
+              href="/karutas/24/"
+              onClick={[Function]}
+            >
+              <div
+                className="makeStyles-clickable-1190 makeStyles-root-1234 makeStyles-material-1176"
+                onClick={[Function]}
+              >
+                <div
+                  className="makeStyles-textColumn-1236"
+                >
+                  <span
+                    className="makeStyles-root-1195 makeStyles-root-1309 "
+                  >
+                    二十四番
+                  </span>
+                  <p
+                    className="makeStyles-root-1195 makeStyles-root-1310 makeStyles-root-1240"
+                  >
+                    秋の田の かりほの庵の 苫をあらみ
+                     
+                    わが衣手は 露にぬれつつ
+                  </p>
+                  <span
+                    className="makeStyles-root-1195 makeStyles-root-1311 makeStyles-creator-1238"
+                  >
+                    天智天皇
+                  </span>
+                </div>
+              </div>
+            </a>
+          </li>
+          <li>
+            <a
+              href="/karutas/25/"
+              onClick={[Function]}
+            >
+              <div
+                className="makeStyles-clickable-1190 makeStyles-root-1234 makeStyles-material-1176"
+                onClick={[Function]}
+              >
+                <div
+                  className="makeStyles-textColumn-1236"
+                >
+                  <span
+                    className="makeStyles-root-1195 makeStyles-root-1312 "
+                  >
+                    二十五番
+                  </span>
+                  <p
+                    className="makeStyles-root-1195 makeStyles-root-1313 makeStyles-root-1240"
+                  >
+                    秋の田の かりほの庵の 苫をあらみ
+                     
+                    わが衣手は 露にぬれつつ
+                  </p>
+                  <span
+                    className="makeStyles-root-1195 makeStyles-root-1314 makeStyles-creator-1238"
+                  >
+                    天智天皇
+                  </span>
+                </div>
+              </div>
+            </a>
+          </li>
+          <li>
+            <a
+              href="/karutas/26/"
+              onClick={[Function]}
+            >
+              <div
+                className="makeStyles-clickable-1190 makeStyles-root-1234 makeStyles-material-1176"
+                onClick={[Function]}
+              >
+                <div
+                  className="makeStyles-textColumn-1236"
+                >
+                  <span
+                    className="makeStyles-root-1195 makeStyles-root-1315 "
+                  >
+                    二十六番
+                  </span>
+                  <p
+                    className="makeStyles-root-1195 makeStyles-root-1316 makeStyles-root-1240"
+                  >
+                    秋の田の かりほの庵の 苫をあらみ
+                     
+                    わが衣手は 露にぬれつつ
+                  </p>
+                  <span
+                    className="makeStyles-root-1195 makeStyles-root-1317 makeStyles-creator-1238"
+                  >
+                    天智天皇
+                  </span>
+                </div>
+              </div>
+            </a>
+          </li>
+          <li>
+            <a
+              href="/karutas/27/"
+              onClick={[Function]}
+            >
+              <div
+                className="makeStyles-clickable-1190 makeStyles-root-1234 makeStyles-material-1176"
+                onClick={[Function]}
+              >
+                <div
+                  className="makeStyles-textColumn-1236"
+                >
+                  <span
+                    className="makeStyles-root-1195 makeStyles-root-1318 "
+                  >
+                    二十七番
+                  </span>
+                  <p
+                    className="makeStyles-root-1195 makeStyles-root-1319 makeStyles-root-1240"
+                  >
+                    秋の田の かりほの庵の 苫をあらみ
+                     
+                    わが衣手は 露にぬれつつ
+                  </p>
+                  <span
+                    className="makeStyles-root-1195 makeStyles-root-1320 makeStyles-creator-1238"
+                  >
+                    天智天皇
+                  </span>
+                </div>
+              </div>
+            </a>
+          </li>
+          <li>
+            <a
+              href="/karutas/28/"
+              onClick={[Function]}
+            >
+              <div
+                className="makeStyles-clickable-1190 makeStyles-root-1234 makeStyles-material-1176"
+                onClick={[Function]}
+              >
+                <div
+                  className="makeStyles-textColumn-1236"
+                >
+                  <span
+                    className="makeStyles-root-1195 makeStyles-root-1321 "
+                  >
+                    二十八番
+                  </span>
+                  <p
+                    className="makeStyles-root-1195 makeStyles-root-1322 makeStyles-root-1240"
+                  >
+                    秋の田の かりほの庵の 苫をあらみ
+                     
+                    わが衣手は 露にぬれつつ
+                  </p>
+                  <span
+                    className="makeStyles-root-1195 makeStyles-root-1323 makeStyles-creator-1238"
+                  >
+                    天智天皇
+                  </span>
+                </div>
+              </div>
+            </a>
+          </li>
+          <li>
+            <a
+              href="/karutas/29/"
+              onClick={[Function]}
+            >
+              <div
+                className="makeStyles-clickable-1190 makeStyles-root-1234 makeStyles-material-1176"
+                onClick={[Function]}
+              >
+                <div
+                  className="makeStyles-textColumn-1236"
+                >
+                  <span
+                    className="makeStyles-root-1195 makeStyles-root-1324 "
+                  >
+                    二十九番
+                  </span>
+                  <p
+                    className="makeStyles-root-1195 makeStyles-root-1325 makeStyles-root-1240"
+                  >
+                    秋の田の かりほの庵の 苫をあらみ
+                     
+                    わが衣手は 露にぬれつつ
+                  </p>
+                  <span
+                    className="makeStyles-root-1195 makeStyles-root-1326 makeStyles-creator-1238"
+                  >
+                    天智天皇
+                  </span>
+                </div>
+              </div>
+            </a>
+          </li>
+          <li>
+            <a
+              href="/karutas/30/"
+              onClick={[Function]}
+            >
+              <div
+                className="makeStyles-clickable-1190 makeStyles-root-1234 makeStyles-material-1176"
+                onClick={[Function]}
+              >
+                <div
+                  className="makeStyles-textColumn-1236"
+                >
+                  <span
+                    className="makeStyles-root-1195 makeStyles-root-1327 "
+                  >
+                    三十番
+                  </span>
+                  <p
+                    className="makeStyles-root-1195 makeStyles-root-1328 makeStyles-root-1240"
+                  >
+                    秋の田の かりほの庵の 苫をあらみ
+                     
+                    わが衣手は 露にぬれつつ
+                  </p>
+                  <span
+                    className="makeStyles-root-1195 makeStyles-root-1329 makeStyles-creator-1238"
+                  >
+                    天智天皇
+                  </span>
+                </div>
+              </div>
+            </a>
+          </li>
+          <li>
+            <a
+              href="/karutas/31/"
+              onClick={[Function]}
+            >
+              <div
+                className="makeStyles-clickable-1190 makeStyles-root-1234 makeStyles-material-1176"
+                onClick={[Function]}
+              >
+                <div
+                  className="makeStyles-textColumn-1236"
+                >
+                  <span
+                    className="makeStyles-root-1195 makeStyles-root-1330 "
+                  >
+                    三十一番
+                  </span>
+                  <p
+                    className="makeStyles-root-1195 makeStyles-root-1331 makeStyles-root-1240"
+                  >
+                    秋の田の かりほの庵の 苫をあらみ
+                     
+                    わが衣手は 露にぬれつつ
+                  </p>
+                  <span
+                    className="makeStyles-root-1195 makeStyles-root-1332 makeStyles-creator-1238"
+                  >
+                    天智天皇
+                  </span>
+                </div>
+              </div>
+            </a>
+          </li>
+          <li>
+            <a
+              href="/karutas/32/"
+              onClick={[Function]}
+            >
+              <div
+                className="makeStyles-clickable-1190 makeStyles-root-1234 makeStyles-material-1176"
+                onClick={[Function]}
+              >
+                <div
+                  className="makeStyles-textColumn-1236"
+                >
+                  <span
+                    className="makeStyles-root-1195 makeStyles-root-1333 "
+                  >
+                    三十二番
+                  </span>
+                  <p
+                    className="makeStyles-root-1195 makeStyles-root-1334 makeStyles-root-1240"
+                  >
+                    秋の田の かりほの庵の 苫をあらみ
+                     
+                    わが衣手は 露にぬれつつ
+                  </p>
+                  <span
+                    className="makeStyles-root-1195 makeStyles-root-1335 makeStyles-creator-1238"
+                  >
+                    天智天皇
+                  </span>
+                </div>
+              </div>
+            </a>
+          </li>
+          <li>
+            <a
+              href="/karutas/33/"
+              onClick={[Function]}
+            >
+              <div
+                className="makeStyles-clickable-1190 makeStyles-root-1234 makeStyles-material-1176"
+                onClick={[Function]}
+              >
+                <div
+                  className="makeStyles-textColumn-1236"
+                >
+                  <span
+                    className="makeStyles-root-1195 makeStyles-root-1336 "
+                  >
+                    三十三番
+                  </span>
+                  <p
+                    className="makeStyles-root-1195 makeStyles-root-1337 makeStyles-root-1240"
+                  >
+                    秋の田の かりほの庵の 苫をあらみ
+                     
+                    わが衣手は 露にぬれつつ
+                  </p>
+                  <span
+                    className="makeStyles-root-1195 makeStyles-root-1338 makeStyles-creator-1238"
+                  >
+                    天智天皇
+                  </span>
+                </div>
+              </div>
+            </a>
+          </li>
+          <li>
+            <a
+              href="/karutas/34/"
+              onClick={[Function]}
+            >
+              <div
+                className="makeStyles-clickable-1190 makeStyles-root-1234 makeStyles-material-1176"
+                onClick={[Function]}
+              >
+                <div
+                  className="makeStyles-textColumn-1236"
+                >
+                  <span
+                    className="makeStyles-root-1195 makeStyles-root-1339 "
+                  >
+                    三十四番
+                  </span>
+                  <p
+                    className="makeStyles-root-1195 makeStyles-root-1340 makeStyles-root-1240"
+                  >
+                    秋の田の かりほの庵の 苫をあらみ
+                     
+                    わが衣手は 露にぬれつつ
+                  </p>
+                  <span
+                    className="makeStyles-root-1195 makeStyles-root-1341 makeStyles-creator-1238"
+                  >
+                    天智天皇
+                  </span>
+                </div>
+              </div>
+            </a>
+          </li>
+          <li>
+            <a
+              href="/karutas/35/"
+              onClick={[Function]}
+            >
+              <div
+                className="makeStyles-clickable-1190 makeStyles-root-1234 makeStyles-material-1176"
+                onClick={[Function]}
+              >
+                <div
+                  className="makeStyles-textColumn-1236"
+                >
+                  <span
+                    className="makeStyles-root-1195 makeStyles-root-1342 "
+                  >
+                    三十五番
+                  </span>
+                  <p
+                    className="makeStyles-root-1195 makeStyles-root-1343 makeStyles-root-1240"
+                  >
+                    秋の田の かりほの庵の 苫をあらみ
+                     
+                    わが衣手は 露にぬれつつ
+                  </p>
+                  <span
+                    className="makeStyles-root-1195 makeStyles-root-1344 makeStyles-creator-1238"
+                  >
+                    天智天皇
+                  </span>
+                </div>
+              </div>
+            </a>
+          </li>
+          <li>
+            <a
+              href="/karutas/36/"
+              onClick={[Function]}
+            >
+              <div
+                className="makeStyles-clickable-1190 makeStyles-root-1234 makeStyles-material-1176"
+                onClick={[Function]}
+              >
+                <div
+                  className="makeStyles-textColumn-1236"
+                >
+                  <span
+                    className="makeStyles-root-1195 makeStyles-root-1345 "
+                  >
+                    三十六番
+                  </span>
+                  <p
+                    className="makeStyles-root-1195 makeStyles-root-1346 makeStyles-root-1240"
+                  >
+                    秋の田の かりほの庵の 苫をあらみ
+                     
+                    わが衣手は 露にぬれつつ
+                  </p>
+                  <span
+                    className="makeStyles-root-1195 makeStyles-root-1347 makeStyles-creator-1238"
+                  >
+                    天智天皇
+                  </span>
+                </div>
+              </div>
+            </a>
+          </li>
+          <li>
+            <a
+              href="/karutas/37/"
+              onClick={[Function]}
+            >
+              <div
+                className="makeStyles-clickable-1190 makeStyles-root-1234 makeStyles-material-1176"
+                onClick={[Function]}
+              >
+                <div
+                  className="makeStyles-textColumn-1236"
+                >
+                  <span
+                    className="makeStyles-root-1195 makeStyles-root-1348 "
+                  >
+                    三十七番
+                  </span>
+                  <p
+                    className="makeStyles-root-1195 makeStyles-root-1349 makeStyles-root-1240"
+                  >
+                    秋の田の かりほの庵の 苫をあらみ
+                     
+                    わが衣手は 露にぬれつつ
+                  </p>
+                  <span
+                    className="makeStyles-root-1195 makeStyles-root-1350 makeStyles-creator-1238"
+                  >
+                    天智天皇
+                  </span>
+                </div>
+              </div>
+            </a>
+          </li>
+          <li>
+            <a
+              href="/karutas/38/"
+              onClick={[Function]}
+            >
+              <div
+                className="makeStyles-clickable-1190 makeStyles-root-1234 makeStyles-material-1176"
+                onClick={[Function]}
+              >
+                <div
+                  className="makeStyles-textColumn-1236"
+                >
+                  <span
+                    className="makeStyles-root-1195 makeStyles-root-1351 "
+                  >
+                    三十八番
+                  </span>
+                  <p
+                    className="makeStyles-root-1195 makeStyles-root-1352 makeStyles-root-1240"
+                  >
+                    秋の田の かりほの庵の 苫をあらみ
+                     
+                    わが衣手は 露にぬれつつ
+                  </p>
+                  <span
+                    className="makeStyles-root-1195 makeStyles-root-1353 makeStyles-creator-1238"
+                  >
+                    天智天皇
+                  </span>
+                </div>
+              </div>
+            </a>
+          </li>
+          <li>
+            <a
+              href="/karutas/39/"
+              onClick={[Function]}
+            >
+              <div
+                className="makeStyles-clickable-1190 makeStyles-root-1234 makeStyles-material-1176"
+                onClick={[Function]}
+              >
+                <div
+                  className="makeStyles-textColumn-1236"
+                >
+                  <span
+                    className="makeStyles-root-1195 makeStyles-root-1354 "
+                  >
+                    三十九番
+                  </span>
+                  <p
+                    className="makeStyles-root-1195 makeStyles-root-1355 makeStyles-root-1240"
+                  >
+                    秋の田の かりほの庵の 苫をあらみ
+                     
+                    わが衣手は 露にぬれつつ
+                  </p>
+                  <span
+                    className="makeStyles-root-1195 makeStyles-root-1356 makeStyles-creator-1238"
+                  >
+                    天智天皇
+                  </span>
+                </div>
+              </div>
+            </a>
+          </li>
+          <li>
+            <a
+              href="/karutas/40/"
+              onClick={[Function]}
+            >
+              <div
+                className="makeStyles-clickable-1190 makeStyles-root-1234 makeStyles-material-1176"
+                onClick={[Function]}
+              >
+                <div
+                  className="makeStyles-textColumn-1236"
+                >
+                  <span
+                    className="makeStyles-root-1195 makeStyles-root-1357 "
+                  >
+                    四十番
+                  </span>
+                  <p
+                    className="makeStyles-root-1195 makeStyles-root-1358 makeStyles-root-1240"
+                  >
+                    秋の田の かりほの庵の 苫をあらみ
+                     
+                    わが衣手は 露にぬれつつ
+                  </p>
+                  <span
+                    className="makeStyles-root-1195 makeStyles-root-1359 makeStyles-creator-1238"
+                  >
+                    天智天皇
+                  </span>
+                </div>
+              </div>
+            </a>
+          </li>
+          <li>
+            <a
+              href="/karutas/41/"
+              onClick={[Function]}
+            >
+              <div
+                className="makeStyles-clickable-1190 makeStyles-root-1234 makeStyles-material-1176"
+                onClick={[Function]}
+              >
+                <div
+                  className="makeStyles-textColumn-1236"
+                >
+                  <span
+                    className="makeStyles-root-1195 makeStyles-root-1360 "
+                  >
+                    四十一番
+                  </span>
+                  <p
+                    className="makeStyles-root-1195 makeStyles-root-1361 makeStyles-root-1240"
+                  >
+                    秋の田の かりほの庵の 苫をあらみ
+                     
+                    わが衣手は 露にぬれつつ
+                  </p>
+                  <span
+                    className="makeStyles-root-1195 makeStyles-root-1362 makeStyles-creator-1238"
+                  >
+                    天智天皇
+                  </span>
+                </div>
+              </div>
+            </a>
+          </li>
+          <li>
+            <a
+              href="/karutas/42/"
+              onClick={[Function]}
+            >
+              <div
+                className="makeStyles-clickable-1190 makeStyles-root-1234 makeStyles-material-1176"
+                onClick={[Function]}
+              >
+                <div
+                  className="makeStyles-textColumn-1236"
+                >
+                  <span
+                    className="makeStyles-root-1195 makeStyles-root-1363 "
+                  >
+                    四十二番
+                  </span>
+                  <p
+                    className="makeStyles-root-1195 makeStyles-root-1364 makeStyles-root-1240"
+                  >
+                    秋の田の かりほの庵の 苫をあらみ
+                     
+                    わが衣手は 露にぬれつつ
+                  </p>
+                  <span
+                    className="makeStyles-root-1195 makeStyles-root-1365 makeStyles-creator-1238"
+                  >
+                    天智天皇
+                  </span>
+                </div>
+              </div>
+            </a>
+          </li>
+          <li>
+            <a
+              href="/karutas/43/"
+              onClick={[Function]}
+            >
+              <div
+                className="makeStyles-clickable-1190 makeStyles-root-1234 makeStyles-material-1176"
+                onClick={[Function]}
+              >
+                <div
+                  className="makeStyles-textColumn-1236"
+                >
+                  <span
+                    className="makeStyles-root-1195 makeStyles-root-1366 "
+                  >
+                    四十三番
+                  </span>
+                  <p
+                    className="makeStyles-root-1195 makeStyles-root-1367 makeStyles-root-1240"
+                  >
+                    秋の田の かりほの庵の 苫をあらみ
+                     
+                    わが衣手は 露にぬれつつ
+                  </p>
+                  <span
+                    className="makeStyles-root-1195 makeStyles-root-1368 makeStyles-creator-1238"
+                  >
+                    天智天皇
+                  </span>
+                </div>
+              </div>
+            </a>
+          </li>
+          <li>
+            <a
+              href="/karutas/44/"
+              onClick={[Function]}
+            >
+              <div
+                className="makeStyles-clickable-1190 makeStyles-root-1234 makeStyles-material-1176"
+                onClick={[Function]}
+              >
+                <div
+                  className="makeStyles-textColumn-1236"
+                >
+                  <span
+                    className="makeStyles-root-1195 makeStyles-root-1369 "
+                  >
+                    四十四番
+                  </span>
+                  <p
+                    className="makeStyles-root-1195 makeStyles-root-1370 makeStyles-root-1240"
+                  >
+                    秋の田の かりほの庵の 苫をあらみ
+                     
+                    わが衣手は 露にぬれつつ
+                  </p>
+                  <span
+                    className="makeStyles-root-1195 makeStyles-root-1371 makeStyles-creator-1238"
+                  >
+                    天智天皇
+                  </span>
+                </div>
+              </div>
+            </a>
+          </li>
+          <li>
+            <a
+              href="/karutas/45/"
+              onClick={[Function]}
+            >
+              <div
+                className="makeStyles-clickable-1190 makeStyles-root-1234 makeStyles-material-1176"
+                onClick={[Function]}
+              >
+                <div
+                  className="makeStyles-textColumn-1236"
+                >
+                  <span
+                    className="makeStyles-root-1195 makeStyles-root-1372 "
+                  >
+                    四十五番
+                  </span>
+                  <p
+                    className="makeStyles-root-1195 makeStyles-root-1373 makeStyles-root-1240"
+                  >
+                    秋の田の かりほの庵の 苫をあらみ
+                     
+                    わが衣手は 露にぬれつつ
+                  </p>
+                  <span
+                    className="makeStyles-root-1195 makeStyles-root-1374 makeStyles-creator-1238"
+                  >
+                    天智天皇
+                  </span>
+                </div>
+              </div>
+            </a>
+          </li>
+          <li>
+            <a
+              href="/karutas/46/"
+              onClick={[Function]}
+            >
+              <div
+                className="makeStyles-clickable-1190 makeStyles-root-1234 makeStyles-material-1176"
+                onClick={[Function]}
+              >
+                <div
+                  className="makeStyles-textColumn-1236"
+                >
+                  <span
+                    className="makeStyles-root-1195 makeStyles-root-1375 "
+                  >
+                    四十六番
+                  </span>
+                  <p
+                    className="makeStyles-root-1195 makeStyles-root-1376 makeStyles-root-1240"
+                  >
+                    秋の田の かりほの庵の 苫をあらみ
+                     
+                    わが衣手は 露にぬれつつ
+                  </p>
+                  <span
+                    className="makeStyles-root-1195 makeStyles-root-1377 makeStyles-creator-1238"
+                  >
+                    天智天皇
+                  </span>
+                </div>
+              </div>
+            </a>
+          </li>
+          <li>
+            <a
+              href="/karutas/47/"
+              onClick={[Function]}
+            >
+              <div
+                className="makeStyles-clickable-1190 makeStyles-root-1234 makeStyles-material-1176"
+                onClick={[Function]}
+              >
+                <div
+                  className="makeStyles-textColumn-1236"
+                >
+                  <span
+                    className="makeStyles-root-1195 makeStyles-root-1378 "
+                  >
+                    四十七番
+                  </span>
+                  <p
+                    className="makeStyles-root-1195 makeStyles-root-1379 makeStyles-root-1240"
+                  >
+                    秋の田の かりほの庵の 苫をあらみ
+                     
+                    わが衣手は 露にぬれつつ
+                  </p>
+                  <span
+                    className="makeStyles-root-1195 makeStyles-root-1380 makeStyles-creator-1238"
+                  >
+                    天智天皇
+                  </span>
+                </div>
+              </div>
+            </a>
+          </li>
+          <li>
+            <a
+              href="/karutas/48/"
+              onClick={[Function]}
+            >
+              <div
+                className="makeStyles-clickable-1190 makeStyles-root-1234 makeStyles-material-1176"
+                onClick={[Function]}
+              >
+                <div
+                  className="makeStyles-textColumn-1236"
+                >
+                  <span
+                    className="makeStyles-root-1195 makeStyles-root-1381 "
+                  >
+                    四十八番
+                  </span>
+                  <p
+                    className="makeStyles-root-1195 makeStyles-root-1382 makeStyles-root-1240"
+                  >
+                    秋の田の かりほの庵の 苫をあらみ
+                     
+                    わが衣手は 露にぬれつつ
+                  </p>
+                  <span
+                    className="makeStyles-root-1195 makeStyles-root-1383 makeStyles-creator-1238"
+                  >
+                    天智天皇
+                  </span>
+                </div>
+              </div>
+            </a>
+          </li>
+          <li>
+            <a
+              href="/karutas/49/"
+              onClick={[Function]}
+            >
+              <div
+                className="makeStyles-clickable-1190 makeStyles-root-1234 makeStyles-material-1176"
+                onClick={[Function]}
+              >
+                <div
+                  className="makeStyles-textColumn-1236"
+                >
+                  <span
+                    className="makeStyles-root-1195 makeStyles-root-1384 "
+                  >
+                    四十九番
+                  </span>
+                  <p
+                    className="makeStyles-root-1195 makeStyles-root-1385 makeStyles-root-1240"
+                  >
+                    秋の田の かりほの庵の 苫をあらみ
+                     
+                    わが衣手は 露にぬれつつ
+                  </p>
+                  <span
+                    className="makeStyles-root-1195 makeStyles-root-1386 makeStyles-creator-1238"
+                  >
+                    天智天皇
+                  </span>
+                </div>
+              </div>
+            </a>
+          </li>
+          <li>
+            <a
+              href="/karutas/50/"
+              onClick={[Function]}
+            >
+              <div
+                className="makeStyles-clickable-1190 makeStyles-root-1234 makeStyles-material-1176"
+                onClick={[Function]}
+              >
+                <div
+                  className="makeStyles-textColumn-1236"
+                >
+                  <span
+                    className="makeStyles-root-1195 makeStyles-root-1387 "
+                  >
+                    五十番
+                  </span>
+                  <p
+                    className="makeStyles-root-1195 makeStyles-root-1388 makeStyles-root-1240"
+                  >
+                    秋の田の かりほの庵の 苫をあらみ
+                     
+                    わが衣手は 露にぬれつつ
+                  </p>
+                  <span
+                    className="makeStyles-root-1195 makeStyles-root-1389 makeStyles-creator-1238"
+                  >
+                    天智天皇
+                  </span>
+                </div>
+              </div>
+            </a>
+          </li>
+          <li>
+            <a
+              href="/karutas/51/"
+              onClick={[Function]}
+            >
+              <div
+                className="makeStyles-clickable-1190 makeStyles-root-1234 makeStyles-material-1176"
+                onClick={[Function]}
+              >
+                <div
+                  className="makeStyles-textColumn-1236"
+                >
+                  <span
+                    className="makeStyles-root-1195 makeStyles-root-1390 "
+                  >
+                    五十一番
+                  </span>
+                  <p
+                    className="makeStyles-root-1195 makeStyles-root-1391 makeStyles-root-1240"
+                  >
+                    秋の田の かりほの庵の 苫をあらみ
+                     
+                    わが衣手は 露にぬれつつ
+                  </p>
+                  <span
+                    className="makeStyles-root-1195 makeStyles-root-1392 makeStyles-creator-1238"
+                  >
+                    天智天皇
+                  </span>
+                </div>
+              </div>
+            </a>
+          </li>
+          <li>
+            <a
+              href="/karutas/52/"
+              onClick={[Function]}
+            >
+              <div
+                className="makeStyles-clickable-1190 makeStyles-root-1234 makeStyles-material-1176"
+                onClick={[Function]}
+              >
+                <div
+                  className="makeStyles-textColumn-1236"
+                >
+                  <span
+                    className="makeStyles-root-1195 makeStyles-root-1393 "
+                  >
+                    五十二番
+                  </span>
+                  <p
+                    className="makeStyles-root-1195 makeStyles-root-1394 makeStyles-root-1240"
+                  >
+                    秋の田の かりほの庵の 苫をあらみ
+                     
+                    わが衣手は 露にぬれつつ
+                  </p>
+                  <span
+                    className="makeStyles-root-1195 makeStyles-root-1395 makeStyles-creator-1238"
+                  >
+                    天智天皇
+                  </span>
+                </div>
+              </div>
+            </a>
+          </li>
+          <li>
+            <a
+              href="/karutas/53/"
+              onClick={[Function]}
+            >
+              <div
+                className="makeStyles-clickable-1190 makeStyles-root-1234 makeStyles-material-1176"
+                onClick={[Function]}
+              >
+                <div
+                  className="makeStyles-textColumn-1236"
+                >
+                  <span
+                    className="makeStyles-root-1195 makeStyles-root-1396 "
+                  >
+                    五十三番
+                  </span>
+                  <p
+                    className="makeStyles-root-1195 makeStyles-root-1397 makeStyles-root-1240"
+                  >
+                    秋の田の かりほの庵の 苫をあらみ
+                     
+                    わが衣手は 露にぬれつつ
+                  </p>
+                  <span
+                    className="makeStyles-root-1195 makeStyles-root-1398 makeStyles-creator-1238"
+                  >
+                    天智天皇
+                  </span>
+                </div>
+              </div>
+            </a>
+          </li>
+          <li>
+            <a
+              href="/karutas/54/"
+              onClick={[Function]}
+            >
+              <div
+                className="makeStyles-clickable-1190 makeStyles-root-1234 makeStyles-material-1176"
+                onClick={[Function]}
+              >
+                <div
+                  className="makeStyles-textColumn-1236"
+                >
+                  <span
+                    className="makeStyles-root-1195 makeStyles-root-1399 "
+                  >
+                    五十四番
+                  </span>
+                  <p
+                    className="makeStyles-root-1195 makeStyles-root-1400 makeStyles-root-1240"
+                  >
+                    秋の田の かりほの庵の 苫をあらみ
+                     
+                    わが衣手は 露にぬれつつ
+                  </p>
+                  <span
+                    className="makeStyles-root-1195 makeStyles-root-1401 makeStyles-creator-1238"
+                  >
+                    天智天皇
+                  </span>
+                </div>
+              </div>
+            </a>
+          </li>
+          <li>
+            <a
+              href="/karutas/55/"
+              onClick={[Function]}
+            >
+              <div
+                className="makeStyles-clickable-1190 makeStyles-root-1234 makeStyles-material-1176"
+                onClick={[Function]}
+              >
+                <div
+                  className="makeStyles-textColumn-1236"
+                >
+                  <span
+                    className="makeStyles-root-1195 makeStyles-root-1402 "
+                  >
+                    五十五番
+                  </span>
+                  <p
+                    className="makeStyles-root-1195 makeStyles-root-1403 makeStyles-root-1240"
+                  >
+                    秋の田の かりほの庵の 苫をあらみ
+                     
+                    わが衣手は 露にぬれつつ
+                  </p>
+                  <span
+                    className="makeStyles-root-1195 makeStyles-root-1404 makeStyles-creator-1238"
+                  >
+                    天智天皇
+                  </span>
+                </div>
+              </div>
+            </a>
+          </li>
+          <li>
+            <a
+              href="/karutas/56/"
+              onClick={[Function]}
+            >
+              <div
+                className="makeStyles-clickable-1190 makeStyles-root-1234 makeStyles-material-1176"
+                onClick={[Function]}
+              >
+                <div
+                  className="makeStyles-textColumn-1236"
+                >
+                  <span
+                    className="makeStyles-root-1195 makeStyles-root-1405 "
+                  >
+                    五十六番
+                  </span>
+                  <p
+                    className="makeStyles-root-1195 makeStyles-root-1406 makeStyles-root-1240"
+                  >
+                    秋の田の かりほの庵の 苫をあらみ
+                     
+                    わが衣手は 露にぬれつつ
+                  </p>
+                  <span
+                    className="makeStyles-root-1195 makeStyles-root-1407 makeStyles-creator-1238"
+                  >
+                    天智天皇
+                  </span>
+                </div>
+              </div>
+            </a>
+          </li>
+          <li>
+            <a
+              href="/karutas/57/"
+              onClick={[Function]}
+            >
+              <div
+                className="makeStyles-clickable-1190 makeStyles-root-1234 makeStyles-material-1176"
+                onClick={[Function]}
+              >
+                <div
+                  className="makeStyles-textColumn-1236"
+                >
+                  <span
+                    className="makeStyles-root-1195 makeStyles-root-1408 "
+                  >
+                    五十七番
+                  </span>
+                  <p
+                    className="makeStyles-root-1195 makeStyles-root-1409 makeStyles-root-1240"
+                  >
+                    秋の田の かりほの庵の 苫をあらみ
+                     
+                    わが衣手は 露にぬれつつ
+                  </p>
+                  <span
+                    className="makeStyles-root-1195 makeStyles-root-1410 makeStyles-creator-1238"
+                  >
+                    天智天皇
+                  </span>
+                </div>
+              </div>
+            </a>
+          </li>
+          <li>
+            <a
+              href="/karutas/58/"
+              onClick={[Function]}
+            >
+              <div
+                className="makeStyles-clickable-1190 makeStyles-root-1234 makeStyles-material-1176"
+                onClick={[Function]}
+              >
+                <div
+                  className="makeStyles-textColumn-1236"
+                >
+                  <span
+                    className="makeStyles-root-1195 makeStyles-root-1411 "
+                  >
+                    五十八番
+                  </span>
+                  <p
+                    className="makeStyles-root-1195 makeStyles-root-1412 makeStyles-root-1240"
+                  >
+                    秋の田の かりほの庵の 苫をあらみ
+                     
+                    わが衣手は 露にぬれつつ
+                  </p>
+                  <span
+                    className="makeStyles-root-1195 makeStyles-root-1413 makeStyles-creator-1238"
+                  >
+                    天智天皇
+                  </span>
+                </div>
+              </div>
+            </a>
+          </li>
+          <li>
+            <a
+              href="/karutas/59/"
+              onClick={[Function]}
+            >
+              <div
+                className="makeStyles-clickable-1190 makeStyles-root-1234 makeStyles-material-1176"
+                onClick={[Function]}
+              >
+                <div
+                  className="makeStyles-textColumn-1236"
+                >
+                  <span
+                    className="makeStyles-root-1195 makeStyles-root-1414 "
+                  >
+                    五十九番
+                  </span>
+                  <p
+                    className="makeStyles-root-1195 makeStyles-root-1415 makeStyles-root-1240"
+                  >
+                    秋の田の かりほの庵の 苫をあらみ
+                     
+                    わが衣手は 露にぬれつつ
+                  </p>
+                  <span
+                    className="makeStyles-root-1195 makeStyles-root-1416 makeStyles-creator-1238"
+                  >
+                    天智天皇
+                  </span>
+                </div>
+              </div>
+            </a>
+          </li>
+          <li>
+            <a
+              href="/karutas/60/"
+              onClick={[Function]}
+            >
+              <div
+                className="makeStyles-clickable-1190 makeStyles-root-1234 makeStyles-material-1176"
+                onClick={[Function]}
+              >
+                <div
+                  className="makeStyles-textColumn-1236"
+                >
+                  <span
+                    className="makeStyles-root-1195 makeStyles-root-1417 "
+                  >
+                    六十番
+                  </span>
+                  <p
+                    className="makeStyles-root-1195 makeStyles-root-1418 makeStyles-root-1240"
+                  >
+                    秋の田の かりほの庵の 苫をあらみ
+                     
+                    わが衣手は 露にぬれつつ
+                  </p>
+                  <span
+                    className="makeStyles-root-1195 makeStyles-root-1419 makeStyles-creator-1238"
+                  >
+                    天智天皇
+                  </span>
+                </div>
+              </div>
+            </a>
+          </li>
+          <li>
+            <a
+              href="/karutas/61/"
+              onClick={[Function]}
+            >
+              <div
+                className="makeStyles-clickable-1190 makeStyles-root-1234 makeStyles-material-1176"
+                onClick={[Function]}
+              >
+                <div
+                  className="makeStyles-textColumn-1236"
+                >
+                  <span
+                    className="makeStyles-root-1195 makeStyles-root-1420 "
+                  >
+                    六十一番
+                  </span>
+                  <p
+                    className="makeStyles-root-1195 makeStyles-root-1421 makeStyles-root-1240"
+                  >
+                    秋の田の かりほの庵の 苫をあらみ
+                     
+                    わが衣手は 露にぬれつつ
+                  </p>
+                  <span
+                    className="makeStyles-root-1195 makeStyles-root-1422 makeStyles-creator-1238"
+                  >
+                    天智天皇
+                  </span>
+                </div>
+              </div>
+            </a>
+          </li>
+          <li>
+            <a
+              href="/karutas/62/"
+              onClick={[Function]}
+            >
+              <div
+                className="makeStyles-clickable-1190 makeStyles-root-1234 makeStyles-material-1176"
+                onClick={[Function]}
+              >
+                <div
+                  className="makeStyles-textColumn-1236"
+                >
+                  <span
+                    className="makeStyles-root-1195 makeStyles-root-1423 "
+                  >
+                    六十二番
+                  </span>
+                  <p
+                    className="makeStyles-root-1195 makeStyles-root-1424 makeStyles-root-1240"
+                  >
+                    秋の田の かりほの庵の 苫をあらみ
+                     
+                    わが衣手は 露にぬれつつ
+                  </p>
+                  <span
+                    className="makeStyles-root-1195 makeStyles-root-1425 makeStyles-creator-1238"
+                  >
+                    天智天皇
+                  </span>
+                </div>
+              </div>
+            </a>
+          </li>
+          <li>
+            <a
+              href="/karutas/63/"
+              onClick={[Function]}
+            >
+              <div
+                className="makeStyles-clickable-1190 makeStyles-root-1234 makeStyles-material-1176"
+                onClick={[Function]}
+              >
+                <div
+                  className="makeStyles-textColumn-1236"
+                >
+                  <span
+                    className="makeStyles-root-1195 makeStyles-root-1426 "
+                  >
+                    六十三番
+                  </span>
+                  <p
+                    className="makeStyles-root-1195 makeStyles-root-1427 makeStyles-root-1240"
+                  >
+                    秋の田の かりほの庵の 苫をあらみ
+                     
+                    わが衣手は 露にぬれつつ
+                  </p>
+                  <span
+                    className="makeStyles-root-1195 makeStyles-root-1428 makeStyles-creator-1238"
+                  >
+                    天智天皇
+                  </span>
+                </div>
+              </div>
+            </a>
+          </li>
+          <li>
+            <a
+              href="/karutas/64/"
+              onClick={[Function]}
+            >
+              <div
+                className="makeStyles-clickable-1190 makeStyles-root-1234 makeStyles-material-1176"
+                onClick={[Function]}
+              >
+                <div
+                  className="makeStyles-textColumn-1236"
+                >
+                  <span
+                    className="makeStyles-root-1195 makeStyles-root-1429 "
+                  >
+                    六十四番
+                  </span>
+                  <p
+                    className="makeStyles-root-1195 makeStyles-root-1430 makeStyles-root-1240"
+                  >
+                    秋の田の かりほの庵の 苫をあらみ
+                     
+                    わが衣手は 露にぬれつつ
+                  </p>
+                  <span
+                    className="makeStyles-root-1195 makeStyles-root-1431 makeStyles-creator-1238"
+                  >
+                    天智天皇
+                  </span>
+                </div>
+              </div>
+            </a>
+          </li>
+          <li>
+            <a
+              href="/karutas/65/"
+              onClick={[Function]}
+            >
+              <div
+                className="makeStyles-clickable-1190 makeStyles-root-1234 makeStyles-material-1176"
+                onClick={[Function]}
+              >
+                <div
+                  className="makeStyles-textColumn-1236"
+                >
+                  <span
+                    className="makeStyles-root-1195 makeStyles-root-1432 "
+                  >
+                    六十五番
+                  </span>
+                  <p
+                    className="makeStyles-root-1195 makeStyles-root-1433 makeStyles-root-1240"
+                  >
+                    秋の田の かりほの庵の 苫をあらみ
+                     
+                    わが衣手は 露にぬれつつ
+                  </p>
+                  <span
+                    className="makeStyles-root-1195 makeStyles-root-1434 makeStyles-creator-1238"
+                  >
+                    天智天皇
+                  </span>
+                </div>
+              </div>
+            </a>
+          </li>
+          <li>
+            <a
+              href="/karutas/66/"
+              onClick={[Function]}
+            >
+              <div
+                className="makeStyles-clickable-1190 makeStyles-root-1234 makeStyles-material-1176"
+                onClick={[Function]}
+              >
+                <div
+                  className="makeStyles-textColumn-1236"
+                >
+                  <span
+                    className="makeStyles-root-1195 makeStyles-root-1435 "
+                  >
+                    六十六番
+                  </span>
+                  <p
+                    className="makeStyles-root-1195 makeStyles-root-1436 makeStyles-root-1240"
+                  >
+                    秋の田の かりほの庵の 苫をあらみ
+                     
+                    わが衣手は 露にぬれつつ
+                  </p>
+                  <span
+                    className="makeStyles-root-1195 makeStyles-root-1437 makeStyles-creator-1238"
+                  >
+                    天智天皇
+                  </span>
+                </div>
+              </div>
+            </a>
+          </li>
+          <li>
+            <a
+              href="/karutas/67/"
+              onClick={[Function]}
+            >
+              <div
+                className="makeStyles-clickable-1190 makeStyles-root-1234 makeStyles-material-1176"
+                onClick={[Function]}
+              >
+                <div
+                  className="makeStyles-textColumn-1236"
+                >
+                  <span
+                    className="makeStyles-root-1195 makeStyles-root-1438 "
+                  >
+                    六十七番
+                  </span>
+                  <p
+                    className="makeStyles-root-1195 makeStyles-root-1439 makeStyles-root-1240"
+                  >
+                    秋の田の かりほの庵の 苫をあらみ
+                     
+                    わが衣手は 露にぬれつつ
+                  </p>
+                  <span
+                    className="makeStyles-root-1195 makeStyles-root-1440 makeStyles-creator-1238"
+                  >
+                    天智天皇
+                  </span>
+                </div>
+              </div>
+            </a>
+          </li>
+          <li>
+            <a
+              href="/karutas/68/"
+              onClick={[Function]}
+            >
+              <div
+                className="makeStyles-clickable-1190 makeStyles-root-1234 makeStyles-material-1176"
+                onClick={[Function]}
+              >
+                <div
+                  className="makeStyles-textColumn-1236"
+                >
+                  <span
+                    className="makeStyles-root-1195 makeStyles-root-1441 "
+                  >
+                    六十八番
+                  </span>
+                  <p
+                    className="makeStyles-root-1195 makeStyles-root-1442 makeStyles-root-1240"
+                  >
+                    秋の田の かりほの庵の 苫をあらみ
+                     
+                    わが衣手は 露にぬれつつ
+                  </p>
+                  <span
+                    className="makeStyles-root-1195 makeStyles-root-1443 makeStyles-creator-1238"
+                  >
+                    天智天皇
+                  </span>
+                </div>
+              </div>
+            </a>
+          </li>
+          <li>
+            <a
+              href="/karutas/69/"
+              onClick={[Function]}
+            >
+              <div
+                className="makeStyles-clickable-1190 makeStyles-root-1234 makeStyles-material-1176"
+                onClick={[Function]}
+              >
+                <div
+                  className="makeStyles-textColumn-1236"
+                >
+                  <span
+                    className="makeStyles-root-1195 makeStyles-root-1444 "
+                  >
+                    六十九番
+                  </span>
+                  <p
+                    className="makeStyles-root-1195 makeStyles-root-1445 makeStyles-root-1240"
+                  >
+                    秋の田の かりほの庵の 苫をあらみ
+                     
+                    わが衣手は 露にぬれつつ
+                  </p>
+                  <span
+                    className="makeStyles-root-1195 makeStyles-root-1446 makeStyles-creator-1238"
+                  >
+                    天智天皇
+                  </span>
+                </div>
+              </div>
+            </a>
+          </li>
+          <li>
+            <a
+              href="/karutas/70/"
+              onClick={[Function]}
+            >
+              <div
+                className="makeStyles-clickable-1190 makeStyles-root-1234 makeStyles-material-1176"
+                onClick={[Function]}
+              >
+                <div
+                  className="makeStyles-textColumn-1236"
+                >
+                  <span
+                    className="makeStyles-root-1195 makeStyles-root-1447 "
+                  >
+                    七十番
+                  </span>
+                  <p
+                    className="makeStyles-root-1195 makeStyles-root-1448 makeStyles-root-1240"
+                  >
+                    秋の田の かりほの庵の 苫をあらみ
+                     
+                    わが衣手は 露にぬれつつ
+                  </p>
+                  <span
+                    className="makeStyles-root-1195 makeStyles-root-1449 makeStyles-creator-1238"
+                  >
+                    天智天皇
+                  </span>
+                </div>
+              </div>
+            </a>
+          </li>
+          <li>
+            <a
+              href="/karutas/71/"
+              onClick={[Function]}
+            >
+              <div
+                className="makeStyles-clickable-1190 makeStyles-root-1234 makeStyles-material-1176"
+                onClick={[Function]}
+              >
+                <div
+                  className="makeStyles-textColumn-1236"
+                >
+                  <span
+                    className="makeStyles-root-1195 makeStyles-root-1450 "
+                  >
+                    七十一番
+                  </span>
+                  <p
+                    className="makeStyles-root-1195 makeStyles-root-1451 makeStyles-root-1240"
+                  >
+                    秋の田の かりほの庵の 苫をあらみ
+                     
+                    わが衣手は 露にぬれつつ
+                  </p>
+                  <span
+                    className="makeStyles-root-1195 makeStyles-root-1452 makeStyles-creator-1238"
+                  >
+                    天智天皇
+                  </span>
+                </div>
+              </div>
+            </a>
+          </li>
+          <li>
+            <a
+              href="/karutas/72/"
+              onClick={[Function]}
+            >
+              <div
+                className="makeStyles-clickable-1190 makeStyles-root-1234 makeStyles-material-1176"
+                onClick={[Function]}
+              >
+                <div
+                  className="makeStyles-textColumn-1236"
+                >
+                  <span
+                    className="makeStyles-root-1195 makeStyles-root-1453 "
+                  >
+                    七十二番
+                  </span>
+                  <p
+                    className="makeStyles-root-1195 makeStyles-root-1454 makeStyles-root-1240"
+                  >
+                    秋の田の かりほの庵の 苫をあらみ
+                     
+                    わが衣手は 露にぬれつつ
+                  </p>
+                  <span
+                    className="makeStyles-root-1195 makeStyles-root-1455 makeStyles-creator-1238"
+                  >
+                    天智天皇
+                  </span>
+                </div>
+              </div>
+            </a>
+          </li>
+          <li>
+            <a
+              href="/karutas/73/"
+              onClick={[Function]}
+            >
+              <div
+                className="makeStyles-clickable-1190 makeStyles-root-1234 makeStyles-material-1176"
+                onClick={[Function]}
+              >
+                <div
+                  className="makeStyles-textColumn-1236"
+                >
+                  <span
+                    className="makeStyles-root-1195 makeStyles-root-1456 "
+                  >
+                    七十三番
+                  </span>
+                  <p
+                    className="makeStyles-root-1195 makeStyles-root-1457 makeStyles-root-1240"
+                  >
+                    秋の田の かりほの庵の 苫をあらみ
+                     
+                    わが衣手は 露にぬれつつ
+                  </p>
+                  <span
+                    className="makeStyles-root-1195 makeStyles-root-1458 makeStyles-creator-1238"
+                  >
+                    天智天皇
+                  </span>
+                </div>
+              </div>
+            </a>
+          </li>
+          <li>
+            <a
+              href="/karutas/74/"
+              onClick={[Function]}
+            >
+              <div
+                className="makeStyles-clickable-1190 makeStyles-root-1234 makeStyles-material-1176"
+                onClick={[Function]}
+              >
+                <div
+                  className="makeStyles-textColumn-1236"
+                >
+                  <span
+                    className="makeStyles-root-1195 makeStyles-root-1459 "
+                  >
+                    七十四番
+                  </span>
+                  <p
+                    className="makeStyles-root-1195 makeStyles-root-1460 makeStyles-root-1240"
+                  >
+                    秋の田の かりほの庵の 苫をあらみ
+                     
+                    わが衣手は 露にぬれつつ
+                  </p>
+                  <span
+                    className="makeStyles-root-1195 makeStyles-root-1461 makeStyles-creator-1238"
+                  >
+                    天智天皇
+                  </span>
+                </div>
+              </div>
+            </a>
+          </li>
+          <li>
+            <a
+              href="/karutas/75/"
+              onClick={[Function]}
+            >
+              <div
+                className="makeStyles-clickable-1190 makeStyles-root-1234 makeStyles-material-1176"
+                onClick={[Function]}
+              >
+                <div
+                  className="makeStyles-textColumn-1236"
+                >
+                  <span
+                    className="makeStyles-root-1195 makeStyles-root-1462 "
+                  >
+                    七十五番
+                  </span>
+                  <p
+                    className="makeStyles-root-1195 makeStyles-root-1463 makeStyles-root-1240"
+                  >
+                    秋の田の かりほの庵の 苫をあらみ
+                     
+                    わが衣手は 露にぬれつつ
+                  </p>
+                  <span
+                    className="makeStyles-root-1195 makeStyles-root-1464 makeStyles-creator-1238"
+                  >
+                    天智天皇
+                  </span>
+                </div>
+              </div>
+            </a>
+          </li>
+          <li>
+            <a
+              href="/karutas/76/"
+              onClick={[Function]}
+            >
+              <div
+                className="makeStyles-clickable-1190 makeStyles-root-1234 makeStyles-material-1176"
+                onClick={[Function]}
+              >
+                <div
+                  className="makeStyles-textColumn-1236"
+                >
+                  <span
+                    className="makeStyles-root-1195 makeStyles-root-1465 "
+                  >
+                    七十六番
+                  </span>
+                  <p
+                    className="makeStyles-root-1195 makeStyles-root-1466 makeStyles-root-1240"
+                  >
+                    秋の田の かりほの庵の 苫をあらみ
+                     
+                    わが衣手は 露にぬれつつ
+                  </p>
+                  <span
+                    className="makeStyles-root-1195 makeStyles-root-1467 makeStyles-creator-1238"
+                  >
+                    天智天皇
+                  </span>
+                </div>
+              </div>
+            </a>
+          </li>
+          <li>
+            <a
+              href="/karutas/77/"
+              onClick={[Function]}
+            >
+              <div
+                className="makeStyles-clickable-1190 makeStyles-root-1234 makeStyles-material-1176"
+                onClick={[Function]}
+              >
+                <div
+                  className="makeStyles-textColumn-1236"
+                >
+                  <span
+                    className="makeStyles-root-1195 makeStyles-root-1468 "
+                  >
+                    七十七番
+                  </span>
+                  <p
+                    className="makeStyles-root-1195 makeStyles-root-1469 makeStyles-root-1240"
+                  >
+                    秋の田の かりほの庵の 苫をあらみ
+                     
+                    わが衣手は 露にぬれつつ
+                  </p>
+                  <span
+                    className="makeStyles-root-1195 makeStyles-root-1470 makeStyles-creator-1238"
+                  >
+                    天智天皇
+                  </span>
+                </div>
+              </div>
+            </a>
+          </li>
+          <li>
+            <a
+              href="/karutas/78/"
+              onClick={[Function]}
+            >
+              <div
+                className="makeStyles-clickable-1190 makeStyles-root-1234 makeStyles-material-1176"
+                onClick={[Function]}
+              >
+                <div
+                  className="makeStyles-textColumn-1236"
+                >
+                  <span
+                    className="makeStyles-root-1195 makeStyles-root-1471 "
+                  >
+                    七十八番
+                  </span>
+                  <p
+                    className="makeStyles-root-1195 makeStyles-root-1472 makeStyles-root-1240"
+                  >
+                    秋の田の かりほの庵の 苫をあらみ
+                     
+                    わが衣手は 露にぬれつつ
+                  </p>
+                  <span
+                    className="makeStyles-root-1195 makeStyles-root-1473 makeStyles-creator-1238"
+                  >
+                    天智天皇
+                  </span>
+                </div>
+              </div>
+            </a>
+          </li>
+          <li>
+            <a
+              href="/karutas/79/"
+              onClick={[Function]}
+            >
+              <div
+                className="makeStyles-clickable-1190 makeStyles-root-1234 makeStyles-material-1176"
+                onClick={[Function]}
+              >
+                <div
+                  className="makeStyles-textColumn-1236"
+                >
+                  <span
+                    className="makeStyles-root-1195 makeStyles-root-1474 "
+                  >
+                    七十九番
+                  </span>
+                  <p
+                    className="makeStyles-root-1195 makeStyles-root-1475 makeStyles-root-1240"
+                  >
+                    秋の田の かりほの庵の 苫をあらみ
+                     
+                    わが衣手は 露にぬれつつ
+                  </p>
+                  <span
+                    className="makeStyles-root-1195 makeStyles-root-1476 makeStyles-creator-1238"
+                  >
+                    天智天皇
+                  </span>
+                </div>
+              </div>
+            </a>
+          </li>
+          <li>
+            <a
+              href="/karutas/80/"
+              onClick={[Function]}
+            >
+              <div
+                className="makeStyles-clickable-1190 makeStyles-root-1234 makeStyles-material-1176"
+                onClick={[Function]}
+              >
+                <div
+                  className="makeStyles-textColumn-1236"
+                >
+                  <span
+                    className="makeStyles-root-1195 makeStyles-root-1477 "
+                  >
+                    八十番
+                  </span>
+                  <p
+                    className="makeStyles-root-1195 makeStyles-root-1478 makeStyles-root-1240"
+                  >
+                    秋の田の かりほの庵の 苫をあらみ
+                     
+                    わが衣手は 露にぬれつつ
+                  </p>
+                  <span
+                    className="makeStyles-root-1195 makeStyles-root-1479 makeStyles-creator-1238"
+                  >
+                    天智天皇
+                  </span>
+                </div>
+              </div>
+            </a>
+          </li>
+          <li>
+            <a
+              href="/karutas/81/"
+              onClick={[Function]}
+            >
+              <div
+                className="makeStyles-clickable-1190 makeStyles-root-1234 makeStyles-material-1176"
+                onClick={[Function]}
+              >
+                <div
+                  className="makeStyles-textColumn-1236"
+                >
+                  <span
+                    className="makeStyles-root-1195 makeStyles-root-1480 "
+                  >
+                    八十一番
+                  </span>
+                  <p
+                    className="makeStyles-root-1195 makeStyles-root-1481 makeStyles-root-1240"
+                  >
+                    秋の田の かりほの庵の 苫をあらみ
+                     
+                    わが衣手は 露にぬれつつ
+                  </p>
+                  <span
+                    className="makeStyles-root-1195 makeStyles-root-1482 makeStyles-creator-1238"
+                  >
+                    天智天皇
+                  </span>
+                </div>
+              </div>
+            </a>
+          </li>
+          <li>
+            <a
+              href="/karutas/82/"
+              onClick={[Function]}
+            >
+              <div
+                className="makeStyles-clickable-1190 makeStyles-root-1234 makeStyles-material-1176"
+                onClick={[Function]}
+              >
+                <div
+                  className="makeStyles-textColumn-1236"
+                >
+                  <span
+                    className="makeStyles-root-1195 makeStyles-root-1483 "
+                  >
+                    八十二番
+                  </span>
+                  <p
+                    className="makeStyles-root-1195 makeStyles-root-1484 makeStyles-root-1240"
+                  >
+                    秋の田の かりほの庵の 苫をあらみ
+                     
+                    わが衣手は 露にぬれつつ
+                  </p>
+                  <span
+                    className="makeStyles-root-1195 makeStyles-root-1485 makeStyles-creator-1238"
+                  >
+                    天智天皇
+                  </span>
+                </div>
+              </div>
+            </a>
+          </li>
+          <li>
+            <a
+              href="/karutas/83/"
+              onClick={[Function]}
+            >
+              <div
+                className="makeStyles-clickable-1190 makeStyles-root-1234 makeStyles-material-1176"
+                onClick={[Function]}
+              >
+                <div
+                  className="makeStyles-textColumn-1236"
+                >
+                  <span
+                    className="makeStyles-root-1195 makeStyles-root-1486 "
+                  >
+                    八十三番
+                  </span>
+                  <p
+                    className="makeStyles-root-1195 makeStyles-root-1487 makeStyles-root-1240"
+                  >
+                    秋の田の かりほの庵の 苫をあらみ
+                     
+                    わが衣手は 露にぬれつつ
+                  </p>
+                  <span
+                    className="makeStyles-root-1195 makeStyles-root-1488 makeStyles-creator-1238"
+                  >
+                    天智天皇
+                  </span>
+                </div>
+              </div>
+            </a>
+          </li>
+          <li>
+            <a
+              href="/karutas/84/"
+              onClick={[Function]}
+            >
+              <div
+                className="makeStyles-clickable-1190 makeStyles-root-1234 makeStyles-material-1176"
+                onClick={[Function]}
+              >
+                <div
+                  className="makeStyles-textColumn-1236"
+                >
+                  <span
+                    className="makeStyles-root-1195 makeStyles-root-1489 "
+                  >
+                    八十四番
+                  </span>
+                  <p
+                    className="makeStyles-root-1195 makeStyles-root-1490 makeStyles-root-1240"
+                  >
+                    秋の田の かりほの庵の 苫をあらみ
+                     
+                    わが衣手は 露にぬれつつ
+                  </p>
+                  <span
+                    className="makeStyles-root-1195 makeStyles-root-1491 makeStyles-creator-1238"
+                  >
+                    天智天皇
+                  </span>
+                </div>
+              </div>
+            </a>
+          </li>
+          <li>
+            <a
+              href="/karutas/85/"
+              onClick={[Function]}
+            >
+              <div
+                className="makeStyles-clickable-1190 makeStyles-root-1234 makeStyles-material-1176"
+                onClick={[Function]}
+              >
+                <div
+                  className="makeStyles-textColumn-1236"
+                >
+                  <span
+                    className="makeStyles-root-1195 makeStyles-root-1492 "
+                  >
+                    八十五番
+                  </span>
+                  <p
+                    className="makeStyles-root-1195 makeStyles-root-1493 makeStyles-root-1240"
+                  >
+                    秋の田の かりほの庵の 苫をあらみ
+                     
+                    わが衣手は 露にぬれつつ
+                  </p>
+                  <span
+                    className="makeStyles-root-1195 makeStyles-root-1494 makeStyles-creator-1238"
+                  >
+                    天智天皇
+                  </span>
+                </div>
+              </div>
+            </a>
+          </li>
+          <li>
+            <a
+              href="/karutas/86/"
+              onClick={[Function]}
+            >
+              <div
+                className="makeStyles-clickable-1190 makeStyles-root-1234 makeStyles-material-1176"
+                onClick={[Function]}
+              >
+                <div
+                  className="makeStyles-textColumn-1236"
+                >
+                  <span
+                    className="makeStyles-root-1195 makeStyles-root-1495 "
+                  >
+                    八十六番
+                  </span>
+                  <p
+                    className="makeStyles-root-1195 makeStyles-root-1496 makeStyles-root-1240"
+                  >
+                    秋の田の かりほの庵の 苫をあらみ
+                     
+                    わが衣手は 露にぬれつつ
+                  </p>
+                  <span
+                    className="makeStyles-root-1195 makeStyles-root-1497 makeStyles-creator-1238"
+                  >
+                    天智天皇
+                  </span>
+                </div>
+              </div>
+            </a>
+          </li>
+          <li>
+            <a
+              href="/karutas/87/"
+              onClick={[Function]}
+            >
+              <div
+                className="makeStyles-clickable-1190 makeStyles-root-1234 makeStyles-material-1176"
+                onClick={[Function]}
+              >
+                <div
+                  className="makeStyles-textColumn-1236"
+                >
+                  <span
+                    className="makeStyles-root-1195 makeStyles-root-1498 "
+                  >
+                    八十七番
+                  </span>
+                  <p
+                    className="makeStyles-root-1195 makeStyles-root-1499 makeStyles-root-1240"
+                  >
+                    秋の田の かりほの庵の 苫をあらみ
+                     
+                    わが衣手は 露にぬれつつ
+                  </p>
+                  <span
+                    className="makeStyles-root-1195 makeStyles-root-1500 makeStyles-creator-1238"
+                  >
+                    天智天皇
+                  </span>
+                </div>
+              </div>
+            </a>
+          </li>
+          <li>
+            <a
+              href="/karutas/88/"
+              onClick={[Function]}
+            >
+              <div
+                className="makeStyles-clickable-1190 makeStyles-root-1234 makeStyles-material-1176"
+                onClick={[Function]}
+              >
+                <div
+                  className="makeStyles-textColumn-1236"
+                >
+                  <span
+                    className="makeStyles-root-1195 makeStyles-root-1501 "
+                  >
+                    八十八番
+                  </span>
+                  <p
+                    className="makeStyles-root-1195 makeStyles-root-1502 makeStyles-root-1240"
+                  >
+                    秋の田の かりほの庵の 苫をあらみ
+                     
+                    わが衣手は 露にぬれつつ
+                  </p>
+                  <span
+                    className="makeStyles-root-1195 makeStyles-root-1503 makeStyles-creator-1238"
+                  >
+                    天智天皇
+                  </span>
+                </div>
+              </div>
+            </a>
+          </li>
+          <li>
+            <a
+              href="/karutas/89/"
+              onClick={[Function]}
+            >
+              <div
+                className="makeStyles-clickable-1190 makeStyles-root-1234 makeStyles-material-1176"
+                onClick={[Function]}
+              >
+                <div
+                  className="makeStyles-textColumn-1236"
+                >
+                  <span
+                    className="makeStyles-root-1195 makeStyles-root-1504 "
+                  >
+                    八十九番
+                  </span>
+                  <p
+                    className="makeStyles-root-1195 makeStyles-root-1505 makeStyles-root-1240"
+                  >
+                    秋の田の かりほの庵の 苫をあらみ
+                     
+                    わが衣手は 露にぬれつつ
+                  </p>
+                  <span
+                    className="makeStyles-root-1195 makeStyles-root-1506 makeStyles-creator-1238"
+                  >
+                    天智天皇
+                  </span>
+                </div>
+              </div>
+            </a>
+          </li>
+          <li>
+            <a
+              href="/karutas/90/"
+              onClick={[Function]}
+            >
+              <div
+                className="makeStyles-clickable-1190 makeStyles-root-1234 makeStyles-material-1176"
+                onClick={[Function]}
+              >
+                <div
+                  className="makeStyles-textColumn-1236"
+                >
+                  <span
+                    className="makeStyles-root-1195 makeStyles-root-1507 "
+                  >
+                    九十番
+                  </span>
+                  <p
+                    className="makeStyles-root-1195 makeStyles-root-1508 makeStyles-root-1240"
+                  >
+                    秋の田の かりほの庵の 苫をあらみ
+                     
+                    わが衣手は 露にぬれつつ
+                  </p>
+                  <span
+                    className="makeStyles-root-1195 makeStyles-root-1509 makeStyles-creator-1238"
+                  >
+                    天智天皇
+                  </span>
+                </div>
+              </div>
+            </a>
+          </li>
+          <li>
+            <a
+              href="/karutas/91/"
+              onClick={[Function]}
+            >
+              <div
+                className="makeStyles-clickable-1190 makeStyles-root-1234 makeStyles-material-1176"
+                onClick={[Function]}
+              >
+                <div
+                  className="makeStyles-textColumn-1236"
+                >
+                  <span
+                    className="makeStyles-root-1195 makeStyles-root-1510 "
+                  >
+                    九十一番
+                  </span>
+                  <p
+                    className="makeStyles-root-1195 makeStyles-root-1511 makeStyles-root-1240"
+                  >
+                    秋の田の かりほの庵の 苫をあらみ
+                     
+                    わが衣手は 露にぬれつつ
+                  </p>
+                  <span
+                    className="makeStyles-root-1195 makeStyles-root-1512 makeStyles-creator-1238"
+                  >
+                    天智天皇
+                  </span>
+                </div>
+              </div>
+            </a>
+          </li>
+          <li>
+            <a
+              href="/karutas/92/"
+              onClick={[Function]}
+            >
+              <div
+                className="makeStyles-clickable-1190 makeStyles-root-1234 makeStyles-material-1176"
+                onClick={[Function]}
+              >
+                <div
+                  className="makeStyles-textColumn-1236"
+                >
+                  <span
+                    className="makeStyles-root-1195 makeStyles-root-1513 "
+                  >
+                    九十二番
+                  </span>
+                  <p
+                    className="makeStyles-root-1195 makeStyles-root-1514 makeStyles-root-1240"
+                  >
+                    秋の田の かりほの庵の 苫をあらみ
+                     
+                    わが衣手は 露にぬれつつ
+                  </p>
+                  <span
+                    className="makeStyles-root-1195 makeStyles-root-1515 makeStyles-creator-1238"
+                  >
+                    天智天皇
+                  </span>
+                </div>
+              </div>
+            </a>
+          </li>
+          <li>
+            <a
+              href="/karutas/93/"
+              onClick={[Function]}
+            >
+              <div
+                className="makeStyles-clickable-1190 makeStyles-root-1234 makeStyles-material-1176"
+                onClick={[Function]}
+              >
+                <div
+                  className="makeStyles-textColumn-1236"
+                >
+                  <span
+                    className="makeStyles-root-1195 makeStyles-root-1516 "
+                  >
+                    九十三番
+                  </span>
+                  <p
+                    className="makeStyles-root-1195 makeStyles-root-1517 makeStyles-root-1240"
+                  >
+                    秋の田の かりほの庵の 苫をあらみ
+                     
+                    わが衣手は 露にぬれつつ
+                  </p>
+                  <span
+                    className="makeStyles-root-1195 makeStyles-root-1518 makeStyles-creator-1238"
+                  >
+                    天智天皇
+                  </span>
+                </div>
+              </div>
+            </a>
+          </li>
+          <li>
+            <a
+              href="/karutas/94/"
+              onClick={[Function]}
+            >
+              <div
+                className="makeStyles-clickable-1190 makeStyles-root-1234 makeStyles-material-1176"
+                onClick={[Function]}
+              >
+                <div
+                  className="makeStyles-textColumn-1236"
+                >
+                  <span
+                    className="makeStyles-root-1195 makeStyles-root-1519 "
+                  >
+                    九十四番
+                  </span>
+                  <p
+                    className="makeStyles-root-1195 makeStyles-root-1520 makeStyles-root-1240"
+                  >
+                    秋の田の かりほの庵の 苫をあらみ
+                     
+                    わが衣手は 露にぬれつつ
+                  </p>
+                  <span
+                    className="makeStyles-root-1195 makeStyles-root-1521 makeStyles-creator-1238"
+                  >
+                    天智天皇
+                  </span>
+                </div>
+              </div>
+            </a>
+          </li>
+          <li>
+            <a
+              href="/karutas/95/"
+              onClick={[Function]}
+            >
+              <div
+                className="makeStyles-clickable-1190 makeStyles-root-1234 makeStyles-material-1176"
+                onClick={[Function]}
+              >
+                <div
+                  className="makeStyles-textColumn-1236"
+                >
+                  <span
+                    className="makeStyles-root-1195 makeStyles-root-1522 "
+                  >
+                    九十五番
+                  </span>
+                  <p
+                    className="makeStyles-root-1195 makeStyles-root-1523 makeStyles-root-1240"
+                  >
+                    秋の田の かりほの庵の 苫をあらみ
+                     
+                    わが衣手は 露にぬれつつ
+                  </p>
+                  <span
+                    className="makeStyles-root-1195 makeStyles-root-1524 makeStyles-creator-1238"
+                  >
+                    天智天皇
+                  </span>
+                </div>
+              </div>
+            </a>
+          </li>
+          <li>
+            <a
+              href="/karutas/96/"
+              onClick={[Function]}
+            >
+              <div
+                className="makeStyles-clickable-1190 makeStyles-root-1234 makeStyles-material-1176"
+                onClick={[Function]}
+              >
+                <div
+                  className="makeStyles-textColumn-1236"
+                >
+                  <span
+                    className="makeStyles-root-1195 makeStyles-root-1525 "
+                  >
+                    九十六番
+                  </span>
+                  <p
+                    className="makeStyles-root-1195 makeStyles-root-1526 makeStyles-root-1240"
+                  >
+                    秋の田の かりほの庵の 苫をあらみ
+                     
+                    わが衣手は 露にぬれつつ
+                  </p>
+                  <span
+                    className="makeStyles-root-1195 makeStyles-root-1527 makeStyles-creator-1238"
+                  >
+                    天智天皇
+                  </span>
+                </div>
+              </div>
+            </a>
+          </li>
+          <li>
+            <a
+              href="/karutas/97/"
+              onClick={[Function]}
+            >
+              <div
+                className="makeStyles-clickable-1190 makeStyles-root-1234 makeStyles-material-1176"
+                onClick={[Function]}
+              >
+                <div
+                  className="makeStyles-textColumn-1236"
+                >
+                  <span
+                    className="makeStyles-root-1195 makeStyles-root-1528 "
+                  >
+                    九十七番
+                  </span>
+                  <p
+                    className="makeStyles-root-1195 makeStyles-root-1529 makeStyles-root-1240"
+                  >
+                    秋の田の かりほの庵の 苫をあらみ
+                     
+                    わが衣手は 露にぬれつつ
+                  </p>
+                  <span
+                    className="makeStyles-root-1195 makeStyles-root-1530 makeStyles-creator-1238"
+                  >
+                    天智天皇
+                  </span>
+                </div>
+              </div>
+            </a>
+          </li>
+          <li>
+            <a
+              href="/karutas/98/"
+              onClick={[Function]}
+            >
+              <div
+                className="makeStyles-clickable-1190 makeStyles-root-1234 makeStyles-material-1176"
+                onClick={[Function]}
+              >
+                <div
+                  className="makeStyles-textColumn-1236"
+                >
+                  <span
+                    className="makeStyles-root-1195 makeStyles-root-1531 "
+                  >
+                    九十八番
+                  </span>
+                  <p
+                    className="makeStyles-root-1195 makeStyles-root-1532 makeStyles-root-1240"
+                  >
+                    秋の田の かりほの庵の 苫をあらみ
+                     
+                    わが衣手は 露にぬれつつ
+                  </p>
+                  <span
+                    className="makeStyles-root-1195 makeStyles-root-1533 makeStyles-creator-1238"
+                  >
+                    天智天皇
+                  </span>
+                </div>
+              </div>
+            </a>
+          </li>
+          <li>
+            <a
+              href="/karutas/99/"
+              onClick={[Function]}
+            >
+              <div
+                className="makeStyles-clickable-1190 makeStyles-root-1234 makeStyles-material-1176"
+                onClick={[Function]}
+              >
+                <div
+                  className="makeStyles-textColumn-1236"
+                >
+                  <span
+                    className="makeStyles-root-1195 makeStyles-root-1534 "
+                  >
+                    九十九番
+                  </span>
+                  <p
+                    className="makeStyles-root-1195 makeStyles-root-1535 makeStyles-root-1240"
+                  >
+                    秋の田の かりほの庵の 苫をあらみ
+                     
+                    わが衣手は 露にぬれつつ
+                  </p>
+                  <span
+                    className="makeStyles-root-1195 makeStyles-root-1536 makeStyles-creator-1238"
+                  >
+                    天智天皇
+                  </span>
+                </div>
+              </div>
+            </a>
+          </li>
+          <li>
+            <a
+              href="/karutas/100/"
+              onClick={[Function]}
+            >
+              <div
+                className="makeStyles-clickable-1190 makeStyles-root-1234 makeStyles-material-1176"
+                onClick={[Function]}
+              >
+                <div
+                  className="makeStyles-textColumn-1236"
+                >
+                  <span
+                    className="makeStyles-root-1195 makeStyles-root-1537 "
+                  >
+                    百番
+                  </span>
+                  <p
+                    className="makeStyles-root-1195 makeStyles-root-1538 makeStyles-root-1240"
+                  >
+                    秋の田の かりほの庵の 苫をあらみ
+                     
+                    わが衣手は 露にぬれつつ
+                  </p>
+                  <span
+                    className="makeStyles-root-1195 makeStyles-root-1539 makeStyles-creator-1238"
+                  >
+                    天智天皇
+                  </span>
+                </div>
+              </div>
+            </a>
+          </li>
+        </ul>
+      </section>
+    </div>
+  </main>,
+  <nav
+    className="makeStyles-root-1540 makeStyles-nav-1182"
+  >
+    <span
+      className="makeStyles-itemWrapper-1541"
+    >
+      <div
+        className="makeStyles-rippleContainer-1208"
+        onMouseDown={[Function]}
+        onMouseUp={[Function]}
+        style={
+          Object {
+            "height": "100%",
+            "width": "100%",
+          }
+        }
+      >
+        <a
+          href="/training/"
+          onClick={[Function]}
+          style={Object {}}
+        >
+          <span
+            className="makeStyles-root-1544 makeStyles-root-1542 makeStyles-root-1543"
+          >
+            <svg
+              aria-hidden={true}
+              className="MuiSvgIcon-root"
+              focusable="false"
+              style={
+                Object {
+                  "fontSize": "2.4rem",
+                }
+              }
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M3 17.25V21h3.75L17.81 9.94l-3.75-3.75L3 17.25zM20.71 7.04c.39-.39.39-1.02 0-1.41l-2.34-2.34a.9959.9959 0 00-1.41 0l-1.83 1.83 3.75 3.75 1.83-1.83z"
+              />
+            </svg>
+          </span>
+        </a>
+      </div>
+    </span>
+    <span
+      className="makeStyles-itemWrapper-1541"
+    >
+      <div
+        className="makeStyles-rippleContainer-1208"
+        onMouseDown={[Function]}
+        onMouseUp={[Function]}
+        style={
+          Object {
+            "height": "100%",
+            "width": "100%",
+          }
+        }
+      >
+        <a
+          href="/exam/"
+          onClick={[Function]}
+          style={Object {}}
+        >
+          <span
+            className="makeStyles-root-1544 makeStyles-root-1542 makeStyles-root-1546"
+          >
+            <svg
+              aria-hidden={true}
+              className="MuiSvgIcon-root"
+              focusable="false"
+              style={
+                Object {
+                  "fontSize": "2.4rem",
+                }
+              }
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M22 10l-6-6H4c-1.1 0-2 .9-2 2v12.01c0 1.1.9 1.99 2 1.99l16-.01c1.1 0 2-.89 2-1.99v-8zm-7-4.5l5.5 5.5H15V5.5z"
+              />
+            </svg>
+          </span>
+        </a>
+      </div>
+    </span>
+    <span
+      className="makeStyles-itemWrapper-1541"
+    >
+      <div
+        className="makeStyles-rippleContainer-1208"
+        onMouseDown={[Function]}
+        onMouseUp={[Function]}
+        style={
+          Object {
+            "height": "100%",
+            "width": "100%",
+          }
+        }
+      >
+        <a
+          href="/karutas/"
+          onClick={[Function]}
+          style={Object {}}
+        >
+          <span
+            className="makeStyles-root-1544 makeStyles-root-1542 makeStyles-root-1547"
+          >
+            <svg
+              aria-hidden={true}
+              className="MuiSvgIcon-root"
+              focusable="false"
+              style={
+                Object {
+                  "fontSize": "2.4rem",
+                }
+              }
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M4 6H2v14c0 1.1.9 2 2 2h14v-2H4V6zm16-4H8c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm-1 9H9V9h10v2zm-4 4H9v-2h6v2zm4-8H9V5h10v2z"
+              />
+            </svg>
+          </span>
+        </a>
+      </div>
+    </span>
+    <span
+      className="makeStyles-itemWrapper-1541"
+    >
+      <div
+        className="makeStyles-rippleContainer-1208"
+        onMouseDown={[Function]}
+        onMouseUp={[Function]}
+        style={
+          Object {
+            "height": "100%",
+            "width": "100%",
+          }
+        }
+      >
+        <a
+          href="/about/"
+          onClick={[Function]}
+          style={Object {}}
+        >
+          <span
+            className="makeStyles-root-1544 makeStyles-root-1542 makeStyles-root-1548"
+          >
+            <svg
+              aria-hidden={true}
+              className="MuiSvgIcon-root"
+              focusable="false"
+              style={
+                Object {
+                  "fontSize": "2.4rem",
+                }
+              }
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M19.14 12.94c.04-.3.06-.61.06-.94 0-.32-.02-.64-.07-.94l2.03-1.58c.18-.14.23-.41.12-.61l-1.92-3.32c-.12-.22-.37-.29-.59-.22l-2.39.96c-.5-.38-1.03-.7-1.62-.94l-.36-2.54c-.04-.24-.24-.41-.48-.41h-3.84c-.24 0-.43.17-.47.41l-.36 2.54c-.59.24-1.13.57-1.62.94l-2.39-.96c-.22-.08-.47 0-.59.22L2.74 8.87c-.12.21-.08.47.12.61l2.03 1.58c-.05.3-.09.63-.09.94s.02.64.07.94l-2.03 1.58c-.18.14-.23.41-.12.61l1.92 3.32c.12.22.37.29.59.22l2.39-.96c.5.38 1.03.7 1.62.94l.36 2.54c.05.24.24.41.48.41h3.84c.24 0 .44-.17.47-.41l.36-2.54c.59-.24 1.13-.56 1.62-.94l2.39.96c.22.08.47 0 .59-.22l1.92-3.32c.12-.22.07-.47-.12-.61l-2.01-1.58zM12 15.6c-1.98 0-3.6-1.62-3.6-3.6s1.62-3.6 3.6-3.6 3.6 1.62 3.6 3.6-1.62 3.6-3.6 3.6z"
+              />
+            </svg>
+          </span>
+        </a>
+      </div>
+    </span>
+  </nav>,
+]
+`;

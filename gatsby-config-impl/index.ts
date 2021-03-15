@@ -16,8 +16,9 @@ export const plugins: GatsbyPlugin[] = [
       path: `${__dirname}/../src/presentation/images`,
     },
   },
-  `gatsby-transformer-sharp`,
+  `gatsby-plugin-image`,
   `gatsby-plugin-sharp`,
+  `gatsby-transformer-sharp`,
   {
     resolve: `gatsby-plugin-manifest`,
     options: {
