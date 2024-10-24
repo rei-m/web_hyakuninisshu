@@ -15,6 +15,7 @@ export type Props = {
   menuType?: MenuType;
   isDisplayNav?: boolean;
   content: React.ReactElement;
+  isDisplayAd?: boolean;
   onClickBack?: () => void;
   onClickSearch?: () => void;
 };
@@ -39,6 +40,7 @@ const SingleContentPageTemplate = ({
   pageTitle,
   menuType,
   isDisplayNav = true,
+  isDisplayAd = true,
   onClickBack,
   onClickSearch,
 }: Props) => {
@@ -56,7 +58,7 @@ const SingleContentPageTemplate = ({
         <Heading level={2} className={classes.sectionTitle}>
           {pageTitle}
         </Heading>
-        <Ad type={`responsive`} />
+        {isDisplayAd && <Ad type={`responsive`} />}
         {content}
         {/* <Ad type={`responsive`} /> */}
       </section>

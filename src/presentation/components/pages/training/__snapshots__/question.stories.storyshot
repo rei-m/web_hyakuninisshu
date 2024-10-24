@@ -3,15 +3,15 @@
 exports[`Storyshots pages/training/question default 1`] = `
 Array [
   <header
-    className="makeStyles-root-1992 makeStyles-root-1995 makeStyles-header-1989"
+    className="makeStyles-root-1989 makeStyles-root-1992 makeStyles-header-1986"
   >
     <div
-      className="makeStyles-rippleContainer-1996"
+      className="makeStyles-rippleContainer-1993"
       onMouseDown={[Function]}
       onMouseUp={[Function]}
     >
       <span
-        className="makeStyles-root-1999 makeStyles-clickable-2000 makeStyles-root-1998 makeStyles-headerItem-1994"
+        className="makeStyles-root-1996 makeStyles-clickable-1997 makeStyles-root-1995 makeStyles-headerItem-1991"
         onClick={[Function]}
       >
         <svg
@@ -32,16 +32,16 @@ Array [
       </span>
     </div>
     <h1
-      className="makeStyles-root-2001 makeStyles-root-2002 makeStyles-title-1993"
+      className="makeStyles-root-1998 makeStyles-root-1999 makeStyles-title-1990"
     >
       百人一首 - 練習 -
     </h1>
   </header>,
   <main
-    className="makeStyles-root-1988 makeStyles-root-1991"
+    className="makeStyles-root-1985 makeStyles-root-1988"
   >
     <div
-      className="makeStyles-content-1987"
+      className="makeStyles-content-1984"
       style={
         Object {
           "backgroundImage": "url(test-file-stub)",
@@ -49,27 +49,27 @@ Array [
       }
     >
       <div
-        className="makeStyles-root-2004"
+        className="makeStyles-root-2001"
       >
         <div
-          className="makeStyles-yomiFudaContainer-2005"
+          className="makeStyles-yomiFudaContainer-2002"
         >
           <span
-            className="makeStyles-root-2013 makeStyles-root-2014 makeStyles-position-2009"
+            className="makeStyles-root-2010 makeStyles-root-2011 makeStyles-position-2006"
           >
             1 / 100
           </span>
           <div
-            className="makeStyles-root-2015 makeStyles-root-2020 makeStyles-yomiFuda-2007"
+            className="makeStyles-root-2012 makeStyles-root-2017 makeStyles-yomiFuda-2004"
           >
             <div
-              className="makeStyles-inner-2016"
+              className="makeStyles-inner-2013"
             >
               <span
-                className="makeStyles-root-2013 makeStyles-root-2025 makeStyles-root-2023 makeStyles-root-2024 makeStyles-first-2017"
+                className="makeStyles-root-2010 makeStyles-root-2022 makeStyles-root-2020 makeStyles-root-2021 makeStyles-first-2014"
               >
                 <span
-                  className="makeStyles-root-2026"
+                  className="makeStyles-root-2023"
                   onAnimationEnd={[Function]}
                   style={
                     Object {
@@ -108,7 +108,7 @@ Array [
                 </span>
               </span>
               <span
-                className="makeStyles-root-2013 makeStyles-root-2029 makeStyles-root-2023 makeStyles-root-2028 makeStyles-second-2018 makeStyles-second-2021"
+                className="makeStyles-root-2010 makeStyles-root-2026 makeStyles-root-2020 makeStyles-root-2025 makeStyles-second-2015 makeStyles-second-2018"
               >
                 <span
                   style={
@@ -166,7 +166,7 @@ Array [
                 </span>
               </span>
               <span
-                className="makeStyles-root-2013 makeStyles-root-2031 makeStyles-root-2023 makeStyles-root-2030 makeStyles-third-2019 makeStyles-third-2022"
+                className="makeStyles-root-2010 makeStyles-root-2028 makeStyles-root-2020 makeStyles-root-2027 makeStyles-third-2016 makeStyles-third-2019"
               >
                 <span
                   style={
@@ -218,27 +218,27 @@ Array [
           </div>
         </div>
         <div
-          className="makeStyles-toriFudaContainer-2006"
+          className="makeStyles-toriFudaContainer-2003"
         >
           <div
-            className="makeStyles-rippleContainer-1996"
+            className="makeStyles-rippleContainer-1993"
             onMouseDown={[Function]}
             onMouseUp={[Function]}
           >
             <div
-              className="makeStyles-clickable-2012 makeStyles-root-2032 makeStyles-root-2038 makeStyles-toriFuda-2008"
+              className="makeStyles-clickable-2009 makeStyles-root-2029 makeStyles-root-2035 makeStyles-toriFuda-2005"
               onClick={[Function]}
             >
               <div
-                className="makeStyles-inner-2033"
+                className="makeStyles-inner-2030"
               >
                 <span
-                  className="makeStyles-root-2013 makeStyles-root-2041 makeStyles-root-2023 makeStyles-root-2040 makeStyles-fourh-2034"
+                  className="makeStyles-root-2010 makeStyles-root-2038 makeStyles-root-2020 makeStyles-root-2037 makeStyles-fourh-2031"
                 >
                   わがころもでは
                 </span>
                 <span
-                  className="makeStyles-root-2013 makeStyles-root-2043 makeStyles-root-2023 makeStyles-root-2042 makeStyles-fifth-2035 makeStyles-fifth-2037"
+                  className="makeStyles-root-2010 makeStyles-root-2040 makeStyles-root-2020 makeStyles-root-2039 makeStyles-fifth-2032 makeStyles-fifth-2034"
                 >
                   きりにぬれつつ
                 </span>
@@ -246,24 +246,24 @@ Array [
             </div>
           </div>
           <div
-            className="makeStyles-rippleContainer-1996"
+            className="makeStyles-rippleContainer-1993"
             onMouseDown={[Function]}
             onMouseUp={[Function]}
           >
             <div
-              className="makeStyles-clickable-2012 makeStyles-root-2032 makeStyles-root-2046 makeStyles-toriFuda-2008"
+              className="makeStyles-clickable-2009 makeStyles-root-2029 makeStyles-root-2043 makeStyles-toriFuda-2005"
               onClick={[Function]}
             >
               <div
-                className="makeStyles-inner-2033"
+                className="makeStyles-inner-2030"
               >
                 <span
-                  className="makeStyles-root-2013 makeStyles-root-2049 makeStyles-root-2023 makeStyles-root-2048 makeStyles-fourh-2034"
+                  className="makeStyles-root-2010 makeStyles-root-2046 makeStyles-root-2020 makeStyles-root-2045 makeStyles-fourh-2031"
                 >
                   ころもほすてふ
                 </span>
                 <span
-                  className="makeStyles-root-2013 makeStyles-root-2051 makeStyles-root-2023 makeStyles-root-2050 makeStyles-fifth-2035 makeStyles-fifth-2045"
+                  className="makeStyles-root-2010 makeStyles-root-2048 makeStyles-root-2020 makeStyles-root-2047 makeStyles-fifth-2032 makeStyles-fifth-2042"
                 >
                   あまのかぐやま
                 </span>
@@ -271,24 +271,24 @@ Array [
             </div>
           </div>
           <div
-            className="makeStyles-rippleContainer-1996"
+            className="makeStyles-rippleContainer-1993"
             onMouseDown={[Function]}
             onMouseUp={[Function]}
           >
             <div
-              className="makeStyles-clickable-2012 makeStyles-root-2032 makeStyles-root-2054 makeStyles-toriFuda-2008"
+              className="makeStyles-clickable-2009 makeStyles-root-2029 makeStyles-root-2051 makeStyles-toriFuda-2005"
               onClick={[Function]}
             >
               <div
-                className="makeStyles-inner-2033"
+                className="makeStyles-inner-2030"
               >
                 <span
-                  className="makeStyles-root-2013 makeStyles-root-2057 makeStyles-root-2023 makeStyles-root-2056 makeStyles-fourh-2034"
+                  className="makeStyles-root-2010 makeStyles-root-2054 makeStyles-root-2020 makeStyles-root-2053 makeStyles-fourh-2031"
                 >
                   ながながしよを
                 </span>
                 <span
-                  className="makeStyles-root-2013 makeStyles-root-2059 makeStyles-root-2023 makeStyles-root-2058 makeStyles-fifth-2035 makeStyles-fifth-2053"
+                  className="makeStyles-root-2010 makeStyles-root-2056 makeStyles-root-2020 makeStyles-root-2055 makeStyles-fifth-2032 makeStyles-fifth-2050"
                 >
                   ひとりかもねむ
                 </span>
@@ -296,24 +296,24 @@ Array [
             </div>
           </div>
           <div
-            className="makeStyles-rippleContainer-1996"
+            className="makeStyles-rippleContainer-1993"
             onMouseDown={[Function]}
             onMouseUp={[Function]}
           >
             <div
-              className="makeStyles-clickable-2012 makeStyles-root-2032 makeStyles-root-2062 makeStyles-toriFuda-2008"
+              className="makeStyles-clickable-2009 makeStyles-root-2029 makeStyles-root-2059 makeStyles-toriFuda-2005"
               onClick={[Function]}
             >
               <div
-                className="makeStyles-inner-2033"
+                className="makeStyles-inner-2030"
               >
                 <span
-                  className="makeStyles-root-2013 makeStyles-root-2065 makeStyles-root-2023 makeStyles-root-2064 makeStyles-fourh-2034"
+                  className="makeStyles-root-2010 makeStyles-root-2062 makeStyles-root-2020 makeStyles-root-2061 makeStyles-fourh-2031"
                 >
                   ふじのたかねに
                 </span>
                 <span
-                  className="makeStyles-root-2013 makeStyles-root-2067 makeStyles-root-2023 makeStyles-root-2066 makeStyles-fifth-2035 makeStyles-fifth-2061"
+                  className="makeStyles-root-2010 makeStyles-root-2064 makeStyles-root-2020 makeStyles-root-2063 makeStyles-fifth-2032 makeStyles-fifth-2058"
                 >
                   ゆきはふりつつ
                 </span>

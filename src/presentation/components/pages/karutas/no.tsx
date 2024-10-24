@@ -30,6 +30,7 @@ const KarutasNoPage = ({ karuta }: Props) => {
       keywords={[`百人一首`, karutaNoString, karuta.creator, `小倉百人一首`, `歌`, `意味`, `歌番号`, `暗記`, `練習`]}
       pageTitle={karutaNoString}
       menuType={'material'}
+      isDisplayAd={false}
       onClickBack={onClickBackHandler}
       content={
         <CenteredFrame tag={`div`} className={classes.container}>
