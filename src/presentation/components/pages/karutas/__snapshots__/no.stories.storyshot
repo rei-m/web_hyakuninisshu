@@ -49,37 +49,28 @@ Array [
         一番
       </h2>
       <div
-        className="makeStyles-root-1910"
-      >
-        <div
-          className="makeStyles-dummyResponsive-1912"
-        >
-          この欄は広告枠です
-        </div>
-      </div>
-      <div
         className="makeStyles-root-1905 makeStyles-container-1891"
       >
         <article
-          className="makeStyles-root-1914"
+          className="makeStyles-root-1910"
         >
           <h3
-            className="makeStyles-root-1907 makeStyles-root-1920 "
+            className="makeStyles-root-1907 makeStyles-root-1916 "
           >
             <span
-              className="makeStyles-root-1921 makeStyles-root-1922 "
+              className="makeStyles-root-1917 makeStyles-root-1918 "
             >
               一番
             </span>
              / 
             <span
-              className="makeStyles-root-1921 makeStyles-root-1923 "
+              className="makeStyles-root-1917 makeStyles-root-1919 "
             >
               天智天皇
             </span>
           </h3>
           <div
-            className="gatsby-image-wrapper gatsby-image-wrapper-constrained makeStyles-karutaImage-1916"
+            className="gatsby-image-wrapper gatsby-image-wrapper-constrained makeStyles-karutaImage-1912"
             data-gatsby-image-wrapper=""
             style={
               Object {
@@ -189,25 +180,25 @@ Array [
             />
           </div>
           <div
-            className="makeStyles-contentContainer-1917"
+            className="makeStyles-contentContainer-1913"
           >
             <h4
-              className="makeStyles-root-1907 makeStyles-root-1924 makeStyles-subTitle-1915"
+              className="makeStyles-root-1907 makeStyles-root-1921 makeStyles-subTitle-1911"
             >
               原文
             </h4>
             <p
-              className="makeStyles-root-1921 makeStyles-root-1926 makeStyles-root-1925"
+              className="makeStyles-root-1917 makeStyles-root-1923 makeStyles-root-1922"
             >
               秋の田の かりほの庵の 苫をあらみ
               <br />
               わが衣手は 露にぬれつつ
             </p>
             <p
-              className="makeStyles-root-1921 makeStyles-root-1929 makeStyles-root-1927"
+              className="makeStyles-root-1917 makeStyles-root-1926 makeStyles-root-1924"
             >
               <span
-                className="makeStyles-kimariji-1928"
+                className="makeStyles-kimariji-1925"
               >
                 あ
               </span>
@@ -217,15 +208,15 @@ Array [
             </p>
           </div>
           <div
-            className="makeStyles-contentContainer-1917"
+            className="makeStyles-contentContainer-1913"
           >
             <h4
-              className="makeStyles-root-1907 makeStyles-root-1930 makeStyles-subTitle-1915"
+              className="makeStyles-root-1907 makeStyles-root-1927 makeStyles-subTitle-1911"
             >
               訳
             </h4>
             <p
-              className="makeStyles-root-1921 makeStyles-root-1931 makeStyles-translation-1918"
+              className="makeStyles-root-1917 makeStyles-root-1928 makeStyles-translation-1914"
             >
               秋の田の側につくった仮小屋に泊まってみると、屋根をふいた苫の目があらいので、その隙間から忍びこむ冷たい夜露が、私の着物の袖をすっかりと濡らしてしまっているなぁ。
             </p>
@@ -235,10 +226,10 @@ Array [
     </section>
   </main>,
   <nav
-    className="makeStyles-root-1932 makeStyles-nav-1896"
+    className="makeStyles-root-1929 makeStyles-nav-1896"
   >
     <span
-      className="makeStyles-itemWrapper-1933"
+      className="makeStyles-itemWrapper-1930"
     >
       <div
         className="makeStyles-rippleContainer-1902"
@@ -257,7 +248,7 @@ Array [
           style={Object {}}
         >
           <span
-            className="makeStyles-root-1905 makeStyles-root-1934 makeStyles-root-1935"
+            className="makeStyles-root-1905 makeStyles-root-1931 makeStyles-root-1932"
           >
             <svg
               aria-hidden={true}
@@ -279,7 +270,7 @@ Array [
       </div>
     </span>
     <span
-      className="makeStyles-itemWrapper-1933"
+      className="makeStyles-itemWrapper-1930"
     >
       <div
         className="makeStyles-rippleContainer-1902"
@@ -298,7 +289,7 @@ Array [
           style={Object {}}
         >
           <span
-            className="makeStyles-root-1905 makeStyles-root-1934 makeStyles-root-1936"
+            className="makeStyles-root-1905 makeStyles-root-1931 makeStyles-root-1933"
           >
             <svg
               aria-hidden={true}
@@ -320,7 +311,7 @@ Array [
       </div>
     </span>
     <span
-      className="makeStyles-itemWrapper-1933"
+      className="makeStyles-itemWrapper-1930"
     >
       <div
         className="makeStyles-rippleContainer-1902"
@@ -339,7 +330,7 @@ Array [
           style={Object {}}
         >
           <span
-            className="makeStyles-root-1905 makeStyles-root-1934 makeStyles-root-1937"
+            className="makeStyles-root-1905 makeStyles-root-1931 makeStyles-root-1934"
           >
             <svg
               aria-hidden={true}
@@ -361,7 +352,7 @@ Array [
       </div>
     </span>
     <span
-      className="makeStyles-itemWrapper-1933"
+      className="makeStyles-itemWrapper-1930"
     >
       <div
         className="makeStyles-rippleContainer-1902"
@@ -380,7 +371,7 @@ Array [
           style={Object {}}
         >
           <span
-            className="makeStyles-root-1905 makeStyles-root-1934 makeStyles-root-1938"
+            className="makeStyles-root-1905 makeStyles-root-1931 makeStyles-root-1935"
           >
             <svg
               aria-hidden={true}

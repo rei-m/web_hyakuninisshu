@@ -3,15 +3,15 @@
 exports[`Storyshots pages/training/result default 1`] = `
 Array [
   <header
-    className="makeStyles-root-2074 makeStyles-root-2077 makeStyles-header-2071"
+    className="makeStyles-root-2071 makeStyles-root-2074 makeStyles-header-2068"
   >
     <div
-      className="makeStyles-rippleContainer-2078"
+      className="makeStyles-rippleContainer-2075"
       onMouseDown={[Function]}
       onMouseUp={[Function]}
     >
       <span
-        className="makeStyles-root-2081 makeStyles-clickable-2082 makeStyles-root-2080 makeStyles-headerItem-2076"
+        className="makeStyles-root-2078 makeStyles-clickable-2079 makeStyles-root-2077 makeStyles-headerItem-2073"
         onClick={[Function]}
       >
         <svg
@@ -32,16 +32,16 @@ Array [
       </span>
     </div>
     <h1
-      className="makeStyles-root-2083 makeStyles-root-2084 makeStyles-title-2075"
+      className="makeStyles-root-2080 makeStyles-root-2081 makeStyles-title-2072"
     >
       百人一首 - 練習結果 -
     </h1>
   </header>,
   <main
-    className="makeStyles-root-2070 makeStyles-root-2073"
+    className="makeStyles-root-2067 makeStyles-root-2070"
   >
     <div
-      className="makeStyles-content-2069"
+      className="makeStyles-content-2066"
       style={
         Object {
           "backgroundImage": "url(test-file-stub)",
@@ -49,59 +49,59 @@ Array [
       }
     >
       <div
-        className="makeStyles-root-2085"
+        className="makeStyles-root-2082"
       >
         <div
-          className="makeStyles-dummyResponsive-2087"
+          className="makeStyles-dummyResponsive-2084"
         >
           この欄は広告枠です
         </div>
       </div>
       <div
-        className="makeStyles-root-2089"
+        className="makeStyles-root-2086"
       >
         <div
-          className="makeStyles-summaryContainer-2090 makeStyles-summaryCorrectCount-2091"
+          className="makeStyles-summaryContainer-2087 makeStyles-summaryCorrectCount-2088"
         >
           <div
-            className="makeStyles-root-2100 makeStyles-root-2101 makeStyles-summaryLabel-2093"
+            className="makeStyles-root-2097 makeStyles-root-2098 makeStyles-summaryLabel-2090"
           >
             正解数
           </div>
           <span
-            className="makeStyles-root-2100 makeStyles-root-2102 "
+            className="makeStyles-root-2097 makeStyles-root-2099 "
           >
             75 / 100
           </span>
         </div>
         <div
-          className="makeStyles-summaryContainer-2090 makeStyles-summaryAverage-2092"
+          className="makeStyles-summaryContainer-2087 makeStyles-summaryAverage-2089"
         >
           <div
-            className="makeStyles-root-2100 makeStyles-root-2103 makeStyles-summaryLabel-2093"
+            className="makeStyles-root-2097 makeStyles-root-2100 makeStyles-summaryLabel-2090"
           >
             平均回答時間
           </div>
           <span
-            className="makeStyles-root-2100 makeStyles-root-2104 "
+            className="makeStyles-root-2097 makeStyles-root-2101 "
           >
             2.67秒
           </span>
         </div>
         <div
-          className="makeStyles-comaContainer-2097"
+          className="makeStyles-comaContainer-2094"
         >
           <div
-            className="makeStyles-cheerMessageContainer-2098"
+            className="makeStyles-cheerMessageContainer-2095"
           >
             <span
-              className="makeStyles-root-2100 makeStyles-root-2105 makeStyles-cheerMessage-2099"
+              className="makeStyles-root-2097 makeStyles-root-2102 makeStyles-cheerMessage-2096"
             >
               当サイトは百人一首とちはやふるを応援しています
             </span>
           </div>
           <div
-            className="makeStyles-cheerMessageContainer-2098"
+            className="makeStyles-cheerMessageContainer-2095"
           >
             <a
               href="https://chihayafund.com/"
@@ -113,7 +113,7 @@ Array [
           </div>
         </div>
         <div
-          className="makeStyles-shareButtonsWrapper-2094"
+          className="makeStyles-shareButtonsWrapper-2091"
         >
           <a
             className="twitter-share-button"
@@ -132,10 +132,10 @@ Array [
           </a>
         </div>
         <div
-          className="makeStyles-buttonsWrapper-2095"
+          className="makeStyles-buttonsWrapper-2092"
         >
           <button
-            className="MuiButtonBase-root MuiButton-root MuiButton-contained makeStyles-button-2096"
+            className="MuiButtonBase-root MuiButton-root MuiButton-contained makeStyles-button-2093"
             disabled={false}
             onBlur={[Function]}
             onClick={[Function]}
@@ -157,7 +157,7 @@ Array [
             >
               <svg
                 aria-hidden={true}
-                className="MuiSvgIcon-root makeStyles-default-2106 makeStyles-default-2108"
+                className="MuiSvgIcon-root makeStyles-default-2103 makeStyles-default-2105"
                 focusable="false"
                 viewBox="0 0 24 24"
               >
@@ -170,10 +170,10 @@ Array [
           </button>
         </div>
         <div
-          className="makeStyles-buttonsWrapper-2095"
+          className="makeStyles-buttonsWrapper-2092"
         >
           <button
-            className="MuiButtonBase-root MuiButton-root MuiButton-contained makeStyles-button-2096"
+            className="MuiButtonBase-root MuiButton-root MuiButton-contained makeStyles-button-2093"
             disabled={false}
             onBlur={[Function]}
             onClick={[Function]}
@@ -195,7 +195,7 @@ Array [
             >
               <svg
                 aria-hidden={true}
-                className="MuiSvgIcon-root makeStyles-default-2106 makeStyles-default-2110"
+                className="MuiSvgIcon-root makeStyles-default-2103 makeStyles-default-2107"
                 focusable="false"
                 viewBox="0 0 24 24"
               >
@@ -209,10 +209,10 @@ Array [
         </div>
       </div>
       <div
-        className="makeStyles-root-2085"
+        className="makeStyles-root-2082"
       >
         <div
-          className="makeStyles-dummyResponsive-2087"
+          className="makeStyles-dummyResponsive-2084"
         >
           この欄は広告枠です
         </div>
