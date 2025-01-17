@@ -1,9 +1,0 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
-
-exports[`Storyshots atoms/CircleFrame default 1`] = `
-<span
-  className="makeStyles-root-8 CenteredFrame-root-7"
->
-  コンテンツ
-</span>
-`;

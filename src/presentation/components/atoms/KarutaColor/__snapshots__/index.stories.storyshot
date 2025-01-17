@@ -1,9 +1,0 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
-
-exports[`Storyshots atoms/KarutaColor default 1`] = `
-<span
-  className="makeStyles-root-24 makeStyles-root-25 "
->
-  青色
-</span>
-`;

@@ -1,9 +1,0 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
-
-exports[`Storyshots atoms/KarutaNo default 1`] = `
-<span
-  className="makeStyles-root-26 makeStyles-root-27 "
->
-  百番
-</span>
-`;
