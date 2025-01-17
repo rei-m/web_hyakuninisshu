@@ -41,7 +41,7 @@ export const AdProduction = ({ type, sx }: AdProps) => {
       ) : (
         <ins
           className={`adsbygoogle`}
-          style={{ display: 'block' }}
+          style={{ display: 'block', minWidth: '100%' }}
           data-ad-client={'ca-pub-4104372369598017'}
           data-ad-slot={'9171068817'}
           data-ad-format="auto"
