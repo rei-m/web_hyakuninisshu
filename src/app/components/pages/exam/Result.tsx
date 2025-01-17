@@ -1,5 +1,6 @@
 'use client';
 
+import dynamic from 'next/dynamic';
 import { useEffect, useState } from 'react';
 import { useRouter } from 'next/navigation';
 
@@ -15,7 +16,7 @@ import DialogContent from '@mui/material/DialogContent';
 import { PageLayout } from '@/app/components/organisms/PageLayout';
 import { KarutaPlayingResult } from '@/app/components/organisms/KarutaPlayingResult';
 import { Material } from '@/app/components/organisms/Material';
-import { Ad } from '@/app/components/organisms/Ad';
+const Ad = dynamic(() => import('@/app/components/organisms/Ad'), { ssr: false });
 import { QuestionJudgement } from '@/app/components/molecules/QuestionJudgement';
 
 import { useAppDispatch, useAppSelector } from '@/lib/hooks';

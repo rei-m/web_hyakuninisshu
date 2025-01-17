@@ -1,5 +1,6 @@
 'use client';
 
+import dynamic from 'next/dynamic';
 import { useEffect } from 'react';
 import { useRouter } from 'next/navigation';
 import Box from '@mui/material/Box';
@@ -7,7 +8,7 @@ import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
 import EditIcon from '@mui/icons-material/Edit';
 import { PageLayout } from '@/app/components/organisms/PageLayout';
-import { Ad } from '@/app/components/organisms/Ad';
+const Ad = dynamic(() => import('@/app/components/organisms/Ad'), { ssr: false });
 import { Heading } from '@/app/components/atoms/Heading';
 
 import { useAppDispatch, useAppSelector } from '@/lib/hooks';

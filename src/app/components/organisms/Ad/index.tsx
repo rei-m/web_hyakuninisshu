@@ -91,4 +91,6 @@ export const AdDummy = ({ type, sx }: AdProps) => {
   );
 };
 
-export const Ad = process.env.NODE_ENV === 'production' ? AdProduction : AdDummy;
+const Ad = process.env.NODE_ENV === 'production' ? AdProduction : AdDummy;
+
+export default Ad;

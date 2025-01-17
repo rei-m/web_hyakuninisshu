@@ -2,10 +2,11 @@
 
 import { useEffect } from 'react';
 import { useRouter } from 'next/navigation';
+import dynamic from 'next/dynamic';
 
 import Box from '@mui/material/Box';
 import { PageLayout } from '@/app/components/organisms/PageLayout';
-import { Ad } from '@/app/components/organisms/Ad';
+const Ad = dynamic(() => import('@/app/components/organisms/Ad'), { ssr: false });
 import { Heading } from '@/app/components/atoms/Heading';
 import { TrainingMenuForm } from '@/app/containers/organisms/TrainingMenuForm';
 

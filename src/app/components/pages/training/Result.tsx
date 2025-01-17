@@ -2,6 +2,7 @@
 
 import { useEffect } from 'react';
 import { useRouter } from 'next/navigation';
+import dynamic from 'next/dynamic';
 
 import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
@@ -9,7 +10,7 @@ import CircularProgress from '@mui/material/CircularProgress';
 
 import { PageLayout } from '@/app/components/organisms/PageLayout';
 import { KarutaPlayingResult } from '@/app/components/organisms/KarutaPlayingResult';
-import { Ad } from '@/app/components/organisms/Ad';
+const Ad = dynamic(() => import('@/app/components/organisms/Ad'), { ssr: false });
 
 import { useAppDispatch, useAppSelector } from '@/lib/hooks';
 import { restartTraining, selectQuestionResult } from '@/lib/features/question/questionSlice';
