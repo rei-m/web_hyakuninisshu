@@ -1,0 +1,55 @@
+{"name": "百人一首 - 簡単に暗記 -",
+  "short_name": "百人一首",
+  "description": "百人一首を手軽に暗記するためのサイトです。百人一首の札の画像や現代語訳も載せていますので、百人一首の歌の意味に触れながら楽しく覚えましょう。百人一首とは、百人の歌人の和歌を一首ずつ集めて作られた歌集で、現代においてもかるた遊びや競技かるたなどに用いられます。",
+  "start_url": "/",
+  "display": "minimal-ui",
+  "background_color": "#8bc34a",
+  "theme_color": "#8bc34a",
+  "icons": [
+    {
+      "src": "/favicon.ico",
+      "sizes": "any",
+      "type": "image/x-icon"
+    },
+    {
+      "src": "/icons/icon-48x48.png",
+      "sizes": "48x48",
+      "type": "image/png"
+    },
+    {
+      "src": "/icons/icon-72x72.png",
+      "sizes": "72x72",
+      "type": "image/png"
+    },
+    {
+      "src": "/icons/icon-96x96.png",
+      "sizes": "96x96",
+      "type": "image/png"
+    },
+    {
+      "src": "/icons/icon-144x144.png",
+      "sizes": "144x144",
+      "type": "image/png"
+    },
+    {
+      "src": "/icons/icon-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/icons/icon-256x256.png",
+      "sizes": "256x256",
+      "type": "image/png"
+    },
+    {
+      "src": "/icons/icon-384x384.png",
+      "sizes": "384x384",
+      "type": "image/png"
+    },
+    {
+      "src": "/icons/icon-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}

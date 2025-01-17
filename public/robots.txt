@@ -1,0 +1,13 @@
+User-agent: *
+Allow: /
+
+Disallow: /exam/question
+Disallow: /exam/question/
+Disallow: /exam/result
+Disallow: /exam/result/
+Disallow: /training/question
+Disallow: /training/question/
+Disallow: /training/result
+Disallow: /training/result/
+
+Sitemap: https://hyakuninanki.net/sitemap.xml
