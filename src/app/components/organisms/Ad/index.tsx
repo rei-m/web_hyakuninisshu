@@ -1,6 +1,8 @@
 'use client';
 
-import { useLayoutEffect } from 'react';
+import { useEffect } from 'react';
+import { usePathname } from 'next/navigation';
+
 import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
 
@@ -12,14 +14,20 @@ export type AdProps = {
 };
 
 export const AdProduction = ({ type, sx }: AdProps) => {
-  useLayoutEffect(() => {
-    if (window.adsbygoogle && !window.adsbygoogle.loaded) {
-      (window.adsbygoogle = window.adsbygoogle || []).push({});
+  const pathname = usePathname();
+  useEffect(() => {
+    try {
+      if (window.adsbygoogle && !window.adsbygoogle.loaded) {
+        (window.adsbygoogle = window.adsbygoogle || []).push({});
+      }
+    } catch (error) {
+      console.error(error);
     }
-  }, []);
+  }, [pathname]);
 
   return (
     <Box
+      key={pathname}
       sx={[
         { display: 'flex', justifyContent: 'center', alignItems: 'center', width: '100%', p: 2 },
         ...(Array.isArray(sx) ? sx : [sx]),
@@ -47,14 +55,20 @@ export const AdProduction = ({ type, sx }: AdProps) => {
 };
 
 export const AdDummy = ({ type, sx }: AdProps) => {
-  useLayoutEffect(() => {
-    if (window.adsbygoogle && !window.adsbygoogle.loaded) {
-      (window.adsbygoogle = window.adsbygoogle || []).push({});
+  const pathname = usePathname();
+  useEffect(() => {
+    try {
+      if (window.adsbygoogle && !window.adsbygoogle.loaded) {
+        (window.adsbygoogle = window.adsbygoogle || []).push({});
+      }
+    } catch (error) {
+      console.error(error);
     }
-  }, []);
+  }, [pathname]);
 
   return (
     <Box
+      key={pathname}
       sx={[
         { display: 'flex', justifyContent: 'center', alignItems: 'center', width: '100%', p: 2 },
         ...(Array.isArray(sx) ? sx : [sx]),
