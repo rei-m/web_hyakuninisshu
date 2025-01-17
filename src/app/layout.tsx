@@ -1,3 +1,4 @@
+import { Suspense } from 'react';
 import type { Metadata } from 'next';
 import Script from 'next/script';
 import { Noto_Sans_JP } from 'next/font/google';
@@ -31,7 +32,9 @@ export default function RootLayout({
       <html lang="ja">
         <head>
           <meta name="google-site-verification" content="nfztyFdR3vIkwPrEtbbyQV0zYuc4jK2tzG_SQ6jKMbg" />
-          <GoogleAnalytics />
+          <Suspense>
+            <GoogleAnalytics />
+          </Suspense>
         </head>
         <body className={notoSansJp.variable}>
           <AppRouterCacheProvider>

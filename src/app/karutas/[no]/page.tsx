@@ -12,7 +12,6 @@ import { karutaRepository } from '@/domains/repositories';
 import { ROUTING } from '@/configs/routing';
 
 import type { KarutaNo } from '@/domains/models';
-import { Suspense } from 'react';
 
 type KarutasNoPageProps = {
   params: Promise<{
@@ -54,47 +53,39 @@ export const generateMetadata = async (
   };
 };
 
-const Content = async ({ params }: KarutasNoPageProps) => {
+const KarutasNoPage: NextPage<KarutasNoPageProps> = async ({ params }) => {
   const { no } = await params;
   const karuta = karutaRepository.findByNo({ karutaNo: Number(no) as KarutaNo });
   const karutaNoString = karutaNoToJPNText({ karutaNo: karuta.no });
 
   return (
-    <Suspense>
-      <PageLayout
-        title={`百人一首 - ${karutaNoString} -`}
-        isDisplayNav
-        currentMenuType="material"
-        backUrl={ROUTING.karutas()}
+    <PageLayout
+      title={`百人一首 - ${karutaNoString} -`}
+      isDisplayNav
+      currentMenuType="material"
+      backUrl={ROUTING.karutas()}
+    >
+      <Box
+        component={'section'}
+        sx={{
+          boxSizing: 'border-box',
+          padding: 2,
+          width: '100%',
+          backgroundColor: '#fffff0',
+          textAlign: 'center',
+        }}
       >
-        <Box
-          component={'section'}
-          sx={{
-            boxSizing: 'border-box',
-            padding: 2,
-            width: '100%',
-            backgroundColor: '#fffff0',
-            textAlign: 'center',
-          }}
-        >
-          <Ad type={`fixed`} sx={{ margin: 'auto' }} />
-          <Heading level={2} sx={{ margin: 2 }}>
-            {karutaNoString}
-          </Heading>
-          <Box sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
-            <Material karuta={karuta} />
-          </Box>
+        <Ad type={`fixed`} sx={{ margin: 'auto' }} />
+        <Heading level={2} sx={{ margin: 2 }}>
+          {karutaNoString}
+        </Heading>
+        <Box sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+          <Material karuta={karuta} />
         </Box>
-        <Ad type={`fixed`} />
-      </PageLayout>
-    </Suspense>
+      </Box>
+      <Ad type={`fixed`} />
+    </PageLayout>
   );
 };
-
-const KarutasNoPage: NextPage<KarutasNoPageProps> = async ({ params }) => (
-  <Suspense>
-    <Content params={params} />
-  </Suspense>
-);
 
 export default KarutasNoPage;
