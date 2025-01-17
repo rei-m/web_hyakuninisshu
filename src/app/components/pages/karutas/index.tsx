@@ -19,7 +19,7 @@ const KarutasClientPage = () => (
     backUrl={ROUTING.root()}
     isDisplaySearch
   >
-    <Box component={'section'} sx={{ boxSizing: 'border-box', padding: 2, width: '100%' }}>
+    <Box component={'section'} sx={{ boxSizing: 'border-box', padding: 2, width: '100%', textAlign: 'center' }}>
       <Heading level={2} sx={{ margin: 2, textAlign: 'center' }}>
         歌一覧
       </Heading>
