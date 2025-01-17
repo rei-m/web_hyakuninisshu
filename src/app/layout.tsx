@@ -46,7 +46,7 @@ export default function RootLayout({
           <Script async strategy="afterInteractive" src="//platform.twitter.com/widgets.js" />
 
           {process.env.NODE_ENV === 'production' && (
-            <Script
+            <script
               async
               src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4104372369598017"
               crossOrigin="anonymous"

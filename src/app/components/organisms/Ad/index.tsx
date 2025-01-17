@@ -17,9 +17,7 @@ export const AdProduction = ({ type, sx }: AdProps) => {
   const pathname = usePathname();
   useEffect(() => {
     try {
-      if (window.adsbygoogle && !window.adsbygoogle.loaded) {
-        (window.adsbygoogle = window.adsbygoogle || []).push({});
-      }
+      if (window) (window.adsbygoogle = window.adsbygoogle || []).push({});
     } catch (error) {
       console.error(error);
     }
@@ -56,11 +54,10 @@ export const AdProduction = ({ type, sx }: AdProps) => {
 
 export const AdDummy = ({ type, sx }: AdProps) => {
   const pathname = usePathname();
+
   useEffect(() => {
     try {
-      if (window.adsbygoogle && !window.adsbygoogle.loaded) {
-        (window.adsbygoogle = window.adsbygoogle || []).push({});
-      }
+      if (window) (window.adsbygoogle = window.adsbygoogle || []).push({});
     } catch (error) {
       console.error(error);
     }
