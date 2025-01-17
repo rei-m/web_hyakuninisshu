@@ -59,6 +59,7 @@ export const ExamResultClientPage = () => {
           width: '100%',
           minHeight: `calc(100vh - ${HEIGHT_HEADER})`,
           backgroundImage: `url(/question/tatami_part.png)`,
+          textAlign: 'center',
           '@media screen and (min-width:600px)': {
             minHeight: `calc(100vh - ${HEIGHT_HEADER_WIDE})`,
           },
