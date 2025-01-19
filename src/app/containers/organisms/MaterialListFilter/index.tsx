@@ -1,6 +1,6 @@
 'use client';
 
-import { MaterialListFilterView } from '@/app/components/organisms/MaterialListFilterView';
+import MaterialListFilterView from '@/app/components/organisms/MaterialListFilterView';
 
 import { useAppDispatch, useAppSelector } from '@/lib/hooks';
 import {
@@ -12,7 +12,7 @@ import {
 
 import type { Color, Kimariji } from '@/domains/models';
 
-export const MaterialListFilter = () => {
+const MaterialListFilter = () => {
   const dispatch = useAppDispatch();
   const karutasFilter = useAppSelector(selectFilter);
 
@@ -31,3 +31,5 @@ export const MaterialListFilter = () => {
     />
   );
 };
+
+export default MaterialListFilter;

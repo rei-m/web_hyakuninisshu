@@ -19,7 +19,7 @@ const ASSETS = {
   },
 } as const;
 
-export const AppStoreBanner = ({ type = 'normal' }: AppStoreBannerProps) => (
+const AppStoreBanner = ({ type = 'normal' }: AppStoreBannerProps) => (
   <Box sx={{ width: 140, display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'start' }}>
     <a href={ASSETS[type].storeUrl} target="_blank" rel="noreferrer">
       <Image src={ASSETS[type].iconSrc} alt={ASSETS[type].appName} width={100} height={100} priority />
@@ -34,3 +34,5 @@ export const AppStoreBanner = ({ type = 'normal' }: AppStoreBannerProps) => (
     </a>
   </Box>
 );
+
+export default AppStoreBanner;

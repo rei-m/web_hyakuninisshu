@@ -1,4 +1,4 @@
-import { KarutaNo } from '@/domains/models';
+import type { KarutaNo } from '@/domains/models';
 
 export const ROUTING = {
   about: () => '/about/',

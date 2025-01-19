@@ -1,10 +1,10 @@
+import type { KarutaNo, QuestionId, ToriFuda, YomiFuda } from '@/domains/models';
+
 import Image from 'next/image';
 import Box from '@mui/material/Box';
-import { ToriFudaView } from '@/app/components/organisms/ToriFudaView';
-import { YomiFudaView } from '@/app/components/organisms/YomiFudaView';
-import { Ratio } from '@/app/components/atoms/Ratio';
-
-import type { KarutaNo, QuestionId, ToriFuda, YomiFuda } from '@/domains/models';
+import ToriFudaView from '@/app/components/organisms/ToriFudaView';
+import YomiFudaView from '@/app/components/organisms/YomiFudaView';
+import Ratio from '@/app/components/atoms/Ratio';
 
 export type KarutaPlayingProps = {
   questionId: QuestionId;
@@ -21,7 +21,7 @@ export type KarutaPlayingProps = {
   onClickResult: () => void;
 };
 
-export const KarutaPlaying = ({
+const KarutaPlaying = ({
   questionId,
   yomiFuda,
   toriFudaList,
@@ -45,7 +45,6 @@ export const KarutaPlaying = ({
         display: 'flex',
         justifyContent: 'center',
         position: 'relative',
-        marginBottom: 3,
         width: 312,
       }}
     >
@@ -67,6 +66,7 @@ export const KarutaPlaying = ({
         display: 'flex',
         justifyContent: 'center',
         flexDirection: 'row-reverse',
+        mt: 3,
       }}
     >
       {toriFudaList.map((toriFuda) => (
@@ -77,10 +77,7 @@ export const KarutaPlaying = ({
           onClick={() => {
             onClickToriFuda(questionId, toriFuda);
           }}
-          sx={{
-            margin: 1,
-            boxShadow: 1,
-          }}
+          sx={{ m: 1, boxShadow: 1 }}
         />
       ))}
     </Box>
@@ -108,3 +105,5 @@ export const KarutaPlaying = ({
     )}
   </Box>
 );
+
+export default KarutaPlaying;

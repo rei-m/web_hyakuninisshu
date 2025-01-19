@@ -1,5 +1,5 @@
 import { Meta, StoryObj } from '@storybook/react';
-import { MenuLink } from './index';
+import MenuLink from './index';
 import { TrainingIcon } from '@/app/components/atoms/MenuIcon';
 
 export default {

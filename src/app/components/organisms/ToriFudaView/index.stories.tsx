@@ -1,5 +1,5 @@
 import { Meta, StoryObj } from '@storybook/react';
-import { ToriFudaView } from './index';
+import ToriFudaView from './index';
 import { KARUTA_LIST } from '@/assets/karuta';
 import { fn } from '@storybook/test';
 

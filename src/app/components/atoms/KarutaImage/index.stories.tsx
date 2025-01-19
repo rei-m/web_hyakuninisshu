@@ -1,5 +1,5 @@
 import { Meta, StoryObj } from '@storybook/react';
-import { KarutaImage } from './index';
+import KarutaImage from './index';
 import { KARUTA_LIST } from '@/assets/karuta';
 
 export default {

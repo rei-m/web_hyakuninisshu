@@ -1,5 +1,5 @@
 import { Meta, StoryObj } from '@storybook/react';
-import { Ratio } from './index';
+import Ratio from './index';
 
 export default {
   title: 'atoms/Ratio',

@@ -1,5 +1,5 @@
 import { Meta, StoryObj } from '@storybook/react';
-import { QuestionJudgement } from './index';
+import QuestionJudgement from './index';
 import { KARUTA_LIST } from '@/assets/karuta';
 import { fn } from '@storybook/test';
 

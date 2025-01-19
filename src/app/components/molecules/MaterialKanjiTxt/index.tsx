@@ -1,7 +1,7 @@
-import Typography from '@mui/material/Typography';
-
 import type { Karuta } from '@/domains/models';
 import type { SxAppProps } from '@/theme';
+
+import Typography from '@mui/material/Typography';
 
 export type MaterialKanjiTxtProps = {
   karuta: Karuta;
@@ -9,10 +9,12 @@ export type MaterialKanjiTxtProps = {
   sx?: SxAppProps;
 };
 
-export const MaterialKanjiTxt = ({ karuta, separate = <br />, sx }: MaterialKanjiTxtProps) => (
+const MaterialKanjiTxt = ({ karuta, separate = <br />, sx }: MaterialKanjiTxtProps) => (
   <Typography component={'p'} sx={[{ textAlign: 'left' }, ...(Array.isArray(sx) ? sx : [sx])]}>
     {`${karuta.shoku.kanji} ${karuta.niku.kanji} ${karuta.sanku.kanji}`}
     {separate}
     {`${karuta.shiku.kanji} ${karuta.kekku.kanji}`}
   </Typography>
 );
+
+export default MaterialKanjiTxt;

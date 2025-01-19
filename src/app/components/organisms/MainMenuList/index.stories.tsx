@@ -1,5 +1,5 @@
 import { Meta, StoryObj } from '@storybook/react';
-import { MainMenuList } from './index';
+import MainMenuList from './index';
 
 export default {
   title: 'organisms/MainMenuList',

@@ -1,15 +1,15 @@
 'use client';
 
+import dynamic from 'next/dynamic';
+
 import { useEffect } from 'react';
 import { useRouter } from 'next/navigation';
-import dynamic from 'next/dynamic';
 
 import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
 import CircularProgress from '@mui/material/CircularProgress';
-
-import { PageLayout } from '@/app/components/organisms/PageLayout';
-import { KarutaPlayingResult } from '@/app/components/organisms/KarutaPlayingResult';
+import PageLayout from '@/app/components/organisms/PageLayout';
+import KarutaPlayingResult from '@/app/components/organisms/KarutaPlayingResult';
 const Ad = dynamic(() => import('@/app/components/organisms/Ad'), { ssr: false });
 
 import { useAppDispatch, useAppSelector } from '@/lib/hooks';
@@ -44,13 +44,13 @@ export const TrainingResultClientPage = () => {
           alignItems: 'center',
           flexDirection: 'column',
           boxSizing: 'border-box',
-          padding: 2,
+          p: 2,
           width: '100%',
-          minHeight: `calc(100vh - ${HEIGHT_HEADER})`,
           backgroundImage: `url(/question/tatami_part.png)`,
           textAlign: 'center',
-          '@media screen and (min-width:600px)': {
-            minHeight: `calc(100vh - ${HEIGHT_HEADER_WIDE})`,
+          minHeight: {
+            xs: `calc(100vh - ${HEIGHT_HEADER})`,
+            sm: `calc(100vh - ${HEIGHT_HEADER_WIDE})`,
           },
         }}
       >
@@ -72,7 +72,7 @@ export const TrainingResultClientPage = () => {
         ) : (
           <Box
             sx={{
-              backgroundColor: '#fffff0',
+              backgroundColor: 'background.default',
               padding: 4,
               borderRadius: 4,
             }}

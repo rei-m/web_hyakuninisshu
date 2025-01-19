@@ -1,9 +1,19 @@
+import type {
+  KarutaNo,
+  TrainingConditionAnim,
+  TrainingConditionColor,
+  TrainingConditionDisplayStyle,
+  TrainingConditionKimariji,
+  TrainingConditionRangeFrom,
+  TrainingConditionRangeTo,
+} from '@/domains/models';
+
 import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 import EditIcon from '@mui/icons-material/Edit';
-import { FormSelectItem } from '@/app/components/molecules/FormSelectItem';
-import { FormSelectRangeItem } from '@/app/components/molecules/FormSelectRangeItem';
+import FormSelectItem from '@/app/components/molecules/FormSelectItem';
+import FormSelectRangeItem from '@/app/components/molecules/FormSelectRangeItem';
 
 import { useTrainingMenuForm } from '@/hooks/useTrainingMenuForm';
 import { karutaNoToJPNText } from '@/domains/models/KarutaNo';
@@ -18,15 +28,7 @@ import {
   RANGE_TO_LIST,
 } from '@/domains/models/TrainingCondition';
 
-import type {
-  KarutaNo,
-  TrainingConditionAnim,
-  TrainingConditionColor,
-  TrainingConditionDisplayStyle,
-  TrainingConditionKimariji,
-  TrainingConditionRangeFrom,
-  TrainingConditionRangeTo,
-} from '@/domains/models';
+import { FONT_SIZE } from '@/theme';
 
 export type TrainingMenuFormViewProps = {
   emptyError?: string;
@@ -63,20 +65,20 @@ const QUESTION_ANIM_KEY_VALUE_LIST = ANIM_LIST.map((value) => ({
   text: value === 'none' ? 'なし' : value === 'slow' ? 'おそめ' : value === 'normal' ? 'ふつう' : 'はやめ',
 }));
 
-export const TrainingMenuFormView = ({ value, errors, setters, emptyError, onSubmit }: TrainingMenuFormViewProps) => (
+const TrainingMenuFormView = ({ value, errors, setters, emptyError, onSubmit }: TrainingMenuFormViewProps) => (
   <Box
     component={'form'}
     sx={{
       maxWidth: 380,
-      margin: 'auto',
+      m: 'auto',
       '& > *:nth-of-type(n+2)': {
-        marginTop: 2,
+        mt: 2,
       },
     }}
   >
     {emptyError && (
       <Box sx={{ p: 2 }}>
-        <Typography sx={{ color: 'error.main', fontSize: '1.6rem' }}>{emptyError}</Typography>
+        <Typography sx={{ color: 'error.main', fontSize: FONT_SIZE.m }}>{emptyError}</Typography>
       </Box>
     )}
     <FormSelectRangeItem
@@ -144,10 +146,12 @@ export const TrainingMenuFormView = ({ value, errors, setters, emptyError, onSub
         setters.questionAnim(value as TrainingConditionAnim);
       }}
     />
-    <Box sx={{ paddingTop: 2 }}>
+    <Box sx={{ py: 2 }}>
       <Button color="secondary" variant="contained" startIcon={<EditIcon />} onClick={onSubmit} sx={{ boxShadow: 1 }}>
         練習をはじめる
       </Button>
     </Box>
   </Box>
 );
+
+export default TrainingMenuFormView;

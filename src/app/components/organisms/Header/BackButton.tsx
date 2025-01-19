@@ -1,5 +1,3 @@
-'use client';
-
 import IconButton from '@mui/material/IconButton';
 import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 import { useRouter } from 'next/navigation';
@@ -8,7 +6,7 @@ export type BackButtonProps = {
   backUrl: string;
 };
 
-export const BackButton = ({ backUrl }: BackButtonProps) => {
+const BackButton = ({ backUrl }: BackButtonProps) => {
   const router = useRouter();
   return (
     <IconButton
@@ -25,3 +23,5 @@ export const BackButton = ({ backUrl }: BackButtonProps) => {
     </IconButton>
   );
 };
+
+export default BackButton;

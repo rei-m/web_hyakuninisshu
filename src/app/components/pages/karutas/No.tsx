@@ -1,18 +1,18 @@
 'use client';
 
+import type { Karuta } from '@/domains/models';
+
 import dynamic from 'next/dynamic';
 
 import Box from '@mui/material/Box';
-import { PageLayout } from '@/app/components/organisms/PageLayout';
-import { Material } from '@/app/components/organisms/Material';
+import PageLayout from '@/app/components/organisms/PageLayout';
+import Material from '@/app/components/organisms/Material';
+import Heading from '@/app/components/atoms/Heading';
 const Ad = dynamic(() => import('@/app/components/organisms/Ad'), { ssr: false });
-import { Heading } from '@/app/components/atoms/Heading';
 
 import { karutaNoToJPNText } from '@/domains/models/KarutaNo';
 
 import { ROUTING } from '@/configs/routing';
-
-import type { Karuta } from '@/domains/models';
 
 type KarutasNoPageProps = {
   karuta: Karuta;

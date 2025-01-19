@@ -1,15 +1,17 @@
-import { Suspense } from 'react';
 import type { Metadata } from 'next';
+
+import { Suspense } from 'react';
 import Script from 'next/script';
-import { Noto_Sans_JP } from 'next/font/google';
 import { AppRouterCacheProvider } from '@mui/material-nextjs/v15-appRouter';
-import { ThemeProvider } from '@mui/material/styles';
+import ThemeProvider from '@mui/material/styles/ThemeProvider';
 import CssBaseline from '@mui/material/CssBaseline';
 
-import { StoreProvider } from './StoreProvider';
-import { GoogleAnalytics } from './components/organisms/GoogleAnalytics';
+import StoreProvider from '@/app/StoreProvider';
+import GoogleAnalytics from '@/app/components/organisms/GoogleAnalytics';
 
-import { metadataDefalut } from '@/configs/meta';
+import { Noto_Sans_JP } from 'next/font/google';
+
+import { METADATA_DEFAULT } from '@/configs/meta';
 
 import { theme } from '@/theme';
 
@@ -20,7 +22,7 @@ const notoSansJp = Noto_Sans_JP({
   subsets: ['latin'],
 });
 
-export const metadata: Metadata = metadataDefalut;
+export const metadata: Metadata = METADATA_DEFAULT;
 
 export default function RootLayout({
   children,

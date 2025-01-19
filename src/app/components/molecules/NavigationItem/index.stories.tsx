@@ -1,5 +1,5 @@
 import { Meta, StoryObj } from '@storybook/react';
-import { NavigationItem } from './index';
+import NavigationItem from './index';
 
 export default {
   title: 'molecules/NavigationItem',

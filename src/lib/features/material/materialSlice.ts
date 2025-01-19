@@ -1,7 +1,8 @@
-import { createSelector } from '@reduxjs/toolkit';
-import { createAppSlice } from 'lib/createAppSlice';
 import type { PayloadAction } from '@reduxjs/toolkit';
 import type { Color, Kimariji } from '@/domains/models';
+
+import { createSelector } from '@reduxjs/toolkit';
+import { createAppSlice } from 'lib/createAppSlice';
 import { COLOR_LIST } from '@/domains/models/Color';
 import { KIMARIJI_LIST } from '@/domains/models/Kimariji';
 import { KARUTA_NO_MAX, KARUTA_NO_MIN } from '@/domains/models/KarutaNo';

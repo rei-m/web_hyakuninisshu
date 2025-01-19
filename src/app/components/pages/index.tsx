@@ -6,14 +6,15 @@ import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
 import List from '@mui/material/List';
 import ListItem from '@mui/material/ListItem';
-import { PageLayout } from '@/app/components/organisms/PageLayout';
-import { MainMenuList } from '@/app/components/organisms/MainMenuList';
-import { SmallMaterial } from '@/app/components/organisms/SmallMaterial';
-import { Chihaya } from '@/app/components/organisms/Chihaya';
+import PageLayout from '@/app/components/organisms/PageLayout';
+import MainMenuList from '@/app/components/organisms/MainMenuList';
+import SmallMaterial from '@/app/components/organisms/SmallMaterial';
+import Chihaya from '@/app/components/organisms/Chihaya';
+import ReadingContent from '@/app/components/molecules/ReadingContent';
+import AppStoreBanner from '@/app/components/atoms/AppStoreBanner';
+import PlayStoreBanner from '@/app/components/atoms/PlayStoreBanner';
 const Ad = dynamic(() => import('@/app/components/organisms/Ad'), { ssr: false });
-import { ReadingContent } from '@/app/components/molecules/ReadingContent';
-import { AppStoreBanner } from '@/app/components/atoms/AppStoreBanner';
-import { PlayStoreBanner } from '@/app/components/atoms/PlayStoreBanner';
+
 import { karutaRepository } from '@/domains/repositories';
 
 const HomeClientPage = () => (
@@ -21,9 +22,9 @@ const HomeClientPage = () => (
     <Box
       sx={{
         boxSizing: 'border-box',
-        padding: 2,
         maxWidth: 960,
-        margin: 'auto',
+        p: 2,
+        m: 'auto',
       }}
     >
       <ReadingContent title={`百人一首 簡単に暗記について`}>
@@ -51,7 +52,7 @@ const HomeClientPage = () => (
         >
           <Box
             sx={{
-              paddingTop: 4,
+              pt: 4,
               display: 'flex',
               justifyContent: 'center',
               flexWrap: 'wrap',
@@ -62,7 +63,7 @@ const HomeClientPage = () => (
           </Box>
           <Box
             sx={{
-              paddingTop: 4,
+              pt: 4,
               display: 'flex',
               justifyContent: 'center',
               flexWrap: 'wrap',
@@ -83,16 +84,10 @@ const HomeClientPage = () => (
         </Typography>
       </ReadingContent>
       <ReadingContent title={`ちはやふる基金の紹介`}>
-        <Box
-          sx={{
-            display: 'flex',
-            justifyContent: 'center',
-            marginBottom: 1,
-          }}
-        >
+        <Box sx={{ display: 'flex', justifyContent: 'center' }}>
           <Chihaya />
         </Box>
-        <Typography component={'p'}>
+        <Typography component={'p'} sx={{ mt: 1 }}>
           <a href="https://chihayafund.com/" target="_blank" rel="noopener noreferrer">
             ちはやふる基金
           </a>
@@ -165,16 +160,15 @@ const HomeClientPage = () => (
       <ReadingContent title={`百人一首 歌一覧`}>
         <List
           sx={{
-            padding: 0,
-            margin: 0,
+            p: 0,
+            m: 0,
             display: 'flex',
-            flexWrap: 'wrap',
             justifyContent: 'space-between',
+            flexWrap: 'wrap',
             '& > li': {
-              width: '100%',
-              padding: 0,
-              '@media screen and (min-width:600px)': {
-                width: '49%',
+              p: 0,
+              width: {
+                sm: '49%',
               },
             },
           }}
@@ -186,8 +180,8 @@ const HomeClientPage = () => (
                 separate={` `}
                 image={false}
                 sx={{
-                  backgroundColor: '#fffff0',
-                  padding: 0,
+                  backgroundColor: 'background.default',
+                  p: 0,
                   ':hover': {
                     textDecoration: 'underline',
                     textDecorationColor: '#106ba3',

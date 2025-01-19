@@ -9,7 +9,7 @@ export type WordProps = {
   onAnimationEnd: () => void;
 };
 
-const PureWord = ({ text, duration, onAnimationEnd }: WordProps) =>
+const Word = ({ text, duration, onAnimationEnd }: WordProps) =>
   text === SPACE ? (
     <Box component={'span'} sx={{ display: 'inline-block' }}>
       {SPACE}
@@ -22,4 +22,4 @@ const PureWord = ({ text, duration, onAnimationEnd }: WordProps) =>
     </Fade>
   );
 
-export default React.memo(PureWord, (prevProps, nextProps) => prevProps.text === nextProps.text);
+export default React.memo(Word, (prevProps, nextProps) => prevProps.text === nextProps.text);

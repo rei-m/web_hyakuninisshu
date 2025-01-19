@@ -1,5 +1,5 @@
 import { Meta, StoryObj } from '@storybook/react';
-import { AppStoreBanner } from './index';
+import AppStoreBanner from './index';
 
 export default {
   title: 'atoms/AppStoreBanner',

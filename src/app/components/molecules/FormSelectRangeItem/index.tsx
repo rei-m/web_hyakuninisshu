@@ -2,6 +2,7 @@ import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
 import Select from '@mui/material/Select';
 import MenuItem from '@mui/material/MenuItem';
+import { FONT_SIZE } from '@/theme';
 
 export type FormSelectRangeItemProps = {
   title: string;
@@ -20,7 +21,7 @@ export type FormSelectRangeItemProps = {
   error?: string;
 };
 
-export const FormSelectRangeItem = ({ title, from, to, error }: FormSelectRangeItemProps) => (
+const FormSelectRangeItem = ({ title, from, to, error }: FormSelectRangeItemProps) => (
   <Box>
     <Box sx={{ textAlign: 'left' }}>
       <Typography component={'span'} sx={{ fontSize: '1.05rem', color: '#182026' }}>
@@ -39,7 +40,7 @@ export const FormSelectRangeItem = ({ title, from, to, error }: FormSelectRangeI
           id: `id-${from.name}`,
         }}
         sx={{
-          fontSize: '1.6rem',
+          fontSize: FONT_SIZE.m,
           textAlign: 'left',
           maxWidth: 167,
           flexGrow: 1,
@@ -49,7 +50,7 @@ export const FormSelectRangeItem = ({ title, from, to, error }: FormSelectRangeI
           <MenuItem
             value={item.value}
             sx={{
-              fontSize: '1.6rem',
+              fontSize: FONT_SIZE.m,
               textAlign: 'left',
               maxWidth: 167,
             }}
@@ -73,7 +74,7 @@ export const FormSelectRangeItem = ({ title, from, to, error }: FormSelectRangeI
           id: `id-${to.name}`,
         }}
         sx={{
-          fontSize: '1.6rem',
+          fontSize: FONT_SIZE.m,
           textAlign: 'left',
           maxWidth: 167,
           flexGrow: 1,
@@ -83,7 +84,7 @@ export const FormSelectRangeItem = ({ title, from, to, error }: FormSelectRangeI
           <MenuItem
             value={item.value}
             sx={{
-              fontSize: '1.6rem',
+              fontSize: FONT_SIZE.m,
               textAlign: 'left',
               maxWidth: 167,
             }}
@@ -94,6 +95,8 @@ export const FormSelectRangeItem = ({ title, from, to, error }: FormSelectRangeI
         ))}
       </Select>
     </Box>
-    {error && <Box sx={{ textAlign: 'left', fontSize: '1.2rem', color: '#f00', marginTop: 0.5 }}>{error}</Box>}
+    {error && <Box sx={{ textAlign: 'left', fontSize: FONT_SIZE.ss, color: '#f00', marginTop: 0.5 }}>{error}</Box>}
   </Box>
 );
+
+export default FormSelectRangeItem;

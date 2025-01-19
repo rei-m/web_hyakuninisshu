@@ -5,7 +5,7 @@ import { CHIHAYA_COMA_LIST } from './coma';
 const THRESHOLD = 0.5;
 
 // 超手抜き
-export const ChihayaComa =
+const ChihayaComa =
   process.env.NODE_ENV === 'production'
     ? () => {
         const idx = new Date().getTime() % CHIHAYA_COMA_LIST.length;
@@ -67,3 +67,5 @@ export const ChihayaComa =
         );
       }
     : () => <></>;
+
+export default ChihayaComa;

@@ -1,3 +1,5 @@
+import type { Karuta, QuestionId } from '@/domains/models';
+
 import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
@@ -7,15 +9,14 @@ import DialogContent from '@mui/material/DialogContent';
 import IconButton from '@mui/material/IconButton';
 import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
 import CloseIcon from '@mui/icons-material/Close';
-
-import { Fuda } from '@/app/components/organisms/Fuda';
-import { Material } from '@/app/components/organisms/Material';
+import Fuda from '@/app/components/organisms/Fuda';
+import Material from '@/app/components/organisms/Material';
 
 import { useBool } from '@/hooks/useBool';
 import { karutaNoToJPNText } from '@/domains/models/KarutaNo';
 import { kimarijiToJPNText } from '@/domains/models/Kimariji';
 
-import type { Karuta, QuestionId } from '@/domains/models';
+import { FONT_SIZE } from '@/theme';
 
 export type KarutaPlayingCorrectProps = {
   questionId: QuestionId;
@@ -25,7 +26,7 @@ export type KarutaPlayingCorrectProps = {
   onClickGoToResult: () => void;
 };
 
-export const KarutaPlayingCorrect = ({
+const KarutaPlayingCorrect = ({
   questionId,
   karuta,
   isAllAnswered,
@@ -39,26 +40,26 @@ export const KarutaPlayingCorrect = ({
       <Box
         sx={{
           position: 'relative',
-          margin: 'auto',
+          m: 'auto',
           width: 160,
         }}
       >
         <Box
           sx={{
-            margin: '0 auto',
+            m: '0 auto',
             p: 1,
             border: '1px solid #d3d3d3',
-            fontSize: '1.4rem',
+            fontSize: FONT_SIZE.s,
             backgroundColor: 'common.white',
           }}
         >
-          <Typography component={'span'} sx={{ fontSize: '1.2rem' }}>
+          <Typography component={'span'} sx={{ fontSize: FONT_SIZE.ss }}>
             {karutaNoToJPNText({ karutaNo: karuta.no })}
           </Typography>
-          <Typography component={'span'} sx={{ fontSize: '1.4rem', paddingLeft: 0.5, paddingRight: 0.5 }}>
+          <Typography component={'span'} sx={{ fontSize: FONT_SIZE.ss, px: 0.5 }}>
             /
           </Typography>
-          <Typography component={'span'} sx={{ fontSize: '1.2rem' }}>
+          <Typography component={'span'} sx={{ fontSize: FONT_SIZE.ss }}>
             {kimarijiToJPNText({ kimariji: karuta.kimariji })}
           </Typography>
         </Box>
@@ -66,8 +67,8 @@ export const KarutaPlayingCorrect = ({
           color="inherit"
           onClick={openDialog}
           sx={{
-            fontSize: '1.6rem',
-            padding: 0,
+            fontSize: FONT_SIZE.m,
+            paddinpg: 0,
             height: '33px',
             width: '33px',
             minHeight: '33px',
@@ -106,7 +107,7 @@ export const KarutaPlayingCorrect = ({
         </Button>
       )}
       <Dialog onClose={closeDialog} open={opened}>
-        <DialogTitle sx={{ m: 0, p: 2 }}>正解</DialogTitle>
+        <DialogTitle sx={{ m: 0, p: 2, backgroundColor: 'background.default' }}>正解</DialogTitle>
         <IconButton
           aria-label="close"
           onClick={closeDialog}
@@ -119,10 +120,12 @@ export const KarutaPlayingCorrect = ({
         >
           <CloseIcon />
         </IconButton>
-        <DialogContent dividers>
+        <DialogContent dividers sx={{ backgroundColor: 'background.default' }}>
           <Material karuta={karuta} />
         </DialogContent>
       </Dialog>
     </Box>
   );
 };
+
+export default KarutaPlayingCorrect;

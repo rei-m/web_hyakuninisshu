@@ -1,18 +1,17 @@
 'use client';
 
+import type { AppStore } from '@/lib/store';
+
 import { useEffect, useRef } from 'react';
 import { Provider } from 'react-redux';
 import { setupListeners } from '@reduxjs/toolkit/query';
-
 import { makeStore } from '@/lib/store';
-
-import type { AppStore } from '@/lib/store';
 
 interface Props {
   readonly children: React.ReactNode;
 }
 
-export const StoreProvider = ({ children }: Props) => {
+const StoreProvider = ({ children }: Props) => {
   const storeRef = useRef<AppStore | null>(null);
 
   if (!storeRef.current) {
@@ -31,3 +30,5 @@ export const StoreProvider = ({ children }: Props) => {
 
   return <Provider store={storeRef.current}>{children}</Provider>;
 };
+
+export default StoreProvider;

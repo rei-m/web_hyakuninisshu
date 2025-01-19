@@ -1,5 +1,5 @@
 import { Meta, StoryObj } from '@storybook/react';
-import { SmallMaterial } from './index';
+import SmallMaterial from './index';
 import { KARUTA_LIST } from '@/assets/karuta';
 
 export default {

@@ -1,10 +1,12 @@
-import { useTrainingMenuForm } from '@/hooks/useTrainingMenuForm';
+'use client';
+
+import TrainingMenuFormView from '@/app/components/organisms/TrainingMenuFormView';
+
 import { useAppDispatch, useAppSelector } from '@/lib/hooks';
 import { selectCondition, startTraining } from '@/lib/features/question/questionSlice';
+import { useTrainingMenuForm } from '@/hooks/useTrainingMenuForm';
 
-import { TrainingMenuFormView } from '@/app/components/organisms/TrainingMenuFormView';
-
-export const TrainingMenuForm = () => {
+const TrainingMenuForm = () => {
   const dispatch = useAppDispatch();
   const trainingCondition = useAppSelector(selectCondition);
 
@@ -26,3 +28,5 @@ export const TrainingMenuForm = () => {
     />
   );
 };
+
+export default TrainingMenuForm;

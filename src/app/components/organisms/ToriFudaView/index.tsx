@@ -1,24 +1,18 @@
-import ButtonBase from '@mui/material/ButtonBase';
-import Box from '@mui/material/Box';
-import { VerticalTxt } from '@/app/components/atoms/VerticalTxt';
-
 import type { ToriFuda } from '@/domains/models';
 import type { SxAppProps } from '@/theme';
 
+import Box from '@mui/material/Box';
+import ButtonBase from '@mui/material/ButtonBase';
+import VerticalTxt from '@/app/components/atoms/VerticalTxt';
+
+import { FONT_SIZE } from '@/theme';
+
 type Size = 's' | 'm' | 'l';
 
-const RATIO_L = 1.15;
-const RATIO_M = 1.0;
-const RATIO_S = 0.875;
-const ratioMap = {
-  s: RATIO_S,
-  m: RATIO_M,
-  l: RATIO_L,
-} as const;
-const FONT_SIEZ_MAP = {
-  s: '1.4rem',
-  m: '1.6rem',
-  l: '1.8rem',
+const RATIO_MAP = {
+  s: 0.875,
+  m: 1.0,
+  l: 1.15,
 } as const;
 
 export type ToriFudaViewProps = {
@@ -29,7 +23,7 @@ export type ToriFudaViewProps = {
   onClick: (toriFuda: ToriFuda) => void;
 };
 
-export const ToriFudaView = ({ toriFuda, size = 'm', thin = false, sx, onClick }: ToriFudaViewProps) => (
+const ToriFudaView = ({ toriFuda, size = 'm', thin = false, sx, onClick }: ToriFudaViewProps) => (
   <ButtonBase
     onClick={() => onClick(toriFuda)}
     sx={[
@@ -37,15 +31,14 @@ export const ToriFudaView = ({ toriFuda, size = 'm', thin = false, sx, onClick }
         display: 'flex',
         justifyContent: 'center',
         alignItems: 'center',
-        backgroundColor: '#fffff0',
+        backgroundColor: 'background.default',
         borderStyle: 'solid',
         borderColor: 'primary.dark',
-        borderWidth: `${3 * ratioMap[size]}px`,
+        borderWidth: `${3 * RATIO_MAP[size]}px`,
         borderRadius: 2,
-        height: `${220 * ratioMap[size]}px`,
+        height: `${220 * RATIO_MAP[size]}px`,
         paddingLeft: 1,
         paddingRight: 1,
-        fontFamily: '"Sawarabi Mincho"',
         cursor: 'pointer',
         opacity: thin ? '0.8' : '1',
       },
@@ -59,12 +52,12 @@ export const ToriFudaView = ({ toriFuda, size = 'm', thin = false, sx, onClick }
         justifyContent: 'center',
       }}
     >
-      <VerticalTxt fontSize={FONT_SIEZ_MAP[size]}>{toriFuda.shiku}</VerticalTxt>
+      <VerticalTxt fontSize={FONT_SIZE[size]}>{toriFuda.shiku}</VerticalTxt>
       <VerticalTxt
-        fontSize={FONT_SIEZ_MAP[size]}
+        fontSize={FONT_SIZE[size]}
         sx={{
-          paddingTop: `${8 * 3 * ratioMap[size]}px`,
-          marginRight: `${8 * ratioMap[size]}px`,
+          paddingTop: `${8 * 3 * RATIO_MAP[size]}px`,
+          marginRight: `${8 * RATIO_MAP[size]}px`,
         }}
       >
         {toriFuda.kekku}
@@ -72,3 +65,5 @@ export const ToriFudaView = ({ toriFuda, size = 'm', thin = false, sx, onClick }
     </Box>
   </ButtonBase>
 );
+
+export default ToriFudaView;

@@ -3,6 +3,8 @@ import InputLabel from '@mui/material/InputLabel';
 import MenuItem from '@mui/material/MenuItem';
 import Select from '@mui/material/Select';
 
+import { FONT_SIZE } from '@/theme';
+
 export type FormSelectItemProps = {
   title: string;
   name: string;
@@ -11,9 +13,9 @@ export type FormSelectItemProps = {
   onChange: (value: string) => void;
 };
 
-export const FormSelectItem = ({ title, name, value, list, onChange }: FormSelectItemProps) => (
+const FormSelectItem = ({ title, name, value, list, onChange }: FormSelectItemProps) => (
   <FormControl variant="standard" sx={{ display: 'flex' }}>
-    <InputLabel htmlFor={`id-${name}`} sx={{ color: '#182026', fontSize: '1.4rem' }}>
+    <InputLabel htmlFor={`id-${name}`} sx={{ color: '#182026', fontSize: FONT_SIZE.s }}>
       {title}
     </InputLabel>
     <Select
@@ -26,7 +28,7 @@ export const FormSelectItem = ({ title, name, value, list, onChange }: FormSelec
         id: `id-${name}`,
       }}
       sx={{
-        fontSize: '1.6rem',
+        fontSize: FONT_SIZE.m,
         textAlign: 'left',
       }}
     >
@@ -34,7 +36,7 @@ export const FormSelectItem = ({ title, name, value, list, onChange }: FormSelec
         <MenuItem
           value={item.value}
           sx={{
-            fontSize: '1.6rem',
+            fontSize: FONT_SIZE.m,
             textAlign: 'left',
           }}
           key={`select_item_${item.value}`}
@@ -45,3 +47,5 @@ export const FormSelectItem = ({ title, name, value, list, onChange }: FormSelec
     </Select>
   </FormControl>
 );
+
+export default FormSelectItem;

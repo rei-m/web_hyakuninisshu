@@ -14,7 +14,7 @@ export type MenuLinkProps = {
   sx?: SxAppProps;
 };
 
-export const MenuLink = ({ href, icon, name, description, sx }: MenuLinkProps) => (
+const MenuLink = ({ href, icon, name, description, sx }: MenuLinkProps) => (
   <Button
     variant="outlined"
     size="large"
@@ -105,3 +105,5 @@ export const MenuLink = ({ href, icon, name, description, sx }: MenuLinkProps) =
     </Typography>
   </Button>
 );
+
+export default MenuLink;

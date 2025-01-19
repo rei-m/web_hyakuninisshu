@@ -3,10 +3,10 @@ import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
 import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 import RefreshIcon from '@mui/icons-material/Refresh';
-
-import { ChihayaComa } from '@/app/components/organisms/Alu/ChihayaComa';
-import { TweetLinkButton } from '@/app/components/molecules/TweetLinkButton';
-import { Ratio } from '@/app/components/atoms/Ratio';
+import ChihayaComa from '@/app/components/organisms/Alu/ChihayaComa';
+import TweetLinkButton from '@/app/components/molecules/TweetLinkButton';
+import Ratio from '@/app/components/atoms/Ratio';
+import { FONT_SIZE } from '@/theme';
 
 export type KarutaPlayingResultProps = {
   children?: React.ReactNode;
@@ -17,7 +17,7 @@ export type KarutaPlayingResultProps = {
   onClickRestart: () => void;
 };
 
-export const KarutaPlayingResult = ({
+const KarutaPlayingResult = ({
   children,
   correctCount,
   totalCount,
@@ -29,41 +29,42 @@ export const KarutaPlayingResult = ({
     <Box
       sx={{
         p: 1,
-        backgroundColor: '#fffff0',
+        backgroundColor: 'background.default',
         boxSizing: 'border-box',
         boxShadow: 1,
         borderRadius: 0.5,
       }}
     >
-      <Typography component={`div`} sx={{ fontSize: '1.2rem', textAlign: 'left' }}>
+      <Typography component={`div`} sx={{ fontSize: FONT_SIZE.ss, textAlign: 'left' }}>
         正解数
       </Typography>
-      <Ratio numerator={correctCount} denominator={totalCount} sx={{ fontSize: '1.8rem', textAlign: 'center' }} />
+      <Ratio numerator={correctCount} denominator={totalCount} sx={{ fontSize: FONT_SIZE.l, textAlign: 'center' }} />
     </Box>
     <Box
       sx={{
         p: 1,
         mt: 2,
-        backgroundColor: '#fffff0',
+        backgroundColor: 'background.default',
         boxSizing: 'border-box',
         boxShadow: 1,
         borderRadius: 0.5,
       }}
     >
-      <Typography component={`div`} sx={{ fontSize: '1.2rem', textAlign: 'left' }}>
+      <Typography component={`div`} sx={{ fontSize: FONT_SIZE.ss, textAlign: 'left' }}>
         平均回答時間
       </Typography>
-      <Typography sx={{ fontSize: '1.8rem', textAlign: 'center' }}>{`${averageAnswerSecond.toFixed(2)}秒`}</Typography>
+      <Typography
+        sx={{ fontSize: FONT_SIZE.l, textAlign: 'center' }}
+      >{`${averageAnswerSecond.toFixed(2)}秒`}</Typography>
     </Box>
     <Box
       sx={{
         mt: 4,
-        backgroundColor: '#fffff0',
+        backgroundColor: 'background.default',
         borderRadius: 0.5,
         pt: 2,
-        pr: 1,
         pb: 1,
-        pl: 1,
+        px: 1,
         boxShadow: 1,
       }}
     >
@@ -111,3 +112,5 @@ export const KarutaPlayingResult = ({
     </Box>
   </Box>
 );
+
+export default KarutaPlayingResult;

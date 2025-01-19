@@ -5,6 +5,7 @@ import Image from 'next/image';
 import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
+import { FONT_SIZE } from '@/theme';
 
 export default function NotFound() {
   const router = useRouter();
@@ -15,15 +16,14 @@ export default function NotFound() {
         justifyContent: 'center',
         alignItems: 'center',
         flexDirection: 'column',
-        backgroundColor: '#fffff0',
         boxSizing: 'border-box',
         height: '100vh',
       }}
     >
-      <Typography sx={{ fontSize: '1.8rem' }}>
+      <Typography sx={{ fontSize: FONT_SIZE.l }}>
         ページが見つかりませんでした。
         <br />
-        トップページにお戻りください。{' '}
+        トップページにお戻りください。
       </Typography>
       <Image
         src={'/dogeza_businessman.png'}

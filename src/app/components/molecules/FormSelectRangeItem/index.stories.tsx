@@ -1,5 +1,5 @@
 import { Meta, StoryObj } from '@storybook/react';
-import { FormSelectRangeItem } from './index';
+import FormSelectRangeItem from './index';
 import { fn } from '@storybook/test';
 
 export default {

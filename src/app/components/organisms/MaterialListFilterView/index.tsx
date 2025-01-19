@@ -1,3 +1,5 @@
+import type { Color, Kimariji } from '@/domains/models';
+
 import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
 import FormGroup from '@mui/material/FormGroup';
@@ -10,7 +12,7 @@ import CloseIcon from '@mui/icons-material/Close';
 import { kimarijiToJPNText } from '@/domains/models/Kimariji';
 import { colorToJPNText } from '@/domains/models/Color';
 
-import type { Color, Kimariji } from '@/domains/models';
+import { FONT_SIZE } from '@/theme';
 
 export type MaterialListFilterViewProps = {
   isOpened: boolean;
@@ -21,7 +23,7 @@ export type MaterialListFilterViewProps = {
   onClickClose: () => void;
 };
 
-export const MaterialListFilterView = ({
+const MaterialListFilterView = ({
   isOpened,
   colorList,
   kimarijiList,
@@ -32,7 +34,7 @@ export const MaterialListFilterView = ({
   <Backdrop open={isOpened} onClick={onClickClose} sx={(theme) => ({ color: '#fff', zIndex: theme.zIndex.drawer + 1 })}>
     <Box
       sx={{
-        backgroundColor: '#fffff0',
+        backgroundColor: 'background.default',
         width: 200,
         boxSizing: 'border-box',
         position: 'absolute',
@@ -54,10 +56,10 @@ export const MaterialListFilterView = ({
       >
         <Typography component={'span'}>絞り込み</Typography>
         <IconButton onClick={onClickClose} sx={{ position: 'absolute', top: 4, right: 4 }}>
-          <CloseIcon sx={{ color: 'common.black', fontSize: '2rem' }} />
+          <CloseIcon sx={{ color: 'common.black', fontSize: FONT_SIZE.ll }} />
         </IconButton>
       </Box>
-      <Typography component={'div'} sx={{ textAlign: 'center', padding: 1 }}>
+      <Typography component={'div'} sx={{ textAlign: 'center', p: 1 }}>
         決まり字
       </Typography>
       <FormGroup>
@@ -73,9 +75,8 @@ export const MaterialListFilterView = ({
               e.stopPropagation();
             }}
             sx={{
-              paddingLeft: 1,
-              paddingRight: 1,
-              margin: 0,
+              px: 1,
+              m: 0,
               ':hover': {
                 backgroundColor: '#00000010',
               },
@@ -83,7 +84,7 @@ export const MaterialListFilterView = ({
           />
         ))}
       </FormGroup>
-      <Typography component={'div'} sx={{ textAlign: 'center', padding: 1, borderTop: '1px solid #808080' }}>
+      <Typography component={'div'} sx={{ textAlign: 'center', p: 1, borderTop: '1px solid #808080' }}>
         色
       </Typography>
       <FormGroup>
@@ -99,9 +100,8 @@ export const MaterialListFilterView = ({
               e.stopPropagation();
             }}
             sx={{
-              paddingLeft: 1,
-              paddingRight: 1,
-              margin: 0,
+              px: 1,
+              m: 0,
               ':hover': {
                 backgroundColor: '#00000010',
               },
@@ -112,3 +112,5 @@ export const MaterialListFilterView = ({
     </Box>
   </Backdrop>
 );
+
+export default MaterialListFilterView;
