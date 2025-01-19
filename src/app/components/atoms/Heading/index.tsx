@@ -1,6 +1,6 @@
-import Typography from '@mui/material/Typography';
-
 import type { SxAppProps } from 'theme';
+
+import Typography from '@mui/material/Typography';
 
 type Level = 1 | 2 | 3 | 4 | 5 | 6;
 
@@ -14,15 +14,17 @@ export type HeadingProps = {
   sx?: SxAppProps;
 };
 
-export const Heading = ({ children, level = 2, visualLevel, sx }: HeadingProps) => {
+const Heading = ({ children, level = 2, visualLevel, sx }: HeadingProps) => {
   const levelIndex = level - 1;
   const fontSize = FONT_SIZE[visualLevel ? visualLevel - 1 : levelIndex];
   return (
     <Typography
       variant={HEADINGS[levelIndex]}
-      sx={[{ fontWeight: 700, margin: 0, fontSize }, ...(Array.isArray(sx) ? sx : [sx])]}
+      sx={[{ fontWeight: 700, m: 0, fontSize }, ...(Array.isArray(sx) ? sx : [sx])]}
     >
       {children}
     </Typography>
   );
 };
+
+export default Heading;

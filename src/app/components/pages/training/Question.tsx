@@ -1,8 +1,8 @@
 'use client';
 
 import Box from '@mui/material/Box';
-import { PageLayout } from '@/app/components/organisms/PageLayout';
-import { KarutaPlayingContainer } from '@/app/containers/organisms/KarutaPlayingContainer';
+import PageLayout from '@/app/components/organisms/PageLayout';
+import KarutaPlayingContainer from '@/app/containers/organisms/KarutaPlayingContainer';
 
 import { useAppSelector } from '@/lib/hooks';
 import { selectCondition } from '@/lib/features/question/questionSlice';
@@ -27,12 +27,12 @@ export const TrainingQuestionClientPage = () => {
           alignItems: 'center',
           flexDirection: 'column',
           boxSizing: 'border-box',
-          padding: 2,
+          p: 2,
           width: '100%',
-          minHeight: `calc(100vh - ${HEIGHT_HEADER})`,
           backgroundImage: `url(/question/tatami_part.png)`,
-          '@media screen and (min-width:600px)': {
-            minHeight: `calc(100vh - ${HEIGHT_HEADER_WIDE})`,
+          minHeight: {
+            xs: `calc(100vh - ${HEIGHT_HEADER})`,
+            sm: `calc(100vh - ${HEIGHT_HEADER_WIDE})`,
           },
         }}
       >

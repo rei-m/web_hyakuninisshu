@@ -5,7 +5,7 @@ import SearchIcon from '@mui/icons-material/Search';
 import { useAppDispatch } from '@/lib/hooks';
 import { openFilter } from '@/lib/features/material/materialSlice';
 
-export const SearchButton = () => {
+const SearchButton = () => {
   const dispatch = useAppDispatch();
 
   return (
@@ -22,3 +22,5 @@ export const SearchButton = () => {
     </IconButton>
   );
 };
+
+export default SearchButton;

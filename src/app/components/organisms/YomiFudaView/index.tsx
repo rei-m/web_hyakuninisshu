@@ -1,9 +1,11 @@
-import { useState } from 'react';
-import Box from '@mui/material/Box';
-import { Phrase, SPACE } from './Phrase';
-
 import type { YomiFuda } from '@/domains/models';
 import type { SxAppProps } from '@/theme';
+
+import { useState } from 'react';
+
+import Box from '@mui/material/Box';
+import Phrase, { SPACE } from './Phrase';
+import { FONT_SIZE } from '@/theme';
 
 type Size = 's' | 'm' | 'l';
 
@@ -16,12 +18,6 @@ const RATIO_MAP = {
   l: RATIO_L,
 } as const;
 
-const FONT_SIEZ_MAP = {
-  s: '1.4rem',
-  m: '1.6rem',
-  l: '1.8rem',
-} as const;
-
 export type YomiFudaViewProps = {
   yomiFuda: YomiFuda;
   answered: boolean;
@@ -30,7 +26,7 @@ export type YomiFudaViewProps = {
   sx?: SxAppProps;
 };
 
-export type PresenterProps = {
+export type YomiFudaViewPresenterProps = {
   firstLine: string;
   secondLine: string;
   thirdLine: string;
@@ -40,7 +36,7 @@ export type PresenterProps = {
   onAnimationEnd: () => void;
 };
 
-export type ContainerProps = YomiFudaViewProps & { presenter: React.FC<PresenterProps> };
+export type YomiFudaViewContainerProps = YomiFudaViewProps & { presenter: React.FC<YomiFudaViewPresenterProps> };
 
 const adjustDisplayText = (text: string, startIndex: number, currentPosition: number) => {
   if (currentPosition < startIndex) {
@@ -67,7 +63,7 @@ export const YomiFudaPresenter = ({
   size = 'm',
   sx,
   onAnimationEnd,
-}: PresenterProps) => (
+}: YomiFudaViewPresenterProps) => (
   <Box
     sx={[
       {
@@ -81,7 +77,6 @@ export const YomiFudaPresenter = ({
         borderRadius: 2,
         width: `${120 * RATIO_MAP[size]}px`,
         height: `${205 * RATIO_MAP[size]}px`,
-        fontFamily: '"Sawarabi Mincho"',
       },
       ...(Array.isArray(sx) ? sx : [sx]),
     ]}
@@ -93,11 +88,11 @@ export const YomiFudaPresenter = ({
         justifyContent: 'center',
       }}
     >
-      <Phrase text={firstLine} duration={duration} fontSize={FONT_SIEZ_MAP[size]} onAnimationEnd={onAnimationEnd} />
+      <Phrase text={firstLine} duration={duration} fontSize={FONT_SIZE[size]} onAnimationEnd={onAnimationEnd} />
       <Phrase
         text={secondLine}
         duration={duration}
-        fontSize={FONT_SIEZ_MAP[size]}
+        fontSize={FONT_SIZE[size]}
         onAnimationEnd={onAnimationEnd}
         sx={{
           paddingTop: `${8 * 3 * RATIO_MAP[size]}px`,
@@ -108,7 +103,7 @@ export const YomiFudaPresenter = ({
       <Phrase
         text={thirdLine}
         duration={duration}
-        fontSize={FONT_SIEZ_MAP[size]}
+        fontSize={FONT_SIZE[size]}
         onAnimationEnd={onAnimationEnd}
         sx={{
           paddingTop: `${8 * 6 * RATIO_MAP[size]}px`,
@@ -118,7 +113,14 @@ export const YomiFudaPresenter = ({
   </Box>
 );
 
-export const YomiFudaContainer = ({ yomiFuda, answered, duration, size, sx, presenter }: ContainerProps) => {
+export const YomiFudaContainer = ({
+  yomiFuda,
+  answered,
+  duration,
+  size,
+  sx,
+  presenter,
+}: YomiFudaViewContainerProps) => {
   const { shoku, niku, sanku } = yomiFuda;
   const durationOrAnswered = answered ? 0 : duration;
 
@@ -146,6 +148,6 @@ export const YomiFudaContainer = ({ yomiFuda, answered, duration, size, sx, pres
   });
 };
 
-export const YomiFudaView = (props: YomiFudaViewProps) => (
-  <YomiFudaContainer presenter={YomiFudaPresenter} {...props} />
-);
+const YomiFudaView = (props: YomiFudaViewProps) => <YomiFudaContainer presenter={YomiFudaPresenter} {...props} />;
+
+export default YomiFudaView;

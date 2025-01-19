@@ -1,8 +1,8 @@
 import AppBar from '@mui/material/AppBar';
 import Toolbar from '@mui/material/Toolbar';
-import { Heading } from '@/app/components/atoms/Heading';
-import { BackButton } from './BackButton';
-import { SearchButton } from './SearchButton';
+import Heading from '@/app/components/atoms/Heading';
+import SearchButton from '@/app/containers/organisms/Header/SearchButton';
+import BackButton from './BackButton';
 
 export type HeaderProps = {
   title: string;
@@ -10,7 +10,7 @@ export type HeaderProps = {
   isDisplaySearch?: boolean;
 };
 
-export const Header = (props: HeaderProps) => (
+const Header = (props: HeaderProps) => (
   <AppBar elevation={1} sx={{ zIndex: 3 }}>
     <Toolbar>
       {!!props.backUrl && <BackButton backUrl={props.backUrl} />}
@@ -21,3 +21,5 @@ export const Header = (props: HeaderProps) => (
     </Toolbar>
   </AppBar>
 );
+
+export default Header;

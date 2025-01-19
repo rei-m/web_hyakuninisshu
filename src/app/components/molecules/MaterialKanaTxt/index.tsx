@@ -1,7 +1,7 @@
-import Typography from '@mui/material/Typography';
-
 import type { Karuta } from '@/domains/models';
 import type { SxAppProps } from '@/theme';
+
+import Typography from '@mui/material/Typography';
 
 export type MaterialKanaTxtProps = {
   karuta: Karuta;
@@ -9,7 +9,7 @@ export type MaterialKanaTxtProps = {
   sx?: SxAppProps;
 };
 
-export const MaterialKanaTxt = ({ karuta, separate = <br />, sx }: MaterialKanaTxtProps) => {
+const MaterialKanaTxt = ({ karuta, separate = <br />, sx }: MaterialKanaTxtProps) => {
   const { kimariji, shoku, niku, sanku } = karuta;
   const modKimariji = shoku.kana.length - kimariji;
   return modKimariji >= 0 ? (
@@ -35,3 +35,5 @@ export const MaterialKanaTxt = ({ karuta, separate = <br />, sx }: MaterialKanaT
     </Typography>
   );
 };
+
+export default MaterialKanaTxt;

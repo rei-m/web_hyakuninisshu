@@ -1,8 +1,10 @@
-import Box from '@mui/material/Box';
-import { VerticalTxt } from '@/app/components/atoms/VerticalTxt';
-
 import type { Karuta } from '@/domains/models';
 import type { SxAppProps } from '@/theme';
+
+import Box from '@mui/material/Box';
+import VerticalTxt from '@/app/components/atoms/VerticalTxt';
+
+import { FONT_SIZE } from '@/theme';
 
 type Size = 's' | 'm' | 'l';
 
@@ -66,20 +68,14 @@ const CREATOR_STYLE_MAP = {
   },
 };
 
-const FONT_SIEZ_MAP = {
-  s: '1.4rem',
-  m: '1.6rem',
-  l: '1.8rem',
-} as const;
-
-export const Fuda = ({ karuta, size = 'm', sx }: FudaProps) => (
+const Fuda = ({ karuta, size = 'm', sx }: FudaProps) => (
   <Box
     sx={[
       {
         display: 'flex',
         justifyContent: 'center',
         alignItems: 'center',
-        backgroundColor: '#fffff0',
+        backgroundColor: 'background.default',
         borderStyle: 'solid',
         borderColor: 'primary.dark',
         borderRadius: 2,
@@ -98,50 +94,50 @@ export const Fuda = ({ karuta, size = 'm', sx }: FudaProps) => (
         justifyContent: 'center',
       }}
     >
-      <VerticalTxt fontSize={FONT_SIEZ_MAP[size]}>{karuta.shoku.kanji}</VerticalTxt>
+      <VerticalTxt fontSize={FONT_SIZE[size]}>{karuta.shoku.kanji}</VerticalTxt>
       <VerticalTxt
-        fontSize={FONT_SIEZ_MAP[size]}
+        fontSize={FONT_SIZE[size]}
         sx={{
-          paddingTop: `${PHRASE_STYLE_MAP[size].paddingUnit * 3}px`,
-          marginRight: `${PHRASE_STYLE_MAP[size].marginRight}px`,
+          pt: `${PHRASE_STYLE_MAP[size].paddingUnit * 3}px`,
+          mr: `${PHRASE_STYLE_MAP[size].marginRight}px`,
         }}
       >
         {karuta.niku.kanji}
       </VerticalTxt>
       <VerticalTxt
-        fontSize={FONT_SIEZ_MAP[size]}
+        fontSize={FONT_SIZE[size]}
         sx={{
-          paddingTop: `${PHRASE_STYLE_MAP[size].paddingUnit * 6}px`,
-          marginRight: `${PHRASE_STYLE_MAP[size].marginRight}px`,
+          pt: `${PHRASE_STYLE_MAP[size].paddingUnit * 6}px`,
+          mr: `${PHRASE_STYLE_MAP[size].marginRight}px`,
         }}
       >
         {karuta.sanku.kanji}
       </VerticalTxt>
       <VerticalTxt
-        fontSize={FONT_SIEZ_MAP[size]}
+        fontSize={FONT_SIZE[size]}
         sx={{
-          paddingTop: `${PHRASE_STYLE_MAP[size].paddingUnit * 4}px`,
-          marginRight: `${PHRASE_STYLE_MAP[size].marginRight}px`,
+          pt: `${PHRASE_STYLE_MAP[size].paddingUnit * 4}px`,
+          mr: `${PHRASE_STYLE_MAP[size].marginRight}px`,
         }}
       >
         {karuta.shiku.kanji}
       </VerticalTxt>
       <VerticalTxt
-        fontSize={FONT_SIEZ_MAP[size]}
+        fontSize={FONT_SIZE[size]}
         sx={{
-          paddingTop: `${PHRASE_STYLE_MAP[size].paddingUnit * 7}px`,
-          marginRight: `${PHRASE_STYLE_MAP[size].marginRight}px`,
+          pt: `${PHRASE_STYLE_MAP[size].paddingUnit * 7}px`,
+          mr: `${PHRASE_STYLE_MAP[size].marginRight}px`,
         }}
       >
         {karuta.kekku.kanji}
       </VerticalTxt>
       <VerticalTxt
-        fontSize={FONT_SIEZ_MAP[size]}
+        fontSize={FONT_SIZE[size]}
         sx={{
           alignSelf: 'flex-end',
           fontSize: CREATOR_STYLE_MAP[size].fontSize,
           lineHeight: CREATOR_STYLE_MAP[size].lineHeight,
-          marginRight: CREATOR_STYLE_MAP[size].marginRight,
+          mr: CREATOR_STYLE_MAP[size].marginRight,
         }}
       >
         {karuta.creator}
@@ -149,3 +145,5 @@ export const Fuda = ({ karuta, size = 'm', sx }: FudaProps) => (
     </Box>
   </Box>
 );
+
+export default Fuda;

@@ -1,13 +1,15 @@
 'use client';
 
+import type { TrainingConditionAnim, TrainingConditionDisplayStyle } from '@/domains/models';
+
 import { useEffect } from 'react';
 import { useRouter } from 'next/navigation';
 
 import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
 import CircularProgress from '@mui/material/CircularProgress';
-import { KarutaPlaying } from '@/app/components/organisms/KarutaPlaying';
-import { KarutaPlayingCorrect } from '@/app/components/organisms/KarutaPlayingCorrect';
+import KarutaPlaying from '@/app/components/organisms/KarutaPlaying';
+import KarutaPlayingCorrect from '@/app/components/organisms/KarutaPlayingCorrect';
 
 import { useAppDispatch, useAppSelector } from '@/lib/hooks';
 import {
@@ -20,8 +22,6 @@ import {
 } from '@/lib/features/question/questionSlice';
 import { conditionAnimToDulation } from '@/domains/models/TrainingCondition';
 
-import type { TrainingConditionAnim, TrainingConditionDisplayStyle } from '@/domains/models';
-
 export type KarutaPlayingContainerProps = {
   kamiNoKuStyle: TrainingConditionDisplayStyle;
   shimoNoKuStyle: TrainingConditionDisplayStyle;
@@ -29,7 +29,7 @@ export type KarutaPlayingContainerProps = {
   resultUrl: string;
 };
 
-export const KarutaPlayingContainer = ({
+const KarutaPlayingContainer = ({
   kamiNoKuStyle,
   shimoNoKuStyle,
   questionAnim,
@@ -107,3 +107,5 @@ export const KarutaPlayingContainer = ({
     </Box>
   );
 };
+
+export default KarutaPlayingContainer;

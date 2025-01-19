@@ -1,14 +1,14 @@
 'use client';
 
 import dynamic from 'next/dynamic';
+
 import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
-import { PageLayout } from '@/app/components/organisms/PageLayout';
+import PageLayout from '@/app/components/organisms/PageLayout';
+import ReadingContent from '@/app/components/molecules/ReadingContent';
+import AppStoreBanner from '@/app/components/atoms/AppStoreBanner';
+import PlayStoreBanner from '@/app/components/atoms/PlayStoreBanner';
 const Ad = dynamic(() => import('@/app/components/organisms/Ad'), { ssr: false });
-
-import { ReadingContent } from '@/app/components/molecules/ReadingContent';
-import { AppStoreBanner } from '@/app/components/atoms/AppStoreBanner';
-import { PlayStoreBanner } from '@/app/components/atoms/PlayStoreBanner';
 
 import { ROUTING } from '@/configs/routing';
 
@@ -23,10 +23,9 @@ const AboutClientPage = () => (
       component={'section'}
       sx={{
         boxSizing: 'border-box',
-        padding: 2,
         maxWidth: 960,
-        margin: 'auto',
-        backgroundColor: '#fffff0',
+        p: 2,
+        m: 'auto',
       }}
     >
       <ReadingContent title={`サイトについて`}>

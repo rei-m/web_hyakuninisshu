@@ -1,5 +1,5 @@
 import { Meta, StoryObj } from '@storybook/react';
-import { VerticalTxt } from './index';
+import VerticalTxt from './index';
 
 export default {
   title: 'atoms/VerticalTxt',

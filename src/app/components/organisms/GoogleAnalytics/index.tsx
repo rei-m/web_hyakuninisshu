@@ -2,12 +2,13 @@
 
 import { useEffect } from 'react';
 
-import { usePathname, useSearchParams } from 'next/navigation';
 import Script from 'next/script';
+
+import { usePathname, useSearchParams } from 'next/navigation';
 
 const GA_TAG_ID = 'UA-46787228-6';
 
-export const GoogleAnalytics = () => {
+const GoogleAnalytics = () => {
   const pathname = usePathname();
   const searchParams = useSearchParams();
 
@@ -36,3 +37,5 @@ export const GoogleAnalytics = () => {
     </>
   );
 };
+
+export default GoogleAnalytics;

@@ -1,10 +1,9 @@
 import type { NextPage, Metadata, ResolvingMetadata } from 'next';
+import type { KarutaNo } from '@/domains/models';
 
+import KarutasNoClientPage from '@/app/components/pages/karutas/No';
 import { karutaNoToJPNText } from '@/domains/models/KarutaNo';
 import { karutaRepository } from '@/domains/repositories';
-
-import type { KarutaNo } from '@/domains/models';
-import KarutasNoClientPage from '@/app/components/pages/karutas/No';
 
 type KarutasNoPageProps = {
   params: Promise<{

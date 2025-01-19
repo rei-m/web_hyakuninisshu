@@ -1,6 +1,8 @@
 'use client';
 
-import { createTheme, SxProps, Theme } from '@mui/material/styles';
+import type { SxProps, Theme } from '@mui/material/styles';
+
+import createTheme from '@mui/material/styles/createTheme';
 import createPalette from '@mui/material/styles/createPalette';
 
 const palette = createPalette({
@@ -15,6 +17,9 @@ const palette = createPalette({
     main: '#ff9100',
     dark: '#c56200',
     contrastText: '#fff',
+  },
+  background: {
+    default: '#fffff0',
   },
 });
 
@@ -37,13 +42,6 @@ export const HEIGHT_HEADER_WIDE = '64px';
 export const HEIGHT_BOTTOM_NAV = '56px';
 export const HEIGHT_BOTTOM_NAV_WIDE = '64px';
 
-export const fontColor = {
-  default: '#000',
-  error: '#f00',
-  light: '#fff',
-  link: '#106ba3',
-} as const;
-
 export const theme = createTheme({
   palette: palette,
   typography: {
@@ -55,7 +53,7 @@ export const theme = createTheme({
         html: {
           fontSize: '62.5%',
           color: 'rgb(0, 0, 0)',
-          backgroundColor: '#fffff0',
+          backgroundColor: palette.background.default,
         },
         a: {
           color: '#106ba3',
@@ -65,14 +63,14 @@ export const theme = createTheme({
     MuiTypography: {
       styleOverrides: {
         root: {
-          fontSize: '1.4rem',
+          fontSize: FONT_SIZE.s,
         },
       },
     },
     MuiButton: {
       styleOverrides: {
         root: {
-          fontSize: '1.6rem',
+          fontSize: FONT_SIZE.m,
         },
         outlined: {
           backgroundColor: palette.grey[100],

@@ -1,5 +1,5 @@
 import { Meta, StoryObj } from '@storybook/react';
-import { MaterialListFilterView } from './index';
+import MaterialListFilterView from './index';
 import { fn } from '@storybook/test';
 
 export default {

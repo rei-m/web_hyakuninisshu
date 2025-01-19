@@ -21,7 +21,7 @@ const ASSETS = {
   },
 } as const;
 
-export const PlayStoreBanner = ({ type = 'normal' }: PlayStoreBannerProps) => (
+const PlayStoreBanner = ({ type = 'normal' }: PlayStoreBannerProps) => (
   <Box sx={{ width: 140, display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'start' }}>
     <a href={ASSETS[type].storeUrl} target="_blank" rel="noreferrer">
       <Image
@@ -38,3 +38,5 @@ export const PlayStoreBanner = ({ type = 'normal' }: PlayStoreBannerProps) => (
     </a>
   </Box>
 );
+
+export default PlayStoreBanner;

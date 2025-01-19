@@ -34,7 +34,7 @@ export class CreateQuestionListService {
     }
 
     const startId = new Date().getTime();
-    const questionList: Array<Question> = randomizeArray(targetKarutaList).map((karuta, i) => {
+    const questionList: ReadonlyArray<Question> = randomizeArray(targetKarutaList).map((karuta, i) => {
       const id = (startId + i) as QuestionId;
 
       const correctAnswerKarutaNo: KarutaNo = karuta.no;

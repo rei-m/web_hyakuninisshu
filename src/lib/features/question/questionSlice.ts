@@ -1,4 +1,3 @@
-import { createAppSlice } from 'lib/createAppSlice';
 import { createSelector, type PayloadAction } from '@reduxjs/toolkit';
 import type {
   Karuta,
@@ -10,6 +9,8 @@ import type {
   TrainingConditionDisplayStyle,
   YomiFuda,
 } from '@/domains/models';
+
+import { createAppSlice } from 'lib/createAppSlice';
 import { COLOR_LIST } from '@/domains/models/Color';
 import { KIMARIJI_LIST } from '@/domains/models/Kimariji';
 import { CreateQuestionListService } from '@/domains/services';
@@ -269,6 +270,8 @@ export const questionSlice = createAppSlice({
             isCorrect: question.answer.isCorrect,
           });
         });
+
+        answerList.sort((a, b) => (a.correctKaruta.no < b.correctKaruta.no ? -1 : 1));
 
         const averageAnswerSecond = totalAnswerMilliSec / 1000 / questionData.allIdList.length;
 

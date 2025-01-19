@@ -1,7 +1,7 @@
+import type { SxAppProps } from '@/theme';
+
 import Box from '@mui/material/Box';
 import { ExamIcon, MaterialIcon, OtherIcon, TrainingIcon } from '@/app/components/atoms/MenuIcon';
-
-import type { SxAppProps } from '@/theme';
 
 export type MenuType = 'training' | 'exam' | 'material' | 'other';
 
@@ -25,7 +25,7 @@ const ICON_MAP = {
   other: OtherIcon,
 } as const;
 
-export const NavigationItem = ({ menuType, active, sx }: NavigationItemProps) => {
+const NavigationItem = ({ menuType, active, sx }: NavigationItemProps) => {
   const Icon = ICON_MAP[menuType];
   return (
     <Box
@@ -42,7 +42,7 @@ export const NavigationItem = ({ menuType, active, sx }: NavigationItemProps) =>
           alignItems: 'center',
           justifyContent: 'center',
           '& svg': {
-            marginBottom: '18px',
+            mb: '18px',
           },
           '&:after': {
             content: `'${MENU_TYPE_MAP[menuType]}'`,
@@ -60,3 +60,5 @@ export const NavigationItem = ({ menuType, active, sx }: NavigationItemProps) =>
     </Box>
   );
 };
+
+export default NavigationItem;

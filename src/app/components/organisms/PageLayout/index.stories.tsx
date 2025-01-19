@@ -1,5 +1,5 @@
 import { Meta, StoryObj } from '@storybook/react';
-import { PageLayout } from './index';
+import PageLayout from './index';
 
 export default {
   title: 'organisms/PageLayout',

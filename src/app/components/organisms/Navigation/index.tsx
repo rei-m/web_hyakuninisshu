@@ -1,10 +1,12 @@
+import type { MenuType } from '@/app/components/molecules/NavigationItem';
+import type { SxAppProps } from '@/theme';
+
 import Link from 'next/link';
 import Box from '@mui/material/Box';
-import { NavigationItem, MenuType } from '@/app/components/molecules/NavigationItem';
+import NavigationItem from '@/app/components/molecules/NavigationItem';
+
 import { WIDTH_SIDE_NAV } from '@/theme';
 import { ROUTING } from '@/configs/routing';
-
-import type { SxAppProps } from '@/theme';
 
 export type NavigationProps = {
   currentMenuType?: MenuType;
@@ -12,15 +14,17 @@ export type NavigationProps = {
 };
 
 const LINK_SX: SxAppProps = {
-  flexGrow: 1,
-  width: '100%',
-  '@media screen and (min-width:600px)': {
-    flexGrow: 0,
-    height: WIDTH_SIDE_NAV,
+  flexGrow: {
+    xs: 1,
+    sm: 0,
+  },
+  width: {
+    xs: '100%',
+    sm: WIDTH_SIDE_NAV,
   },
 };
 
-export const Navigation = ({ currentMenuType, sx }: NavigationProps) => (
+const Navigation = ({ currentMenuType, sx }: NavigationProps) => (
   <Box
     component={'nav'}
     sx={[
@@ -47,3 +51,5 @@ export const Navigation = ({ currentMenuType, sx }: NavigationProps) => (
     </Box>
   </Box>
 );
+
+export default Navigation;

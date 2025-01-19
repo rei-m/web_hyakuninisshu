@@ -1,28 +1,30 @@
 import Box from '@mui/material/Box';
-import { MenuLink } from '@/app/components/molecules/MenuLink';
+import MenuLink from '@/app/components/molecules/MenuLink';
 import { ExamIcon, MaterialIcon, TrainingIcon } from '@/app/components/atoms/MenuIcon';
 import { ROUTING } from '@/configs/routing';
 
 import type { SxAppProps } from '@/theme';
 
 const MENU_LINK_SX: SxAppProps = {
-  margin: 2,
+  m: 2,
   boxShadow: 1,
-  flexGrow: 1,
-  '@media screen and (min-width:600px)': {
-    width: 224,
-    flexGrow: 0,
+  width: {
+    sm: 224,
+  },
+  flexGrow: {
+    xs: 1,
+    sm: 0,
   },
 };
 
-export const MainMenuList = () => (
+const MainMenuList = () => (
   <Box
     sx={{
       display: 'flex',
-      flexDirection: 'column',
       justifyContent: 'center',
-      '@media screen and (min-width:600px)': {
-        flexDirection: 'row',
+      flexDirection: {
+        xs: 'column',
+        sm: 'row',
       },
     }}
   >
@@ -49,3 +51,5 @@ export const MainMenuList = () => (
     />
   </Box>
 );
+
+export default MainMenuList;

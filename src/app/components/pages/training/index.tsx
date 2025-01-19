@@ -1,14 +1,15 @@
 'use client';
 
-import { useEffect } from 'react';
-import { useRouter } from 'next/navigation';
 import dynamic from 'next/dynamic';
 
+import { useEffect } from 'react';
+import { useRouter } from 'next/navigation';
+
 import Box from '@mui/material/Box';
-import { PageLayout } from '@/app/components/organisms/PageLayout';
+import PageLayout from '@/app/components/organisms/PageLayout';
+import Heading from '@/app/components/atoms/Heading';
+import TrainingMenuForm from '@/app/containers/organisms/TrainingMenuForm';
 const Ad = dynamic(() => import('@/app/components/organisms/Ad'), { ssr: false });
-import { Heading } from '@/app/components/atoms/Heading';
-import { TrainingMenuForm } from '@/app/containers/organisms/TrainingMenuForm';
 
 import { useAppSelector } from '@/lib/hooks';
 import { selectQuestionState } from '@/lib/features/question/questionSlice';
@@ -27,20 +28,11 @@ export const TrainingClientPage = () => {
 
   return (
     <PageLayout title={`百人一首 - 練習 -`} isDisplayNav currentMenuType="training" backUrl={ROUTING.root()}>
-      <Box
-        component={'section'}
-        sx={{
-          boxSizing: 'border-box',
-          padding: 2,
-          width: '100%',
-          backgroundColor: '#fffff0',
-          textAlign: 'center',
-        }}
-      >
-        <Heading level={2} sx={{ margin: 2 }}>
+      <Box component={'section'} sx={{ boxSizing: 'border-box', p: 2, width: '100%', textAlign: 'center' }}>
+        <Heading level={2} sx={{ m: 2 }}>
           出題設定
         </Heading>
-        <Ad type={`fixed`} sx={{ margin: 'auto', mb: 2 }} />
+        <Ad type={`fixed`} sx={{ m: 'auto', mb: 2 }} />
         <TrainingMenuForm />
       </Box>
     </PageLayout>

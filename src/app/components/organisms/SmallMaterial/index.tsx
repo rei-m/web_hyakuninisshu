@@ -1,14 +1,14 @@
+import type { Karuta } from '@/domains/models';
+import { FONT_SIZE, type SxAppProps } from '@/theme';
+
 import Link from 'next/link';
 import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
+import MaterialKanjiTxt from '@/app/components/molecules/MaterialKanjiTxt';
+import KarutaImage from '@/app/components/atoms/KarutaImage';
 
-import { MaterialKanjiTxt } from '@/app/components/molecules/MaterialKanjiTxt';
-import { KarutaImage } from '@/app/components/atoms/KarutaImage';
 import { karutaNoToJPNText } from '@/domains/models/KarutaNo';
 import { ROUTING } from '@/configs/routing';
-
-import type { Karuta } from '@/domains/models';
-import type { SxAppProps } from '@/theme';
 
 export type SmallMaterialProps = {
   karuta: Karuta;
@@ -17,7 +17,7 @@ export type SmallMaterialProps = {
   sx?: SxAppProps;
 };
 
-export const SmallMaterial = ({ karuta, image = true, separate = <br />, sx }: SmallMaterialProps) => (
+const SmallMaterial = ({ karuta, image = true, separate = <br />, sx }: SmallMaterialProps) => (
   <Box
     component={Link}
     href={ROUTING.karutasShow(karuta.no)}
@@ -49,9 +49,7 @@ export const SmallMaterial = ({ karuta, image = true, separate = <br />, sx }: S
           marginRight: 1,
         }}
       >
-        <Typography sx={{ marginBottom: 0.5, fontSize: '1rem' }}>
-          {karutaNoToJPNText({ karutaNo: karuta.no })}
-        </Typography>
+        <Typography sx={{ mb: 0.5, fontSize: FONT_SIZE.sss }}>{karutaNoToJPNText({ karutaNo: karuta.no })}</Typography>
         <KarutaImage karuta={karuta} width={40} />
       </Box>
     )}
@@ -62,8 +60,8 @@ export const SmallMaterial = ({ karuta, image = true, separate = <br />, sx }: S
         boxSizing: 'border-box',
       }}
     >
-      {!image && <Typography sx={{ fontSize: '1rem' }}>{karutaNoToJPNText({ karutaNo: karuta.no })}</Typography>}
-      <MaterialKanjiTxt karuta={karuta} separate={separate} sx={{ fontSize: '1.4rem' }} />
+      {!image && <Typography sx={{ fontSize: FONT_SIZE.sss }}>{karutaNoToJPNText({ karutaNo: karuta.no })}</Typography>}
+      <MaterialKanjiTxt karuta={karuta} separate={separate} sx={{ fontSize: FONT_SIZE.s }} />
       <Typography
         component={`span`}
         sx={{
@@ -78,3 +76,5 @@ export const SmallMaterial = ({ karuta, image = true, separate = <br />, sx }: S
     </Box>
   </Box>
 );
+
+export default SmallMaterial;

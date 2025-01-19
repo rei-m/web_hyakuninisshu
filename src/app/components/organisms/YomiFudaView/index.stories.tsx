@@ -1,5 +1,5 @@
 import { Meta, StoryObj } from '@storybook/react';
-import { YomiFudaView } from './index';
+import YomiFudaView from './index';
 import { KARUTA_LIST } from '@/assets/karuta';
 
 export default {

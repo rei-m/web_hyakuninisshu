@@ -1,5 +1,5 @@
 import { Meta, StoryObj } from '@storybook/react';
-import { ReadingContent } from './index';
+import ReadingContent from './index';
 
 export default {
   title: 'molecules/ReadingContent',

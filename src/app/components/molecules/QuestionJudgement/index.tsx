@@ -1,11 +1,13 @@
+import type { Karuta } from '@/domains/models';
+import type { SxAppProps } from '@/theme';
+
 import Image from 'next/image';
 import ButtonBase from '@mui/material/ButtonBase';
 import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
 import { karutaNoToJPNText } from '@/domains/models/KarutaNo';
 
-import type { Karuta } from '@/domains/models';
-import type { SxAppProps } from '@/theme';
+import { FONT_SIZE } from '@/theme';
 
 export type QuestionJudgementProps = {
   karuta: Karuta;
@@ -14,7 +16,7 @@ export type QuestionJudgementProps = {
   onClick: (karuta: Karuta) => void;
 };
 
-export const QuestionJudgement = ({ karuta, correct, sx, onClick }: QuestionJudgementProps) => (
+const QuestionJudgement = ({ karuta, correct, sx, onClick }: QuestionJudgementProps) => (
   <ButtonBase
     onClick={() => {
       onClick(karuta);
@@ -31,7 +33,7 @@ export const QuestionJudgement = ({ karuta, correct, sx, onClick }: QuestionJudg
       ...(Array.isArray(sx) ? sx : [sx]),
     ]}
   >
-    <Typography component={'span'} sx={{ fontSize: '1.2rem' }}>
+    <Typography component={'span'} sx={{ fontSize: FONT_SIZE.ss }}>
       {karutaNoToJPNText({ karutaNo: karuta.no })}
     </Typography>
     <Box
@@ -55,3 +57,5 @@ export const QuestionJudgement = ({ karuta, correct, sx, onClick }: QuestionJudg
     </Box>
   </ButtonBase>
 );
+
+export default QuestionJudgement;

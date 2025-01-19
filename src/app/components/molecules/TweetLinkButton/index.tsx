@@ -6,7 +6,7 @@ export type TweetLinkButtonProps = {
   url?: string;
 };
 
-export const TweetLinkButton = ({ text, hashTag, url }: TweetLinkButtonProps) => {
+const TweetLinkButton = ({ text, hashTag, url }: TweetLinkButtonProps) => {
   const tweetButtonEl = useRef<HTMLAnchorElement>(null);
   useLayoutEffect(() => {
     window.twttr?.widgets.load(tweetButtonEl.current);
@@ -27,3 +27,5 @@ export const TweetLinkButton = ({ text, hashTag, url }: TweetLinkButtonProps) =>
     </a>
   );
 };
+
+export default TweetLinkButton;

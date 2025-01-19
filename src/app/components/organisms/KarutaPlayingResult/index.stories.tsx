@@ -1,5 +1,5 @@
 import { Meta, StoryObj } from '@storybook/react';
-import { KarutaPlayingResult } from './index';
+import KarutaPlayingResult from './index';
 import { fn } from '@storybook/test';
 
 export default {

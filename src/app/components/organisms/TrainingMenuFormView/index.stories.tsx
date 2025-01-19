@@ -1,5 +1,5 @@
 import { Meta, StoryObj } from '@storybook/react';
-import { TrainingMenuFormView } from './index';
+import TrainingMenuFormView from './index';
 import { fn } from '@storybook/test';
 
 export default {

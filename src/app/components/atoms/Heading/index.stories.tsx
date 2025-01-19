@@ -1,5 +1,5 @@
 import { Meta, StoryObj } from '@storybook/react';
-import { Heading } from './index';
+import Heading from './index';
 
 export default {
   title: 'atoms/Heading',

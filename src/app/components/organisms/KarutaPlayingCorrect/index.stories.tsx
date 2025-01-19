@@ -1,6 +1,6 @@
 import { Meta, StoryObj } from '@storybook/react';
 import { fn } from '@storybook/test';
-import { KarutaPlayingCorrect } from './index';
+import KarutaPlayingCorrect from './index';
 import { QuestionId } from '@/domains/models';
 import { KARUTA_LIST } from '@/assets/karuta';
 

@@ -1,4 +1,3 @@
-import { useMemo, useState } from 'react';
 import type {
   TrainingCondition,
   TrainingConditionAnim,
@@ -8,6 +7,8 @@ import type {
   TrainingConditionRangeFrom,
   TrainingConditionRangeTo,
 } from '@/domains/models';
+
+import { useMemo, useState } from 'react';
 
 export type Errors = {
   range?: string;

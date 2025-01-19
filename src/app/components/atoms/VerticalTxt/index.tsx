@@ -1,10 +1,8 @@
-import Typography from '@mui/material/Typography';
-
-import type { TypographyProps } from '@mui/material/Typography';
+import Typography, { type TypographyProps } from '@mui/material/Typography';
 
 export type VerticalTxtProps = Omit<TypographyProps, 'fontSize'> & Required<Pick<TypographyProps, 'fontSize'>>;
 
-export const VerticalTxt = (props: VerticalTxtProps) => (
+const VerticalTxt = (props: VerticalTxtProps) => (
   <Typography
     {...props}
     sx={[
@@ -15,3 +13,5 @@ export const VerticalTxt = (props: VerticalTxtProps) => (
     {props.children}
   </Typography>
 );
+
+export default VerticalTxt;

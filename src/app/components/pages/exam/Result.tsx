@@ -1,6 +1,7 @@
 'use client';
 
 import dynamic from 'next/dynamic';
+
 import { useEffect, useState } from 'react';
 import { useRouter } from 'next/navigation';
 
@@ -12,12 +13,11 @@ import CloseIcon from '@mui/icons-material/Close';
 import Dialog from '@mui/material/Dialog';
 import DialogTitle from '@mui/material/DialogTitle';
 import DialogContent from '@mui/material/DialogContent';
-
-import { PageLayout } from '@/app/components/organisms/PageLayout';
-import { KarutaPlayingResult } from '@/app/components/organisms/KarutaPlayingResult';
-import { Material } from '@/app/components/organisms/Material';
+import PageLayout from '@/app/components/organisms/PageLayout';
+import KarutaPlayingResult from '@/app/components/organisms/KarutaPlayingResult';
+import Material from '@/app/components/organisms/Material';
+import QuestionJudgement from '@/app/components/molecules/QuestionJudgement';
 const Ad = dynamic(() => import('@/app/components/organisms/Ad'), { ssr: false });
-import { QuestionJudgement } from '@/app/components/molecules/QuestionJudgement';
 
 import { useAppDispatch, useAppSelector } from '@/lib/hooks';
 import { restartTraining, selectQuestionResult } from '@/lib/features/question/questionSlice';
@@ -42,10 +42,10 @@ export const ExamResultClientPage = () => {
 
   return (
     <PageLayout
-      title={`百人一首 - 練習結果 -`}
+      title={`百人一首 - 腕試し結果 -`}
       isDisplayNav={false}
-      currentMenuType="training"
-      backUrl={ROUTING.trainingQuestion()}
+      currentMenuType="exam"
+      backUrl={ROUTING.examQuestion()}
     >
       <Box
         component={'section'}
@@ -55,13 +55,13 @@ export const ExamResultClientPage = () => {
           alignItems: 'center',
           flexDirection: 'column',
           boxSizing: 'border-box',
-          padding: 2,
+          p: 2,
           width: '100%',
-          minHeight: `calc(100vh - ${HEIGHT_HEADER})`,
           backgroundImage: `url(/question/tatami_part.png)`,
           textAlign: 'center',
-          '@media screen and (min-width:600px)': {
-            minHeight: `calc(100vh - ${HEIGHT_HEADER_WIDE})`,
+          minHeight: {
+            xs: `calc(100vh - ${HEIGHT_HEADER})`,
+            sm: `calc(100vh - ${HEIGHT_HEADER_WIDE})`,
           },
         }}
       >
@@ -83,12 +83,11 @@ export const ExamResultClientPage = () => {
                 display: 'flex',
                 justifyContent: 'space-between',
                 flexWrap: 'wrap',
-                backgroundColor: '#fffff0',
+                backgroundColor: 'background.default',
                 boxSizing: 'border-box',
                 boxShadow: 1,
                 borderRadius: 0.5,
-                mt: 2,
-                mb: 2,
+                my: 2,
               }}
             >
               {result.answerList.map((answer) => (
@@ -101,7 +100,7 @@ export const ExamResultClientPage = () => {
                 />
               ))}
               <Dialog onClose={() => setKaruta(undefined)} open={!!selectedKaruta}>
-                <DialogTitle sx={{ m: 0, p: 2 }}>正解</DialogTitle>
+                <DialogTitle sx={{ m: 0, p: 2, backgroundColor: 'background.default' }}>正解</DialogTitle>
                 <IconButton
                   aria-label="close"
                   onClick={() => setKaruta(undefined)}
@@ -114,7 +113,9 @@ export const ExamResultClientPage = () => {
                 >
                   <CloseIcon />
                 </IconButton>
-                <DialogContent dividers>{selectedKaruta && <Material karuta={selectedKaruta} />}</DialogContent>
+                <DialogContent dividers sx={{ backgroundColor: 'background.default' }}>
+                  {selectedKaruta && <Material karuta={selectedKaruta} />}
+                </DialogContent>
               </Dialog>
             </Box>
           </KarutaPlayingResult>
@@ -123,7 +124,7 @@ export const ExamResultClientPage = () => {
         ) : (
           <Box
             sx={{
-              backgroundColor: '#fffff0',
+              backgroundColor: 'background.default',
               padding: 4,
               borderRadius: 4,
             }}
