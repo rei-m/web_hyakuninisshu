@@ -6,6 +6,9 @@ import ToriFudaView from '@/app/components/organisms/ToriFudaView';
 import YomiFudaView from '@/app/components/organisms/YomiFudaView';
 import Ratio from '@/app/components/atoms/Ratio';
 
+import CheckCorrect from '@/assets/images/question/check_correct.png';
+import CheckIncorrect from '@/assets/images/question/check_incorrect.png';
+
 export type KarutaPlayingProps = {
   questionId: QuestionId;
   yomiFuda: YomiFuda;
@@ -96,7 +99,7 @@ const KarutaPlaying = ({
         }}
       >
         <Image
-          src={answer.isCorrect ? '/question/check_correct.png' : '/question/check_incorrect.png'}
+          src={answer.isCorrect ? CheckCorrect : CheckIncorrect}
           alt={answer.isCorrect ? '正解' : '不正解'}
           width={300}
           height={300}

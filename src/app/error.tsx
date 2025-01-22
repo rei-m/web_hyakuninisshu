@@ -7,6 +7,8 @@ import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
 import { FONT_SIZE } from '@/theme';
 
+import dogezaImage from '@/assets/images/dogeza_businessman.png';
+
 export default function Error({ error, reset }: { error: Error & { digest?: string }; reset: () => void }) {
   useEffect(() => {
     if (process.env.NODE_ENV !== 'production') {
@@ -29,7 +31,7 @@ export default function Error({ error, reset }: { error: Error & { digest?: stri
         予期せぬエラーが発生しました。時間をおいて再度お試しください。
       </Typography>
       <Image
-        src={'/dogeza_businessman.png'}
+        src={dogezaImage}
         width={200}
         height={200}
         style={{ marginTop: '32px' }}

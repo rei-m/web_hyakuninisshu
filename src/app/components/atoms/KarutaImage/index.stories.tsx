@@ -13,5 +13,6 @@ export const Default: Story = {
   args: {
     karuta: KARUTA_LIST[0],
     width: 200,
+    height: 280,
   },
 };

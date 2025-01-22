@@ -50,7 +50,7 @@ const SmallMaterial = ({ karuta, image = true, separate = <br />, sx }: SmallMat
         }}
       >
         <Typography sx={{ mb: 0.5, fontSize: FONT_SIZE.sss }}>{karutaNoToJPNText({ karutaNo: karuta.no })}</Typography>
-        <KarutaImage karuta={karuta} width={40} />
+        <KarutaImage karuta={karuta} width={40} height={57} />
       </Box>
     )}
     <Box
