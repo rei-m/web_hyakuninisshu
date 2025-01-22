@@ -7,6 +7,9 @@ import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
 import { karutaNoToJPNText } from '@/domains/models/KarutaNo';
 
+import CheckCorrect from '@/assets/images/question/check_correct.png';
+import CheckIncorrect from '@/assets/images/question/check_incorrect.png';
+
 import { FONT_SIZE } from '@/theme';
 
 export type QuestionJudgementProps = {
@@ -48,12 +51,7 @@ const QuestionJudgement = ({ karuta, correct, sx, onClick }: QuestionJudgementPr
         height: '100%',
       }}
     >
-      <Image
-        src={correct ? '/question/check_correct.png' : '/question/check_incorrect.png'}
-        alt={correct ? '正解' : '不正解'}
-        width={55}
-        height={55}
-      />
+      <Image src={correct ? CheckCorrect : CheckIncorrect} alt={correct ? '正解' : '不正解'} width={55} height={55} />
     </Box>
   </ButtonBase>
 );

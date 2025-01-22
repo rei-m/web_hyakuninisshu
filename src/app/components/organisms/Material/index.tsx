@@ -36,7 +36,7 @@ const Material = ({ karuta }: MaterialProps) => (
     }}
   >
     <Box sx={{ m: 1 }}>
-      <KarutaImage karuta={karuta} width={200} />
+      <KarutaImage karuta={karuta} width={200} height={280} />
     </Box>
     <Box sx={{ width: '100%', py: 1 }}>
       <Heading level={4} visualLevel={5} sx={{ textAlign: 'left' }}>
