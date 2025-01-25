@@ -1,6 +1,6 @@
 import type { Metadata, NextPage } from 'next';
 
-import { ExamResultClientPage } from '@/app/components/pages/exam/Result';
+import { ExamResultClientPage } from '@/components/pages/exam/Result';
 
 export const metadata: Metadata = {
   title: `百人一首 - 腕試し結果 -`,

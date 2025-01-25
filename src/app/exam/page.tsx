@@ -1,6 +1,6 @@
 import type { Metadata, NextPage } from 'next';
 
-import { ExamClientPage } from '@/app/components/pages/exam';
+import { ExamClientPage } from '@/components/pages/exam';
 import { METADATA_DEFAULT } from '@/configs/meta';
 
 const TITLE = `百人一首 - 腕試し -`;

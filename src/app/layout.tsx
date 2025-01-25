@@ -7,13 +7,13 @@ import ThemeProvider from '@mui/material/styles/ThemeProvider';
 import CssBaseline from '@mui/material/CssBaseline';
 
 import StoreProvider from '@/app/StoreProvider';
-import GoogleAnalytics from '@/app/components/organisms/GoogleAnalytics';
+import GoogleAnalytics from '@/components/organisms/GoogleAnalytics';
 
 import { Noto_Sans_JP } from 'next/font/google';
 
 import { METADATA_DEFAULT } from '@/configs/meta';
 
-import { theme } from '@/theme';
+import { theme } from '@/styles/theme';
 
 const notoSansJp = Noto_Sans_JP({
   weight: '400',

@@ -1,6 +1,6 @@
 import type { Metadata, NextPage } from 'next';
 
-import KarutasClientPage from '@/app/components/pages/karutas';
+import KarutasClientPage from '@/components/pages/karutas';
 
 import { METADATA_DEFAULT } from '@/configs/meta';
 
