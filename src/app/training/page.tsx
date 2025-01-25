@@ -1,6 +1,6 @@
 import type { Metadata, NextPage } from 'next';
 
-import { TrainingClientPage } from '@/app/components/pages/training';
+import { TrainingClientPage } from '@/components/pages/training';
 
 import { METADATA_DEFAULT } from '@/configs/meta';
 

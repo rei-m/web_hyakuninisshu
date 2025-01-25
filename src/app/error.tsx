@@ -5,7 +5,7 @@ import Image from 'next/image';
 import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
-import { FONT_SIZE } from '@/theme';
+import { FONT_SIZE } from '@/styles/constants';
 
 import dogezaImage from '@/assets/images/dogeza_businessman.png';
 
