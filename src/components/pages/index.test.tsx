@@ -1,11 +1,11 @@
 import '@testing-library/jest-dom';
 import { render, screen, waitFor } from '@testing-library/react';
-import Page from './page';
+import IndexPage from './index';
 
-describe('Page', () => {
+describe('pages/index', () => {
   it('renders a heading', async () => {
     await waitFor(() => {
-      render(<Page />);
+      render(<IndexPage />);
     });
 
     const heading = screen.getByRole('heading', { level: 1 });
