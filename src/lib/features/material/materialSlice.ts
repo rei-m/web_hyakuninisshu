@@ -1,12 +1,12 @@
 import type { PayloadAction } from '@reduxjs/toolkit';
-import type { Color, Kimariji } from '@/domains/models';
+import type { Color, Karuta, Kimariji } from '@/domains/models';
 
 import { createSelector } from '@reduxjs/toolkit';
 import { createAppSlice } from 'lib/createAppSlice';
 import { COLOR_LIST } from '@/domains/models/Color';
 import { KIMARIJI_LIST } from '@/domains/models/Kimariji';
-import { KARUTA_NO_MAX, KARUTA_NO_MIN } from '@/domains/models/KarutaNo';
-import { karutaRepository } from '@/domains/repositories';
+
+import { KARUTA_LIST } from '@/assets/karuta';
 
 export interface MaterialSliceState {
   karutasFilter: {
@@ -14,6 +14,7 @@ export interface MaterialSliceState {
     colorList: ReadonlyArray<{ color: Color; checked: boolean }>;
     kimarijiList: ReadonlyArray<{ kimariji: Kimariji; checked: boolean }>;
   };
+  karutas: ReadonlyArray<Karuta>;
 }
 
 const initialState: MaterialSliceState = {
@@ -22,6 +23,7 @@ const initialState: MaterialSliceState = {
     colorList: COLOR_LIST.map((color) => ({ color, checked: true })),
     kimarijiList: KIMARIJI_LIST.map((kimariji) => ({ kimariji, checked: true })),
   },
+  karutas: [...KARUTA_LIST],
 };
 
 export const materialSlice = createAppSlice({
@@ -47,12 +49,16 @@ export const materialSlice = createAppSlice({
     selectFilter: (state) => state.karutasFilter,
     selectKarutaList: createSelector(
       (state: MaterialSliceState) => state.karutasFilter,
-      (karutasFilter) =>
-        karutaRepository.where({
-          range: { from: KARUTA_NO_MIN, to: KARUTA_NO_MAX },
-          kimarijiList: karutasFilter.kimarijiList.filter((v) => v.checked).map((v) => v.kimariji),
-          colorList: karutasFilter.colorList.filter((v) => v.checked).map((v) => v.color),
-        })
+      (state: MaterialSliceState) => state.karutas,
+      (karutasFilter, karutas) => {
+        const colorSet = new Set<Color>(
+          karutasFilter.colorList.filter(({ checked }) => checked).map(({ color }) => color)
+        );
+        const kimarijiSet = new Set<Kimariji>(
+          karutasFilter.kimarijiList.filter(({ checked }) => checked).map(({ kimariji }) => kimariji)
+        );
+        return karutas.filter((karuta) => colorSet.has(karuta.color) && kimarijiSet.has(karuta.kimariji));
+      }
     ),
   },
 });
