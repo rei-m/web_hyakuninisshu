@@ -1,9 +1,8 @@
 import type { NextPage, Metadata, ResolvingMetadata } from 'next';
-import type { KarutaNo } from '@/domains/models';
 
 import KarutasNoClientPage from '@/components/pages/karutas/No';
 import { karutaNoToJPNText } from '@/domains/models/KarutaNo';
-import { karutaRepository } from '@/domains/repositories';
+import { KARUTA_LIST } from '@/assets/karuta';
 
 type KarutasNoPageProps = {
   params: Promise<{
@@ -11,7 +10,7 @@ type KarutasNoPageProps = {
   }>;
 };
 
-export const generateStaticParams = async () => karutaRepository.all().map((karuta) => ({ no: karuta.no.toString() }));
+export const generateStaticParams = async () => KARUTA_LIST.map((karuta) => ({ no: karuta.no.toString() }));
 
 export const generateMetadata = async (
   { params }: KarutasNoPageProps,
@@ -22,7 +21,7 @@ export const generateMetadata = async (
   const parentOpenGraph = parentMetadata?.openGraph || {};
   const parentTwitter = parentMetadata?.twitter || {};
 
-  const karuta = karutaRepository.findByNo({ karutaNo: Number(no) as KarutaNo });
+  const karuta = KARUTA_LIST[Number(no) - 1];
   const karutaNoString = karutaNoToJPNText({ karutaNo: karuta.no });
 
   const title = `百人一首 - ${karutaNoString} -`;
@@ -47,7 +46,7 @@ export const generateMetadata = async (
 
 const KarutasNoPage: NextPage<KarutasNoPageProps> = async ({ params }) => {
   const { no } = await params;
-  const karuta = karutaRepository.findByNo({ karutaNo: Number(no) as KarutaNo });
+  const karuta = KARUTA_LIST[Number(no) - 1];
 
   return <KarutasNoClientPage karuta={karuta} />;
 };

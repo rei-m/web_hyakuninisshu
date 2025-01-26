@@ -14,10 +14,15 @@ import { createAppSlice } from 'lib/createAppSlice';
 import { COLOR_LIST } from '@/domains/models/Color';
 import { KIMARIJI_LIST } from '@/domains/models/Kimariji';
 import { CreateQuestionListService } from '@/domains/services';
-import { karutaRepository } from '@/domains/repositories';
+
+import { KARUTA_LIST } from '@/assets/karuta';
 
 export interface QuestionSliceState {
   state: 'waiting' | 'ready' | 'playing' | 'confirm' | 'finished';
+  karutaData: Readonly<{
+    byNo: Readonly<{ [no: KarutaNo]: Karuta }>;
+    allNoList: ReadonlyArray<KarutaNo>;
+  }>;
   questionData?: {
     byId: { [id: QuestionId]: Question };
     allIdList: ReadonlyArray<QuestionId>;
@@ -28,7 +33,6 @@ export interface QuestionSliceState {
     content?: {
       yomiFuda: YomiFuda;
       toriFudaList: [ToriFuda, ToriFuda, ToriFuda, ToriFuda];
-      startTime: number; // 回答を開始した時間(millisec)
     };
     answer?: {
       isCorrect: boolean;
@@ -41,6 +45,10 @@ export interface QuestionSliceState {
 
 const initialState: QuestionSliceState = {
   state: 'waiting',
+  karutaData: {
+    byNo: KARUTA_LIST.reduce((prev, current) => ({ ...prev, [current.no]: current }), {}),
+    allNoList: KARUTA_LIST.map((karuta) => karuta.no),
+  },
   currentPosition: 0,
   trainingCondition: {
     rangeFrom: 1,
@@ -58,64 +66,67 @@ export const questionSlice = createAppSlice({
   initialState,
   reducers: (create) => ({
     startTraining: create.reducer((state, action: PayloadAction<{ condition: TrainingCondition }>) => {
-      const condition = action.payload.condition;
+      const { condition } = action.payload;
       state.trainingCondition = condition;
       state.trainingCondition.emptyError = undefined;
 
-      const range = { from: condition.rangeFrom as KarutaNo, to: condition.rangeTo as KarutaNo };
-      const kimarijiList = condition.kimariji === null ? KIMARIJI_LIST : [condition.kimariji];
-      const colorList = condition.color === null ? COLOR_LIST : [condition.color];
-      const targetKarutaList = karutaRepository.where({
-        range,
-        kimarijiList,
-        colorList,
-      });
+      const kimarijiSet = condition.kimariji === null ? new Set(KIMARIJI_LIST) : new Set([condition.kimariji]);
+      const colorSet = condition.color === null ? new Set(COLOR_LIST) : new Set([condition.color]);
 
-      if (targetKarutaList.length === 0) {
+      const targetKarutaNoList = state.karutaData.allNoList
+        .slice(condition.rangeFrom - 1, condition.rangeTo)
+        .filter((karutaNo) => {
+          const karuta = state.karutaData.byNo[karutaNo];
+          return kimarijiSet.has(karuta.kimariji) && colorSet.has(karuta.color);
+        });
+
+      if (targetKarutaNoList.length === 0) {
         state.trainingCondition.emptyError = '指定した条件の歌がありませんでした';
         return;
       }
 
-      const createQuestionListService = new CreateQuestionListService(karutaRepository);
-      const questionList = createQuestionListService.execute(targetKarutaList);
+      const createQuestionListService = new CreateQuestionListService(state.karutaData.allNoList);
+      const questionList = createQuestionListService.execute(targetKarutaNoList);
 
-      const allIdList = questionList.map((q) => q.id);
       state.questionData = {
-        allIdList,
+        allIdList: questionList.map((q) => q.id),
         byId: questionList.reduce((prev, current) => ({ ...prev, [current.id]: current }), {}),
       };
       state.currentPosition = 1;
       state.currentQuestion = {
-        questionId: allIdList[0],
+        questionId: questionList[0].id,
       };
       state.state = 'ready';
     }),
     startExam: create.reducer((state) => {
-      const allKarutaList = karutaRepository.all();
-      const createQuestionListService = new CreateQuestionListService(karutaRepository);
-      const questionList = createQuestionListService.execute(allKarutaList);
+      const createQuestionListService = new CreateQuestionListService(state.karutaData.allNoList);
+      const questionList = createQuestionListService.execute(state.karutaData.allNoList);
 
-      const allIdList = questionList.map((q) => q.id);
       state.questionData = {
-        allIdList,
+        allIdList: questionList.map((q) => q.id),
         byId: questionList.reduce((prev, current) => ({ ...prev, [current.id]: current }), {}),
       };
       state.currentPosition = 1;
       state.currentQuestion = {
-        questionId: allIdList[0],
+        questionId: questionList[0].id,
       };
       state.state = 'ready';
     }),
-    startQuestion: create.reducer(
-      (
-        state,
-        action: PayloadAction<{
-          questionId: QuestionId;
-          kamiNoKuStyle: TrainingConditionDisplayStyle;
-          shimoNoKuStyle: TrainingConditionDisplayStyle;
-          startTime: number;
-        }>
-      ) => {
+    startQuestion: create.preparedReducer(
+      (args: {
+        questionId: QuestionId;
+        kamiNoKuStyle: TrainingConditionDisplayStyle;
+        shimoNoKuStyle: TrainingConditionDisplayStyle;
+        startDate: Date;
+      }) => ({
+        payload: {
+          questionId: args.questionId,
+          kamiNoKuStyle: args.kamiNoKuStyle,
+          shimoNoKuStyle: args.shimoNoKuStyle,
+          startTime: args.startDate.getTime(),
+        },
+      }),
+      (state, action) => {
         if (
           !state.questionData ||
           !state.currentQuestion ||
@@ -125,9 +136,9 @@ export const questionSlice = createAppSlice({
         }
 
         const question = state.questionData.byId[action.payload.questionId];
+        question.startTime = action.payload.startTime;
 
-        const choiceKarutaList = karutaRepository.findByNoList({ karataNoList: question.choiceKarutaNoList });
-        const correctKaruta = choiceKarutaList.find((karuta) => karuta.no === question.correctAnswerKarutaNo)!;
+        const correctKaruta = state.karutaData.byNo[question.correctAnswerKarutaNo];
 
         const yomiFuda: YomiFuda = {
           karutaNo: correctKaruta.no,
@@ -136,29 +147,29 @@ export const questionSlice = createAppSlice({
           sanku: correctKaruta.sanku[action.payload.kamiNoKuStyle],
         };
 
-        const toriFudaList = choiceKarutaList.map((karuta) => ({
-          karutaNo: karuta.no,
-          shiku: karuta.shiku[action.payload.shimoNoKuStyle],
-          kekku: karuta.kekku[action.payload.shimoNoKuStyle],
+        const toriFudaList = question.choiceKarutaNoList.map((no) => ({
+          karutaNo: no,
+          shiku: state.karutaData.byNo[no].shiku[action.payload.shimoNoKuStyle],
+          kekku: state.karutaData.byNo[no].kekku[action.payload.shimoNoKuStyle],
         })) as [ToriFuda, ToriFuda, ToriFuda, ToriFuda];
 
         state.currentQuestion.content = {
-          startTime: action.payload.startTime,
           yomiFuda,
           toriFudaList,
         };
+
         state.state = 'playing';
       }
     ),
-    answerQuestion: create.reducer(
-      (
-        state,
-        action: PayloadAction<{
-          questionId: QuestionId;
-          toriFuda: ToriFuda;
-          answerTime: number;
-        }>
-      ) => {
+    answerQuestion: create.preparedReducer(
+      (args: { questionId: QuestionId; toriFuda: ToriFuda; answerDate: Date }) => ({
+        payload: {
+          questionId: args.questionId,
+          toriFuda: args.toriFuda,
+          answerTime: args.answerDate.getTime(),
+        },
+      }),
+      (state, action) => {
         if (
           !state.questionData ||
           !state.currentQuestion ||
@@ -173,7 +184,7 @@ export const questionSlice = createAppSlice({
 
         const isCorrect = question.correctAnswerKarutaNo === action.payload.toriFuda.karutaNo;
 
-        const answerMilliSec = action.payload.answerTime - state.currentQuestion.content.startTime;
+        const answerMilliSec = action.payload.answerTime - question.startTime!;
 
         question.answer = {
           isCorrect,
@@ -183,11 +194,14 @@ export const questionSlice = createAppSlice({
         state.currentQuestion.answer = {
           isCorrect,
           selectedKarutaNo: action.payload.toriFuda.karutaNo,
-          correctKaruta: karutaRepository.findByNo({ karutaNo: question.correctAnswerKarutaNo }),
+          correctKaruta: state.karutaData.byNo[question.correctAnswerKarutaNo],
         };
       }
     ),
     confirmCorrect: create.reducer((state) => {
+      if (!state.questionData || !state.currentQuestion || state.state !== 'playing') {
+        return;
+      }
       state.state = 'confirm';
     }),
     openNextQuestion: create.reducer((state) => {
@@ -201,22 +215,26 @@ export const questionSlice = createAppSlice({
       state.state = 'ready';
     }),
     finishQuestion: create.reducer((state) => {
+      if (
+        !state.questionData ||
+        state.currentPosition !== state.questionData.allIdList.length ||
+        state.state !== 'confirm'
+      ) {
+        return;
+      }
       state.state = 'finished';
     }),
     restartTraining: create.reducer((state) => {
       if (!state.questionData || state.state !== 'finished') {
         return;
       }
-      const incorrectKarutaList: Array<Karuta> = [];
-      state.questionData.allIdList.forEach((questionId) => {
-        const question = state.questionData!.byId[questionId];
-        if (!question.answer?.isCorrect) {
-          incorrectKarutaList.push(karutaRepository.findByNo({ karutaNo: question.correctAnswerKarutaNo }));
-        }
-      });
 
-      const createQuestionListService = new CreateQuestionListService(karutaRepository);
-      const questionList = createQuestionListService.execute(incorrectKarutaList);
+      const incorrectKarutaNoList = state.questionData.allIdList
+        .filter((id) => !state.questionData!.byId[id].answer?.isCorrect)
+        .map((id) => state.questionData!.byId[id].correctAnswerKarutaNo);
+
+      const createQuestionListService = new CreateQuestionListService(state.karutaData.allNoList);
+      const questionList = createQuestionListService.execute(incorrectKarutaNoList);
 
       const allIdList = questionList.map((q) => q.id);
       state.questionData = {
@@ -247,8 +265,12 @@ export const questionSlice = createAppSlice({
       })
     ),
     selectQuestionResult: createSelector(
-      [(state: QuestionSliceState) => state.state, (state: QuestionSliceState) => state.questionData],
-      (state, questionData) => {
+      [
+        (state: QuestionSliceState) => state.state,
+        (state: QuestionSliceState) => state.questionData,
+        (state: QuestionSliceState) => state.karutaData,
+      ],
+      (state, questionData, karutaData) => {
         if (!questionData) {
           return { state };
         }
@@ -266,7 +288,7 @@ export const questionSlice = createAppSlice({
           }
           totalAnswerMilliSec += question.answer.answerMilliSec;
           answerList.push({
-            correctKaruta: karutaRepository.findByNo({ karutaNo: question.correctAnswerKarutaNo }),
+            correctKaruta: karutaData.byNo[question.correctAnswerKarutaNo],
             isCorrect: question.answer.isCorrect,
           });
         });

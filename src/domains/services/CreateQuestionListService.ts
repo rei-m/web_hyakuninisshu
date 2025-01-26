@@ -1,5 +1,4 @@
-import type { Question, QuestionId, KarutaNo, Karuta } from '../models';
-import type { KarutaRepository } from '../repositories';
+import type { Question, QuestionId, KarutaNo } from '../models';
 import { IllegalArgumentError } from '../errors';
 import { getRandomInt, randomizeArray } from '../utils/array';
 
@@ -26,22 +25,19 @@ const createQuestion = (
 };
 
 export class CreateQuestionListService {
-  constructor(private karutaRepository: KarutaRepository) {}
-  public execute(targetKarutaList: ReadonlyArray<Karuta>): ReadonlyArray<Question> {
-    const allKarutaList = this.karutaRepository.all();
-    if (targetKarutaList.length === 0) {
-      throw new IllegalArgumentError('targetKarutaList is empty');
+  constructor(private allKarutaNoList: ReadonlyArray<KarutaNo>) {}
+  public execute(targetKarutaNoList: ReadonlyArray<KarutaNo>): ReadonlyArray<Question> {
+    if (targetKarutaNoList.length === 0) {
+      throw new IllegalArgumentError('targetKarutaNoList is empty');
     }
 
     const startId = new Date().getTime();
-    const questionList: ReadonlyArray<Question> = randomizeArray(targetKarutaList).map((karuta, i) => {
+    const questionList: ReadonlyArray<Question> = randomizeArray(targetKarutaNoList).map((correctAnswerKarutaNo, i) => {
       const id = (startId + i) as QuestionId;
 
-      const correctAnswerKarutaNo: KarutaNo = karuta.no;
-
-      const exceptedAllKarutaNoList = [...allKarutaList]
-        .filter((karuta) => karuta.no !== correctAnswerKarutaNo)
-        .map((karuta) => karuta.no);
+      const exceptedAllKarutaNoList = [...this.allKarutaNoList].filter(
+        (karutaNo) => karutaNo !== correctAnswerKarutaNo
+      );
 
       const wrongKarutaNoList = Array.from({ length: 3 }).map(() => {
         const noIndex = getRandomInt(0, exceptedAllKarutaNoList.length - 1);
