@@ -4,18 +4,14 @@ import dynamic from 'next/dynamic';
 
 import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
-import List from '@mui/material/List';
-import ListItem from '@mui/material/ListItem';
 import PageLayout from '@/components/organisms/PageLayout';
 import MainMenuList from '@/components/organisms/MainMenuList';
-import SmallMaterial from '@/components/organisms/SmallMaterial';
+import TopSmallMaterialList from '@/containers/organisms/TopSmallMaterialList';
 import Chihaya from '@/components/organisms/Chihaya';
 import ReadingContent from '@/components/molecules/ReadingContent';
 import AppStoreBanner from '@/components/atoms/AppStoreBanner';
 import PlayStoreBanner from '@/components/atoms/PlayStoreBanner';
 const Ad = dynamic(() => import('@/components/organisms/Ad'), { ssr: false });
-
-import { karutaRepository } from '@/domains/repositories';
 
 const HomeClientPage = () => (
   <PageLayout title={'百人一首 - 簡単に暗記 -'} isDisplayNav={true}>
@@ -158,40 +154,7 @@ const HomeClientPage = () => (
         </Typography>
       </ReadingContent>
       <ReadingContent title={`百人一首 歌一覧`}>
-        <List
-          sx={{
-            p: 0,
-            m: 0,
-            display: 'flex',
-            justifyContent: 'space-between',
-            flexWrap: 'wrap',
-            '& > li': {
-              p: 0,
-              width: {
-                sm: '49%',
-              },
-            },
-          }}
-        >
-          {karutaRepository.all().map((karuta) => (
-            <ListItem key={karuta.no}>
-              <SmallMaterial
-                karuta={karuta}
-                separate={` `}
-                image={false}
-                sx={{
-                  backgroundColor: 'background.default',
-                  p: 0,
-                  ':hover': {
-                    textDecoration: 'underline',
-                    textDecorationColor: '#106ba3',
-                    backgroundColor: '#fffff0',
-                  },
-                }}
-              />
-            </ListItem>
-          ))}
-        </List>
+        <TopSmallMaterialList />
       </ReadingContent>
     </Box>
   </PageLayout>

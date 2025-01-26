@@ -47,7 +47,7 @@ const KarutaPlayingContainer = ({
           questionId: currentQuestion.questionId,
           kamiNoKuStyle,
           shimoNoKuStyle,
-          startTime: new Date().getTime(),
+          startDate: new Date(),
         })
       );
     }
@@ -71,7 +71,7 @@ const KarutaPlayingContainer = ({
           duration={conditionAnimToDulation({ anim: questionAnim })}
           answer={currentQuestion.answer}
           onClickToriFuda={(questionId, toriFuda) => {
-            dispatch(answerQuestion({ questionId, toriFuda, answerTime: new Date().getTime() }));
+            dispatch(answerQuestion({ questionId, toriFuda, answerDate: new Date() }));
           }}
           onClickResult={() => {
             dispatch(confirmCorrect());
